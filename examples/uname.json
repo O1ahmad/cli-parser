@@ -1,0 +1,57 @@
+[
+  {
+    "shortcut": "-a",
+    "flag": "--all",
+    "description": "print all information, in the following order,"
+  },
+  {
+    "shortcut": "-s",
+    "flag": "--kernel-name",
+    "description": "print the kernel name"
+  },
+  {
+    "shortcut": "-n",
+    "flag": "--nodename",
+    "description": "print the network node hostname"
+  },
+  {
+    "shortcut": "-r",
+    "flag": "--kernel-release",
+    "description": "print the kernel release"
+  },
+  {
+    "shortcut": "-v",
+    "flag": "--kernel-version",
+    "description": "print the kernel version"
+  },
+  {
+    "shortcut": "-m",
+    "flag": "--machine",
+    "description": "print the machine hardware name"
+  },
+  {
+    "shortcut": "-p",
+    "flag": "--processor",
+    "description": "print the processor type (non-portable)"
+  },
+  {
+    "shortcut": "-i",
+    "flag": "--hardware-platform",
+    "description": "print the hardware platform (non-portable)"
+  },
+  {
+    "shortcut": "-o",
+    "flag": "--operating-system",
+    "description": "print the operating system"
+  },
+  {
+    "shortcut": null,
+    "flag": "--help",
+    "description": "display this help and exit"
+  },
+  {
+    "shortcut": null,
+    "flag": "--version",
+    "description": "output version information and exit"
+  }
+]

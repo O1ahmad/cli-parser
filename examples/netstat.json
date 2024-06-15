@@ -1,0 +1,107 @@
+[
+  {
+    "shortcut": "-r",
+    "flag": "--route",
+    "description": "display routing table"
+  },
+  {
+    "shortcut": "-i",
+    "flag": "--interfaces",
+    "description": "display interface table"
+  },
+  {
+    "shortcut": "-g",
+    "flag": "--groups",
+    "description": "display multicast group memberships"
+  },
+  {
+    "shortcut": "-s",
+    "flag": "--statistics",
+    "description": "display networking statistics (like SNMP)"
+  },
+  {
+    "shortcut": "-M",
+    "flag": "--masquerade",
+    "description": "display masqueraded connections"
+  },
+  {
+    "shortcut": "-v",
+    "flag": "--verbose",
+    "description": "be verbose"
+  },
+  {
+    "shortcut": "-W",
+    "flag": "--wide",
+    "description": "don't truncate IP addresses"
+  },
+  {
+    "shortcut": "-n",
+    "flag": "--numeric",
+    "description": "don't resolve names"
+  },
+  {
+    "shortcut": null,
+    "flag": "--numeric-hosts",
+    "description": "don't resolve host names"
+  },
+  {
+    "shortcut": null,
+    "flag": "--numeric-ports",
+    "description": "don't resolve port names"
+  },
+  {
+    "shortcut": null,
+    "flag": "--numeric-users",
+    "description": "don't resolve user names"
+  },
+  {
+    "shortcut": "-N",
+    "flag": "--symbolic",
+    "description": "resolve hardware names"
+  },
+  {
+    "shortcut": "-e",
+    "flag": "--extend",
+    "description": "display other/more information"
+  },
+  {
+    "shortcut": "-p",
+    "flag": "--programs",
+    "description": "display PID/Program name for sockets"
+  },
+  {
+    "shortcut": "-o",
+    "flag": "--timers",
+    "description": "display timers"
+  },
+  {
+    "shortcut": "-c",
+    "flag": "--continuous",
+    "description": "continuous listing"
+  },
+  {
+    "shortcut": "-l",
+    "flag": "--listening",
+    "description": "display listening server sockets"
+  },
+  {
+    "shortcut": "-a",
+    "flag": "--all",
+    "description": "display all sockets (default: connected)"
+  },
+  {
+    "shortcut": "-F",
+    "flag": "--fib",
+    "description": "display Forwarding Information Base (default)"
+  },
+  {
+    "shortcut": "-C",
+    "flag": "--cache",
+    "description": "display routing cache instead of FIB"
+  },
+  {
+    "shortcut": "-Z",
+    "flag": "--context",
+    "description": "display SELinux security context for sockets"
+  }
+]

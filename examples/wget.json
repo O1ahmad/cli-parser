@@ -1,0 +1,762 @@
+[
+  {
+    "shortcut": "-V",
+    "flag": "--version",
+    "description": "display the version of Wget and exit"
+  },
+  {
+    "shortcut": "-h",
+    "flag": "--help",
+    "description": "print this help"
+  },
+  {
+    "shortcut": "-b",
+    "flag": "--background",
+    "description": "go to background after startup"
+  },
+  {
+    "shortcut": "-e",
+    "flag": "--execute",
+    "description": "=COMMAND           execute a `.wgetrc'-style command"
+  },
+  {
+    "shortcut": "-o",
+    "flag": "--output-file",
+    "description": "=FILE          log messages to FILE"
+  },
+  {
+    "shortcut": "-a",
+    "flag": "--append-output",
+    "description": "=FILE        append messages to FILE"
+  },
+  {
+    "shortcut": "-d",
+    "flag": "--debug",
+    "description": "print lots of debugging information"
+  },
+  {
+    "shortcut": "-q",
+    "flag": "--quiet",
+    "description": "quiet (no output)"
+  },
+  {
+    "shortcut": "-v",
+    "flag": "--verbose",
+    "description": "be verbose (this is the default)"
+  },
+  {
+    "shortcut": "-nv",
+    "flag": "--no-verbose",
+    "description": "turn off verboseness, without being quiet"
+  },
+  {
+    "shortcut": null,
+    "flag": "--report-speed",
+    "description": "=TYPE         output bandwidth as TYPE.  TYPE can be bits"
+  },
+  {
+    "shortcut": "-i",
+    "flag": "--input-file",
+    "description": "=FILE           download URLs found in local or external FILE"
+  },
+  {
+    "shortcut": "-F",
+    "flag": "--force-html",
+    "description": "treat input file as HTML"
+  },
+  {
+    "shortcut": "-B",
+    "flag": "--base",
+    "description": "=URL                  resolves HTML input-file links (-i -F)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--config",
+    "description": "=FILE               specify config file to use"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-config",
+    "description": "do not read any config file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rejected-log",
+    "description": "=FILE         log reasons for URL rejection to FILE"
+  },
+  {
+    "shortcut": "-t",
+    "flag": "--tries",
+    "description": "=NUMBER              set number of retries to NUMBER (0 unlimits)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--retry-connrefused",
+    "description": "retry even if connection is refused"
+  },
+  {
+    "shortcut": null,
+    "flag": "--retry-on-http-error",
+    "description": "=ERRORS    comma-separated list of HTTP errors to retry"
+  },
+  {
+    "shortcut": "-O",
+    "flag": "--output-document",
+    "description": "=FILE      write documents to FILE"
+  },
+  {
+    "shortcut": "-nc",
+    "flag": "--no-clobber",
+    "description": "skip downloads that would download to"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-netrc",
+    "description": "don't try to obtain credentials from .netrc"
+  },
+  {
+    "shortcut": "-c",
+    "flag": "--continue",
+    "description": "resume getting a partially-downloaded file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--start-pos",
+    "description": "=OFFSET          start downloading from zero-based position OFFSET"
+  },
+  {
+    "shortcut": null,
+    "flag": "--progress",
+    "description": "=TYPE             select progress gauge type"
+  },
+  {
+    "shortcut": null,
+    "flag": "--show-progress",
+    "description": "display the progress bar in any verbosity mode"
+  },
+  {
+    "shortcut": "-N",
+    "flag": "--timestamping",
+    "description": "don't re-retrieve files unless newer than"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-if-modified-since",
+    "description": "don't use conditional if-modified-since get"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-use-server-timestamps",
+    "description": "don't set the local file's timestamp by"
+  },
+  {
+    "shortcut": "-S",
+    "flag": "--server-response",
+    "description": "print server response"
+  },
+  {
+    "shortcut": null,
+    "flag": "--spider",
+    "description": "don't download anything"
+  },
+  {
+    "shortcut": "-T",
+    "flag": "--timeout",
+    "description": "=SECONDS           set all timeout values to SECONDS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--dns-timeout",
+    "description": "=SECS          set the DNS lookup timeout to SECS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--connect-timeout",
+    "description": "=SECS      set the connect timeout to SECS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--read-timeout",
+    "description": "=SECS         set the read timeout to SECS"
+  },
+  {
+    "shortcut": "-w",
+    "flag": "--wait",
+    "description": "=SECONDS              wait SECONDS between retrievals"
+  },
+  {
+    "shortcut": null,
+    "flag": "--waitretry",
+    "description": "=SECONDS         wait 1..SECONDS between retries of a retrieval"
+  },
+  {
+    "shortcut": null,
+    "flag": "--random-wait",
+    "description": "wait from 0.5*WAIT...1.5*WAIT secs between retrievals"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-proxy",
+    "description": "explicitly turn off proxy"
+  },
+  {
+    "shortcut": "-Q",
+    "flag": "--quota",
+    "description": "=NUMBER              set retrieval quota to NUMBER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--bind-address",
+    "description": "=ADDRESS      bind to ADDRESS (hostname or IP) on local host"
+  },
+  {
+    "shortcut": null,
+    "flag": "--limit-rate",
+    "description": "=RATE           limit download rate to RATE"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-dns-cache",
+    "description": "disable caching DNS lookups"
+  },
+  {
+    "shortcut": null,
+    "flag": "--restrict-file-names",
+    "description": "=OS    restrict chars in file names to ones OS allows"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ignore-case",
+    "description": "ignore case when matching files/directories"
+  },
+  {
+    "shortcut": "-4",
+    "flag": "--inet4-only",
+    "description": "connect only to IPv4 addresses"
+  },
+  {
+    "shortcut": "-6",
+    "flag": "--inet6-only",
+    "description": "connect only to IPv6 addresses"
+  },
+  {
+    "shortcut": null,
+    "flag": "--prefer-family",
+    "description": "=FAMILY      connect first to addresses of specified family,"
+  },
+  {
+    "shortcut": null,
+    "flag": "--user",
+    "description": "=USER                 set both ftp and http user to USER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--password",
+    "description": "=PASS             set both ftp and http password to PASS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ask-password",
+    "description": "prompt for passwords"
+  },
+  {
+    "shortcut": null,
+    "flag": "--use-askpass",
+    "description": "=COMMAND       specify credential handler for requesting"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-iri",
+    "description": "turn off IRI support"
+  },
+  {
+    "shortcut": null,
+    "flag": "--local-encoding",
+    "description": "=ENC        use ENC as the local encoding for IRIs"
+  },
+  {
+    "shortcut": null,
+    "flag": "--remote-encoding",
+    "description": "=ENC       use ENC as the default remote encoding"
+  },
+  {
+    "shortcut": null,
+    "flag": "--unlink",
+    "description": "remove file before clobber"
+  },
+  {
+    "shortcut": null,
+    "flag": "--xattr",
+    "description": "turn on storage of metadata in extended file attributes"
+  },
+  {
+    "shortcut": "-nd",
+    "flag": "--no-directories",
+    "description": "don't create directories"
+  },
+  {
+    "shortcut": "-x",
+    "flag": "--force-directories",
+    "description": "force creation of directories"
+  },
+  {
+    "shortcut": "-nH",
+    "flag": "--no-host-directories",
+    "description": "don't create host directories"
+  },
+  {
+    "shortcut": null,
+    "flag": "--protocol-directories",
+    "description": "use protocol name in directories"
+  },
+  {
+    "shortcut": "-P",
+    "flag": "--directory-prefix",
+    "description": "=PREFIX   save files to PREFIX/.."
+  },
+  {
+    "shortcut": null,
+    "flag": "--cut-dirs",
+    "description": "=NUMBER           ignore NUMBER remote directory components"
+  },
+  {
+    "shortcut": null,
+    "flag": "--http-user",
+    "description": "=USER            set http user to USER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--http-password",
+    "description": "=PASS        set http password to PASS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-cache",
+    "description": "disallow server-cached data"
+  },
+  {
+    "shortcut": null,
+    "flag": "--default-page",
+    "description": "=NAME         change the default page name (normally"
+  },
+  {
+    "shortcut": "-E",
+    "flag": "--adjust-extension",
+    "description": "save HTML/CSS documents with proper extensions"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ignore-length",
+    "description": "ignore 'Content-Length' header field"
+  },
+  {
+    "shortcut": null,
+    "flag": "--header",
+    "description": "=STRING             insert STRING among the headers"
+  },
+  {
+    "shortcut": null,
+    "flag": "--compression",
+    "description": "=TYPE          choose compression, one of auto, gzip and none. (default: none)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--max-redirect",
+    "description": "maximum redirections allowed per page"
+  },
+  {
+    "shortcut": null,
+    "flag": "--proxy-user",
+    "description": "=USER           set USER as proxy username"
+  },
+  {
+    "shortcut": null,
+    "flag": "--proxy-password",
+    "description": "=PASS       set PASS as proxy password"
+  },
+  {
+    "shortcut": null,
+    "flag": "--referer",
+    "description": "=URL               include 'Referer: URL' header in HTTP request"
+  },
+  {
+    "shortcut": null,
+    "flag": "--save-headers",
+    "description": "save the HTTP headers to file"
+  },
+  {
+    "shortcut": "-U",
+    "flag": "--user-agent",
+    "description": "=AGENT          identify as AGENT instead of Wget/VERSION"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-http-keep-alive",
+    "description": "disable HTTP keep-alive (persistent connections)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-cookies",
+    "description": "don't use cookies"
+  },
+  {
+    "shortcut": null,
+    "flag": "--load-cookies",
+    "description": "=FILE         load cookies from FILE before session"
+  },
+  {
+    "shortcut": null,
+    "flag": "--save-cookies",
+    "description": "=FILE         save cookies to FILE after session"
+  },
+  {
+    "shortcut": null,
+    "flag": "--keep-session-cookies",
+    "description": "load and save session (non-permanent) cookies"
+  },
+  {
+    "shortcut": null,
+    "flag": "--post-data",
+    "description": "=STRING          use the POST method; send STRING as the data"
+  },
+  {
+    "shortcut": null,
+    "flag": "--post-file",
+    "description": "=FILE            use the POST method; send contents of FILE"
+  },
+  {
+    "shortcut": null,
+    "flag": "--method",
+    "description": "=HTTPMethod         use method \"HTTPMethod\" in the request"
+  },
+  {
+    "shortcut": null,
+    "flag": "--body-data",
+    "description": "=STRING          send STRING as data. --method MUST be set"
+  },
+  {
+    "shortcut": null,
+    "flag": "--body-file",
+    "description": "=FILE            send contents of FILE. --method MUST be set"
+  },
+  {
+    "shortcut": null,
+    "flag": "--content-disposition",
+    "description": "honor the Content-Disposition header when"
+  },
+  {
+    "shortcut": null,
+    "flag": "--content-on-error",
+    "description": "output the received content on server errors"
+  },
+  {
+    "shortcut": null,
+    "flag": "--auth-no-challenge",
+    "description": "send Basic HTTP authentication information"
+  },
+  {
+    "shortcut": null,
+    "flag": "--secure-protocol",
+    "description": "=PR        choose secure protocol, one of auto, SSLv2,"
+  },
+  {
+    "shortcut": null,
+    "flag": "--https-only",
+    "description": "only follow secure HTTPS links"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-check-certificate",
+    "description": "don't validate the server's certificate"
+  },
+  {
+    "shortcut": null,
+    "flag": "--certificate",
+    "description": "=FILE          client certificate file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--certificate-type",
+    "description": "=TYPE     client certificate type, PEM or DER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--private-key",
+    "description": "=FILE          private key file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--private-key-type",
+    "description": "=TYPE     private key type, PEM or DER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ca-certificate",
+    "description": "=FILE       file with the bundle of CAs"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ca-directory",
+    "description": "=DIR          directory where hash list of CAs is stored"
+  },
+  {
+    "shortcut": null,
+    "flag": "--crl-file",
+    "description": "=FILE             file with bundle of CRLs"
+  },
+  {
+    "shortcut": null,
+    "flag": "--pinnedpubkey",
+    "description": "=FILE/HASHES  Public key (PEM/DER) file, or any number"
+  },
+  {
+    "shortcut": null,
+    "flag": "--random-file",
+    "description": "=FILE          file with random data for seeding the SSL PRNG"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ciphers",
+    "description": "=STR           Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly."
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-hsts",
+    "description": "disable HSTS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--hsts-file",
+    "description": "path of HSTS database (will override default)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftp-user",
+    "description": "=USER             set ftp user to USER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftp-password",
+    "description": "=PASS         set ftp password to PASS"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-remove-listing",
+    "description": "don't remove '.listing' files"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-glob",
+    "description": "turn off FTP file name globbing"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-passive-ftp",
+    "description": "disable the \"passive\" transfer mode"
+  },
+  {
+    "shortcut": null,
+    "flag": "--preserve-permissions",
+    "description": "preserve remote file permissions"
+  },
+  {
+    "shortcut": null,
+    "flag": "--retr-symlinks",
+    "description": "when recursing, get linked-to files (not dir)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftps-implicit",
+    "description": "use implicit FTPS (default port is 990)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftps-resume-ssl",
+    "description": "resume the SSL/TLS session started in the control connection when"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftps-clear-data-connection",
+    "description": "cipher the control channel only; all the data will be in plaintext"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ftps-fallback-to-ftp",
+    "description": "fall back to FTP if FTPS is not supported in the target server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-file",
+    "description": "=FILENAME        save request/response data to a .warc.gz file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-header",
+    "description": "=STRING        insert STRING into the warcinfo record"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-max-size",
+    "description": "=NUMBER      set maximum size of WARC files to NUMBER"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-cdx",
+    "description": "write CDX index files"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-dedup",
+    "description": "=FILENAME       do not store records listed in this CDX file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-warc-compression",
+    "description": "do not compress WARC files with GZIP"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-warc-digests",
+    "description": "do not calculate SHA1 digests"
+  },
+  {
+    "shortcut": null,
+    "flag": "--no-warc-keep-log",
+    "description": "do not store the log file in a WARC record"
+  },
+  {
+    "shortcut": null,
+    "flag": "--warc-tempdir",
+    "description": "=DIRECTORY    location for temporary files created by the"
+  },
+  {
+    "shortcut": "-r",
+    "flag": "--recursive",
+    "description": "specify recursive download"
+  },
+  {
+    "shortcut": "-l",
+    "flag": "--level",
+    "description": "=NUMBER              maximum recursion depth (inf or 0 for infinite)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--delete-after",
+    "description": "delete files locally after downloading them"
+  },
+  {
+    "shortcut": "-k",
+    "flag": "--convert-links",
+    "description": "make links in downloaded HTML or CSS point to"
+  },
+  {
+    "shortcut": null,
+    "flag": "--convert-file-only",
+    "description": "convert the file part of the URLs only (usually known as the basename)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--backups",
+    "description": "=N                 before writing file X, rotate up to N backup files"
+  },
+  {
+    "shortcut": "-K",
+    "flag": "--backup-converted",
+    "description": "before converting file X, back up as X.orig"
+  },
+  {
+    "shortcut": "-m",
+    "flag": "--mirror",
+    "description": "shortcut for -N -r -l inf --no-remove-listing"
+  },
+  {
+    "shortcut": "-p",
+    "flag": "--page-requisites",
+    "description": "get all images, etc. needed to display HTML page"
+  },
+  {
+    "shortcut": null,
+    "flag": "--strict-comments",
+    "description": "turn on strict (SGML) handling of HTML comments"
+  },
+  {
+    "shortcut": "-A",
+    "flag": "--accept",
+    "description": "=LIST               comma-separated list of accepted extensions"
+  },
+  {
+    "shortcut": "-R",
+    "flag": "--reject",
+    "description": "=LIST               comma-separated list of rejected extensions"
+  },
+  {
+    "shortcut": null,
+    "flag": "--accept-regex",
+    "description": "=REGEX        regex matching accepted URLs"
+  },
+  {
+    "shortcut": null,
+    "flag": "--reject-regex",
+    "description": "=REGEX        regex matching rejected URLs"
+  },
+  {
+    "shortcut": null,
+    "flag": "--regex-type",
+    "description": "=TYPE           regex type (posix|pcre)"
+  },
+  {
+    "shortcut": "-D",
+    "flag": "--domains",
+    "description": "=LIST              comma-separated list of accepted domains"
+  },
+  {
+    "shortcut": null,
+    "flag": "--exclude-domains",
+    "description": "=LIST      comma-separated list of rejected domains"
+  },
+  {
+    "shortcut": null,
+    "flag": "--follow-ftp",
+    "description": "follow FTP links from HTML documents"
+  },
+  {
+    "shortcut": null,
+    "flag": "--follow-tags",
+    "description": "=LIST          comma-separated list of followed HTML tags"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ignore-tags",
+    "description": "=LIST          comma-separated list of ignored HTML tags"
+  },
+  {
+    "shortcut": "-H",
+    "flag": "--span-hosts",
+    "description": "go to foreign hosts when recursive"
+  },
+  {
+    "shortcut": "-L",
+    "flag": "--relative",
+    "description": "follow relative links only"
+  },
+  {
+    "shortcut": "-I",
+    "flag": "--include-directories",
+    "description": "=LIST  list of allowed directories"
+  },
+  {
+    "shortcut": null,
+    "flag": "--trust-server-names",
+    "description": "use the name specified by the redirection"
+  },
+  {
+    "shortcut": "-X",
+    "flag": "--exclude-directories",
+    "description": "=LIST  list of excluded directories"
+  },
+  {
+    "shortcut": "-np",
+    "flag": "--no-parent",
+    "description": "don't ascend to the parent directory"
+  }
+]

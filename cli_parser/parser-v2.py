@@ -4,6 +4,14 @@ import argparse
 import json
 
 
+# Regex pattern to match options and descriptions
+CLI_FLAG_REGEX = r'''
+      ^\s*(?P<shortcut>\s*-\w+)?(?:,\s*)?  # shortcut (optional comma and whitespace)
+  (?P<flag>\s*--[\w.-]+)?         # flag
+  \s*
+  (?P<description>.*)?            # description
+'''
+
 def get_binary_help_text(binary_name):
     commands = [['--help'], ['-h'], ['help']]
     for cmd in commands:
@@ -17,17 +25,9 @@ def get_binary_help_text(binary_name):
             return None
     return None
 
-def parse_options(help_text):
-    # Regex pattern to match options and descriptions
-    pattern = r'''
-      ^\s*(?P<shortcut>\s*-\w+)?(?:,\s*)?  # shortcut (optional comma and whitespace)
-  (?P<flag>\s*--[\w.-]+)?         # flag
-  \s*
-  (?P<description>.*)?            # description
-    '''
-    
+def parse_options(help_text):    
     # Compile the regex pattern
-    regex = re.compile(pattern, re.VERBOSE | re.MULTILINE)
+    regex = re.compile(CLI_FLAG_REGEX, re.VERBOSE | re.MULTILINE)
     
     # Find all matches in the text
     matches = regex.finditer(help_text)
@@ -73,4 +73,3 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     main(args.binary_name)
-

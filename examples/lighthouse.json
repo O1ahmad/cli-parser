@@ -1,0 +1,122 @@
+[
+  {
+    "shortcut": "-d",
+    "flag": "--datadir",
+    "description": "<DIR>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--debug-level",
+    "description": "<LEVEL>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--genesis-state-url",
+    "description": "<URL>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--genesis-state-url-timeout",
+    "description": "<SECONDS>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--log-format",
+    "description": "<FORMAT>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile",
+    "description": "<FILE>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-debug-level",
+    "description": "<LEVEL>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-format",
+    "description": "<FORMAT>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-max-number",
+    "description": "<COUNT>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-max-size",
+    "description": "<SIZE>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--network",
+    "description": "<network>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--safe-slots-to-import-optimistically",
+    "description": "<INTEGER>"
+  },
+  {
+    "shortcut": "-t",
+    "flag": "--testnet-dir",
+    "description": "<DIR>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--terminal-block-hash-epoch-override",
+    "description": "<EPOCH>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--terminal-block-hash-override",
+    "description": "<TERMINAL_BLOCK_HASH>"
+  },
+  {
+    "shortcut": null,
+    "flag": "--terminal-total-difficulty-override",
+    "description": "<INTEGER>"
+  },
+  {
+    "shortcut": "-V",
+    "flag": "--version",
+    "description": "Print version"
+  },
+  {
+    "shortcut": null,
+    "flag": "--disable-log-timestamp",
+    "description": "If present, do not include timestamps in logging output."
+  },
+  {
+    "shortcut": null,
+    "flag": "--disable-malloc-tuning",
+    "description": "If present, do not configure the system allocator. Providing this flag"
+  },
+  {
+    "shortcut": "-h",
+    "flag": "--help",
+    "description": "Prints help information"
+  },
+  {
+    "shortcut": "-l",
+    "flag": null,
+    "description": "DEPRECATED Enables environment logging giving access to sub-protocol"
+  },
+  {
+    "shortcut": null,
+    "flag": "--log-color",
+    "description": "Force outputting colors when emitting logs to the terminal."
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-compress",
+    "description": "If present, compress old log files. This can help reduce the space"
+  },
+  {
+    "shortcut": null,
+    "flag": "--logfile-no-restricted-perms",
+    "description": "If present, log files will be generated as world-readable meaning they"
+  }
+]

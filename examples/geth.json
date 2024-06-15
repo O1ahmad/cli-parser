@@ -1,0 +1,677 @@
+[
+  {
+    "shortcut": null,
+    "flag": "--config",
+    "description": "value                      TOML configuration file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--datadir",
+    "description": "value                     Data directory for the databases and keystore (default: \"/home/ahmad/snap/geth/477/.ethereum\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--datadir.ancient",
+    "description": "value             Data directory for ancient chain segments (default = inside chaindata)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--keystore",
+    "description": "value                    Directory for the keystore (default = inside the datadir)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nousb",
+    "description": "Disables monitoring for and managing USB hardware wallets"
+  },
+  {
+    "shortcut": null,
+    "flag": "--pcscdpath",
+    "description": "value                   Path to the smartcard daemon (pcscd) socket file (default: \"/run/pcscd/pcscd.comm\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--networkid",
+    "description": "value                   Network identifier (integer, 1=Frontier, 2=Morden (disused), 3=Ropsten, 4=Rinkeby) (default: 1)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--testnet",
+    "description": "Ropsten network: pre-configured proof-of-work test network"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rinkeby",
+    "description": "Rinkeby network: pre-configured proof-of-authority test network"
+  },
+  {
+    "shortcut": null,
+    "flag": "--goerli",
+    "description": "G\u00f6rli network: pre-configured proof-of-authority test network"
+  },
+  {
+    "shortcut": null,
+    "flag": "--syncmode",
+    "description": "value                    Blockchain sync mode (\"fast\", \"full\", or \"light\") (default: fast)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--exitwhensynced",
+    "description": "Exits after block synchronisation completes"
+  },
+  {
+    "shortcut": null,
+    "flag": "--gcmode",
+    "description": "value                      Blockchain garbage collection mode (\"full\", \"archive\") (default: \"full\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethstats",
+    "description": "value                    Reporting URL of a ethstats service (nodename:secret@host:port)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--identity",
+    "description": "value                    Custom node name"
+  },
+  {
+    "shortcut": null,
+    "flag": "--lightkdf",
+    "description": "Reduce key-derivation RAM & CPU usage at some expense of KDF strength"
+  },
+  {
+    "shortcut": null,
+    "flag": "--whitelist",
+    "description": "value                   Comma separated block number-to-hash mappings to enforce (<number>=<hash>)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--light.serve",
+    "description": "value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--light.ingress",
+    "description": "value               Incoming bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--light.egress",
+    "description": "value                Outgoing bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--light.maxpeers",
+    "description": "value              Maximum number of light clients to serve, or light servers to attach to (default: 100)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ulc.servers",
+    "description": "value                 List of trusted ultra-light servers"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ulc.fraction",
+    "description": "value                Minimum % of trusted ultra-light servers required to announce a new head (default: 75)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ulc.onlyannounce",
+    "description": "Ultra light server sends announcements only"
+  },
+  {
+    "shortcut": null,
+    "flag": "--dev",
+    "description": "Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled"
+  },
+  {
+    "shortcut": null,
+    "flag": "--dev.period",
+    "description": "value                  Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.cachedir",
+    "description": "value             Directory to store the ethash verification caches (default = inside the datadir)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.cachesinmem",
+    "description": "value          Number of recent ethash caches to keep in memory (16MB each) (default: 2)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.cachesondisk",
+    "description": "value         Number of recent ethash caches to keep on disk (16MB each) (default: 3)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.dagdir",
+    "description": "value               Directory to store the ethash mining DAGs (default: \"/home/ahmad/snap/geth/477/.ethash\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.dagsinmem",
+    "description": "value            Number of recent ethash mining DAGs to keep in memory (1+GB each) (default: 1)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ethash.dagsondisk",
+    "description": "value           Number of recent ethash mining DAGs to keep on disk (1+GB each) (default: 2)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.locals",
+    "description": "value               Comma separated accounts to treat as locals (no flush, priority inclusion)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.nolocals",
+    "description": "Disables price exemptions for locally submitted transactions"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.journal",
+    "description": "value              Disk journal for local transaction to survive node restarts (default: \"transactions.rlp\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.rejournal",
+    "description": "value            Time interval to regenerate the local transaction journal (default: 1h0m0s)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.pricelimit",
+    "description": "value           Minimum gas price limit to enforce for acceptance into the pool (default: 1)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.pricebump",
+    "description": "value            Price bump percentage to replace an already existing transaction (default: 10)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.accountslots",
+    "description": "value         Minimum number of executable transaction slots guaranteed per account (default: 16)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.globalslots",
+    "description": "value          Maximum number of executable transaction slots for all accounts (default: 4096)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.accountqueue",
+    "description": "value         Maximum number of non-executable transaction slots permitted per account (default: 64)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.globalqueue",
+    "description": "value          Maximum number of non-executable transaction slots for all accounts (default: 1024)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--txpool.lifetime",
+    "description": "value             Maximum amount of time non-executable transaction are queued (default: 3h0m0s)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cache",
+    "description": "value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cache.database",
+    "description": "value              Percentage of cache memory allowance to use for database io (default: 50)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cache.trie",
+    "description": "value                  Percentage of cache memory allowance to use for trie caching (default = 25% full mode, 50% archive mode) (default: 25)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cache.gc",
+    "description": "value                    Percentage of cache memory allowance to use for trie pruning (default = 25% full mode, 0% archive mode) (default: 25)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cache.noprefetch",
+    "description": "Disable heuristic state prefetch during block import (less CPU and disk IO, more time waiting for data)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--unlock",
+    "description": "value                      Comma separated list of accounts to unlock"
+  },
+  {
+    "shortcut": null,
+    "flag": "--password",
+    "description": "value                    Password file to use for non-interactive password input"
+  },
+  {
+    "shortcut": null,
+    "flag": "--signer",
+    "description": "value                      External signer (url or path to ipc file)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--allow-insecure-unlock",
+    "description": "Allow insecure account unlocking when account-related RPCs are exposed by http"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ipcdisable",
+    "description": "Disable the IPC-RPC server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ipcpath",
+    "description": "value                     Filename for IPC socket/pipe within the datadir (explicit paths escape it)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpc",
+    "description": "Enable the HTTP-RPC server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpcaddr",
+    "description": "value                     HTTP-RPC server listening interface (default: \"localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpcport",
+    "description": "value                     HTTP-RPC server listening port (default: 8545)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpcapi",
+    "description": "value                      API's offered over the HTTP-RPC interface"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpc.gascap",
+    "description": "value                  Sets a cap on gas that can be used in eth_call/estimateGas (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpccorsdomain",
+    "description": "value               Comma separated list of domains from which to accept cross origin requests (browser enforced)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--rpcvhosts",
+    "description": "value                   Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: \"localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--ws",
+    "description": "Enable the WS-RPC server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--wsaddr",
+    "description": "value                      WS-RPC server listening interface (default: \"localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--wsport",
+    "description": "value                      WS-RPC server listening port (default: 8546)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--wsapi",
+    "description": "value                       API's offered over the WS-RPC interface"
+  },
+  {
+    "shortcut": null,
+    "flag": "--wsorigins",
+    "description": "value                   Origins from which to accept websockets requests"
+  },
+  {
+    "shortcut": null,
+    "flag": "--graphql",
+    "description": "Enable the GraphQL server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--graphql.addr",
+    "description": "value                GraphQL server listening interface (default: \"localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--graphql.port",
+    "description": "value                GraphQL server listening port (default: 8547)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--graphql.corsdomain",
+    "description": "value          Comma separated list of domains from which to accept cross origin requests (browser enforced)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--graphql.vhosts",
+    "description": "value              Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: \"localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--jspath",
+    "description": "loadScript                 JavaScript root path for loadScript (default: \".\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--exec",
+    "description": "value                        Execute JavaScript statement"
+  },
+  {
+    "shortcut": null,
+    "flag": "--preload",
+    "description": "value                     Comma separated list of JavaScript files to preload into the console"
+  },
+  {
+    "shortcut": null,
+    "flag": "--bootnodes",
+    "description": "value                   Comma separated enode URLs for P2P discovery bootstrap (set v4+v5 instead for light servers)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--bootnodesv4",
+    "description": "value                 Comma separated enode URLs for P2P v4 discovery bootstrap (light server, full nodes)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--bootnodesv5",
+    "description": "value                 Comma separated enode URLs for P2P v5 discovery bootstrap (light server, light nodes)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--port",
+    "description": "value                        Network listening port (default: 30303)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--maxpeers",
+    "description": "value                    Maximum number of network peers (network disabled if set to 0) (default: 50)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--maxpendpeers",
+    "description": "value                Maximum number of pending connection attempts (defaults used if set to 0) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nat",
+    "description": "value                         NAT port mapping mechanism (any|none|upnp|pmp|extip:<IP>) (default: \"any\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nodiscover",
+    "description": "Disables the peer discovery mechanism (manual peer addition)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--v5disc",
+    "description": "Enables the experimental RLPx V5 (Topic Discovery) mechanism"
+  },
+  {
+    "shortcut": null,
+    "flag": "--netrestrict",
+    "description": "value                 Restricts network communication to the given IP networks (CIDR masks)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nodekey",
+    "description": "value                     P2P node key file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nodekeyhex",
+    "description": "value                  P2P node key as hex (for testing)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--mine",
+    "description": "Enable mining"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.threads",
+    "description": "value               Number of CPU threads to use for mining (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.notify",
+    "description": "value                Comma separated HTTP URL list to notify of new work packages"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.gasprice",
+    "description": "value              Minimum gas price for mining a transaction (default: 1000000000)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.gastarget",
+    "description": "value             Target gas floor for mined blocks (default: 8000000)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.gaslimit",
+    "description": "value              Target gas ceiling for mined blocks (default: 8000000)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.etherbase",
+    "description": "value             Public address for block mining rewards (default = first account) (default: \"0\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.extradata",
+    "description": "value             Block extra data set by the miner (default = client version)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.recommit",
+    "description": "value              Time interval to recreate the block being mined (default: 3s)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--miner.noverify",
+    "description": "Disable remote sealing verification"
+  },
+  {
+    "shortcut": null,
+    "flag": "--gpoblocks",
+    "description": "value                   Number of recent blocks to check for gas prices (default: 20)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--gpopercentile",
+    "description": "value               Suggested gas price is the given percentile of a set of recent transaction gas prices (default: 60)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--vmdebug",
+    "description": "Record information useful for VM and contract debugging"
+  },
+  {
+    "shortcut": null,
+    "flag": "--vm.evm",
+    "description": "value                      External EVM configuration (default = built-in interpreter)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--vm.ewasm",
+    "description": "value                    External ewasm configuration (default = built-in interpreter)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--fakepow",
+    "description": "Disables proof-of-work verification"
+  },
+  {
+    "shortcut": null,
+    "flag": "--nocompaction",
+    "description": "Disables db compaction after import"
+  },
+  {
+    "shortcut": null,
+    "flag": "--verbosity",
+    "description": "value                   Logging verbosity: 0=silent, 1=error, 2=warn, 3=info, 4=debug, 5=detail (default: 3)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--vmodule",
+    "description": "value                     Per-module verbosity: comma-separated list of <pattern>=<level> (e.g. eth/*=5,p2p=4)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--backtrace",
+    "description": "value                   Request a stack trace at a specific logging statement (e.g. \"block.go:271\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--debug",
+    "description": "Prepends log messages with call-site location (file and line number)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--pprof",
+    "description": "Enable the pprof HTTP server"
+  },
+  {
+    "shortcut": null,
+    "flag": "--pprofaddr",
+    "description": "value                   pprof HTTP server listening interface (default: \"127.0.0.1\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--pprofport",
+    "description": "value                   pprof HTTP server listening port (default: 6060)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--memprofilerate",
+    "description": "value              Turn on memory profiling with the given rate (default: 524288)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--blockprofilerate",
+    "description": "value            Turn on block profiling with the given rate (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--cpuprofile",
+    "description": "value                  Write CPU profile to the given file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--trace",
+    "description": "value                       Write execution trace to the given file"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics",
+    "description": "Enable metrics collection and reporting"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.expensive",
+    "description": "Enable expensive metrics collection and reporting"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb",
+    "description": "Enable metrics export/push to an external InfluxDB database"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb.endpoint",
+    "description": "value   InfluxDB API endpoint to report metrics to (default: \"http://localhost:8086\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb.database",
+    "description": "value   InfluxDB database name to push reported metrics to (default: \"geth\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb.username",
+    "description": "value   Username to authorize access to the database (default: \"test\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb.password",
+    "description": "value   Password to authorize access to the database (default: \"test\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--metrics.influxdb.tags",
+    "description": "value       Comma-separated InfluxDB tags (key/values) attached to all measurements (default: \"host=localhost\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--shh",
+    "description": "Enable Whisper"
+  },
+  {
+    "shortcut": null,
+    "flag": "--shh.maxmessagesize",
+    "description": "value          Max message size accepted (default: 1048576)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--shh.pow",
+    "description": "value                     Minimum POW accepted (default: 0.2)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--shh.restrict-light",
+    "description": "Restrict connection between two whisper light clients"
+  },
+  {
+    "shortcut": null,
+    "flag": "--lightserv",
+    "description": "value                   Maximum percentage of time allowed for serving LES requests (deprecated, use --light.serve) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--lightpeers",
+    "description": "value                  Maximum number of light clients to serve, or light servers to attach to  (deprecated, use --light.maxpeers) (default: 100)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--minerthreads",
+    "description": "value                Number of CPU threads to use for mining (deprecated, use --miner.threads) (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--targetgaslimit",
+    "description": "value              Target gas floor for mined blocks (deprecated, use --miner.gastarget) (default: 8000000)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--gasprice",
+    "description": "value                    Minimum gas price for mining a transaction (deprecated, use --miner.gasprice) (default: 1000000000)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--etherbase",
+    "description": "value                   Public address for block mining rewards (default = first account, deprecated, use --miner.etherbase) (default: \"0\")"
+  },
+  {
+    "shortcut": null,
+    "flag": "--extradata",
+    "description": "value                   Block extra data set by the miner (default = client version, deprecated, use --miner.extradata)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--override.istanbul",
+    "description": "value           Manually specify Istanbul fork-block, overriding the bundled setting (default: 0)"
+  },
+  {
+    "shortcut": null,
+    "flag": "--help",
+    "description": ", -h                          show help"
+  }
+]

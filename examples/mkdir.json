@@ -1,0 +1,37 @@
+[
+  {
+    "shortcut": "-m",
+    "flag": "--mode",
+    "description": "=MODE   set file mode (as in chmod), not a=rwx - umask"
+  },
+  {
+    "shortcut": "-p",
+    "flag": "--parents",
+    "description": "no error if existing, make parent directories as needed"
+  },
+  {
+    "shortcut": "-v",
+    "flag": "--verbose",
+    "description": "print a message for each created directory"
+  },
+  {
+    "shortcut": "-Z",
+    "flag": null,
+    "description": "set SELinux security context of each created directory"
+  },
+  {
+    "shortcut": null,
+    "flag": "--context",
+    "description": "[=CTX]  like -Z, or if CTX is specified then set the SELinux"
+  },
+  {
+    "shortcut": null,
+    "flag": "--help",
+    "description": "display this help and exit"
+  },
+  {
+    "shortcut": null,
+    "flag": "--version",
+    "description": "output version information and exit"
+  }
+]

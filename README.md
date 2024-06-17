@@ -166,3 +166,126 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
   "additionalProperties": false
 }
 ```
+
+## Example Output (netstat)
+```
+{
+  "name": "netstat",
+  "description": "Network statistics tool",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--all",
+      "shortcut": "-a",
+      "description": "display all sockets",
+      "default": "connected"
+    },
+    {
+      "option": "--cache",
+      "shortcut": "-C",
+      "description": "display routing cache instead of FIB"
+    },
+    {
+      "option": "--continuous",
+      "shortcut": "-c",
+      "description": "continuous listing"
+    },
+    {
+      "option": "--context",
+      "shortcut": "-Z",
+      "description": "display SELinux security context for sockets"
+    },
+    {
+      "option": "--extend",
+      "shortcut": "-e",
+      "description": "display other/more information"
+    },
+    {
+      "option": "--fib",
+      "shortcut": "-F",
+      "description": "display Forwarding Information Base",
+      "default": ""
+    },
+    {
+      "option": "--groups",
+      "shortcut": "-g",
+      "description": "display multicast group memberships"
+    },
+    {
+      "option": "--interfaces",
+      "shortcut": "-i",
+      "description": "display interface table"
+    },
+    {
+      "option": "--listening",
+      "shortcut": "-l",
+      "description": "display listening server sockets"
+    },
+    {
+      "option": "--masquerade",
+      "shortcut": "-M",
+      "description": "display masqueraded connections"
+    },
+    {
+      "option": "--numeric-hosts",
+      "shortcut": "None",
+      "description": "don\"t resolve host names"
+    },
+    {
+      "option": "--numeric-ports",
+      "shortcut": "None",
+      "description": "don\"t resolve port names"
+    },
+    {
+      "option": "--numeric-users",
+      "shortcut": "None",
+      "description": "don\"t resolve user names"
+    },
+    {
+      "option": "--numeric",
+      "shortcut": "-n",
+      "description": "don\"t resolve names"
+    },
+    {
+      "option": "--programs",
+      "shortcut": "-p",
+      "description": "display PID/Program name for sockets"
+    },
+    {
+      "option": "--route",
+      "shortcut": "-r",
+      "description": "display routing table"
+    },
+    {
+      "option": "--statistics",
+      "shortcut": "-s",
+      "description": "display networking statistics (like SNMP)"
+    },
+    {
+      "option": "--symbolic",
+      "shortcut": "-N",
+      "description": "resolve hardware names"
+    },
+    {
+      "option": "--timers",
+      "shortcut": "-o",
+      "description": "display timers"
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "be verbose"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "show version information"
+    },
+    {
+      "option": "--wide",
+      "shortcut": "-W",
+      "description": "don\"t truncate IP addresses"
+    }
+  ]
+}
+```

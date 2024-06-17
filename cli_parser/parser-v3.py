@@ -104,9 +104,6 @@ def analyze_binary_help(binary, parent=None):
             subcommands.append(subcommand_result)
 
         result['subcommands'] = subcommands
-        print("Name", result['name'])
-        print("Subcommands", result['subcommands'])
-        print("Options", result['options'])
 
         # Write result to file
         with open('result.json', 'a') as file:
@@ -127,7 +124,7 @@ def analyze_binary_help(binary, parent=None):
             'options': []
         }
 
-def main(binary_name, url=None):
+def main(binary_name, url=None, save=None):
     if url:
         binary_path = download_and_extract(url)
         binary_name = os.path.basename(binary_path)
@@ -135,12 +132,16 @@ def main(binary_name, url=None):
         binary_path = binary_name
 
     result = analyze_binary_help(binary_path)
-    print(f"Results for {binary_name} inserted into MongoDB")
+    print(result)
+    if save:
+        db.cli_archive.insert_one(result)
+        print(f"Results for {binary_name} inserted into MongoDB")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI Analyzer")
     parser.add_argument("binary_name", type=str, help="The name of the binary to analyze")
     parser.add_argument("--url", type=str, help="Optional URL to download the binary or archive file")
+    parser.add_argument("--save", type=bool, help="Optionally save the result to a local MongoDB instance")
 
     args = parser.parse_args()
-    main(args.binary_name, args.url)
+    main(args.binary_name, args.url, args.save)

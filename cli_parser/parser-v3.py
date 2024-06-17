@@ -8,7 +8,7 @@ import zipfile
 from pymongo import MongoClient
 
 # MongoDB setup
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb://dev:testing@localhost:27017/")
 db = client.cli_archive
 
 def download_and_extract(url, dest="/usr/local/bin"):
@@ -48,15 +48,11 @@ def call_help(binary, command=None):
 
 def get_help_output_prompt():
     return (
-        f"Identify the subcommands and options in the following command-line tool help output and store them in a JSON object. "
-        f"The object should have 'subcommands' and 'options' keys, each containing a list of JSON objects. "
-        f"Options can either begin with a '-' or '--'. Subcommands can only begin with an alphanumeric character."
-        f"For subcommands, use the format: {{'name': <command-name>, 'description': <command-description>}}. "
-        f"For options, use the format: {{'option': <option prefixed with '--'>, 'shortcut': <option shortcut prefixed with '-'>, 'description': <option-description>}}. "
-        f"Include optional properties 'value' for options with strings like '<EPOCH>' or 'value', and 'default' for options with 'default: '. "
-        f"If an option belongs to a section like 'ETHEREUM OPTIONS' or 'LIGHT CLIENT OPTIONS', add a 'section' property. "
-        f"Add a 'description' property to describe the root command. "
-        f"Include a 'name' property with the binary name and sort the subcommands and options lists alphabetically."
+        f"Parse the command-line tool help output into a JSON object with 'subcommands' and 'options' keys. "
+        f"Subcommands start with a lowercase alphanumeric character; options start with '-' or '--'. "
+        f"Subcommands format: {{'name': <name>, 'description': <description>}}. "
+        f"Options format: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'section': <section>}}. "
+        f"Include 'description' for the root command and 'name' for the binary. Sort subcommands and options alphabetically."
     )
 
 def analyze_binary_help(binary, parent=None):
@@ -90,6 +86,8 @@ def analyze_binary_help(binary, parent=None):
     try:
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json_data)
         response.raise_for_status()
+
+        print("AI Token Usage:", response.json()['usage'])
         result = json.loads(response.json()['choices'][0]['message']['content'].strip())
         result['name'] = f"{binary} {parent}" if parent else binary
 

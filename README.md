@@ -2,6 +2,9 @@
 
 A tool to recursively parse CLI commands, subcommands and associated program options.
 
+## Example Usage
+`python cli-parser/cli_parser/parser-v3.py netstat`
+
 ## Output Schema
 ```
 {

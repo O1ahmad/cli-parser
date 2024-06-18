@@ -69,6 +69,27 @@ def call_help(binary, command=None):
             return result.stdout
     raise Exception(f"Failed to get help output for {binary} {' '.join(command) if command else ''}")
 
+def call_version(binary):
+    """
+    Calls the version command for the specified binary and returns the version output.
+
+    Args:
+        binary (str): The name or path of the binary to call.
+
+    Returns:
+        str: The version output of the binary.
+
+    Raises:
+        Exception: If all attempts to get version output fail.
+    """
+    version_commands = [["--version"], ["-v"], ["version"]]
+    for version_cmd in version_commands:
+        cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + version_cmd
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            return result.stdout.strip()
+    raise Exception(f"Failed to get version output for {binary}")
+
 def get_help_output_prompt():
     """
     Returns the prompt string used to request JSON parsing of command-line help output.
@@ -78,11 +99,22 @@ def get_help_output_prompt():
     """
     return (
         f"Parse the command-line help output into a JSON with 'subcommands' and 'options'. "
-        f"Subcommands must start with a lowercase letter; options start with '-' or '--'. "
+        f"Subcommands must begin with a lowercase letter; options start with '-' or '--'. "
         f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}. "
         f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
         f"Exclude missing properties. Include 'description' and 'name' for the root command. "
         f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."
+    )
+
+def get_version_output_prompt():
+    """
+    Returns the prompt string used to request version parsing of command-line version output.
+
+    Returns:
+        str: The prompt string.
+    """
+    return (
+        f"Extract and return the version number (including commit SHAs) from the following version output."
     )
 
 def analyze_binary_help(binary, parent=None):
@@ -144,6 +176,7 @@ def analyze_binary_help(binary, parent=None):
             subcommands.append(subcommand_result)
 
         result['subcommands'] = subcommands
+        result['version'] = analyze_binary_version(binary)
 
         # Write result to file
         with open('result.json', 'a') as file:
@@ -163,6 +196,55 @@ def analyze_binary_help(binary, parent=None):
             'subcommands': [],
             'options': []
         }
+
+def analyze_binary_version(binary):
+    """
+    Analyzes the version output of a binary and returns the version number.
+
+    Args:
+        binary (str): The name or path of the binary to analyze.
+
+    Returns:
+        str: The version number of the binary.
+    """
+    print(f"Analyzing Binary Version: {binary}")
+    try:
+        version_output = call_version(binary)
+    except Exception as e:
+        print(str(e))
+        return None
+
+    prompt = get_version_output_prompt()
+    headers = {
+        'Authorization': f"Bearer {os.getenv('OPENAI_API_KEY')}",
+        'Content-Type': 'application/json',
+    }
+    json_data = {
+        'model': 'gpt-4o',
+        'messages': [
+            {'role': 'system', 'content': 'You are a helpful CLI parser assistant who extracts version numbers from version output.'},
+            {'role': 'user', 'content': prompt},
+            {'role': 'user', 'content': version_output}
+        ],
+        'max_tokens': 4096,
+        'temperature': 0.7
+    }
+
+    try:
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json_data)
+        response.raise_for_status()
+
+        print("AI Token Usage:", response.json()['usage'])
+        result = response.json()['choices'][0]['message']['content'].strip()
+
+        return result
+
+    except requests.exceptions.RequestException as e:
+        print(e.response.json() if e.response else str(e))
+        return None
+    except Exception as e:
+        print(str(e))
+        return None
 
 def main(binary_name, url=None, save=False):
     """

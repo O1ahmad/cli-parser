@@ -161,14 +161,14 @@ def analyze_binary_help(binary, parent=None):
             'options': []
         }
 
-def main(binary_name, url=None, save=None):
+def main(binary_name, url=None, save=False):
     """
     Main function to analyze a binary's help output and optionally save the results to MongoDB.
 
     Args:
         binary_name (str): The name of the binary to analyze.
         url (str, optional): URL to download the binary or archive file. Defaults to None.
-        save (bool, optional): Whether to save the result to a local MongoDB instance. Defaults to None.
+        save (bool, optional): Whether to save the result to a local MongoDB instance. Defaults to False.
     """
     if url:
         binary_path = download_and_extract(url)
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI Analyzer")
     parser.add_argument("binary_name", type=str, help="The name of the binary to analyze")
     parser.add_argument("--url", type=str, help="Optional URL to download the binary or archive file")
-    parser.add_argument("--save", type=bool, help="Optionally save the result to a local MongoDB instance")
+    parser.add_argument("--save", action='store_true', help="Optionally save the result to a local MongoDB instance")
 
     args = parser.parse_args()
     main(args.binary_name, args.url, args.save)

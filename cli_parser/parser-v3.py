@@ -77,11 +77,12 @@ def get_help_output_prompt():
         str: The prompt string.
     """
     return (
-        f"Parse the command-line tool help output into a JSON object with 'subcommands' and 'options' keys. "
-        f"Subcommands start with a lowercase alphanumeric character; options start with '-' or '--'. "
-        f"Subcommands format: {{'name': <name>, 'description': <description>}}. "
-        f"Options format: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
-        f"Include 'description' for the root command and 'name' for the binary. Sort subcommands and options alphabetically."
+        f"Parse the command-line help output into a JSON with 'subcommands' and 'options'. "
+        f"Subcommands must start with a lowercase letter; options start with '-' or '--'. "
+        f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}. "
+        f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
+        f"Exclude missing properties. Include 'description' and 'name' for the root command. "
+        f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."
     )
 
 def analyze_binary_help(binary, parent=None):
@@ -95,6 +96,8 @@ def analyze_binary_help(binary, parent=None):
     Returns:
         dict: The parsed help output in JSON format, including subcommands and options.
     """
+
+    print(f"Analyzing Binary: {binary}, Parent: {parent}")
     try:
         help_output = call_help(binary, parent)
     except Exception as e:
@@ -133,7 +136,7 @@ def analyze_binary_help(binary, parent=None):
         # Analyze subcommands recursively
         subcommands = []
         for command in result.get('subcommands', []):
-            if command['name'].lower() == "help":
+            if command['name'].lower() == "help" or command['name'].lower() == (parent.lower() if parent else "") or command['name'] in binary:
                 continue
 
             subcommand_name = command['name']

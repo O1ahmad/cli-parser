@@ -12,6 +12,16 @@ client = MongoClient("mongodb://dev:testing@localhost:27017/")
 db = client.cli_archive
 
 def download_and_extract(url, dest="/usr/local/bin"):
+    """
+    Downloads and extracts an archive file from the given URL to the specified destination.
+
+    Args:
+        url (str): The URL of the file to download.
+        dest (str): The destination directory to extract the file to. Defaults to "/usr/local/bin".
+
+    Returns:
+        str: The file path of the downloaded and extracted file.
+    """
     if url.endswith('.tar.gz') or url.endswith('.tgz'):
         response = requests.get(url, stream=True)
         file_path = os.path.join(dest, "archive.tar.gz")
@@ -38,24 +48,53 @@ def download_and_extract(url, dest="/usr/local/bin"):
     return file_path
 
 def call_help(binary, command=None):
+    """
+    Calls the help command for the specified binary and returns the help output.
+
+    Args:
+        binary (str): The name or path of the binary to call.
+        command (str, optional): An additional command to append to the binary. Defaults to None.
+
+    Returns:
+        str: The help output of the binary.
+
+    Raises:
+        Exception: If all attempts to get help output fail.
+    """
     help_commands = [["--help"], ["-h"], ["help"]]
     for help_cmd in help_commands:
         cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + (command.split() if command else []) + help_cmd
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode == 0:
             return result.stdout
-    raise Exception(f"Failed to get help output for {binary} {' '.join(command)}")
+    raise Exception(f"Failed to get help output for {binary} {' '.join(command) if command else ''}")
 
 def get_help_output_prompt():
+    """
+    Returns the prompt string used to request JSON parsing of command-line help output.
+
+    Returns:
+        str: The prompt string.
+    """
     return (
         f"Parse the command-line tool help output into a JSON object with 'subcommands' and 'options' keys. "
         f"Subcommands start with a lowercase alphanumeric character; options start with '-' or '--'. "
         f"Subcommands format: {{'name': <name>, 'description': <description>}}. "
-        f"Options format: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'section': <section>}}. "
+        f"Options format: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
         f"Include 'description' for the root command and 'name' for the binary. Sort subcommands and options alphabetically."
     )
 
 def analyze_binary_help(binary, parent=None):
+    """
+    Analyzes the help output of a binary and returns it in JSON format, including subcommands and options.
+
+    Args:
+        binary (str): The name or path of the binary to analyze.
+        parent (str, optional): An additional command to append to the binary for deeper analysis. Defaults to None.
+
+    Returns:
+        dict: The parsed help output in JSON format, including subcommands and options.
+    """
     try:
         help_output = call_help(binary, parent)
     except Exception as e:
@@ -94,7 +133,7 @@ def analyze_binary_help(binary, parent=None):
         # Analyze subcommands recursively
         subcommands = []
         for command in result.get('subcommands', []):
-            if (command['name'].lower() == "help"):
+            if command['name'].lower() == "help":
                 continue
 
             subcommand_name = command['name']
@@ -123,6 +162,14 @@ def analyze_binary_help(binary, parent=None):
         }
 
 def main(binary_name, url=None, save=None):
+    """
+    Main function to analyze a binary's help output and optionally save the results to MongoDB.
+
+    Args:
+        binary_name (str): The name of the binary to analyze.
+        url (str, optional): URL to download the binary or archive file. Defaults to None.
+        save (bool, optional): Whether to save the result to a local MongoDB instance. Defaults to None.
+    """
     if url:
         binary_path = download_and_extract(url)
         binary_name = os.path.basename(binary_path)

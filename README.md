@@ -15,6 +15,17 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
       "type": "string",
       "description": "The name of the CLI command or binary."
     },
+    "version": {
+      "type": "string",
+      "description": "The version of the CLI command or binary."
+    },
+    "usage": {
+      "type": "array",
+      "description": "Usage strings for the CLI command or binary."
+      "items": {
+        "type": "string"
+      }
+    },
     "subcommands": {
       "type": "array",
       "items": {
@@ -171,14 +182,18 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
 ```
 {
   "name": "netstat",
-  "description": "Network statistics tool",
-  "subcommands": [],
+  "description": "A command-line tool for displaying network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.",
+  "usage": [
+    "netstat [-vWeenNcCF] [<Af>] -r",
+    "netstat {-V|--version|-h|--help}",
+    "netstat [-vWnNcaeol] [<Socket> ...]",
+    "netstat { [-vWeenNac] -i | [-cnNe] -M | -s [-6tuw] }"
+  ],
   "options": [
     {
       "option": "--all",
       "shortcut": "-a",
-      "description": "display all sockets",
-      "default": "connected"
+      "description": "display all sockets (default: connected)"
     },
     {
       "option": "--cache",
@@ -203,8 +218,7 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
     {
       "option": "--fib",
       "shortcut": "-F",
-      "description": "display Forwarding Information Base",
-      "default": ""
+      "description": "display Forwarding Information Base (default)"
     },
     {
       "option": "--groups",
@@ -227,24 +241,21 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
       "description": "display masqueraded connections"
     },
     {
+      "option": "--numeric",
+      "shortcut": "-n",
+      "description": "don't resolve names"
+    },
+    {
       "option": "--numeric-hosts",
-      "shortcut": "None",
-      "description": "don\"t resolve host names"
+      "description": "don't resolve host names"
     },
     {
       "option": "--numeric-ports",
-      "shortcut": "None",
-      "description": "don\"t resolve port names"
+      "description": "don't resolve port names"
     },
     {
       "option": "--numeric-users",
-      "shortcut": "None",
-      "description": "don\"t resolve user names"
-    },
-    {
-      "option": "--numeric",
-      "shortcut": "-n",
-      "description": "don\"t resolve names"
+      "description": "don't resolve user names"
     },
     {
       "option": "--programs",
@@ -279,13 +290,20 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
     {
       "option": "--version",
       "shortcut": "-V",
-      "description": "show version information"
+      "description": "display version information"
     },
     {
       "option": "--wide",
       "shortcut": "-W",
-      "description": "don\"t truncate IP addresses"
+      "description": "don't truncate IP addresses"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "display this help and exit"
     }
-  ]
+  ],
+  "subcommands": [],
+  "version": "2.10-alpha"
 }
 ```

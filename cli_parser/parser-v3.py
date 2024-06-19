@@ -1,10 +1,12 @@
 import argparse
-import requests
+import json
 import os
 import subprocess
-import json
 import tarfile
 import zipfile
+
+import requests
+from bson import json_util
 from pymongo import MongoClient
 
 
@@ -199,7 +201,7 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
 
         if existing_document and not override:
             print(f"Document for {binary_name} found in MongoDB:")
-            print(existing_document)
+            print(json.dumps(existing_document, indent=4, default=json_util.default))
             return
     else:
         db = None
@@ -211,7 +213,7 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
         binary_path = binary_name
 
     result = analyze_binary_help(binary_path)
-    print(result)
+    print(json.dumps(result, indent=4))
 
     if db:
         if existing_document and override:

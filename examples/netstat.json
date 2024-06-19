@@ -1,107 +1,48 @@
-[
-  {
-    "shortcut": "-r",
-    "flag": "--route",
-    "description": "display routing table"
-  },
-  {
-    "shortcut": "-i",
-    "flag": "--interfaces",
-    "description": "display interface table"
-  },
-  {
-    "shortcut": "-g",
-    "flag": "--groups",
-    "description": "display multicast group memberships"
-  },
-  {
-    "shortcut": "-s",
-    "flag": "--statistics",
-    "description": "display networking statistics (like SNMP)"
-  },
-  {
-    "shortcut": "-M",
-    "flag": "--masquerade",
-    "description": "display masqueraded connections"
-  },
-  {
-    "shortcut": "-v",
-    "flag": "--verbose",
-    "description": "be verbose"
-  },
-  {
-    "shortcut": "-W",
-    "flag": "--wide",
-    "description": "don't truncate IP addresses"
-  },
-  {
-    "shortcut": "-n",
-    "flag": "--numeric",
-    "description": "don't resolve names"
-  },
-  {
-    "shortcut": null,
-    "flag": "--numeric-hosts",
-    "description": "don't resolve host names"
-  },
-  {
-    "shortcut": null,
-    "flag": "--numeric-ports",
-    "description": "don't resolve port names"
-  },
-  {
-    "shortcut": null,
-    "flag": "--numeric-users",
-    "description": "don't resolve user names"
-  },
-  {
-    "shortcut": "-N",
-    "flag": "--symbolic",
-    "description": "resolve hardware names"
-  },
-  {
-    "shortcut": "-e",
-    "flag": "--extend",
-    "description": "display other/more information"
-  },
-  {
-    "shortcut": "-p",
-    "flag": "--programs",
-    "description": "display PID/Program name for sockets"
-  },
-  {
-    "shortcut": "-o",
-    "flag": "--timers",
-    "description": "display timers"
-  },
-  {
-    "shortcut": "-c",
-    "flag": "--continuous",
-    "description": "continuous listing"
-  },
-  {
-    "shortcut": "-l",
-    "flag": "--listening",
-    "description": "display listening server sockets"
-  },
-  {
-    "shortcut": "-a",
-    "flag": "--all",
-    "description": "display all sockets (default: connected)"
-  },
-  {
-    "shortcut": "-F",
-    "flag": "--fib",
-    "description": "display Forwarding Information Base (default)"
-  },
-  {
-    "shortcut": "-C",
-    "flag": "--cache",
-    "description": "display routing cache instead of FIB"
-  },
-  {
-    "shortcut": "-Z",
-    "flag": "--context",
-    "description": "display SELinux security context for sockets"
-  }
-]
+Document for mkdir found in MongoDB:
+{
+    "_id": {
+        "$oid": "6670ab2e82548448da1df8be"
+    },
+    "name": "mkdir",
+    "description": "Create the DIRECTORY(ies), if they do not already exist.",
+    "subcommands": [],
+    "options": [
+        {
+            "option": "--context",
+            "shortcut": null,
+            "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX",
+            "value": "CTX"
+        },
+        {
+            "option": "--help",
+            "shortcut": null,
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--mode",
+            "shortcut": "-m",
+            "description": "set file mode (as in chmod), not a=rwx - umask",
+            "value": "MODE"
+        },
+        {
+            "option": "--parents",
+            "shortcut": "-p",
+            "description": "no error if existing, make parent directories as needed"
+        },
+        {
+            "option": "--verbose",
+            "shortcut": "-v",
+            "description": "print a message for each created directory"
+        },
+        {
+            "option": "--version",
+            "shortcut": null,
+            "description": "output version information and exit"
+        },
+        {
+            "option": "-Z",
+            "shortcut": null,
+            "description": "set SELinux security context of each created directory to the default type"
+        }
+    ]
+}

@@ -7,9 +7,6 @@ import tarfile
 import zipfile
 from pymongo import MongoClient
 
-# MongoDB setup
-client = MongoClient("mongodb://dev:testing@localhost:27017/")
-db = client.cli_archive
 
 def download_file(url, dest):
     response = requests.get(url, stream=True)
@@ -180,35 +177,43 @@ def analyze_binary_version(binary):
         print(str(e))
         return None
 
-def main(binary_name, url=None, save=False, override=False):
+def main(binary_name, url=None, mongodb_url=None, override=False):
     """
     Main function to analyze a binary's help output and optionally save the results to MongoDB.
 
     Args:
         binary_name (str): The name of the binary to analyze.
         url (str, optional): URL to download the binary or archive file. Defaults to None.
-        save (bool, optional): Whether to save the result to a local MongoDB instance. Defaults to False.
+        mongodb_url (str, optional): MongoDB connection string. Defaults to None.
         override (bool, optional): Whether to override existing document if it exists. Defaults to False.
     """
+    if mongodb_url:
+        client = MongoClient(mongodb_url)
+        db = client.cli_archive
 
-    try:
-        existing_document = db.cli_archive.find_one({"name": binary_name})
-    except Exception as e:
-        print(f"Error accessing MongoDB: {str(e)}")
-        existing_document = None
+        try:
+            existing_document = db.cli_archive.find_one({"name": binary_name})
+        except Exception as e:
+            print(f"Error encountered accessing Mongo DB: {str(e)}")
+            existing_document = None
 
-    if existing_document and not override:
-        print(f"Document for {binary_name} found in MongoDB:\n{existing_document}")
-        return
+        if existing_document and not override:
+            print(f"Document for {binary_name} found in MongoDB:")
+            print(existing_document)
+            return
+    else:
+        db = None
 
-    binary_path = download_and_extract(url) if url else binary_name
     if url:
+        binary_path = download_and_extract(url)
         binary_name = os.path.basename(binary_path)
+    else:
+        binary_path = binary_name
 
     result = analyze_binary_help(binary_path)
     print(result)
 
-    if save:
+    if db:
         if existing_document and override:
             db.cli_archive.replace_one({"name": binary_name}, result)
             print(f"Results for {binary_name} overwritten in MongoDB")
@@ -220,8 +225,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI Analyzer")
     parser.add_argument("binary_name", type=str, help="The name of the binary to analyze")
     parser.add_argument("--url", type=str, help="Optional URL to download the binary or archive file")
-    parser.add_argument("--save", action='store_true', help="Optionally save the result to a local MongoDB instance")
     parser.add_argument("--override", action='store_true', help="Override existing document if it exists")
+    parser.add_argument("--mongodb-url", type=str, help="MongoDB connection string")
 
     args = parser.parse_args()
-    main(args.binary_name, args.url, args.save, args.override)
+    main(args.binary_name, args.url, args.mongodb_url, args.override)

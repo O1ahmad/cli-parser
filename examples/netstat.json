@@ -1,48 +1,120 @@
-Document for mkdir found in MongoDB:
+Document for netstat found in MongoDB:
 {
     "_id": {
-        "$oid": "6670ab2e82548448da1df8be"
+        "$oid": "6670ab080b06f391d42f77a7"
     },
-    "name": "mkdir",
-    "description": "Create the DIRECTORY(ies), if they do not already exist.",
-    "subcommands": [],
+    "name": "netstat",
+    "description": "netstat provides network statistics.",
+    "usage": "netstat [-vWeenNcCF] [<Af>] -r\nnetstat {-V|--version|-h|--help}\nnetstat [-vWnNcaeol] [<Socket> ...]\nnetstat { [-vWeenNac] -i | [-cnNe] -M | -s [-6tuw] }",
     "options": [
         {
+            "option": "--all",
+            "shortcut": "-a",
+            "description": "display all sockets (default: connected)"
+        },
+        {
+            "option": "--cache",
+            "shortcut": "-C",
+            "description": "display routing cache instead of FIB"
+        },
+        {
+            "option": "--continuous",
+            "shortcut": "-c",
+            "description": "continuous listing"
+        },
+        {
             "option": "--context",
-            "shortcut": null,
-            "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX",
-            "value": "CTX"
+            "shortcut": "-Z",
+            "description": "display SELinux security context for sockets"
         },
         {
-            "option": "--help",
-            "shortcut": null,
-            "description": "display this help and exit"
+            "option": "--extend",
+            "shortcut": "-e",
+            "description": "display other/more information"
         },
         {
-            "option": "--mode",
-            "shortcut": "-m",
-            "description": "set file mode (as in chmod), not a=rwx - umask",
-            "value": "MODE"
+            "option": "--fib",
+            "shortcut": "-F",
+            "description": "display Forwarding Information Base (default)"
         },
         {
-            "option": "--parents",
+            "option": "--groups",
+            "shortcut": "-g",
+            "description": "display multicast group memberships"
+        },
+        {
+            "option": "--interfaces",
+            "shortcut": "-i",
+            "description": "display interface table"
+        },
+        {
+            "option": "--listening",
+            "shortcut": "-l",
+            "description": "display listening server sockets"
+        },
+        {
+            "option": "--masquerade",
+            "shortcut": "-M",
+            "description": "display masqueraded connections"
+        },
+        {
+            "option": "--numeric",
+            "shortcut": "-n",
+            "description": "don't resolve names"
+        },
+        {
+            "option": "--numeric-hosts",
+            "description": "don't resolve host names"
+        },
+        {
+            "option": "--numeric-ports",
+            "description": "don't resolve port names"
+        },
+        {
+            "option": "--numeric-users",
+            "description": "don't resolve user names"
+        },
+        {
+            "option": "--programs",
             "shortcut": "-p",
-            "description": "no error if existing, make parent directories as needed"
+            "description": "display PID/Program name for sockets"
+        },
+        {
+            "option": "--route",
+            "shortcut": "-r",
+            "description": "display routing table"
+        },
+        {
+            "option": "--statistics",
+            "shortcut": "-s",
+            "description": "display networking statistics (like SNMP)"
+        },
+        {
+            "option": "--symbolic",
+            "shortcut": "-N",
+            "description": "resolve hardware names"
+        },
+        {
+            "option": "--timers",
+            "shortcut": "-o",
+            "description": "display timers"
         },
         {
             "option": "--verbose",
             "shortcut": "-v",
-            "description": "print a message for each created directory"
+            "description": "be verbose"
         },
         {
             "option": "--version",
-            "shortcut": null,
-            "description": "output version information and exit"
+            "shortcut": "-V",
+            "description": "display version information"
         },
         {
-            "option": "-Z",
-            "shortcut": null,
-            "description": "set SELinux security context of each created directory to the default type"
+            "option": "--wide",
+            "shortcut": "-W",
+            "description": "don't truncate IP addresses"
         }
-    ]
+    ],
+    "subcommands": [],
+    "version": "2.10-alpha"
 }

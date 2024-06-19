@@ -75,7 +75,7 @@ def get_prompt(prompt_type):
         "help": (
             f"Parse the command-line help output into a JSON with 'subcommands' and 'options'. "
             f"Subcommands can only begin with a lowercase letter; options start with '-' or '--'. "
-            f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}. "
+            f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}."
             f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
             f"Exclude missing properties. Include 'description' and 'name' for the root command. "
             f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."

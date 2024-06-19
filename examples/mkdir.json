@@ -1,37 +1,53 @@
-[
-  {
-    "shortcut": "-m",
-    "flag": "--mode",
-    "description": "=MODE   set file mode (as in chmod), not a=rwx - umask"
-  },
-  {
-    "shortcut": "-p",
-    "flag": "--parents",
-    "description": "no error if existing, make parent directories as needed"
-  },
-  {
-    "shortcut": "-v",
-    "flag": "--verbose",
-    "description": "print a message for each created directory"
-  },
-  {
-    "shortcut": "-Z",
-    "flag": null,
-    "description": "set SELinux security context of each created directory"
-  },
-  {
-    "shortcut": null,
-    "flag": "--context",
-    "description": "[=CTX]  like -Z, or if CTX is specified then set the SELinux"
-  },
-  {
-    "shortcut": null,
-    "flag": "--help",
-    "description": "display this help and exit"
-  },
-  {
-    "shortcut": null,
-    "flag": "--version",
-    "description": "output version information and exit"
-  }
-]
+Document for mkdir found in MongoDB:
+{
+    "_id": {
+        "$oid": "6670ab2e82548448da1df8be"
+    },
+    "name": "mkdir",
+    "description": "Create the DIRECTORY(ies), if they do not already exist.",
+    "usage": "Usage: mkdir [OPTION]... DIRECTORY...",
+    "options": [
+        {
+            "option": "--context",
+            "description": "like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX",
+            "value": "CTX",
+            "tags": [
+                "SELinux",
+                "SMACK"
+            ]
+        },
+        {
+            "option": "--help",
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--mode",
+            "shortcut": "-m",
+            "description": "set file mode (as in chmod), not a=rwx - umask",
+            "value": "MODE"
+        },
+        {
+            "option": "--parents",
+            "shortcut": "-p",
+            "description": "no error if existing, make parent directories as needed"
+        },
+        {
+            "option": "--verbose",
+            "shortcut": "-v",
+            "description": "print a message for each created directory"
+        },
+        {
+            "option": "--version",
+            "description": "output version information and exit"
+        },
+        {
+            "option": "-Z",
+            "description": "set SELinux security context of each created directory to the default type",
+            "tags": [
+                "SELinux"
+            ]
+        }
+    ],
+    "subcommands": [],
+    "version": "8.32"
+}

@@ -1,297 +1,235 @@
-[
-  {
-    "shortcut": "-a",
-    "flag": "--all",
-    "description": "do not ignore entries starting with ."
-  },
-  {
-    "shortcut": "-A",
-    "flag": "--almost-all",
-    "description": "do not list implied . and .."
-  },
-  {
-    "shortcut": null,
-    "flag": "--author",
-    "description": "with -l, print the author of each file"
-  },
-  {
-    "shortcut": "-b",
-    "flag": "--escape",
-    "description": "print C-style escapes for nongraphic characters"
-  },
-  {
-    "shortcut": null,
-    "flag": "--block-size",
-    "description": "=SIZE      with -l, scale sizes by SIZE when printing them;"
-  },
-  {
-    "shortcut": "-B",
-    "flag": "--ignore-backups",
-    "description": "do not list implied entries ending with ~"
-  },
-  {
-    "shortcut": "-c",
-    "flag": null,
-    "description": "with -lt: sort by, and show, ctime (time of last"
-  },
-  {
-    "shortcut": "-C",
-    "flag": null,
-    "description": "list entries by columns"
-  },
-  {
-    "shortcut": null,
-    "flag": "--color",
-    "description": "[=WHEN]         colorize the output; WHEN can be 'always' (default"
-  },
-  {
-    "shortcut": "-d",
-    "flag": "--directory",
-    "description": "list directories themselves, not their contents"
-  },
-  {
-    "shortcut": "-D",
-    "flag": "--dired",
-    "description": "generate output designed for Emacs' dired mode"
-  },
-  {
-    "shortcut": "-f",
-    "flag": null,
-    "description": "do not sort, enable -aU, disable -ls --color"
-  },
-  {
-    "shortcut": "-F",
-    "flag": "--classify",
-    "description": "append indicator (one of */=>@|) to entries"
-  },
-  {
-    "shortcut": null,
-    "flag": "--file-type",
-    "description": "likewise, except do not append '*'"
-  },
-  {
-    "shortcut": null,
-    "flag": "--format",
-    "description": "=WORD          across -x, commas -m, horizontal -x, long -l,"
-  },
-  {
-    "shortcut": null,
-    "flag": "--full-time",
-    "description": "like -l --time-style=full-iso"
-  },
-  {
-    "shortcut": "-g",
-    "flag": null,
-    "description": "like -l, but do not list owner"
-  },
-  {
-    "shortcut": null,
-    "flag": "--group-directories-first",
-    "description": "group directories before files;"
-  },
-  {
-    "shortcut": "-G",
-    "flag": "--no-group",
-    "description": "in a long listing, don't print group names"
-  },
-  {
-    "shortcut": "-h",
-    "flag": "--human-readable",
-    "description": "with -l and -s, print sizes like 1K 234M 2G etc."
-  },
-  {
-    "shortcut": null,
-    "flag": "--si",
-    "description": "likewise, but use powers of 1000 not 1024"
-  },
-  {
-    "shortcut": "-H",
-    "flag": "--dereference-command-line",
-    "description": "follow symbolic links listed on the command line"
-  },
-  {
-    "shortcut": null,
-    "flag": "--dereference-command-line-symlink-to-dir",
-    "description": "follow each command line symbolic link"
-  },
-  {
-    "shortcut": null,
-    "flag": "--hide",
-    "description": "=PATTERN         do not list implied entries matching shell PATTERN"
-  },
-  {
-    "shortcut": null,
-    "flag": "--hyperlink",
-    "description": "[=WHEN]     hyperlink file names; WHEN can be 'always'"
-  },
-  {
-    "shortcut": null,
-    "flag": "--indicator-style",
-    "description": "=WORD  append indicator with style WORD to entry names:"
-  },
-  {
-    "shortcut": "-i",
-    "flag": "--inode",
-    "description": "print the index number of each file"
-  },
-  {
-    "shortcut": "-I",
-    "flag": "--ignore",
-    "description": "=PATTERN       do not list implied entries matching shell PATTERN"
-  },
-  {
-    "shortcut": "-k",
-    "flag": "--kibibytes",
-    "description": "default to 1024-byte blocks for disk usage;"
-  },
-  {
-    "shortcut": "-l",
-    "flag": null,
-    "description": "use a long listing format"
-  },
-  {
-    "shortcut": "-L",
-    "flag": "--dereference",
-    "description": "when showing file information for a symbolic"
-  },
-  {
-    "shortcut": "-m",
-    "flag": null,
-    "description": "fill width with a comma separated list of entries"
-  },
-  {
-    "shortcut": "-n",
-    "flag": "--numeric-uid-gid",
-    "description": "like -l, but list numeric user and group IDs"
-  },
-  {
-    "shortcut": "-N",
-    "flag": "--literal",
-    "description": "print entry names without quoting"
-  },
-  {
-    "shortcut": "-o",
-    "flag": null,
-    "description": "like -l, but do not list group information"
-  },
-  {
-    "shortcut": "-p",
-    "flag": "--indicator-style",
-    "description": "=slash"
-  },
-  {
-    "shortcut": "-q",
-    "flag": "--hide-control-chars",
-    "description": "print ? instead of nongraphic characters"
-  },
-  {
-    "shortcut": null,
-    "flag": "--show-control-chars",
-    "description": "show nongraphic characters as-is (the default,"
-  },
-  {
-    "shortcut": "-Q",
-    "flag": "--quote-name",
-    "description": "enclose entry names in double quotes"
-  },
-  {
-    "shortcut": null,
-    "flag": "--quoting-style",
-    "description": "=WORD   use quoting style WORD for entry names:"
-  },
-  {
-    "shortcut": "-r",
-    "flag": "--reverse",
-    "description": "reverse order while sorting"
-  },
-  {
-    "shortcut": "-R",
-    "flag": "--recursive",
-    "description": "list subdirectories recursively"
-  },
-  {
-    "shortcut": "-s",
-    "flag": "--size",
-    "description": "print the allocated size of each file, in blocks"
-  },
-  {
-    "shortcut": "-S",
-    "flag": null,
-    "description": "sort by file size, largest first"
-  },
-  {
-    "shortcut": null,
-    "flag": "--sort",
-    "description": "=WORD            sort by WORD instead of name: none (-U), size (-S),"
-  },
-  {
-    "shortcut": null,
-    "flag": "--time",
-    "description": "=WORD            change the default of using modification times;"
-  },
-  {
-    "shortcut": null,
-    "flag": "--time-style",
-    "description": "=TIME_STYLE  time/date format with -l; see TIME_STYLE below"
-  },
-  {
-    "shortcut": "-t",
-    "flag": null,
-    "description": "sort by time, newest first; see --time"
-  },
-  {
-    "shortcut": "-T",
-    "flag": "--tabsize",
-    "description": "=COLS         assume tab stops at each COLS instead of 8"
-  },
-  {
-    "shortcut": "-u",
-    "flag": null,
-    "description": "with -lt: sort by, and show, access time;"
-  },
-  {
-    "shortcut": "-U",
-    "flag": null,
-    "description": "do not sort; list entries in directory order"
-  },
-  {
-    "shortcut": "-v",
-    "flag": null,
-    "description": "natural sort of (version) numbers within text"
-  },
-  {
-    "shortcut": "-w",
-    "flag": "--width",
-    "description": "=COLS           set output width to COLS.  0 means no limit"
-  },
-  {
-    "shortcut": "-x",
-    "flag": null,
-    "description": "list entries by lines instead of by columns"
-  },
-  {
-    "shortcut": "-X",
-    "flag": null,
-    "description": "sort alphabetically by entry extension"
-  },
-  {
-    "shortcut": "-Z",
-    "flag": "--context",
-    "description": "print any security context of each file"
-  },
-  {
-    "shortcut": "-1",
-    "flag": null,
-    "description": "list one file per line.  Avoid '\\n' with -q or -b"
-  },
-  {
-    "shortcut": null,
-    "flag": "--help",
-    "description": "display this help and exit"
-  },
-  {
-    "shortcut": null,
-    "flag": "--version",
-    "description": "output version information and exit"
-  }
-]
+Document for ls found in MongoDB:
+{
+    "_id": {
+        "$oid": "6670a8ed92463fedbd6b09b3"
+    },
+    "name": "ls",
+    "description": "List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.",
+    "subcommands": [],
+    "options": [
+        {
+            "option": "--all",
+            "shortcut": "-a",
+            "description": "do not ignore entries starting with ."
+        },
+        {
+            "option": "--almost-all",
+            "shortcut": "-A",
+            "description": "do not list implied . and .."
+        },
+        {
+            "option": "--author",
+            "shortcut": "",
+            "description": "with -l, print the author of each file"
+        },
+        {
+            "option": "--block-size",
+            "shortcut": "",
+            "description": "with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below",
+            "value": "SIZE"
+        },
+        {
+            "option": "--classify",
+            "shortcut": "-F",
+            "description": "append indicator (one of */=>@|) to entries"
+        },
+        {
+            "option": "--color",
+            "shortcut": "",
+            "description": "colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below",
+            "value": "WHEN",
+            "default": "always"
+        },
+        {
+            "option": "--dereference",
+            "shortcut": "-L",
+            "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
+        },
+        {
+            "option": "--dereference-command-line",
+            "shortcut": "-H",
+            "description": "follow symbolic links listed on the command line"
+        },
+        {
+            "option": "--dereference-command-line-symlink-to-dir",
+            "shortcut": "",
+            "description": "follow each command line symbolic link that points to a directory"
+        },
+        {
+            "option": "--directory",
+            "shortcut": "-d",
+            "description": "list directories themselves, not their contents"
+        },
+        {
+            "option": "--dired",
+            "shortcut": "-D",
+            "description": "generate output designed for Emacs' dired mode"
+        },
+        {
+            "option": "--escape",
+            "shortcut": "-b",
+            "description": "print C-style escapes for nongraphic characters"
+        },
+        {
+            "option": "--file-type",
+            "shortcut": "",
+            "description": "likewise, except do not append '*'"
+        },
+        {
+            "option": "--format",
+            "shortcut": "",
+            "description": "across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C",
+            "value": "WORD"
+        },
+        {
+            "option": "--full-time",
+            "shortcut": "",
+            "description": "like -l --time-style=full-iso"
+        },
+        {
+            "option": "--group-directories-first",
+            "shortcut": "",
+            "description": "group directories before files; can be augmented with a --sort option, but any use of --sort=none (-U) disables grouping"
+        },
+        {
+            "option": "--help",
+            "shortcut": "",
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--hide",
+            "shortcut": "",
+            "description": "do not list implied entries matching shell PATTERN (overridden by -a or -A)",
+            "value": "PATTERN"
+        },
+        {
+            "option": "--hide-control-chars",
+            "shortcut": "-q",
+            "description": "print ? instead of nongraphic characters"
+        },
+        {
+            "option": "--human-readable",
+            "shortcut": "-h",
+            "description": "with -l and -s, print sizes like 1K 234M 2G etc."
+        },
+        {
+            "option": "--hyperlink",
+            "shortcut": "",
+            "description": "hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'",
+            "value": "WHEN",
+            "default": "always"
+        },
+        {
+            "option": "--ignore",
+            "shortcut": "-I",
+            "description": "do not list implied entries matching shell PATTERN",
+            "value": "PATTERN"
+        },
+        {
+            "option": "--ignore-backups",
+            "shortcut": "-B",
+            "description": "do not list implied entries ending with ~"
+        },
+        {
+            "option": "--inode",
+            "shortcut": "-i",
+            "description": "print the index number of each file"
+        },
+        {
+            "option": "--kibibytes",
+            "shortcut": "-k",
+            "description": "default to 1024-byte blocks for disk usage; used only with -s and per directory totals"
+        },
+        {
+            "option": "--literal",
+            "shortcut": "-N",
+            "description": "print entry names without quoting"
+        },
+        {
+            "option": "--no-group",
+            "shortcut": "-G",
+            "description": "in a long listing, don't print group names"
+        },
+        {
+            "option": "--numeric-uid-gid",
+            "shortcut": "-n",
+            "description": "like -l, but list numeric user and group IDs"
+        },
+        {
+            "option": "--quote-name",
+            "shortcut": "-Q",
+            "description": "enclose entry names in double quotes"
+        },
+        {
+            "option": "--quoting-style",
+            "shortcut": "",
+            "description": "use quoting style WORD for entry names: literal, locale, shell, shell-always, shell-escape, shell-escape-always, c, escape (overrides QUOTING_STYLE environment variable)",
+            "value": "WORD"
+        },
+        {
+            "option": "--recursive",
+            "shortcut": "-R",
+            "description": "list subdirectories recursively"
+        },
+        {
+            "option": "--reverse",
+            "shortcut": "-r",
+            "description": "reverse order while sorting"
+        },
+        {
+            "option": "--show-control-chars",
+            "shortcut": "",
+            "description": "show nongraphic characters as-is (the default, unless program is 'ls' and output is a terminal)"
+        },
+        {
+            "option": "--si",
+            "shortcut": "",
+            "description": "likewise, but use powers of 1000 not 1024"
+        },
+        {
+            "option": "--size",
+            "shortcut": "-s",
+            "description": "print the allocated size of each file, in blocks"
+        },
+        {
+            "option": "--sort",
+            "shortcut": "",
+            "description": "sort by WORD instead of name: none (-U), size (-S), time (-t), version (-v), extension (-X)",
+            "value": "WORD"
+        },
+        {
+            "option": "--tabsize",
+            "shortcut": "-T",
+            "description": "assume tab stops at each COLS instead of 8",
+            "value": "COLS"
+        },
+        {
+            "option": "--time",
+            "shortcut": "",
+            "description": "change the default of using modification times; access time (-u): atime, access, use; change time (-c): ctime, status; birth time: birth, creation; with -l, WORD determines which time to show; with --sort=time, sort by WORD (newest first)",
+            "value": "WORD"
+        },
+        {
+            "option": "--time-style",
+            "shortcut": "",
+            "description": "time/date format with -l; see TIME_STYLE below",
+            "value": "TIME_STYLE"
+        },
+        {
+            "option": "--version",
+            "shortcut": "",
+            "description": "output version information and exit"
+        },
+        {
+            "option": "--width",
+            "shortcut": "-w",
+            "description": "set output width to COLS. 0 means no limit",
+            "value": "COLS"
+        },
+        {
+            "option": "--indicator-style=slash",
+            "shortcut": "-p",
+            "description": "append / indicator to directories"
+        }
+    ]
+}

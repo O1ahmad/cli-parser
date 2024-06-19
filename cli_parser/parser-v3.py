@@ -215,7 +215,7 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
     result = analyze_binary_help(binary_path)
     print(json.dumps(result, indent=4))
 
-    if db:
+    if db != None:
         if existing_document and override:
             db.cli_archive.replace_one({"name": binary_name}, result)
             print(f"Results for {binary_name} overwritten in MongoDB")

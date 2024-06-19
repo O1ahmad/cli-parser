@@ -11,6 +11,25 @@ from pymongo import MongoClient
 client = MongoClient("mongodb://dev:testing@localhost:27017/")
 db = client.cli_archive
 
+def download_file(url, dest):
+    response = requests.get(url, stream=True)
+    file_path = os.path.join(dest, os.path.basename(url))
+    with open(file_path, 'wb') as file:
+        for chunk in response.iter_content(chunk_size=8192):
+            file.write(chunk)
+    return file_path
+
+def extract_file(file_path, dest):
+    if file_path.endswith(('.tar.gz', '.tgz')):
+        with tarfile.open(file_path, "r:gz") as tar:
+            tar.extractall(path=dest)
+    elif file_path.endswith('.zip'):
+        with zipfile.ZipFile(file_path, "r") as zip_ref:
+            zip_ref.extractall(dest)
+    else:
+        os.chmod(file_path, 0o755)
+    return file_path
+
 def download_and_extract(url, dest="/usr/local/bin"):
     """
     Downloads and extracts an archive file from the given URL to the specified destination.
@@ -22,100 +41,89 @@ def download_and_extract(url, dest="/usr/local/bin"):
     Returns:
         str: The file path of the downloaded and extracted file.
     """
-    if url.endswith('.tar.gz') or url.endswith('.tgz'):
-        response = requests.get(url, stream=True)
-        file_path = os.path.join(dest, "archive.tar.gz")
-        with open(file_path, 'wb') as file:
-            for chunk in response.iter_content(chunk_size=8192):
-                file.write(chunk)
-        with tarfile.open(file_path, "r:gz") as tar:
-            tar.extractall(path=dest)
-    elif url.endswith('.zip'):
-        response = requests.get(url, stream=True)
-        file_path = os.path.join(dest, "archive.zip")
-        with open(file_path, 'wb') as file:
-            for chunk in response.iter_content(chunk_size=8192):
-                file.write(chunk)
-        with zipfile.ZipFile(file_path, "r") as zip_ref:
-            zip_ref.extractall(dest)
-    else:
-        response = requests.get(url, stream=True)
-        file_path = os.path.join(dest, os.path.basename(url))
-        with open(file_path, 'wb') as file:
-            for chunk in response.iter_content(chunk_size=8192):
-                file.write(chunk)
-        os.chmod(file_path, 0o755)
-    return file_path
+    file_path = download_file(url, dest)
+    return extract_file(file_path, dest)
 
-def call_help(binary, command=None):
+def call_command(binary, commands):
     """
-    Calls the help command for the specified binary and returns the help output.
+    Calls the specified command for the binary and returns the output.
 
     Args:
         binary (str): The name or path of the binary to call.
-        command (str, optional): An additional command to append to the binary. Defaults to None.
+        commands (list): List of commands to try.
 
     Returns:
-        str: The help output of the binary.
+        str: The command output of the binary.
 
     Raises:
-        Exception: If all attempts to get help output fail.
+        Exception: If all attempts to get command output fail.
     """
-    help_commands = [["--help"], ["-h"], ["help"]]
-    for help_cmd in help_commands:
-        cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + (command.split() if command else []) + help_cmd
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode == 0:
-            return result.stdout
-    raise Exception(f"Failed to get help output for {binary} {' '.join(command) if command else ''}")
-
-def call_version(binary):
-    """
-    Calls the version command for the specified binary and returns the version output.
-
-    Args:
-        binary (str): The name or path of the binary to call.
-
-    Returns:
-        str: The version output of the binary.
-
-    Raises:
-        Exception: If all attempts to get version output fail.
-    """
-    version_commands = [["--version"], ["-v"], ["version"]]
-    for version_cmd in version_commands:
-        cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + version_cmd
+    for command in commands:
+        cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + command
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode == 0:
             return result.stdout.strip()
-    raise Exception(f"Failed to get version output for {binary}")
+    raise Exception(f"Failed to get output for {binary} with commands {commands}")
 
-def get_help_output_prompt():
+def call_help(binary, command=None):
+    return call_command(binary, [["--help"], ["-h"], ["help"]])
+
+def call_version(binary):
+    return call_command(binary, [["--version"], ["-v"], ["version"]])
+
+def get_prompt(prompt_type):
+    prompts = {
+        "help": (
+            f"Parse the command-line help output into a JSON with 'subcommands' and 'options'. "
+            f"Subcommands can only begin with a lowercase letter; options start with '-' or '--'. "
+            f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}. "
+            f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
+            f"Exclude missing properties. Include 'description' and 'name' for the root command. "
+            f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."
+        ),
+        "version": (
+            f"Extract and return the version number (including commit SHAs) within a JSON object from the following version output."
+        )
+    }
+    return prompts[prompt_type]
+
+def analyze_output(binary, output, prompt_type):
     """
-    Returns the prompt string used to request JSON parsing of command-line help output.
+    Analyzes the output of a binary command and returns it in JSON format or plain text.
+
+    Args:
+        binary (str): The name or path of the binary to analyze.
+        output (str): The output of the binary command.
+        prompt_type (str): The type of prompt to use ('help' or 'version').
 
     Returns:
-        str: The prompt string.
+        dict or str: The parsed output in JSON format for help, or plain text for version.
     """
-    return (
-        f"Parse the command-line help output into a JSON with 'subcommands' and 'options'. "
-        f"Subcommands must begin with a lowercase letter; options start with '-' or '--'. "
-        f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}. "
-        f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
-        f"Exclude missing properties. Include 'description' and 'name' for the root command. "
-        f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."
-    )
+    prompt = get_prompt(prompt_type)
+    headers = {
+        'Authorization': f"Bearer {os.getenv('OPENAI_API_KEY')}",
+        'Content-Type': 'application/json',
+    }
+    json_data = {
+        'model': 'gpt-4o',
+        'messages': [
+            {'role': 'system', 'content': 'You are a helpful CLI parser assistant.'},
+            {'role': 'user', 'content': prompt},
+            {'role': 'user', 'content': output}
+        ],
+        'response_format': { 'type': "json_object" },
+        'max_tokens': 4096,
+        'temperature': 0.7,
+    }
 
-def get_version_output_prompt():
-    """
-    Returns the prompt string used to request version parsing of command-line version output.
-
-    Returns:
-        str: The prompt string.
-    """
-    return (
-        f"Extract and return the version number (including commit SHAs) from the following version output."
-    )
+    try:
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json_data)
+        response.raise_for_status()
+        print("AI Token Usage:", response.json()['usage'])
+        return response.json()['choices'][0]['message']['content'].strip()
+    except requests.exceptions.RequestException as e:
+        print(e.response.json() if e.response else str(e))
+        return None
 
 def analyze_binary_help(binary, parent=None):
     """
@@ -128,74 +136,32 @@ def analyze_binary_help(binary, parent=None):
     Returns:
         dict: The parsed help output in JSON format, including subcommands and options.
     """
-
     print(f"Analyzing Binary: {binary}, Parent: {parent}")
     try:
         help_output = call_help(binary, parent)
     except Exception as e:
         print(str(e))
-        return {
-            'name': f"{binary} {parent}" if parent else binary,
-            'subcommands': [],
-            'options': []
-        }
+        return {'name': f"{binary} {parent}" if parent else binary, 'subcommands': [], 'options': []}
 
-    prompt = get_help_output_prompt()
-    headers = {
-        'Authorization': f"Bearer {os.getenv('OPENAI_API_KEY')}",
-        'Content-Type': 'application/json',
-    }
-    json_data = {
-        'model': 'gpt-4o',
-        'messages': [
-            {'role': 'system', 'content': 'You are a helpful CLI parser assistant who parses command-line output and returns results in well-formatted JSON.'},
-            {'role': 'user', 'content': prompt},
-            {'role': 'user', 'content': help_output}
-        ],
-        'response_format': { 'type': "json_object" },
-        'max_tokens': 4096,
-        'temperature': 0.7,
-    }
-
-    try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json_data)
-        response.raise_for_status()
-
-        print("AI Token Usage:", response.json()['usage'])
-        result = json.loads(response.json()['choices'][0]['message']['content'].strip())
+    result = analyze_output(binary, help_output, "help")
+    if result:
+        result = json.loads(result)
         result['name'] = f"{binary} {parent}" if parent else binary
 
         # Analyze subcommands recursively
         subcommands = []
         for command in result.get('subcommands', []):
-            if command['name'].lower() == "help" or command['name'].lower() == (parent.lower() if parent else "") or command['name'] in binary:
-                continue
-
-            subcommand_name = command['name']
-            subcommand_result = analyze_binary_help(result['name'], subcommand_name)
-            subcommands.append(subcommand_result)
-
+            if command['name'].lower() not in ["help", (parent.lower() if parent else ""), binary]:
+                subcommands.append(analyze_binary_help(result['name'], command['name']))
         result['subcommands'] = subcommands
         result['version'] = analyze_binary_version(binary)
 
-        # Write result to file
         with open('result.json', 'a') as file:
             json.dump(result, file)
             file.write('\n')
 
         return result
-
-    except requests.exceptions.RequestException as e:
-        print(e.response.json() if e.response else str(e))
-        return {'error': 'Failed to get answer'}
-    except Exception as e:
-        print(str(e))
-        print(f"{binary} {parent}" if parent else binary)
-        return {
-            'name': f"{binary} {parent}" if parent else binary,
-            'subcommands': [],
-            'options': []
-        }
+    return {'name': f"{binary} {parent}" if parent else binary, 'subcommands': [], 'options': []}
 
 def analyze_binary_version(binary):
     """
@@ -210,38 +176,7 @@ def analyze_binary_version(binary):
     print(f"Analyzing Binary Version: {binary}")
     try:
         version_output = call_version(binary)
-    except Exception as e:
-        print(str(e))
-        return None
-
-    prompt = get_version_output_prompt()
-    headers = {
-        'Authorization': f"Bearer {os.getenv('OPENAI_API_KEY')}",
-        'Content-Type': 'application/json',
-    }
-    json_data = {
-        'model': 'gpt-4o',
-        'messages': [
-            {'role': 'system', 'content': 'You are a helpful CLI parser assistant who extracts version numbers from version output.'},
-            {'role': 'user', 'content': prompt},
-            {'role': 'user', 'content': version_output}
-        ],
-        'max_tokens': 4096,
-        'temperature': 0.7
-    }
-
-    try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json_data)
-        response.raise_for_status()
-
-        print("AI Token Usage:", response.json()['usage'])
-        result = response.json()['choices'][0]['message']['content'].strip()
-
-        return result
-
-    except requests.exceptions.RequestException as e:
-        print(e.response.json() if e.response else str(e))
-        return None
+        return json.loads(analyze_output(binary, version_output, "version"))['version']
     except Exception as e:
         print(str(e))
         return None

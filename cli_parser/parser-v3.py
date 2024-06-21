@@ -65,7 +65,7 @@ def call_command(binary, commands):
     raise Exception(f"Failed to get output for {binary} with commands {commands}")
 
 def call_help(binary, command=None):
-    return call_command(binary, [["--help"], ["-h"], ["help"]])
+    return call_command(f"{binary} {command}" if command else binary, [["--help"], ["-h"], ["help"]])
 
 def call_version(binary):
     return call_command(binary, [["--version"], ["-v"], ["version"]])
@@ -152,7 +152,6 @@ def analyze_binary_help(binary, parent=None):
             if command['name'].lower() not in ["help", (parent.lower() if parent else ""), binary]:
                 subcommands.append(analyze_binary_help(result['name'], command['name']))
         result['subcommands'] = subcommands
-        result['version'] = analyze_binary_version(binary)
 
         with open('result.json', 'a') as file:
             json.dump(result, file)
@@ -189,6 +188,7 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
         mongodb_url (str, optional): MongoDB connection string. Defaults to None.
         override (bool, optional): Whether to override existing document if it exists. Defaults to False.
     """
+    db = None
     if mongodb_url:
         client = MongoClient(mongodb_url)
         db = client.cli_archive
@@ -203,8 +203,6 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
             print(f"Document for {binary_name} found in MongoDB:")
             print(json.dumps(existing_document, indent=4, default=json_util.default))
             return
-    else:
-        db = None
 
     if url:
         binary_path = download_and_extract(url)
@@ -213,6 +211,7 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
         binary_path = binary_name
 
     result = analyze_binary_help(binary_path)
+    result['version'] = analyze_binary_version(binary_path)
     print(json.dumps(result, indent=4))
 
     if db != None:

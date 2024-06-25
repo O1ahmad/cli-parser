@@ -1,0 +1,79 @@
+Analyzing Binary: curl, Parent: None
+AI Token Usage: {'prompt_tokens': 386, 'completion_tokens': 477, 'total_tokens': 863}
+Analyzing Binary Version: curl
+AI Token Usage: {'prompt_tokens': 296, 'completion_tokens': 31, 'total_tokens': 327}
+{
+    "name": "curl",
+    "description": "This is not the full help, this menu is stripped into categories. Use \"--help category\" to get an overview of all categories. For all options use the manual or \"--help all\".",
+    "usage": "curl [options...] <url>",
+    "options": [
+        {
+            "option": "--data",
+            "shortcut": "-d",
+            "description": "HTTP POST data",
+            "value": "<data>"
+        },
+        {
+            "option": "--fail",
+            "shortcut": "-f",
+            "description": "Fail fast with no output on HTTP errors"
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "Get help for commands",
+            "value": "<category>"
+        },
+        {
+            "option": "--include",
+            "shortcut": "-i",
+            "description": "Include protocol response headers in the output"
+        },
+        {
+            "option": "--output",
+            "shortcut": "-o",
+            "description": "Write to file instead of stdout",
+            "value": "<file>"
+        },
+        {
+            "option": "--remote-name",
+            "shortcut": "-O",
+            "description": "Write output to a file named as the remote file"
+        },
+        {
+            "option": "--silent",
+            "shortcut": "-s",
+            "description": "Silent mode"
+        },
+        {
+            "option": "--upload-file",
+            "shortcut": "-T",
+            "description": "Transfer local FILE to destination",
+            "value": "<file>"
+        },
+        {
+            "option": "--user",
+            "shortcut": "-u",
+            "description": "Server user and password",
+            "value": "<user:password>"
+        },
+        {
+            "option": "--user-agent",
+            "shortcut": "-A",
+            "description": "Send User-Agent <name> to server",
+            "value": "<name>"
+        },
+        {
+            "option": "--verbose",
+            "shortcut": "-v",
+            "description": "Make the operation more talkative"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "Show version number and quit"
+        }
+    ],
+    "subcommands": [],
+    "version": "8.5.0"
+}

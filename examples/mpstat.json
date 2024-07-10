@@ -1,0 +1,10 @@
+Analyzing Binary: mpstat, Parent: None
+Failed to get output for mpstat with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary Version: mpstat
+Failed to get output for mpstat with commands [['--version'], ['-v'], ['version']]
+{
+    "name": "mpstat",
+    "subcommands": [],
+    "options": [],
+    "version": null
+}

@@ -1,57 +1,66 @@
-[
-  {
-    "shortcut": "-a",
-    "flag": "--all",
-    "description": "print all information, in the following order,"
-  },
-  {
-    "shortcut": "-s",
-    "flag": "--kernel-name",
-    "description": "print the kernel name"
-  },
-  {
-    "shortcut": "-n",
-    "flag": "--nodename",
-    "description": "print the network node hostname"
-  },
-  {
-    "shortcut": "-r",
-    "flag": "--kernel-release",
-    "description": "print the kernel release"
-  },
-  {
-    "shortcut": "-v",
-    "flag": "--kernel-version",
-    "description": "print the kernel version"
-  },
-  {
-    "shortcut": "-m",
-    "flag": "--machine",
-    "description": "print the machine hardware name"
-  },
-  {
-    "shortcut": "-p",
-    "flag": "--processor",
-    "description": "print the processor type (non-portable)"
-  },
-  {
-    "shortcut": "-i",
-    "flag": "--hardware-platform",
-    "description": "print the hardware platform (non-portable)"
-  },
-  {
-    "shortcut": "-o",
-    "flag": "--operating-system",
-    "description": "print the operating system"
-  },
-  {
-    "shortcut": null,
-    "flag": "--help",
-    "description": "display this help and exit"
-  },
-  {
-    "shortcut": null,
-    "flag": "--version",
-    "description": "output version information and exit"
-  }
-]
+Analyzing Binary: uname, Parent: None
+AI Token Usage: {'prompt_tokens': 390, 'completion_tokens': 372, 'total_tokens': 762}
+Analyzing Binary Version: uname
+AI Token Usage: {'prompt_tokens': 127, 'completion_tokens': 11, 'total_tokens': 138}
+{
+    "name": "uname",
+    "description": "Print certain system information. With no OPTION, same as -s.",
+    "usage": "uname [OPTION]...",
+    "options": [
+        {
+            "option": "--all",
+            "shortcut": "-a",
+            "description": "print all information, in the following order, except omit -p and -i if unknown"
+        },
+        {
+            "option": "--hardware-platform",
+            "shortcut": "-i",
+            "description": "print the hardware platform (non-portable)"
+        },
+        {
+            "option": "--help",
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--kernel-name",
+            "shortcut": "-s",
+            "description": "print the kernel name"
+        },
+        {
+            "option": "--kernel-release",
+            "shortcut": "-r",
+            "description": "print the kernel release"
+        },
+        {
+            "option": "--kernel-version",
+            "shortcut": "-v",
+            "description": "print the kernel version"
+        },
+        {
+            "option": "--machine",
+            "shortcut": "-m",
+            "description": "print the machine hardware name"
+        },
+        {
+            "option": "--nodename",
+            "shortcut": "-n",
+            "description": "print the network node hostname"
+        },
+        {
+            "option": "--operating-system",
+            "shortcut": "-o",
+            "description": "print the operating system"
+        },
+        {
+            "option": "--processor",
+            "shortcut": "-p",
+            "description": "print the processor type (non-portable)"
+        },
+        {
+            "option": "--version",
+            "description": "output version information and exit"
+        }
+    ],
+    "subcommands": [],
+    "version": "9.4"
+}

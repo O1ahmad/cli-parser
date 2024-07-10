@@ -1,7 +1,7 @@
 Analyzing Binary: top, Parent: None
-AI Token Usage: {'prompt_tokens': 504, 'completion_tokens': 734, 'total_tokens': 1238}
+AI Token Usage: {'prompt_tokens': 504, 'completion_tokens': 729, 'total_tokens': 1233}
 Analyzing Binary Version: top
-AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 29, 'total_tokens': 90}
+AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 20, 'total_tokens': 81}
 {
     "name": "top",
     "description": "For more details see top(1).",
@@ -109,7 +109,7 @@ AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 29, 'total_tokens': 9
             "option": "--width",
             "shortcut": "-w",
             "description": "change print width [,use COLUMNS]",
-            "value": "[COLUMNS]"
+            "value": "[=COLUMNS]"
         }
     ],
     "subcommands": [],

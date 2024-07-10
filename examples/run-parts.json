@@ -1,0 +1,83 @@
+Analyzing Binary: run-parts, Parent: None
+AI Token Usage: {'prompt_tokens': 422, 'completion_tokens': 523, 'total_tokens': 945}
+Analyzing Binary Version: run-parts
+AI Token Usage: {'prompt_tokens': 145, 'completion_tokens': 11, 'total_tokens': 156}
+{
+    "name": "run-parts",
+    "description": "Run scripts or commands in a specified directory.",
+    "usage": "run-parts [OPTION]... DIRECTORY",
+    "options": [
+        {
+            "option": "--arg",
+            "shortcut": "-a",
+            "description": "pass ARGUMENT to scripts, use once for each argument.",
+            "value": "ARGUMENT"
+        },
+        {
+            "option": "--debug",
+            "shortcut": "-d",
+            "description": "print script names while checking them."
+        },
+        {
+            "option": "--exit-on-error",
+            "description": "exit as soon as a script returns with a non-zero exit code."
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "display this help and exit."
+        },
+        {
+            "option": "--list",
+            "description": "print names of all valid files (can not be used with --test)"
+        },
+        {
+            "option": "--lsbsysinit",
+            "description": "validate filenames based on LSB sysinit specs."
+        },
+        {
+            "option": "--new-session",
+            "description": "run each script in a separate process session"
+        },
+        {
+            "option": "--regex",
+            "description": "validate filenames based on POSIX ERE pattern PATTERN.",
+            "value": "PATTERN"
+        },
+        {
+            "option": "--report",
+            "description": "print script names if they produce output."
+        },
+        {
+            "option": "--reverse",
+            "description": "reverse execution order of scripts."
+        },
+        {
+            "option": "--stdin",
+            "description": "multiplex stdin to scripts being run, using temporary file"
+        },
+        {
+            "option": "--test",
+            "description": "print script names which would run, but don't run them."
+        },
+        {
+            "option": "--umask",
+            "shortcut": "-u",
+            "description": "sets umask to UMASK (octal), default is 022.",
+            "value": "UMASK",
+            "default": "022"
+        },
+        {
+            "option": "--verbose",
+            "shortcut": "-v",
+            "description": "print script names before running them."
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "output version information and exit."
+        }
+    ],
+    "subcommands": [],
+    "version": "5.17"
+}

@@ -1,0 +1,25 @@
+Analyzing Binary: ifconfig, Parent: None
+AI Token Usage: {'prompt_tokens': 410, 'completion_tokens': 289, 'total_tokens': 699}
+Analyzing Binary Version: ifconfig
+AI Token Usage: {'prompt_tokens': 56, 'completion_tokens': 18, 'total_tokens': 74}
+{
+    "name": "ifconfig",
+    "description": "Utility for configuring network interfaces.",
+    "usage": "ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>] [add <address>[/<prefixlen>]] [del <address>[/<prefixlen>]] [[-]broadcast [<address>]] [[-]pointopoint [<address>]] [netmask <address>] [dstaddr <address>] [tunnel <address>] [outfill <NN>] [keepalive <NN>] [hw <HW> <address>] [mtu <NN>] [[-]trailers] [[-]arp] [[-]allmulti] [multicast] [[-]promisc] [mem_start <NN>] [io_addr <NN>] [irq <NN>] [media <type>] [txqueuelen <NN>] [name <newname>] [[-]dynamic] [up|down] ...",
+    "options": [
+        {
+            "option": "-a",
+            "description": "Display all interfaces which are currently available, even if down."
+        },
+        {
+            "option": "-v",
+            "description": "Enable verbose mode."
+        },
+        {
+            "option": "-s",
+            "description": "Display a short list (one line per interface)."
+        }
+    ],
+    "subcommands": [],
+    "version": "2.10"
+}

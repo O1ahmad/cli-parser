@@ -1,0 +1,124 @@
+Analyzing Binary: sar, Parent: None
+AI Token Usage: {'prompt_tokens': 761, 'completion_tokens': 904, 'total_tokens': 1665}
+Analyzing Binary Version: sar
+AI Token Usage: {'prompt_tokens': 1907, 'completion_tokens': 25, 'total_tokens': 1932}
+'version'
+{
+    "name": "sar",
+    "description": "Main options and reports (report name between square brackets):",
+    "usage": "sar [ options ] [ <interval> [ <count> ] ]",
+    "options": [
+        {
+            "option": "-B",
+            "description": "Paging statistics [A_PAGE]"
+        },
+        {
+            "option": "-b",
+            "description": "I/O and transfer rate statistics [A_IO]"
+        },
+        {
+            "option": "-d",
+            "description": "Block devices statistics [A_DISK]"
+        },
+        {
+            "option": "-F",
+            "value": "[ MOUNT ]",
+            "description": "Filesystems statistics [A_FS]"
+        },
+        {
+            "option": "-H",
+            "description": "Hugepages utilization statistics [A_HUGE]"
+        },
+        {
+            "option": "-I",
+            "value": "[ SUM | ALL ]",
+            "description": "Interrupts statistics [A_IRQ]"
+        },
+        {
+            "option": "-m",
+            "value": "{ <keyword> [,...] | ALL }",
+            "description": "Power management statistics [A_PWR_...]",
+            "tags": [
+                "Keywords are:",
+                "CPU: CPU instantaneous clock frequency",
+                "FAN: Fans speed",
+                "FREQ: CPU average clock frequency",
+                "IN: Voltage inputs",
+                "TEMP: Devices temperature",
+                "USB: USB devices plugged into the system"
+            ]
+        },
+        {
+            "option": "-n",
+            "value": "{ <keyword> [,...] | ALL }",
+            "description": "Network statistics [A_NET_...]",
+            "tags": [
+                "Keywords are:",
+                "DEV: Network interfaces",
+                "EDEV: Network interfaces (errors)",
+                "NFS: NFS client",
+                "NFSD: NFS server",
+                "SOCK: Sockets (v4)",
+                "IP: IP traffic (v4)",
+                "EIP: IP traffic (v4) (errors)",
+                "ICMP: ICMP traffic (v4)",
+                "EICMP: ICMP traffic (v4) (errors)",
+                "TCP: TCP traffic (v4)",
+                "ETCP: TCP traffic (v4) (errors)",
+                "UDP: UDP traffic (v4)",
+                "SOCK6: Sockets (v6)",
+                "IP6: IP traffic (v6)",
+                "EIP6: IP traffic (v6) (errors)",
+                "ICMP6: ICMP traffic (v6)",
+                "EICMP6: ICMP traffic (v6) (errors)",
+                "UDP6: UDP traffic (v6)",
+                "FC: Fibre channel HBAs",
+                "SOFT: Software-based network processing"
+            ]
+        },
+        {
+            "option": "-q",
+            "value": "[ <keyword> [,...] | PSI | ALL ]",
+            "description": "System load and pressure-stall statistics",
+            "tags": [
+                "Keywords are:",
+                "LOAD: Queue length and load average statistics [A_QUEUE]",
+                "CPU: Pressure-stall CPU statistics [A_PSI_CPU]",
+                "IO: Pressure-stall I/O statistics [A_PSI_IO]",
+                "MEM: Pressure-stall memory statistics [A_PSI_MEM]"
+            ]
+        },
+        {
+            "option": "-r",
+            "value": "[ ALL ]",
+            "description": "Memory utilization statistics [A_MEMORY]"
+        },
+        {
+            "option": "-S",
+            "description": "Swap space utilization statistics [A_MEMORY]"
+        },
+        {
+            "option": "-u",
+            "value": "[ ALL ]",
+            "description": "CPU utilization statistics [A_CPU]"
+        },
+        {
+            "option": "-v",
+            "description": "Kernel tables statistics [A_KTABLES]"
+        },
+        {
+            "option": "-W",
+            "description": "Swapping statistics [A_SWAP]"
+        },
+        {
+            "option": "-w",
+            "description": "Task creation and system switching statistics [A_PCSW]"
+        },
+        {
+            "option": "-y",
+            "description": "TTY devices statistics [A_SERIAL]"
+        }
+    ],
+    "subcommands": [],
+    "version": null
+}

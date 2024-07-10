@@ -1,0 +1,130 @@
+Analyzing Binary: fdisk, Parent: None
+AI Token Usage: {'prompt_tokens': 661, 'completion_tokens': 812, 'total_tokens': 1473}
+Analyzing Binary Version: fdisk
+AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 29, 'total_tokens': 90}
+{
+    "name": "fdisk",
+    "description": "Display or manipulate a disk partition table.",
+    "usage": [
+        "fdisk [options] <disk>         change partition table",
+        "fdisk [options] -l [<disk>...] list partition table(s)"
+    ],
+    "options": [
+        {
+            "option": "--bytes",
+            "description": "print SIZE in bytes rather than in human readable format"
+        },
+        {
+            "option": "--color",
+            "shortcut": "-L",
+            "description": "colorize output (auto, always or never)",
+            "value": "<when>",
+            "default": "colors are enabled by default"
+        },
+        {
+            "option": "--compatibility",
+            "shortcut": "-c",
+            "description": "mode is 'dos' or 'nondos' (default)",
+            "value": "[=<mode>]"
+        },
+        {
+            "option": "--cylinders",
+            "shortcut": "-C",
+            "description": "specify the number of cylinders",
+            "value": "<number>"
+        },
+        {
+            "option": "--getsz",
+            "shortcut": "-s",
+            "description": "display device size in 512-byte sectors",
+            "tags": [
+                "DEPRECATED"
+            ]
+        },
+        {
+            "option": "--heads",
+            "shortcut": "-H",
+            "description": "specify the number of heads",
+            "value": "<number>"
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "display this help"
+        },
+        {
+            "option": "--list",
+            "shortcut": "-l",
+            "description": "display partitions and exit"
+        },
+        {
+            "option": "--list-details",
+            "shortcut": "-x",
+            "description": "like --list but with more details"
+        },
+        {
+            "option": "--lock",
+            "description": "use exclusive device lock (yes, no or nonblock)",
+            "value": "[=<mode>]"
+        },
+        {
+            "option": "--noauto-pt",
+            "shortcut": "-n",
+            "description": "don't create default partition table on empty devices"
+        },
+        {
+            "option": "--output",
+            "shortcut": "-o",
+            "description": "output columns",
+            "value": "<list>"
+        },
+        {
+            "option": "--protect-boot",
+            "shortcut": "-B",
+            "description": "don't erase bootbits when creating a new label"
+        },
+        {
+            "option": "--sector-size",
+            "shortcut": "-b",
+            "description": "physical and logical sector size",
+            "value": "<size>"
+        },
+        {
+            "option": "--sectors",
+            "shortcut": "-S",
+            "description": "specify the number of sectors per track",
+            "value": "<number>"
+        },
+        {
+            "option": "--type",
+            "shortcut": "-t",
+            "description": "recognize specified partition table type only",
+            "value": "<type>"
+        },
+        {
+            "option": "--units",
+            "shortcut": "-u",
+            "description": "display units: 'cylinders' or 'sectors' (default)",
+            "value": "[=<unit>]"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "display version"
+        },
+        {
+            "option": "--wipe",
+            "shortcut": "-w",
+            "description": "wipe signatures (auto, always or never)",
+            "value": "<mode>"
+        },
+        {
+            "option": "--wipe-partitions",
+            "shortcut": "-W",
+            "description": "wipe signatures from new partitions (auto, always or never)",
+            "value": "<mode>"
+        }
+    ],
+    "subcommands": [],
+    "version": "2.39.3"
+}

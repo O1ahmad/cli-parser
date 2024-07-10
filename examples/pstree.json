@@ -1,0 +1,300 @@
+Analyzing Binary: pstree, Parent: None
+AI Token Usage: {'prompt_tokens': 2415, 'completion_tokens': 1372, 'total_tokens': 3787}
+Analyzing Binary: pstree, Parent: accounts-daemon
+Failed to get output for pstree accounts-daemon with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: at-spi-bus-laun
+Failed to get output for pstree at-spi-bus-laun with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: at-spi2-registr
+Failed to get output for pstree at-spi2-registr with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: avahi-daemon
+Failed to get output for pstree avahi-daemon with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: bluetoothd
+Failed to get output for pstree bluetoothd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: colord
+AI Token Usage: {'prompt_tokens': 174, 'completion_tokens': 43, 'total_tokens': 217}
+Analyzing Binary: pstree, Parent: cron
+Failed to get output for pstree cron with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: cups-browsed
+AI Token Usage: {'prompt_tokens': 178, 'completion_tokens': 201, 'total_tokens': 379}
+Analyzing Binary: pstree, Parent: cupsd
+Failed to get output for pstree cupsd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: dbus-daemon
+Failed to get output for pstree dbus-daemon with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: fwupd
+Failed to get output for pstree fwupd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: gdm3
+Failed to get output for pstree gdm3 with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: gnome-remote-de
+Failed to get output for pstree gnome-remote-de with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: kerneloops
+Failed to get output for pstree kerneloops with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: nvidia-persiste
+Failed to get output for pstree nvidia-persiste with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: packagekitd
+Failed to get output for pstree packagekitd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmcd
+Failed to get output for pstree pmcd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmdaroot
+Failed to get output for pstree pmdaroot with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmdakvm
+Failed to get output for pstree pmdakvm with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmdalinux
+Failed to get output for pstree pmdalinux with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmdaproc
+Failed to get output for pstree pmdaproc with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmdaxfs
+Failed to get output for pstree pmdaxfs with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmlogger
+Failed to get output for pstree pmlogger with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: pmpause
+Failed to get output for pstree pmpause with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: polkitd
+AI Token Usage: {'prompt_tokens': 176, 'completion_tokens': 34, 'total_tokens': 210}
+Analyzing Binary: pstree, Parent: power-profiles-
+Failed to get output for pstree power-profiles- with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: rsyslogd
+Failed to get output for pstree rsyslogd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: rtkit-daemon
+Failed to get output for pstree rtkit-daemon with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: snapd
+Failed to get output for pstree snapd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: switcheroo-cont
+Failed to get output for pstree switcheroo-cont with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: udisksd
+Failed to get output for pstree udisksd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: unattended-upgr
+Failed to get output for pstree unattended-upgr with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: upowerd
+Failed to get output for pstree upowerd with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary: pstree, Parent: wpa_supplicant
+Failed to get output for pstree wpa_supplicant with commands [['--help'], ['-h'], ['help']]
+Analyzing Binary Version: pstree
+AI Token Usage: {'prompt_tokens': 50, 'completion_tokens': 15, 'total_tokens': 65}
+'version'
+{
+    "name": "pstree",
+    "description": "A system and service manager for Linux operating systems",
+    "usage": "systemd [OPTIONS...]",
+    "subcommands": [
+        {
+            "name": "pstree accounts-daemon",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree at-spi-bus-laun",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree at-spi2-registr",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree avahi-daemon",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree bluetoothd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree colord",
+            "description": "",
+            "usage": "colord [options] <subcommand> [args]",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree cron",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree cups-browsed",
+            "description": "cups-browsed is a daemon for CUPS that browses for available printers and creates local queues.",
+            "usage": "cups-browsed [options]",
+            "subcommands": [],
+            "options": [
+                {
+                    "option": "--debug",
+                    "description": "Run cups-browsed in debug mode (more verbose logging)."
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show help information about cups-browsed.",
+                    "tags": [
+                        "help"
+                    ]
+                },
+                {
+                    "option": "--logfile",
+                    "description": "Path to the log file.",
+                    "value": "<file>"
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Show the version of cups-browsed.",
+                    "tags": [
+                        "version"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "pstree cupsd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree dbus-daemon",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree fwupd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree gdm3",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree gnome-remote-de",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree kerneloops",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree nvidia-persiste",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree packagekitd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmcd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmdaroot",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmdakvm",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmdalinux",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmdaproc",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmdaxfs",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmlogger",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree pmpause",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree polkitd",
+            "description": "polkitd command line tool",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree power-profiles-",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree rsyslogd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree rtkit-daemon",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree snapd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree switcheroo-cont",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree udisksd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree unattended-upgr",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree upowerd",
+            "subcommands": [],
+            "options": []
+        },
+        {
+            "name": "pstree wpa_supplicant",
+            "subcommands": [],
+            "options": []
+        }
+    ],
+    "options": [
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "Show help message",
+            "tags": [
+                "common"
+            ]
+        },
+        {
+            "option": "--version",
+            "shortcut": "-v",
+            "description": "Show version information",
+            "tags": [
+                "common"
+            ]
+        }
+    ],
+    "version": null
+}

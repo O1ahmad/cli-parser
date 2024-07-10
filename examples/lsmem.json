@@ -1,0 +1,80 @@
+Analyzing Binary: lsmem, Parent: None
+AI Token Usage: {'prompt_tokens': 436, 'completion_tokens': 444, 'total_tokens': 880}
+Analyzing Binary Version: lsmem
+AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 29, 'total_tokens': 90}
+{
+    "name": "lsmem",
+    "description": "List the ranges of available memory with their online status.",
+    "usage": "lsmem [options]",
+    "options": [
+        {
+            "option": "--all",
+            "shortcut": "-a",
+            "description": "list each individual memory block"
+        },
+        {
+            "option": "--bytes",
+            "shortcut": "-b",
+            "description": "print SIZE in bytes rather than in human readable format"
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "display this help"
+        },
+        {
+            "option": "--json",
+            "shortcut": "-J",
+            "description": "use JSON output format"
+        },
+        {
+            "option": "--noheadings",
+            "shortcut": "-n",
+            "description": "don't print headings"
+        },
+        {
+            "option": "--output",
+            "shortcut": "-o",
+            "description": "output columns",
+            "value": "<list>"
+        },
+        {
+            "option": "--output-all",
+            "description": "output all columns"
+        },
+        {
+            "option": "--pairs",
+            "shortcut": "-P",
+            "description": "use key=\"value\" output format"
+        },
+        {
+            "option": "--raw",
+            "shortcut": "-r",
+            "description": "use raw output format"
+        },
+        {
+            "option": "--split",
+            "shortcut": "-S",
+            "description": "split ranges by specified columns",
+            "value": "<list>"
+        },
+        {
+            "option": "--summary",
+            "description": "print summary information (never,always or only)",
+            "value": "[=when]"
+        },
+        {
+            "option": "--sysroot",
+            "shortcut": "-s",
+            "description": "use the specified directory as system root",
+            "value": "<dir>"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "display version"
+        }
+    ],
+    "subcommands": [],
+    "version": "2.39.3"
+}

@@ -1,15 +1,15 @@
 {
-    "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64",
+    "name": "prysm-beacon-chain",
     "description": "this is a beacon chain implementation for Ethereum",
     "usage": "beacon-chain [options] command [command options] [arguments...]",
     "subcommands": [
         {
-            "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 db",
+            "name": "prysm-beacon-chain db",
             "description": "Defines commands for interacting with the Ethereum Beacon Node database",
             "usage": "beacon-chain db command [command options] [arguments...]",
             "subcommands": [
                 {
-                    "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 db restore",
+                    "name": "prysm-beacon-chain db restore",
                     "description": "restores a database from a backup file",
                     "usage": "beacon-chain db restore [command options] [arguments...]",
                     "options": [
@@ -42,7 +42,7 @@
             ]
         },
         {
-            "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 generate-auth-secret",
+            "name": "prysm-beacon-chain generate-auth-secret",
             "description": "creates a random, 32 byte hex string in a plaintext file to be used for authenticating JSON-RPC requests. If no --output-file flag is defined, the file will be created in the current working directory",
             "usage": "beacon-chain generate-auth-secret [command options] [arguments...]",
             "options": [

@@ -1,0 +1,778 @@
+{
+    "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64",
+    "description": "this is a beacon chain implementation for Ethereum",
+    "usage": "beacon-chain [options] command [command options] [arguments...]",
+    "subcommands": [
+        {
+            "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 db",
+            "description": "Defines commands for interacting with the Ethereum Beacon Node database",
+            "usage": "beacon-chain db command [command options] [arguments...]",
+            "subcommands": [
+                {
+                    "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 db restore",
+                    "description": "restores a database from a backup file",
+                    "usage": "beacon-chain db restore [command options] [arguments...]",
+                    "options": [
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "show help"
+                        },
+                        {
+                            "option": "--restore-source-file",
+                            "description": "Filepath to the backed-up database file which will be used to restore the database",
+                            "value": "value"
+                        },
+                        {
+                            "option": "--restore-target-dir",
+                            "description": "Target directory of the restored database",
+                            "value": "value",
+                            "default": "/home/ahmad/.eth2"
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ],
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "show help"
+                }
+            ]
+        },
+        {
+            "name": "/home/ahmad/Downloads/beacon-chain-v5.1.2-mekong-linux-amd64 generate-auth-secret",
+            "description": "creates a random, 32 byte hex string in a plaintext file to be used for authenticating JSON-RPC requests. If no --output-file flag is defined, the file will be created in the current working directory",
+            "usage": "beacon-chain generate-auth-secret [command options] [arguments...]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "show help"
+                },
+                {
+                    "option": "--output-file",
+                    "shortcut": "-o",
+                    "description": "Target file path for outputting a generated JWT secret to be used for JSON-RPC authentication",
+                    "value": "value"
+                }
+            ],
+            "subcommands": []
+        }
+    ],
+    "options": [
+        {
+            "option": "--accept-terms-of-use",
+            "description": "Accepts Terms and Conditions (for non-interactive environments).",
+            "default": "false"
+        },
+        {
+            "option": "--api-timeout",
+            "description": "Specifies the timeout value for API requests in seconds.",
+            "default": "10s",
+            "value": "value"
+        },
+        {
+            "option": "--backfill-batch-size",
+            "description": "Number of blocks per backfill batch. A larger number will request more blocks at once from peers, but also consume more system memory to hold batches in memory during processing. This has a multiplicative effect with backfill-worker-count.",
+            "default": "32",
+            "value": "value"
+        },
+        {
+            "option": "--backfill-oldest-slot",
+            "description": "Specifies the oldest slot that backfill should download. If this value is greater than current_slot - MIN_EPOCHS_FOR_BLOCK_REQUESTS, it will be ignored with a warning log.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--backfill-worker-count",
+            "description": "Number of concurrent backfill batch requests. A larger number will better utilize network resources, up to a system-dependent limit, but will also consume more system memory to hold batches in memory during processing. Multiply by backfill-batch-size and average block size (~2MB before deneb) to find the right number for your system. This has a multiplicative effect with backfill-batch-size.",
+            "default": "2",
+            "value": "value"
+        },
+        {
+            "option": "--blob-batch-limit",
+            "description": "The amount of blobs the local peer is bounded to request and respond to in a batch.",
+            "default": "64",
+            "value": "value"
+        },
+        {
+            "option": "--blob-batch-limit-burst-factor",
+            "description": "The factor by which blob batch limit may increase on burst.",
+            "default": "2",
+            "value": "value"
+        },
+        {
+            "option": "--blob-path",
+            "description": "Location for blob storage. Default location will be a 'blobs' directory next to the beacon db.",
+            "value": "value"
+        },
+        {
+            "option": "--blob-retention-epochs",
+            "shortcut": "--extend-blob-retention-epoch",
+            "description": "Override the default blob retention period (measured in epochs). The node will exit with an error at startup if the value is less than the default of 4096 epochs.",
+            "default": "4096",
+            "value": "value"
+        },
+        {
+            "option": "--block-batch-limit",
+            "description": "The amount of blocks the local peer is bounded to request and respond to in a batch. Maximum 128",
+            "default": "64",
+            "value": "value"
+        },
+        {
+            "option": "--block-batch-limit-burst-factor",
+            "description": "The factor by which block batch limit may increase on burst.",
+            "default": "2",
+            "value": "value"
+        },
+        {
+            "option": "--blockprofilerate",
+            "description": "Turns on block profiling with the given rate.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--bootstrap-node",
+            "description": "The address of bootstrap node. Beacon node will connect for peer discovery via DHT. Multiple nodes can be passed by using the flag multiple times but not comma-separated. You can also pass YAML files containing multiple nodes.",
+            "default": "enr:-KG4QNTx85fjxABbSq_Rta9wy56nQ1fHK0PewJbGjLm1M4bMGx5-3Qq4ZX2-iFJ0pys_O90sVXNNOxp2E7afBsGsBrgDhGV0aDKQu6TalgMAAAD__________4JpZIJ2NIJpcIQEnfA2iXNlY3AyNTZrMaECGXWQ-rQ2KZKRH1aOW4IlPDBkY4XDphxg9pxKytFCkayDdGNwgiMog3VkcIIjKA",
+            "value": "value"
+        },
+        {
+            "option": "--chain-config-file",
+            "description": "Path to a YAML file with chain config values.",
+            "value": "value"
+        },
+        {
+            "option": "--chain-id",
+            "description": "Sets the chain id of the beacon chain",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--checkpoint-block",
+            "description": "Rather than syncing from genesis, you can start processing from a ssz-serialized BeaconState+Block. This flag allows you to specify a local file containing the checkpoint Block to load.",
+            "value": "value"
+        },
+        {
+            "option": "--checkpoint-state",
+            "description": "Rather than syncing from genesis, you can start processing from a ssz-serialized BeaconState+Block. This flag allows you to specify a local file containing the checkpoint BeaconState to load.",
+            "value": "value"
+        },
+        {
+            "option": "--checkpoint-sync-url",
+            "description": "URL of a synced beacon node to trust in obtaining checkpoint sync data. As an additional safety measure, it is strongly recommended to only use this option in conjunction with --weak-subjectivity-checkpoint flag",
+            "value": "value"
+        },
+        {
+            "option": "--clear-db",
+            "description": "Prompt for clearing any previously stored data at the data directory.",
+            "default": "false"
+        },
+        {
+            "option": "--config-file",
+            "description": "Filepath to a yaml file with flag values.",
+            "value": "value"
+        },
+        {
+            "option": "--contract-deployment-block",
+            "description": "The eth1 block in which the deposit contract was deployed.",
+            "default": "11184524",
+            "value": "value"
+        },
+        {
+            "option": "--cpuprofile",
+            "description": "Writes CPU profile to the given file.",
+            "value": "value"
+        },
+        {
+            "option": "--datadir",
+            "description": "Data directory for the databases.",
+            "default": "/home/ahmad/.eth2",
+            "value": "value"
+        },
+        {
+            "option": "--db-backup-output-dir",
+            "description": "Output directory for db backups.",
+            "value": "value"
+        },
+        {
+            "option": "--deposit-contract",
+            "description": "Deposit contract address. Beacon chain node will listen logs coming from the deposit contract to determine when validator is eligible to participate.",
+            "default": "0x00000000219ab540356cBB839Cbe05303d7705Fa",
+            "value": "value"
+        },
+        {
+            "option": "--disable-broadcast-slashings",
+            "description": "Disables broadcasting slashings submitted to the beacon node.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-committee-aware-packing",
+            "description": "Changes the attestation packing algorithm to one that is not aware of attesting committees.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-debug-rpc-endpoints",
+            "description": "Disables the debug Beacon API namespace.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-experimental-state",
+            "description": "Turns off the latest and greatest changes to the beacon state. Disabling this is safe to do after the feature has been enabled.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-grpc-connection-logging",
+            "description": "Disables displaying logs for newly connected grpc clients.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-monitoring",
+            "description": "Disables monitoring service.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-peer-scorer",
+            "description": "(Danger): Disables P2P peer scorer. Do NOT use this in production!",
+            "default": "false"
+        },
+        {
+            "option": "--disable-registration-cache",
+            "description": "Temporary flag for disabling the validator registration cache instead of using the DB. Note: registrations do not clear on restart while using the DB.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-resource-manager",
+            "description": "Disables running the libp2p resource manager.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-staking-contract-check",
+            "description": "Disables checking of staking contract deposits when proposing blocks, useful for devnets.",
+            "default": "false"
+        },
+        {
+            "option": "--disable-verbose-sig-verification",
+            "description": "Disables identifying invalid signatures if batch verification fails when processing block.",
+            "default": "false"
+        },
+        {
+            "option": "--e2e-config",
+            "description": "Enables the E2E testing config, only for use within end-to-end testing.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-discovery-reboot",
+            "description": "Experimental: Enables the discovery listener to rebooted in the event of connectivity issues.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-experimental-backfill",
+            "description": "Backfill is still experimental at this time. It will only be enabled if this flag is specified and the node was started using checkpoint sync.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-full-ssz-data-logging",
+            "description": "Enables displaying logs for full ssz data on rejected gossip messages.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-historical-state-representation",
+            "description": "Enables the beacon chain to save historical states in a space efficient manner. (Warning): Once enabled, this feature migrates your database in to a new schema and there is no going back. At worst, your entire database might get corrupted.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-lightclient",
+            "description": "Enables the light client support in the beacon node",
+            "default": "false"
+        },
+        {
+            "option": "--enable-quic",
+            "description": "Enables connection using the QUIC protocol for peers which support it.",
+            "default": "false"
+        },
+        {
+            "option": "--enable-tracing",
+            "description": "Enables request tracing.",
+            "default": "false"
+        },
+        {
+            "option": "--engine-endpoint-timeout-seconds",
+            "description": "Sets the execution engine timeout (seconds) for execution payload semantics (forkchoiceUpdated, newPayload)",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--eth1-header-req-limit",
+            "description": "Sets the maximum number of headers that a deposit log query can fetch.",
+            "default": "1000",
+            "value": "value"
+        },
+        {
+            "option": "--execution-endpoint",
+            "description": "An execution client http endpoint. Can contain auth header as well in the format",
+            "default": "http://localhost:8551",
+            "value": "value"
+        },
+        {
+            "option": "--execution-headers",
+            "description": "A comma separated list of key value pairs to pass as HTTP headers for all execution client calls. Example: --execution-headers=key1=value1,key2=value2",
+            "value": "value"
+        },
+        {
+            "option": "--force-clear-db",
+            "description": "Clears any previously stored data at the data directory.",
+            "default": "false"
+        },
+        {
+            "option": "--gc-percent",
+            "description": "The percentage of freshly allocated data to live data on which the gc will be run again.",
+            "default": "100",
+            "value": "value"
+        },
+        {
+            "option": "--genesis-beacon-api-url",
+            "description": "URL of a synced beacon node to trust for obtaining genesis state. As an additional safety measure, it is strongly recommended to only use this option in conjunction with --weak-subjectivity-checkpoint flag",
+            "value": "value"
+        },
+        {
+            "option": "--genesis-state",
+            "description": "Load a genesis state from ssz file. Testnet genesis files can be found in the eth2-clients/eth2-testnets repository on github.",
+            "value": "value"
+        },
+        {
+            "option": "--grpc-max-msg-size",
+            "description": "Integer to define max receive message call size (in bytes). If serving a public gRPC server, set this to a more reasonable size to avoid resource exhaustion from large messages. Validators with as many as 10000 keys can be run with a max message size of less than 50Mb. The default here is set to a very high value for local users.",
+            "default": "2147483647",
+            "value": "value"
+        },
+        {
+            "option": "--historical-slasher-node",
+            "description": "Enables required flags for serving historical data to a slasher client. Results in additional storage usage",
+            "default": "false"
+        },
+        {
+            "option": "--holesky",
+            "description": "Runs Prysm configured for the Holesky test network.",
+            "default": "false"
+        },
+        {
+            "option": "--http-cors-domain",
+            "shortcut": "--grpc-gateway-corsdomain",
+            "description": "Comma separated list of domains from which to accept cross origin requests.",
+            "default": "http://localhost:3000, http://0.0.0.0:3000, http://127.0.0.1:3000, http://localhost:4200, http://127.0.0.1:4200, http://0.0.0.0:4200, http://localhost:7500, http://127.0.0.1:7500, http://0.0.0.0:7500",
+            "value": "value"
+        },
+        {
+            "option": "--http-host",
+            "shortcut": "--grpc-gateway-host",
+            "description": "Host on which the HTTP server runs on.",
+            "default": "127.0.0.1",
+            "value": "value"
+        },
+        {
+            "option": "--http-mev-relay",
+            "description": "A MEV builder relay string http endpoint, this will be used to interact MEV builder network using API defined in: https://ethereum.github.io/builder-specs/#/Builder",
+            "value": "value"
+        },
+        {
+            "option": "--http-modules",
+            "description": "Comma-separated list of API module names. Possible values: prysm,eth.",
+            "default": "prysm,eth"
+        },
+        {
+            "option": "--http-port",
+            "shortcut": "--grpc-gateway-port",
+            "description": "Port on which the HTTP server runs on.",
+            "default": "3500",
+            "value": "value"
+        },
+        {
+            "option": "--interop-eth1data-votes",
+            "description": "Enable mocking of eth1 data votes for proposers to package into blocks",
+            "default": "false"
+        },
+        {
+            "option": "--interop-genesis-time",
+            "description": "Specify the genesis time for interop genesis state generation. Must be used with --interop-num-validators",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--interop-num-validators",
+            "description": "Specify number of genesis validators to generate for interop. Must be used with --interop-genesis-time",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--interop-write-ssz-state-transitions",
+            "description": "Writes SSZ states to disk after attempted state transitio.",
+            "default": "false"
+        },
+        {
+            "option": "--jwt-id",
+            "description": "JWT claims id. Could be used to identify the client",
+            "value": "value"
+        },
+        {
+            "option": "--jwt-secret",
+            "description": "REQUIRED if connecting to an execution node via HTTP. Provides a path to a file containing a hex-encoded string representing a 32 byte secret used for authentication with an execution node via HTTP. If this is not set, all requests to execution nodes via HTTP for consensus-related calls will fail, which will prevent your validators from performing their duties. This is not required if using an IPC connection.",
+            "value": "value"
+        },
+        {
+            "option": "--local-block-value-boost",
+            "description": "A percentage boost for local block construction as a Uint64. This is used to prioritize local block construction over relay/builder block constructionBoost is an additional percentage to multiple local block value. Use builder block if: builder_bid_value * 100 > local_block_value * (local-block-value-boost + 100)",
+            "default": "10",
+            "value": "value"
+        },
+        {
+            "option": "--log-file",
+            "description": "Specifies log file name, relative or absolute.",
+            "value": "value"
+        },
+        {
+            "option": "--log-format",
+            "description": "Specifies log formatting. Supports: text, json, fluentd, journald.",
+            "default": "text",
+            "value": "value"
+        },
+        {
+            "option": "--mainnet",
+            "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+            "default": "true"
+        },
+        {
+            "option": "--max-builder-consecutive-missed-slots",
+            "description": "Number of consecutive skip slot to fallback from using relay/builder to local execution engine for block construction",
+            "default": "3",
+            "value": "value"
+        },
+        {
+            "option": "--max-builder-epoch-missed-slots",
+            "description": "Number of total skip slot to fallback from using relay/builder to local execution engine for block construction in last epoch rolling window. The values are on the basis of the networks and the default value for mainnet is 5.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--max-concurrent-dials",
+            "description": "Sets the maximum number of peers that a node will attempt to dial with from discovery. By default we will dials as many peers as possible.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--max-goroutines",
+            "description": "Specifies the upper limit of goroutines running before a status check fails",
+            "default": "5000",
+            "value": "value"
+        },
+        {
+            "option": "--mekong",
+            "description": "Runs Prysm configured for the Mekong test network.",
+            "default": "false"
+        },
+        {
+            "option": "--memprofilerate",
+            "description": "Turns on memory profiling with the given rate.",
+            "default": "524288",
+            "value": "value"
+        },
+        {
+            "option": "--min-builder-bid",
+            "description": "An absolute value in Gwei that the builder bid has to have in order for this beacon node to use the builder's block. Anything less than this value and the beacon will revert to local building.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--min-builder-to-local-difference",
+            "description": "An absolute value in Gwei that the builder bid has to have in order for this beacon node to use the builder's block. Anything less than this value and the beacon will revert to local building.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--min-sync-peers",
+            "description": "The required number of valid peers to connect with before syncing.",
+            "default": "3",
+            "value": "value"
+        },
+        {
+            "option": "--minimal-config",
+            "description": "Uses minimal config with parameters as defined in the spec.",
+            "default": "false"
+        },
+        {
+            "option": "--monitor-indices",
+            "description": "List of validator indices to track performance",
+            "value": "value"
+        },
+        {
+            "option": "--monitoring-host",
+            "description": "Host used for listening and responding metrics for prometheus.",
+            "default": "127.0.0.1",
+            "value": "value"
+        },
+        {
+            "option": "--monitoring-port",
+            "description": "Port used to listening and respond metrics for Prometheus.",
+            "default": "8080",
+            "value": "value"
+        },
+        {
+            "option": "--mutexprofilefraction",
+            "description": "Turns on mutex profiling with the given rate.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--network-id",
+            "description": "Sets the network id of the beacon chain.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--no-discovery",
+            "description": "Enable only local network p2p and do not connect to cloud bootstrap nodes",
+            "default": "false"
+        },
+        {
+            "option": "--p2p-allowlist",
+            "description": "The CIDR subnet for allowing only certain peer connections. Using \"public\" would allow only public subnets. Example: 192.168.0.0/16 would permit connections to peers on your local network only. The default is to accept all connections.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-denylist",
+            "description": "The CIDR subnets for denying certainty peer connections. Using \"private\" would deny all private subnets. Example: 192.168.0.0/16 would deny connections from peers on your local network only. The default is to accept all connections.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-host-dns",
+            "description": "The DNS address advertised by libp2p. This may be used to advertise an external DNS.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-host-ip",
+            "description": "The IP address advertised by libp2p. This may be used to advertise an external IP.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-local-ip",
+            "description": "The local ip address to listen for incoming data.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-max-peers",
+            "description": "The max number of p2p peers to maintain.",
+            "default": "70",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-metadata",
+            "description": "The file containing the metadata to communicate with other peers.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-priv-key",
+            "description": "The file containing the private key to use in communications with other peers.",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-quic-port",
+            "description": "The QUIC port used by libp2p.",
+            "default": "13000",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-static-id",
+            "description": "Enables the peer id of the node to be fixed by saving the generated network key to the default key path.",
+            "default": "false"
+        },
+        {
+            "option": "--p2p-tcp-port",
+            "description": "The TCP port used by libp2p.",
+            "default": "13000",
+            "value": "value"
+        },
+        {
+            "option": "--p2p-udp-port",
+            "description": "The UDP port used by the discovery service discv5.",
+            "default": "12000",
+            "value": "value"
+        },
+        {
+            "option": "--peer",
+            "description": "Connect with this peer, this flag may be used multiple times. This peer is recognized as a trusted peer.",
+            "value": "value"
+        },
+        {
+            "option": "--pprof",
+            "description": "Enables the pprof HTTP server.",
+            "default": "false"
+        },
+        {
+            "option": "--pprofaddr",
+            "description": "pprof HTTP server listening interface.",
+            "default": "127.0.0.1",
+            "value": "value"
+        },
+        {
+            "option": "--pprofport",
+            "description": "pprof HTTP server listening port.",
+            "default": "6060",
+            "value": "value"
+        },
+        {
+            "option": "--prepare-all-payloads",
+            "description": "Informs the engine to prepare all local payloads. Useful for relayers and builders.",
+            "default": "false"
+        },
+        {
+            "option": "--pubsub-queue-size",
+            "description": "The size of the pubsub validation and outbound queue for the node.",
+            "default": "1000",
+            "value": "value"
+        },
+        {
+            "option": "--relay-node",
+            "description": "The address of relay node. The beacon node will connect to the relay node and advertise their address via the relay node to other peers",
+            "value": "value"
+        },
+        {
+            "option": "--restore-source-file",
+            "description": "Filepath to the backed-up database file which will be used to restore the database",
+            "value": "value"
+        },
+        {
+            "option": "--restore-target-dir",
+            "description": "Target directory of the restored database",
+            "default": "/home/ahmad/.eth2",
+            "value": "value"
+        },
+        {
+            "option": "--rpc-host",
+            "description": "Host on which the RPC server should listen",
+            "default": "127.0.0.1",
+            "value": "value"
+        },
+        {
+            "option": "--rpc-max-page-size",
+            "description": "Max number of items returned per page in RPC responses for paginated endpoints.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--rpc-port",
+            "description": "RPC port exposed by a beacon node",
+            "default": "4000",
+            "value": "value"
+        },
+        {
+            "option": "--save-full-execution-payloads",
+            "description": "Saves beacon blocks with full execution payloads instead of execution payload headers in the database.",
+            "default": "false"
+        },
+        {
+            "option": "--save-invalid-blob-temp",
+            "description": "Writes invalid blobs to temp directory.",
+            "default": "false"
+        },
+        {
+            "option": "--save-invalid-block-temp",
+            "description": "Writes invalid blocks to temp directory.",
+            "default": "false"
+        },
+        {
+            "option": "--sepolia",
+            "description": "Runs Prysm configured for the Sepolia test network.",
+            "default": "false"
+        },
+        {
+            "option": "--slasher",
+            "description": "Enables a slasher in the beacon node for detecting slashable offenses.",
+            "default": "false"
+        },
+        {
+            "option": "--slasher-datadir",
+            "description": "Directory for the slasher database",
+            "default": "/home/ahmad/.eth2",
+            "value": "value"
+        },
+        {
+            "option": "--slots-per-archive-point",
+            "description": "The slot durations of when an archived state gets saved in the beaconDB.",
+            "default": "2048",
+            "value": "value"
+        },
+        {
+            "option": "--subscribe-all-subnets",
+            "description": "Subscribe to all possible attestation and sync subnets.",
+            "default": "false"
+        },
+        {
+            "option": "--suggested-fee-recipient",
+            "description": "Post bellatrix, this address will receive the transaction fees produced by any blocks from this node. Default to junk whilst bellatrix is in development state. Validator client can override this value through the preparebeaconproposer api.",
+            "default": "0x0000000000000000000000000000000000000000",
+            "value": "value"
+        },
+        {
+            "option": "--terminal-block-hash-epoch-override",
+            "description": "Sets the block hash epoch to manual overrides the default TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH value. WARNING: This flag should be used only if you have a clear understanding that community has decided to override the terminal block hash activation epoch. Incorrect usage will result in your node experience consensus failure.",
+            "default": "0",
+            "value": "value"
+        },
+        {
+            "option": "--terminal-block-hash-override",
+            "description": "Sets the block hash to manual overrides the default TERMINAL_BLOCK_HASH value. WARNING: This flag should be used only if you have a clear understanding that community has decided to override the terminal block hash. Incorrect usage will result in your node experience consensus failure.",
+            "value": "value"
+        },
+        {
+            "option": "--terminal-total-difficulty-override",
+            "description": "Sets the total difficulty to manual overrides the default TERMINAL_TOTAL_DIFFICULTY value. WARNING: This flag should be used only if you have a clear understanding that community has decided to override the terminal difficulty. Incorrect usage will result in your node experience consensus failure.",
+            "value": "value"
+        },
+        {
+            "option": "--tls-cert",
+            "description": "Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.",
+            "value": "value"
+        },
+        {
+            "option": "--tls-key",
+            "description": "Key for secure gRPC. Pass this and the tls-cert flag in order to use gRPC securely.",
+            "value": "value"
+        },
+        {
+            "option": "--trace",
+            "description": "Writes execution trace to the given file.",
+            "value": "value"
+        },
+        {
+            "option": "--trace-sample-fraction",
+            "description": "Indicates what fraction of p2p messages are sampled for tracing.",
+            "default": "0.2",
+            "value": "value"
+        },
+        {
+            "option": "--tracing-endpoint",
+            "description": "Tracing endpoint defines where beacon chain traces are exposed to Jaeger.",
+            "default": "http://127.0.0.1:14268/api/traces",
+            "value": "value"
+        },
+        {
+            "option": "--tracing-process-name",
+            "description": "Name to apply to tracing tag process_name.",
+            "value": "process_name"
+        },
+        {
+            "option": "--verbosity",
+            "description": "Logging verbosity. (trace, debug, info, warn, error, fatal, panic)",
+            "default": "info",
+            "value": "value"
+        },
+        {
+            "option": "--weak-subjectivity-checkpoint",
+            "description": "Input in block_root:epoch_number format. This guarantees that syncing leads to the given Weak Subjectivity Checkpoint along the canonical chain. If such a sync is not possible, the node will treat it as a critical and irrecoverable failure",
+            "value": "block_root:epoch_number"
+        }
+    ],
+    "version": "Prysm/v5.1.2-mekong"
+}

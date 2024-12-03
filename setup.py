@@ -7,7 +7,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'cli_parser=cli_parser.parser:main',
+            'cli_parser=src.parser:main',
         ],
     },
 )

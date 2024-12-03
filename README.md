@@ -3,7 +3,7 @@
 A tool to recursively parse CLI commands, subcommands and associated program options from unstructured help text and extract them into a structured JSON object.
 
 ## Example Usage
-`OPENAI_API_KEY=xxxxxxxxxxxxxx python cli-parser/cli_parser/parser-v3.py netstat`
+`OPENAI_API_KEY=xxxxxxxxxxxxxx python src/parser.py netstat`
 
 ## Output Schema
 ```

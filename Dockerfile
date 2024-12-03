@@ -1,20 +1,15 @@
-# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install the package
 RUN pip install .
 
-# Run cli_parser when the container launches
+# Run cli_parser specified in setup when the container launches
 ENTRYPOINT ["cli_parser"]
 
-# Default command to run when container starts
 CMD ["--help"]

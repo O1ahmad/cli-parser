@@ -1,0 +1,576 @@
+{
+    "name": "vector",
+    "description": "Vector is a tool for building observability pipelines.",
+    "usage": "Usage: vector [OPTIONS] [COMMAND]",
+    "subcommands": [
+        {
+            "name": "vector convert-config",
+            "description": "Convert a config file from one format to another. This command can also walk directories recursively and convert all config files that are discovered. Note that this is a best effort conversion due to the following reasons: * The comments from the original config file are not preserved. * Explicitly set default values in the original implementation might be omitted. * Depending on how each source/sink config struct configures serde, there might be entries with null values",
+            "usage": "Usage: vector convert-config [OPTIONS] <INPUT_PATH> <OUTPUT_PATH>",
+            "subcommands": [],
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help"
+                },
+                {
+                    "option": "--output-format",
+                    "description": "The target format to which existing config files will be converted to",
+                    "value": "<OUTPUT_FORMAT>",
+                    "default": "yaml"
+                }
+            ]
+        },
+        {
+            "name": "vector generate",
+            "description": "Generate a Vector configuration containing a list of components",
+            "usage": "vector generate [OPTIONS] <EXPRESSION>",
+            "options": [
+                {
+                    "option": "--file",
+                    "value": "<FILE>",
+                    "description": "Generate config as a file"
+                },
+                {
+                    "option": "--format",
+                    "value": "<FORMAT>",
+                    "description": "Output format",
+                    "default": "yaml"
+                },
+                {
+                    "option": "--fragment",
+                    "shortcut": "-f",
+                    "description": "Whether to skip the generation of global fields"
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help (see a summary with '-h')"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector generate-schema",
+            "description": "Generate the configuration schema for this version of Vector. (experimental)",
+            "usage": "vector generate-schema",
+            "subcommands": [],
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help (see a summary with '-h')"
+                }
+            ]
+        },
+        {
+            "name": "vector graph",
+            "description": "Output the topology as visual representation using the DOT language which can be rendered by GraphViz",
+            "usage": "Usage: vector graph [OPTIONS]",
+            "options": [
+                {
+                    "option": "-c",
+                    "shortcut": "--config",
+                    "description": "Read configuration from one or more files. Wildcard paths are supported. File format is detected from the file name. If zero files are specified the default config path `/etc/vector/vector.yaml` will be targeted",
+                    "value": "<config>",
+                    "tags": [
+                        "env: VECTOR_CONFIG="
+                    ]
+                },
+                {
+                    "option": "-C",
+                    "shortcut": "--config-dir",
+                    "description": "Read configuration from files in one or more directories. File format is detected from the file name. Files not ending in .toml, .json, .yaml, or .yml will be ignored.",
+                    "value": "<config-dir>",
+                    "tags": [
+                        "env: VECTOR_CONFIG_DIR="
+                    ]
+                },
+                {
+                    "option": "--config-json",
+                    "description": "Vector config files in JSON format",
+                    "value": "<config-json>"
+                },
+                {
+                    "option": "--config-toml",
+                    "description": "Vector config files in TOML format",
+                    "value": "<config-toml>"
+                },
+                {
+                    "option": "--config-yaml",
+                    "description": "Vector config files in YAML format",
+                    "value": "<config-yaml>"
+                },
+                {
+                    "option": "-h",
+                    "shortcut": "--help",
+                    "description": "Print help (see a summary with '-h')"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector list",
+            "description": "List available components, then exit",
+            "usage": "vector list [OPTIONS]",
+            "subcommands": [],
+            "options": [
+                {
+                    "option": "--format",
+                    "description": "Format the list in an encoding scheme",
+                    "value": "<FORMAT>",
+                    "default": "text",
+                    "tags": [
+                        "possible values: text, json, avro"
+                    ]
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help"
+                }
+            ]
+        },
+        {
+            "name": "vector tap",
+            "description": "Observe output log events from source or transform components. Logs are sampled at a specified interval",
+            "usage": "vector tap [OPTIONS] [COMPONENT_ID_PATTERNS]...",
+            "options": [
+                {
+                    "option": "--duration-ms",
+                    "shortcut": "-d",
+                    "description": "Specifies a duration (in milliseconds) to sample logs (e.g. specifying 10000 will sample logs for 10 seconds then exit)",
+                    "value": "<DURATION_MS>"
+                },
+                {
+                    "option": "--format",
+                    "shortcut": "-f",
+                    "description": "Encoding format for events printed to screen",
+                    "value": "<FORMAT>",
+                    "default": "json",
+                    "tags": [
+                        "possible values: json, yaml, logfmt"
+                    ]
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help"
+                },
+                {
+                    "option": "--inputs-of",
+                    "description": "Components (transforms, sinks) IDs whose inputs to observe (comma-separated; accepts glob patterns)",
+                    "value": "<INPUTS_OF>"
+                },
+                {
+                    "option": "--interval",
+                    "shortcut": "-i",
+                    "description": "Interval to sample logs at, in milliseconds",
+                    "value": "<INTERVAL>",
+                    "default": "500"
+                },
+                {
+                    "option": "--limit",
+                    "shortcut": "-l",
+                    "description": "Maximum number of events to sample each interval",
+                    "value": "<LIMIT>",
+                    "default": "100"
+                },
+                {
+                    "option": "--meta",
+                    "shortcut": "-m",
+                    "description": "Include metadata such as the event's associated component ID"
+                },
+                {
+                    "option": "--no-reconnect",
+                    "shortcut": "-n",
+                    "description": "Whether to reconnect if the underlying API connection drops. By default, tap will attempt to reconnect if the connection drops"
+                },
+                {
+                    "option": "--outputs-of",
+                    "description": "Components (sources, transforms) IDs whose outputs to observe (comma-separated; accepts glob patterns)",
+                    "value": "<OUTPUTS_OF>"
+                },
+                {
+                    "option": "--quiet",
+                    "shortcut": "-q",
+                    "description": "Quiet output includes only events"
+                },
+                {
+                    "option": "--url",
+                    "shortcut": "-u",
+                    "description": "GraphQL API server endpoint",
+                    "value": "<URL>"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector test",
+            "description": "Run Vector config unit tests, then exit. This command is experimental and therefore subject to change. For guidance on how to write unit tests check out <https://vector.dev/guides/level-up/unit-testing/>",
+            "usage": "vector test [OPTIONS] [PATHS]...",
+            "options": [
+                {
+                    "option": "--config-json",
+                    "description": "Vector config files in JSON format to test",
+                    "value": "<config-json>"
+                },
+                {
+                    "option": "--config-toml",
+                    "description": "Vector config files in TOML format to test",
+                    "value": "<config-toml>"
+                },
+                {
+                    "option": "--config-yaml",
+                    "description": "Vector config files in YAML format to test",
+                    "value": "<config-yaml>"
+                },
+                {
+                    "option": "--config-dir",
+                    "shortcut": "-C",
+                    "description": "Read configuration from files in one or more directories. File format is detected from the file name. Files not ending in .toml, .json, .yaml, or .yml will be ignored.",
+                    "value": "<config-dir>",
+                    "tags": [
+                        "env: VECTOR_CONFIG_DIR="
+                    ]
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help (see a summary with '-h')"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector top",
+            "description": "Display topology and metrics in the console, for a local or remote Vector instance",
+            "usage": "Usage: vector top [OPTIONS]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help (see a summary with '-h')"
+                },
+                {
+                    "option": "--human-metrics",
+                    "shortcut": "-H",
+                    "description": "Humanize metrics, using numeric suffixes - e.g. 1,100 = 1.10 k, 1,000,000 = 1.00 M"
+                },
+                {
+                    "option": "--interval",
+                    "shortcut": "-i",
+                    "description": "Interval to sample metrics at, in milliseconds",
+                    "value": "<INTERVAL>",
+                    "default": "1000"
+                },
+                {
+                    "option": "--no-reconnect",
+                    "shortcut": "-n",
+                    "description": "Whether to reconnect if the underlying API connection drops. By default, top will attempt to reconnect if the connection drops."
+                },
+                {
+                    "option": "--url",
+                    "shortcut": "-u",
+                    "description": "GraphQL API server endpoint",
+                    "value": "<URL>"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector validate",
+            "description": "Validate the target config, then exit",
+            "usage": "Usage: vector validate [OPTIONS] [PATHS]...",
+            "options": [
+                {
+                    "option": "--config-json",
+                    "value": "<config-json>",
+                    "description": "Vector config files in JSON format to validate",
+                    "tags": [
+                        "env: VECTOR_CONFIG_JSON="
+                    ]
+                },
+                {
+                    "option": "--config-toml",
+                    "value": "<config-toml>",
+                    "description": "Vector config files in TOML format to validate",
+                    "tags": [
+                        "env: VECTOR_CONFIG_TOML="
+                    ]
+                },
+                {
+                    "option": "--config-yaml",
+                    "value": "<config-yaml>",
+                    "description": "Vector config files in YAML format to validate",
+                    "tags": [
+                        "env: VECTOR_CONFIG_YAML="
+                    ]
+                },
+                {
+                    "option": "--no-environment",
+                    "description": "Disables environment checks. That includes component checks and health checks"
+                },
+                {
+                    "option": "--skip-healthchecks",
+                    "description": "Disables health checks during validation"
+                },
+                {
+                    "option": "-C",
+                    "shortcut": "--config-dir",
+                    "value": "<config-dir>",
+                    "description": "Read configuration from files in one or more directories. File format is detected from the file name. Files not ending in .toml, .json, .yaml, or .yml will be ignored.",
+                    "tags": [
+                        "env: VECTOR_CONFIG_DIR="
+                    ]
+                },
+                {
+                    "option": "-d",
+                    "shortcut": "--deny-warnings",
+                    "description": "Fail validation on warnings that are probably a mistake in the configuration or are recommended to be fixed"
+                },
+                {
+                    "option": "-h",
+                    "shortcut": "--help",
+                    "description": "Print help (see a summary with '-h')"
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "vector vrl",
+            "description": "A command-line interface for executing VRL programs with various options.",
+            "usage": "vector vrl [OPTIONS] [PROGRAM]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Print help"
+                },
+                {
+                    "option": "--input",
+                    "shortcut": "-i",
+                    "description": "The file containing the event object(s) to handle. JSON events should be one per line.",
+                    "value": "<INPUT_FILE>"
+                },
+                {
+                    "option": "--print-object",
+                    "shortcut": "-o",
+                    "description": "Print the (modified) event object instead of the result of the final expression. Setting this flag is equivalent to using `.` as the final expression."
+                },
+                {
+                    "option": "--print-warnings",
+                    "description": "Print warnings"
+                },
+                {
+                    "option": "--program",
+                    "shortcut": "-p",
+                    "description": "The file containing the VRL program to execute. This can be used instead of `PROGRAM`",
+                    "value": "<PROGRAM_FILE>"
+                },
+                {
+                    "option": "--runtime",
+                    "shortcut": "-r",
+                    "description": "Should we use the VM to evaluate the VRL",
+                    "value": "<RUNTIME>",
+                    "default": "ast"
+                },
+                {
+                    "option": "--timezone",
+                    "shortcut": "-z",
+                    "description": "The timezone used to parse dates",
+                    "value": "<TIMEZONE>"
+                }
+            ],
+            "subcommands": []
+        }
+    ],
+    "options": [
+        {
+            "option": "--allow-empty-config",
+            "description": "Allow the configuration to run without any components. This is useful for loading in an empty stub config that will later be replaced with actual components. Note that this is likely not useful without also watching for config file changes as described in `--watch-config`",
+            "tags": [
+                "env: VECTOR_ALLOW_EMPTY_CONFIG="
+            ]
+        },
+        {
+            "option": "--allocation-tracing",
+            "description": "Set runtime allocation tracing",
+            "tags": [
+                "env: ALLOCATION_TRACING="
+            ]
+        },
+        {
+            "option": "--allocation-tracing-reporting-interval-ms",
+            "description": "Set allocation tracing reporting rate in milliseconds",
+            "value": "<ALLOCATION_TRACING_REPORTING_INTERVAL_MS>",
+            "default": "5000",
+            "tags": [
+                "env: ALLOCATION_TRACING_REPORTING_INTERVAL_MS="
+            ]
+        },
+        {
+            "shortcut": "-c",
+            "option": "--config",
+            "description": "Read configuration from one or more files. Wildcard paths are supported. File format is detected from the file name. If zero files are specified, the deprecated default config path `/etc/vector/vector.yaml` is targeted",
+            "value": "<config>",
+            "tags": [
+                "env: VECTOR_CONFIG="
+            ]
+        },
+        {
+            "shortcut": "-C",
+            "option": "--config-dir",
+            "description": "Read configuration from files in one or more directories. File format is detected from the file name. Files not ending in .toml, .json, .yaml, or .yml will be ignored.",
+            "value": "<config-dir>",
+            "tags": [
+                "env: VECTOR_CONFIG_DIR="
+            ]
+        },
+        {
+            "option": "--config-json",
+            "description": "Read configuration from one or more files. Wildcard paths are supported. JSON file format is expected",
+            "value": "<config-json>",
+            "tags": [
+                "env: VECTOR_CONFIG_JSON="
+            ]
+        },
+        {
+            "option": "--config-toml",
+            "description": "Read configuration from one or more files. Wildcard paths are supported. TOML file format is expected",
+            "value": "<config-toml>",
+            "tags": [
+                "env: VECTOR_CONFIG_TOML="
+            ]
+        },
+        {
+            "option": "--config-yaml",
+            "description": "Read configuration from one or more files. Wildcard paths are supported. YAML file format is expected",
+            "value": "<config-yaml>",
+            "tags": [
+                "env: VECTOR_CONFIG_YAML="
+            ]
+        },
+        {
+            "option": "--color",
+            "description": "Control when ANSI terminal formatting is used. By default `vector` will try and detect if `stdout` is a terminal, if it is ANSI will be enabled. Otherwise it will be disabled. By providing this flag with the `--color always` option will always enable ANSI terminal formatting. `--color never` will disable all ANSI terminal formatting. `--color auto` will attempt to detect it automatically.",
+            "value": "<COLOR>",
+            "default": "auto",
+            "tags": [
+                "env: VECTOR_COLOR=",
+                "possible values: auto, always, never"
+            ]
+        },
+        {
+            "option": "--graceful-shutdown-limit-secs",
+            "description": "Set the duration in seconds to wait for graceful shutdown after SIGINT or SIGTERM are received. After the duration has passed, Vector will force shutdown. To never force shutdown, use `--no-graceful-shutdown-limit`",
+            "value": "<GRACEFUL_SHUTDOWN_LIMIT_SECS>",
+            "default": "60",
+            "tags": [
+                "env: VECTOR_GRACEFUL_SHUTDOWN_LIMIT_SECS="
+            ]
+        },
+        {
+            "shortcut": "-h",
+            "option": "--help",
+            "description": "Print help (see a summary with '-h')"
+        },
+        {
+            "shortcut": "-i",
+            "option": "--internal-log-rate-limit",
+            "description": "Set the internal log rate limit",
+            "value": "<INTERNAL_LOG_RATE_LIMIT>",
+            "default": "10",
+            "tags": [
+                "env: VECTOR_INTERNAL_LOG_RATE_LIMIT="
+            ]
+        },
+        {
+            "option": "--log-format",
+            "description": "Set the logging format",
+            "value": "<LOG_FORMAT>",
+            "default": "text",
+            "tags": [
+                "env: VECTOR_LOG_FORMAT=",
+                "possible values: text, json"
+            ]
+        },
+        {
+            "option": "--no-graceful-shutdown-limit",
+            "description": "Never time out while waiting for graceful shutdown after SIGINT or SIGTERM received. This is useful when you would like for Vector to attempt to send data until terminated by a SIGKILL. Overrides/cannot be set with `--graceful-shutdown-limit-secs`",
+            "tags": [
+                "env: VECTOR_NO_GRACEFUL_SHUTDOWN_LIMIT="
+            ]
+        },
+        {
+            "option": "--openssl-no-probe",
+            "description": "Disable probing and configuration of root certificate locations on the system for OpenSSL. The probe functionality manipulates the `SSL_CERT_FILE` and `SSL_CERT_DIR` environment variables in the Vector process. This behavior can be problematic for users of the `exec` source, which by default inherits the environment of the Vector process.",
+            "tags": [
+                "env: VECTOR_OPENSSL_NO_PROBE="
+            ]
+        },
+        {
+            "shortcut": "-q",
+            "option": "--quiet",
+            "description": "Reduce detail of internal logging. Repeat to reduce further. Overrides `--verbose`"
+        },
+        {
+            "shortcut": "-r",
+            "option": "--require-healthy",
+            "description": "Exit on startup if any sinks fail healthchecks",
+            "value": "<REQUIRE_HEALTHY>",
+            "tags": [
+                "env: VECTOR_REQUIRE_HEALTHY=",
+                "possible values: true, false"
+            ]
+        },
+        {
+            "shortcut": "-t",
+            "option": "--threads",
+            "description": "Number of threads to use for processing (default is number of available cores)",
+            "value": "<THREADS>",
+            "tags": [
+                "env: VECTOR_THREADS="
+            ]
+        },
+        {
+            "shortcut": "-v",
+            "option": "--verbose",
+            "description": "Enable more detailed internal logging. Repeat to increase level. Overridden by `--quiet`"
+        },
+        {
+            "shortcut": "-V",
+            "option": "--version",
+            "description": "Print version"
+        },
+        {
+            "shortcut": "-w",
+            "option": "--watch-config",
+            "description": "Watch for changes in configuration file, and reload accordingly",
+            "tags": [
+                "env: VECTOR_WATCH_CONFIG="
+            ]
+        },
+        {
+            "option": "--watch-config-method",
+            "description": "Method for configuration watching. By default, `vector` uses recommended watcher for host OS - `inotify` for Linux-based systems. - `kqueue` for unix/macos - `ReadDirectoryChangesWatcher` for windows. The `poll` watcher can be used in cases where `inotify` doesn't work, e.g., when attaching the configuration via NFS.",
+            "value": "<WATCH_CONFIG_METHOD>",
+            "default": "recommended",
+            "tags": [
+                "env: VECTOR_WATCH_CONFIG_METHOD=",
+                "possible values: recommended, poll"
+            ]
+        },
+        {
+            "option": "--watch-config-poll-interval-seconds",
+            "description": "Poll for changes in the configuration file at the given interval. This setting is only applicable if `Poll` is set in `--watch-config-method`.",
+            "value": "<WATCH_CONFIG_POLL_INTERVAL_SECONDS>",
+            "default": "30",
+            "tags": [
+                "env: VECTOR_WATCH_CONFIG_POLL_INTERVAL_SECONDS="
+            ]
+        }
+    ],
+    "version": "0.43.1"
+}

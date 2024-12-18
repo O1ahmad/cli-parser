@@ -1,0 +1,1668 @@
+{
+    "name": "besu",
+    "description": "This command runs the Besu Ethereum client full node.",
+    "usage": "besu [OPTIONS] [COMMAND]",
+    "options": [
+        {
+            "option": "--api-gas-price-blocks",
+            "description": "Number of blocks to consider for eth_gasPrice",
+            "value": "<apiGasPriceBlocks>",
+            "default": "100"
+        },
+        {
+            "option": "--api-gas-price-max",
+            "description": "Maximum gas price for eth_gasPrice",
+            "value": "<apiGasPriceMax>",
+            "default": "500000000000"
+        },
+        {
+            "option": "--api-gas-price-percentile",
+            "description": "Percentile value to measure for eth_gasPrice",
+            "value": "<apiGasPricePercentile>",
+            "default": "50.0"
+        },
+        {
+            "option": "--auto-log-bloom-caching-enabled",
+            "description": "Enable automatic log bloom caching",
+            "value": "<autoLogBloomCachingEnabled>",
+            "default": "true"
+        },
+        {
+            "option": "--banned-node-id",
+            "shortcut": "--banned-node-ids",
+            "description": "A list of node IDs to ban from the P2P network.",
+            "value": "<NODEID>[,<NODEID>...]..."
+        },
+        {
+            "option": "--block-txs-selection-max-time",
+            "description": "Specifies the maximum time, in milliseconds, that could be spent selecting transactions to be included in the block.",
+            "value": "<nonPoaBlockTxsSelectionMaxTime>",
+            "default": "+5000"
+        },
+        {
+            "option": "--bonsai-historical-block-limit",
+            "shortcut": "--bonsai-maximum-back-layers-to-load",
+            "description": "Limit of historical layers that can be loaded with BONSAI.",
+            "value": "<LONG>",
+            "default": "512"
+        },
+        {
+            "option": "--bonsai-limit-trie-logs-enabled",
+            "shortcut": "--Xbonsai-limit-trie-logs-enabled",
+            "description": "Limit the number of trie logs that are retained.",
+            "default": "true"
+        },
+        {
+            "option": "--bonsai-trie-logs-pruning-window-size",
+            "shortcut": "--Xbonsai-trie-logs-pruning-window-size",
+            "description": "The max number of blocks to load and prune trie logs for at startup.",
+            "value": "<trieLogPruningWindowSize>",
+            "default": "5000"
+        },
+        {
+            "option": "--bootnodes",
+            "description": "Comma separated enode URLs for P2P discovery bootstrap. Default is a predefined list.",
+            "value": "<enode://id@host:port>[,<enode://id@host:port>...]..."
+        },
+        {
+            "option": "--cache-last-blocks",
+            "description": "Specifies the number of last blocks to cache",
+            "value": "<numberOfblocksToCache>",
+            "default": "0"
+        },
+        {
+            "option": "--color-enabled",
+            "description": "Force color output to be enabled/disabled",
+            "default": "colorized only if printing to console"
+        },
+        {
+            "option": "--compatibility-eth64-forkid-enabled",
+            "description": "Enable the legacy Eth/64 fork id.",
+            "default": "false"
+        },
+        {
+            "option": "--config-file",
+            "description": "TOML config file",
+            "value": "<FILE>",
+            "default": "none"
+        },
+        {
+            "option": "--data-path",
+            "description": "The path to Besu data directory",
+            "value": "<PATH>",
+            "default": "/home/ahmad/Downloads/besu-24.12.2"
+        },
+        {
+            "option": "--data-storage-format",
+            "description": "Format to store trie data in.  Either FOREST or BONSAI.",
+            "value": "<dataStorageFormat>",
+            "default": "BONSAI"
+        },
+        {
+            "option": "--discovery-dns-url",
+            "description": "Specifies the URL to use for DNS discovery",
+            "value": "<discoveryDnsUrl>"
+        },
+        {
+            "option": "--discovery-enabled",
+            "description": "Enable P2P discovery",
+            "value": "<peerDiscoveryEnabled>",
+            "default": "true"
+        },
+        {
+            "option": "--engine-host-allowlist",
+            "description": "Comma separated list of hostnames to allow for ENGINE API access (applies to both HTTP and websockets), or * to accept any host",
+            "value": "<hostname>[,<hostname>...]... or * or all",
+            "default": "localhost,127.0.0.1"
+        },
+        {
+            "option": "--engine-jwt-disabled",
+            "description": "Disable authentication for Engine APIs",
+            "default": "false"
+        },
+        {
+            "option": "--engine-jwt-secret",
+            "description": "Path to file containing shared secret key for JWT signature verification",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--engine-rpc-enabled",
+            "description": "Enable the engine api, even in the absence of merge-specific configurations."
+        },
+        {
+            "option": "--engine-rpc-port",
+            "shortcut": "--engine-rpc-http-port",
+            "description": "Port to provide consensus client APIS on",
+            "value": "<PORT>",
+            "default": "8551"
+        },
+        {
+            "option": "--ethstats",
+            "description": "Reporting URL of an ethstats server. Scheme and port can be omitted.",
+            "value": "<[ws://|wss://]nodename:secret@host:[port]>"
+        },
+        {
+            "option": "--ethstats-cacert-file",
+            "description": "Specifies the path to the root CA (Certificate Authority) certificate file that has signed ethstats server certificate.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--ethstats-contact",
+            "description": "Contact address to send to ethstats server",
+            "value": "<ethstatsContact>"
+        },
+        {
+            "option": "--fast-sync-min-peers",
+            "shortcut": "--sync-min-peers",
+            "description": "Minimum number of peers required before starting sync. Has effect only on non-PoS networks.",
+            "value": "<INTEGER>",
+            "default": "5"
+        },
+        {
+            "option": "--genesis-file",
+            "description": "Genesis file for your custom network. Setting this option requires --network-id to be set. (Cannot be used with --network)",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--genesis-state-hash-cache-enabled",
+            "description": "Use genesis state hash from data on startup if specified",
+            "default": "false"
+        },
+        {
+            "option": "--graphql-http-cors-origins",
+            "description": "Comma separated origin domain URLs for CORS validation",
+            "value": "<graphQLHttpCorsAllowedOrigins>",
+            "default": "none"
+        },
+        {
+            "option": "--graphql-http-enabled",
+            "description": "Set to start the GraphQL HTTP service",
+            "default": "false"
+        },
+        {
+            "option": "--graphql-http-host",
+            "description": "Host for GraphQL HTTP to listen on",
+            "value": "<HOST>",
+            "default": "null"
+        },
+        {
+            "option": "--graphql-http-port",
+            "description": "Port for GraphQL HTTP to listen on",
+            "value": "<PORT>",
+            "default": "8547"
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "Show this help message and exit."
+        },
+        {
+            "option": "--host-allowlist",
+            "description": "Comma separated list of hostnames to allow for RPC access, or * to accept any host",
+            "value": "<hostname>[,<hostname>...]... or * or all",
+            "default": "localhost,127.0.0.1"
+        },
+        {
+            "option": "--identity",
+            "description": "Identification for this node in the Client ID",
+            "value": "<String>"
+        },
+        {
+            "option": "--json-pretty-print-enabled",
+            "description": "Enable JSON pretty print format",
+            "default": "false"
+        },
+        {
+            "option": "--key-value-storage",
+            "description": "Identity for the key-value storage to be used.",
+            "value": "<keyValueStorageName>"
+        },
+        {
+            "option": "--kzg-trusted-setup",
+            "description": "Path to file containing the KZG trusted setup, mandatory for custom networks that support data blobs, optional for overriding named networks default.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--logging",
+            "shortcut": "-l",
+            "description": "Logging verbosity levels: OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL",
+            "value": "<LOG VERBOSITY LEVEL>"
+        },
+        {
+            "option": "--max-peers",
+            "shortcut": "--p2p-peer-upper-bound",
+            "description": "Maximum P2P connections that can be established",
+            "value": "<INTEGER>",
+            "default": "25"
+        },
+        {
+            "option": "--metrics-category",
+            "shortcut": "--metrics-categories",
+            "description": "Comma separated list of categories to track metrics for",
+            "value": "<category name>[,<category name>...]...",
+            "default": "[permissioning, stratum, network, peers, rpc, transaction_pool, block_processing, pruner, jvm, blockchain, ethereum, executors, process, synchronizer]"
+        },
+        {
+            "option": "--metrics-enabled",
+            "description": "Set to start the metrics exporter",
+            "default": "false"
+        },
+        {
+            "option": "--metrics-host",
+            "description": "Host for the metrics exporter to listen on",
+            "value": "<HOST>",
+            "default": "127.0.0.1"
+        },
+        {
+            "option": "--metrics-port",
+            "description": "Port for the metrics exporter to listen on",
+            "value": "<PORT>",
+            "default": "9545"
+        },
+        {
+            "option": "--metrics-protocol",
+            "description": "Metrics protocol, one of PROMETHEUS, OPENTELEMETRY or NONE.",
+            "value": "<metricsProtocol>",
+            "default": "PROMETHEUS"
+        },
+        {
+            "option": "--metrics-push-enabled",
+            "description": "Enable the metrics push gateway integration",
+            "default": "false"
+        },
+        {
+            "option": "--metrics-push-host",
+            "description": "Host of the Prometheus Push Gateway for push mode",
+            "value": "<HOST>",
+            "default": "127.0.0.1"
+        },
+        {
+            "option": "--metrics-push-interval",
+            "description": "Interval in seconds to push metrics when in push mode",
+            "value": "<INTEGER>",
+            "default": "15"
+        },
+        {
+            "option": "--metrics-push-port",
+            "description": "Port of the Prometheus Push Gateway for push mode",
+            "value": "<PORT>",
+            "default": "9001"
+        },
+        {
+            "option": "--metrics-push-prometheus-job",
+            "description": "Job name to use when in push mode",
+            "value": "<metricsPrometheusJob>",
+            "default": "besu-client"
+        },
+        {
+            "option": "--min-block-occupancy-ratio",
+            "description": "Minimum occupancy ratio for a mined block",
+            "value": "<minBlockOccupancyRatio>",
+            "default": "0.8"
+        },
+        {
+            "option": "--min-gas-price",
+            "description": "Minimum price (in Wei) offered by a transaction for it to be included in a mined block",
+            "value": "<minTransactionGasPrice>",
+            "default": "0x00000000000000000000000000000000000000000000000000000000000003e8"
+        },
+        {
+            "option": "--min-priority-fee",
+            "description": "Minimum priority fee per gas (in Wei) offered by a transaction for it to be included in a block",
+            "value": "<minPriorityFeePerGas>",
+            "default": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+            "option": "--miner-coinbase",
+            "description": "Account to which mining rewards are paid. You must specify a valid coinbase if mining is enabled using --miner-enabled option",
+            "value": "<coinbase>"
+        },
+        {
+            "option": "--miner-enabled",
+            "description": "Deprecated. PoW consensus is deprecated. See CHANGELOG for alternative options. Set if node will perform mining",
+            "default": "false"
+        },
+        {
+            "option": "--miner-extra-data",
+            "description": "A hex string representing the (32) bytes to be included in the extra data field of a mined block",
+            "value": "<extraData>",
+            "default": "0x"
+        },
+        {
+            "option": "--miner-stratum-enabled",
+            "description": "Deprecated. PoW consensus is deprecated. See CHANGELOG for alternative options. Set if node will perform Stratum mining. Compatible with Proof of Work (PoW) only. Requires the network option (--network) to be set to CLASSIC.",
+            "default": "false"
+        },
+        {
+            "option": "--miner-stratum-host",
+            "description": "Deprecated. PoW consensus is deprecated. See CHANGELOG for alternative options. Host for Stratum network mining service",
+            "value": "<stratumNetworkInterface>",
+            "default": "0.0.0.0"
+        },
+        {
+            "option": "--miner-stratum-port",
+            "description": "Deprecated. PoW consensus is deprecated. See CHANGELOG for alternative options. Stratum port binding",
+            "value": "<stratumPort>",
+            "default": "8008"
+        },
+        {
+            "option": "--nat-method",
+            "description": "Specify the NAT circumvention method to be used, possible values are UPNP, UPNPP2PONLY, DOCKER, KUBERNETES, AUTO, NONE. NONE disables NAT functionality.",
+            "value": "<natMethod>",
+            "default": "AUTO"
+        },
+        {
+            "option": "--net-restrict",
+            "description": "Comma-separated list of allowed IP subnets (e.g., '192.168.1.0/24,10.0.0.0/8').",
+            "value": "<allowedSubnets>[,<allowedSubnets>...]..."
+        },
+        {
+            "option": "--network",
+            "description": "Synchronize against the indicated network, possible values are MAINNET, SEPOLIA, HOLESKY, LUKSO, EPHEMERY, DEV, FUTURE_EIPS, EXPERIMENTAL_EIPS, CLASSIC, MORDOR.",
+            "value": "<NETWORK>",
+            "default": "MAINNET"
+        },
+        {
+            "option": "--network-id",
+            "description": "P2P network identifier.",
+            "value": "<BIG INTEGER>",
+            "default": "the selected network chain ID or custom genesis chain ID"
+        },
+        {
+            "option": "--node-private-key-file",
+            "description": "The node's private key file",
+            "value": "<PATH>",
+            "default": "a file named \"key\" in the Besu data directory"
+        },
+        {
+            "option": "--p2p-enabled",
+            "description": "Enable P2P functionality",
+            "value": "<p2pEnabled>",
+            "default": "true"
+        },
+        {
+            "option": "--p2p-host",
+            "description": "IP address this node advertises to its peers",
+            "value": "<HOST>",
+            "default": "127.0.0.1"
+        },
+        {
+            "option": "--p2p-interface",
+            "description": "The network interface address on which this node listens for P2P communication",
+            "value": "<HOST>",
+            "default": "0.0.0.0"
+        },
+        {
+            "option": "--p2p-port",
+            "description": "Port on which to listen for P2P communication",
+            "value": "<PORT>",
+            "default": "30303"
+        },
+        {
+            "option": "--permissions-accounts-config-file",
+            "description": "Account permissioning config TOML file",
+            "value": "<accountPermissionsConfigFile>",
+            "default": "a file named \"permissions_config.toml\" in the Besu data folder"
+        },
+        {
+            "option": "--permissions-accounts-config-file-enabled",
+            "description": "Enable account level permissions",
+            "default": "false"
+        },
+        {
+            "option": "--permissions-accounts-contract-address",
+            "description": "Deprecated. Onchain permissioning is deprecated. See CHANGELOG for alternative options. Address of the account permissioning smart contract",
+            "value": "<permissionsAccountsContractAddress>"
+        },
+        {
+            "option": "--permissions-accounts-contract-enabled",
+            "description": "Deprecated. Onchain permissioning is deprecated. See CHANGELOG for alternative options. Enable account level permissions via smart contract",
+            "default": "false"
+        },
+        {
+            "option": "--permissions-nodes-config-file",
+            "description": "Node permissioning config TOML file",
+            "value": "<nodePermissionsConfigFile>",
+            "default": "a file named \"permissions_config.toml\" in the Besu data folder"
+        },
+        {
+            "option": "--permissions-nodes-config-file-enabled",
+            "description": "Enable node level permissions",
+            "default": "false"
+        },
+        {
+            "option": "--permissions-nodes-contract-address",
+            "description": "Deprecated. Onchain permissioning is deprecated. See CHANGELOG for alternative options. Address of the node permissioning smart contract",
+            "value": "<permissionsNodesContractAddress>"
+        },
+        {
+            "option": "--permissions-nodes-contract-enabled",
+            "description": "Deprecated. Onchain permissioning is deprecated. See CHANGELOG for alternative options. Enable node level permissions via smart contract",
+            "default": "false"
+        },
+        {
+            "option": "--permissions-nodes-contract-version",
+            "description": "Deprecated. Onchain permissioning is deprecated. See CHANGELOG for alternative options. Version of the EEA Node Permissioning interface",
+            "value": "<permissionsNodesContractVersion>",
+            "default": "1"
+        },
+        {
+            "option": "--pid-path",
+            "description": "Path to PID file",
+            "value": "<PATH>"
+        },
+        {
+            "option": "--plugin-continue-on-error",
+            "description": "Allow Besu startup even if any plugins fail to initialize correctly",
+            "value": "<continueOnPluginError>",
+            "default": "false"
+        },
+        {
+            "option": "--poa-block-txs-selection-max-time",
+            "description": "Specifies the maximum time that could be spent selecting transactions to be included in the block, as a percentage of the fixed block time of the PoA network.",
+            "value": "<poaBlockTxsSelectionMaxTime>",
+            "default": "+75"
+        },
+        {
+            "option": "--poa-discovery-retry-bootnodes",
+            "description": "Always use of bootnodes for discovery in PoA networks. Disabling this reverts to the same behaviour as non-PoA networks, where neighbours are only discovered from bootnodes on first startup.",
+            "value": "<poaDiscoveryRetryBootnodes>",
+            "default": "true"
+        },
+        {
+            "option": "--print-paths-and-exit",
+            "description": "Print the configured paths and exit without starting the node.",
+            "value": "[<username>]"
+        },
+        {
+            "option": "--profile",
+            "description": "Overwrite default settings. Possible values are dev, enterprise, minimalist_staker, private, staker.",
+            "value": "<PROFILE>",
+            "default": "none"
+        },
+        {
+            "option": "--privacy-enable-database-migration",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable private database metadata migration",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-enabled",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable private transactions",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-flexible-groups-enabled",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable flexible privacy groups",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-marker-transaction-signing-key-file",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. The name of a file containing the private key used to sign privacy marker transactions.",
+            "value": "<privateMarkerTransactionSigningKeyPath>"
+        },
+        {
+            "option": "--privacy-multi-tenancy-enabled",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable multi-tenant private transactions",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-nonce-always-increments",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable private nonce incrementation even if the transaction didn't succeeded",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-public-key-file",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. The enclave's public key file",
+            "value": "<privacyPublicKeyFile>"
+        },
+        {
+            "option": "--privacy-tls-enabled",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Enable TLS for connecting to privacy enclave",
+            "default": "false"
+        },
+        {
+            "option": "--privacy-tls-keystore-file",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Path to a PKCS#12 formatted keystore; used to enable TLS on inbound connections.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--privacy-tls-keystore-password-file",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Path to a file containing the password used to decrypt the keystore.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--privacy-tls-known-enclave-file",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. Path to a file containing the fingerprints of the authorized privacy enclave.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--privacy-url",
+            "description": "Deprecated. Tessera-based privacy is deprecated. See CHANGELOG for alternative options. The URL on which the enclave is running",
+            "value": "<privacyUrl>"
+        },
+        {
+            "option": "--random-peer-priority-enabled",
+            "description": "Allow for incoming connections to be prioritized randomly. This will prevent (typically small, stable) networks from forming impenetrable peer cliques.",
+            "default": "false"
+        },
+        {
+            "option": "--receipt-compaction-enabled",
+            "description": "Enables compact storing of receipts",
+            "default": "true"
+        },
+        {
+            "option": "--remote-connections-limit-enabled",
+            "description": "Whether to limit the number of P2P connections initiated remotely.",
+            "default": "true"
+        },
+        {
+            "option": "--remote-connections-max-percentage",
+            "description": "The maximum percentage of P2P connections that can be initiated remotely. Must be between 0 and 100 inclusive.",
+            "value": "<DOUBLE>",
+            "default": "60"
+        },
+        {
+            "option": "--required-block",
+            "shortcut": "--required-blocks",
+            "description": "Block number and hash peers are required to have.",
+            "value": "[=BLOCK=HASH[,BLOCK=HASH...]...]"
+        },
+        {
+            "option": "--reorg-logging-threshold",
+            "description": "How deep a chain reorganization must be in order for it to be logged",
+            "value": "<reorgLoggingThreshold>",
+            "default": "6"
+        },
+        {
+            "option": "--revert-reason-enabled",
+            "description": "Enable passing the revert reason back through TransactionReceipts",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-gas-cap",
+            "description": "Specifies the gasLimit cap for transaction simulation RPC methods. Must be >=0. 0 specifies no limit",
+            "value": "<rpcGasCap>",
+            "default": "0"
+        },
+        {
+            "option": "--rpc-http-api",
+            "shortcut": "--rpc-http-apis",
+            "description": "Comma separated list of APIs to enable on JSON-RPC HTTP service",
+            "value": "<api name>[ {0,1}, {0,1}<api name>...]...",
+            "default": "[ETH, NET, WEB3]"
+        },
+        {
+            "option": "--rpc-http-api-method-no-auth",
+            "shortcut": "--rpc-http-api-methods-no-auth",
+            "description": "Comma separated list of API methods to exclude from RPC authentication services, RPC HTTP authentication must be enabled",
+            "value": "<api name>[ {0,1}, {0,1}<api name>...]..."
+        },
+        {
+            "option": "--rpc-http-authentication-credentials-file",
+            "description": "Storage file for JSON-RPC HTTP authentication credentials",
+            "value": "<FILE>",
+            "default": "null"
+        },
+        {
+            "option": "--rpc-http-authentication-enabled",
+            "description": "Require authentication for the JSON-RPC HTTP service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-http-authentication-jwt-algorithm",
+            "description": "Encryption algorithm used for HTTP JWT public key. Possible values are RS256, RS384, RS512, ES256, ES384, HS256, ES512",
+            "value": "<rpcHttpAuthenticationAlgorithm>",
+            "default": "RS256"
+        },
+        {
+            "option": "--rpc-http-authentication-jwt-public-key-file",
+            "description": "JWT public key file for JSON-RPC HTTP authentication",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-http-cors-origins",
+            "description": "Comma separated origin domain URLs for CORS validation",
+            "value": "<rpcHttpCorsAllowedOrigins>",
+            "default": "none"
+        },
+        {
+            "option": "--rpc-http-enabled",
+            "description": "Set to start the JSON-RPC HTTP service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-http-host",
+            "description": "Host for JSON-RPC HTTP to listen on",
+            "value": "<HOST>",
+            "default": "127.0.0.1"
+        },
+        {
+            "option": "--rpc-http-max-active-connections",
+            "description": "Maximum number of HTTP connections allowed for JSON-RPC. Once this limit is reached, incoming connections will be rejected.",
+            "value": "<rpcHttpMaxConnections>",
+            "default": "80"
+        },
+        {
+            "option": "--rpc-http-max-batch-size",
+            "description": "Specifies the maximum number of requests in a single RPC batch request via RPC. -1 specifies no limit",
+            "value": "<INTEGER>",
+            "default": "1024"
+        },
+        {
+            "option": "--rpc-http-max-request-content-length",
+            "description": "Specifies the maximum request content length.",
+            "value": "<LONG>",
+            "default": "5242880"
+        },
+        {
+            "option": "--rpc-http-port",
+            "description": "Port for JSON-RPC HTTP to listen on",
+            "value": "<PORT>",
+            "default": "8545"
+        },
+        {
+            "option": "--rpc-http-tls-ca-clients-enabled",
+            "description": "Enable to accept clients certificate signed by a valid CA for client authentication",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-http-tls-cipher-suite",
+            "shortcut": "--rpc-http-tls-cipher-suites",
+            "description": "Comma separated list of TLS cipher suites to support",
+            "value": "<rpcHttpTlsCipherSuites>[,<rpcHttpTlsCipherSuites>...]..."
+        },
+        {
+            "option": "--rpc-http-tls-client-auth-enabled",
+            "description": "Enable TLS client authentication for the JSON-RPC HTTP service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-http-tls-enabled",
+            "description": "Enable TLS for the JSON-RPC HTTP service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-http-tls-keystore-file",
+            "description": "Keystore (PKCS#12) containing key/certificate for the JSON-RPC HTTP service. Required if TLS is enabled.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-http-tls-keystore-password-file",
+            "description": "File containing password to unlock keystore for the JSON-RPC HTTP service. Required if TLS is enabled.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-http-tls-known-clients-file",
+            "description": "Path to file containing clients certificate common name and fingerprint for client authentication",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-http-tls-protocol",
+            "shortcut": "--rpc-http-tls-protocols",
+            "description": "Comma separated list of TLS protocols to support",
+            "value": "<rpcHttpTlsProtocols>[,<rpcHttpTlsProtocols>...]...",
+            "default": "[TLSv1.3, TLSv1.2]"
+        },
+        {
+            "option": "--rpc-max-logs-range",
+            "description": "Specifies the maximum number of blocks to retrieve logs from via RPC. Must be >=0. 0 specifies no limit",
+            "value": "<rpcMaxLogsRange>",
+            "default": "5000"
+        },
+        {
+            "option": "--rpc-max-trace-filter-range",
+            "description": "Specifies the maximum number of blocks for the trace_filter method. Must be >=0. 0 specifies no limit",
+            "value": "<maxTraceFilterRange>",
+            "default": "1000"
+        },
+        {
+            "option": "--rpc-tx-feecap",
+            "description": "Maximum transaction fees (in Wei) accepted for transaction submitted through RPC",
+            "value": "<txFeeCap>",
+            "default": "0x000000000000000000000000000000000000000000000000de0b6b3a7640000"
+        },
+        {
+            "option": "--rpc-ws-api",
+            "shortcut": "--rpc-ws-apis",
+            "description": "Comma separated list of APIs to enable on JSON-RPC WebSocket service",
+            "value": "<api name>[ {0,1}, {0,1}<api name>...]...",
+            "default": "[ETH, NET, WEB3]"
+        },
+        {
+            "option": "--rpc-ws-api-method-no-auth",
+            "shortcut": "--rpc-ws-api-methods-no-auth",
+            "description": "Comma separated list of RPC methods to exclude from RPC authentication services, RPC WebSocket authentication must be enabled",
+            "value": "<api name>[ {0,1}, {0,1}<api name>...]..."
+        },
+        {
+            "option": "--rpc-ws-authentication-credentials-file",
+            "description": "Storage file for JSON-RPC WebSocket authentication credentials",
+            "value": "<FILE>",
+            "default": "null"
+        },
+        {
+            "option": "--rpc-ws-authentication-enabled",
+            "description": "Require authentication for the JSON-RPC WebSocket service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-ws-authentication-jwt-algorithm",
+            "description": "Encryption algorithm used for Websockets JWT public key. Possible values are RS256, RS384, RS512, ES256, ES384, HS256, ES512",
+            "value": "<rpcWebsocketsAuthenticationAlgorithm>",
+            "default": "RS256"
+        },
+        {
+            "option": "--rpc-ws-authentication-jwt-public-key-file",
+            "description": "JWT public key file for JSON-RPC WebSocket authentication",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-enabled",
+            "description": "Set to start the JSON-RPC WebSocket service",
+            "default": "false"
+        },
+        {
+            "option": "--rpc-ws-host",
+            "description": "Host for JSON-RPC WebSocket service to listen on",
+            "value": "<HOST>",
+            "default": "null"
+        },
+        {
+            "option": "--rpc-ws-max-active-connections",
+            "description": "Maximum number of WebSocket connections allowed for JSON-RPC. Once this limit is reached, incoming connections will be rejected.",
+            "value": "<rpcWsMaxConnections>",
+            "default": "80"
+        },
+        {
+            "option": "--rpc-ws-max-frame-size",
+            "description": "Maximum size in bytes for JSON-RPC WebSocket frames. If this limit is exceeded, the websocket will be disconnected.",
+            "value": "<rpcWsMaxFrameSize>",
+            "default": "1048576"
+        },
+        {
+            "option": "--rpc-ws-port",
+            "description": "Port for JSON-RPC WebSocket service to listen on",
+            "value": "<PORT>",
+            "default": "8546"
+        },
+        {
+            "option": "--rpc-ws-ssl-cert-file",
+            "description": "Path to the PEM cert file for the WebSocket RPC service",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-client-auth-enabled",
+            "description": "Enable client authentication for the WebSocket RPC service"
+        },
+        {
+            "option": "--rpc-ws-ssl-enabled",
+            "description": "Enable SSL/TLS for the WebSocket RPC service"
+        },
+        {
+            "option": "--rpc-ws-ssl-key-file",
+            "description": "Path to the PEM key file for the WebSocket RPC service",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-keystore-file",
+            "description": "Path to the keystore file for the WebSocket RPC service",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-keystore-password",
+            "description": "Password for the WebSocket RPC keystore file",
+            "value": "<PASSWORD>"
+        },
+        {
+            "option": "--rpc-ws-ssl-keystore-password-file",
+            "description": "File containing the password for WebSocket keystore.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-keystore-type",
+            "description": "Type of the WebSocket RPC keystore (JKS, PKCS12, PEM)",
+            "value": "<TYPE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-trustcert-file",
+            "description": "Path to the PEM trustcert file for the WebSocket RPC service",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-truststore-file",
+            "description": "Path to the truststore file for the WebSocket RPC service",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-truststore-password",
+            "description": "Password for the WebSocket RPC truststore file",
+            "value": "<PASSWORD>"
+        },
+        {
+            "option": "--rpc-ws-ssl-truststore-password-file",
+            "description": "File containing the password for WebSocket truststore.",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--rpc-ws-ssl-truststore-type",
+            "description": "Type of the truststore (JKS, PKCS12, PEM)",
+            "value": "<TYPE>"
+        },
+        {
+            "option": "--security-module",
+            "description": "Identity for the Security Module to be used.",
+            "value": "<NAME>"
+        },
+        {
+            "option": "--static-nodes-file",
+            "description": "Specifies the static node file containing the static nodes for this node to connect to",
+            "value": "<FILE>"
+        },
+        {
+            "option": "--strict-tx-replay-protection-enabled",
+            "description": "Require transactions submitted via JSON-RPC to use replay protection in accordance with EIP-155",
+            "value": "[=<Boolean>]",
+            "default": "false"
+        },
+        {
+            "option": "--sync-mode",
+            "description": "Synchronization mode, possible values are FULL, FAST, SNAP, CHECKPOINT",
+            "value": "<MODE>",
+            "default": "SNAP if a --network is supplied and privacy isn't enabled. FULL otherwise."
+        },
+        {
+            "option": "--target-gas-limit",
+            "description": "Sets target gas limit per block. If set, each block's gas limit will approach this setting over time.",
+            "value": "<targetGasLimit>"
+        },
+        {
+            "option": "--tx-pool",
+            "description": "The Transaction Pool implementation to use",
+            "value": "[=<Enum>]",
+            "default": "LAYERED"
+        },
+        {
+            "option": "--tx-pool-blob-price-bump",
+            "description": "Blob price bump percentage to replace an already existing transaction blob tx",
+            "value": "<Percentage>",
+            "default": "100"
+        },
+        {
+            "option": "--tx-pool-disable-locals",
+            "shortcut": "--tx-pool-no-local-priority",
+            "description": "Set to true if senders of transactions sent via RPC should not have priority",
+            "value": "[=<Boolean>]",
+            "default": "false"
+        },
+        {
+            "option": "--tx-pool-enable-save-restore",
+            "description": "Set to true to enable saving the txpool content to file on shutdown and reloading it on startup",
+            "value": "[=<Boolean>]",
+            "default": "false"
+        },
+        {
+            "option": "--tx-pool-layer-max-capacity",
+            "description": "Max amount of memory space, in bytes, that any layer within the transaction pool could occupy",
+            "value": "<LONG>",
+            "default": "12500000"
+        },
+        {
+            "option": "--tx-pool-limit-by-account-percentage",
+            "description": "Maximum portion of the transaction pool which a single account may occupy with future transactions",
+            "value": "<DOUBLE>",
+            "default": "0.001"
+        },
+        {
+            "option": "--tx-pool-max-future-by-sender",
+            "description": "Max number of future pending transactions allowed for a single sender",
+            "value": "<INTEGER>",
+            "default": "200"
+        },
+        {
+            "option": "--tx-pool-max-prioritized",
+            "description": "Max number of pending transactions that are prioritized and thus kept sorted",
+            "value": "<INTEGER>",
+            "default": "2000"
+        },
+        {
+            "option": "--tx-pool-max-prioritized-by-type",
+            "description": "Max number of pending transactions, of a specific type, that are prioritized and thus kept sorted",
+            "value": "MAP<TYPE,INTEGER>[,MAP<TYPE,INTEGER>...]",
+            "default": "{BLOB=6}"
+        },
+        {
+            "option": "--tx-pool-max-size",
+            "description": "Maximum number of pending transactions that will be kept in the transaction pool",
+            "value": "<INTEGER>",
+            "default": "4096"
+        },
+        {
+            "option": "--tx-pool-min-gas-price",
+            "description": "Transactions with gas price (in Wei) lower than this minimum will not be accepted into the txpool",
+            "value": "<Wei>",
+            "default": "0x00000000000000000000000000000000000000000000000000000000000003e8"
+        },
+        {
+            "option": "--tx-pool-min-score",
+            "description": "Remove a pending transaction from the txpool if its score is lower than this value.Accepts values between -128 and 127",
+            "value": "<Byte>",
+            "default": "-128"
+        },
+        {
+            "option": "--tx-pool-price-bump",
+            "description": "Price bump percentage to replace an already existing transaction",
+            "value": "<Percentage>",
+            "default": "10"
+        },
+        {
+            "option": "--tx-pool-priority-senders",
+            "description": "Pending transactions sent exclusively by these addresses, from any source, are prioritized and only evicted after all others.",
+            "value": "Comma separated list of addresses[,Comma separated list of addresses...]...",
+            "default": "[]"
+        },
+        {
+            "option": "--tx-pool-retention-hours",
+            "description": "Maximum retention period of pending transactions in hours",
+            "value": "<INTEGER>",
+            "default": "13"
+        },
+        {
+            "option": "--tx-pool-save-file",
+            "description": "If saving the txpool content is enabled, define a custom path for the save file",
+            "value": "<STRING>",
+            "default": "txpool.dump in the data-dir"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "Print version information and exit."
+        },
+        {
+            "option": "--version-compatibility-protection",
+            "description": "Perform compatibility checks between the version of Besu being started and the version of Besu that last started with this data directory.",
+            "default": "null"
+        }
+    ],
+    "subcommands": [
+        {
+            "name": "besu blocks",
+            "description": "This command provides blocks related actions.",
+            "usage": "besu blocks [-hV] [COMMAND]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": [
+                {
+                    "name": "besu blocks export",
+                    "description": "This command exports a specific block, or list of blocks from storage.",
+                    "usage": "besu blocks export [-hV] [--end-block=<LONG>] [--start-block=<LONG>] --to=<FILE>",
+                    "options": [
+                        {
+                            "option": "--end-block",
+                            "description": "The ending index of the block list to export (exclusive). If not specified a single block will be exported.",
+                            "value": "<LONG>"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--start-block",
+                            "description": "The starting index of the block, or block list to export.",
+                            "value": "<LONG>"
+                        },
+                        {
+                            "option": "--to",
+                            "description": "File to write the block list to.",
+                            "value": "<FILE>"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                },
+                {
+                    "name": "besu blocks import",
+                    "description": "This command imports blocks from a file into the database.",
+                    "usage": "besu blocks import [-hV] [--run] [--skip-pow-validation-enabled] [--end-block=<LONG>] [--format=<format>] [--start-block=<LONG>] [--start-time=<startTime>] [--from[=<FILE>...]]... [<FILE>...]",
+                    "options": [
+                        {
+                            "option": "--end-block=<LONG>",
+                            "description": "The ending index of the block list to import (exclusive). If not specified all blocks after the start block will be imported."
+                        },
+                        {
+                            "option": "--format=<format>",
+                            "description": "The type of data to be imported, possible values are: RLP, JSON",
+                            "default": "RLP"
+                        },
+                        {
+                            "option": "--from[=<FILE>...]",
+                            "description": "File containing blocks to import."
+                        },
+                        {
+                            "option": "--run",
+                            "description": "Start besu after importing."
+                        },
+                        {
+                            "option": "--skip-pow-validation-enabled",
+                            "description": "Skip proof of work validation when importing."
+                        },
+                        {
+                            "option": "--start-block=<LONG>",
+                            "description": "The starting index of the block, or block list to import. If not specified all blocks before the end block will be imported"
+                        },
+                        {
+                            "option": "--start-time=<startTime>",
+                            "description": "The timestamp in seconds of the first block for JSON imports. Subsequent blocks will be 1 second later.",
+                            "default": "current time"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ]
+        },
+        {
+            "name": "besu operator",
+            "description": "Operator related actions such as generating configuration and caches.",
+            "usage": "besu operator [-hV] [COMMAND]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": [
+                {
+                    "name": "besu operator generate-blockchain-config",
+                    "description": "Generate node keypairs and genesis file with RLP encoded extra data.",
+                    "usage": "besu operator generate-blockchain-config [-hV] --config-file=<FILE> [--genesis-file-name=<PATH>] [--private-key-file-name=<PATH>] [--public-key-file-name=<PATH>] --to=<DIRECTORY>",
+                    "options": [
+                        {
+                            "option": "--config-file=<FILE>",
+                            "description": "Configuration file."
+                        },
+                        {
+                            "option": "--genesis-file-name=<PATH>",
+                            "description": "Name of the genesis file.",
+                            "default": "genesis.json"
+                        },
+                        {
+                            "option": "--private-key-file-name=<PATH>",
+                            "description": "Name of the private key file.",
+                            "default": "key.priv"
+                        },
+                        {
+                            "option": "--public-key-file-name=<PATH>",
+                            "description": "Name of the public key file.",
+                            "default": "key.pub"
+                        },
+                        {
+                            "option": "--to=<DIRECTORY>",
+                            "description": "Directory to write output files to."
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                },
+                {
+                    "name": "besu operator generate-log-bloom-cache",
+                    "description": "Generate cached values of block log bloom filters.",
+                    "usage": "besu operator generate-log-bloom-cache [-hV] [--end-block=<LONG>] [--start-block=<LONG>]",
+                    "options": [
+                        {
+                            "option": "--end-block",
+                            "description": "The block to stop generating the cache (default is last block of the chain).",
+                            "value": "<LONG>"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--start-block",
+                            "description": "The block to start generating the cache. Must be an increment of 100000 (default: 0)",
+                            "value": "<LONG>"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ]
+        },
+        {
+            "name": "besu password",
+            "description": "This command provides password related actions.",
+            "usage": "besu password [-hV] [COMMAND]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": [
+                {
+                    "name": "besu password hash",
+                    "description": "This command generates the hash of a given password.",
+                    "usage": "besu password hash [-hV] --password=<password>",
+                    "options": [
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--password",
+                            "description": "The password input",
+                            "value": "<password>"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ]
+        },
+        {
+            "name": "besu public-key",
+            "description": "This command provides node public key related actions.",
+            "usage": "besu public-key [-hV] [COMMAND]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": [
+                {
+                    "name": "besu public-key export",
+                    "description": "This command outputs the node public key. Default output is standard output.",
+                    "usage": "Usage: besu public-key export [-hV] [--ec-curve[=<NAME>]] [--node-private-key-file=<PATH>] [--to=<FILE>]",
+                    "options": [
+                        {
+                            "option": "--ec-curve",
+                            "description": "Elliptic curve to use when creating a new key",
+                            "value": "<NAME>",
+                            "default": "secp256k1"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--node-private-key-file",
+                            "description": "The node's private key file",
+                            "value": "<PATH>",
+                            "default": "a file named \"key\" in the Besu data directory"
+                        },
+                        {
+                            "option": "--to",
+                            "description": "File to write public key to instead of standard output",
+                            "value": "<FILE>"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                },
+                {
+                    "name": "besu public-key export-address",
+                    "description": "This command outputs the node's account address. Default output is standard output.",
+                    "usage": "besu public-key export-address [-hV] [--ec-curve[=<NAME>]] [--node-private-key-file=<PATH>] [--to=<FILE>]",
+                    "options": [
+                        {
+                            "option": "--ec-curve",
+                            "value": "[=<NAME>]",
+                            "description": "Elliptic curve to use when creating a new key",
+                            "default": "secp256k1"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--node-private-key-file",
+                            "value": "=<PATH>",
+                            "description": "The node's private key file",
+                            "default": "a file named \"key\" in the Besu data directory"
+                        },
+                        {
+                            "option": "--to",
+                            "value": "=<FILE>",
+                            "description": "File to write address to instead of standard output"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ]
+        },
+        {
+            "name": "besu rlp",
+            "description": "This command provides RLP data related actions.",
+            "usage": "besu rlp [-hV] [COMMAND]",
+            "subcommands": [
+                {
+                    "name": "besu rlp decode",
+                    "description": "This command decodes a JSON typed RLP hex string into validator list.",
+                    "usage": "besu rlp decode [-hV] [--from=<FILE>] [--to=<FILE>] [--type=<type>]",
+                    "options": [
+                        {
+                            "option": "--from=<FILE>",
+                            "description": "File containing JSON object to decode"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--to=<FILE>",
+                            "description": "File to write decoded RLP string to."
+                        },
+                        {
+                            "option": "--type=<type>",
+                            "description": "Type of the RLP data to Decode, possible values are IBFT_EXTRA_DATA, QBFT_EXTRA_DATA.",
+                            "default": "IBFT_EXTRA_DATA"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                },
+                {
+                    "name": "besu rlp encode",
+                    "description": "This command encodes a JSON typed data into an RLP hex string.",
+                    "usage": "besu rlp encode [-hV] [--from=<FILE>] [--to=<FILE>] [--type=<type>]",
+                    "options": [
+                        {
+                            "option": "--from=<FILE>",
+                            "description": "File containing JSON object to encode"
+                        },
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--to=<FILE>",
+                            "description": "File to write encoded RLP string to."
+                        },
+                        {
+                            "option": "--type=<type>",
+                            "description": "Type of the RLP data to encode, possible values are IBFT_EXTRA_DATA, QBFT_EXTRA_DATA.",
+                            "default": "IBFT_EXTRA_DATA"
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                }
+            ],
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ]
+        },
+        {
+            "name": "besu storage",
+            "description": "This command provides storage related actions.",
+            "usage": "besu storage [-hV] [COMMAND]",
+            "options": [
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": [
+                {
+                    "name": "besu storage revert-metadata",
+                    "description": "Revert database metadata to previous format",
+                    "usage": "besu storage revert-metadata [-hV] [COMMAND]",
+                    "options": [
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": [
+                        {
+                            "name": "besu storage revert-metadata v2-to-v1",
+                            "description": "Revert a database metadata v2 format to v1 format",
+                            "usage": "besu storage revert-metadata v2-to-v1 [-hV]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        }
+                    ]
+                },
+                {
+                    "name": "besu storage revert-variables",
+                    "description": "This command revert the modifications done by the variables storage feature.",
+                    "usage": "besu storage revert-variables [-hV]",
+                    "options": [
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ],
+                    "subcommands": []
+                },
+                {
+                    "name": "besu storage rocksdb",
+                    "description": "Print RocksDB information",
+                    "usage": "besu storage rocksdb [-hV] [COMMAND]",
+                    "subcommands": [
+                        {
+                            "name": "besu storage rocksdb usage",
+                            "description": "Print disk usage",
+                            "usage": "besu storage rocksdb usage [-hV]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        },
+                        {
+                            "name": "besu storage rocksdb x-stats",
+                            "description": "Print rocksdb stats",
+                            "usage": "besu storage rocksdb x-stats [-hV]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        }
+                    ],
+                    "options": [
+                        {
+                            "option": "--help",
+                            "shortcut": "-h",
+                            "description": "Show this help message and exit."
+                        },
+                        {
+                            "option": "--version",
+                            "shortcut": "-V",
+                            "description": "Print version information and exit."
+                        }
+                    ]
+                },
+                {
+                    "name": "besu storage trie-log",
+                    "description": "Manipulate trie logs",
+                    "usage": "Usage: besu storage trie-log [-hV] [COMMAND]",
+                    "options": [
+                        {
+                            "description": "Show this help message and exit.",
+                            "option": "--help",
+                            "shortcut": "-h"
+                        },
+                        {
+                            "description": "Print version information and exit.",
+                            "option": "--version",
+                            "shortcut": "-V"
+                        }
+                    ],
+                    "subcommands": [
+                        {
+                            "name": "besu storage trie-log count",
+                            "description": "This command counts all the trie logs",
+                            "usage": "Usage: besu storage trie-log count [-hV]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        },
+                        {
+                            "name": "besu storage trie-log export",
+                            "description": "This command exports the trie log of a determined block to a binary file",
+                            "usage": "besu storage trie-log export [-hV] [--trie-log-file-path=<trieLogFilePath>] [--trie-log-block-hash=<trieLogBlockHashList>[ {0,1}, {0,1} <trieLogBlockHashList>...]...]...",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--trie-log-block-hash=<trieLogBlockHashList>[ {0,1}, {0,1} <trieLogBlockHashList>...]...",
+                                    "description": "Comma separated list of hashes from the blocks you want to export the trie logs of"
+                                },
+                                {
+                                    "option": "--trie-log-file-path=<trieLogFilePath>",
+                                    "description": "The file you want to export the trie logs to"
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        },
+                        {
+                            "name": "besu storage trie-log import",
+                            "description": "This command imports a trie log exported by another besu node",
+                            "usage": "besu storage trie-log import [-hV] [--trie-log-file-path=<trieLogFilePath>]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--trie-log-file-path",
+                                    "description": "The file you want to import the trie logs from",
+                                    "value": "<trieLogFilePath>"
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        },
+                        {
+                            "name": "besu storage trie-log prune",
+                            "description": "This command prunes all trie log layers below the retention limit, including orphaned trie logs.",
+                            "usage": "besu storage trie-log prune [-hV]",
+                            "options": [
+                                {
+                                    "option": "--help",
+                                    "shortcut": "-h",
+                                    "description": "Show this help message and exit."
+                                },
+                                {
+                                    "option": "--version",
+                                    "shortcut": "-V",
+                                    "description": "Print version information and exit."
+                                }
+                            ],
+                            "subcommands": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "besu txparse",
+            "description": "Parse input transactions and return the sender, or an error.",
+            "usage": "besu txparse [-hV] [--corpus-file=<corpusFile>]",
+            "options": [
+                {
+                    "option": "--corpus-file",
+                    "description": "file to read transaction data lines from, otherwise defaults to stdin",
+                    "value": "<corpusFile>"
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": []
+        },
+        {
+            "name": "besu validate-config",
+            "description": "This command provides basic Besu config validation (syntax only).",
+            "usage": "besu validate-config [-hV] [--config-file=<PATH>]",
+            "options": [
+                {
+                    "option": "--config-file",
+                    "description": "Path to Besu config file",
+                    "value": "<PATH>"
+                },
+                {
+                    "option": "--help",
+                    "shortcut": "-h",
+                    "description": "Show this help message and exit."
+                },
+                {
+                    "option": "--version",
+                    "shortcut": "-V",
+                    "description": "Print version information and exit."
+                }
+            ],
+            "subcommands": []
+        }
+    ],
+    "version": "v24.12.2"
+}

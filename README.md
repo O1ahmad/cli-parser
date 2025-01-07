@@ -2,6 +2,8 @@
 
 A tool to recursively parse CLI commands, subcommands and associated program options from unstructured help text and extract them into a structured JSON object.
 
+<p><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXc3Nmk0YWN1MDlqZzA2aG05Ym5idGlqdWI3MmxpcmN5MHVzMDAxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w9Sb2fZrLPxHUFxLV2/giphy.webp" alt="ansible logo" title="ansible" align="center" height="200" /></p>
+
 ## Example Usage
 `OPENAI_API_KEY=xxxxxxxxxxxxxx python src/parser.py netstat`
 
@@ -11,130 +13,27 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
   "title": "CLI Command Output Schema",
   "type": "object",
   "properties": {
-    "name": {
-      "type": "string",
-      "description": "The name of the CLI command or binary."
-    },
-    "version": {
-      "type": "string",
-      "description": "The version of the CLI command or binary."
-    },
+    "name": { "type": "string", "description": "The name of the CLI command or binary." },
+    "version": { "type": "string", "description": "The version of the CLI command or binary." },
     "usage": {
       "type": "array",
-      "description": "Usage strings for the CLI command or binary."
-      "items": {
-        "type": "string"
-      }
+      "description": "Usage strings for the CLI command or binary.",
+      "items": { "type": "string" }
     },
     "subcommands": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the subcommand."
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the subcommand."
-          },
-          "subcommands": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "description": "Name of nested subcommand."
-                },
-                "description": {
-                  "type": "string",
-                  "description": "Description of nested subcommand."
-                },
-                "subcommands": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {},  // Can recursively define structure here if needed
-                    "additionalProperties": false
-                  }
-                },
-                "options": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "option": {
-                        "type": "string",
-                        "description": "Option name prefixed with '--'."
-                      },
-                      "shortcut": {
-                        "type": "string",
-                        "description": "Option shortcut prefixed with '-'."
-                      },
-                      "description": {
-                        "type": "string",
-                        "description": "Description of the option."
-                      },
-                      "value": {
-                        "type": ["string", "null"],
-                        "description": "Optional value of the option (e.g., '<EPOCH>')."
-                      },
-                      "default": {
-                        "type": ["string", "null"],
-                        "description": "Default value of the option."
-                      },
-                      "section": {
-                        "type": ["string", "null"],
-                        "description": "Section to which the option belongs."
-                      }
-                    },
-                    "required": ["option", "description"],
-                    "additionalProperties": false
-                  }
-                }
-              },
-              "additionalProperties": false,
-              "required": ["name", "description", "subcommands", "options"]
-            }
-          },
+          "name": { "type": "string", "description": "Name of the subcommand." },
+          "description": { "type": "string", "description": "Description of the subcommand." },
+          "subcommands": { "$ref": "#/properties/subcommands" },  // Recursively defined structure
           "options": {
             "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "option": {
-                  "type": "string",
-                  "description": "Option name prefixed with '--'."
-                },
-                "shortcut": {
-                  "type": "string",
-                  "description": "Option shortcut prefixed with '-'."
-                },
-                "description": {
-                  "type": "string",
-                  "description": "Description of the option."
-                },
-                "value": {
-                  "type": ["string", "null"],
-                  "description": "Optional value of the option (e.g., '<EPOCH>')."
-                },
-                "default": {
-                  "type": ["string", "null"],
-                  "description": "Default value of the option."
-                },
-                "section": {
-                  "type": ["string", "null"],
-                  "description": "Section to which the option belongs."
-                }
-              },
-              "required": ["option", "description"],
-              "additionalProperties": false
-            }
+            "items": { "$ref": "#/properties/options/items" }  // Reuse option structure
           }
         },
-        "required": ["name", "description", "subcommands", "options"],
+        "required": ["name", "description"],
         "additionalProperties": false
       }
     },
@@ -143,30 +42,12 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
       "items": {
         "type": "object",
         "properties": {
-          "option": {
-            "type": "string",
-            "description": "Option name prefixed with '--'."
-          },
-          "shortcut": {
-            "type": "string",
-            "description": "Option shortcut prefixed with '-'."
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the option."
-          },
-          "value": {
-            "type": ["string", "null"],
-            "description": "Optional value of the option (e.g., '<EPOCH>')."
-          },
-          "default": {
-            "type": ["string", "null"],
-            "description": "Default value of the option."
-          },
-          "section": {
-            "type": ["string", "null"],
-            "description": "Section to which the option belongs."
-          }
+          "option": { "type": "string", "description": "Option name prefixed with '--'." },
+          "shortcut": { "type": "string", "description": "Option shortcut prefixed with '-'." },
+          "description": { "type": "string", "description": "Description of the option." },
+          "value": { "type": ["string", "null"], "description": "Optional value of the option (e.g., '<EPOCH>')." },
+          "default": { "type": ["string", "null"], "description": "Default value of the option." },
+          "section": { "type": ["string", "null"], "description": "Section to which the option belongs." }
         },
         "required": ["option", "description"],
         "additionalProperties": false
@@ -307,3 +188,5 @@ A tool to recursively parse CLI commands, subcommands and associated program opt
   "version": "2.10-alpha"
 }
 ```
+
+See [Here](./examples/) for more program parsing examples.

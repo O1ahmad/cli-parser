@@ -1,7 +1,3 @@
-Analyzing Binary: dmesg, Parent: None
-AI Token Usage: {'prompt_tokens': 799, 'completion_tokens': 1035, 'total_tokens': 1834}
-Analyzing Binary Version: dmesg
-AI Token Usage: {'prompt_tokens': 62, 'completion_tokens': 13, 'total_tokens': 75}
 {
     "name": "dmesg",
     "description": "Display or control the kernel ring buffer.",

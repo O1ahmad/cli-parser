@@ -1,7 +1,3 @@
-Analyzing Binary: df, Parent: None
-AI Token Usage: {'prompt_tokens': 764, 'completion_tokens': 655, 'total_tokens': 1419}
-Analyzing Binary Version: df
-AI Token Usage: {'prompt_tokens': 138, 'completion_tokens': 18, 'total_tokens': 156}
 {
     "name": "df",
     "description": "Show information about the file system on which each FILE resides, or all file systems by default.",

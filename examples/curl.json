@@ -1,7 +1,3 @@
-Analyzing Binary: curl, Parent: None
-AI Token Usage: {'prompt_tokens': 386, 'completion_tokens': 477, 'total_tokens': 863}
-Analyzing Binary Version: curl
-AI Token Usage: {'prompt_tokens': 296, 'completion_tokens': 31, 'total_tokens': 327}
 {
     "name": "curl",
     "description": "This is not the full help, this menu is stripped into categories. Use \"--help category\" to get an overview of all categories. For all options use the manual or \"--help all\".",

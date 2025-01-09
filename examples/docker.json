@@ -1,6 +1,5 @@
 [
     {
-      _id: ObjectId('6679ccb112712fd9f9f89428'),
       name: 'docker',
       description: 'A self-sufficient runtime for containers',
       usage: 'docker [OPTIONS] COMMAND',

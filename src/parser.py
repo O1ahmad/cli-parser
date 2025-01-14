@@ -77,8 +77,8 @@ def get_prompt(prompt_type):
             f"Subcommands can only begin with a lowercase letter; options start with '-' or '--'. "
             f"Subcommands: {{'name': <name>, 'description': <description>, 'usage': <usage>}}."
             f"Options: {{'option': <'--option'>, 'shortcut': <'-shortcut'>, 'description': <description>, 'value': <value>, 'default': <default>, 'tags': [<tags>]}}. "
-            f"Exclude missing properties. Include 'description' and 'name' for the root command. "
-            f"Sort subcommands and options alphabetically. Include usage details for root and subcommands."
+            f"Always include 'description', 'name' and usage details for the root command and subcommands. All commands should have a description. Exclude missing properties."
+            f"Sort subcommands and options alphabetically."
         ),
         "version": (
             f"Extract and return the version number (including commit SHAs) within a JSON object from the following version output."
@@ -222,6 +222,8 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
             db.cli_archive.insert_one(result)
             print(f"Results for {binary_name} inserted into MongoDB")
 
+    return result
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI Analyzer")
     parser.add_argument("binary_name", type=str, help="The name of the binary to analyze")
@@ -230,4 +232,10 @@ if __name__ == "__main__":
     parser.add_argument("--mongodb-url", type=str, help="MongoDB connection string")
 
     args = parser.parse_args()
+
+    if args.binary_name is None:
+        print("Error: Missing required argument 'binary_name'. Use --help for usage information.")
+        parser.print_help()
+        exit(1)
+    
     main(args.binary_name, args.url, args.mongodb_url, args.override)

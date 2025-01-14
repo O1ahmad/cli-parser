@@ -1,8 +1,5 @@
 Document for ls found in MongoDB:
 {
-    "_id": {
-        "$oid": "6670a8ed92463fedbd6b09b3"
-    },
     "name": "ls",
     "description": "List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.",
     "usage": "ls [OPTION]... [FILE]...",

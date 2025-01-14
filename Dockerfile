@@ -10,6 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install .
 
 # Run cli_parser specified in setup when the container launches
-ENTRYPOINT ["cli_parser"]
+ENTRYPOINT ["python3", "-m", "src.parser"]
 
 CMD ["--help"]

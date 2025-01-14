@@ -1,6 +1,6 @@
 # Variables
 PACKAGE_NAME=cli_parser
-DOCKER_IMAGE_NAME=cli_parser_image
+DOCKER_IMAGE_NAME=cli_parser
 PYTHON=python3
 PIP=pip3
 

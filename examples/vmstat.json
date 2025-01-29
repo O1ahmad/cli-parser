@@ -1,7 +1,3 @@
-Analyzing Binary: vmstat, Parent: None
-AI Token Usage: {'prompt_tokens': 347, 'completion_tokens': 463, 'total_tokens': 810}
-Analyzing Binary Version: vmstat
-AI Token Usage: {'prompt_tokens': 62, 'completion_tokens': 13, 'total_tokens': 75}
 {
     "name": "vmstat",
     "description": "For more details see vmstat(8).",

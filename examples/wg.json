@@ -1,5 +1,5 @@
 {
-	"description": "set and retrieve configuration of WireGuard interfaces",
+	"description": "Set and retrieve configuration of WireGuard interfaces",
 	"name": "wg",
 	"version": "v1.0.20210914",
 	"usage": [

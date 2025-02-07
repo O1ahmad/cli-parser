@@ -1,12 +1,12 @@
 {
-    "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64",
+    "name": "grandine",
     "description": "Fast PoS and Sharding client supporting Ethereum 2.0 networks",
-    "usage": "grandine-0.4.1-amd64 [OPTIONS] [COMMAND]",
+    "usage": "grandine [OPTIONS] [COMMAND]",
     "subcommands": [
         {
-            "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 export",
+            "name": "grandine export",
             "description": "Export blocks and state to ssz files within slot range for debugging",
-            "usage": "grandine-0.4.1-amd64 export [OPTIONS] --from <SLOT> --to <SLOT>",
+            "usage": "grandine export [OPTIONS] --from <SLOT> --to <SLOT>",
             "options": [
                 {
                     "option": "--from",
@@ -36,34 +36,15 @@
             "subcommands": []
         },
         {
-            "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 interchange",
+            "name": "grandine interchange",
             "description": "Import/export slashing protection interchange file (example: grandine interchange import file.json)",
-            "usage": "grandine-0.4.1-amd64 interchange <COMMAND>",
+            "usage": "grandine interchange <COMMAND>",
             "subcommands": [
                 {
-                    "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 interchange export",
+                    "name": "grandine interchange export",
                     "description": "Export slashing protection interchange file",
-                    "usage": "grandine-0.4.1-amd64 interchange export <FILE_PATH>",
+                    "usage": "grandine interchange export <FILE_PATH>",
                     "subcommands": [
-                        {
-                            "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 interchange export interchange",
-                            "description": "Export slashing protection interchange file",
-                            "usage": "grandine-0.4.1-amd64 interchange export <FILE_PATH>",
-                            "subcommands": [
-                                {
-                                    "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 interchange export interchange export",
-                                    "subcommands": [],
-                                    "options": []
-                                }
-                            ],
-                            "options": [
-                                {
-                                    "option": "--help",
-                                    "shortcut": "-h",
-                                    "description": "Print help"
-                                }
-                            ]
-                        }
                     ],
                     "options": [
                         {
@@ -74,9 +55,9 @@
                     ]
                 },
                 {
-                    "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 interchange import",
+                    "name": "grandine interchange import",
                     "description": "Import slashing protection interchange file",
-                    "usage": "grandine-0.4.1-amd64 interchange import <FILE_PATH>",
+                    "usage": "grandine interchange import <FILE_PATH>",
                     "subcommands": [],
                     "options": [
                         {
@@ -96,9 +77,9 @@
             ]
         },
         {
-            "name": "/home/ahmad/Downloads/grandine-0.4.1-amd64 replay",
+            "name": "grandine replay",
             "description": "Replay blocks within slot range",
-            "usage": "grandine-0.4.1-amd64 replay [OPTIONS] --from <SLOT> --to <SLOT>",
+            "usage": "grandine replay [OPTIONS] --from <SLOT> --to <SLOT>",
             "subcommands": [],
             "options": [
                 {

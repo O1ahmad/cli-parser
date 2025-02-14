@@ -1,8 +1,4 @@
-Document for netstat found in MongoDB:
 {
-    "_id": {
-        "$oid": "6670ab080b06f391d42f77a7"
-    },
     "name": "netstat",
     "description": "netstat provides network statistics.",
     "usage": "netstat [-vWeenNcCF] [<Af>] -r\nnetstat {-V|--version|-h|--help}\nnetstat [-vWnNcaeol] [<Socket> ...]\nnetstat { [-vWeenNac] -i | [-cnNe] -M | -s [-6tuw] }",

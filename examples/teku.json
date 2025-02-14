@@ -1,0 +1,4850 @@
+{
+	"description": "Run the Teku beacon chain client and validator",
+	"subcommands": [
+		{
+			"description": "Holds advanced tools for node admins",
+			"options": [
+				{
+					"description": "Path/filename of the yaml config file",
+					"option": "--config-file",
+					"shortcut": "-c",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"description": "Show this help message and exit.",
+					"option": "--help",
+					"shortcut": "-h"
+				},
+				{
+					"description": "Print version information and exit.",
+					"option": "--version",
+					"shortcut": "-V"
+				}
+			],
+			"subcommands": [
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku admin weak-subjectivity",
+					"description": "Commands related to weak subjectivity configuration",
+					"usage": "teku admin weak-subjectivity [OPTIONS] [COMMAND]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": [
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku admin weak-subjectivity clear-state",
+							"description": "Clears stored weak subjectivity configuration",
+							"usage": "teku admin weak-subjectivity clear-state [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku admin weak-subjectivity display-state",
+							"description": "Display the stored weak subjectivity configuration",
+							"usage": "teku admin weak-subjectivity display-state [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "Reconstruct historic states",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						}
+					]
+				}
+			],
+			"usage": "teku admin [OPTIONS] [COMMAND]",
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku admin"
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools",
+			"description": "Utilities for debugging issues",
+			"usage": "teku debug-tools [OPTIONS] [COMMAND]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": [
+				{
+					"description": "Debugging tools for inspecting the contents of the database",
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db",
+					"subcommands": [
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db delete-hot-blocks",
+							"description": "Deletes all non-justified blocks from the database which are from an invalid hard fork",
+							"usage": "teku debug-tools db delete-hot-blocks [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--delete-all",
+									"shortcut": "-a",
+									"description": "Delete all non-justified blocks, not just those from an invalid hard fork",
+									"default": "false"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db dump-blob-sidecars",
+							"description": "Writes all blob sidecars in the database as a zip of SSZ files",
+							"usage": "teku debug-tools db dump-blob-sidecars [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--from-slot",
+									"description": "Dump blob sidecars starting from a given slot (inclusive)",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--output",
+									"shortcut": "-o",
+									"description": "File to write blob sidecars to",
+									"value": "<arg4>"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "Reconstruct historic states.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--to-slot",
+									"description": "Dump blob sidecars up to a given slot (inclusive)",
+									"value": "<arg3>"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"description": "Writes all non-finalized blocks in the database as a zip of SSZ files",
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db dump-hot-blocks",
+							"options": [
+								{
+									"default": "none",
+									"description": "Path/filename of the yaml config file",
+									"option": "--config-file",
+									"shortcut": "-c",
+									"value": "<FILENAME>"
+								},
+								{
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"option": "--checkpoint-sync-url",
+									"value": "<STRING>"
+								},
+								{
+									"default": "<data-base-path>/beacon",
+									"description": "Path to beacon node data",
+									"option": "--data-beacon-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "/home/ahmad/.local/share/teku",
+									"description": "Path to the base directory for storage",
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "2048",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"option": "--data-storage-archive-frequency",
+									"value": "<FREQUENCY>"
+								},
+								{
+									"default": "NOT_SET",
+									"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"option": "--data-storage-mode",
+									"value": "<STORAGE_MODE>"
+								},
+								{
+									"default": "false",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"default": "<data-base-path>/validator",
+									"description": "Path to validator client data",
+									"option": "--data-validator-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"option": "--eth1-deposit-contract-address",
+									"value": "<ADDRESS>"
+								},
+								{
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--genesis-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Show this help message and exit.",
+									"option": "--help",
+									"shortcut": "-h"
+								},
+								{
+									"default": "false",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--initial-state",
+									"value": "<STRING>"
+								},
+								{
+									"default": "mainnet",
+									"description": "Represents which network to use.",
+									"option": "--network",
+									"shortcut": "-n",
+									"value": "<NETWORK>"
+								},
+								{
+									"description": "File to write blocks to",
+									"option": "--output",
+									"shortcut": "-o",
+									"value": "<arg2>"
+								},
+								{
+									"default": "false",
+									"description": "",
+									"option": "--reconstruct-historic-states",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"description": "Print version information and exit.",
+									"option": "--version",
+									"shortcut": "-V"
+								}
+							],
+							"subcommands": [],
+							"usage": "teku debug-tools db dump-hot-blocks [OPTIONS]"
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-column-counts",
+							"description": "Count entries in columns in storage tables",
+							"usage": "teku debug-tools db get-column-counts [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--filter",
+									"description": "Only count the columns that contain the specified filter.",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"description": "List the ETH1 deposit information stored in the database.",
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-deposits",
+							"options": [
+								{
+									"description": "Path/filename of the yaml config file.",
+									"option": "--config-file",
+									"shortcut": "-c",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"option": "--checkpoint-sync-url",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Path to beacon node data.",
+									"option": "--data-beacon-path",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"description": "Path to the base directory for storage.",
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE.",
+									"option": "--data-storage-archive-frequency",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"description": "Sets the strategy for handling historical chain data.",
+									"option": "--data-storage-mode",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"ARCHIVE",
+										"PRUNE",
+										"MINIMAL",
+										"NOT_SET"
+									]
+								},
+								{
+									"description": "Store non-canonical blocks and associated blobs if they exist.",
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"description": "Path to validator client data.",
+									"option": "--data-validator-path",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"option": "--eth1-deposit-contract-address",
+									"value": "<ADDRESS>"
+								},
+								{
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--genesis-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Show this help message and exit.",
+									"option": "--help",
+									"shortcut": "-h"
+								},
+								{
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--initial-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Represents which network to use.",
+									"option": "--network",
+									"shortcut": "-n",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"description": "Default: false",
+									"option": "--reconstruct-historic-states",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"description": "Print version information and exit.",
+									"option": "--version",
+									"shortcut": "-V"
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-earliest-available-block-slot",
+							"description": "Get the earliest available block slot in the database",
+							"usage": "teku debug-tools db get-earliest-available-block-slot [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--timed",
+									"shortcut": "-t",
+									"description": "Prints the time taken to retrieve the earliest available block slot",
+									"default": "true"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-finalized-state",
+							"description": "Get the finalized state, if available, as SSZ",
+							"usage": "teku debug-tools db get-finalized-state [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--output",
+									"shortcut": "-o",
+									"description": "File to write state to",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "Default: false",
+									"value": "[<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--slot",
+									"shortcut": "-s",
+									"description": "The slot to retrieve the state for. If unavailable the closest available state will be returned",
+									"value": "<arg3>",
+									"default": "0"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"description": "Display the slots of finalized states that are stored.",
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-finalized-state-indices",
+							"options": [
+								{
+									"default": "none",
+									"description": "Path/filename of the yaml config file",
+									"option": "--config-file",
+									"shortcut": "-c",
+									"value": "<FILENAME>"
+								},
+								{
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"option": "--checkpoint-sync-url",
+									"value": "<STRING>"
+								},
+								{
+									"default": "<data-base-path>/beacon",
+									"description": "Path to beacon node data",
+									"option": "--data-beacon-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "/home/ahmad/.local/share/teku",
+									"description": "Path to the base directory for storage",
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "2048",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"option": "--data-storage-archive-frequency",
+									"value": "<FREQUENCY>"
+								},
+								{
+									"default": "NOT_SET",
+									"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"option": "--data-storage-mode",
+									"value": "<STORAGE_MODE>"
+								},
+								{
+									"default": "false",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"default": "<data-base-path>/validator",
+									"description": "Path to validator client data",
+									"option": "--data-validator-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "9223372036854775807",
+									"description": "The end index of the range to display",
+									"option": "--end-slot",
+									"value": "<arg3>"
+								},
+								{
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"option": "--eth1-deposit-contract-address",
+									"value": "<ADDRESS>"
+								},
+								{
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--genesis-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Show this help message and exit.",
+									"option": "--help",
+									"shortcut": "-h"
+								},
+								{
+									"default": "false",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--initial-state",
+									"value": "<STRING>"
+								},
+								{
+									"default": "mainnet",
+									"description": "Represents which network to use.",
+									"option": "--network",
+									"shortcut": "-n",
+									"value": "<NETWORK>"
+								},
+								{
+									"default": "false",
+									"description": "",
+									"option": "--reconstruct-historic-states",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"default": "0",
+									"description": "The start index of the range to display",
+									"option": "--start-slot",
+									"value": "<arg2>"
+								},
+								{
+									"description": "Print version information and exit.",
+									"option": "--version",
+									"shortcut": "-V"
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-latest-finalized-state",
+							"description": "Get the latest finalized state, if available, as SSZ",
+							"usage": "teku debug-tools db get-latest-finalized-state [OPTIONS]",
+							"options": [
+								{
+									"option": "--block-output",
+									"description": "File to write the block matching the latest finalized state to",
+									"value": "<arg3>"
+								},
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "-c",
+									"shortcut": "--config-file",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "-h",
+									"shortcut": "--help",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "-n",
+									"shortcut": "--network",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "-o",
+									"shortcut": "--output",
+									"description": "File to write state to",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "Reconstruct historic states",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "-V",
+									"shortcut": "--version",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db get-variables",
+							"description": "Check variable values",
+							"usage": "teku debug-tools db get-variables [OPTIONS]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET",
+									"tags": [
+										"ARCHIVE",
+										"PRUNE",
+										"MINIMAL",
+										"NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--filter",
+									"description": "Only get variables that match a given filter.",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "Reconstruct historic states.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"description": "Validate the blob sidecars",
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db validate-blob-sidecars",
+							"options": [
+								{
+									"default": "none",
+									"description": "Path/filename of the yaml config file",
+									"option": "--config-file",
+									"shortcut": "-c",
+									"value": "<FILENAME>"
+								},
+								{
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"option": "--checkpoint-sync-url",
+									"value": "<STRING>"
+								},
+								{
+									"default": "<data-base-path>/beacon",
+									"description": "Path to beacon node data",
+									"option": "--data-beacon-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "/home/ahmad/.local/share/teku",
+									"description": "Path to the base directory for storage",
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"default": "2048",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"option": "--data-storage-archive-frequency",
+									"value": "<FREQUENCY>"
+								},
+								{
+									"default": "NOT_SET",
+									"description": "Sets the strategy for handling historical chain data.",
+									"option": "--data-storage-mode",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									],
+									"value": "<STORAGE_MODE>"
+								},
+								{
+									"default": "false",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"default": "<data-base-path>/validator",
+									"description": "Path to validator client data",
+									"option": "--data-validator-path",
+									"value": "<FILENAME>"
+								},
+								{
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"option": "--eth1-deposit-contract-address",
+									"value": "<ADDRESS>"
+								},
+								{
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--genesis-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Show this help message and exit.",
+									"option": "--help",
+									"shortcut": "-h"
+								},
+								{
+									"default": "false",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"option": "--initial-state",
+									"value": "<STRING>"
+								},
+								{
+									"description": "Override the Data Availability window lower epoch",
+									"option": "--lower-data-availability-epoch",
+									"shortcut": "-l",
+									"value": "<arg3>"
+								},
+								{
+									"default": "mainnet",
+									"description": "Represents which network to use.",
+									"option": "--network",
+									"shortcut": "-n",
+									"value": "<NETWORK>"
+								},
+								{
+									"default": "false",
+									"option": "--reconstruct-historic-states",
+									"value": "[=<BOOLEAN>]"
+								},
+								{
+									"description": "Provide the current slot from which calculate Data Availability window",
+									"option": "--current-slot",
+									"shortcut": "-s",
+									"value": "<arg2>"
+								},
+								{
+									"description": "Print version information and exit.",
+									"option": "--version",
+									"shortcut": "-V"
+								}
+							],
+							"usage": "teku debug-tools db validate-blob-sidecars [OPTIONS]",
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools db validate-block-history",
+							"description": "Teku is licensed under the Apache License 2.0",
+							"usage": "teku debug-tools db validate-block-history [OPTIONS]",
+							"subcommands": [],
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "-c",
+									"shortcut": "--config-file",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>",
+									"default": "/home/ahmad/.local/share/teku"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>",
+									"default": "2048"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+									"value": "<STORAGE_MODE>",
+									"default": "NOT_SET"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "-h",
+									"shortcut": "--help",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "-n",
+									"shortcut": "--network",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>",
+									"default": "mainnet"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "-V",
+									"shortcut": "--version",
+									"description": "Print version information and exit."
+								}
+							]
+						}
+					],
+					"options": [
+						{
+							"default": "none",
+							"description": "Path/filename of the yaml config file",
+							"option": "--config-file",
+							"shortcut": "-c",
+							"value": "<FILENAME>"
+						},
+						{
+							"description": "Show this help message and exit.",
+							"option": "--help",
+							"shortcut": "-h"
+						},
+						{
+							"description": "Print version information and exit.",
+							"option": "--version",
+							"shortcut": "-V"
+						}
+					],
+					"usage": "teku debug-tools db [OPTIONS] [COMMAND]"
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete",
+					"description": "Generate a bash/zsh autocomplete file",
+					"usage": "teku debug-tools generate-autocomplete [OPTIONS] [COMMAND]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--output",
+							"shortcut": "-o",
+							"description": "File to output to",
+							"value": "<arg0>",
+							"default": "System.out"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": [
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db",
+							"description": "Debugging tools for inspecting the contents of the database",
+							"usage": "teku debug-tools generate-autocomplete db [OPTIONS] [COMMAND]",
+							"options": [
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": [
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db delete-hot-blocks",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db delete-hot-blocks [OPTIONS]",
+									"subcommands": [],
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "-a",
+											"shortcut": "--delete-all",
+											"description": "Delete all non-justified blocks, not just those from an invalid hard fork",
+											"default": "false"
+										},
+										{
+											"option": "-c",
+											"shortcut": "--config-file",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "-h",
+											"shortcut": "--help",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "-n",
+											"shortcut": "--network",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "-V",
+											"shortcut": "--version",
+											"description": "Print version information and exit."
+										}
+									]
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db dump-blob-sidecars",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"subcommands": [],
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path, --data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--from-slot",
+											"description": "Dump blob sidecars starting from a given slot (inclusive)",
+											"value": "<arg2>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--output",
+											"shortcut": "-o",
+											"description": "File to write blob sidecars to",
+											"value": "<arg4>"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--to-slot",
+											"description": "Dump blob sidecars up to a given slot (inclusive)",
+											"value": "<arg3>"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									]
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db dump-hot-blocks",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db dump-hot-blocks [OPTIONS]",
+									"subcommands": [],
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--output",
+											"shortcut": "-o",
+											"description": "File to write blocks to",
+											"value": "<arg2>"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "Reconstruct historic states",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									]
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-column-counts",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db get-column-counts [OPTIONS]",
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--filter",
+											"description": "Only count the columns that contain the specified filter.",
+											"value": "<arg2>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									],
+									"subcommands": []
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-deposits",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db get-deposits [OPTIONS]",
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "Default: false",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									],
+									"subcommands": []
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-earliest-available-block-slot",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db get-earliest-available-block-slot [OPTIONS]",
+									"subcommands": [
+										{
+											"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-earliest-available-block-slot db get-earliest-available-block-slot",
+											"description": "Teku is licensed under the Apache License 2.0",
+											"usage": "teku debug-tools generate-autocomplete db get-earliest-available-block-slot [OPTIONS]",
+											"options": [
+												{
+													"option": "--checkpoint-sync-url",
+													"description": "The Checkpointz server that will be used to bootstrap this node.",
+													"value": "<STRING>"
+												},
+												{
+													"option": "--config-file",
+													"shortcut": "-c",
+													"description": "Path/filename of the yaml config file",
+													"value": "<FILENAME>",
+													"default": "none"
+												},
+												{
+													"option": "--data-beacon-path",
+													"description": "Path to beacon node data",
+													"value": "<FILENAME>",
+													"default": "<data-base-path>/beacon"
+												},
+												{
+													"option": "--data-path",
+													"shortcut": "--data-base-path",
+													"description": "Path to the base directory for storage",
+													"value": "<FILENAME>",
+													"default": "/home/ahmad/.local/share/teku"
+												},
+												{
+													"option": "--data-storage-archive-frequency",
+													"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+													"value": "<FREQUENCY>",
+													"default": "2048"
+												},
+												{
+													"option": "--data-storage-mode",
+													"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+													"value": "<STORAGE_MODE>",
+													"default": "NOT_SET"
+												},
+												{
+													"option": "--data-storage-non-canonical-blocks-enabled",
+													"description": "Store non-canonical blocks and associated blobs if they exist",
+													"value": "[=<BOOLEAN>]",
+													"default": "false"
+												},
+												{
+													"option": "--data-validator-path",
+													"description": "Path to validator client data",
+													"value": "<FILENAME>",
+													"default": "<data-base-path>/validator"
+												},
+												{
+													"option": "--eth1-deposit-contract-address",
+													"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+													"value": "<ADDRESS>"
+												},
+												{
+													"option": "--genesis-state",
+													"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+													"value": "<STRING>"
+												},
+												{
+													"option": "--help",
+													"shortcut": "-h",
+													"description": "Show this help message and exit."
+												},
+												{
+													"option": "--ignore-weak-subjectivity-period-enabled",
+													"description": "Allows syncing outside of the weak subjectivity period.",
+													"value": "[=<BOOLEAN>]",
+													"default": "false"
+												},
+												{
+													"option": "--initial-state",
+													"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+													"value": "<STRING>"
+												},
+												{
+													"option": "--network",
+													"shortcut": "-n",
+													"description": "Represents which network to use.",
+													"value": "<NETWORK>",
+													"default": "mainnet"
+												},
+												{
+													"option": "--reconstruct-historic-states",
+													"description": "Allows reconstruction of historic states.",
+													"value": "[=<BOOLEAN>]",
+													"default": "false"
+												},
+												{
+													"option": "--timed",
+													"shortcut": "-t",
+													"description": "Prints the time taken to retrieve the earliest available block slot",
+													"value": "<BOOLEAN>",
+													"default": "true"
+												},
+												{
+													"option": "--version",
+													"shortcut": "-V",
+													"description": "Print version information and exit."
+												}
+											],
+											"subcommands": []
+										}
+									],
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-base-path",
+											"shortcut": "--data-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data.",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET",
+											"tags": [
+												"ARCHIVE",
+												"PRUNE",
+												"MINIMAL",
+												"NOT_SET"
+											]
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--timed",
+											"shortcut": "-t",
+											"description": "Prints the time taken to retrieve the earliest available block slot",
+											"default": "true"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									]
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-finalized-state",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db get-finalized-state [OPTIONS]",
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data.",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET",
+											"tags": [
+												"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+											]
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--output",
+											"shortcut": "-o",
+											"description": "File to write state to",
+											"value": "<arg2>"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--slot",
+											"shortcut": "-s",
+											"description": "The slot to retrieve the state for. If unavailable the closest available state will be returned",
+											"value": "<arg3>",
+											"default": "0"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									],
+									"subcommands": []
+								},
+								{
+									"description": "Display the slots of finalized states that are stored.",
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-finalized-state-indices",
+									"subcommands": [],
+									"options": [
+										{
+											"description": "Path/filename of the yaml config file",
+											"option": "--config-file",
+											"shortcut": "-c",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"option": "--checkpoint-sync-url",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Path to beacon node data",
+											"option": "--data-beacon-path",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"description": "Path to the base directory for storage",
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"option": "--data-storage-archive-frequency",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"option": "--data-storage-mode",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "Path to validator client data",
+											"option": "--data-validator-path",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"description": "The end index of the range to display",
+											"option": "--end-slot",
+											"value": "<arg3>",
+											"default": "9223372036854775807"
+										},
+										{
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"option": "--eth1-deposit-contract-address",
+											"value": "<ADDRESS>"
+										},
+										{
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--genesis-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Show this help message and exit.",
+											"option": "--help",
+											"shortcut": "-h"
+										},
+										{
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--initial-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Represents which network to use.",
+											"option": "--network",
+											"shortcut": "-n",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"description": "",
+											"option": "--reconstruct-historic-states",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "The start index of the range to display",
+											"option": "--start-slot",
+											"value": "<arg2>",
+											"default": "0"
+										},
+										{
+											"description": "Print version information and exit.",
+											"option": "--version",
+											"shortcut": "-V"
+										}
+									],
+									"usage": "teku debug-tools generate-autocomplete db get-finalized-state-indices [OPTIONS]"
+								},
+								{
+									"description": "Get the latest finalized state, if available, as SSZ",
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-latest-finalized-state",
+									"options": [
+										{
+											"default": "none",
+											"description": "Path/filename of the yaml config file",
+											"option": "--config-file",
+											"shortcut": "-c",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"default": "2048",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"option": "--data-storage-archive-frequency",
+											"value": "<FREQUENCY>"
+										},
+										{
+											"default": "NOT_SET",
+											"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"option": "--data-storage-mode",
+											"value": "<STORAGE_MODE>"
+										},
+										{
+											"default": "<data-base-path>/validator",
+											"description": "Path to validator client data",
+											"option": "--data-validator-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--genesis-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Show this help message and exit.",
+											"option": "--help",
+											"shortcut": "-h"
+										},
+										{
+											"default": "false",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"value": "[=<BOOLEAN>]"
+										},
+										{
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--initial-state",
+											"value": "<STRING>"
+										},
+										{
+											"default": "mainnet",
+											"description": "Represents which network to use.",
+											"option": "--network",
+											"shortcut": "-n",
+											"value": "<NETWORK>"
+										},
+										{
+											"description": "File to write state to",
+											"option": "--output",
+											"shortcut": "-o",
+											"value": "<arg2>"
+										},
+										{
+											"description": "File to write the block matching the latest finalized state to",
+											"option": "--block-output",
+											"value": "<arg3>"
+										},
+										{
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"option": "--checkpoint-sync-url",
+											"value": "<STRING>"
+										},
+										{
+											"default": "<data-base-path>/beacon",
+											"description": "Path to beacon node data",
+											"option": "--data-beacon-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"default": "/home/ahmad/.local/share/teku",
+											"description": "Path to the base directory for storage",
+											"option": "--data-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "Path to the base directory for storage",
+											"option": "--data-base-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"option": "--eth1-deposit-contract-address",
+											"value": "<ADDRESS>"
+										},
+										{
+											"description": "Default: false",
+											"option": "--reconstruct-historic-states",
+											"value": "[=<BOOLEAN>]"
+										},
+										{
+											"description": "Print version information and exit.",
+											"option": "--version",
+											"shortcut": "-V"
+										}
+									],
+									"subcommands": [],
+									"usage": "teku debug-tools generate-autocomplete db get-latest-finalized-state [OPTIONS]"
+								},
+								{
+									"description": "Check variable values",
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db get-variables",
+									"options": [
+										{
+											"default": "none",
+											"description": "Path/filename of the yaml config file",
+											"option": "--config-file",
+											"shortcut": "-c",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"option": "--checkpoint-sync-url",
+											"value": "<STRING>"
+										},
+										{
+											"default": "<data-base-path>/beacon",
+											"description": "Path to beacon node data",
+											"option": "--data-beacon-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"default": "/home/ahmad/.local/share/teku",
+											"description": "Path to the base directory for storage",
+											"option": "--data-base-path",
+											"shortcut": "--data-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"default": 2048,
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"option": "--data-storage-archive-frequency",
+											"value": "<FREQUENCY>"
+										},
+										{
+											"default": "NOT_SET",
+											"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"option": "--data-storage-mode",
+											"value": "<STORAGE_MODE>"
+										},
+										{
+											"default": false,
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"value": "[=<BOOLEAN>]"
+										},
+										{
+											"default": "<data-base-path>/validator",
+											"description": "Path to validator client data",
+											"option": "--data-validator-path",
+											"value": "<FILENAME>"
+										},
+										{
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"option": "--eth1-deposit-contract-address",
+											"value": "<ADDRESS>"
+										},
+										{
+											"description": "Only get variables that match a given filter.",
+											"option": "--filter",
+											"value": "<arg2>"
+										},
+										{
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--genesis-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Show this help message and exit.",
+											"option": "--help",
+											"shortcut": "-h"
+										},
+										{
+											"default": false,
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"value": "[=<BOOLEAN>]"
+										},
+										{
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--initial-state",
+											"value": "<STRING>"
+										},
+										{
+											"default": "mainnet",
+											"description": "Represents which network to use.",
+											"option": "--network",
+											"shortcut": "-n",
+											"value": "<NETWORK>"
+										},
+										{
+											"default": false,
+											"description": "",
+											"option": "--reconstruct-historic-states",
+											"value": "[=<BOOLEAN>]"
+										},
+										{
+											"description": "Print version information and exit.",
+											"option": "--version",
+											"shortcut": "-V"
+										}
+									],
+									"subcommands": [],
+									"usage": "teku debug-tools generate-autocomplete db get-variables [OPTIONS]"
+								},
+								{
+									"description": "Validate the blob sidecars",
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db validate-blob-sidecars",
+									"subcommands": [],
+									"options": [
+										{
+											"description": "Path/filename of the yaml config file",
+											"option": "--config-file",
+											"shortcut": "-c",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"option": "--checkpoint-sync-url",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Path to beacon node data",
+											"option": "--data-beacon-path",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"description": "Path to validator client data",
+											"option": "--data-validator-path",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"description": "Path to the base directory for storage",
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"option": "--data-storage-archive-frequency",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"description": "Sets the strategy for handling historical chain data.",
+											"option": "--data-storage-mode",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"option": "--eth1-deposit-contract-address",
+											"value": "<ADDRESS>"
+										},
+										{
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--genesis-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Show this help message and exit.",
+											"option": "--help",
+											"shortcut": "-h"
+										},
+										{
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"option": "--initial-state",
+											"value": "<STRING>"
+										},
+										{
+											"description": "Override the Data Availability window lower epoch",
+											"option": "--lower-data-availability-epoch",
+											"shortcut": "-l",
+											"value": "<arg3>"
+										},
+										{
+											"description": "Represents which network to use.",
+											"option": "--network",
+											"shortcut": "-n",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"description": "",
+											"option": "--reconstruct-historic-states",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"description": "Provide the current slot from which calculate Data Availability window",
+											"option": "--current-slot",
+											"shortcut": "-s",
+											"value": "<arg2>"
+										},
+										{
+											"description": "Print version information and exit.",
+											"option": "--version",
+											"shortcut": "-V"
+										}
+									],
+									"usage": "teku debug-tools generate-autocomplete db validate-blob-sidecars [OPTIONS]"
+								},
+								{
+									"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-autocomplete db validate-block-history",
+									"description": "Teku is licensed under the Apache License 2.0",
+									"usage": "teku debug-tools generate-autocomplete db validate-block-history [OPTIONS]",
+									"subcommands": [],
+									"options": [
+										{
+											"option": "--checkpoint-sync-url",
+											"description": "The Checkpointz server that will be used to bootstrap this node.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--config-file",
+											"shortcut": "-c",
+											"description": "Path/filename of the yaml config file",
+											"value": "<FILENAME>",
+											"default": "none"
+										},
+										{
+											"option": "--data-beacon-path",
+											"description": "Path to beacon node data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/beacon"
+										},
+										{
+											"option": "--data-path",
+											"shortcut": "--data-base-path",
+											"description": "Path to the base directory for storage",
+											"value": "<FILENAME>",
+											"default": "/home/ahmad/.local/share/teku"
+										},
+										{
+											"option": "--data-storage-archive-frequency",
+											"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+											"value": "<FREQUENCY>",
+											"default": "2048"
+										},
+										{
+											"option": "--data-storage-mode",
+											"description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+											"value": "<STORAGE_MODE>",
+											"default": "NOT_SET"
+										},
+										{
+											"option": "--data-storage-non-canonical-blocks-enabled",
+											"description": "Store non-canonical blocks and associated blobs if they exist",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--data-validator-path",
+											"description": "Path to validator client data",
+											"value": "<FILENAME>",
+											"default": "<data-base-path>/validator"
+										},
+										{
+											"option": "--eth1-deposit-contract-address",
+											"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+											"value": "<ADDRESS>"
+										},
+										{
+											"option": "--genesis-state",
+											"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--help",
+											"shortcut": "-h",
+											"description": "Show this help message and exit."
+										},
+										{
+											"option": "--ignore-weak-subjectivity-period-enabled",
+											"description": "Allows syncing outside of the weak subjectivity period.",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--initial-state",
+											"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+											"value": "<STRING>"
+										},
+										{
+											"option": "--network",
+											"shortcut": "-n",
+											"description": "Represents which network to use.",
+											"value": "<NETWORK>",
+											"default": "mainnet"
+										},
+										{
+											"option": "--reconstruct-historic-states",
+											"description": "",
+											"value": "[=<BOOLEAN>]",
+											"default": "false"
+										},
+										{
+											"option": "--version",
+											"shortcut": "-V",
+											"description": "Print version information and exit."
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools generate-swagger-docs",
+					"description": "Generate swagger-docs for rest APIs.",
+					"usage": "teku debug-tools generate-swagger-docs [OPTIONS]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file (default: none)",
+							"value": "<FILENAME>"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--network",
+							"shortcut": "-n",
+							"description": "Represents which network to use.",
+							"value": "<arg1>",
+							"default": "mainnet"
+						},
+						{
+							"option": "--output",
+							"shortcut": "-o",
+							"description": "Directory to write swagger docs to.",
+							"value": "<arg0>"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				},
+				{
+					"description": "Teku is licensed under the Apache License 2.0",
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools get-peer-id",
+					"subcommands": [],
+					"usage": "teku debug-tools get-peer-id [OPTIONS]",
+					"options": [
+						{
+							"description": "Path/filename of the yaml config file",
+							"option": "--config-file",
+							"shortcut": "-c",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"description": "Show this help message and exit.",
+							"option": "--help",
+							"shortcut": "-h"
+						},
+						{
+							"description": "File to read the privateKey from",
+							"option": "--input",
+							"shortcut": "-i",
+							"value": "<arg0>"
+						},
+						{
+							"description": "Print version information and exit.",
+							"option": "--version",
+							"shortcut": "-V"
+						}
+					]
+				},
+				{
+					"description": "Gets the committee assignment for a validator at a specific epoch.",
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools get-validator-assignment",
+					"options": [
+						{
+							"default": "none",
+							"description": "Path/filename of the yaml config file",
+							"option": "--config-file",
+							"shortcut": "-c",
+							"value": "<FILENAME>"
+						},
+						{
+							"default": "0",
+							"description": "Epoch to get assignment for",
+							"option": "--epoch",
+							"shortcut": "-e",
+							"value": "<arg2>"
+						},
+						{
+							"description": "Show this help message and exit.",
+							"option": "--help",
+							"shortcut": "-h"
+						},
+						{
+							"default": "mainnet",
+							"description": "Represents which network to use.",
+							"option": "--network",
+							"shortcut": "-n",
+							"value": "<arg3>"
+						},
+						{
+							"description": "Starting state to use. Must be in or before the specified epoch.",
+							"option": "--state",
+							"shortcut": "-s",
+							"value": "<arg0>"
+						},
+						{
+							"default": "0",
+							"description": "Validator index to get assignment for",
+							"option": "--validator",
+							"shortcut": "-v",
+							"value": "<arg1>"
+						},
+						{
+							"description": "Print version information and exit.",
+							"option": "--version",
+							"shortcut": "-V"
+						}
+					],
+					"usage": "teku debug-tools get-validator-assignment [OPTIONS]",
+					"subcommands": []
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools key-check",
+					"description": "Check attributes of a validator key, and where it is running from.",
+					"usage": "teku debug-tools key-check [OPTIONS]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--v",
+							"shortcut": "--verbose, --verbose-output-enabled",
+							"description": "Verbose output should be displayed.",
+							"value": "[=<BOOLEAN>]",
+							"default": "false"
+						},
+						{
+							"option": "--validator-keys",
+							"description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt. <KEY_FILE>:<PASS_FILE> will expect that the file <KEY_FILE> exists, and the file containing the password for it is <PASS_FILE>. The path separator is operating system dependent, and should be ';' in windows rather than ':'.",
+							"value": "<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...",
+							"default": "[]"
+						},
+						{
+							"option": "--validators-external-signer-keystore",
+							"description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+							"value": "<FILE>"
+						},
+						{
+							"option": "--validators-external-signer-keystore-password-file",
+							"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+							"value": "<FILE>"
+						},
+						{
+							"option": "--validators-external-signer-public-keys",
+							"description": "The list of external signer public keys, or a URL to load the keys from",
+							"value": "[=<STRINGS>[,<STRINGS>...]...]",
+							"default": "[]"
+						},
+						{
+							"option": "--validators-external-signer-timeout",
+							"description": "Timeout (in milliseconds) for the external signing service",
+							"value": "<INTEGER>",
+							"default": "5000"
+						},
+						{
+							"option": "--validators-external-signer-truststore",
+							"description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+							"value": "<FILE>"
+						},
+						{
+							"option": "--validators-external-signer-truststore-password-file",
+							"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+							"value": "<FILE>"
+						},
+						{
+							"option": "--validators-external-signer-url",
+							"description": "URL for the external signing service",
+							"value": "<NETWORK>"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				},
+				{
+					"description": "Print SSZ objects as formatted JSON",
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools pretty-print",
+					"options": [
+						{
+							"default": "none",
+							"description": "Path/filename of the yaml config file",
+							"option": "--config-file",
+							"shortcut": "-c",
+							"value": "<FILENAME>"
+						},
+						{
+							"default": "JSON",
+							"description": "Output format to use",
+							"option": "--format",
+							"shortcut": "-f",
+							"value": "<FORMAT>"
+						},
+						{
+							"description": "Show this help message and exit.",
+							"option": "--help",
+							"shortcut": "-h"
+						},
+						{
+							"default": "mainnet",
+							"description": "Network config to use when decoding objects.",
+							"option": "--network",
+							"shortcut": "-n",
+							"value": "<NETWORK>"
+						},
+						{
+							"description": "Print version information and exit.",
+							"option": "--version",
+							"shortcut": "-V"
+						}
+					],
+					"subcommands": [],
+					"usage": "teku debug-tools pretty-print [OPTIONS] <MILESTONE> <TYPE> [<FILENAME>]"
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools rocksdb",
+					"description": "Print RocksDB information",
+					"usage": "teku debug-tools rocksdb [-hV] [-c=<FILENAME>] [COMMAND]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": [
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools rocksdb stats",
+							"description": "Print rocksdb stats",
+							"usage": "teku debug-tools rocksdb stats [-hV] [--data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]] [--ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]] [--reconstruct-historic-states[=<BOOLEAN>]] [-c=<FILENAME>] [--checkpoint-sync-url=<STRING>] [--data-beacon-path=<FILENAME>] [--data-path=<FILENAME>] [--data-storage-archive-frequency=<FREQUENCY>] [--data-storage-mode=<STORAGE_MODE>] [--data-validator-path=<FILENAME>] [--eth1-deposit-contract-address=<ADDRESS>] [--filter=<arg2>] [--genesis-state=<STRING>] [--initial-state=<STRING>] [-n=<NETWORK>]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url",
+									"description": "The Checkpointz server that will be used to bootstrap this node.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--data-beacon-path",
+									"description": "Path to beacon node data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path",
+									"description": "Path to the base directory for storage",
+									"value": "<FILENAME>"
+								},
+								{
+									"option": "--data-storage-archive-frequency",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+									"value": "<FREQUENCY>"
+								},
+								{
+									"option": "--data-storage-mode",
+									"description": "Sets the strategy for handling historical chain data.",
+									"value": "<STORAGE_MODE>",
+									"tags": [
+										"Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET"
+									]
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path",
+									"description": "Path to validator client data",
+									"value": "<FILENAME>",
+									"default": "<data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+									"value": "<ADDRESS>"
+								},
+								{
+									"option": "--filter",
+									"description": "Only count the columns that contain the specified filter.",
+									"value": "<arg2>"
+								},
+								{
+									"option": "--genesis-state",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--help",
+									"shortcut": "-h",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+									"value": "<STRING>"
+								},
+								{
+									"option": "--network",
+									"shortcut": "-n",
+									"description": "Represents which network to use.",
+									"value": "<NETWORK>"
+								},
+								{
+									"option": "--reconstruct-historic-states",
+									"description": "",
+									"value": "[=<BOOLEAN>]",
+									"default": "false"
+								},
+								{
+									"option": "--version",
+									"shortcut": "-V",
+									"description": "Print version information and exit."
+								},
+								{
+									"option": "--config-file",
+									"shortcut": "-c",
+									"description": "Path/filename of the yaml config file",
+									"value": "<FILENAME>",
+									"default": "none"
+								}
+							],
+							"subcommands": []
+						},
+						{
+							"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku debug-tools rocksdb usage",
+							"description": "Print disk usage",
+							"usage": "teku debug-tools rocksdb usage [-hV] [--data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]] [--ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]] [--reconstruct-historic-states[=<BOOLEAN>]] [-c=<FILENAME>] [--checkpoint-sync-url=<STRING>] [--data-beacon-path=<FILENAME>] [--data-path=<FILENAME>] [--data-storage-archive-frequency=<FREQUENCY>] [--data-storage-mode=<STORAGE_MODE>] [--data-validator-path=<FILENAME>] [--eth1-deposit-contract-address=<ADDRESS>] [--genesis-state=<STRING>] [--initial-state=<STRING>] [-n=<NETWORK>]",
+							"options": [
+								{
+									"option": "--checkpoint-sync-url=<STRING>",
+									"description": "The Checkpointz server that will be used to bootstrap this node."
+								},
+								{
+									"option": "--data-beacon-path=<FILENAME>",
+									"description": "Path to beacon node data. Default: <data-base-path>/beacon"
+								},
+								{
+									"option": "--data-path",
+									"shortcut": "--data-base-path=<FILENAME>",
+									"description": "Path to the base directory for storage"
+								},
+								{
+									"option": "--data-storage-archive-frequency=<FREQUENCY>",
+									"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE"
+								},
+								{
+									"option": "--data-storage-mode=<STORAGE_MODE>",
+									"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)"
+								},
+								{
+									"option": "--data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]",
+									"description": "Store non-canonical blocks and associated blobs if they exist",
+									"default": "false"
+								},
+								{
+									"option": "--data-validator-path=<FILENAME>",
+									"description": "Path to validator client data. Default: <data-base-path>/validator"
+								},
+								{
+									"option": "--eth1-deposit-contract-address=<ADDRESS>",
+									"description": "Contract address for the deposit contract. Only required when creating a custom network."
+								},
+								{
+									"option": "--genesis-state=<STRING>",
+									"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state."
+								},
+								{
+									"option": "--ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]",
+									"description": "Allows syncing outside of the weak subjectivity period.",
+									"default": "false"
+								},
+								{
+									"option": "--initial-state=<STRING>",
+									"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state."
+								},
+								{
+									"option": "--reconstruct-historic-states[=<BOOLEAN>]",
+									"description": "Reconstruct historic states.",
+									"default": "false"
+								},
+								{
+									"option": "-c=<FILENAME>",
+									"shortcut": "--config-file=<FILENAME>",
+									"description": "Path/filename of the yaml config file",
+									"default": "none"
+								},
+								{
+									"option": "-h",
+									"shortcut": "--help",
+									"description": "Show this help message and exit."
+								},
+								{
+									"option": "-n=<NETWORK>",
+									"shortcut": "--network=<NETWORK>",
+									"description": "Represents which network to use."
+								},
+								{
+									"option": "-V",
+									"shortcut": "--version",
+									"description": "Print version information and exit."
+								}
+							],
+							"subcommands": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku migrate-database",
+			"description": "Migrate the database to a specified version.",
+			"usage": "teku migrate-database [OPTIONS]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--data-beacon-path",
+					"description": "Path to beacon node data",
+					"value": "<FILENAME>",
+					"default": "<data-base-path>/beacon"
+				},
+				{
+					"option": "--data-path",
+					"shortcut": "--data-base-path",
+					"description": "The path to the teku database.",
+					"value": "<string>"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--network",
+					"shortcut": "-n",
+					"description": "Represents which network to use.",
+					"value": "<NETWORK>",
+					"default": "mainnet"
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": []
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku peer",
+			"description": "Commands for LibP2P PeerID",
+			"usage": "teku peer [OPTIONS] [COMMAND]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": [
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku peer generate",
+					"description": "Generate a list of peer ids",
+					"usage": "teku peer generate [OPTIONS]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--number",
+							"shortcut": "-n",
+							"description": "Number of peerIDs to generate",
+							"value": "<arg1>",
+							"default": "0"
+						},
+						{
+							"option": "--output-file",
+							"shortcut": "-o",
+							"description": "Path/filename of the output file",
+							"value": "<FILENAME>",
+							"default": "./config/peer-ids.dat"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				}
+			]
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku genesis",
+			"description": "Commands for generating genesis state",
+			"usage": "teku genesis [OPTIONS] [COMMAND]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": [
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku genesis mock",
+					"description": "Generate a mock genesis state",
+					"usage": "teku genesis mock [OPTIONS]",
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--genesis-time",
+							"shortcut": "-t",
+							"description": "The genesis time",
+							"value": "<GENESIS_TIME>",
+							"default": "1739568589"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--network",
+							"shortcut": "-n",
+							"description": "Represents which network to use.",
+							"value": "<NETWORK>",
+							"default": "mainnet"
+						},
+						{
+							"option": "--output-file",
+							"shortcut": "-o",
+							"description": "Path/filename of the output file",
+							"value": "<FILENAME>",
+							"default": "stdout"
+						},
+						{
+							"option": "--validator-count",
+							"shortcut": "-v",
+							"description": "The number of validators to include",
+							"value": "<VALIDATOR_COUNT>",
+							"default": "64"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				}
+			]
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku slashing-protection",
+			"description": "Manage local slashing protection data used by the validator client.",
+			"usage": "teku slashing-protection [OPTIONS] [COMMAND]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": [
+				{
+					"description": "Teku is licensed under the Apache License 2.0",
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku slashing-protection export",
+					"subcommands": [],
+					"options": [
+						{
+							"description": "Path/filename of the yaml config file",
+							"option": "--config-file",
+							"shortcut": "-c",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"description": "Path to the base directory for storage",
+							"option": "--data-path",
+							"tags": [
+								"--data-base-path"
+							],
+							"value": "<FILENAME>",
+							"default": "/home/ahmad/.local/share/teku"
+						},
+						{
+							"description": "Path to validator client data",
+							"option": "--data-validator-path",
+							"value": "<FILENAME>",
+							"default": "<data-base-path>/validator"
+						},
+						{
+							"description": "Show this help message and exit.",
+							"option": "--help",
+							"shortcut": "-h"
+						},
+						{
+							"description": "The file to export the slashing protection database to.",
+							"option": "--to",
+							"value": "<FILENAME>"
+						},
+						{
+							"description": "Print version information and exit.",
+							"option": "--version",
+							"shortcut": "-V"
+						}
+					]
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku slashing-protection import",
+					"description": "Teku is licensed under the Apache License 2.0",
+					"usage": "teku slashing-protection import [OPTIONS]",
+					"subcommands": [],
+					"options": [
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--data-path",
+							"description": "Path to the base directory for storage",
+							"value": "<FILENAME>",
+							"default": "/home/ahmad/.local/share/teku",
+							"tags": [
+								"--data-base-path"
+							]
+						},
+						{
+							"option": "--data-validator-path",
+							"description": "Path to validator client data",
+							"value": "<FILENAME>",
+							"default": "<data-base-path>/validator"
+						},
+						{
+							"option": "--from",
+							"description": "The file to import the slashing protection database from.",
+							"value": "<FILENAME>",
+							"default": ""
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					]
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku slashing-protection repair",
+					"description": "Teku is licensed under the Apache License 2.0",
+					"usage": "teku slashing-protection repair [OPTIONS]",
+					"subcommands": [],
+					"options": [
+						{
+							"option": "--check-only-enabled",
+							"description": "Read and report potential problems, but don't update anything.",
+							"value": "<BOOLEAN>",
+							"default": "false"
+						},
+						{
+							"option": "--checkpoint-sync-url",
+							"description": "The Checkpointz server that will be used to bootstrap this node.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--data-path",
+							"description": "Path to the base directory for storage",
+							"value": "<FILENAME>"
+						},
+						{
+							"option": "--data-validator-path",
+							"description": "Path to validator client data",
+							"value": "<FILENAME>",
+							"default": "<data-base-path>/validator"
+						},
+						{
+							"option": "--eth1-deposit-contract-address",
+							"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+							"value": "<ADDRESS>"
+						},
+						{
+							"option": "--genesis-state",
+							"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--ignore-weak-subjectivity-period-enabled",
+							"description": "Allows syncing outside of the weak subjectivity period.",
+							"value": "<BOOLEAN>",
+							"default": "false"
+						},
+						{
+							"option": "--initial-state",
+							"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--network",
+							"shortcut": "-n",
+							"description": "Represents which network to use.",
+							"value": "<NETWORK>"
+						},
+						{
+							"option": "--slot",
+							"description": "Update slashing protection files to contain the specified slot as a minimum. Should be a future slot, or after when the validators stopped performing duties. NOTE: This can be calculated for most networks, and is generally not required.",
+							"value": "<INTEGER>"
+						},
+						{
+							"option": "--update-all-enabled",
+							"description": "All validator slashing protection records should be updated.",
+							"value": "<BOOLEAN>",
+							"default": "false"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku transition",
+			"description": "Manually run state transitions",
+			"usage": "teku transition [OPTIONS] [COMMAND]",
+			"options": [
+				{
+					"option": "--config-file",
+					"shortcut": "-c",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>",
+					"default": "none"
+				},
+				{
+					"option": "--help",
+					"shortcut": "-h",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--version",
+					"shortcut": "-V",
+					"description": "Print version information and exit."
+				}
+			],
+			"subcommands": [
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku transition blocks",
+					"description": "Process blocks on the pre-state to get a post-state",
+					"usage": "teku transition blocks [OPTIONS] [block...]",
+					"options": [
+						{
+							"option": "--checkpoint-sync-url",
+							"description": "The Checkpointz server that will be used to bootstrap this node.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--eth1-deposit-contract-address",
+							"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+							"value": "<ADDRESS>"
+						},
+						{
+							"option": "--genesis-state",
+							"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--ignore-weak-subjectivity-period-enabled",
+							"description": "Allows syncing outside of the weak subjectivity period.",
+							"value": "[=<BOOLEAN>]",
+							"default": "false"
+						},
+						{
+							"option": "--initial-state",
+							"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--network",
+							"shortcut": "-n",
+							"description": "Represents which network to use.",
+							"value": "<NETWORK>",
+							"default": "mainnet"
+						},
+						{
+							"option": "--post",
+							"shortcut": "-o",
+							"description": "Post (Output) path. If none is specified, output is written to STDOUT",
+							"value": "<post>"
+						},
+						{
+							"option": "--pre",
+							"shortcut": "-i",
+							"description": "Pre (Input) path. If none is specified, input is read from STDIN",
+							"value": "<pre>"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				},
+				{
+					"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku transition slots",
+					"description": "Process empty slots on the pre-state to get a post-state",
+					"usage": "teku transition slots [OPTIONS] <number>",
+					"options": [
+						{
+							"option": "--checkpoint-sync-url",
+							"description": "The Checkpointz server that will be used to bootstrap this node.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--config-file",
+							"shortcut": "-c",
+							"description": "Path/filename of the yaml config file",
+							"value": "<FILENAME>",
+							"default": "none"
+						},
+						{
+							"option": "--delta",
+							"shortcut": "-d",
+							"description": "to interpret the slot number as a delta from the pre-state",
+							"default": "false"
+						},
+						{
+							"option": "--eth1-deposit-contract-address",
+							"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+							"value": "<ADDRESS>"
+						},
+						{
+							"option": "--genesis-state",
+							"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--help",
+							"shortcut": "-h",
+							"description": "Show this help message and exit."
+						},
+						{
+							"option": "--ignore-weak-subjectivity-period-enabled",
+							"description": "Allows syncing outside of the weak subjectivity period.",
+							"value": "[=<BOOLEAN>]",
+							"default": "false"
+						},
+						{
+							"option": "--initial-state",
+							"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+							"value": "<STRING>"
+						},
+						{
+							"option": "--network",
+							"shortcut": "-n",
+							"description": "Represents which network to use.",
+							"value": "<NETWORK>",
+							"default": "mainnet"
+						},
+						{
+							"option": "--post",
+							"shortcut": "-o",
+							"description": "Post (Output) path. If none is specified, output is written to STDOUT",
+							"value": "<post>"
+						},
+						{
+							"option": "--pre",
+							"shortcut": "-i",
+							"description": "Pre (Input) path. If none is specified, input is read from STDIN",
+							"value": "<pre>"
+						},
+						{
+							"option": "--version",
+							"shortcut": "-V",
+							"description": "Print version information and exit."
+						}
+					],
+					"subcommands": []
+				}
+			]
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku voluntary-exit",
+			"description": "Create and sign a voluntary exit for a specified validator.",
+			"usage": "teku voluntary-exit [OPTIONS]",
+			"options": [
+				{
+					"option": "--beacon-node-api-endpoints",
+					"description": "Beacon Node REST API endpoint(s). If more than one endpoint is defined, the first node will be used as a primary and others as failovers.",
+					"value": "<ENDPOINT>[,<ENDPOINT>...]..."
+				},
+				{
+					"option": "--beacon-node-ssz-blocks-enabled",
+					"description": "Use SSZ encoding for API block requests",
+					"value": "[=<BOOLEAN>]",
+					"default": "true"
+				},
+				{
+					"option": "--confirmation-enabled",
+					"description": "Request confirmation before submitting voluntary exits.",
+					"value": "<BOOLEAN>",
+					"default": "true"
+				},
+				{
+					"option": "--data-base-path",
+					"description": "Path to the base directory for storage",
+					"value": "<FILENAME>",
+					"default": "/home/ahmad/.local/share/teku"
+				},
+				{
+					"option": "--data-validator-path",
+					"description": "Path to validator client data",
+					"value": "<FILENAME>",
+					"default": "<data-base-path>/validator"
+				},
+				{
+					"option": "--epoch",
+					"description": "Earliest epoch that the voluntary exit can be processed. Defaults to current epoch.",
+					"value": "<EPOCH>"
+				},
+				{
+					"shortcut": "-c",
+					"option": "--config-file",
+					"description": "Path/filename of the yaml config file",
+					"value": "<FILENAME>"
+				},
+				{
+					"shortcut": "-h",
+					"option": "--help",
+					"description": "Show this help message and exit."
+				},
+				{
+					"option": "--include-keymanager-keys",
+					"description": "Include validator keys managed via keymanager APIs.",
+					"value": "[=<BOOLEAN>]",
+					"default": "false"
+				},
+				{
+					"shortcut": "-n",
+					"option": "--network",
+					"description": "Represents which network to use.",
+					"value": "<NETWORK>"
+				},
+				{
+					"option": "--save-exits-path",
+					"description": "Save the generated exit messages to the specified path, don't validate exit epoch, and skip publishing them.",
+					"value": "<FOLDER>"
+				},
+				{
+					"shortcut": "-V",
+					"option": "--version",
+					"description": "Print version information and exit."
+				},
+				{
+					"option": "--validator-keys",
+					"description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt. <KEY_FILE>:<PASS_FILE> will expect that the file <KEY_FILE> exists, and the file containing the password for it is <PASS_FILE>. The path separator is operating system dependent, and should be ';' in windows rather than ':'.",
+					"value": "<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...",
+					"default": "[]"
+				},
+				{
+					"option": "--validator-public-keys",
+					"description": "Optionally restrict the exit command to a specified list of public keys. When the parameter is not used, all keys will be exited.",
+					"value": "[=<STRINGS>[,<STRINGS>...]]"
+				},
+				{
+					"option": "--validators-external-signer-keystore",
+					"description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+					"value": "<FILE>"
+				},
+				{
+					"option": "--validators-external-signer-keystore-password-file",
+					"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+					"value": "<FILE>"
+				},
+				{
+					"option": "--validators-external-signer-public-keys",
+					"description": "The list of external signer public keys, or a URL to load the keys from",
+					"value": "[=<STRINGS>[,<STRINGS>...]...]",
+					"default": "[]"
+				},
+				{
+					"option": "--validators-external-signer-timeout",
+					"description": "Timeout (in milliseconds) for the external signing service",
+					"value": "<INTEGER>",
+					"default": "5000"
+				},
+				{
+					"option": "--validators-external-signer-truststore",
+					"description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+					"value": "<FILE>"
+				},
+				{
+					"option": "--validators-external-signer-truststore-password-file",
+					"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+					"value": "<FILE>"
+				},
+				{
+					"option": "--validators-external-signer-url",
+					"description": "URL for the external signing service",
+					"value": "<NETWORK>"
+				}
+			],
+			"subcommands": []
+		},
+		{
+			"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku validator-client, vc",
+			"subcommands": [],
+			"options": []
+		}
+	],
+	"options": [
+		{
+			"description": "Advertised UDP port to external peers. The default is the port specified in --p2p-advertised-port",
+			"option": "--p2p-advertised-udp-port",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "Advertised IPv6 UDP port to external peers. This port is only used when advertising both IPv4 and IPv6 addresses. The default is the port specified in --p2p-advertised-port-ipv6.",
+			"option": "--p2p-advertised-udp-port-ipv6",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "P2P advertised IP address(es). You can define up to 2 addresses, with one being IPv4 and the other IPv6. (Default: 127.0.0.1)",
+			"option": "--p2p-advertised-ip, --p2p-advertised-ips",
+			"value": "<NETWORK>[,<NETWORK>...] [<NETWORK>]"
+		},
+		{
+			"description": "P2P advertised port. The default is the port specified in --p2p-port",
+			"option": "--p2p-advertised-port",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "P2P advertised IPv6 port. This port is only used when advertising both IPv4 and IPv6 addresses. The default is the port specified in --p2p-port-ipv6.",
+			"option": "--p2p-advertised-port-ipv6",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "Specifies a list of 'direct' peers with which to establish and maintain connections. Direct peers are static peers with which this node will always exchange full messages, regardless of peer scoring mechanisms. Such peers will also need to enable you as direct in order to work. Default: []",
+			"option": "--p2p-direct-peers",
+			"value": "[<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]",
+			"default": "[]"
+		},
+		{
+			"description": "List of ENRs of the bootnodes",
+			"option": "--p2p-discovery-bootnodes",
+			"value": "[<enr:-...>[,<enr:-...>...]...]"
+		},
+		{
+			"description": "Enables discv5 discovery Default: true",
+			"option": "--p2p-discovery-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Whether discovery accepts messages and peer records with site local (RFC1918) addresses Default: false",
+			"option": "--p2p-discovery-site-local-addresses-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Enables P2P Default: true",
+			"option": "--p2p-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "The network interface(s) on which the node listens for P2P communication. You can define up to 2 interfaces, with one being IPv4 and the other IPv6. (Default: 0.0.0.0) Default: [0.0.0.0]",
+			"option": "--p2p-interface, --p2p-interfaces",
+			"value": "<NETWORK>[,<NETWORK>...] [<NETWORK>]",
+			"default": "[0.0.0.0]"
+		},
+		{
+			"description": "Specify the NAT circumvention method to be used, possible values are UPNP, NONE. NONE will require manual router configuration. Default: NONE",
+			"option": "--p2p-nat-method",
+			"value": "<natMethod>",
+			"default": "NONE"
+		},
+		{
+			"description": "Lower bound on the target number of peers Default: OptionalInt.empty",
+			"option": "--p2p-peer-lower-bound",
+			"value": "<INTEGER>",
+			"default": "OptionalInt.empty"
+		},
+		{
+			"description": "Upper bound on the target number of peers Default: OptionalInt.empty",
+			"option": "--p2p-peer-upper-bound",
+			"value": "<INTEGER>",
+			"default": "OptionalInt.empty"
+		},
+		{
+			"description": "P2P port Default: 9000",
+			"option": "--p2p-port",
+			"value": "<INTEGER>",
+			"default": "9000"
+		},
+		{
+			"description": "P2P IPv6 port. This port is only used when listening over both IPv4 and IPv6. Default: 9090",
+			"option": "--p2p-port-ipv6",
+			"value": "<INTEGER>",
+			"default": "9090"
+		},
+		{
+			"description": "This node's private key file. If not specified, uses or generates a key which is stored within the <beacon-data-dir>.",
+			"option": "--p2p-private-key-file",
+			"value": "<FILENAME>"
+		},
+		{
+			"description": "Specifies a list of 'static' peers with which to establish and maintain connections Default: []",
+			"option": "--p2p-static-peers",
+			"value": "[<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]",
+			"default": "[]"
+		},
+		{
+			"description": "Default: false",
+			"option": "--p2p-subscribe-all-subnets-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "UDP port used for discovery. The default is the port specified in --p2p-port",
+			"option": "--p2p-udp-port",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "IPv6 UDP port used for discovery. This port is only used when listening over both IPv4 and IPv6. The default is the port specified in --p2p-port-ipv6",
+			"option": "--p2p-udp-port-ipv6",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "Enable validators doppelganger detection Default: false",
+			"option": "--doppelganger-detection-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Enable terminating the process if no validator keys are found during startup Default: false",
+			"option": "--exit-when-no-validator-keys-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "If enabled and an owned validator key is detected as slashed, the node will terminate. In this case, the service should not be restarted. Default: false",
+			"option": "--shut-down-when-validator-slashed-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Restrict local signing to a single operation at a time. Default: true",
+			"option": "--validator-is-local-slashing-protection-synchronized-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt. <KEY_FILE>:<PASS_FILE> will expect that the file <KEY_FILE> exists, and the file containing the password for it is <PASS_FILE>. The path separator is operating system dependent, and should be ';' in windows rather than ':'. Default: []",
+			"option": "--validator-keys",
+			"value": "<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...",
+			"default": "[]"
+		},
+		{
+			"description": "Enable validators registration to builder infrastructure. Default: false",
+			"option": "--validators-builder-registration-default-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Change the default gas limit used for the validators registration. Default: 36000000",
+			"option": "--validators-builder-registration-default-gas-limit",
+			"value": "<uint64>",
+			"default": "36000000"
+		},
+		{
+			"description": "Generate attestations as soon as a block is known, rather than delaying until the attestation is due Default: true",
+			"option": "--validators-early-attestations-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+			"option": "--validators-external-signer-keystore",
+			"value": "<FILE>"
+		},
+		{
+			"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+			"option": "--validators-external-signer-keystore-password-file",
+			"value": "<FILE>"
+		},
+		{
+			"description": "The list of external signer public keys, or a URL to load the keys from Default: []",
+			"option": "--validators-external-signer-public-keys",
+			"value": "[<STRINGS>[,<STRINGS>...]...]",
+			"default": "[]"
+		},
+		{
+			"description": "Enable internal slashing protection for external signers Default: true",
+			"option": "--validators-external-signer-slashing-protection-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Timeout (in milliseconds) for the external signing service Default: 5000",
+			"option": "--validators-external-signer-timeout",
+			"value": "<INTEGER>",
+			"default": "5000"
+		},
+		{
+			"description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+			"option": "--validators-external-signer-truststore",
+			"value": "<FILE>"
+		},
+		{
+			"description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+			"option": "--validators-external-signer-truststore-password-file",
+			"value": "<FILE>"
+		},
+		{
+			"description": "URL for the external signing service",
+			"option": "--validators-external-signer-url",
+			"value": "<NETWORK>"
+		},
+		{
+			"description": "Graffiti value to include during block creation. Value gets converted to bytes and padded to Bytes32.",
+			"option": "--validators-graffiti",
+			"value": "<GRAFFITI STRING>"
+		},
+		{
+			"description": "Appends CL and EL clients information with a space to user's graffiti when producing a block on the Beacon Node. (Valid values: AUTO, CLIENT_CODES, DISABLED) Default: AUTO",
+			"option": "--validators-graffiti-client-append-format",
+			"value": "<STRING>",
+			"default": "AUTO"
+		},
+		{
+			"description": "File to load graffiti value to include during block creation. Value gets converted to bytes and padded to Bytes32. Takes precedence over --validators-graffiti. If the file can not be read, the --validators-graffiti value is used as a fallback.",
+			"option": "--validators-graffiti-file",
+			"value": "<GRAFFITI FILE>"
+		},
+		{
+			"description": "Enable locking validator keystore files Default: true",
+			"option": "--validators-keystore-locking-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Set strategy for handling performance tracking. Valid values: LOGGING, METRICS, ALL, NONE Default: ALL",
+			"option": "--validators-performance-tracking-mode",
+			"value": "<TRACKING_MODE>",
+			"default": "ALL"
+		},
+		{
+			"description": "Use blinded blocks when in block production duties Default: false",
+			"option": "--validators-proposer-blinded-blocks-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "remote URL or local file path to load proposer configuration from",
+			"option": "--validators-proposer-config",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Enable the proposer configuration reload on every proposer preparation (once per epoch) Default: false",
+			"option": "--validators-proposer-config-refresh-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Default fee recipient sent to the execution engine, which could use it as fee recipient when producing a new execution block.",
+			"option": "--validators-proposer-default-fee-recipient",
+			"value": "<ADDRESS>"
+		},
+		{
+			"description": "Set the compare factor applied to the builder bid value when comparing it with locally produced payload. Factor is expressed in percentage (e.g. '100' means locally produced payload will be chosen when its value is equal or greater than the entire builder bid value, '80' means local payload will be chosen when its value is at least 80% of builder bid value). Set it to 'BUILDER_ALWAYS' to always use builder bid. In this configuration locally produced payload will be used only when the bid is invalid. Default: 90",
+			"option": "--builder-bid-compare-factor",
+			"value": "<STRING>",
+			"default": "90"
+		},
+		{
+			"description": "URL for an external Builder node (optional). Default: null",
+			"option": "--builder-endpoint",
+			"value": "<NETWORK>",
+			"default": "null"
+		},
+		{
+			"description": "Set User-Agent header to teku/v<version> (e.g. teku/v23.4.0) when making a builder bid request to help builders identify clients and versions Default: true",
+			"option": "--builder-set-user-agent-header",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Use bundled snapshot for most networks and persist deposit tree snapshot Default: true",
+			"option": "--deposit-snapshot-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "URL for Execution Engine node.",
+			"option": "--ee-endpoint",
+			"value": "<NETWORK>"
+		},
+		{
+			"description": "A unique identifier for the consensus layer client. This identifier will be added to the JWT claims as an 'id' claim.",
+			"option": "--ee-jwt-claim-id",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Location of the file specifying the hex-encoded 256 bit secret key to be used for verifying/generating jwt tokens",
+			"option": "--ee-jwt-secret-file",
+			"value": "<FILENAME>"
+		},
+		{
+			"description": "Maximum number of blocks to request deposit contract event logs for in a single request. Default: 10000",
+			"option": "--eth1-deposit-contract-max-request-size",
+			"value": "<INTEGER>",
+			"default": "10000"
+		},
+		{
+			"description": "URLs for Eth1 nodes. Default: []",
+			"option": "--eth1-endpoint, --eth1-endpoints",
+			"value": "<NETWORK>[,<NETWORK>...]...",
+			"default": "[]"
+		},
+		{
+			"description": "Enables querying EL periodically for the Engine API methods it supports. If incompatibility is detected, there will be a warning raised in the logs. Default: true",
+			"option": "--exchange-capabilities-monitoring-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Path to beacon node data Default: <data-base-path>/beacon",
+			"option": "--data-beacon-path",
+			"value": "<FILENAME>",
+			"default": "<data-base-path>/beacon"
+		},
+		{
+			"description": "Path to the base directory for storage Default: /home/ahmad/.local/share/teku",
+			"option": "--data-path, --data-base-path",
+			"value": "<FILENAME>",
+			"default": "/home/ahmad/.local/share/teku"
+		},
+		{
+			"description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE Default: 2048",
+			"option": "--data-storage-archive-frequency",
+			"value": "<FREQUENCY>",
+			"default": "2048"
+		},
+		{
+			"description": "Sets the strategy for handling historical chain data. (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET) Default: NOT_SET",
+			"option": "--data-storage-mode",
+			"value": "<STORAGE_MODE>",
+			"default": "NOT_SET"
+		},
+		{
+			"description": "Store non-canonical blocks and associated blobs if they exist Default: false",
+			"option": "--data-storage-non-canonical-blocks-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Path to validator client data Default: <data-base-path>/validator",
+			"option": "--data-validator-path",
+			"value": "<FILENAME>",
+			"default": "<data-base-path>/validator"
+		},
+		{
+			"description": "Default: false",
+			"option": "--reconstruct-historic-states",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Track validator liveness and enable requests to the liveness rest api. Default: false",
+			"option": "--beacon-liveness-tracking-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Comma separated list of origins to allow, or * to allow any origin Default: []",
+			"option": "--rest-api-cors-origins",
+			"value": "[<origin>[,<origin>...]...]",
+			"default": "[]"
+		},
+		{
+			"description": "Enable swagger-docs and swagger-ui endpoints Default: false",
+			"option": "--rest-api-docs-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Enables Beacon Rest API Default: null",
+			"option": "--rest-api-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "null"
+		},
+		{
+			"description": "Comma-separated list of hostnames to allow, or * to allow any host Default: [127.0.0.1, localhost]",
+			"option": "--rest-api-host-allowlist",
+			"value": "[<hostname>[,<hostname>...]...]",
+			"default": "[127.0.0.1, localhost]"
+		},
+		{
+			"description": "Interface of Beacon Rest API Default: 127.0.0.1",
+			"option": "--rest-api-interface",
+			"value": "<NETWORK>",
+			"default": "127.0.0.1"
+		},
+		{
+			"description": "Port number of Beacon Rest API",
+			"option": "--rest-api-port",
+			"value": "<INTEGER>"
+		},
+		{
+			"description": "Use the specified file as the bearer token for the validator Rest API",
+			"option": "--validator-api-bearer-file",
+			"value": "<FILENAME>"
+		},
+		{
+			"description": "Comma separated list of origins to allow, or * to allow any origin Default: []",
+			"option": "--validator-api-cors-origins",
+			"value": "[<origin>[,<origin>...]...]",
+			"default": "[]"
+		},
+		{
+			"description": "Enable swagger-docs and swagger-ui endpoints Default: false",
+			"option": "--validator-api-docs-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Enables Validator Rest API Default: false",
+			"option": "--validator-api-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Comma-separated list of hostnames to allow, or * to allow any host Default: [127.0.0.1, localhost]",
+			"option": "--validator-api-host-allowlist",
+			"value": "[<hostname>[,<hostname>...]...]",
+			"default": "[127.0.0.1, localhost]"
+		},
+		{
+			"description": "Interface of Validator Rest API Default: 127.0.0.1",
+			"option": "--validator-api-interface",
+			"value": "<NETWORK>",
+			"default": "127.0.0.1"
+		},
+		{
+			"description": "Keystore used for ssl for the validator api.",
+			"option": "--validator-api-keystore-file",
+			"value": "<keystoreFile>"
+		},
+		{
+			"description": "Password used to decrypt the keystore for the validator api.",
+			"option": "--validator-api-keystore-password-file",
+			"value": "<keystorePasswordFile>"
+		},
+		{
+			"description": "Port number of Rest API Default: 5052",
+			"option": "--validator-api-port",
+			"value": "<INTEGER>",
+			"default": "5052"
+		},
+		{
+			"description": "A recent checkpoint within the weak subjectivity period. Should be a string containing <BLOCK_ROOT>:<EPOCH_NUMBER> or a URL containing the field ws_checkpoint with the same information.",
+			"option": "--ws-checkpoint",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Whether Status and Event log messages include a console color display code Default: true",
+			"option": "--log-color-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Whether a logger is added for the console, the log file, or both (Valid values: BOTH, CONSOLE, DEFAULT_BOTH, FILE, CUSTOM) Default: DEFAULT_BOTH",
+			"option": "--log-destination",
+			"value": "<LOG_DESTINATION>",
+			"default": "DEFAULT_BOTH"
+		},
+		{
+			"description": "Path containing the location (relative or absolute) and the log filename. If not set will default to <data-path>/logs/teku.log",
+			"option": "--log-file",
+			"value": "<FILENAME>"
+		},
+		{
+			"description": "Pattern for the filename to apply to rolled over log files. If not set will default to <data-path>/logs/teku_%d{yyyy-MM-dd}.log",
+			"option": "--log-file-name-pattern",
+			"value": "<REGEX>"
+		},
+		{
+			"description": "Whether frequent update events are logged (e.g. every slot and epoch event) Default: true",
+			"option": "--log-include-events-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Whether events are logged when validators perform duties Default: true",
+			"option": "--log-include-validator-duties-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Whether block timing metrics are tracked and reported Default: true",
+			"option": "--metrics-block-timing-tracking-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "true"
+		},
+		{
+			"description": "Metric categories to enable Default: [JVM, PROCESS, NETWORK, EXECUTOR, DISCOVERY, EVENTBUS, VALIDATOR_PERFORMANCE, STORAGE_FINALIZED_DB, BEACON, STORAGE_HOT_DB, VALIDATOR, LIBP2P, STORAGE, REMOTE_VALIDATOR]",
+			"option": "--metrics-categories",
+			"value": "[<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]",
+			"default": "[JVM, PROCESS, NETWORK, EXECUTOR, DISCOVERY, EVENTBUS, VALIDATOR_PERFORMANCE, STORAGE_FINALIZED_DB, BEACON, STORAGE_HOT_DB, VALIDATOR, LIBP2P, STORAGE, REMOTE_VALIDATOR]"
+		},
+		{
+			"description": "Enables metrics collection via Prometheus Default: false",
+			"option": "--metrics-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "Comma-separated list of hostnames to allow, or * to allow any host Default: [127.0.0.1, localhost]",
+			"option": "--metrics-host-allowlist",
+			"value": "[<hostname>[,<hostname>...]...]",
+			"default": "[127.0.0.1, localhost]"
+		},
+		{
+			"description": "Metrics network interface to expose metrics for Prometheus Default: 127.0.0.1",
+			"option": "--metrics-interface",
+			"value": "<NETWORK>",
+			"default": "127.0.0.1"
+		},
+		{
+			"description": "Metrics port to expose metrics for Prometheus Default: 8008",
+			"option": "--metrics-port",
+			"value": "<INTEGER>",
+			"default": "8008"
+		},
+		{
+			"description": "Publish metrics for node monitoring to an external service",
+			"option": "--metrics-publish-endpoint",
+			"value": "<URL>"
+		},
+		{
+			"description": "Interval between metric publications to the external service (measured in seconds) Default: 60",
+			"option": "--metrics-publish-interval",
+			"value": "<INTEGER>",
+			"default": "60"
+		},
+		{
+			"description": "Path/filename of the yaml config file (default: none)",
+			"option": "--config-file",
+			"shortcut": "-c",
+			"value": "<FILENAME>"
+		},
+		{
+			"description": "Show this help message and exit.",
+			"option": "--help",
+			"shortcut": "-h"
+		},
+		{
+			"description": "Logging verbosity levels: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL (default: INFO).",
+			"option": "--logging",
+			"shortcut": "-l",
+			"value": "<LOG VERBOSITY LEVEL>"
+		},
+		{
+			"description": "Print version information and exit.",
+			"option": "--version",
+			"shortcut": "-V"
+		},
+		{
+			"description": "The Checkpointz server that will be used to bootstrap this node.",
+			"option": "--checkpoint-sync-url",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Contract address for the deposit contract. Only required when creating a custom network.",
+			"option": "--eth1-deposit-contract-address",
+			"value": "<ADDRESS>"
+		},
+		{
+			"description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+			"option": "--genesis-state",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Allows syncing outside of the weak subjectivity period. Default: false",
+			"option": "--ignore-weak-subjectivity-period-enabled",
+			"value": "[<BOOLEAN>]",
+			"default": "false"
+		},
+		{
+			"description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+			"option": "--initial-state",
+			"value": "<STRING>"
+		},
+		{
+			"description": "Represents which network to use. Default: mainnet",
+			"option": "--network",
+			"shortcut": "-n",
+			"value": "<NETWORK>",
+			"default": "mainnet"
+		}
+	],
+	"name": "/home/ahmad/Downloads/teku-25.2.0/bin/teku",
+	"version": "v25.2.0"
+}

@@ -1,10 +1,10 @@
 {
   "name": "nethogs",
-  "version": "", // Version is not explicitly provided in the manpage
+  "version": "0.8.7-2build2",
   "usage": [
     "nethogs [-V] [-h] [-x] [-d seconds] [-v mode] [-c count] [-t] [-p] [-s] [-a] [-l] [-f filter] [-C] [-b] [-g period] [-P pid] [device(s)]"
   ],
-  "subcommands": [], // No subcommands are present in the manpage
+  "subcommands": [],
   "options": [
     {
       "option": "-V",

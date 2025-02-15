@@ -1,10 +1,10 @@
 {
   "name": "curl",
-  "version": "", // Version is not provided in the help output
+  "version": "8.5.0",
   "usage": [
     "Usage: curl [options...] <url>"
   ],
-  "subcommands": [], // No subcommands are present in the help output
+  "subcommands": [],
   "options": [
     {
       "option": "--abstract-unix-socket",

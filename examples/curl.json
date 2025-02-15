@@ -1,75 +1,2074 @@
 {
-    "name": "curl",
-    "description": "This is not the full help, this menu is stripped into categories. Use \"--help category\" to get an overview of all categories. For all options use the manual or \"--help all\".",
-    "usage": "curl [options...] <url>",
-    "options": [
-        {
-            "option": "--data",
-            "shortcut": "-d",
-            "description": "HTTP POST data",
-            "value": "<data>"
-        },
-        {
-            "option": "--fail",
-            "shortcut": "-f",
-            "description": "Fail fast with no output on HTTP errors"
-        },
-        {
-            "option": "--help",
-            "shortcut": "-h",
-            "description": "Get help for commands",
-            "value": "<category>"
-        },
-        {
-            "option": "--include",
-            "shortcut": "-i",
-            "description": "Include protocol response headers in the output"
-        },
-        {
-            "option": "--output",
-            "shortcut": "-o",
-            "description": "Write to file instead of stdout",
-            "value": "<file>"
-        },
-        {
-            "option": "--remote-name",
-            "shortcut": "-O",
-            "description": "Write output to a file named as the remote file"
-        },
-        {
-            "option": "--silent",
-            "shortcut": "-s",
-            "description": "Silent mode"
-        },
-        {
-            "option": "--upload-file",
-            "shortcut": "-T",
-            "description": "Transfer local FILE to destination",
-            "value": "<file>"
-        },
-        {
-            "option": "--user",
-            "shortcut": "-u",
-            "description": "Server user and password",
-            "value": "<user:password>"
-        },
-        {
-            "option": "--user-agent",
-            "shortcut": "-A",
-            "description": "Send User-Agent <name> to server",
-            "value": "<name>"
-        },
-        {
-            "option": "--verbose",
-            "shortcut": "-v",
-            "description": "Make the operation more talkative"
-        },
-        {
-            "option": "--version",
-            "shortcut": "-V",
-            "description": "Show version number and quit"
-        }
-    ],
-    "subcommands": [],
-    "version": "8.5.0"
+  "name": "curl",
+  "version": "", // Version is not provided in the help output
+  "usage": [
+    "Usage: curl [options...] <url>"
+  ],
+  "subcommands": [], // No subcommands are present in the help output
+  "options": [
+    {
+      "option": "--abstract-unix-socket",
+      "shortcut": "",
+      "description": "Connect via abstract Unix domain socket",
+      "value": "<path>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--alt-svc",
+      "shortcut": "",
+      "description": "Enable alt-svc with this cache file",
+      "value": "<file name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--anyauth",
+      "shortcut": "",
+      "description": "Pick any authentication method",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--append",
+      "shortcut": "-a",
+      "description": "Append to target file when uploading",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--aws-sigv4",
+      "shortcut": "",
+      "description": "Use AWS V4 signature authentication",
+      "value": "<provider1[:provider2[:region[:service]]]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--basic",
+      "shortcut": "",
+      "description": "Use HTTP Basic Authentication",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ca-native",
+      "shortcut": "",
+      "description": "Use CA certificates from the native OS",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cacert",
+      "shortcut": "",
+      "description": "CA certificate to verify peer against",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--capath",
+      "shortcut": "",
+      "description": "CA directory to verify peer against",
+      "value": "<dir>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cert",
+      "shortcut": "-E",
+      "description": "Client certificate file and password",
+      "value": "<certificate[:password]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cert-status",
+      "shortcut": "",
+      "description": "Verify the status of the server cert via OCSP-staple",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cert-type",
+      "shortcut": "",
+      "description": "Certificate type (DER/PEM/ENG/P12)",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ciphers",
+      "shortcut": "",
+      "description": "SSL ciphers to use",
+      "value": "<list of ciphers>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--compressed",
+      "shortcut": "",
+      "description": "Request compressed response",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--compressed-ssh",
+      "shortcut": "",
+      "description": "Enable SSH compression",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--config",
+      "shortcut": "-K",
+      "description": "Read config from a file",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--connect-timeout",
+      "shortcut": "",
+      "description": "Maximum time allowed for connection",
+      "value": "<fractional seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--connect-to",
+      "shortcut": "",
+      "description": "Connect to host",
+      "value": "<HOST1:PORT1:HOST2:PORT2>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--continue-at",
+      "shortcut": "-C",
+      "description": "Resumed transfer offset",
+      "value": "<offset>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cookie",
+      "shortcut": "-b",
+      "description": "Send cookies from string/file",
+      "value": "<data|filename>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--cookie-jar",
+      "shortcut": "-c",
+      "description": "Write cookies to <filename> after operation",
+      "value": "<filename>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--create-dirs",
+      "shortcut": "",
+      "description": "Create necessary local directory hierarchy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--create-file-mode",
+      "shortcut": "",
+      "description": "File mode for created files",
+      "value": "<mode>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--crlf",
+      "shortcut": "",
+      "description": "Convert LF to CRLF in upload",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--crlfile",
+      "shortcut": "",
+      "description": "Use this CRL list",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--curves",
+      "shortcut": "",
+      "description": "(EC) TLS key exchange algorithm(s) to request",
+      "value": "<algorithm list>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--data",
+      "shortcut": "-d",
+      "description": "HTTP POST data",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--data-ascii",
+      "shortcut": "",
+      "description": "HTTP POST ASCII data",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--data-binary",
+      "shortcut": "",
+      "description": "HTTP POST binary data",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--data-raw",
+      "shortcut": "",
+      "description": "HTTP POST data, '@' allowed",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--data-urlencode",
+      "shortcut": "",
+      "description": "HTTP POST data URL encoded",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--delegation",
+      "shortcut": "",
+      "description": "GSS-API delegation permission",
+      "value": "<LEVEL>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--digest",
+      "shortcut": "",
+      "description": "Use HTTP Digest Authentication",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--disable",
+      "shortcut": "-q",
+      "description": "Disable .curlrc",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--disable-eprt",
+      "shortcut": "",
+      "description": "Inhibit using EPRT or LPRT",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--disable-epsv",
+      "shortcut": "",
+      "description": "Inhibit using EPSV",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--disallow-username-in-url",
+      "shortcut": "",
+      "description": "Disallow username in URL",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--dns-interface",
+      "shortcut": "",
+      "description": "Interface to use for DNS requests",
+      "value": "<interface>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--dns-ipv4-addr",
+      "shortcut": "",
+      "description": "IPv4 address to use for DNS requests",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--dns-ipv6-addr",
+      "shortcut": "",
+      "description": "IPv6 address to use for DNS requests",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--dns-servers",
+      "shortcut": "",
+      "description": "DNS server addrs to use",
+      "value": "<addresses>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--doh-cert-status",
+      "shortcut": "",
+      "description": "Verify the status of the DoH server cert via OCSP-staple",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--doh-insecure",
+      "shortcut": "",
+      "description": "Allow insecure DoH server connections",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--doh-url",
+      "shortcut": "",
+      "description": "Resolve host names over DoH",
+      "value": "<URL>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--dump-header",
+      "shortcut": "-D",
+      "description": "Write the received headers to <filename>",
+      "value": "<filename>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--egd-file",
+      "shortcut": "",
+      "description": "EGD socket path for random data",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--engine",
+      "shortcut": "",
+      "description": "Crypto engine to use",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--etag-compare",
+      "shortcut": "",
+      "description": "Pass an ETag from a file as a custom header",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--etag-save",
+      "shortcut": "",
+      "description": "Parse ETag from a request and save it to a file",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--expect100-timeout",
+      "shortcut": "",
+      "description": "How long to wait for 100-continue",
+      "value": "<seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--fail",
+      "shortcut": "-f",
+      "description": "Fail fast with no output on HTTP errors",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--fail-early",
+      "shortcut": "",
+      "description": "Fail on first transfer error, do not continue",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--fail-with-body",
+      "shortcut": "",
+      "description": "Fail on HTTP errors but save the body",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--false-start",
+      "shortcut": "",
+      "description": "Enable TLS False Start",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--form",
+      "shortcut": "-F",
+      "description": "Specify multipart MIME data",
+      "value": "<name=content>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--form-escape",
+      "shortcut": "",
+      "description": "Escape multipart form field/file names using backslash",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--form-string",
+      "shortcut": "",
+      "description": "Specify multipart MIME data",
+      "value": "<name=string>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-account",
+      "shortcut": "",
+      "description": "Account data string",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-alternative-to-user",
+      "shortcut": "",
+      "description": "String to replace USER [name]",
+      "value": "<command>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-create-dirs",
+      "shortcut": "",
+      "description": "Create the remote dirs if not present",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-method",
+      "shortcut": "",
+      "description": "Control CWD usage",
+      "value": "<method>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-pasv",
+      "shortcut": "",
+      "description": "Use PASV/EPSV instead of PORT",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-port",
+      "shortcut": "-P",
+      "description": "Use PORT instead of PASV",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-pret",
+      "shortcut": "",
+      "description": "Send PRET before PASV",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-skip-pasv-ip",
+      "shortcut": "",
+      "description": "Skip the IP address for PASV",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-ssl-ccc",
+      "shortcut": "",
+      "description": "Send CCC after authenticating",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-ssl-ccc-mode",
+      "shortcut": "",
+      "description": "Set CCC mode",
+      "value": "<active/passive>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ftp-ssl-control",
+      "shortcut": "",
+      "description": "Require SSL/TLS for FTP login, clear for transfer",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--get",
+      "shortcut": "-G",
+      "description": "Put the post data in the URL and use GET",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--globoff",
+      "shortcut": "-g",
+      "description": "Disable URL sequences and ranges using {} and []",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--happy-eyeballs-timeout-ms",
+      "shortcut": "",
+      "description": "Time for IPv6 before trying IPv4",
+      "value": "<milliseconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--haproxy-clientip",
+      "shortcut": "",
+      "description": "Sets client IP in HAProxy PROXY protocol v1 header",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--haproxy-protocol",
+      "shortcut": "",
+      "description": "Send HAProxy PROXY protocol v1 header",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--head",
+      "shortcut": "-I",
+      "description": "Show document info only",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--header",
+      "shortcut": "-H",
+      "description": "Pass custom header(s) to server",
+      "value": "<header/@file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Get help for commands",
+      "value": "<category>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--hostpubmd5",
+      "shortcut": "",
+      "description": "Acceptable MD5 hash of the host public key",
+      "value": "<md5>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--hostpubsha256",
+      "shortcut": "",
+      "description": "Acceptable SHA256 hash of the host public key",
+      "value": "<sha256>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--hsts",
+      "shortcut": "",
+      "description": "Enable HSTS with this cache file",
+      "value": "<file name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http0.9",
+      "shortcut": "",
+      "description": "Allow HTTP 0.9 responses",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http1.0",
+      "shortcut": "-0",
+      "description": "Use HTTP 1.0",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http1.1",
+      "shortcut": "",
+      "description": "Use HTTP 1.1",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http2",
+      "shortcut": "",
+      "description": "Use HTTP/2",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http2-prior-knowledge",
+      "shortcut": "",
+      "description": "Use HTTP 2 without HTTP/1.1 Upgrade",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http3",
+      "shortcut": "",
+      "description": "Use HTTP v3",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--http3-only",
+      "shortcut": "",
+      "description": "Use HTTP v3 only",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ignore-content-length",
+      "shortcut": "",
+      "description": "Ignore the size of the remote resource",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--include",
+      "shortcut": "-i",
+      "description": "Include protocol response headers in the output",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--insecure",
+      "shortcut": "-k",
+      "description": "Allow insecure server connections",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--interface",
+      "shortcut": "",
+      "description": "Use network INTERFACE (or address)",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ipfs-gateway",
+      "shortcut": "",
+      "description": "Gateway for IPFS",
+      "value": "<URL>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ipv4",
+      "shortcut": "-4",
+      "description": "Resolve names to IPv4 addresses",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ipv6",
+      "shortcut": "-6",
+      "description": "Resolve names to IPv6 addresses",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--json",
+      "shortcut": "",
+      "description": "HTTP POST JSON",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--junk-session-cookies",
+      "shortcut": "-j",
+      "description": "Ignore session cookies read from file",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--keepalive-time",
+      "shortcut": "",
+      "description": "Interval time for keepalive probes",
+      "value": "<seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--key",
+      "shortcut": "",
+      "description": "Private key file name",
+      "value": "<key>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--key-type",
+      "shortcut": "",
+      "description": "Private key file type (DER/PEM/ENG)",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--krb",
+      "shortcut": "",
+      "description": "Enable Kerberos with security <level>",
+      "value": "<level>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--libcurl",
+      "shortcut": "",
+      "description": "Dump libcurl equivalent code of this command line",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--limit-rate",
+      "shortcut": "",
+      "description": "Limit transfer speed to RATE",
+      "value": "<speed>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--list-only",
+      "shortcut": "-l",
+      "description": "List only mode",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--local-port",
+      "shortcut": "",
+      "description": "Force use of RANGE for local port numbers",
+      "value": "<num/range>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--location",
+      "shortcut": "-L",
+      "description": "Follow redirects",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--location-trusted",
+      "shortcut": "",
+      "description": "Like --location, and send auth to other hosts",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--login-options",
+      "shortcut": "",
+      "description": "Server login options",
+      "value": "<options>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--mail-auth",
+      "shortcut": "",
+      "description": "Originator address of the original email",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--mail-from",
+      "shortcut": "",
+      "description": "Mail from this address",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--mail-rcpt",
+      "shortcut": "",
+      "description": "Mail to this address",
+      "value": "<address>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--mail-rcpt-allowfails",
+      "shortcut": "",
+      "description": "Allow RCPT TO command to fail for some recipients",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--manual",
+      "shortcut": "-M",
+      "description": "Display the full manual",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--max-filesize",
+      "shortcut": "",
+      "description": "Maximum file size to download",
+      "value": "<bytes>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--max-redirs",
+      "shortcut": "",
+      "description": "Maximum number of redirects allowed",
+      "value": "<num>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--max-time",
+      "shortcut": "-m",
+      "description": "Maximum time allowed for transfer",
+      "value": "<fractional seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--metalink",
+      "shortcut": "",
+      "description": "Process given URLs as metalink XML file",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--negotiate",
+      "shortcut": "",
+      "description": "Use HTTP Negotiate (SPNEGO) authentication",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--netrc",
+      "shortcut": "-n",
+      "description": "Must read .netrc for user name and password",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--netrc-file",
+      "shortcut": "",
+      "description": "Specify FILE for netrc",
+      "value": "<filename>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--netrc-optional",
+      "shortcut": "",
+      "description": "Use either .netrc or URL",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--next",
+      "shortcut": "-:",
+      "description": "Make next URL use its separate set of options",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-alpn",
+      "shortcut": "",
+      "description": "Disable the ALPN TLS extension",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-buffer",
+      "shortcut": "-N",
+      "description": "Disable buffering of the output stream",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-clobber",
+      "shortcut": "",
+      "description": "Do not overwrite files that already exist",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-keepalive",
+      "shortcut": "",
+      "description": "Disable TCP keepalive on the connection",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-npn",
+      "shortcut": "",
+      "description": "Disable the NPN TLS extension",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-progress-meter",
+      "shortcut": "",
+      "description": "Do not show the progress meter",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--no-sessionid",
+      "shortcut": "",
+      "description": "Disable SSL session-ID reusing",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--noproxy",
+      "shortcut": "",
+      "description": "List of hosts which do not use proxy",
+      "value": "<no-proxy-list>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ntlm",
+      "shortcut": "",
+      "description": "Use HTTP NTLM authentication",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ntlm-wb",
+      "shortcut": "",
+      "description": "Use HTTP NTLM authentication with winbind",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--oauth2-bearer",
+      "shortcut": "",
+      "description": "OAuth 2 Bearer Token",
+      "value": "<token>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--output",
+      "shortcut": "-o",
+      "description": "Write to file instead of stdout",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--output-dir",
+      "shortcut": "",
+      "description": "Directory to save files in",
+      "value": "<dir>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--parallel",
+      "shortcut": "-Z",
+      "description": "Perform transfers in parallel",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--parallel-immediate",
+      "shortcut": "",
+      "description": "Do not wait for multiplexing (with --parallel)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--parallel-max",
+      "shortcut": "",
+      "description": "Maximum concurrency for parallel transfers",
+      "value": "<num>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--pass",
+      "shortcut": "",
+      "description": "Pass phrase for the private key",
+      "value": "<phrase>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--path-as-is",
+      "shortcut": "",
+      "description": "Do not squash .. sequences in URL path",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--pinnedpubkey",
+      "shortcut": "",
+      "description": "FILE/HASHES Public key to verify peer against",
+      "value": "<hashes>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--post301",
+      "shortcut": "",
+      "description": "Do not switch to GET after following a 301",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--post302",
+      "shortcut": "",
+      "description": "Do not switch to GET after following a 302",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--post303",
+      "shortcut": "",
+      "description": "Do not switch to GET after following a 303",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--preproxy",
+      "shortcut": "",
+      "description": "Use this proxy first",
+      "value": "[protocol://]host[:port]",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--progress-bar",
+      "shortcut": "-#",
+      "description": "Display transfer progress as a bar",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proto",
+      "shortcut": "",
+      "description": "Enable/disable PROTOCOLS",
+      "value": "<protocols>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proto-default",
+      "shortcut": "",
+      "description": "Use PROTOCOL for any URL missing a scheme",
+      "value": "<protocol>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proto-redir",
+      "shortcut": "",
+      "description": "Enable/disable PROTOCOLS on redirect",
+      "value": "<protocols>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy",
+      "shortcut": "-x",
+      "description": "Use this proxy",
+      "value": "[protocol://]host[:port]",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-anyauth",
+      "shortcut": "",
+      "description": "Pick any proxy authentication method",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-basic",
+      "shortcut": "",
+      "description": "Use Basic authentication on the proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-ca-native",
+      "shortcut": "",
+      "description": "Use CA certificates from the native OS for proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-cacert",
+      "shortcut": "",
+      "description": "CA certificate to verify peer against for proxy",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-capath",
+      "shortcut": "",
+      "description": "CA directory to verify peer against for proxy",
+      "value": "<dir>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-cert",
+      "shortcut": "",
+      "description": "Set client certificate for proxy",
+      "value": "<cert[:passwd]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-cert-type",
+      "shortcut": "",
+      "description": "Client certificate type for HTTPS proxy",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-ciphers",
+      "shortcut": "",
+      "description": "SSL ciphers to use for proxy",
+      "value": "<list>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-crlfile",
+      "shortcut": "",
+      "description": "Set a CRL list for proxy",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-digest",
+      "shortcut": "",
+      "description": "Use Digest authentication on the proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-header",
+      "shortcut": "",
+      "description": "Pass custom header(s) to proxy",
+      "value": "<header/@file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-http2",
+      "shortcut": "",
+      "description": "Use HTTP/2 with HTTPS proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-insecure",
+      "shortcut": "",
+      "description": "Do HTTPS proxy connections without verifying the proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-key",
+      "shortcut": "",
+      "description": "Private key for HTTPS proxy",
+      "value": "<key>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-key-type",
+      "shortcut": "",
+      "description": "Private key file type for proxy",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-negotiate",
+      "shortcut": "",
+      "description": "Use HTTP Negotiate (SPNEGO) authentication on the proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-ntlm",
+      "shortcut": "",
+      "description": "Use NTLM authentication on the proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-pass",
+      "shortcut": "",
+      "description": "Pass phrase for the private key for HTTPS proxy",
+      "value": "<phrase>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-pinnedpubkey",
+      "shortcut": "",
+      "description": "FILE/HASHES public key to verify proxy with",
+      "value": "<hashes>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-service-name",
+      "shortcut": "",
+      "description": "SPNEGO proxy service name",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-ssl-allow-beast",
+      "shortcut": "",
+      "description": "Allow security flaw for interop for HTTPS proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-ssl-auto-client-cert",
+      "shortcut": "",
+      "description": "Use auto client certificate for proxy (Schannel)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-tls13-ciphers",
+      "shortcut": "",
+      "description": "TLS 1.3 proxy cipher suites",
+      "value": "<ciphersuite list>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-tlsauthtype",
+      "shortcut": "",
+      "description": "TLS authentication type for HTTPS proxy",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-tlspassword",
+      "shortcut": "",
+      "description": "TLS password for HTTPS proxy",
+      "value": "<string>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-tlsuser",
+      "shortcut": "",
+      "description": "TLS username for HTTPS proxy",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-tlsv1",
+      "shortcut": "",
+      "description": "Use TLSv1 for HTTPS proxy",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy-user",
+      "shortcut": "-U",
+      "description": "Proxy user and password",
+      "value": "<user:password>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxy1.0",
+      "shortcut": "",
+      "description": "Use HTTP/1.0 proxy on given port",
+      "value": "<host[:port]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--proxytunnel",
+      "shortcut": "-p",
+      "description": "Operate through an HTTP proxy tunnel (using CONNECT)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--pubkey",
+      "shortcut": "",
+      "description": "SSH Public key file name",
+      "value": "<key>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--quote",
+      "shortcut": "-Q",
+      "description": "Send command(s) to server before transfer",
+      "value": "<command>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--random-file",
+      "shortcut": "",
+      "description": "File for reading random data from",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--range",
+      "shortcut": "-r",
+      "description": "Retrieve only the bytes within RANGE",
+      "value": "<range>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--rate",
+      "shortcut": "",
+      "description": "Request rate for serial transfers",
+      "value": "<max request rate>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--raw",
+      "shortcut": "",
+      "description": "Do HTTP \"raw\"; no transfer decoding",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--referer",
+      "shortcut": "-e",
+      "description": "Referrer URL",
+      "value": "<URL>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--remote-header-name",
+      "shortcut": "-J",
+      "description": "Use the header-provided filename",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--remote-name",
+      "shortcut": "-O",
+      "description": "Write output to a file named as the remote file",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--remote-name-all",
+      "shortcut": "",
+      "description": "Use the remote file name for all URLs",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--remote-time",
+      "shortcut": "-R",
+      "description": "Set the remote file's time on the local output",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--remove-on-error",
+      "shortcut": "",
+      "description": "Remove output file on errors",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--request",
+      "shortcut": "-X",
+      "description": "Specify request method to use",
+      "value": "<method>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--request-target",
+      "shortcut": "",
+      "description": "Specify the target for this request",
+      "value": "<path>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--resolve",
+      "shortcut": "",
+      "description": "Resolve the host+port to this address",
+      "value": "<[+]host:port:addr[,addr]...>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--retry",
+      "shortcut": "",
+      "description": "Retry request if transient problems occur",
+      "value": "<num>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--retry-all-errors",
+      "shortcut": "",
+      "description": "Retry all errors (use with --retry)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--retry-connrefused",
+      "shortcut": "",
+      "description": "Retry on connection refused (use with --retry)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--retry-delay",
+      "shortcut": "",
+      "description": "Wait time between retries",
+      "value": "<seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--retry-max-time",
+      "shortcut": "",
+      "description": "Retry only within this period",
+      "value": "<seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--sasl-authzid",
+      "shortcut": "",
+      "description": "Identity for SASL PLAIN authentication",
+      "value": "<identity>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--sasl-ir",
+      "shortcut": "",
+      "description": "Enable initial response in SASL authentication",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--service-name",
+      "shortcut": "",
+      "description": "SPNEGO service name",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--show-error",
+      "shortcut": "-S",
+      "description": "Show error even when -s is used",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--silent",
+      "shortcut": "-s",
+      "description": "Silent mode",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks4",
+      "shortcut": "",
+      "description": "SOCKS4 proxy on given host + port",
+      "value": "<host[:port]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks4a",
+      "shortcut": "",
+      "description": "SOCKS4a proxy on given host + port",
+      "value": "<host[:port]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5",
+      "shortcut": "",
+      "description": "SOCKS5 proxy on given host + port",
+      "value": "<host[:port]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5-basic",
+      "shortcut": "",
+      "description": "Enable username/password auth for SOCKS5 proxies",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5-gssapi",
+      "shortcut": "",
+      "description": "Enable GSS-API auth for SOCKS5 proxies",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5-gssapi-nec",
+      "shortcut": "",
+      "description": "Compatibility with NEC SOCKS5 server",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5-gssapi-service",
+      "shortcut": "",
+      "description": "SOCKS5 proxy service name for GSS-API",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--socks5-hostname",
+      "shortcut": "",
+      "description": "SOCKS5 proxy, pass host name to proxy",
+      "value": "<host[:port]>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--speed-limit",
+      "shortcut": "-Y",
+      "description": "Stop transfers slower than this",
+      "value": "<speed>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--speed-time",
+      "shortcut": "-y",
+      "description": "Trigger 'speed-limit' abort after this time",
+      "value": "<seconds>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl",
+      "shortcut": "",
+      "description": "Try SSL/TLS",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl-allow-beast",
+      "shortcut": "",
+      "description": "Allow security flaw to improve interop",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl-auto-client-cert",
+      "shortcut": "",
+      "description": "Use auto client certificate (Schannel)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl-no-revoke",
+      "shortcut": "",
+      "description": "Disable cert revocation checks (Schannel)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl-reqd",
+      "shortcut": "",
+      "description": "Require SSL/TLS",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--ssl-revoke-best-effort",
+      "shortcut": "",
+      "description": "Ignore missing/offline cert CRL dist points (Schannel)",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--sslv2",
+      "shortcut": "-2",
+      "description": "Use SSLv2",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--sslv3",
+      "shortcut": "-3",
+      "description": "Use SSLv3",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--stderr",
+      "shortcut": "",
+      "description": "Where to redirect stderr",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--styled-output",
+      "shortcut": "",
+      "description": "Enable styled output for HTTP headers",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--suppress-connect-headers",
+      "shortcut": "",
+      "description": "Suppress proxy CONNECT response headers",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tcp-fastopen",
+      "shortcut": "",
+      "description": "Use TCP Fast Open",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tcp-nodelay",
+      "shortcut": "",
+      "description": "Use the TCP_NODELAY option",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--telnet-option",
+      "shortcut": "-t",
+      "description": "Set telnet option",
+      "value": "<opt=val>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tftp-blksize",
+      "shortcut": "",
+      "description": "Set TFTP BLKSIZE option",
+      "value": "<value>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tftp-no-options",
+      "shortcut": "",
+      "description": "Do not send any TFTP options",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--time-cond",
+      "shortcut": "-z",
+      "description": "Transfer based on a time condition",
+      "value": "<time>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tls-max",
+      "shortcut": "",
+      "description": "Set maximum allowed TLS version",
+      "value": "<VERSION>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tls13-ciphers",
+      "shortcut": "",
+      "description": "TLS 1.3 cipher suites to use",
+      "value": "<ciphersuite list>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsauthtype",
+      "shortcut": "",
+      "description": "TLS authentication type",
+      "value": "<type>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlspassword",
+      "shortcut": "",
+      "description": "TLS password",
+      "value": "<string>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsuser",
+      "shortcut": "",
+      "description": "TLS user name",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsv1",
+      "shortcut": "-1",
+      "description": "Use TLSv1.0 or greater",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsv1.0",
+      "shortcut": "",
+      "description": "Use TLSv1.0 or greater",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsv1.1",
+      "shortcut": "",
+      "description": "Use TLSv1.1 or greater",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsv1.2",
+      "shortcut": "",
+      "description": "Use TLSv1.2 or greater",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tlsv1.3",
+      "shortcut": "",
+      "description": "Use TLSv1.3 or greater",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--tr-encoding",
+      "shortcut": "",
+      "description": "Request compressed transfer encoding",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--trace",
+      "shortcut": "",
+      "description": "Write a debug trace to FILE",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--trace-ascii",
+      "shortcut": "",
+      "description": "Like --trace, but without hex output",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--trace-config",
+      "shortcut": "",
+      "description": "Details to log in trace/verbose output",
+      "value": "<string>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--trace-ids",
+      "shortcut": "",
+      "description": "Add transfer and connection identifiers to trace/verbose output",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--trace-time",
+      "shortcut": "",
+      "description": "Add time stamps to trace/verbose output",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--unix-socket",
+      "shortcut": "",
+      "description": "Connect through this Unix domain socket",
+      "value": "<path>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--upload-file",
+      "shortcut": "-T",
+      "description": "Transfer local FILE to destination",
+      "value": "<file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--url",
+      "shortcut": "",
+      "description": "URL to work with",
+      "value": "<url>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--url-query",
+      "shortcut": "",
+      "description": "Add a URL query part",
+      "value": "<data>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--use-ascii",
+      "shortcut": "-B",
+      "description": "Use ASCII/text transfer",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--user",
+      "shortcut": "-u",
+      "description": "Server user and password",
+      "value": "<user:password>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--user-agent",
+      "shortcut": "-A",
+      "description": "Send User-Agent <name> to server",
+      "value": "<name>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--variable",
+      "shortcut": "",
+      "description": "Set variable",
+      "value": "<[%]name=text/@file>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "Make the operation more talkative",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Show version number and quit",
+      "value": null,
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--write-out",
+      "shortcut": "-w",
+      "description": "Use output FORMAT after completion",
+      "value": "<format>",
+      "default": null,
+      "section": null
+    },
+    {
+      "option": "--xattr",
+      "shortcut": "",
+      "description": "Store metadata in extended file attributes",
+      "value": null,
+      "default": null,
+      "section": null
+    }
+  ]
 }

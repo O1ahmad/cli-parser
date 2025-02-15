@@ -1,0 +1,218 @@
+{
+  "name": "lsof",
+  "version": "4.95.0",
+  "usage": [
+    "lsof  [  -?abChlnNOPQRtUvVX  ]  [ -A A ] [ -c c ] [ +c c ] [ +|-d d ] [ +|-D D ] [ +|-e s ] [ +|-E ] [ +|-f [cfgGn] ] [ -F [f] ] [ -g [s] ] [ -i [i] ] [ -k k ] [ -K k ] [ +|-L [l] ] [ +|-m m ] [ +|-M  ]  [ -o  [o] ] [ -p s ] [ +|-r [t[m<fmt>]] ] [ -s [p:s] ] [ -S [t] ] [ -T [t] ] [ -u s ] [ +|-w ] [ -x [fl] ] [ -z [z] ] [ -Z [Z] ] [ -- ] [names]"
+  ],
+  "description": ":",
+  "options": [
+    {
+      "option": "--",
+      "description": "      The  double  minus sign option is a marker that signals the end of the keyed options.  It may"
+    },
+    {
+      "option": "-A",
+      "description": "A     is available on systems configured for AFS whose AFS kernel code is implemented  via  dynamic"
+    },
+    {
+      "option": "-C",
+      "description": "      disables  the  reporting  of  any path name components from the kernel's name cache.  See the"
+    },
+    {
+      "option": "-D",
+      "description": "D     directs lsof's use of the device cache file.  The use of this option is sometimes restricted."
+    },
+    {
+      "option": "-D",
+      "description": "must be followed by a function letter; the function letter may optionally be followed by a"
+    },
+    {
+      "option": "-E",
+      "description": "specifies that endpoint supported files should be displayed with endpoint information, but"
+    },
+    {
+      "option": "-F",
+      "description": "f     specifies a character list, f, that selects the fields to be output for processing by another"
+    },
+    {
+      "option": "-F0",
+      "description": "option pair selects the output of all fields with NUL  terminators).   For  compatibility  reasons"
+    },
+    {
+      "option": "-K",
+      "description": "k     selects  the listing of tasks (threads) of processes, on dialects where task (thread) report\u2010"
+    },
+    {
+      "option": "-N",
+      "description": "      selects the listing of NFS files."
+    },
+    {
+      "option": "-O",
+      "description": "      directs lsof to bypass the strategy it uses to avoid being blocked by some kernel  operations"
+    },
+    {
+      "option": "-P",
+      "description": "      inhibits the conversion of port numbers to port names for network files.  Inhibiting the con\u2010"
+    },
+    {
+      "option": "-Q",
+      "description": "      ignore  failed search terms. When lsof is told to search for users of a file, or for users of"
+    },
+    {
+      "option": "-Q",
+      "description": ":"
+    },
+    {
+      "option": "-R",
+      "description": "      directs lsof to list the Parent Process IDentification number in the PPID column."
+    },
+    {
+      "option": "-R",
+      "description": "option has been specified."
+    },
+    {
+      "option": "-S",
+      "description": "[t]   specifies an optional time-out seconds value for kernel functions  -  lstat(2),  readlink(2),"
+    },
+    {
+      "option": "-S",
+      "description": "[t] option.  The minimum for t is two seconds, but you should avoid small values, since slow system"
+    },
+    {
+      "option": "-S,",
+      "description": "-T, -x and -z.  when you have no values for them be careful that the following character isn't am\u2010"
+    },
+    {
+      "option": "-T",
+      "description": "[t]   controls  the  reporting  of some TCP/TPI information, also reported by netstat(1), following"
+    },
+    {
+      "option": "-T",
+      "description": "with no following key characters disables TCP/TPI information reporting."
+    },
+    {
+      "option": "-T",
+      "description": "with following characters selects the reporting of specific TCP/TPI information:"
+    },
+    {
+      "option": "-T",
+      "description": "option will show what TCP/TPI reporting can be"
+    },
+    {
+      "option": "-U",
+      "description": "is specified for the listing of UNIX socket files, NFS files won't be  listed  unless  -N  is  also"
+    },
+    {
+      "option": "-U",
+      "description": "      selects the listing of UNIX domain socket files."
+    },
+    {
+      "option": "-V",
+      "description": "      directs  lsof  to indicate the items it was asked to list and failed to find - command names,"
+    },
+    {
+      "option": "-X",
+      "description": "      This is a dialect-specific option."
+    },
+    {
+      "option": "-Z",
+      "description": "[Z]   specifies how SELinux security contexts are to be handled.  It and 'Z' field output character"
+    },
+    {
+      "option": "-a",
+      "description": "      causes list selection options to be ANDed, as described above."
+    },
+    {
+      "option": "-b",
+      "description": "      causes lsof to avoid kernel functions that might block - lstat(2), readlink(2), and stat(2)."
+    },
+    {
+      "option": "-c",
+      "description": "c     selects the listing of files for processes executing the command that begins with the charac\u2010"
+    },
+    {
+      "option": "-d",
+      "description": "s     specifies a list of file descriptors (FDs) to exclude from or include in the output  listing."
+    },
+    {
+      "option": "-g",
+      "description": "[s]   excludes or selects the listing of files for the processes whose optional process group IDen\u2010"
+    },
+    {
+      "option": "-i",
+      "description": "[i]   selects  the  listing of files any of whose Internet address matches the address specified in"
+    },
+    {
+      "option": "-i6",
+      "description": "- IPv6 only"
+    },
+    {
+      "option": "-iTCP",
+      "description": "-sTCP:LISTEN"
+    },
+    {
+      "option": "-iUDP",
+      "description": "-sUDP:^Idle"
+    },
+    {
+      "option": "-k",
+      "description": "k     specifies a kernel name list file, k, in place of /vmunix, /mach, etc.  -k is  not  available"
+    },
+    {
+      "option": "-l",
+      "description": "      inhibits the conversion of user ID numbers to login names.  It is also useful when login name"
+    },
+    {
+      "option": "-n",
+      "description": "      inhibits  the conversion of network numbers to host names for network files.  Inhibiting con\u2010"
+    },
+    {
+      "option": "-o",
+      "description": "      directs lsof to display file offset at all times.  It causes the SIZE/OFF output column title"
+    },
+    {
+      "option": "-o",
+      "description": "o     defines the number of decimal digits (o) to be printed after the ``0t'' for a file offset be\u2010"
+    },
+    {
+      "option": "-o",
+      "description": "-o 10"
+    },
+    {
+      "option": "-oo10",
+      "description": ""
+    },
+    {
+      "option": "-p",
+      "description": "s     excludes or selects the listing of files for the processes whose optional process IDentifica\u2010"
+    },
+    {
+      "option": "-s",
+      "description": "[p:s] s alone directs lsof to display file size at all times.  It causes the SIZE/OFF output column"
+    },
+    {
+      "option": "-t",
+      "description": "      produce terse output comprising only process identifiers (without a header), so  that  it  is"
+    },
+    {
+      "option": "-u",
+      "description": "s     selects  the  listing  of  files for the user whose login names or user ID numbers are in the"
+    },
+    {
+      "option": "-v",
+      "description": "      selects  the  listing  of lsof version information, including: revision number; when the lsof"
+    },
+    {
+      "option": "-w",
+      "description": "option, but if you do, you won't see the alternate device numbers reported in the warning messages."
+    },
+    {
+      "option": "-x",
+      "description": "[fl]  may accompany the +d and +D options to direct their processing to cross over  symbolic  links"
+    },
+    {
+      "option": "-z",
+      "description": "[z]   specifies how Solaris 10 and higher zone information is to be handled."
+    }
+  ]
+}

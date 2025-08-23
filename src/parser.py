@@ -143,8 +143,12 @@ def analyze_binary_help(binary, parent=None):
 
     result = analyze_output(binary, help_output, "help")
     if result:
-        result = json.loads(result)
-        result['name'] = f"{binary} {parent}" if parent else binary
+        try:
+            result = json.loads(result)
+            result['name'] = f"{binary} {parent}" if parent else binary
+        except json.JSONDecodeError as e:
+            print(f"JSON decoding error in AI response for {binary} {parent}: {e}")
+            return {'name': f"{binary} {parent}" if parent else binary, 'subcommands': [], 'options': []}
 
         # Analyze subcommands recursively
         subcommands = []

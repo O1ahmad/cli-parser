@@ -83,7 +83,7 @@
         "3.3.5"
       ],
       "image_name": "docker.io/apache/hadoop",
-      "docker_help_command": "hadoop version"
+      "docker_help_command": "hadoop --help"
     },
     {
       "name": "Flink",
@@ -237,7 +237,7 @@
         "9.0.110-jre8-temurin-noble"
       ],
       "image_name": "docker.io/tomcat",
-      "docker_help_command": "catalina.sh version"
+      "docker_help_command": "catalina.sh --help"
     },
     {
       "name": "Maven",
@@ -272,7 +272,7 @@
         "4.0.0-rc-4-ibm-semeru-17-noble"
       ],
       "image_name": "docker.io/maven",
-      "docker_help_command": "mvn --version"
+      "docker_help_command": "mvn --help"
     },
     {
       "name": "Ant",
@@ -309,7 +309,7 @@
         "jdk-lts-and-current-noble"
       ],
       "image_name": "docker.io/gradle",
-      "docker_help_command": "gradle --version"
+      "docker_help_command": "gradle --help"
     },
     {
       "name": "Skywalking",
@@ -455,7 +455,7 @@
         "1.3.0-rocky"
       ],
       "image_name": "docker.io/apache/ozone",
-      "docker_help_command": "ozone version"
+      "docker_help_command": "ozone --help"
     },
     {
       "name": "Bookkeeper",
@@ -616,7 +616,7 @@
         "9.8.1"
       ],
       "image_name": "docker.io/solr",
-      "docker_help_command": "solr version"
+      "docker_help_command": "solr --help"
     },
     {
       "name": "Lucene",

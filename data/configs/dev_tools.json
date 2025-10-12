@@ -500,7 +500,7 @@
       "category": "Database",
       "homepage": "https://www.mysql.com/",
       "image_name": "docker.io/mysql",
-      "docker_help_command": "mysql --version",
+      "docker_help_command": "mysql --help",
       "image_tags": [
         "latest",
         "8.0.43-debian",
@@ -1058,7 +1058,7 @@
       "category": "Observability",
       "homepage": "https://grafana.com/",
       "image_name": "docker.io/grafana/grafana",
-      "docker_help_command": "--version",
+      "docker_help_command": "grafana-server --help",
       "image_tags": [
         "latest",
         "main-ubuntu",
@@ -2607,7 +2607,7 @@
       "category": "Observability",
       "homepage": "https://grafana.com/docs/loki/latest/send-data/promtail/",
       "image_name": "docker.io/grafana/promtail",
-      "docker_help_command": "-version",
+      "docker_help_command": "--help",
       "image_tags": [
         "latest",
         "main-f18c62e",

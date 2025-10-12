@@ -25,6 +25,7 @@
       "homepage": "https://kafka.apache.org/",
       "github_releases": [],
       "image_tags": [
+        "latest",
         "4.0.1",
         "4.0.1-rc2",
         "4.1.0",
@@ -33,8 +34,7 @@
         "4.0.1-rc0",
         "4.1.0-rc2",
         "4.1.0-rc1",
-        "4.1.0-rc0",
-        "3.9.1"
+        "4.1.0-rc0"
       ],
       "image_name": "docker.io/apache/kafka",
       "docker_help_command": "/opt/kafka/bin/kafka-broker-api-versions.sh --help"
@@ -49,6 +49,7 @@
       "homepage": "https://spark.apache.org/",
       "github_releases": [],
       "image_tags": [
+        "latest",
         "4.1.0-preview2-scala2.13-java21-python3-r-ubuntu",
         "4.1.0-preview2-java21-r",
         "4.1.0-preview2-scala2.13-java21-r-ubuntu",
@@ -57,8 +58,7 @@
         "4.1.0-preview2-scala2.13-java21-python3-ubuntu",
         "4.1.0-preview2",
         "4.1.0-preview2-python3",
-        "4.1.0-preview2-scala2.13-java17-python3-ubuntu",
-        "4.1.0-preview2-java21-scala"
+        "4.1.0-preview2-scala2.13-java17-python3-ubuntu"
       ],
       "image_name": "docker.io/apache/spark"
     },
@@ -95,6 +95,7 @@
       "homepage": "https://flink.apache.org/",
       "github_releases": [],
       "image_tags": [
+        "latest",
         "java21",
         "2.1-java21",
         "2.1.0-java21",
@@ -103,8 +104,7 @@
         "2.1.0-scala_2.12-java21",
         "java11",
         "2.1-java11",
-        "2.1.0-java11",
-        "scala_2.12-java11"
+        "2.1.0-java11"
       ],
       "image_name": "docker.io/apache/flink",
       "docker_help_command": "flink --help"
@@ -142,8 +142,15 @@
       "github_releases": [],
       "image_tags": [
         "latest",
-        "5.0",
-        "4.1"
+        "4.1.10-jammy",
+        "4.1-jammy",
+        "4.1",
+        "4.0.18-jammy",
+        "4.0-jammy",
+        "4.0",
+        "4",
+        "3.11.19-jammy",
+        "3.11-jammy"
       ],
       "image_name": "docker.io/cassandra",
       "docker_help_command": "nodetool help"
@@ -194,8 +201,15 @@
       "github_releases": [],
       "image_tags": [
         "latest",
-        "2.4",
-        "2.4.62"
+        "alpine3.22",
+        "alpine",
+        "2.4.65-alpine3.22",
+        "2.4.65-alpine",
+        "2.4-alpine3.22",
+        "2.4-alpine",
+        "2-alpine3.22",
+        "2-alpine",
+        "trixie"
       ],
       "image_name": "docker.io/httpd",
       "docker_help_command": "httpd -v"
@@ -210,9 +224,16 @@
       "homepage": "https://tomcat.apache.org/",
       "github_releases": [],
       "image_tags": [
-        "latest",
-        "11.0",
-        "10.1"
+        "jre25-temurin-noble",
+        "jre25-temurin",
+        "jre25",
+        "jre21-temurin-noble",
+        "jre21-temurin",
+        "jre21",
+        "jre17-temurin-noble",
+        "jre17-temurin",
+        "jre17",
+        "9.0.110-jre8-temurin-noble"
       ],
       "image_name": "docker.io/tomcat",
       "docker_help_command": "catalina.sh version"
@@ -239,8 +260,15 @@
       ],
       "image_tags": [
         "latest",
-        "3.9",
-        "3.9.9"
+        "sapmachine",
+        "ibmjava",
+        "eclipse-temurin",
+        "4.0.0-rc-4-sapmachine-25",
+        "4.0.0-rc-4-sapmachine-21",
+        "4.0.0-rc-4-sapmachine-17",
+        "4.0.0-rc-4-sapmachine",
+        "4.0.0-rc-4-ibm-semeru-21-noble",
+        "4.0.0-rc-4-ibm-semeru-17-noble"
       ],
       "image_name": "docker.io/maven",
       "docker_help_command": "mvn --version"
@@ -268,8 +296,15 @@
       "github_releases": [],
       "image_tags": [
         "latest",
-        "8.12",
-        "8.11"
+        "noble",
+        "jdk25-noble",
+        "jdk25",
+        "jdk21-noble",
+        "jdk21",
+        "jdk17-noble",
+        "jdk17",
+        "jdk-noble",
+        "jdk-lts-and-current-noble"
       ],
       "image_name": "docker.io/gradle",
       "docker_help_command": "gradle --version"
@@ -344,7 +379,14 @@
       "image_tags": [
         "latest",
         "4.1.1",
-        "4.0.7"
+        "4.0.7",
+        "3.3.9",
+        "3.0.14",
+        "4.1.0",
+        "4.0.6",
+        "3.3.8",
+        "3.0.13",
+        "3.3.7"
       ],
       "image_name": "docker.io/apachepulsar/pulsar",
       "docker_help_command": "pulsar-admin --help"
@@ -554,8 +596,15 @@
       "github_releases": [],
       "image_tags": [
         "latest",
-        "9.7",
-        "9.6"
+        "slim",
+        "9.9.0-slim",
+        "9.9.0",
+        "9.9-slim",
+        "9.9",
+        "9-slim",
+        "9",
+        "9.8.1-slim",
+        "9.8.1"
       ],
       "image_name": "docker.io/solr",
       "docker_help_command": "solr version"

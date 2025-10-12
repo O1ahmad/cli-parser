@@ -51,16 +51,16 @@
         "1.0.5"
       ],
       "image_tags": [
-        "2.5.0-jdk17",
-        "2.5.0-ubuntu-jdk-17",
-        "2.5.14-jdk17",
-        "2.5.4-ubuntu-jdk-17",
-        "2.5.14-ubuntu-jdk-17",
-        "2.5.4-jdk17",
-        "3.2.0-ubuntu-jdk-17",
-        "3.2.0-jdk17",
+        "2.5.17-ubuntu-jdk-17",
         "2.5.17-jdk17",
-        "2.5.17-ubuntu-jdk-17"
+        "2.5.14-ubuntu-jdk-17",
+        "2.5.14-jdk17",
+        "2.5.8-jdk17",
+        "2.5.8-ubuntu-jdk-17",
+        "2.5.0-ubuntu-jdk-17",
+        "2.5.0-jdk17",
+        "3.2.0-ubuntu-jdk-17",
+        "3.2.0-jdk17"
       ],
       "image_name": "docker.io/atlassian/bitbucket-mesh"
     },
@@ -110,6 +110,7 @@
         "v2.2.0"
       ],
       "image_tags": [
+        "latest",
         "v2.2.2",
         "v2.4.2",
         "v2.1.2",
@@ -118,8 +119,7 @@
         "v2.4.0",
         "v2.3.1",
         "v2.2.1",
-        "v2.3.0",
-        "v2.2.0"
+        "v2.3.0"
       ],
       "image_name": "docker.io/antrea/antrea-windows"
     },
@@ -144,12 +144,16 @@
         "v3.0.17"
       ],
       "image_tags": [
-        "v3.0.19",
-        "v2.14.20",
-        "v3.1.8",
-        "v3.1.7",
-        "v3.0.18",
-        "v2.14.19"
+        "sha256-81ff37e05b00d192ff4afae7a200906e9c257ea39956a1320dc4ec4a6c35cbb0.sig",
+        "latest",
+        "sha256-3b5f214e26f7f44db23a1ff92dbe2cbeb1e3da229263fd46dca7028d4951d7c9.sig",
+        "latest",
+        "sha256-02b4e8987fd3757a321f45f6fcff218c67127c1ea93b5213132aa68c47a8612f.sig",
+        "latest",
+        "sha256-1aad647dc3332dfa3f0ad9475aa7898b41c24c14612e0fc83b39f3e7813bc137.att",
+        "sha256-1aad647dc3332dfa3f0ad9475aa7898b41c24c14612e0fc83b39f3e7813bc137.sig",
+        "v3.2.0-rc3",
+        "sha256-b88123c03797435e82053b9eca68f772b25620eb9050bee4f5f94efc8e2df09c.sig"
       ],
       "image_name": "quay.io/argoproj/argocd",
       "docker_help_command": "/usr/local/bin/argocd --help"
@@ -210,6 +214,14 @@
         "v1.12.0"
       ],
       "image_tags": [
+        "hashicorp",
+        "dbmigrator",
+        "trivy",
+        "kubectl",
+        "artifacthubhub",
+        "artifacthubtracker",
+        "artifacthubscanner",
+        "minideb",
         "postgres12"
       ],
       "image_name": "quay.io/vijaysriraman/artifact-hub",
@@ -236,6 +248,7 @@
         "v1.12.18"
       ],
       "image_tags": [
+        "latest",
         "v1.7.29",
         "v1.7.27",
         "v1.7.25",
@@ -244,8 +257,7 @@
         "v1.7.21",
         "v1.7.20",
         "v1.7.12",
-        "v1.7.11",
-        "v1.7.10"
+        "v1.7.11"
       ],
       "image_name": "docker.io/athenz/athenz",
       "docker_help_command": "/opt/athenz/athenz-zts-1.7.29/bin/zts --help"
@@ -271,6 +283,7 @@
         "v0.28.5"
       ],
       "image_tags": [
+        "latest",
         "v0.18.4",
         "v0.18.3",
         "v0.18.2",
@@ -279,8 +292,7 @@
         "v0.17.6",
         "v0.17.5",
         "v0.17.4",
-        "v0.17.3",
-        "v0.17.2"
+        "v0.17.3"
       ],
       "image_name": "docker.io/runatlantis/atlantis",
       "docker_help_command": "/usr/local/bin/atlantis --help"
@@ -306,6 +318,7 @@
         "v1.43.0-next.1"
       ],
       "image_tags": [
+        "0.85.0-370685c35c3965d0920c68cb62846e63c08b8b1f",
         "0.85.0-f8aabdae505b66f2cf1763abc046ed12ba241e55",
         "0.85.0-687597efdf94e39ddf97c0d5275dd329c0eb0615",
         "0.85.0-c7a712c0b16111167fc514580e275d9e7f5a7ca5",
@@ -314,8 +327,7 @@
         "0.85.0-bb59748565071c6c60170c57144ae6fc57a9661c",
         "0.85.0-c930bcf4cb6933a307e57a31b5c18b9834835687",
         "0.85.0-7bedf2ed5ffc17ec5d3d4cac45ea5bd3dc51b775",
-        "0.85.0-206c25a1f7a69f33d892c393e5fcbf7e5a40ee22",
-        "0.85.0-265e32a607ec0b1e24676ef8119ccaa76e486944"
+        "0.85.0-206c25a1f7a69f33d892c393e5fcbf7e5a40ee22"
       ],
       "image_name": "docker.io/giantswarm/backstage",
       "docker_help_command": "--help"
@@ -341,6 +353,8 @@
         "1.20.2"
       ],
       "image_tags": [
+        "latest",
+        "1.20.0-dev.1",
         "1.19.0",
         "1.18.0",
         "1.17.0",
@@ -348,9 +362,7 @@
         "1.15.3",
         "1.15.2",
         "1.15.1",
-        "1.15.0",
-        "1.14.4",
-        "1.14.3"
+        "1.15.0"
       ],
       "image_name": "docker.io/banzaicloud/bank-vaults",
       "docker_help_command": "/usr/local/bin/bank-vaults help"
@@ -376,6 +388,7 @@
         "v0.12.0"
       ],
       "image_tags": [
+        "latest",
         "v-1.6.0",
         "v-1.5.0",
         "v-1.3.0",
@@ -408,16 +421,16 @@
         "v1.2.0"
       ],
       "image_tags": [
+        "latest",
         "0.34.3",
         "25178221",
+        "latest-arm64",
         "0.34.3-arm64",
         "25178221-arm64",
+        "latest-amd64",
         "0.34.3-amd64",
         "25178221-amd64",
-        "renovate-debian-trixie-slim-arm64",
-        "renovate-debian-trixie-slim-amd64",
-        "1a6485e8",
-        "1a6485e8-arm64"
+        "renovate-debian-trixie-slim"
       ],
       "image_name": "docker.io/bootc/oxidized"
     },
@@ -477,16 +490,16 @@
         "v2.4.0-rc.1"
       ],
       "image_tags": [
-        "v0.18.0-52-g61e67c8",
-        "b67e7f9",
-        "608a44b-dirty",
-        "v0.19.0-29-gb6e9ee5",
-        "14972d9-dirty",
-        "v1.0.0-31-g87f45d5",
-        "e2ac402-dirty",
-        "697a29a",
-        "8d8af75-dirty",
-        "8d8af75"
+        "edge",
+        "9892e55",
+        "1abbbcd",
+        "a35ebb5",
+        "943d43e",
+        "latest",
+        "v1.3.1-vdicetest",
+        "v1.3.2-vdicetest",
+        "b4c1482",
+        "865dfb1"
       ],
       "image_name": "quay.io/vdice/brigade-worker"
     },
@@ -511,16 +524,16 @@
         "v0.36.1"
       ],
       "image_tags": [
+        "all",
         "essential-5",
         "nodejs-5",
         "all-5",
+        "essential",
         "scala-2.11.7",
         "java8-jdk",
         "typesafe-activator-1.3.7",
         "java8jdk",
-        "java7-jdk",
-        "scala2.10.5",
-        "java7jdk"
+        "java7-jdk"
       ],
       "image_name": "docker.io/codefresh/buildpacks",
       "docker_help_command": "pack --help"
@@ -529,7 +542,7 @@
       "name": "Cadence Workflow",
       "description": "Cadence is a distributed, scalable, durable, and highly available fault-oblivious stateful code platform.",
       "github_release_url": "https://api.github.com/repos/cadence-workflow/cadence/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnami/argo-workflow-exec/tags/?page=1&page_size=100",
+      "docker_tags_url": "https://hub.docker.com/v2/repositories/ubercadence/server/tags/?page=1&page_size=100",
       "readme": "https://github.com/cadence-workflow/cadence/blob/main/README.md",
       "category": "Provisioning",
       "homepage": "https://cadenceworkflow.io/",
@@ -545,8 +558,20 @@
         "v1.2.19-prerelease07",
         "v1.2.19-prerelease06"
       ],
-      "image_tags": [],
-      "image_name": "docker.io/bitnami/argo-workflow-exec"
+      "image_tags": [
+        "master-auto-setup",
+        "master",
+        "v1.3.5-auto-setup",
+        "v1.3.5",
+        "v1.3.4-auto-setup",
+        "v1.3.4",
+        "v1.3.3-auto-setup",
+        "v1.3.3",
+        "v1.3.2-auto-setup",
+        "v1.3.2"
+      ],
+      "image_name": "docker.io/ubercadence/server",
+      "notes": "Changed to correct Uber Cadence repository"
     },
     {
       "name": "Capsule",
@@ -569,6 +594,8 @@
         "v0.10.0"
       ],
       "image_tags": [
+        "latest",
+        "jjlakis",
         "v0.3.3",
         "v0.3.2",
         "v0.3.1",
@@ -576,9 +603,7 @@
         "v0.2.2",
         "v0.2.1",
         "v0.2.0",
-        "v0.1.3",
-        "v0.1.2",
-        "v0.1.1"
+        "v0.1.3"
       ],
       "image_name": "docker.io/clastix/capsule",
       "docker_help_command": "/manager --help"
@@ -602,16 +627,16 @@
         "v0.9.0"
       ],
       "image_tags": [
-        "v1.14.1",
-        "v1.9.2",
-        "v1.11.6",
-        "v1.10.2",
-        "v1.15.5-OP-22464-3",
-        "v1.15.5-OP-22464-wdh",
-        "v1.9.6",
-        "v1.12.9",
-        "v1.12.8",
-        "v1.9.4"
+        "v1.15.8",
+        "latest",
+        "v0.0.0-profiling-3",
+        "latest",
+        "v1.15.7-rc6",
+        "v1.15.7-rc5",
+        "v1.15.7-rc4",
+        "v1.15.7-rc3",
+        "v1.15.7-rc2",
+        "v1.15.7-rc1"
       ],
       "image_name": "quay.io/opsmxpublic/carina-instance",
       "docker_help_command": "help"
@@ -637,6 +662,7 @@
         "0.110.0"
       ],
       "image_tags": [
+        "latest",
         "0.61.0",
         "0.60.0",
         "0.59.0",
@@ -645,8 +671,7 @@
         "0.55.0",
         "0.54.0",
         "0.53.0",
-        "0.52.0",
-        "0.51.0"
+        "0.52.0"
       ],
       "image_name": "docker.io/williamjackson/cartography",
       "docker_help_command": "--help"
@@ -672,10 +697,16 @@
         "v0.46.5"
       ],
       "image_tags": [
+        "sha256-a9ae3513be8b8fa5c66ce76dc5cb72ece3bf937e151e950e6186565d844d4b57.imgpkg",
         "build-1726626553",
         "build-1726622582",
+        "sha256-76eb96ab971a0c71faa234aaa35c21c34c4d83a0e7d7a91369d441f9a96a0367.imgpkg",
         "build-1726207783",
-        "build-1726120433"
+        "sha256-83c1c12848b308fe0e320269a5af4fb875011f89f33f76c5c739494b395c8f2d.imgpkg",
+        "sha256-76eb96ab971a0c71faa234aaa35c21c34c4d83a0e7d7a91369d441f9a96a0367.image-locations.imgpkg",
+        "sha256-b914032ef9adfd1c498715dfb6c150508344a4b175ddd9d489e9a57fd0f26a06.imgpkg",
+        "sha256-a61c7022abcfa53e2c9c402e03c674c06ada59d19c3790d0640c903f7af5e900.imgpkg",
+        "sha256-cfd03da61658004f1615e5401ba8bde3cc4ba3f87afff0ed8875c5d1b0b09e4a.imgpkg"
       ],
       "image_name": "docker.io/luwang8494/carvel"
     },
@@ -700,16 +731,16 @@
         "v1.0.0-beta.2"
       ],
       "image_tags": [
+        "latest",
+        "nightly",
+        "main",
         "3.45.4",
         "3.45.4-windows-ltsc2019",
         "3.45.4-windows-ltsc2022",
         "3.45.3",
         "3.45.3-windows-ltsc2019",
         "3.45.3-windows-ltsc2022",
-        "3.45.2",
-        "3.45.2-windows-ltsc2019",
-        "3.45.2-windows-ltsc2022",
-        "3.45.1"
+        "3.45.2"
       ],
       "image_name": "docker.io/newrelic/nri-kubernetes"
     },
@@ -734,16 +765,16 @@
         "v1.12.17"
       ],
       "image_tags": [
-        "v1.15.1",
-        "v1.16.2",
-        "v1.18.1",
-        "v1.16.1",
-        "v1.15.0",
+        "sha256-f9d0d0d8179da47417d2637f4f42070973d7b49d6efa04600cdcf53c5e695074.sig",
+        "v1.19.0",
+        "sha256-46bb1008d740832ddaafc9edc63050f0229ae707c6cce4f8b9fe024742841f9f.sig",
+        "v1.19.0-alpha.0",
+        "sha256-189920e5752ec7d56a6329347969d847bfd867c07119873c849f300795a0be7b.sig",
         "v1.17.4",
+        "sha256-81316365dc0b713eddddfbf9b8907b2939676e6c0e12beec0f9625f202a36d16.sig",
         "v1.18.2",
-        "v1.15.2",
-        "v1.15.4",
-        "v1.17.3"
+        "sha256-aed7274ed7007d8be144253978807453391d2b8b3a634ef9a6eb4e720f866239.sig",
+        "v1.18.1"
       ],
       "image_name": "quay.io/jetstack/cert-manager-controller",
       "docker_help_command": "/app/cmd/controller/controller --help"
@@ -769,6 +800,7 @@
         "v2.6.3"
       ],
       "image_tags": [
+        "latest",
         "v2.0.7",
         "v2.0.6",
         "v2.0.5",
@@ -777,8 +809,7 @@
         "v2.0.3",
         "v2.0.2",
         "v2.0.1",
-        "v1.2.3",
-        "v2.0.0"
+        "v1.2.3"
       ],
       "image_name": "docker.io/pingcap/chaos-mesh",
       "docker_help_command": "/bin/sh --help"
@@ -830,16 +861,16 @@
         "v1.17.6"
       ],
       "image_tags": [
+        "sha256-202e41af73c0b8b772d1847c67b4d3f7d13f075fae16fa4ad9f6edd553d4f6f4.att",
+        "sha256-202e41af73c0b8b772d1847c67b4d3f7d13f075fae16fa4ad9f6edd553d4f6f4.sig",
+        "v1.19.0-pre.1",
+        "sha256-da1d782d53969c5ccf34112a11c65b07a5728da6533c1361bc25621e32cde9ef.sig",
+        "sha256-c0fa87d70a7ba624fbe581d40a7b7e9e8773a6efd4bb17d0bd14ff854039ec75.sbom",
+        "sha256-c0fa87d70a7ba624fbe581d40a7b7e9e8773a6efd4bb17d0bd14ff854039ec75.sig",
         "v1.16.15",
-        "v1.17.8",
-        "v1.18.2",
-        "v1.18.1",
-        "v1.17.7",
-        "v1.16.13",
-        "v1.18.0",
-        "v1.17.6",
-        "v1.16.12",
-        "v1.15.19"
+        "sha256-6d7ea72ed311eeca4c75a1f17617a3d596fb6038d30d00799090679f82a01636.att",
+        "sha256-6d7ea72ed311eeca4c75a1f17617a3d596fb6038d30d00799090679f82a01636.sig",
+        "v1.17.8"
       ],
       "image_name": "docker.io/cilium/cilium",
       "docker_help_command": "/usr/local/bin/cilium --help"
@@ -865,6 +896,7 @@
         "0.9.38.0"
       ],
       "image_tags": [
+        "latest",
         "0.8.42.1",
         "0.8.41.0",
         "0.8.40.0",
@@ -873,8 +905,7 @@
         "0.8.31.2",
         "0.8.31.1",
         "0.8.31.0",
-        "0.8.30.0",
-        "0.8.28.2"
+        "0.8.30.0"
       ],
       "image_name": "docker.io/drillinginfo/cloud-custodian",
       "docker_help_command": "/usr/local/bin/custodian --help"
@@ -968,11 +999,11 @@
         "v0.18.0",
         "v0.16.1",
         "v0.17.3",
+        "v0.18.0.alpha.1",
+        "v0.18.0.alpha",
         "v0.17.2",
         "v0.17.1",
-        "v0.17.0",
-        "v0.16.0",
-        "v0.15.2"
+        "v0.17.0"
       ],
       "image_name": "docker.io/clusternet/clusternet-agent",
       "docker_help_command": "/usr/local/bin/clusternet-agent --help"
@@ -998,6 +1029,7 @@
         "v0.7.2-rc.0"
       ],
       "image_tags": [
+        "latest",
         "v0.3.0"
       ],
       "image_name": "docker.io/deeplythink/clusterpedia-apiserver",
@@ -1018,6 +1050,7 @@
         "v1.0-beta.1"
       ],
       "image_tags": [
+        "latest",
         "0.5.12",
         "0.5.11",
         "0.5.10",
@@ -1026,8 +1059,7 @@
         "0.5.7",
         "0.5.6",
         "0.5.5",
-        "0.5.4",
-        "0.5.3"
+        "0.5.4"
       ],
       "image_name": "docker.io/airbyte/source-opsgenie",
       "docker_help_command": "--help"
@@ -1052,7 +1084,9 @@
         "v1.0.0",
         "v0.1.4"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/orimanabu/myhttpd-composefs"
     },
     {
@@ -1137,6 +1171,7 @@
         "v0.8.1"
       ],
       "image_tags": [
+        "latest",
         "3.12.12-postgres",
         "3.12-postgres",
         "3-postgres",
@@ -1145,8 +1180,7 @@
         "3",
         "4.4.9",
         "4.4",
-        "4.2.14",
-        "4.2"
+        "4.2.14"
       ],
       "image_name": "docker.io/geonetwork",
       "docker_help_command": "-h"
@@ -1220,6 +1254,7 @@
         "0.3.0"
       ],
       "image_tags": [
+        "latest",
         "0.3-20250119",
         "0.3",
         "0.3.1-20250119",
@@ -1228,8 +1263,7 @@
         "0.4.0",
         "0.4-20250119",
         "0.4",
-        "0.4.1-20250119",
-        "0.4.1"
+        "0.4.1-20250119"
       ],
       "image_name": "docker.io/containerssh/containerssh",
       "docker_help_command": "--help"
@@ -1255,16 +1289,16 @@
         "v1.29.5"
       ],
       "image_tags": [
+        "latest",
         "v1.20.2",
         "v1.20.1",
+        "main",
         "v1.20.0",
+        "v1.20.0-beta.1",
         "v1.18.3",
         "v1.19.1",
         "v1.19.0",
-        "v1.18.2",
-        "v1.18.1",
-        "v1.17.2",
-        "v1.16.1"
+        "v1.18.2"
       ],
       "image_name": "docker.io/projectcontour/contour",
       "docker_help_command": "contour --help"
@@ -1299,7 +1333,7 @@
         "3.21.4",
         "3.22",
         "3.22.1",
-        "20230208"
+        "latest"
       ],
       "image_name": "quay.io/lib/alpine"
     },
@@ -1324,6 +1358,7 @@
         "v1.11.1"
       ],
       "image_tags": [
+        "latest",
         "1.13.1",
         "riscv64-1.13.1",
         "s390x-1.13.1",
@@ -1332,8 +1367,7 @@
         "arm-1.13.1",
         "amd64-1.13.1",
         "1.13.0",
-        "riscv64-1.13.0",
-        "s390x-1.13.0"
+        "riscv64-1.13.0"
       ],
       "image_name": "docker.io/coredns/coredns",
       "docker_help_command": "/usr/local/bin/coredns --help"
@@ -1359,16 +1393,16 @@
         "v1.17.0"
       ],
       "image_tags": [
-        "master-c4303a3",
-        "master-9fdd762",
-        "master-672b995",
-        "master-37213a1",
-        "master-0d2fb34",
-        "master-42b35fa",
-        "master-69ac3d1",
-        "master-328bc3b",
-        "master-af7aca6",
-        "master-52a833c"
+        "master-821304f",
+        "master-126926b",
+        "master-0e9721f",
+        "master-e3dc7b0",
+        "master-1d7be73",
+        "master-1bc480f",
+        "master-f114c29",
+        "master-d27f25a",
+        "master-651386b",
+        "master-d3c6964"
       ],
       "image_name": "quay.io/cortexproject/cortex",
       "docker_help_command": "--help"
@@ -1429,8 +1463,12 @@
         "v1.32.7"
       ],
       "image_tags": [
+        "sha256-9555cdb4d5e1723b027f5c8f5e03a2360d315f34d996c75a42f41c32d9d65839",
         "592e805f2423ba55054a16d3a7cc66499e2c0dac-arm64",
-        "592e805f2423ba55054a16d3a7cc66499e2c0dac-amd64"
+        "sha256-a14b5e36692943f5ff2e5b41de8ee179e50269c001014cb28134740b93f0ab37",
+        "592e805f2423ba55054a16d3a7cc66499e2c0dac-amd64",
+        "sha256-f044f5950d2fec3a3ce079806ae691f607c73b244253c4972c83c9095c8d14ae",
+        "sha256-a3c97cb878cfbae7ae21d5c5c63f1bc5a7fe8beebaf81672c72a8e502cde4fe9"
       ],
       "image_name": "quay.io/saschagrunert/cri-o",
       "docker_help_command": "crio --help"
@@ -1456,16 +1494,16 @@
         "v1.20.0-rc.1"
       ],
       "image_tags": [
-        "v2.0.2-12.g46796c211",
-        "release-2.0",
-        "v2.0.2-10.gaf01654ad",
-        "v2.0.2-8.gbcc800391",
-        "v2.0.2-4.g365d83c3c",
-        "v2.0.2-2.g5def1be25",
-        "v2.0.2-stable",
-        "v2.0.2",
-        "v2.0.1-stable",
-        "v2.0.1"
+        "v2.1.0-rc.0.125.g1739d27db",
+        "main",
+        "v2.1.0-rc.0.123.gad37ed939",
+        "v2.1.0-rc.0.127.gcdf03f46b",
+        "v2.1.0-rc.0.120.g2f3bdfb8f",
+        "v2.1.0-rc.0.118.ge880f8888",
+        "v2.1.0-rc.0.116.g1b29873eb",
+        "v2.1.0-rc.0.114.g051838187",
+        "v2.1.0-rc.0.112.g53409d585",
+        "v2.1.0-rc.0.110.g92cf08a5b"
       ],
       "image_name": "docker.io/crossplane/crossplane",
       "docker_help_command": "--help"
@@ -1516,6 +1554,7 @@
         "v2.7.0-beta2"
       ],
       "image_tags": [
+        "latest",
         "1.0.0-oe2403sp1"
       ],
       "image_name": "docker.io/openeuler/curve",
@@ -1542,16 +1581,16 @@
         "v1.16.0-rc.6"
       ],
       "image_tags": [
-        "1.16.1-windows-amd64",
-        "1.16.1-mariner",
-        "1.16.1",
-        "1.16.1-stablecomponents-mariner",
-        "1.16.1-stablecomponents",
-        "1.16.1-windows-1809-amd64",
-        "1.16.1-windows-ltsc2022-amd64",
-        "1.16.1-mariner-linux-amd64",
-        "1.16.1-mariner-linux-arm64",
-        "1.16.1-linux-amd64"
+        "latest",
+        "edge-windows-amd64",
+        "edge-mariner",
+        "edge",
+        "edge-stablecomponents-mariner",
+        "edge-stablecomponents",
+        "edge-mariner-linux-amd64",
+        "edge-mariner-linux-arm64",
+        "edge-linux-amd64",
+        "edge-linux-arm64"
       ],
       "image_name": "docker.io/daprio/dapr",
       "docker_help_command": "/usr/local/bin/dapr --help"
@@ -1605,16 +1644,16 @@
         "v6.3.12"
       ],
       "image_tags": [
+        "latest",
         "6.3.18",
         "6.3",
         "6",
+        "6.3.18-alpha.0",
+        "6.3-alpha.0",
+        "6-alpha.0",
+        "next",
         "6.3.17",
-        "6.3.16",
-        "6.3.15",
-        "6.3.14",
-        "6.3.13",
-        "6.3.12",
-        "6.3.11"
+        "6.3.17-alpha.0"
       ],
       "image_name": "docker.io/devspacesh/devspace",
       "docker_help_command": "/bin/devspace --help"
@@ -1639,7 +1678,9 @@
         "v0.10.1",
         "v0.10.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/pruthiraj/devstream"
     },
     {
@@ -1663,16 +1704,16 @@
         "v2.39.1"
       ],
       "image_tags": [
-        "v2.20.0",
-        "v2.21.0",
-        "dependabot_docker_golang-1.15.7-alpine3.12",
-        "v2.23.0",
-        "go1.16",
-        "dependabot_go_modules_github.com_sirupsen_logrus-1.7.1",
-        "dependabot_docker_golang-1.16.0-alpine3.13",
-        "v2.18.0",
-        "sr_bump-deps-for-http2-issues",
-        "v2.24.0"
+        "latest",
+        "master",
+        "dependabot_go_modules_github.com_go-ldap_ldap_v3-3.3.0",
+        "dependabot_docker_golang-1.16.3-alpine3.13",
+        "dependabot_go_modules_github.com_go-sql-driver_mysql-1.6.0",
+        "dependabot_docker_alpine-3.13.4",
+        "dependabot_go_modules_google.golang.org_grpc-1.36.1",
+        "dependabot_docker_alpine-3.13.3",
+        "proto",
+        "update-etcd-3.5"
       ],
       "image_name": "quay.io/dexidp/dex"
     },
@@ -1697,16 +1738,16 @@
         "v2.8.2-beta.2"
       ],
       "image_tags": [
+        "latest",
+        "edge",
         "3",
         "3.0",
         "3.0.0",
-        "2.8.3",
-        "2.8.2",
-        "2.8.1",
-        "2.8.0",
-        "2.6.0",
-        "2.6.1",
-        "2.6.2"
+        "3.0.0-rc.4",
+        "3.0.0-rc.3",
+        "3.0.0-rc.2",
+        "3.0.0-rc.1",
+        "3.0.0-beta.1"
       ],
       "image_name": "docker.io/distribution/distribution",
       "docker_help_command": "--help"
@@ -1758,16 +1799,16 @@
         "v2.7.0"
       ],
       "image_tags": [
+        "latest",
+        "server-sidecar",
+        "easemesh",
         "v2.10.1",
         "v2.9.4",
         "v2.9.3",
         "v2.8.0",
         "v2.7.5",
         "v2.7.4",
-        "v2.7.3",
-        "v2.7.2",
-        "v2.7.1",
-        "v2.7.0"
+        "v2.7.3"
       ],
       "image_name": "docker.io/megaease/easegress",
       "docker_help_command": "/opt/easegress/bin/egbuilder --help"
@@ -1793,7 +1834,11 @@
         "v3.8.0"
       ],
       "image_tags": [
-        "3.10.0"
+        "3.10.0",
+        "3.10.0-rc.3",
+        "3.10.0-rc.1a",
+        "3.10.0-rc.1",
+        "3.10.0-rc.0"
       ],
       "image_name": "docker.io/dwflynn/emissary-ingress"
     },
@@ -1818,16 +1863,16 @@
         "v1.34.5"
       ],
       "image_tags": [
-        "tools-dev-180f01d9b3bccc3fb66e26e46613210b06815345",
-        "google-vrp-dev-180f01d9b3bccc3fb66e26e46613210b06815345",
-        "tools-dev-7b0712da4c00a6de694906dd997a8399f4a35c52",
-        "distroless-dev-180f01d9b3bccc3fb66e26e46613210b06815345",
-        "google-vrp-dev-7b0712da4c00a6de694906dd997a8399f4a35c52",
-        "debug-dev-180f01d9b3bccc3fb66e26e46613210b06815345",
-        "distroless-dev-7b0712da4c00a6de694906dd997a8399f4a35c52",
-        "contrib-debug-dev-180f01d9b3bccc3fb66e26e46613210b06815345",
-        "debug-dev-7b0712da4c00a6de694906dd997a8399f4a35c52",
-        "contrib-dev-180f01d9b3bccc3fb66e26e46613210b06815345"
+        "tools-dev-39744b212c5fe2a75a7201815cc8f233a24c3266",
+        "tools-dev",
+        "google-vrp-dev-39744b212c5fe2a75a7201815cc8f233a24c3266",
+        "google-vrp-dev",
+        "distroless-dev-39744b212c5fe2a75a7201815cc8f233a24c3266",
+        "distroless-dev",
+        "debug-dev-39744b212c5fe2a75a7201815cc8f233a24c3266",
+        "debug-dev",
+        "contrib-debug-dev-39744b212c5fe2a75a7201815cc8f233a24c3266",
+        "contrib-debug-dev"
       ],
       "image_name": "docker.io/envoyproxy/envoy",
       "docker_help_command": "/usr/local/bin/envoy --help"
@@ -1853,8 +1898,11 @@
         "v1.2.0"
       ],
       "image_tags": [
+        "latest",
+        "master",
         "420",
         "430",
+        "dev",
         "339"
       ],
       "image_name": "docker.io/sozercan/eraser",
@@ -1881,16 +1929,16 @@
         "v3.6.0-rc.4"
       ],
       "image_tags": [
-        "v3.5.19",
-        "v3.5.19-s390x",
-        "v3.5.19-ppc64le",
-        "v3.5.19-arm64",
-        "v3.5.19-amd64",
-        "v3.4.36-ppc64le",
-        "v3.4.36-arm64",
-        "v3.4.36",
-        "v3.6.3",
-        "v3.6.3-s390x"
+        "v3.6.5",
+        "v3.6.5-s390x",
+        "v3.6.5-ppc64le",
+        "v3.6.5-arm64",
+        "v3.6.5-amd64",
+        "v3.5.23",
+        "v3.5.23-s390x",
+        "v3.5.23-ppc64le",
+        "v3.5.23-arm64",
+        "v3.5.23-amd64"
       ],
       "image_name": "quay.io/coreos/etcd",
       "docker_help_command": "/usr/local/bin/etcdctl --help"
@@ -1916,12 +1964,16 @@
         "helm-chart-0.19.1"
       ],
       "image_tags": [
+        "latest",
+        "latest-amd64",
+        "latest-arm64",
         "0.19-amd64",
         "0-amd64",
         "0.19-arm64",
         "0-arm64",
         "0.19",
-        "0"
+        "0",
+        "0.19-amd64-dev"
       ],
       "image_name": "docker.io/cleanstart/external-secrets",
       "docker_help_command": "--help"
@@ -1946,6 +1998,7 @@
         "v0.1"
       ],
       "image_tags": [
+        "latest",
         "5.9.9",
         "5.9.1"
       ],
@@ -1973,16 +2026,16 @@
         "0.39.2"
       ],
       "image_tags": [
+        "latest",
+        "sha256-e9ce025f2bf3900f3574613c851619cde707aabff9eb17df5524f21fa867280b",
+        "master-debian",
+        "master",
         "x86_64-master-debian",
         "aarch64-master-debian",
         "x86_64-master",
         "aarch64-master",
-        "0.41.3-debian",
-        "0.41.3",
-        "x86_64-0.41.3-debian",
-        "aarch64-0.41.3-debian",
-        "x86_64-0.41.3",
-        "aarch64-0.41.3"
+        "sha256-12a04cc9cbcfcb293011b7843b95a3cec8c4b77afd40a750b20834032158c449",
+        "sha256-a32c5a920192c508f741b611b2a2b9d0c463a54a8ecef4abe01db141e22dc2d0"
       ],
       "image_name": "docker.io/falcosecurity/falco",
       "docker_help_command": "/usr/local/bin/falcoctl --help"
@@ -1997,16 +2050,16 @@
       "homepage": "https://www.flatcar.org/",
       "github_releases": [],
       "image_tags": [
+        "latest",
+        "multilib-devel-20251005.0.430597",
+        "multilib-devel",
+        "base-devel-20251005.0.430597",
+        "base-devel",
         "base-20251005.0.430597",
-        "base-20250928.0.426921",
-        "base-20250921.0.423275",
-        "base-20250914.0.420821",
-        "base-20250907.0.417472",
-        "base-20250824.0.410029",
-        "base-20250817.0.405639",
-        "base-20250810.0.398652",
-        "base-20250803.0.394512",
-        "base-20250727.0.390543"
+        "base",
+        "multilib-devel-20250928.0.426921",
+        "base-devel-20250928.0.426921",
+        "base-20250928.0.426921"
       ],
       "image_name": "docker.io/archlinux",
       "docker_help_command": "/usr/bin/bash --help"
@@ -2032,6 +2085,7 @@
         "v1.16.5"
       ],
       "image_tags": [
+        "latest",
         "v1.16.9-1.0",
         "v1.16-1",
         "v1.19.0-debian-1.0",
@@ -2040,8 +2094,7 @@
         "v1.19-1",
         "v1.16.9-debian-1.0",
         "v1.16-debian-1",
-        "v1.18.0-debian-1.0",
-        "v1.18-debian-1"
+        "v1.18.0-debian-1.0"
       ],
       "image_name": "docker.io/fluentd",
       "docker_help_command": "--help"
@@ -2067,16 +2120,16 @@
         "v0.9.2"
       ],
       "image_tags": [
-        "v1.9.4",
-        "v1.8.4",
-        "v1.7.4",
-        "v1.6.5",
-        "v1.11.3",
-        "v1.10.4",
-        "v1.9.3",
-        "v1.8.3",
-        "v1.7.3",
-        "v1.11.1"
+        "v2.1.0",
+        "v2.0.1",
+        "v1.13.2",
+        "v2",
+        "v2.0.0",
+        "v1.13.1",
+        "v1.10.6",
+        "v1.9.6",
+        "v1.8.6",
+        "v1.13.0"
       ],
       "image_name": "quay.io/giantswarm/upbound-provider-azure-fluidrelay",
       "docker_help_command": "--help"
@@ -2102,16 +2155,16 @@
         "v2.5.0"
       ],
       "image_tags": [
+        "sha256-7751be5cd5c11eed6c8880ac33ab8efd38a85b57c5844ef6739fd3ebf5b3f57a",
         "2.4.36",
+        "sha256-44819d138fa35f696dae4e9714bba29f383f16d80f8b6cc441caafe79d43b8c6",
         "2.4.35",
+        "sha256-6cee79b0465d6ecda13203f8eb2674199e26760ac2cb8d796db55fdbf75226f2",
         "2.4.34",
+        "sha256-1a9f1720d1efa8200da7eb5867745d0b09f993fef95f8752d95ee217bdfb5009",
         "2.4.33",
-        "2.4.32",
-        "2.4.31",
-        "2.4.29",
-        "2.4.27",
-        "2.4.26",
-        "2.4.22"
+        "sha256-c1e956c188657fdd2dcfe2384fa11b3d8169ce495953f42233f2dca4087a52f6",
+        "2.4.32"
       ],
       "image_name": "docker.io/bitnamicharts/flux",
       "docker_help_command": "/usr/local/bin/flux --help"
@@ -2157,6 +2210,7 @@
         "v1.71.2"
       ],
       "image_tags": [
+        "latest",
         "1.76.0",
         "1.75.0",
         "1.74.0",
@@ -2165,8 +2219,7 @@
         "1.71.0",
         "1.70.0",
         "1.69.1",
-        "1.68.3",
-        "1.69.0"
+        "1.68.3"
       ],
       "image_name": "docker.io/grpc/java-example-hostname",
       "docker_help_command": "--help"
@@ -2192,6 +2245,8 @@
         "hami-2.3"
       ],
       "image_tags": [
+        "latest",
+        "97ff486",
         "03b8cb0",
         "f0dd439",
         "b7b4e1e",
@@ -2199,9 +2254,7 @@
         "db13f8d",
         "v2.7.0",
         "7668eec",
-        "aa4989f",
-        "6e739ee",
-        "0fa3c8f"
+        "aa4989f"
       ],
       "image_name": "docker.io/projecthami/hami",
       "docker_help_command": "/bin/bash --help"
@@ -2227,16 +2280,16 @@
         "v2.13.1-rc2"
       ],
       "image_tags": [
+        "sha256-e262907a6dae5c51d268fedf0e6d528029d5314bae92a61aed1657f04e6ee681",
         "27.0.3",
+        "sha256-35620032487ae38373d75d9573adc35f9c9420dc95ce822a58c9cede88cd5ef2",
         "27.0.2",
+        "sha256-94b278d9834be99dd70e1f374b42ade329ceba35cbfef6a4fbb49c0a97e8fed2",
         "27.0.1",
+        "sha256-c2314a6ea0e774846026b2f395bf9d9656c792d316b3449870f5d6c44093b3f0",
         "27.0.0",
-        "26.8.5",
-        "26.8.3",
-        "26.8.2",
-        "26.8.0",
-        "26.7.12",
-        "26.7.11"
+        "sha256-0d8174efed55e670bdd747d6fae2ce1e4e20e0f54252dd958ad72580748fcd84",
+        "26.8.5"
       ],
       "image_name": "docker.io/bitnamicharts/harbor",
       "docker_help_command": "/usr/local/bin/harbor --help"
@@ -2262,6 +2315,7 @@
         "v0.32.0"
       ],
       "image_tags": [
+        "latest",
         "0.35.0",
         "0.33.0",
         "0.25.1",
@@ -2270,8 +2324,7 @@
         "0.20.0",
         "0.19.1",
         "0.19.0",
-        "0.17.0",
-        "0.16.0"
+        "0.17.0"
       ],
       "image_name": "docker.io/headlamp/headlamp-docker-extension"
     },
@@ -2296,6 +2349,7 @@
         "v3.18.1"
       ],
       "image_tags": [
+        "latest",
         "3",
         "3.19",
         "3.19.0",
@@ -2304,8 +2358,7 @@
         "3.18.6",
         "3.18.5",
         "3.18.4",
-        "b0f8b96",
-        "3.18.3"
+        "b0f8b96"
       ],
       "image_name": "docker.io/alpine/helm",
       "docker_help_command": "/usr/local/bin/helm --help"
@@ -2325,16 +2378,16 @@
         "v0.1.7"
       ],
       "image_tags": [
-        "yolo4180",
-        "yolo414deg",
-        "yolo413",
+        "mgs11",
         "mgs10",
         "mgs9",
         "mgs9",
         "mgs8",
         "mgs7",
-        "mgs3",
-        "mgs2"
+        "mgs6",
+        "mgs5",
+        "mgs4",
+        "mgs3"
       ],
       "image_name": "quay.io/ngrauss_openshift/mwhexample"
     },
@@ -2358,7 +2411,9 @@
         "v0.16.0",
         "v0.15.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/hwameistor/builder"
     },
     {
@@ -2381,7 +2436,9 @@
         "v0.5.0",
         "v0.4.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/hyperlightorg/hyperscale"
     },
     {
@@ -2465,7 +2522,9 @@
         "v0.38.1",
         "v0.38.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/mcp/inspektor-gadget"
     },
     {
@@ -2489,16 +2548,16 @@
         "1.26.1"
       ],
       "image_tags": [
+        "sha256-76d24ffaa1e3a48d34cdf762ddeb3875bc7c48d3797d412ba7018f4375f14299.sig",
+        "sha256-592870d99f77a4f7c0f79fa1df40679411424cda6e5bb34b2a6c31ac20846eb3.sig",
+        "sha256-a9268faf5bb9d621e0506e3db2e9d7178b199dbfc609e19c32c1de5a3aee2fc4.sig",
         "1.26.4-debug",
+        "sha256-0d988d939945954e32819083905a48182275d8ee6a26ce1da3c043cbad6a229d.sig",
+        "sha256-b49bce23a2ee6ebbfbecb525b186979126c4a0556910fe45a5b3d1b186ad1256.sig",
+        "sha256-75e272cbe8dd31fda4c193aedc251ee2e26593f0b7b4f305225f9ad804cc6f0d.sig",
         "1.25.5-debug",
         "1.25.5",
-        "1.26.4",
-        "1.27.1-debug",
-        "1.25.5-distroless",
-        "1.26.4-distroless",
-        "1.27.1-distroless",
-        "1.27.1",
-        "1.27.0-distroless"
+        "1.26.4"
       ],
       "image_name": "docker.io/istio/proxyv2",
       "docker_help_command": "--help"
@@ -2524,16 +2583,16 @@
         "v1.65.0"
       ],
       "image_tags": [
+        "sha256-a0c4c44ca4b586eea82fef6bd6f6b26cb848fc633b358357c3ee5cff5f96f86c",
         "6.0.5",
+        "sha256-51ac4c54d70ace008a68fa5c1a31670ab0acc715fc017cb27060890fdabbffdb",
         "6.0.4",
+        "sha256-bcd963d8346b392b3ad046004abaff0caaabc968dd2d510b0a564639da289bee",
         "6.0.3",
+        "sha256-433f8172baabb686854022a0dc55fe24c0011d18346563fe41cfcd900fdc220c",
         "6.0.2",
-        "6.0.1",
-        "6.0.0",
-        "5.1.24",
-        "5.1.23",
-        "5.1.22",
-        "5.1.21"
+        "sha256-0b54f76988359d81944858a45957357464996c37d1799d445acac02cfff23fb8",
+        "6.0.1"
       ],
       "image_name": "docker.io/bitnamicharts/jaeger",
       "docker_help_command": "/usr/local/bin/jaeger --help"
@@ -2560,15 +2619,15 @@
       ],
       "image_tags": [
         "v1.34.1-k0s.0",
+        "v1.34.1-rc.0-k0s.0",
         "v1.32.8-k0s.0",
+        "v1.32.8-rc.2-k0s.0",
+        "v1.32.8-rc.1-k0s.0",
         "v1.33.4-k0s.0",
         "v1.31.12-k0s.0",
-        "v1.32.7-k0s.0",
-        "v1.31.11-k0s.0",
-        "v1.33.3-k0s.0",
-        "v1.33.2-k0s.0",
-        "v1.32.6-k0s.0",
-        "v1.31.10-k0s.0"
+        "v1.32.8-rc.0-k0s.0",
+        "v1.33.4-rc.0-k0s.0",
+        "v1.31.12-rc.0-k0s.0"
       ],
       "image_name": "docker.io/k0sproject/k0s",
       "docker_help_command": "/usr/local/bin/k0s --help"
@@ -2594,6 +2653,7 @@
         "v1.31.13+k3s1"
       ],
       "image_tags": [
+        "latest",
         "v1.34.1-k3s1",
         "v1.34.1-k3s1-amd64",
         "v1.33.5-k3s1",
@@ -2602,8 +2662,7 @@
         "v1.34.1-k3s1-arm",
         "v1.34.1-k3s1-arm64",
         "v1.32.9-k3s1-amd64",
-        "v1.33.5-k3s1-arm",
-        "v1.33.5-k3s1-arm64"
+        "v1.33.5-k3s1-arm"
       ],
       "image_name": "docker.io/rancher/k3s",
       "docker_help_command": "--help"
@@ -2629,12 +2688,16 @@
         "v0.11.2"
       ],
       "image_tags": [
+        "sha256-32df44c1319ef0be309428f2504887d30d611139dcffb08a3bdbbdef9858a374.att",
+        "sha256-46452f16aec0dd44a39f84b4de2cf1cd5da9a5236857c82925c9f843209c8bbc.att",
+        "sha256-d56080a7a675b6e121fa066aea98548135ffffc35dd94d04cc9473de7b4721cb.sig",
+        "sha256-46452f16aec0dd44a39f84b4de2cf1cd5da9a5236857c82925c9f843209c8bbc.sig",
+        "sha256-32df44c1319ef0be309428f2504887d30d611139dcffb08a3bdbbdef9858a374.sig",
         "v0.15.0",
         "v0.15.0-amd64",
         "v0.15.0-arm64",
-        "v0.14.0",
-        "v0.14.0-arm64",
-        "v0.14.0-amd64"
+        "sha256-ad644bed6c2db36e1ef86d1757a7abda1256a250cfc32a65652aa04d6f4a2959.att",
+        "sha256-52770e6a85417c6cb0e91d52415a283a5e2164998baf40fcb35ca64f2c47582a.att"
       ],
       "image_name": "docker.io/absaoss/k8gb",
       "docker_help_command": "--help"
@@ -2684,16 +2747,16 @@
         "v2.11.2"
       ],
       "image_tags": [
+        "latest",
         "v1.99.99",
+        "master",
         "v1",
         "v1.2.0",
         "v0",
         "v1.1.0",
         "v1.0.5",
         "v1.0.4",
-        "v1.0.3",
-        "v1.0.2",
-        "v1.0.1"
+        "v1.0.3"
       ],
       "image_name": "docker.io/vshn/k8up",
       "docker_help_command": "--help"
@@ -2719,6 +2782,8 @@
         "v0.6.9"
       ],
       "image_tags": [
+        "latest",
+        "armhf-latest",
         "armhf-v1.0.0",
         "v1.0.0"
       ],
@@ -2734,16 +2799,16 @@
       "homepage": "https://kairos.io",
       "github_releases": [],
       "image_tags": [
-        "v0.5.17",
-        "v0.5.7",
-        "v0.5.6",
-        "v0.5.13",
-        "v0.5.12",
-        "v0.5.11",
+        "latest",
+        "main",
+        "v0.6.1",
+        "latest",
         "v0.5.21",
+        "latest",
         "v0.6.0",
-        "v0.5.9",
-        "v0.4.9"
+        "main",
+        "main",
+        "main"
       ],
       "image_name": "quay.io/kairos/kairos-init",
       "docker_help_command": "--help"
@@ -2794,16 +2859,16 @@
         "0.107.0"
       ],
       "image_tags": [
-        "0.75.0-8-g103e2050",
-        "0.72.0-6-g20ba6ce2",
-        "0.72.0-5-g91a55675-dirty",
-        "0.72.0-5-g91a55675",
-        "0.74.0-36-gecdc1743",
+        "gh1470",
+        "latest",
+        "cncf-webinar",
+        "0.76.0-13-ga706b73c",
         "0.75.0-11-g4a5d9c5d",
         "0.75.0-11-g4a5d9c5d-dirty",
         "0.75.0-16-g06cdbf3a",
         "0.75.0-16-g06cdbf3a-dirty",
-        "0.74.0-41-gac4bbb75"
+        "0.75.0-8-g103e2050",
+        "0.75.0-7-gfe81a265"
       ],
       "image_name": "quay.io/isim/kanister-controller"
     },
@@ -2832,12 +2897,12 @@
         "v1.15.1",
         "v1.14.5",
         "v1.13.8",
+        "v1.16.0-alpha.1",
         "v1.15.0",
         "v1.14.4",
         "v1.13.7",
         "v1.12.10",
-        "v1.14.3",
-        "v1.13.6"
+        "v1.15.0-rc.0"
       ],
       "image_name": "docker.io/karmada/karmada",
       "docker_help_command": "karmadactl --help"
@@ -2863,16 +2928,16 @@
         "v0.10.2"
       ],
       "image_tags": [
+        "latest",
         "v0.11.3",
         "v0.11.2",
         "v0.11.0",
+        "v0.11.0-alpha.1",
         "v0.10.10",
         "release-kcl-image-0.10.x",
         "v0.10.9",
         "v0.10.8",
-        "v0.10.7",
-        "v0.10.6",
-        "v0.10.5"
+        "v0.10.7"
       ],
       "image_name": "docker.io/kcllang/kcl",
       "docker_help_command": "/usr/local/bin/kcl --help"
@@ -2898,6 +2963,7 @@
         "v0.25.0"
       ],
       "image_tags": [
+        "latest",
         "1.2"
       ],
       "image_name": "docker.io/arminmacx/kcp",
@@ -2924,16 +2990,16 @@
         "v2.14.0"
       ],
       "image_tags": [
+        "latest",
         "2.17.2-selenium-grid-20251001",
         "2.17.2-selenium-grid-20250909",
         "2.17.2-selenium-grid-20250828",
         "2.17.2-selenium-grid-20250808",
         "2.17.2-selenium-grid-20250727",
+        "nightly",
         "2.17.2-selenium-grid-20250717",
         "2.17.2-selenium-grid-20250707",
-        "2.17.1-selenium-grid-20250606",
-        "2.17.1-selenium-grid-20250525",
-        "2.17.1-selenium-grid-20250515"
+        "2.17.1-selenium-grid-20250606"
       ],
       "image_name": "docker.io/selenium/keda",
       "docker_help_command": "--help"
@@ -2959,16 +3025,16 @@
         "keptn-v2.3.0"
       ],
       "image_tags": [
+        "sha256-2538e53a473e25e43d6cd9fb8079551864182100099c23caf13a6b500ba0be0f.sig",
         "1.2.0",
+        "sha256-f9434903e3d1383c054222df3a4db60b09608b40bcac1b00ecc935d9c7be7041.sig",
         "1.1.0",
+        "sha256-01feb9b10e604966eb898d601543055d5fd8e31ef2c9b2f7a63ecbaae319b056.sig",
+        "sha256-e2fc5d6c6f0ea9361a543e6d8f1d2245918df73102a1d104de73b7132a037e39.sig",
         "1.0.0",
+        "sha256-fb26f0e0e9372207be18c6b0a10cd0bd68bb1f62d37770913706bd19a01b32bd.sig",
         "0.20.0-next.0",
-        "0.19.3",
-        "0.19.2",
-        "0.19.1",
-        "0.19.0",
-        "0.18.2",
-        "0.17.1"
+        "0.19.3"
       ],
       "image_name": "docker.io/keptn/distributor"
     },
@@ -2993,6 +3059,8 @@
         "26.2.4"
       ],
       "image_tags": [
+        "latest",
+        "nightly",
         "26.4",
         "26.4.0-0",
         "26.4.0",
@@ -3000,9 +3068,7 @@
         "26.3.5-0",
         "26.3.5",
         "26.3.4-0",
-        "26.3.4",
-        "26.3.3-0",
-        "26.3.3"
+        "26.3.4"
       ],
       "image_name": "docker.io/keycloak/keycloak",
       "docker_help_command": "--help"
@@ -3028,16 +3094,16 @@
         "v7.5.0"
       ],
       "image_tags": [
-        "sha-df8e56e",
-        "sha-a097536",
-        "sha-cbf60a7",
-        "sha-d9b9727",
-        "sha-f310fac",
-        "sha-2091359",
-        "sha-46b1901",
-        "sha-100167a",
-        "sha-390ea3d",
-        "sha-4bd5286"
+        "sha-bec5d94",
+        "master",
+        "sha-1f19ed7",
+        "master",
+        "sha-672bc1b",
+        "master",
+        "sha-ac177ec",
+        "master",
+        "sha-6f41aa8",
+        "master"
       ],
       "image_name": "quay.io/keylime/keylime_agent",
       "docker_help_command": "--help"
@@ -3126,6 +3192,7 @@
         "v0.3.1"
       ],
       "image_tags": [
+        "latest",
         "v0.5.0-zgq",
         "v0.5.0"
       ],
@@ -3187,16 +3254,16 @@
         "v0.14.1"
       ],
       "image_tags": [
-        "master-ce13b2b",
-        "master-ea8207c",
-        "master-6efdea2",
-        "master-e9a8a57",
-        "master-c8b4b33",
-        "master-e308ba2",
-        "master-ab6caaa",
-        "master-598117c",
-        "v1.5.0",
-        "master-cd8da78"
+        "master-59f68da",
+        "master",
+        "master-eab5595",
+        "master-4afd177",
+        "master-351976b",
+        "master-edb20f8",
+        "master-63b451b",
+        "master-f119ba0",
+        "master-4b16d9b",
+        "master-ab6caaa"
       ],
       "image_name": "quay.io/cloudhut/kowl",
       "docker_help_command": "--help"
@@ -3222,16 +3289,16 @@
         "v0.8.0-alpha.3"
       ],
       "image_tags": [
-        "v0.6.2--20250326T213815",
-        "v0.6.2",
-        "v0.7.0--20250611T172844",
-        "v0.7.0",
-        "v0.3.1--20240410T125933",
-        "v0.3.1",
-        "v0.6.1--20250305T222028",
-        "v0.6.1",
-        "v0.4.0--20240605T033722",
-        "v0.4.0"
+        "v0.8.0--20250929T221706",
+        "v0.8.0",
+        "v0.8.0-beta.5--20250917T211228",
+        "v0.8.0-beta.5",
+        "v0.8.0-beta.4--20250908T212801",
+        "v0.8.0-beta.4",
+        "v0.8.0-beta.2--20250827T183733",
+        "v0.8.0-beta.2",
+        "v0.8.0-beta.1--20250822T050648",
+        "v0.8.0-beta.1"
       ],
       "image_name": "quay.io/operatorhubio/konveyor-operator"
     },
@@ -3284,7 +3351,13 @@
         "porch/v0.0.35"
       ],
       "image_tags": [
+        "latest",
+        "docker-cli",
+        "original",
+        "docker",
         "v0.30.1",
+        "scratch",
+        "gitlab",
         "v0.0.1",
         "v0.27.0"
       ],
@@ -3305,7 +3378,9 @@
         "v0.4.0",
         "v0.3.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/krator/python3-django-gunicorn"
     },
     {
@@ -3329,16 +3404,16 @@
         "v4.0.2"
       ],
       "image_tags": [
-        "v3.1.2",
-        "v4.0.3",
-        "v3.0.2",
-        "v1.6.8",
-        "v2.0.9",
-        "v4.0.10",
-        "v2.0.3",
         "v4.0.11",
-        "v3.1.0",
-        "v3.0.1"
+        "latest",
+        "v4.0.10",
+        "latest",
+        "v4.0.9",
+        "v4.0.8",
+        "v4.0.7",
+        "v4.0.6",
+        "v4.0.5",
+        "v4.0.4"
       ],
       "image_name": "quay.io/redhat-chaos/krkn",
       "docker_help_command": "--help"
@@ -3389,16 +3464,16 @@
         "v0.14.0-rc0"
       ],
       "image_tags": [
+        "latest",
+        "v0.16.0-rc0",
         "v0.15.2",
         "v0.15.1",
         "v0.15.0",
+        "v0.15.0-rc1",
+        "v0.15.0-rc0",
         "v0.14.1",
         "v0.14.0",
-        "v0.13.1",
-        "v0.13.0",
-        "v0.12.1",
-        "v0.12.0",
-        "v0.11.2"
+        "v0.14.0-rc1"
       ],
       "image_name": "docker.io/kserve/kserve-controller",
       "docker_help_command": "--help"
@@ -3458,7 +3533,9 @@
         "v0.5.1",
         "v0.5.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/kuasar/homegarden-api"
     },
     {
@@ -3482,16 +3559,16 @@
         "v1.16.3"
       ],
       "image_tags": [
-        "v1.7.13",
-        "v1.7.13-arm64",
-        "v1.7.13-ppc64le",
-        "v1.7.13-s390x",
-        "v1.7.13-amd64",
         "v1.8.1",
         "v1.8.1-arm64",
         "v1.8.1-ppc64le",
         "v1.8.1-s390x",
-        "v1.8.1-amd64"
+        "v1.8.1-amd64",
+        "v1.8.0",
+        "v1.8.0-arm64",
+        "v1.8.0-ppc64le",
+        "v1.8.0-s390x",
+        "v1.8.0-amd64"
       ],
       "image_name": "quay.io/cloud-bulldozer/kube-burner",
       "docker_help_command": "--help"
@@ -3517,6 +3594,8 @@
         "v1.14.4"
       ],
       "image_tags": [
+        "v1.15.0-debug",
+        "v1.15.0",
         "v1.14.12-debug-arm",
         "v1.14.12-arm",
         "v1.14.11-debug",
@@ -3524,9 +3603,7 @@
         "v1.15.0-debug-arm",
         "v1.15.0-arm",
         "v1.14.11-dpdk-x86",
-        "v1.14.11-debug-x86",
-        "v1.14.11-amd64-legacy",
-        "v1.14.11-x86"
+        "v1.14.11-debug-x86"
       ],
       "image_name": "docker.io/kubeovn/kube-ovn"
     },
@@ -3551,6 +3628,8 @@
         "0.94.2"
       ],
       "image_tags": [
+        "v1.15.0-debug",
+        "v1.15.0",
         "v1.14.12-debug-arm",
         "v1.14.12-arm",
         "v1.14.11-debug",
@@ -3558,9 +3637,7 @@
         "v1.15.0-debug-arm",
         "v1.15.0-arm",
         "v1.14.11-dpdk-x86",
-        "v1.14.11-debug-x86",
-        "v1.14.11-amd64-legacy",
-        "v1.14.11-x86"
+        "v1.14.11-debug-x86"
       ],
       "image_name": "docker.io/kubeovn/kube-ovn"
     },
@@ -3638,10 +3715,16 @@
         "v1.5.2"
       ],
       "image_tags": [
-        "v1.6.3",
-        "v1.6.2",
-        "v1.6.1",
-        "v1.6.0"
+        "latest",
+        "sha256-e4249f3c923b34335c42a4fdf49b3247976dc58c52f32081aa71b2612b390867.sig",
+        "sha256-fb7a07e53efaf0f9829af23b8933d183f2bbb89acd8ce0e24aa0adfa1d1503e3.sig",
+        "sha256-ed8896131cc8d7f0102c0595c1f687c7ff5158d0896e1d10c4002baf851a431a.sig",
+        "sha256-508cc9f7af75802d96b7c52af6d95d7afb0e6081279258d517ec9dba695727e6.sig",
+        "sha256-9cd5f9e9a18cacda01acf682934e5efe7dcc674718b6779b53f2e33a1c0a1faf.sig",
+        "sha256-480d4a712c17060395d5d2f791daaf7845d5163ade3aec375997adcc4d2683b5.sig",
+        "sha256-cd354ed76d7b7ed0f9971938423f417c6359bcc6e066c6c7c2af2cdf13035dfd.sig",
+        "sha256-c48d34081837d69c0dc9c16cc8d6b20f3365186ff0cf0d8e6af84dca59aab079.sig",
+        "sha256-dd41fc03a62b1cc8bbe9a589d7e7c80d3dcff86ce2af725c31a90f993e984146.sig"
       ],
       "image_name": "docker.io/kubearmor/kubearmor",
       "docker_help_command": "-h"
@@ -3666,7 +3749,9 @@
         "v1.2.0",
         "v1.1.1"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/kubeclipper/kubectl"
     },
     {
@@ -3688,16 +3773,16 @@
         "v0.1.0"
       ],
       "image_tags": [
+        "daily",
         "v0.5.0",
         "v0.4.3",
         "v0.4.2-faulttolerance",
         "v0.4.2-easyscale-faulttolerance",
+        "faulttolerance-test",
         "0.4.2",
-        "0.4.1",
-        "0.4.0",
-        "v0.2.0",
-        "v0.3.0",
-        "v0.1.0"
+        "0.4.1-nightly",
+        "easyscale-test",
+        "0.4.1"
       ],
       "image_name": "docker.io/kubedl/kubedl"
     },
@@ -3722,16 +3807,16 @@
         "v1.18.2"
       ],
       "image_tags": [
+        "sha256-9d098133e92516525b7d722c2e0ca2ad287246c3477eed3ac991461f92d44ab5.att",
         "v1.21.0",
+        "sha256-067ec2b412a1658e22088edcb919128449fa99aaff501983436e349a8e81555d.att",
         "v1.20.0",
+        "sha256-d7d990888b19cb330240c2e319975dc67d0b61f0c836ef91df6bd91a0f3393d4.att",
+        "sha256-438ec29161465c6a17e2984a46bc581d5d7abd4eab256d5fb2f319b82a4172c8.att",
+        "sha256-b0f0112e23d0e56ba9e96a179109fbbe55c31c8d3edb14a05eef403b20cb4abb.att",
+        "sha256-588b0f913771e552364eecd3f8b0322a759c90d514d9eb017948eea6634e8026.att",
         "v1.16.6",
-        "v1.17.5",
-        "v1.18.3",
-        "v1.19.2",
-        "v1.16.5",
-        "v1.17.4",
-        "v1.18.2",
-        "v1.19.1"
+        "v1.17.5"
       ],
       "image_name": "docker.io/kubeedge/cloudcore",
       "docker_help_command": "--help"
@@ -3796,16 +3881,16 @@
         "v2.3.1"
       ],
       "image_tags": [
+        "latest",
         "localdev1731908163",
+        "localdev",
+        "v2.8.0-rc2",
+        "v2.8.0-rc1",
+        "unstable",
+        "dev",
         "v2.7.1",
-        "v2.7.0",
-        "v2.6.0",
-        "v2.5.0",
-        "v2.4.1",
-        "v2.4.0",
-        "v2.3.2",
-        "v2.3.1",
-        "v2.3.0"
+        "v2.7.1-rc1",
+        "v2.7.0"
       ],
       "image_name": "docker.io/kuberhealthy/kuberhealthy"
     },
@@ -3865,16 +3950,16 @@
         "v3.0.32"
       ],
       "image_tags": [
-        "v3.0.30",
-        "v3.0.15",
-        "v3.0.16",
-        "v3.0.32",
+        "latest",
         "v3.0.41",
-        "v3.0.22",
-        "v3.0.21",
-        "v3.0.19",
+        "sha256-779f0b5eb563bb7b466cd9d2912695067bd7cc701c75fd82637dda682a328267.sig",
+        "v3.0.41-prerelease",
         "v3.0.40",
-        "v3.0.18"
+        "sha256-d66f5e47c4936f166a3a0d9918a55670ffb8c16bff64f9c96676c065e47aa65b.sig",
+        "v3.0.40-prerelease",
+        "v3.0.39",
+        "sha256-1e58c709dd352abebd561cef5cd85d4c0fdc6908091db3ce0b50d2eeaa74c691.sig",
+        "v3.0.39-prerelease"
       ],
       "image_name": "quay.io/kubescape/kubescape",
       "docker_help_command": "kubescape --help"
@@ -3900,16 +3985,16 @@
         "kubeslice-controller-1.2.0"
       ],
       "image_tags": [
+        "nsc-sidecar",
+        "webhook-sidecar",
+        "nsm-sidecar",
+        "worker-spire",
+        "webhook-test",
+        "nsc-init-spire",
+        "kernel-spire",
         "vl3-spire",
-        "worker-7",
-        "gw-sidecar-2",
-        "cert-gen-12",
-        "cert-gen-11",
-        "cert-gen-10",
-        "cert-gen-9",
-        "cert-gen-8",
-        "cert-gen-7",
-        "controller-1"
+        "nsc-spire",
+        "nsm-spire"
       ],
       "image_name": "docker.io/sumon124816/kubeslice"
     },
@@ -3934,16 +4019,16 @@
         "v0.26.0"
       ],
       "image_tags": [
+        "release-0.15.2",
+        "git-1f17a7b3d-dirty",
+        "b24-01-09-22-28-26",
         "release-0.15.1",
         "git-3bb58d4f-dirty",
         "b23-12-20-14-35-50",
         "git-c570b9c40-clean",
         "b23-12-20-03-49-50",
-        "git-1f0e2cce1-clean",
-        "b23-10-18-20-54-33",
-        "git-913a647c2-dirty",
-        "b23-11-08-13-55-34",
-        "v0.14.0"
+        "latest",
+        "v0.15.0"
       ],
       "image_name": "quay.io/kubestellar/kubestellar",
       "docker_help_command": "/home/kubestellar/bin/kubestellar-make-kcp-server-cert --help"
@@ -4004,6 +4089,8 @@
         "v1.6.0-beta.0"
       ],
       "image_tags": [
+        "latest",
+        "master",
         "v0.9.6",
         "v0.10.0",
         "v0.9.5",
@@ -4011,9 +4098,7 @@
         "v0.9.3",
         "v0.9.2",
         "v0.9.1",
-        "v0.9.0",
-        "v0.8.0",
-        "v0.6.4"
+        "v0.9.0"
       ],
       "image_name": "docker.io/kubevirt/cirros-registry-disk-demo",
       "docker_help_command": "/usr/sbin/cfdisk --help"
@@ -4038,7 +4123,9 @@
         "v1.26.0",
         "v1.26.0-rc1"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/jordonleach/kubewarden"
     },
     {
@@ -4062,6 +4149,7 @@
         "v0.17.0"
       ],
       "image_tags": [
+        "latest",
         "20.04",
         "18.04"
       ],
@@ -4148,16 +4236,16 @@
         "v0.12.1-rc.3"
       ],
       "image_tags": [
+        "latest",
         "v0.6.4",
         "v0.6.4-arm64",
         "v0.6.4-amd64",
-        "v0.6.3",
-        "v0.6.3-arm64",
-        "v0.6.3-amd64",
-        "v0.6.2",
-        "v0.6.2-arm64",
-        "v0.6.2-amd64",
-        "v0.6.1"
+        "v0.6.3-alpha.4",
+        "v0.6.3-alpha.4-arm64",
+        "v0.6.3-alpha.4-amd64",
+        "v0.6.3-alpha.3",
+        "v0.6.3-alpha.3-arm64",
+        "v0.6.3-alpha.3-amd64"
       ],
       "image_name": "docker.io/kusionstack/karpor",
       "docker_help_command": "--help"
@@ -4183,16 +4271,16 @@
         "v1.15.0-rc.2"
       ],
       "image_tags": [
-        "v1.2.1-16-g5e07ecc5",
-        "v1.2.1-15-g50fa042b",
-        "v1.2.1-11-g2cc03639",
-        "v1.2.1-6-g9c7cdee8",
-        "v1.2.1-3-g7e9b08ba",
-        "v1.2.1-2-gee6ff959",
-        "v1.2.1-1-g8c9c0139",
-        "v1.2.1",
-        "v1.2.0-30-g51bfc494",
-        "v1.2.0-22-g704e1aad"
+        "latest",
+        "v1.3.0-rc4-12-ge868dbfe",
+        "v1.3.0-rc4-11-g7ee346b0",
+        "v1.3.0-rc4-10-gb7b2eca3",
+        "v1.3.0-rc4-3-g63c6e521",
+        "v1.3.0-rc4",
+        "v1.3.0-rc3-17-g23d277e0",
+        "v1.3.0-rc3-12-gb73315d8",
+        "v1.3.0-rc3-6-gcb6de3da",
+        "v1.3.0-rc3"
       ],
       "image_name": "docker.io/nirmata/kyverno",
       "docker_help_command": "--help"
@@ -4218,6 +4306,7 @@
         "v1.1.0-beta.0"
       ],
       "image_tags": [
+        "latest",
         "2.13.0-Rscripts",
         "2.13.0",
         "2.12.0-Rscripts",
@@ -4249,6 +4338,7 @@
         "edge-25.8.2"
       ],
       "image_tags": [
+        "latest",
         "0.8.6"
       ],
       "image_name": "docker.io/linkerd/namerctl",
@@ -4335,16 +4425,16 @@
         "v1.9.1-rc1"
       ],
       "image_tags": [
+        "master-head",
         "v1.10.x-head",
         "v1.9.x-head",
+        "v1.8.3-dev-20251005",
         "v1.8.x-head",
         "v1.10.0",
         "v1.9.2",
-        "v1.9.1",
-        "v1.7.x-head",
-        "v1.9.0-hotfix-1",
-        "v1.9.0-hotfix-11016-head",
-        "v1.8.2"
+        "v1.10.0-rc4",
+        "v1.9.2-rc2",
+        "v1.8.3-dev-20250907"
       ],
       "image_name": "docker.io/longhornio/longhorn-manager",
       "docker_help_command": "/usr/local/sbin/launch-manager --help"
@@ -4397,6 +4487,8 @@
         "0.5.0"
       ],
       "image_tags": [
+        "latest",
+        "ambient",
         "0.8.1",
         "0.8.0",
         "0.7.3",
@@ -4404,9 +4496,7 @@
         "0.7.1",
         "0.7.0",
         "0.6.1",
-        "0.6.0",
-        "0.5.1",
-        "0.5.0"
+        "0.6.0"
       ],
       "image_name": "docker.io/merbridge/merbridge",
       "docker_help_command": "/app/mbctl --help"
@@ -4432,16 +4522,16 @@
         "v0.8.129"
       ],
       "image_tags": [
-        "playground-10473976",
-        "playground-v0.8.137",
-        "stable-10473976",
-        "stable-v0.8.137",
-        "playground-75694b53",
-        "playground-v0.8.136",
-        "stable-75694b53",
-        "stable-v0.8.136",
-        "playground-bacfafa6",
-        "playground-v0.8.135"
+        "edge-v0.8.138",
+        "edge-7f008280",
+        "edge-latest",
+        "playground-dcd3e9a7",
+        "playground-v0.8.138",
+        "playground-latest",
+        "stable-dcd3e9a7",
+        "stable-v0.8.138",
+        "stable-latest",
+        "edge-v0.8.137"
       ],
       "image_name": "docker.io/meshery/meshery"
     },
@@ -4498,16 +4588,16 @@
         "v0.14.7"
       ],
       "image_tags": [
+        "sha256-4de663583abf358df238b6ccea8749efa73aae3891ee74a814ca29b799068b39",
         "6.4.22",
+        "sha256-e6cea151d859afe9660ffd61d06e59fafb9ef13e36d1c1d07286857ca9452cbe",
         "6.4.21",
+        "sha256-551390736fd3bd9de74f56ca36c381bc35e78a350dee018a95ef4796beea10a1",
         "6.4.20",
+        "sha256-08b5c8702764a6519ebaf592b41b3cd86bf4741dc68244b766b86fe37553187d",
         "6.4.19",
-        "6.4.18",
-        "6.4.17",
-        "6.4.16",
-        "6.4.15",
-        "6.4.14",
-        "6.4.13"
+        "sha256-5820b96810750cceb4ebc34c547a122511e9781343ded5c06192d4afe16bf17d",
+        "6.4.18"
       ],
       "image_name": "docker.io/bitnamicharts/metallb"
     },
@@ -4515,7 +4605,7 @@
       "name": "Metal\u00b3",
       "description": "Bare metal host provisioning integration for Kubernetes",
       "github_release_url": "https://api.github.com/repos/metal3-io/baremetal-operator/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnami/metallb-speaker/tags/?page=1&page_size=100",
+      "docker_tags_url": "https://quay.io/api/v1/repository/metal3-io/baremetal-operator/tag/?page=1&limit=100",
       "readme": "https://github.com/metal3-io/baremetal-operator/blob/main/README.md",
       "category": "Provisioning",
       "homepage": "https://metal3.io/",
@@ -4531,8 +4621,20 @@
         "v0.10.0",
         "v0.10.0-beta.0"
       ],
-      "image_tags": [],
-      "image_name": "docker.io/bitnami/metallb-speaker"
+      "image_tags": [
+        "latest",
+        "main_2025-10-10_20bf38ae38e012df95588f2d594b4b7a7dfbd915",
+        "main",
+        "latest",
+        "main_2025-10-08_ee6a4a46d92e8c73a7a4b75ed96897a1ef1074b6",
+        "main",
+        "latest",
+        "main_2025-10-07_7f2e46d1009514077e6877608050837ee81f904f",
+        "main",
+        "latest"
+      ],
+      "image_name": "quay.io/metal3-io/baremetal-operator",
+      "notes": "Changed to correct Metal3 repository on Quay.io"
     },
     {
       "name": "Microcks",
@@ -4555,8 +4657,16 @@
         "1.10.1"
       ],
       "image_tags": [
-        "1.12.1",
-        "1.12.0"
+        "latest",
+        "sha256-28d7e2704cafa494aeb9452e4dbde94ce4825ea67b8c776f1f295a5e2cc17657.sig",
+        "nightly",
+        "sha256-913914410958fcd20c5e45a0e400d518491df466d3d8431dbf8af545ac72851a.sig",
+        "sha256-3c96ef933a5c2808b16465c311e77434e0b90e7d1d36cb2e0406ce3af64d7b69.sig",
+        "sha256-9bffa8beab85776215e0474ee79b2737461203521159301b934b84663e35274c.sig",
+        "sha256-335b1fb1bbcfa637e902b6179518e12998627cc722ac22f5a39e8bcabf68faf9.sig",
+        "sha256-e555606898bfa7c2b3271e913aed219e353c10e4fa2cba8fe99c2ec41a6fd045.sig",
+        "sha256-7116b62a0cf4e76d915b6ba309b30cefda916cf006f37a21f3c3856734a6f456.sig",
+        "sha256-e0f8184a92f6b6f060355d604ba4feb8ca86fe4917221ff201245fc76afd160c.sig"
       ],
       "image_name": "docker.io/microcks/microcks"
     },
@@ -4570,16 +4680,16 @@
       "homepage": "https://github.com/modelpack/model-spec",
       "github_releases": [],
       "image_tags": [
+        "latest",
         "3.0.62",
         "3.0.61",
         "3.0.60",
         "3.0.59",
         "3.0.58",
         "3.0.47",
+        "test",
         "2.2.12",
-        "2.2.11",
-        "2.2.10",
-        "2.2.9"
+        "2.2.11"
       ],
       "image_name": "docker.io/deepview/modelpack"
     },
@@ -4604,16 +4714,16 @@
         "v2.12.0-RC.4"
       ],
       "image_tags": [
+        "latest",
+        "scratch",
+        "linux",
         "2.12.0-scratch",
         "2.12.0-linux",
         "2.12.0",
         "2.12-scratch",
         "2.12-linux",
         "2.12",
-        "2.11.10-scratch",
-        "2.11.10-linux",
-        "2.11.10",
-        "2.11-scratch"
+        "2.11.10-scratch"
       ],
       "image_name": "docker.io/nats",
       "docker_help_command": "--help"
@@ -4639,6 +4749,7 @@
         "v1.14.4"
       ],
       "image_tags": [
+        "latest",
         "3.12.12-postgres",
         "3.12-postgres",
         "3-postgres",
@@ -4647,8 +4758,7 @@
         "3",
         "4.4.9",
         "4.4",
-        "4.2.14",
-        "4.2"
+        "4.2.14"
       ],
       "image_name": "docker.io/geonetwork",
       "docker_help_command": "-h"
@@ -4705,15 +4815,15 @@
       ],
       "image_tags": [
         "signer-0.7.0",
+        "signer",
         "server-0.7.0",
+        "server",
         "signer-0.6.1-2",
         "server-0.6.1-2",
         "signer-0.6.1-1",
         "server-0.6.1-1",
         "signer-0.6.1",
-        "server-0.6.1",
-        "signer-0.2.0",
-        "server-0.2.0"
+        "server-0.6.1"
       ],
       "image_name": "docker.io/notary",
       "docker_help_command": "--help"
@@ -4773,6 +4883,7 @@
         "v1.4.0"
       ],
       "image_tags": [
+        "dev",
         "3ae0f59",
         "318435f",
         "83b1048",
@@ -4781,8 +4892,7 @@
         "31d1af7",
         "4e5d6ea",
         "4af32eb",
-        "v3.20.1",
-        "d2802c8"
+        "v3.20.1"
       ],
       "image_name": "docker.io/openpolicyagent/gatekeeper",
       "docker_help_command": "--help"
@@ -4911,16 +5021,16 @@
         "v4.1.2"
       ],
       "image_tags": [
+        "latest",
+        "4.4.0-develop",
+        "4.3.1-prerelease",
         "4.3.0",
+        "4.3.0-prerelease",
+        "4.3.0-develop",
         "4.2.0",
-        "4.1.4",
-        "4.1.3",
-        "4.1.2",
-        "4.1-ci",
-        "4.1.1",
-        "4.1.x-ci",
-        "chart-v4.1.0-ci",
-        "4.1.0"
+        "4.2.0-prerelease",
+        "4.2.0-develop",
+        "4.1.5-prerelease"
       ],
       "image_name": "docker.io/openebs/provisioner-localpv",
       "docker_help_command": "--help"
@@ -4947,6 +5057,7 @@
       ],
       "image_tags": [
         "sha-d684cfc2",
+        "master",
         "sha-bdd6549f",
         "sha-1f9c7bd2",
         "sha-b5fffdd7",
@@ -4954,8 +5065,7 @@
         "sha-4bf92dfe",
         "sha-71036c91",
         "sha-48334f67",
-        "sha-d2b344cd",
-        "sha-0672f106"
+        "sha-d2b344cd"
       ],
       "image_name": "docker.io/kubesphere/openelb",
       "docker_help_command": "/usr/local/bin/openelb-manager --help"
@@ -5006,16 +5116,16 @@
         "v1.8.15"
       ],
       "image_tags": [
+        "latest",
+        "sha256-5f53b133cb310f9014c4f85b702ce488b8fbd625933b86de0c54365e9f5e9139.att",
+        "sha256-5f53b133cb310f9014c4f85b702ce488b8fbd625933b86de0c54365e9f5e9139.sig",
         "v1.10.2",
         "v1.10",
         "v1",
         "v1.10.2-arm64",
         "v1.10-arm64",
         "v1-arm64",
-        "v1.10.2-amd64",
-        "v1.10-amd64",
-        "v1-amd64",
-        "v1.10.1"
+        "latest-arm64"
       ],
       "image_name": "docker.io/openfga/openfga",
       "docker_help_command": "--help"
@@ -5041,16 +5151,16 @@
         "v0.7.0"
       ],
       "image_tags": [
+        "latest",
         "v1.2.0",
         "v1.1.1",
         "v1.1.0",
         "v1.0.0",
+        "v1.0.0-rc.0",
         "v0.8.1",
+        "v0.8.1-rc.0",
         "v0.8.0",
-        "v0.7.0",
-        "v0.6.0",
-        "v0.5.0",
-        "v0.4.0"
+        "v0.8.0-rc.0"
       ],
       "image_name": "docker.io/openfunction/openfunction",
       "docker_help_command": "--help"
@@ -5156,6 +5266,7 @@
       "homepage": "https://opentelemetry.io/",
       "github_releases": [],
       "image_tags": [
+        "latest",
         "2",
         "2.16",
         "2.16.1",
@@ -5164,8 +5275,7 @@
         "2.15.0",
         "2.14",
         "2.14.1",
-        "2.14.0",
-        "2.13"
+        "2.14.0"
       ],
       "image_name": "docker.io/paketobuildpacks/opentelemetry"
     },
@@ -5190,6 +5300,7 @@
         "v1.8.10"
       ],
       "image_tags": [
+        "latest",
         "1.10.6-alpine3.20",
         "1.10.5-alpine3.20",
         "1.10.4-alpine3.20",
@@ -5198,8 +5309,7 @@
         "1.10.1-alpine3.20",
         "1.10.0-alpine3.20",
         "1.9.3-alpine3.20",
-        "1.9.2-alpine3.20",
-        "1.8.11-alpine3.20"
+        "1.9.2-alpine3.20"
       ],
       "image_name": "docker.io/oowy/opentofu",
       "docker_help_command": "tofu --help"
@@ -5221,16 +5331,16 @@
         "v0.9.0"
       ],
       "image_tags": [
+        "latest",
+        "edge-alpine",
+        "edge",
         "nginx-1.29.1",
         "0.41.0",
+        "latest-alpine",
         "nginx-1.29.1-alpine",
         "0.41.0-alpine",
         "nginx-1.27.5",
-        "0.40.0",
-        "nginx-1.27.5-alpine",
-        "0.40.0-alpine",
-        "nginx-1.27.4",
-        "0.39.0"
+        "0.40.0"
       ],
       "image_name": "docker.io/opentracing/nginx-opentracing",
       "docker_help_command": "/etc/init.d/nginx-debug --help"
@@ -5256,6 +5366,7 @@
         "v1.2.2"
       ],
       "image_tags": [
+        "latest",
         "v1.6.1",
         "v1.6.0",
         "v1.5.1",
@@ -5264,8 +5375,7 @@
         "v1.4.3",
         "v1.4.2",
         "v1.4.1",
-        "v1.4.0",
-        "v1.2.2"
+        "v1.4.0"
       ],
       "image_name": "docker.io/openyurt/yurthub",
       "docker_help_command": "--help"
@@ -5291,6 +5401,7 @@
         "v1.36.0"
       ],
       "image_tags": [
+        "latest",
         "v1.34.1-bookworm",
         "v1.34.1",
         "v1.34",
@@ -5322,13 +5433,14 @@
       "image_tags": [
         "4542f5a2a046ca36653749a8985e46744a5d2d36ee10ca14409be718ce15129e",
         "184df7d26645f83e378168c4331fdcd39d95894d",
+        "latest",
+        "sha256-4542f5a2a046ca36653749a8985e46744a5d2d36ee10ca14409be718ce15129e",
         "184df7d",
-        "2549032731fc69e1143e5708965c8b7a75ded263",
-        "80d3095eaa01f55ecfc46bb74c1cfc3b85b3075c7c2c142725fea08f1ab6ecc7",
-        "2549032",
-        "f06b515f3a2a4b6b41fcdb1d0335f7068162de1ced93d34999a2645ddd42ec67",
-        "ac1b176",
-        "ac1b176083032cf30dcb982ae7046ddb647d0b06"
+        "sha256-ff8241f39495d47330e83eb83a77a7726b2c4c28f32e6df0c498cf702195047e",
+        "sha256-ff8241f39495d47330e83eb83a77a7726b2c4c28f32e6df0c498cf702195047e.sbom",
+        "sha256-ff8241f39495d47330e83eb83a77a7726b2c4c28f32e6df0c498cf702195047e.sig",
+        "sha256-ff8241f39495d47330e83eb83a77a7726b2c4c28f32e6df0c498cf702195047e.sbom",
+        "sha256-ff8241f39495d47330e83eb83a77a7726b2c4c28f32e6df0c498cf702195047e.sbom"
       ],
       "image_name": "quay.io/konflux-ci/oras",
       "docker_help_command": "--help"
@@ -5388,6 +5500,7 @@
         "v0.1.0"
       ],
       "image_tags": [
+        "latest",
         "4.21.0",
         "4.21",
         "4.20.0",
@@ -5396,8 +5509,7 @@
         "4.19",
         "4.18.0",
         "4.18",
-        "4.17.0",
-        "4.17"
+        "4.17.0"
       ],
       "image_name": "quay.io/openshift/origin-ovn-kubernetes",
       "docker_help_command": "--help"
@@ -5423,16 +5535,16 @@
         "v0.2.0"
       ],
       "image_tags": [
+        "latest",
+        "sha256-a79ba8343abf2ee0b6fcc6994823bfd62c0646eb03e381ea3e0909d3cbb4db68.sig",
         "v0.2.9",
+        "sha256-21b0a0293c8ad30c2760fdedd3f5c0835978217292b900ceaf77d483481e2fda.sig",
         "v0.2.8",
+        "sha256-c6f0715ce14d90923dc62ee9d2cad458e58cdecfac9e320fe962f60a63bcdb8a.sig",
         "v0.2.7",
+        "sha256-35fda5fd24be4ab402e7261ac32679aef0b3915853c851cccccabc4958a38661.sig",
         "v0.2.6",
-        "v0.2.5",
-        "sha-b4d64ef",
-        "v0.2.4",
-        "sha-a30f80f",
-        "sha-ce4e381",
-        "sha-ae206f0"
+        "sha256-d0f53b268f24fe424431cc7d3a2e85d3a03d0c0d16d48322120ba8b33267d37d.sig"
       ],
       "image_name": "docker.io/paralusio/paralus",
       "docker_help_command": "/bin/sh --help"
@@ -5457,8 +5569,16 @@
         "0.5.0"
       ],
       "image_tags": [
+        "simlarge",
         "splash2x-fft-native-reduced",
-        "splash2x-cholesky-native-reduced"
+        "canneal-native-reduced",
+        "freqmine-native-reduced",
+        "ferret-native-reduced",
+        "splash2x-cholesky-native-reduced",
+        "fluidanimate-native-reduced",
+        "facesim-native-reduced",
+        "blackscholes-native-reduced",
+        "dedup-native-reduced"
       ],
       "image_name": "docker.io/anakli/parsec"
     },
@@ -5483,12 +5603,16 @@
         "v0.52.0-beta.0"
       ],
       "image_tags": [
+        "latest",
+        "0.10.1-dev",
+        "dev-cuda-11.0-openmm8-beta",
+        "dev-cuda-11.0-io-openmm8-beta",
+        "dev-cuda-11.0-cloud-io-openmm-dev",
+        "dev-cuda-11.0-cloud-io",
+        "dev-cuda-9.0-cloud-io",
         "0.10.0-cuda-11.6.0",
-        "0.9.3-cuda-11.6.0",
-        "0.9.2-cuda-11.2.2",
-        "0.9.2-cuda-11.0.3",
-        "0.9.2",
-        "0.9.1"
+        "dev",
+        "0.9.3-cuda-11.6.0"
       ],
       "image_name": "docker.io/choderalab/perses",
       "docker_help_command": "/opt/conda/bin/perses-cli --help"
@@ -5549,6 +5673,7 @@
         "v2.5.0"
       ],
       "image_tags": [
+        "latest",
         "v1.32.2-1-g23449280b09cbbd2abffd9f7682322f4179f0d0b",
         "v1.32.2",
         "v1.32.2-1",
@@ -5557,8 +5682,7 @@
         "v1.32.1-1",
         "v1.32.1-1-g94607cc6ee01ea4953395ee3270c1467a4699525",
         "v1.32.1-1-ga2379963e5972d04cc1ecb91b64b6fc9c2e76c38",
-        "v1.32.1-1-gc4cff663ce920a40f6453ea5ed5d9c0ccedabb69",
-        "v1.32.1-1-g096648f6f8567746fea903660295c9862e74a90b"
+        "v1.32.1-1-gc4cff663ce920a40f6453ea5ed5d9c0ccedabb69"
       ],
       "image_name": "docker.io/piraeusdatastore/piraeus-server",
       "docker_help_command": "--help"
@@ -5586,7 +5710,14 @@
       "image_tags": [
         "operator-bundle-0.0.16",
         "operator-bundle_index-0.0.1",
-        "pixie-prod-artifacts-curl-1.0"
+        "pixie-prod-artifacts-curl-1.0",
+        "proxy_server_image",
+        "artifact_tracker_server_image",
+        "project_manager_server_image",
+        "vzconn_server_image",
+        "create_admin_job_image",
+        "dnsmgr_server_image",
+        "api_server_image"
       ],
       "image_name": "docker.io/evanljp/pixie"
     },
@@ -5647,6 +5778,7 @@
       ],
       "image_tags": [
         "1.18.0-rolling-daily",
+        "1.8.0-edge",
         "1.17.0-rolling-daily",
         "1.16.1-rolling-daily",
         "1.16.0-rolling-daily",
@@ -5654,8 +5786,7 @@
         "1.17.0-rolling-weekly",
         "1.16.1-rolling-weekly",
         "1.16.0-rolling-weekly",
-        "1.15.0-rolling-weekly",
-        "1.18.0"
+        "1.15.0-rolling-weekly"
       ],
       "image_name": "docker.io/kasmweb/desktop",
       "docker_help_command": "/dockerstartup/kasm_default_profile.sh -h"
@@ -5684,13 +5815,13 @@
         "v0.4.1",
         "v0.4.2",
         "v0.4",
+        "v0.3-dev",
         "abaaa388",
         "35226357",
         "adfe3be7",
         "50ca94f4",
         "600adfc3",
-        "34ed920d",
-        "eda46d05"
+        "34ed920d"
       ],
       "image_name": "docker.io/kubespheredev/porter"
     },
@@ -5715,16 +5846,16 @@
         "v0.11.0"
       ],
       "image_tags": [
+        "latest",
         "0.13.0",
+        "0.13.0-rc2",
+        "0.13.0-rc1",
+        "0.13.0-rc0",
         "0.12.0",
         "0.11.0",
         "0.10.2",
         "0.10.1",
-        "0.10.0",
-        "0.9.1",
-        "0.9.0",
-        "0.8.1",
-        "0.7.3"
+        "0.10.0"
       ],
       "image_name": "docker.io/pravega/pravega"
     },
@@ -5749,16 +5880,16 @@
         "v3.4.1"
       ],
       "image_tags": [
+        "latest",
+        "main",
+        "v3.7.0-rc.0",
         "v3.6.0",
+        "v3.6.0-rc.1",
+        "v3.6.0-rc.0",
         "v3.5.0",
-        "v2.53.5",
-        "v3.4.2",
-        "v3.4.1",
-        "v3.4.0",
-        "v3.3.1",
-        "v3.3.0",
-        "v2.53.4",
-        "v3.2.1"
+        "v3.5.0-rc.1",
+        "v3.5.0-rc.0",
+        "v2.53.5"
       ],
       "image_name": "docker.io/prom/prometheus",
       "docker_help_command": "--help"
@@ -5784,16 +5915,16 @@
         "v0.49.0"
       ],
       "image_tags": [
+        "latest",
+        "1.8.0-dev",
+        "devel",
         "1.7.3",
         "1.7.2",
         "1.7.1",
         "1.7.0",
+        "1.7.0-dev",
         "1.6.4",
-        "1.6.3",
-        "1.6.2",
-        "1.6.1",
-        "1.6.0",
-        "1.5.0"
+        "1.6.3"
       ],
       "image_name": "docker.io/kanidm/radius"
     },
@@ -5819,15 +5950,15 @@
       ],
       "image_tags": [
         "fe-v1.1.3",
+        "fe",
         "be-v1.1.3",
+        "be",
+        "fe-dev",
+        "be-dev",
         "fe-v1.1.2",
         "be-v1.1.2",
         "fe-v1.1.1",
-        "be-v1.1.1",
-        "fe-v1.1.0",
-        "be-v1.1.0",
-        "fe-v1.0.0",
-        "be-v1.0.0"
+        "be-v1.1.1"
       ],
       "image_name": "docker.io/daystram/ratify"
     },
@@ -5878,6 +6009,7 @@
       ],
       "image_tags": [
         "v0.7.1-4.g4233e03",
+        "master",
         "v0.7.0-136.gd13bc83",
         "v0.7.0-134.g9b5c092",
         "v0.7.0-131.ga81dfe7",
@@ -5885,8 +6017,7 @@
         "v0.7.0-126.gf6abaec",
         "v0.7.0-124.g0be13da",
         "v0.7.0-122.g656d223",
-        "v0.7.0-120.ged7acb9",
-        "v0.7.0-118.gbfd48e2"
+        "v0.7.0-120.ged7acb9"
       ],
       "image_name": "docker.io/rook/rook",
       "docker_help_command": "/usr/local/bin/rook --help"
@@ -5912,16 +6043,16 @@
         "v3.15.1-rc.3"
       ],
       "image_tags": [
+        "latest",
         "3.15.4-ubuntu",
         "3.15.4-alpine",
         "3.15.4",
+        "latest-ubuntu",
+        "latest-alpine",
         "3.15.4-ubuntu-amd64",
         "3.15.4-ubuntu-arm64v8",
         "3.15.4-alpine-amd64",
-        "3.15.4-alpine-arm64v8",
-        "3.15.3-ubuntu",
-        "3.15.3-alpine",
-        "3.15.3"
+        "3.15.4-alpine-arm64v8"
       ],
       "image_name": "docker.io/statefulhq/runme"
     },
@@ -5946,16 +6077,16 @@
         "v0.20.2"
       ],
       "image_tags": [
+        "latest",
+        "0.23.0-alpha.7",
+        "0.23.0-alpha.6",
+        "0.23.0-alpha.4",
+        "0.23.0-alpha.3",
+        "0.23.0-alpha.2",
+        "0.23.0-alpha.1",
         "0",
         "0.22",
-        "0.22.1",
-        "0.22.0",
-        "0.21",
-        "0.21.0",
-        "0.20",
-        "0.20.2",
-        "0.20.1",
-        "0.20.0"
+        "0.22.1"
       ],
       "image_name": "docker.io/schemahero/schemahero",
       "docker_help_command": "--help"
@@ -5974,16 +6105,16 @@
         "0.1.0"
       ],
       "image_tags": [
+        "latest",
+        "json",
         "json.1",
         "json.0",
         "2.2.5",
         "2.2.4",
+        "2.2.3-beta1",
         "2.2.2",
-        "2.2.1",
-        "2.2.0",
-        "2.1.0",
-        "2.0.2",
-        "2.0.1"
+        "2.2.2-beta1",
+        "2.2.1"
       ],
       "image_name": "docker.io/nmtwizard/score"
     },
@@ -6008,16 +6139,16 @@
         "v0.8.4-beta.0"
       ],
       "image_tags": [
+        "latest",
         "0.3.1",
+        "canary",
         "master-7244",
+        "0.3.1-alpha1",
         "master-7239",
         "master-7224",
         "master-7162",
         "master-7152",
-        "master-3160",
-        "master-3143",
-        "0.2.0",
-        "master-4558"
+        "master-6276"
       ],
       "image_name": "quay.io/jetstack/vault-unsealer"
     },
@@ -6041,7 +6172,9 @@
         "v1.4.1",
         "v1.4.0"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/sermant/docker101tutorial"
     },
     {
@@ -6065,6 +6198,7 @@
         "v3.1.1"
       ],
       "image_tags": [
+        "latest",
         "dev"
       ],
       "image_name": "docker.io/tencentcom/serverless-devs"
@@ -6090,16 +6224,16 @@
         "v0.6"
       ],
       "image_tags": [
-        "be3e8e3c8099f475b29a7c67b61c6cb604f8b66c",
-        "a865aca274c429dda680120dca0ae2492522f0ed",
-        "5999a2d1fb5908cc2cc90ee609818b2320f58d28",
-        "7b3023b52eb327f0a897df3a6cc1c68d6aa7c80d",
-        "c3b7031d91ae42fa423d1d25060e50dc6267031c",
+        "3197a62072297e2eca0229c336b32fa78a03d22c",
+        "latest",
         "aed62dee57d8b9f52caa01fd1283e161c3c89614",
         "973e6588",
-        "8e077164fba2cd03e104d86742c5422fd8edce26",
-        "daef7592d0e496fc75d6800b4fe667796e506eb9",
-        "2e3a6c783d83b507d956d05780a8ee686e259f05"
+        "test",
+        "2f2ab2e1b5ee4728e3cbe4f02a33c671cde50e80",
+        "4ff8f5200a826304ce9a4af9ca387a1540945668",
+        "61d40794a5c725f63f89cf6c714c7dabe3f0aae1",
+        "d347d903b21feac8e3f692d82382e0e226ed52bc",
+        "fc1a510d421f8ba3e05a1c1a946e9c087195e4b9"
       ],
       "image_name": "quay.io/orchestrator/serverless-workflow-greeting"
     },
@@ -6117,16 +6251,16 @@
         "v0.4.0"
       ],
       "image_tags": [
-        "2.5.0-jdk17",
-        "2.5.0-ubuntu-jdk-17",
-        "2.5.14-jdk17",
-        "2.5.4-ubuntu-jdk-17",
-        "2.5.14-ubuntu-jdk-17",
-        "2.5.4-jdk17",
-        "3.2.0-ubuntu-jdk-17",
-        "3.2.0-jdk17",
+        "2.5.17-ubuntu-jdk-17",
         "2.5.17-jdk17",
-        "2.5.17-ubuntu-jdk-17"
+        "2.5.14-ubuntu-jdk-17",
+        "2.5.14-jdk17",
+        "2.5.8-jdk17",
+        "2.5.8-ubuntu-jdk-17",
+        "2.5.0-ubuntu-jdk-17",
+        "2.5.0-jdk17",
+        "3.2.0-ubuntu-jdk-17",
+        "3.2.0-jdk17"
       ],
       "image_name": "docker.io/atlassian/bitbucket-mesh",
       "docker_help_command": "/usr/sbin/service --help"
@@ -6152,16 +6286,16 @@
         "v0.1.0"
       ],
       "image_tags": [
-        "2.5.0-jdk17",
-        "2.5.0-ubuntu-jdk-17",
-        "2.5.14-jdk17",
-        "2.5.4-ubuntu-jdk-17",
-        "2.5.14-ubuntu-jdk-17",
-        "2.5.4-jdk17",
-        "3.2.0-ubuntu-jdk-17",
-        "3.2.0-jdk17",
+        "2.5.17-ubuntu-jdk-17",
         "2.5.17-jdk17",
-        "2.5.17-ubuntu-jdk-17"
+        "2.5.14-ubuntu-jdk-17",
+        "2.5.14-jdk17",
+        "2.5.8-jdk17",
+        "2.5.8-ubuntu-jdk-17",
+        "2.5.0-ubuntu-jdk-17",
+        "2.5.0-jdk17",
+        "3.2.0-ubuntu-jdk-17",
+        "3.2.0-jdk17"
       ],
       "image_name": "docker.io/atlassian/bitbucket-mesh",
       "docker_help_command": "/usr/sbin/service --help"
@@ -6240,6 +6374,8 @@
         "0.43.1"
       ],
       "image_tags": [
+        "latest",
+        "0.44.3-dev.134",
         "0.44.2",
         "0.44.2-pr.176132",
         "0.44.2-pr.176131",
@@ -6247,9 +6383,7 @@
         "0.45.0-pr.178128",
         "0.45.0-pr.178127",
         "0.45.0-pr.178126",
-        "0.45.0-pr.178125",
-        "0.45.0-pr.178124",
-        "0.44.0"
+        "0.45.0-pr.178125"
       ],
       "image_name": "docker.io/axaguildev/slimfaas"
     },
@@ -6295,16 +6429,16 @@
         "v3.8.1"
       ],
       "image_tags": [
+        "latest",
         "sx2024.11.0",
         "3.8.1",
         "sx2024.09.0",
+        "sx",
         "sx2024.08.1",
         "sx2024.08.0",
         "sx2024.05.0",
         "sx2024.04.2",
-        "sx2024.04.1",
-        "sx2024.04.0",
-        "sx2024.03.1"
+        "sx2024.04.1"
       ],
       "image_name": "docker.io/stagex/sops"
     },
@@ -6349,16 +6483,16 @@
       "homepage": "https://spiffe.io/",
       "github_releases": [],
       "image_tags": [
-        "v0.3.0",
-        "v0.2.0",
-        "v0.4.1",
-        "v0.8.2",
-        "v0.1.0",
-        "v0.7.0",
-        "v0.8.1",
+        "sha256-56392a6ab42c229ce5bba37a8fef000e8bc3bd9b16136140efef88fb5eafb064.sig",
+        "v0.10.0",
+        "sha256-d71cc046f0e66f06eec880f9f201328f8b13172b0a1a2d7f91543734d3a2f2e6.sig",
         "v0.9.2",
-        "v0.6.0",
-        "v0.8.0"
+        "sha256-02e5c4824d3f36d96944bfccda4175ae5d6d9287b40a790d599348bd419dabf2.sig",
+        "v0.9.1",
+        "sha256-2fa4062d5fbfc9109c8e0129010dbae60e87bad1b5b8510500236d03d1766c55.sig",
+        "v0.9.0",
+        "sha256-f990280c70e03b6dcbdc001d8dd8e5ce57bd956d10410482ea1fb498bb47dbce.sig",
+        "v0.8.2"
       ],
       "image_name": "quay.io/jetstack/cert-manager-csi-driver-spiffe",
       "docker_help_command": "--help"
@@ -6384,16 +6518,16 @@
         "v3.0.0"
       ],
       "image_tags": [
-        "1.0.1",
-        "1.0.0",
-        "1.0.4",
-        "1.0.2",
+        "1.1.0",
         "2.0.0",
         "1.0.9",
         "1.0.8",
         "1.0.7",
         "1.0.5",
-        "1.1.0"
+        "1.0.4",
+        "1.0.2",
+        "1.0.1",
+        "1.0.0"
       ],
       "image_name": "quay.io/starek2040/wheelspin-image",
       "docker_help_command": "/opt/jboss/wildfly/./bin/standalone.sh --help"
@@ -6469,16 +6603,16 @@
         "v1.0.0-rc14"
       ],
       "image_tags": [
+        "latest",
         "stable-1.2",
         "c1aad4f8713c64c90abc02e6c10ad2eda1a18c8e",
+        "master",
         "release-1.2.0",
         "f19e22def647f1c51c2568772bf67e9116c481a7",
         "6b7fec62f6ec3cba5e86c4560a8c29322cbcc0f4",
         "551214f4a2e65f7d29ffaa33373aa1c5ffa4900f",
-        "a8d76385af6c1a6cefc6d7d4629c2e61e7ec9be4",
-        "d8b224a2303a9b57cea28ae0297c6944031ad7ee",
-        "48d43d0b36a102aa5b5733c97bb6c82736eb92f9",
-        "ab21dd09afa49f2e27cbad46f689a36ddd0a968a"
+        "parameter-type-names",
+        "a8d76385af6c1a6cefc6d7d4629c2e61e7ec9be4"
       ],
       "image_name": "docker.io/remind101/stacker"
     },
@@ -6506,13 +6640,13 @@
         "0.20.1-kafka-2.5.0",
         "0.20.1-kafka-2.5.1",
         "0.20.1-kafka-2.6.0",
-        "0.20.0-kafka-2.5.0",
-        "0.20.0-kafka-2.5.1",
-        "0.20.0-kafka-2.6.0",
-        "0.19.0-kafka-2.5.0",
-        "0.19.0-kafka-2.4.1",
-        "0.19.0-kafka-2.4.0",
-        "0.18.0-kafka-2.5.0"
+        "0.20.1-rc1-kafka-2.5.0",
+        "0.20.1-rc1-kafka-2.5.1",
+        "0.20.1-rc1-kafka-2.6.0",
+        "latest-kafka-2.5.0",
+        "latest-kafka-2.5.1",
+        "latest-kafka-2.6.0",
+        "0.20.0-kafka-2.5.0"
       ],
       "image_name": "docker.io/strimzi/kafka"
     },
@@ -6563,8 +6697,12 @@
         "v0.2.0"
       ],
       "image_tags": [
+        "v0.5.0-beta.0",
         "v0.4.0",
+        "v0.4.0-beta.0",
         "v0.3.0",
+        "v0.3.0-beta.0",
+        "v0.3.0-beta.1",
         "v0.2.0",
         "v0.1.0"
       ],
@@ -6591,16 +6729,16 @@
         "v2.23.0"
       ],
       "image_tags": [
+        "latest",
         "426551d2971d70316b037513a177adbeb7705260",
-        "640a2faffdbbf87e43e5f5384c3dfd458f0dacf8",
-        "7d7cb5ab5bb7824e0bcb0084b1054f56eba86839",
-        "13f81851c3fa32b89e0a7160e980f4b6bc6cd8b1",
-        "48b2f063925a2021a41d6aa452f56b5481398e1f",
         "67a09105b92ddb3e0e6ae5e93f979c20b3be23df",
         "60604fbfa467ab19f55181911065968523b363cf",
         "8335aa9e7695babc6daa8eedc5de4a7bd2ca8fbf",
         "eb09bbc3420e0ca676f444d7189609811da1409a",
-        "9d715726072b0a368e2cedf1bcb74b71633774b0"
+        "9d715726072b0a368e2cedf1bcb74b71633774b0",
+        "640a2faffdbbf87e43e5f5384c3dfd458f0dacf8",
+        "7d7cb5ab5bb7824e0bcb0084b1054f56eba86839",
+        "13f81851c3fa32b89e0a7160e980f4b6bc6cd8b1"
       ],
       "image_name": "quay.io/datawire/demo-telepresence"
     },
@@ -6625,6 +6763,7 @@
         "v1.5.2"
       ],
       "image_tags": [
+        "latest",
         "v2.75.2",
         "v2.75.1",
         "v2.75.0",
@@ -6633,8 +6772,7 @@
         "v2.74.1",
         "v2.74.0",
         "v2.73.0",
-        "v2.72.1",
-        "v2.72.0"
+        "v2.72.1"
       ],
       "image_name": "docker.io/ginco/teller"
     },
@@ -6659,16 +6797,16 @@
         "v1.0.2"
       ],
       "image_tags": [
-        "v1.2.1",
-        "v1.0.2",
-        "v1.1.2",
-        "v1.0.0",
+        "sha256-de20167da69642aef54386be6d3dd52b8be32ec7348a7c53267a56e96bd904d8.sig",
+        "sha256-3f9ab530fa832c9c80244aa6776ba794abbd9c313ce6c3177a96b3991b01469c.sbom",
+        "sha256-3f9ab530fa832c9c80244aa6776ba794abbd9c313ce6c3177a96b3991b01469c.sig",
         "v1.5.0",
+        "sha256-69441e8a528a10dc0f99dcb67945bf7ab448edd28d59a4cad475abc9be7848a5.sig",
+        "sha256-b0cf521d98197861a9e0622832eca623a321fb7ddd7dd98641fc5f176c45f103.sbom",
+        "sha256-b0cf521d98197861a9e0622832eca623a321fb7ddd7dd98641fc5f176c45f103.sig",
         "v1.4.1",
-        "v1.1.1",
-        "v1.2.0",
-        "v1.1.0",
-        "v1.0.3"
+        "sha256-6b619116ff8cdfca48ac4d0bea6334d07436ee7d7b5ccbc5fd32b39b9961ca2f.sig",
+        "sha256-500eca691c0be96dc7943c2da43d9d3ea1fdcaabfa0406a63742914d3c438123.sbom"
       ],
       "image_name": "quay.io/cilium/tetragon",
       "docker_help_command": "--help"
@@ -6694,16 +6832,16 @@
         "v0.37.0"
       ],
       "image_tags": [
-        "main-2025-07-30-1b21d71",
-        "main-2025-08-27-dc403ea",
-        "main-2025-06-25-8b738c5",
-        "v0.39.0",
-        "main-2025-07-23-e30e831",
-        "main-2025-05-21-759773c",
-        "main-2025-06-18-933f04f",
-        "main-2025-06-18-f1c0f4b",
-        "main-2025-07-16-0dc0b29",
-        "main-2025-05-14-34b3d64"
+        "main-2025-10-07-be442a5",
+        "main-2025-09-25-d997eed",
+        "main-2025-09-22-58f15ea",
+        "main-2025-09-22-13fae5e",
+        "main-2025-09-12-3f26e05",
+        "main-2025-09-09-2228202",
+        "main-2025-09-09-544c4bc",
+        "main-2025-09-03-1c4d17b",
+        "main-2025-09-03-cafefb8",
+        "main-2025-09-03-dddd98d"
       ],
       "image_name": "quay.io/thanos/thanos",
       "docker_help_command": "--help"
@@ -6757,6 +6895,7 @@
         "v8.1.2"
       ],
       "image_tags": [
+        "latest",
         "f78c164d28bcee0a1c7d87c668aa7a54635ce3dd"
       ],
       "image_name": "docker.io/tikv/tikv",
@@ -6856,16 +6995,16 @@
         "v0.13.0-rc.24"
       ],
       "image_tags": [
-        "0",
-        "0.12",
-        "0.12.4",
-        "0.12.3",
-        "0.12.2",
-        "0.12.1",
-        "0.12.0",
-        "0.11",
-        "0.11.12",
-        "0.11.11"
+        "latest",
+        "edge",
+        "0.13.0-rc.33",
+        "0.13.0-rc.32",
+        "0.13.0-rc.31",
+        "0.13.0-rc.30",
+        "0.13.0-rc.29",
+        "0.13.0-rc.20",
+        "0.13.0-rc.19",
+        "0.13.0-rc.18"
       ],
       "image_name": "docker.io/tremorproject/tremor"
     },
@@ -6890,16 +7029,16 @@
         "v1.0.4"
       ],
       "image_tags": [
+        "latest",
+        "2.0.0-beta2",
+        "2.0.0-beta1",
         "1",
         "1.1",
         "1.1.5",
         "1.1.4",
-        "1.1.3",
-        "arm64v8-1.0",
-        "arm64v8-1.0.5",
-        "1.0",
-        "1.0.5",
-        "1.1.2"
+        "1.1.4-rc2",
+        "1.1.4-rc1",
+        "1.1.3"
       ],
       "image_name": "docker.io/tricksterio/trickster"
     },
@@ -6945,16 +7084,16 @@
         "v0.22.1"
       ],
       "image_tags": [
-        "v0.2.13",
+        "latest",
+        "v0.5.2",
+        "v0.5.0",
+        "v0.4.1",
+        "v0.4.2",
+        "v0.4.0",
         "v0.3.20",
-        "v0.2.11",
-        "v0.1.9",
-        "v0.1.8",
-        "v0.2.2",
-        "v0.1.13",
-        "v0.3.14",
-        "v0.3.2",
-        "v0.1.4"
+        "v0.3.18",
+        "v0.3.17",
+        "v0.3.16"
       ],
       "image_name": "quay.io/libvineyard/vineyardd",
       "docker_help_command": "/usr/local/bin/vineyardd --help"
@@ -6980,8 +7119,8 @@
         "v1.3.0"
       ],
       "image_tags": [
-        "v0.0.2",
-        "v0.0.3"
+        "v0.0.3",
+        "v0.0.2"
       ],
       "image_name": "quay.io/powerhouse/ph-virtual-kubelet",
       "docker_help_command": "--help"
@@ -7042,6 +7181,7 @@
         "v21.0.3"
       ],
       "image_tags": [
+        "latest",
         "mysql84",
         "mysql80",
         "percona80",
@@ -7050,8 +7190,7 @@
         "v21.0.5-percona80",
         "v21.0.5",
         "v22.0.1-mysql84",
-        "v22.0.1",
-        "v22.0.1-percona80"
+        "v22.0.1"
       ],
       "image_name": "docker.io/vitess/lite",
       "docker_help_command": "/usr/local/bin/vtctl --help"
@@ -7077,16 +7216,16 @@
         "v1.11.1"
       ],
       "image_tags": [
+        "latest",
         "0.4.2",
+        "dev",
         "0.4.1",
         "0.4.0",
         "0.3.8",
         "0.3.7",
         "0.3.6",
         "0.3.4",
-        "0.3.3",
-        "0.3.2",
-        "0.3.1"
+        "0.3.3"
       ],
       "image_name": "docker.io/account0123/volcano",
       "docker_help_command": "vcctl --help"
@@ -7112,16 +7251,16 @@
         "v1.6.2"
       ],
       "image_tags": [
+        "latest",
+        "canary",
         "1.9.0",
-        "1.8.0-wolfi",
-        "1.8.0-debian",
-        "1.8.0",
-        "1.7.1-wolfi",
-        "1.7.1-debian",
-        "1.7.1",
-        "1.7.0-wolfi",
-        "1.7.0-debian",
-        "1.7.0"
+        "canary-wolfi",
+        "canary-debian",
+        "1.9.0-beta.1-wolfi",
+        "1.9.0-beta.1-debian",
+        "1.9.0-beta.1",
+        "latest-wolfi",
+        "latest-debian"
       ],
       "image_name": "docker.io/wasmcloud/wasmcloud",
       "docker_help_command": "help"
@@ -7181,6 +7320,7 @@
         "v2.47.9"
       ],
       "image_tags": [
+        "latest",
         "0.0.16",
         "0.0.15",
         "0.0.14",
@@ -7189,8 +7329,7 @@
         "0.0.11",
         "0.0.10",
         "0.0.9",
-        "0.0.8",
-        "0.0.7"
+        "0.0.8"
       ],
       "image_name": "docker.io/tokend/werf"
     },
@@ -7214,6 +7353,7 @@
         "v0.1.0"
       ],
       "image_tags": [
+        "latest",
         "v0.5.0",
         "v0.5.1",
         "5068a2b",
@@ -7235,7 +7375,9 @@
       "github_releases": [
         "dev"
       ],
-      "image_tags": [],
+      "image_tags": [
+        "latest"
+      ],
       "image_name": "docker.io/izeki/nginxregistry"
     },
     {
@@ -7259,6 +7401,7 @@
         "v0.3.2"
       ],
       "image_tags": [
+        "latest",
         "top2",
         "0.3",
         "0.2"
@@ -7286,9 +7429,15 @@
         "v2.1.3-rc3"
       ],
       "image_tags": [
+        "v2.0.0-rc7",
+        "v2.0.0-rc7-arm64",
+        "v2.0.0-rc7-amd64",
         "v1.4.3",
         "v1.4.3-arm64",
-        "v1.4.3-amd64"
+        "v1.4.3-amd64",
+        "v2.0.0-rc4",
+        "v2.0.0-rc4-amd64",
+        "v2.0.0-rc4-arm64"
       ],
       "image_name": "docker.io/labring/zot"
     }

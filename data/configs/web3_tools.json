@@ -42,15 +42,15 @@
       ],
       "image_tags": [
         "latest",
-        "stable",
-        "v1.16.3",
-        "v1.16.2",
-        "v1.16.1",
-        "v1.16.0",
-        "v1.15.11",
-        "v1.15.10",
+        "alltools-latest",
+        "alltools-v1.16.4",
+        "alltools-release-1.16",
+        "alltools-stable",
+        "v1.16.4",
         "release-1.16",
-        "alltools-latest"
+        "stable",
+        "alltools-v1.16.3",
+        "v1.16.3"
       ],
       "image_name": "docker.io/ethereum/client-go",
       "docker_help_command": "geth --help"
@@ -77,15 +77,15 @@
       ],
       "image_tags": [
         "latest",
-        "latest-modern",
-        "v7.1.0",
-        "v7.0.1",
-        "v7.0.0",
-        "v6.0.0",
-        "v5.3.0",
-        "stable",
-        "latest-modern-arm64",
-        "latest-modern-amd64"
+        "latest-unstable",
+        "latest-arm64-unstable",
+        "latest-amd64-unstable",
+        "v8.0.0-rc.0",
+        "v8.0.0-rc.0-amd64",
+        "v8.0.0-rc.0-arm64",
+        "latest-arm64",
+        "latest-amd64",
+        "v7.1.0"
       ],
       "image_name": "docker.io/sigp/lighthouse",
       "docker_help_command": "lighthouse --help"
@@ -94,7 +94,7 @@
       "name": "Foundry",
       "description": "Blazing fast, portable and modular toolkit for Ethereum application development written in Rust - includes Forge, Cast, Anvil, and Chisel",
       "github_release_url": "https://api.github.com/repos/foundry-rs/foundry/releases?per_page=100&page=1",
-      "docker_tags_url": "https://ghcr.io/v2/foundry-rs/foundry/tags/list",
+      "docker_tags_url": "https://github.com/foundry-rs/foundry/pkgs/container/foundry",
       "readme": "https://github.com/foundry-rs/foundry/blob/master/README.md",
       "category": "Development Tools",
       "homepage": "https://getfoundry.sh/",
@@ -105,10 +105,16 @@
         "nightly-de33b6af53005037b463318d2628b5cfcaf39916"
       ],
       "image_tags": [
+        "master",
         "latest",
         "nightly",
-        "nightly-62cdea8ff9e6efef011f77e295823b5f2dbeb3a1",
-        "nightly-5be158ba7710ea9f119e0806eb97a790e5fb165d"
+        "nightly-307576dfb9e94536177e940c2710045ada69d8d7",
+        "nightly-fb1f0aa3d6dcb285cc6132cde8d885a20eee2174",
+        "nightly-20e7386042e8567f2cfcee566c3afe4833e13741",
+        "nightly-48d5d79a63acbd5cb454d39fa0c01c297de89559",
+        "nightly-e947899dd210550e608bf3d234b845d966134bc9",
+        "nightly-4b9cca1790096c8bfdd50922bf22244983ad6e4f",
+        "nightly-1c415857dd7b617190834dbcb361506f6143fed4"
       ],
       "image_name": "ghcr.io/foundry-rs/foundry",
       "docker_help_command": "forge --help"
@@ -117,7 +123,7 @@
       "name": "Hardhat",
       "description": "Ethereum development environment for professionals - flexible, extensible and fast",
       "github_release_url": "https://api.github.com/repos/NomicFoundation/hardhat/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/hardhat/hardhat/tags/?page=1&page_size=100",
+      "docker_tags_url": "",
       "readme": "https://github.com/NomicFoundation/hardhat/blob/main/README.md",
       "category": "Development Tools",
       "homepage": "https://hardhat.org/",
@@ -141,8 +147,9 @@
         "2.23.0",
         "2.22.17"
       ],
-      "image_name": "docker.io/hardhat/hardhat",
-      "docker_help_command": "npx hardhat help"
+      "image_name": null,
+      "docker_help_command": "npx hardhat help",
+      "notes": "No official Docker image - typically used as npm package"
     },
     {
       "name": "Nethermind",
@@ -166,11 +173,15 @@
       ],
       "image_tags": [
         "latest",
-        "1.32.0",
-        "1.31.0",
-        "1.30.0",
-        "1.29.1",
-        "1.29.0"
+        "1.34.1-chiseled",
+        "latest-chiseled",
+        "1.34.1",
+        "1.34.0-chiseled",
+        "1.34.0",
+        "1.33.1-chiseled",
+        "1.33.1",
+        "1.33.0-chiseled",
+        "1.33.0"
       ],
       "image_name": "docker.io/nethermind/nethermind",
       "docker_help_command": "nethermind --help"
@@ -197,11 +208,15 @@
       ],
       "image_tags": [
         "latest",
-        "24.12.2",
-        "24.12.1",
-        "24.12.0",
-        "24.10.0",
-        "24.9.1"
+        "develop",
+        "develop-amd64",
+        "develop-arm64",
+        "25.10.0-RC2",
+        "25.10.0-RC2-arm64",
+        "25.10.0-RC2-amd64",
+        "25.10.0-RC1",
+        "25.10.0-RC1-amd64",
+        "25.10.0-RC1-arm64"
       ],
       "image_name": "docker.io/hyperledger/besu",
       "docker_help_command": "besu --help"
@@ -228,11 +243,15 @@
       ],
       "image_tags": [
         "latest",
-        "v3.0.0",
-        "v2.60.10",
-        "v2.60.9",
-        "v2.60.8",
-        "stable"
+        "main-latest",
+        "main-fdd9d9e",
+        "main-6e3af46",
+        "main-4f3381e",
+        "main-8233948",
+        "main-3c0485e",
+        "main-aeb1501",
+        "main-9ca7889",
+        "main-6a82c49"
       ],
       "image_name": "docker.io/erigontech/erigon",
       "docker_help_command": "erigon --help"
@@ -259,11 +278,15 @@
       ],
       "image_tags": [
         "latest",
-        "stable",
+        "v6.1.2",
+        "v6.1.1",
+        "v6.1.0",
+        "v6.0.5",
+        "v6.0.4",
+        "v6.0.3",
         "v6.0.2",
         "v6.0.1",
-        "v6.0.0",
-        "v5.1.2"
+        "stable"
       ],
       "image_name": "docker.io/prysmaticlabs/prysm-beacon-chain",
       "docker_help_command": "beacon-chain --help"
@@ -290,11 +313,15 @@
       ],
       "image_tags": [
         "latest",
-        "25.3.0",
-        "25.2.0",
-        "25.1.0",
-        "24.12.1",
-        "24.12.0"
+        "develop-jdk24",
+        "develop",
+        "develop-jdk21",
+        "develop-jdk24-amd64",
+        "develop-amd64",
+        "develop-jdk21-amd64",
+        "develop-jdk24-arm64",
+        "develop-arm64",
+        "develop-jdk21-arm64"
       ],
       "image_name": "docker.io/consensys/teku",
       "docker_help_command": "teku --help"
@@ -320,12 +347,16 @@
         "v24.6.0"
       ],
       "image_tags": [
-        "latest",
         "multiarch-latest",
-        "amd64-latest",
+        "multiarch-v25.9.2",
         "arm64-latest",
-        "v25.3.0",
-        "v25.2.0"
+        "arm64-v25.9.2",
+        "arm-latest",
+        "arm-v25.9.2",
+        "amd64-latest",
+        "amd64-v25.9.2",
+        "multiarch-v25.9.1",
+        "arm64-v25.9.1"
       ],
       "image_name": "docker.io/statusim/nimbus-eth2",
       "docker_help_command": "nimbus_beacon_node --help"
@@ -334,7 +365,7 @@
       "name": "Reth",
       "description": "Modular, contributor-friendly Ethereum execution client in Rust by Paradigm",
       "github_release_url": "https://api.github.com/repos/paradigmxyz/reth/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/paradigmxyz/reth/tags/?page=1&page_size=100",
+      "docker_tags_url": "https://github.com/paradigmxyz/reth/pkgs/container/reth",
       "readme": "https://github.com/paradigmxyz/reth/blob/main/README.md",
       "category": "Blockchain Clients",
       "homepage": "https://paradigmxyz.github.io/reth/",
@@ -351,12 +382,16 @@
         "v1.1.1"
       ],
       "image_tags": [
+        "v0.1.0-alpha.1",
         "latest",
-        "v2.5.0",
-        "v2.4.1",
-        "v2.4.0",
-        "v2.3.1",
-        "v2.3.0"
+        "v0.1.0-alpha.2",
+        "v0.1.0-alpha.3",
+        "v0.1.0-alpha.4",
+        "v0.1.0-alpha.5",
+        "v0.1.0-alpha.6",
+        "v0.1.0-alpha.7",
+        "v0.1.0-alpha.8",
+        "v0.1.0-alpha.9"
       ],
       "image_name": "ghcr.io/paradigmxyz/reth",
       "docker_help_command": "reth --help"
@@ -382,12 +417,16 @@
         "v2.1.15"
       ],
       "image_tags": [
-        "latest",
-        "stable",
-        "v2.2.21",
-        "v2.2.20",
-        "v2.2.19",
-        "mainnet"
+        "v1.18.26",
+        "v1.18.25",
+        "v1.18.23",
+        "v1.18.22",
+        "v1.18.21",
+        "v1.18.20",
+        "v1.18.18",
+        "v1.18.17",
+        "v1.18.16",
+        "v1.18.15"
       ],
       "image_name": "docker.io/solanalabs/solana",
       "docker_help_command": "solana --help"
@@ -414,14 +453,15 @@
       ],
       "image_tags": [
         "latest",
-        "29.0",
-        "28.1",
-        "28.0",
-        "27.2",
-        "27.1",
-        "27.0",
         "alpine",
-        "29.0-alpine"
+        "24-alpine",
+        "22-alpine",
+        "23-alpine",
+        "0.18-alpine",
+        "0.21-alpine",
+        "0.19-alpine",
+        "0.20-alpine",
+        "0.17-alpine"
       ],
       "image_name": "docker.io/ruimarinho/bitcoin-core",
       "docker_help_command": "bitcoind --help"
@@ -430,7 +470,7 @@
       "name": "Truffle Suite",
       "description": "Development environment, testing framework and asset pipeline for Ethereum",
       "github_release_url": "https://api.github.com/repos/trufflesuite/truffle/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/trufflesuite/truffle/tags/?page=1&page_size=100",
+      "docker_tags_url": "",
       "readme": "https://github.com/trufflesuite/truffle/blob/master/README.md",
       "category": "Development Tools",
       "homepage": "https://trufflesuite.com/",
@@ -453,8 +493,9 @@
         "v5.11.3",
         "v5.11.2"
       ],
-      "image_name": "docker.io/trufflesuite/truffle",
-      "docker_help_command": "truffle help"
+      "image_name": null,
+      "docker_help_command": "truffle help",
+      "notes": "Deprecated/sunset - Truffle has been sunsetted"
     },
     {
       "name": "Ganache",
@@ -482,7 +523,11 @@
         "v7.9.1",
         "v7.9.0",
         "v7.8.0",
-        "beta"
+        "v7.7.7",
+        "v7.7.6",
+        "v7.7.5",
+        "v7.7.4",
+        "v7.7.3"
       ],
       "image_name": "docker.io/trufflesuite/ganache",
       "docker_help_command": "ganache --help"
@@ -491,7 +536,7 @@
       "name": "Brownie",
       "description": "Python-based development and testing framework for smart contracts targeting EVM",
       "github_release_url": "https://api.github.com/repos/eth-brownie/brownie/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/iamdefinitelyahuman/brownie/tags/?page=1&page_size=100",
+      "docker_tags_url": "",
       "readme": "https://github.com/eth-brownie/brownie/blob/master/README.md",
       "category": "Development Tools",
       "homepage": "https://eth-brownie.readthedocs.io/",
@@ -513,8 +558,9 @@
         "v1.19.2",
         "stable"
       ],
-      "image_name": "docker.io/iamdefinitelyahuman/brownie",
-      "docker_help_command": "brownie --help"
+      "image_name": null,
+      "docker_help_command": "brownie --help",
+      "notes": "No longer maintained - eth-brownie archived"
     },
     {
       "name": "OpenZeppelin Contracts",
@@ -561,7 +607,15 @@
       ],
       "image_tags": [
         "latest",
-        "nightly"
+        "testing-master",
+        "edge",
+        "nightly-20251006",
+        "nightly",
+        "nightly-20250929",
+        "nightly-20250922",
+        "nightly-20250915",
+        "nightly-20250908",
+        "nightly-20250901"
       ],
       "image_name": "docker.io/trailofbits/eth-security-toolbox",
       "docker_help_command": "slither --help"
@@ -588,9 +642,15 @@
       ],
       "image_tags": [
         "latest",
-        "v0.24.8",
-        "v0.24.7",
-        "v0.24.6"
+        "0.24.8",
+        "0.24.7",
+        "0.24.5",
+        "0.24.3",
+        "0.24.2",
+        "0.24.1",
+        "0.24.0",
+        "0.23.25",
+        "0.23.24"
       ],
       "image_name": "docker.io/mythril/myth",
       "docker_help_command": "myth --help"
@@ -629,10 +689,15 @@
       ],
       "image_tags": [
         "latest",
-        "v0.36.1",
-        "v0.36.0",
-        "v0.35.1",
-        "v0.35.0"
+        "fraction2",
+        "c61c36a",
+        "e150b02",
+        "nightly",
+        "641f4fa",
+        "v0.41.0-rc.0",
+        "b8bd318",
+        "288c36f",
+        "7e07348"
       ],
       "image_name": "docker.io/graphprotocol/graph-node",
       "docker_help_command": "graph-node --help"
@@ -659,11 +724,15 @@
       ],
       "image_tags": [
         "latest",
-        "v0.34.0",
-        "v0.33.0",
-        "v0.32.1",
-        "v0.32.0",
-        "master"
+        "buildcache",
+        "master-latest",
+        "master-2025-10-09-c04781c",
+        "master-2025-10-09-40c027a",
+        "release",
+        "v0.38.1",
+        "staging-latest",
+        "staging-2025-10-08-fb14754",
+        "master-2025-10-08-f4834e7"
       ],
       "image_name": "docker.io/ipfs/kubo",
       "docker_help_command": "ipfs --help"
@@ -689,12 +758,16 @@
         "v2.14.0"
       ],
       "image_tags": [
-        "latest",
-        "2.20.0",
-        "2.19.3",
-        "2.19.2",
-        "2.19.1",
-        "2.19.0"
+        "2.28.0",
+        "sha256-979d63b045565548587e02372d18c917b59f1e806762dc3040f2e41981fbc17c.sig",
+        "2.27.0",
+        "sha256-9126f003e7318b4bab9470e1ee5f02b4fbfbdb687988abc77f5a567173182900.sig",
+        "2.26.0",
+        "sha256-dc9356e16e598a0e25fc28dbc852ed8436616add163083db4090a64795c6e924.sig",
+        "2.25.0",
+        "sha256-9eecb61d90cdf932c7489e64ad8cfa090a1ad1a8ec29a3b3a067a58a00b15c26.sig",
+        "2.24.0",
+        "sha256-2f5d73c6695bf9ad382f2201d60edaee2f43a4ff92ae70bfb56bd48c0ac4369c.sig"
       ],
       "image_name": "docker.io/smartcontract/chainlink",
       "docker_help_command": "chainlink --help"
@@ -721,9 +794,15 @@
       ],
       "image_tags": [
         "latest",
-        "v0.54.0",
-        "v0.53.0",
-        "v0.52.3"
+        "yann300-patch-36",
+        "vertical-icons-panel-react",
+        "bunsenstraat-patch-5",
+        "remix_live",
+        "remix_beta",
+        "bumpVersion_0.20.1",
+        "fix_bracket",
+        "bumpVersion",
+        "bumpDevVersion"
       ],
       "image_name": "docker.io/remixproject/remix-ide",
       "docker_help_command": ""
@@ -749,12 +828,16 @@
         "v0.8.19"
       ],
       "image_tags": [
-        "latest",
         "latest-slim",
+        "latest",
+        "v0.8.15",
         "stable",
-        "v0.8.36",
-        "v0.8.35",
-        "v0.8.34"
+        "v0.8.16",
+        "v0.8.17",
+        "v0.8.18",
+        "v0.8.19",
+        "v0.8.20",
+        "v0.8.21"
       ],
       "image_name": "ghcr.io/apeworx/ape",
       "docker_help_command": "ape --help"
@@ -803,11 +886,16 @@
         "v3.0.1"
       ],
       "image_tags": [
-        "latest",
-        "v3.5.0",
-        "v3.4.0",
-        "v3.3.0",
-        "v3.2.1"
+        "v3.8.0-rc.8-146b5d2",
+        "v3.8.0-rc.8-146b5d2-arm64",
+        "v3.8.0-rc.8-146b5d2-amd64",
+        "v3.8.0-rc.8-146b5d2-slim",
+        "v3.8.0-rc.8-146b5d2-slim-arm64",
+        "v3.8.0-rc.8-146b5d2-slim-amd64",
+        "v3.8.0-rc.8-146b5d2-validator",
+        "v3.8.0-rc.8-146b5d2-validator-arm64",
+        "v3.8.0-rc.8-146b5d2-validator-amd64",
+        "v3.8.0-rc.8-146b5d2-dev"
       ],
       "image_name": "docker.io/offchainlabs/nitro-node",
       "docker_help_command": "nitro --help"
@@ -833,11 +921,7 @@
         "op-node/v1.11.0"
       ],
       "image_tags": [
-        "latest",
-        "v1.14.2",
-        "v1.14.1",
-        "v1.14.0",
-        "v1.13.4"
+        "develop"
       ],
       "image_name": "docker.io/ethereumoptimism/op-node",
       "docker_help_command": "op-node --help"
@@ -863,11 +947,16 @@
         "v1.3.5"
       ],
       "image_tags": [
-        "latest",
-        "v2.0.2",
-        "v2.0.1",
-        "v2.0.0",
-        "v1.5.1"
+        "v0.2.17",
+        "v0.2.16",
+        "v0.2.16-beta2",
+        "v0.2.16-beta1",
+        "v0.2.14-tmp-span-hotfix",
+        "v0.2.15-beta2",
+        "v0.2.15-beta1",
+        "v0.2.14",
+        "v0.2.13",
+        "v0.2.13-beta2"
       ],
       "image_name": "docker.io/maticnetwork/bor",
       "docker_help_command": "bor --help"
@@ -893,9 +982,16 @@
         "v1.6.0"
       ],
       "image_tags": [
+        "pr-48",
+        "main",
+        "v0.2.0",
         "latest",
-        "v1.9.0",
-        "v1.8.0"
+        "v0.2.1",
+        "v0.2.2",
+        "v0.2.3",
+        "v0.3.0",
+        "v0.3.1-rc.1",
+        "v0.3.1-rc.2"
       ],
       "image_name": "ghcr.io/base-org/node",
       "docker_help_command": "op-node --help"
@@ -904,7 +1000,7 @@
       "name": "zkSync",
       "description": "Ethereum Layer 2 protocol using zero-knowledge rollups",
       "github_release_url": "https://api.github.com/repos/matter-labs/zksync-era/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/matterlabs/zksync/tags/?page=1&page_size=100",
+      "docker_tags_url": "https://github.com/matter-labs/zksync-era/pkgs/container/server-v2",
       "readme": "https://github.com/matter-labs/zksync-era/blob/main/README.md",
       "category": "Blockchain Clients",
       "homepage": "https://zksync.io/",
@@ -921,19 +1017,25 @@
         "core-v24.23.0"
       ],
       "image_tags": [
-        "latest",
-        "core-v25.3.0",
-        "core-v25.2.0",
-        "core-v25.1.0"
+        "7a8cb27-1736345733454-linux-amd64",
+        "ecccdda-1736352787485-linux-amd64",
+        "7adb612-1736413599630-linux-amd64",
+        "64d861d-1736422246437-linux-amd64",
+        "5a8818d-1736513228239-linux-amd64",
+        "361243f-1736536615922-linux-amd64",
+        "f30aca0-1736761159275-linux-amd64",
+        "0efb8e6-1736766831817-linux-amd64",
+        "c44f7a7-1736769827242-linux-amd64",
+        "84e3e31-1736849910030-linux-amd64"
       ],
-      "image_name": "docker.io/matterlabs/zksync",
+      "image_name": "ghcr.io/matter-labs/server-v2",
       "docker_help_command": "zksync --help"
     },
     {
       "name": "Starknet",
       "description": "Permissionless Layer 2 validity rollup using STARK proofs",
       "github_release_url": "https://api.github.com/repos/starkware-libs/cairo/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/u/starknetfoundation",
+      "docker_tags_url": "https://hub.docker.com/v2/repositories/starknet/cairo/tags/?page=1&page_size=100",
       "readme": "https://github.com/starkware-libs/cairo/blob/main/README.md",
       "category": "Blockchain Clients",
       "homepage": "https://starknet.io/",
@@ -951,14 +1053,23 @@
       ],
       "image_tags": [
         "latest",
-        "stable"
+        "2.9.0-arm64",
+        "2.8.5",
+        "2.8.5-amd64",
+        "2.8.5-arm64",
+        "2.8.4",
+        "2.8.4-amd64",
+        "2.8.4-arm64",
+        "2.8.2",
+        "2.8.2-amd64"
       ],
-      "image_name": "docker.io/starknetfoundation/starknet-dev",
+      "image_name": "docker.io/starknet/cairo",
       "alternate_images": [
         "docker.io/starknet/cairo",
         "docker.io/trufflesuite/cairo-starknet-cli"
       ],
-      "docker_help_command": "--help"
+      "docker_help_command": "--help",
+      "notes": "Starknet Cairo toolchain Docker image"
     },
     {
       "name": "Polkadot",
@@ -982,10 +1093,15 @@
       ],
       "image_tags": [
         "latest",
-        "stable2501",
-        "stable2412-2",
-        "stable2412-1",
-        "stable2412"
+        "v1.20.0",
+        "stable2509",
+        "v1.20.0-rc3",
+        "stable2509-rc3",
+        "1ad266c",
+        "weekly2025w40-rc1",
+        "6bdbb8c2a7",
+        "1.19.3-weekly2025w40-rc1",
+        "weekly2025w39-rc1"
       ],
       "image_name": "docker.io/parity/polkadot",
       "docker_help_command": "polkadot --help"
@@ -1035,10 +1151,15 @@
       ],
       "image_tags": [
         "latest",
-        "v1.12.3",
-        "v1.12.2",
-        "v1.12.1",
-        "v1.12.0"
+        "master-r",
+        "75467493-r",
+        "master",
+        "75467493",
+        "4c432d8b-r",
+        "4c432d8b",
+        "63cc1a16-r",
+        "63cc1a16",
+        "7fd85c43-r"
       ],
       "image_name": "docker.io/avaplatform/avalanchego",
       "docker_help_command": "avalanchego --help"
@@ -1065,10 +1186,15 @@
       ],
       "image_tags": [
         "latest",
-        "2.7.0",
-        "2.6.0",
-        "2.5.1",
-        "2.5.0"
+        "master-c5443375459b10908ae700fd12bf02fdf064d4c4",
+        "master",
+        "master-80b33da5a6e6c0d92e87d15854bb422538513c51",
+        "master-7b7db341b3c2ea6f7a1856e38a6891c426bf4cbb",
+        "master-67db5e7fbea7fbf4e5cf67a083e85212e313f4fe",
+        "tx-generator-neard-357a6bb545934e317552e012ebe36e9f5d7d6fc9",
+        "tx-generator-neard",
+        "master-562d96c4e1dfd16ce6de3f048f5c06994fc51061",
+        "master-2328c32eed852eaf472d44002cbe3c79d1b45400"
       ],
       "image_name": "docker.io/nearprotocol/nearcore",
       "docker_help_command": "neard --help"
@@ -1077,7 +1203,7 @@
       "name": "Cardano",
       "description": "Proof-of-stake blockchain platform with peer-reviewed research",
       "github_release_url": "https://api.github.com/repos/IntersectMBO/cardano-node/releases?per_page=100&page=1",
-      "docker_tags_url": "https://hub.docker.com/v2/repositories/inputoutput/cardano-node/tags/?page=1&page_size=100",
+      "docker_tags_url": "https://github.com/intersectmbo/cardano-node/pkgs/container/cardano-node",
       "readme": "https://github.com/IntersectMBO/cardano-node/blob/master/README.md",
       "category": "Blockchain Clients",
       "homepage": "https://cardano.org/",
@@ -1094,13 +1220,18 @@
         "9.4.0"
       ],
       "image_tags": [
-        "latest",
-        "10.2.1",
-        "10.2.0",
-        "10.1.3",
-        "10.1.2"
+        "8.7.3",
+        "8.3.0-pre",
+        "8.3.1-pre",
+        "8.4.0-pre",
+        "8.5.0-pre",
+        "8.6.0-pre",
+        "8.7.0-pre",
+        "8.7.1-pre",
+        "8.7.2",
+        "8.8.0-pre"
       ],
-      "image_name": "docker.io/inputoutput/cardano-node",
+      "image_name": "ghcr.io/intersectmbo/cardano-node",
       "docker_help_command": "cardano-node --help"
     },
     {
@@ -1124,10 +1255,16 @@
         "mainnet-v1.38.2"
       ],
       "image_tags": [
-        "mainnet",
-        "mainnet-v1.43.0",
-        "mainnet-v1.42.0",
-        "mainnet-v1.41.0"
+        "compat-arm64",
+        "compat",
+        "cc2314c5ac1648d3ea63b17865313f55b2a7969a-arm64",
+        "cc2314c5ac1648d3ea63b17865313f55b2a7969a",
+        "95f1a2b9c5208fa6243db01b82029c67493d2dfb",
+        "95f1a2b9c5208fa6243db01b82029c67493d2dfb-arm64",
+        "d76cf73f7c8fab683e54ccd6f4c815bc6060af75-arm64",
+        "129fccae003d3241dc4c59496880cfcf3df97e15-arm64",
+        "129fccae003d3241dc4c59496880cfcf3df97e15",
+        "d76cf73f7c8fab683e54ccd6f4c815bc6060af75"
       ],
       "image_name": "docker.io/mysten/sui-node",
       "docker_help_command": "sui --help"
@@ -1153,10 +1290,16 @@
         "aptos-node-v1.24.0"
       ],
       "image_tags": [
-        "latest",
-        "mainnet",
-        "mainnet_2.0.0",
-        "mainnet_1.32.0"
+        "aptos-node-v1.36.4_0a1546d51486dfab25ad27454d20b3bf8a92d7a5",
+        "aptos-node-v1.36.4",
+        "aptos-node-v1.36.4_performance_0a1546d51486dfab25ad27454d20b3bf8a92d7a5",
+        "aptos-node-v1.36.4_performance",
+        "aptos-node-v1.36.3_6f16a2f947e32eec309e0e9058af8b1bc3791c7f",
+        "aptos-node-v1.36.3",
+        "aptos-node-v1.36.3_performance_6f16a2f947e32eec309e0e9058af8b1bc3791c7f",
+        "aptos-node-v1.36.3_performance",
+        "testnet_49faa60f9d47693f99cd57e8e666e39032506eed",
+        "testnet"
       ],
       "image_name": "docker.io/aptoslabs/validator",
       "docker_help_command": "aptos-node --help"
@@ -1275,11 +1418,15 @@
       ],
       "image_tags": [
         "latest",
-        "0.4.0",
-        "0.3.10",
-        "0.3.9",
-        "0.3.8",
-        "alpine"
+        "0.4.3",
+        "0.4.3rc1",
+        "0.4.2",
+        "0.4.2rc1",
+        "0.4.1",
+        "0.4.1rc3",
+        "0.4.1rc2",
+        "0.4.1rc1",
+        "0.4.1b4"
       ],
       "image_name": "docker.io/vyperlang/vyper",
       "docker_help_command": "vyper --help"
@@ -1305,13 +1452,16 @@
         "v0.8.22"
       ],
       "image_tags": [
-        "latest",
-        "stable",
-        "0.8.31",
+        "0.8.30-alpine",
+        "stable-alpine",
         "0.8.30",
+        "stable",
+        "0.8.29-alpine",
         "0.8.29",
+        "0.8.28-alpine",
         "0.8.28",
-        "alpine"
+        "0.8.27-alpine",
+        "0.8.27"
       ],
       "image_name": "docker.io/ethereum/solc",
       "docker_help_command": "solc --help"

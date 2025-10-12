@@ -20,7 +20,7 @@
       "description": "Apache Kafka project",
       "github_release_url": "https://api.github.com/repos/apache/kafka/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/kafka/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/kafka/blob/main/README.md",
+      "readme": "https://github.com/apache/kafka/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://kafka.apache.org/",
       "github_releases": [],
@@ -44,7 +44,7 @@
       "description": "Apache Spark project",
       "github_release_url": "https://api.github.com/repos/apache/spark/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/spark/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/spark/blob/main/README.md",
+      "readme": "https://github.com/apache/spark/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://spark.apache.org/",
       "github_releases": [],
@@ -90,7 +90,7 @@
       "description": "Apache Flink project",
       "github_release_url": "https://api.github.com/repos/apache/flink/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/flink/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/flink/blob/main/README.md",
+      "readme": "https://github.com/apache/flink/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://flink.apache.org/",
       "github_releases": [],
@@ -114,7 +114,7 @@
       "description": "Apache Hive project",
       "github_release_url": "https://api.github.com/repos/apache/hive/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/hive/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/hive/blob/main/README.md",
+      "readme": "https://github.com/apache/hive/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://hive.apache.org/",
       "github_releases": [],
@@ -136,7 +136,7 @@
       "description": "Apache Cassandra project",
       "github_release_url": "https://api.github.com/repos/apache/cassandra/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/cassandra",
-      "readme": "https://github.com/apache/cassandra/blob/main/README.md",
+      "readme": "https://github.com/apache/cassandra/blob/trunk/README.asc",
       "category": "Apache",
       "homepage": "https://cassandra.apache.org/",
       "github_releases": [],
@@ -165,14 +165,15 @@
       "homepage": "https://accumulo.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Couchdb",
       "description": "Apache Couchdb project",
       "github_release_url": "https://api.github.com/repos/apache/couchdb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/couchdb/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/couchdb/blob/main/README.md",
+      "readme": "https://github.com/apache/couchdb/blob/main/README.rst",
       "category": "Apache",
       "homepage": "https://couchdb.apache.org/",
       "github_releases": [],
@@ -195,7 +196,7 @@
       "description": "Apache Httpd project",
       "github_release_url": "https://api.github.com/repos/apache/httpd/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/httpd",
-      "readme": "https://github.com/apache/httpd/blob/main/README.md",
+      "readme": "https://github.com/apache/httpd/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://httpd.apache.org/",
       "github_releases": [],
@@ -243,7 +244,7 @@
       "description": "Apache Maven project",
       "github_release_url": "https://api.github.com/repos/apache/maven/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/maven",
-      "readme": "https://github.com/apache/maven/blob/main/README.md",
+      "readme": "https://github.com/apache/maven/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://maven.apache.org/",
       "github_releases": [
@@ -278,19 +279,20 @@
       "description": "Apache Ant project",
       "github_release_url": "https://api.github.com/repos/apache/ant/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/ant/blob/main/README.md",
+      "readme": "https://github.com/apache/ant/blob/master/README",
       "category": "Apache",
       "homepage": "https://ant.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Gradle",
       "description": "Gradle build tool (NOT an Apache project)",
       "github_release_url": "https://api.github.com/repos/gradle/gradle/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/gradle",
-      "readme": "https://github.com/gradle/gradle/blob/main/README.md",
+      "readme": "https://github.com/gradle/gradle/blob/master/README.md",
       "category": "Build Tools",
       "homepage": "https://gradle.org/",
       "github_releases": [],
@@ -314,7 +316,7 @@
       "description": "Apache Skywalking project",
       "github_release_url": "https://api.github.com/repos/apache/skywalking/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/skywalking/blob/main/README.md",
+      "readme": "https://github.com/apache/skywalking/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://skywalking.apache.org/",
       "github_releases": [
@@ -330,19 +332,21 @@
         "v9.2.0"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Zookeeper",
       "description": "Apache Zookeeper project",
       "github_release_url": "https://api.github.com/repos/apache/zookeeper/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/zookeeper/blob/main/README.md",
+      "readme": "https://github.com/apache/zookeeper/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://zookeeper.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Activemq",
@@ -354,14 +358,15 @@
       "homepage": "https://activemq.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Pulsar",
       "description": "Apache Pulsar project",
       "github_release_url": "https://api.github.com/repos/apache/pulsar/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apachepulsar/pulsar/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/pulsar/blob/main/README.md",
+      "readme": "https://github.com/apache/pulsar/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://pulsar.apache.org/",
       "github_releases": [
@@ -430,7 +435,7 @@
       "description": "Apache Ozone project",
       "github_release_url": "https://api.github.com/repos/apache/ozone/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/ozone/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/ozone/blob/main/README.md",
+      "readme": "https://github.com/apache/ozone/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://ozone.apache.org/",
       "github_releases": [
@@ -457,7 +462,7 @@
       "description": "Apache Bookkeeper project",
       "github_release_url": "https://api.github.com/repos/apache/bookkeeper/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/bookkeeper/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/bookkeeper/blob/main/README.md",
+      "readme": "https://github.com/apache/bookkeeper/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://bookkeeper.apache.org/",
       "github_releases": [
@@ -491,7 +496,7 @@
       "description": "Apache Beam project",
       "github_release_url": "https://api.github.com/repos/apache/beam/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/beam/blob/main/README.md",
+      "readme": "https://github.com/apache/beam/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://beam.apache.org/",
       "github_releases": [
@@ -507,14 +512,15 @@
         "v2.59.0"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Storm",
       "description": "Apache Storm project",
       "github_release_url": "https://api.github.com/repos/apache/storm/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/storm/blob/main/README.md",
+      "readme": "https://github.com/apache/storm/blob/master/README.markdown",
       "category": "Apache",
       "homepage": "https://storm.apache.org/",
       "github_releases": [
@@ -525,19 +531,21 @@
         "v2.7.0"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Samza",
       "description": "Apache Samza project",
       "github_release_url": "https://api.github.com/repos/apache/samza/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/samza/blob/main/README.md",
+      "readme": "https://github.com/apache/samza/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://samza.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Airflow",
@@ -578,12 +586,13 @@
       "description": "Apache Oozie project",
       "github_release_url": "https://api.github.com/repos/apache/oozie/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/oozie/blob/main/README.md",
+      "readme": "https://github.com/apache/oozie/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://oozie.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Solr",
@@ -630,7 +639,8 @@
         "releases/lucene/10.0.0"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Arrow",
@@ -653,14 +663,15 @@
         "apache-arrow-20.0.0-rc1"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Thrift",
       "description": "Apache Thrift project",
       "github_release_url": "https://api.github.com/repos/apache/thrift/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/thrift/tags/?page=1&page_size=100",
-      "readme": "https://github.com/apache/thrift/blob/main/README.md",
+      "readme": "https://github.com/apache/thrift/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://thrift.apache.org/",
       "github_releases": [
@@ -703,19 +714,21 @@
         "release-1.10.0-rc1"
       ],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     },
     {
       "name": "Parquet",
       "description": "Apache Parquet project",
       "github_release_url": "https://api.github.com/repos/apache/parquet/releases?per_page=100&page=1",
       "docker_tags_url": "",
-      "readme": "https://github.com/apache/parquet/blob/main/README.md",
+      "readme": "https://github.com/apache/parquet-format/blob/master/README.md",
       "category": "Apache",
       "homepage": "https://parquet.apache.org/",
       "github_releases": [],
       "image_tags": [],
-      "image_name": ""
+      "image_name": "",
+      "deprecated": true
     }
   ]
 }

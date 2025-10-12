@@ -149,7 +149,8 @@
       ],
       "image_name": null,
       "docker_help_command": "npx hardhat help",
-      "notes": "No official Docker image - typically used as npm package"
+      "notes": "No official Docker image - typically used as npm package",
+      "deprecated": true
     },
     {
       "name": "Nethermind",
@@ -495,7 +496,8 @@
       ],
       "image_name": null,
       "docker_help_command": "truffle help",
-      "notes": "Deprecated/sunset - Truffle has been sunsetted"
+      "notes": "Deprecated/sunset - Truffle has been sunsetted",
+      "deprecated": true
     },
     {
       "name": "Ganache",
@@ -560,7 +562,8 @@
       ],
       "image_name": null,
       "docker_help_command": "brownie --help",
-      "notes": "No longer maintained - eth-brownie archived"
+      "notes": "No longer maintained - eth-brownie archived",
+      "deprecated": true
     },
     {
       "name": "OpenZeppelin Contracts",
@@ -583,7 +586,8 @@
         "v4.9.3"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Slither",
@@ -665,7 +669,8 @@
       "homepage": "https://etherscan.io/",
       "github_releases": [],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "The Graph",
@@ -863,7 +868,8 @@
         "v4.0.1"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Arbitrum",
@@ -1127,7 +1133,8 @@
         "v0.50.4"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Avalanche",
@@ -1325,7 +1332,8 @@
         "v0.38.12"
       ],
       "image_tags": [],
-      "docker_help_command": "cometbft --help"
+      "docker_help_command": "cometbft --help",
+      "deprecated": true
     },
     {
       "name": "Ethers.js",
@@ -1348,7 +1356,8 @@
         "v6.11.1"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Web3.js",
@@ -1371,7 +1380,8 @@
         "web3@4.12.1"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "MetaMask Snaps",
@@ -1394,7 +1404,8 @@
         "@metamask/snaps-cli@6.5.0"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Vyper",
@@ -1476,7 +1487,8 @@
       "homepage": "https://infura.io/",
       "github_releases": [],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Alchemy",
@@ -1488,7 +1500,8 @@
       "homepage": "https://www.alchemy.com/",
       "github_releases": [],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Moralis",
@@ -1500,7 +1513,8 @@
       "homepage": "https://moralis.io/",
       "github_releases": [],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Viem",
@@ -1523,7 +1537,8 @@
         "viem@2.17.0"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Scaffold-ETH",
@@ -1535,7 +1550,8 @@
       "homepage": "https://scaffoldeth.io/",
       "github_releases": [],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     },
     {
       "name": "Wagmi",
@@ -1558,7 +1574,8 @@
         "wagmi@2.6.0"
       ],
       "image_tags": [],
-      "docker_help_command": ""
+      "docker_help_command": "",
+      "deprecated": true
     }
   ]
 }

@@ -28,12 +28,12 @@
         "Quay.io API v1"
       ]
     },
-    "last_description_update": "2025-10-15"
+    "last_description_update": "2025-10-16"
   },
   "cncf_cli_tools": [
     {
       "name": "Aeraki Mesh",
-      "description": "Aeraki Mesh allows you to manage any layer-7 traffic in a service mesh",
+      "description": "Aeraki Mesh allows you to manage any layer-7 traffic in a service mesh.",
       "github_release_url": "https://api.github.com/repos/aeraki-mesh/aeraki/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/atlassian/bitbucket-mesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/aeraki-mesh/aeraki/blob/master/README.md",
@@ -113,7 +113,7 @@
     },
     {
       "name": "Akri",
-      "description": "Kubernetes Resource Interface for the Edge - discovers and utilizes leaf devices (sensors, controllers, MCUs) across heterogeneous edge clusters",
+      "description": "Kubernetes Resource Interface for the Edge - discovers and utilizes leaf devices (sensors, controllers, MCUs) across heterogeneous edge clusters.",
       "github_release_url": "https://api.github.com/repos/project-akri/akri/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/nitin992vij/akri/tags/?page=1&page_size=100",
       "readme": "https://github.com/project-akri/akri/blob/main/README.md",
@@ -141,7 +141,7 @@
     },
     {
       "name": "Antrea",
-      "description": "Kubernetes networking solution based on Open vSwitch, providing network connectivity and security for pod workloads with native support for NetworkPolicy",
+      "description": "Kubernetes networking solution based on Open vSwitch, providing network connectivity and security for pod workloads with native support for NetworkPolicy.",
       "github_release_url": "https://api.github.com/repos/antrea-io/antrea/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/antrea/antrea-windows/tags/?page=1&page_size=100",
       "readme": "https://github.com/antrea-io/antrea/blob/main/README.md",
@@ -488,7 +488,7 @@
     },
     {
       "name": "Artifact Hub",
-      "description": "CNCF hub for discovering, installing, and publishing cloud native packages and configurations including Helm charts, operators, and plugins",
+      "description": "CNCF hub for discovering, installing, and publishing cloud native packages and configurations including Helm charts, operators, and plugins.",
       "github_release_url": "https://api.github.com/repos/artifacthub/hub/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/vijaysriraman/artifact-hub/tag/?page=1&limit=100",
       "readme": "https://github.com/artifacthub/hub/blob/master/README.md",
@@ -556,7 +556,7 @@
     },
     {
       "name": "Athenz",
-      "description": "Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures",
+      "description": "Open-source platform for X.509 certificate-based service authentication and fine-grained access control in dynamic infrastructures.",
       "github_release_url": "https://api.github.com/repos/AthenZ/athenz/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/athenz/athenz/tags/?page=1&page_size=100",
       "readme": "https://github.com/AthenZ/athenz/blob/master/README.md",
@@ -633,7 +633,7 @@
     },
     {
       "name": "Atlantis",
-      "description": "Terraform Pull Request Automation - enables GitOps for Terraform by running plan/apply directly from pull requests with approval workflows",
+      "description": "Terraform Pull Request Automation - enables GitOps for Terraform by running plan/apply directly from pull requests with approval workflows.",
       "github_release_url": "https://api.github.com/repos/runatlantis/atlantis/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/runatlantis/atlantis/tags/?page=1&page_size=100",
       "readme": "https://github.com/runatlantis/atlantis/blob/main/README.md",
@@ -749,7 +749,7 @@
     },
     {
       "name": "Backstage",
-      "description": "Backstage is an open framework for building developer portals",
+      "description": "Backstage is an open framework for building developer portals.",
       "github_release_url": "https://api.github.com/repos/backstage/backstage/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/giantswarm/backstage/tags/?page=1&page_size=100",
       "readme": "https://github.com/backstage/backstage/blob/master/README.md",
@@ -865,7 +865,7 @@
     },
     {
       "name": "Bank-Vaults",
-      "description": "Bank-Vaults is a Vault swiss-army knife: a K8s operator, Go client with automatic token renewal, automatic configuration, multiple unseal options and more. A CLI tool to init, unseal and configure ...",
+      "description": "Bank-Vaults is a Vault swiss-army knife: a K8s operator, Go client with automatic token renewal, automatic configuration, multiple unseal options and more.",
       "github_release_url": "https://api.github.com/repos/bank-vaults/bank-vaults/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/banzaicloud/bank-vaults/tags/?page=1&page_size=100",
       "readme": "https://github.com/bank-vaults/bank-vaults/blob/main/README.md",
@@ -981,7 +981,7 @@
     },
     {
       "name": "BFE",
-      "description": "Open-source layer 7 load balancer derived from proprietary Baidu FrontEnd",
+      "description": "Open-source layer 7 load balancer derived from proprietary Baidu FrontEnd.",
       "github_release_url": "https://api.github.com/repos/bfenetworks/bfe/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bfenetworks/bfe/tags/?page=1&page_size=100",
       "readme": "https://github.com/bfenetworks/bfe/blob/master/README.md",
@@ -1026,7 +1026,7 @@
     },
     {
       "name": "bootc",
-      "description": "The bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, ...",
+      "description": "The bootc provides transactional, in-place operating system images and updates using OCI/Docker container images.",
       "github_release_url": "https://api.github.com/repos/bootc-dev/bootc/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bootc/oxidized/tags/?page=1&page_size=100",
       "readme": "https://github.com/bootc-dev/bootc/blob/main/README.md",
@@ -1127,7 +1127,7 @@
     },
     {
       "name": "bpfman",
-      "description": "eBPF manager for Linux and Kubernetes - simplifies loading, unloading, and managing eBPF programs on nodes and container workloads",
+      "description": "EBPF manager for Linux and Kubernetes - simplifies loading, unloading, and managing eBPF programs on nodes and container workloads.",
       "github_release_url": "https://api.github.com/repos/bpfman/bpfman/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/wrongerror/bpfman/tags/?page=1&page_size=100",
       "readme": "https://github.com/bpfman/bpfman/blob/main/README.md",
@@ -1188,7 +1188,7 @@
     },
     {
       "name": "Brigade",
-      "description": "Brigade is a full-featured, event-driven scripting platform built on top of Kubernetes. It integrates with many different event sources, more are always being added, and it's easy to create your own if you need something specific.",
+      "description": "Brigade is a full-featured, event-driven scripting platform built on top of Kubernetes.",
       "github_release_url": "https://api.github.com/repos/brigadecore/brigade/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/vdice/brigade-worker/tag/?page=1&limit=100",
       "readme": "https://github.com/brigadecore/brigade/blob/main/README.md",
@@ -1303,7 +1303,7 @@
     },
     {
       "name": "Buildpacks",
-      "description": "CLI for building apps using Cloud Native Buildpacks",
+      "description": "CLI for building apps using Cloud Native Buildpacks.",
       "github_release_url": "https://api.github.com/repos/buildpacks/pack/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/codefresh/buildpacks/tags/?page=1&page_size=100",
       "readme": "https://github.com/buildpacks/pack/blob/main/README.md",
@@ -1501,7 +1501,7 @@
     },
     {
       "name": "Capsule",
-      "description": "Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstre...",
+      "description": "Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster.",
       "github_release_url": "https://api.github.com/repos/projectcapsule/capsule/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/clastix/capsule/tags/?page=1&page_size=100",
       "readme": "https://github.com/projectcapsule/capsule/blob/main/README.md",
@@ -1599,7 +1599,7 @@
     },
     {
       "name": "Carina",
-      "description": "Carina: an high performance and ops-free local storage for kubernetes",
+      "description": "Carina: an high performance and ops-free local storage for kubernetes.",
       "github_release_url": "https://api.github.com/repos/carina-io/carina/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/opsmxpublic/carina-instance/tag/?page=1&limit=100",
       "readme": "https://github.com/carina-io/carina/blob/main/README.md",
@@ -1983,7 +1983,7 @@
     },
     {
       "name": "cert-manager",
-      "description": "Automatically provision and manage TLS certificates in Kubernetes",
+      "description": "Automatically provision and manage TLS certificates in Kubernetes.",
       "github_release_url": "https://api.github.com/repos/cert-manager/cert-manager/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/jetstack/cert-manager-controller/tag/?page=1&limit=100",
       "readme": "https://github.com/cert-manager/cert-manager/blob/master/README.md",
@@ -2099,7 +2099,7 @@
     },
     {
       "name": "Chaos Mesh",
-      "description": "Cloud native chaos engineering platform for Kubernetes - injects failures and tests resilience of distributed systems",
+      "description": "Cloud native chaos engineering platform for Kubernetes - injects failures and tests resilience of distributed systems.",
       "github_release_url": "https://api.github.com/repos/chaos-mesh/chaos-mesh/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/pingcap/chaos-mesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/chaos-mesh/chaos-mesh/blob/master/README.md",
@@ -2198,7 +2198,7 @@
     },
     {
       "name": "Chaosblade",
-      "description": "An easy to use and powerful chaos engineering experiment toolkit.（阿里巴巴开源的一款简单易用、功能强大的混沌实验注入工具）",
+      "description": "Easy-to-use and powerful chaos engineering experiment toolkit for testing system resilience and reliability.",
       "github_release_url": "https://api.github.com/repos/chaosblade-io/chaosblade/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/brodydocker/chaosblade/tags/?page=1&page_size=100",
       "readme": "https://github.com/chaosblade-io/chaosblade/blob/master/README.md",
@@ -2242,7 +2242,7 @@
     },
     {
       "name": "Cilium",
-      "description": "eBPF-based Networking, Security, and Observability",
+      "description": "EBPF-based Networking, Security, and Observability.",
       "github_release_url": "https://api.github.com/repos/cilium/cilium/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/cilium/cilium/tags/?page=1&page_size=100",
       "readme": "https://github.com/cilium/cilium/blob/main/README.rst",
@@ -2358,7 +2358,7 @@
     },
     {
       "name": "Cloud Custodian",
-      "description": "Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources",
+      "description": "Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources.",
       "github_release_url": "https://api.github.com/repos/cloud-custodian/cloud-custodian/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/drillinginfo/cloud-custodian/tags/?page=1&page_size=100",
       "readme": "https://github.com/cloud-custodian/cloud-custodian/blob/main/README.md",
@@ -2481,7 +2481,7 @@
     },
     {
       "name": "CloudNativePG",
-      "description": "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ong...",
+      "description": "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments,.",
       "github_release_url": "https://api.github.com/repos/cloudnative-pg/cloudnative-pg/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/betonnecmi/cloudnativepg/tags/?page=1&page_size=100",
       "readme": "https://github.com/cloudnative-pg/cloudnative-pg/blob/main/README.md",
@@ -2563,7 +2563,7 @@
     },
     {
       "name": "Clusternet",
-      "description": "[CNCF Sandbox Project] Managing your Kubernetes clusters (including public, private, edge, etc.) as easily as visiting the Internet",
+      "description": "Managing your Kubernetes clusters (including public, private, edge, etc.) as easily as visiting the Internet.",
       "github_release_url": "https://api.github.com/repos/clusternet/clusternet/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/clusternet/clusternet-agent/tags/?page=1&page_size=100",
       "readme": "https://github.com/clusternet/clusternet/blob/main/README.md",
@@ -2631,7 +2631,7 @@
     },
     {
       "name": "Clusterpedia",
-      "description": "Clusterpedia is used for complex resources search across multiple clusters, support simultaneous search of a single kind of resource  or multiple kinds of resources existing in multiple clusters.",
+      "description": "Clusterpedia is used for complex resources search across multiple clusters, support simultaneous search of a single kind of resource or multiple kinds of resources existing in multiple clusters.",
       "github_release_url": "https://api.github.com/repos/clusterpedia-io/clusterpedia/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/deeplythink/clusterpedia-apiserver/tags/?page=1&page_size=100",
       "readme": "https://github.com/clusterpedia-io/clusterpedia/blob/main/README.md",
@@ -2689,7 +2689,7 @@
     },
     {
       "name": "CNI-Genie",
-      "description": "CNI-Genie for choosing pod network of your choice during deployment time. Supported pod networks - Calico, Flannel, Romana, Weave ",
+      "description": "CNI-Genie for choosing pod network of your choice during deployment time.",
       "github_release_url": "https://api.github.com/repos/cni-genie/CNI-Genie/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/airbyte/source-opsgenie/tags/?page=1&page_size=100",
       "readme": "https://github.com/cni-genie/CNI-Genie/blob/master/README.md",
@@ -2750,7 +2750,7 @@
     },
     {
       "name": "composefs",
-      "description": "A project that combines Linux kernel features to provide read-only mountable filesystem trees stacking on top of an underlying \"lower\" Linux filesystem, particularly useful for mounting container i...",
+      "description": "A project that combines Linux kernel features to provide read-only mountable filesystem trees stacking on top of an underlying \"lower\" Linux filesystem,.",
       "github_release_url": "https://api.github.com/repos/composefs/composefs/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/orimanabu/myhttpd-composefs/tags/?page=1&page_size=100",
       "readme": "https://github.com/composefs/composefs/blob/main/README.md",
@@ -2780,7 +2780,7 @@
     },
     {
       "name": "Confidential Containers",
-      "description": "Confidential Containers is an open source community working to enable cloud native  confidential computing by leveraging Trusted Execution Environments to protect  containers and data.",
+      "description": "Confidential Containers is an open source community working to enable cloud native confidential computing by leveraging Trusted Execution Environments to protect containers and data.",
       "github_release_url": "https://api.github.com/repos/confidential-containers/confidential-containers/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/elementgreen/confidential-containers/tags/?page=1&page_size=100",
       "readme": "https://github.com/confidential-containers/confidential-containers/blob/main/README.md",
@@ -2910,7 +2910,7 @@
     },
     {
       "name": "Container Network Interface (CNI)",
-      "description": "Container Network Interface - networking for Linux containers",
+      "description": "Container Network Interface - networking for Linux containers.",
       "github_release_url": "https://api.github.com/repos/containernetworking/cni/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/geonetwork/tags/?page=1&page_size=100",
       "readme": "https://github.com/containernetworking/cni/blob/main/README.md",
@@ -3037,7 +3037,7 @@
     },
     {
       "name": "containerd",
-      "description": "containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability. It is available as a daemon for Linux and Windows, which can manage the complete container lifecycle of its host system: image transfer and storage, container execution and supervisio...",
+      "description": "Containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.",
       "github_release_url": "https://api.github.com/repos/containerd/containerd/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/containerd/tags/?page=1&page_size=100",
       "readme": "https://github.com/containerd/containerd/blob/main/README.md",
@@ -3105,7 +3105,7 @@
     },
     {
       "name": "ContainerSSH",
-      "description": "ContainerSSH launches a new container for each SSH connection in Kubernetes, Podman or Docker. The user is transparently dropped in the container and the container is removed when the user disconne...",
+      "description": "ContainerSSH launches a new container for each SSH connection in Kubernetes, Podman or Docker.",
       "github_release_url": "https://api.github.com/repos/ContainerSSH/ContainerSSH/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/containerssh/containerssh/tags/?page=1&page_size=100",
       "readme": "https://github.com/ContainerSSH/ContainerSSH/blob/main/README.md",
@@ -3302,7 +3302,7 @@
     },
     {
       "name": "Copa",
-      "description": "🧵 CLI tool for directly patching container images!",
+      "description": "🧵 CLI tool for directly patching container images!.",
       "github_release_url": "https://api.github.com/repos/project-copacetic/copacetic/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/lib/alpine/tag/?page=1&limit=100",
       "readme": "https://github.com/project-copacetic/copacetic/blob/main/README.md",
@@ -3384,7 +3384,7 @@
     },
     {
       "name": "CoreDNS",
-      "description": "Fast and flexible DNS server written in Go that chains plugins - serves as the default DNS server in Kubernetes clusters",
+      "description": "Fast and flexible DNS server written in Go that chains plugins - serves as the default DNS server in Kubernetes clusters.",
       "github_release_url": "https://api.github.com/repos/coredns/coredns/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/coredns/coredns/tags/?page=1&page_size=100",
       "readme": "https://github.com/coredns/coredns/blob/master/README.md",
@@ -3616,7 +3616,7 @@
     },
     {
       "name": "Cozystack",
-      "description": "Cozystack is a free PaaS platform and framework for building private clouds and providing users/customers with managed Kubernetes,  KubeVirt-based VMs, databases as a service, NATS, message brokers...",
+      "description": "Cozystack is a free PaaS platform and framework for building private clouds and providing users/customers with managed Kubernetes, KubeVirt-based VMs, databases as a service, NATS,.",
       "github_release_url": "https://api.github.com/repos/cozystack/cozystack/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kklinch0/cozystack/tags/?page=1&page_size=100",
       "readme": "https://github.com/cozystack/cozystack/blob/main/README.md",
@@ -3732,7 +3732,7 @@
     },
     {
       "name": "CRI-O",
-      "description": "Open Container Initiative-based implementation of Kubernetes Container Runtime Interface",
+      "description": "Open Container Initiative-based implementation of Kubernetes Container Runtime Interface.",
       "github_release_url": "https://api.github.com/repos/cri-o/cri-o/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/saschagrunert/cri-o/tag/?page=1&limit=100",
       "readme": "https://github.com/cri-o/cri-o/blob/main/README.md",
@@ -3804,7 +3804,7 @@
     },
     {
       "name": "Crossplane",
-      "description": "Crossplane is the cloud native control plane framework that allows you to build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to orchestr...",
+      "description": "Crossplane is the cloud native control plane framework that allows you to build control planes without needing to write code.",
       "github_release_url": "https://api.github.com/repos/crossplane/crossplane/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/crossplane/crossplane/tags/?page=1&page_size=100",
       "readme": "https://github.com/crossplane/crossplane/blob/main/README.md",
@@ -3920,7 +3920,7 @@
     },
     {
       "name": "CubeFS",
-      "description": "|&nbsp;Community Meeting| |------------------| | The CubeFS Project holds bi-weekly community online meeting. To join or watch previous meeting notes and recordings, please see meeting schedule and meeting minutes. |.",
+      "description": "|&nbsp;Community Meeting| |------------------| | The CubeFS Project holds bi-weekly community online meeting.",
       "github_release_url": "https://api.github.com/repos/cubefs/cubefs/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/cubefs/cubefs/tags/?page=1&page_size=100",
       "readme": "https://github.com/cubefs/cubefs/blob/master/README.md",
@@ -3978,7 +3978,7 @@
     },
     {
       "name": "Curve",
-      "description": "Curve is a distributed storage system designed and developed independently by NetEase,  featured with high performance, high availability, high reliability and well expansibility,  and it can serve...",
+      "description": "Curve is a distributed storage system designed and developed independently by NetEase, featured with high performance, high availability, high reliability and well expansibility,.",
       "github_release_url": "https://api.github.com/repos/opencurve/curve/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/openeuler/curve/tags/?page=1&page_size=100",
       "readme": "https://github.com/opencurve/curve/blob/master/README.md",
@@ -4162,7 +4162,7 @@
     },
     {
       "name": "Devfile",
-      "description": "Kube-native API for cloud development workspaces specification",
+      "description": "Kube-native API for cloud development workspaces specification.",
       "github_release_url": "https://api.github.com/repos/devfile/api/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/slevin017/devfile/tags/?page=1&page_size=100",
       "readme": "https://github.com/devfile/api/blob/main/README.md",
@@ -4349,7 +4349,7 @@
     },
     {
       "name": "Dex",
-      "description": "OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors",
+      "description": "OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors for federated authentication.",
       "github_release_url": "https://api.github.com/repos/dexidp/dex/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/dexidp/dex/tag/?page=1&limit=100",
       "readme": "https://github.com/dexidp/dex/blob/master/README.md",
@@ -4464,7 +4464,7 @@
     },
     {
       "name": "Distribution",
-      "description": "The toolkit to pack, ship, store, and deliver container content",
+      "description": "The toolkit to pack, ship, store, and deliver container content.",
       "github_release_url": "https://api.github.com/repos/distribution/distribution/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/distribution/distribution/tags/?page=1&page_size=100",
       "readme": "https://github.com/distribution/distribution/blob/main/README.md",
@@ -4555,7 +4555,7 @@
     },
     {
       "name": "Dragonfly",
-      "description": "Dragonfly is an open source P2P-based file distribution and image acceleration system. It is hosted by the Cloud Native Computing Foundation (CNCF) as an Incubating Level Project.",
+      "description": "Dragonfly is an open source P2P-based file distribution and image acceleration system.",
       "github_release_url": "https://api.github.com/repos/dragonflyoss/dragonfly/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/dragonflydb/dragonfly/tags/?page=1&page_size=100",
       "readme": "https://github.com/dragonflyoss/dragonfly/blob/main/README.md",
@@ -4622,7 +4622,7 @@
     },
     {
       "name": "Easegress",
-      "description": "Cloud native traffic orchestration system for API gateway, service mesh sidecar, and traffic management with high performance",
+      "description": "Cloud native traffic orchestration system for API gateway, service mesh sidecar, and traffic management with high performance.",
       "github_release_url": "https://api.github.com/repos/easegress-io/easegress/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/megaease/easegress/tags/?page=1&page_size=100",
       "readme": "https://github.com/easegress-io/easegress/blob/main/README.md",
@@ -4729,7 +4729,7 @@
     },
     {
       "name": "Emissary-Ingress",
-      "description": "open source Kubernetes-native API gateway for microservices built on the Envoy Proxy",
+      "description": "Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy.",
       "github_release_url": "https://api.github.com/repos/emissary-ingress/emissary/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/dwflynn/emissary-ingress/tags/?page=1&page_size=100",
       "readme": "https://github.com/emissary-ingress/emissary/blob/master/README.md",
@@ -4799,7 +4799,7 @@
     },
     {
       "name": "Envoy",
-      "description": "Cloud-native high-performance edge/middle/service proxy",
+      "description": "Cloud-native high-performance edge/middle/service proxy.",
       "github_release_url": "https://api.github.com/repos/envoyproxy/envoy/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/envoyproxy/envoy/tags/?page=1&page_size=100",
       "readme": "https://github.com/envoyproxy/envoy/blob/main/README.md",
@@ -4962,7 +4962,7 @@
     },
     {
       "name": "etcd",
-      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system.",
       "github_release_url": "https://api.github.com/repos/etcd-io/etcd/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/coreos/etcd/tag/?page=1&limit=100",
       "readme": "https://github.com/etcd-io/etcd/blob/main/README.md",
@@ -5194,7 +5194,7 @@
     },
     {
       "name": "FabEdge",
-      "description": "Secure Edge Networking Solution Based On Kubernetes",
+      "description": "Secure Edge Networking Solution Based On Kubernetes.",
       "github_release_url": "https://api.github.com/repos/FabEdge/fabedge/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/fabedge/strongswan/tags/?page=1&page_size=100",
       "readme": "https://github.com/FabEdge/fabedge/blob/main/README.md",
@@ -5222,7 +5222,7 @@
     },
     {
       "name": "Falco",
-      "description": "Falco is a cloud native runtime security tool for Linux operating systems. It is designed to detect and alert on abnormal behavior and potential security threats in real-time.",
+      "description": "Falco is a cloud native runtime security tool for Linux operating systems.",
       "github_release_url": "https://api.github.com/repos/falcosecurity/falco/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/falcosecurity/falco/tags/?page=1&page_size=100",
       "readme": "https://github.com/falcosecurity/falco/blob/master/README.md",
@@ -5338,7 +5338,7 @@
     },
     {
       "name": "Flatcar Container Linux",
-      "description": "A community Linux distribution designed for container workloads, with high security and low maintenance",
+      "description": "A community Linux distribution designed for container workloads, with high security and low maintenance.",
       "github_release_url": "https://api.github.com/repos/flatcar/Flatcar/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/archlinux/tags/?page=1&page_size=100",
       "readme": "https://github.com/flatcar/Flatcar/blob/main/README.md",
@@ -5403,7 +5403,7 @@
     },
     {
       "name": "Fluentd",
-      "description": "Fluentd: Unified Logging Layer (project under CNCF)",
+      "description": "Fluentd: Unified Logging Layer (project under CNCF).",
       "github_release_url": "https://api.github.com/repos/fluent/fluentd/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/fluentd/tags/?page=1&page_size=100",
       "readme": "https://github.com/fluent/fluentd/blob/master/README.md",
@@ -5580,7 +5580,7 @@
     },
     {
       "name": "Flux",
-      "description": "Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.",
+      "description": "Open and extensible continuous delivery solution for Kubernetes.",
       "github_release_url": "https://api.github.com/repos/fluxcd/flux2/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnamicharts/flux/tags/?page=1&page_size=100",
       "readme": "https://github.com/fluxcd/flux2/blob/main/README.md",
@@ -5696,7 +5696,7 @@
     },
     {
       "name": "Fonio",
-      "description": "Data first monitoring agent using (e)BPF, built on RedBPF",
+      "description": "Data first monitoring agent using (e)BPF, built on RedBPF.",
       "github_release_url": "https://api.github.com/repos/foniod/foniod/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/scpomedialab/fonio/tags/?page=1&page_size=100",
       "readme": "https://github.com/foniod/foniod/blob/main/README.md",
@@ -5717,7 +5717,7 @@
     },
     {
       "name": "gRPC",
-      "description": "C++ based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)",
+      "description": "C++ based gRPC (C++, Python, Ruby, Objective-C, PHP, C#).",
       "github_release_url": "https://api.github.com/repos/grpc/grpc/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/grpc/java-example-hostname/tags/?page=1&page_size=100",
       "readme": "https://github.com/grpc/grpc/blob/master/README.md",
@@ -5833,7 +5833,7 @@
     },
     {
       "name": "hami",
-      "description": "Heterogeneous AI Computing Virtualization Middleware",
+      "description": "Heterogeneous AI Computing Virtualization Middleware.",
       "github_release_url": "https://api.github.com/repos/Project-HAMi/HAMi/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/projecthami/hami/tags/?page=1&page_size=100",
       "readme": "https://github.com/Project-HAMi/HAMi/blob/master/README.md",
@@ -6010,7 +6010,7 @@
     },
     {
       "name": "Headlamp",
-      "description": "Extensible open source multi-cluster Kubernetes user interface",
+      "description": "Extensible open source multi-cluster Kubernetes user interface.",
       "github_release_url": "https://api.github.com/repos/kubernetes-sigs/headlamp/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/headlamp/headlamp-docker-extension/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubernetes-sigs/headlamp/blob/main/README.md",
@@ -6086,7 +6086,7 @@
     },
     {
       "name": "Helm",
-      "description": "Helm is a tool for managing Charts. Charts are packages of pre-configured Kubernetes resources. Use Helm to: - Find and use popular software packaged as Helm Charts to run in Kubernetes - Share your own applications as Helm Charts.",
+      "description": "Helm is a tool for managing Charts Charts are packages of pre-configured Kubernetes resources.",
       "github_release_url": "https://api.github.com/repos/helm/helm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/alpine/helm/tags/?page=1&page_size=100",
       "readme": "https://github.com/helm/helm/blob/main/README.md",
@@ -6241,7 +6241,7 @@
     },
     {
       "name": "HwameiStor",
-      "description": "Hwameistor is an HA local storage system for cloud-native stateful workloads",
+      "description": "Hwameistor is an HA local storage system for cloud-native stateful workloads.",
       "github_release_url": "https://api.github.com/repos/hwameistor/hwameistor/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hwameistor/builder/tags/?page=1&page_size=100",
       "readme": "https://github.com/hwameistor/hwameistor/blob/main/README.md",
@@ -6307,7 +6307,7 @@
     },
     {
       "name": "Hyperlight",
-      "description": "A lightweight, secure container runtime solution designed for modern cloud-native workloads",
+      "description": "A lightweight, secure container runtime solution designed for modern cloud-native workloads.",
       "github_release_url": "https://api.github.com/repos/hyperlight-dev/hyperlight/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hyperlightorg/hyperscale/tags/?page=1&page_size=100",
       "readme": "https://github.com/hyperlight-dev/hyperlight/blob/main/README.md",
@@ -6336,7 +6336,7 @@
     },
     {
       "name": "in-toto",
-      "description": "in-toto is a framework to protect supply chain integrity.",
+      "description": "In-toto is a framework to protect supply chain integrity.",
       "github_release_url": "https://api.github.com/repos/in-toto/in-toto/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/opsmxpublic/in-toto-echo/tag/?page=1&limit=100",
       "readme": "https://github.com/in-toto/in-toto/blob/master/README.md",
@@ -6461,7 +6461,7 @@
     },
     {
       "name": "Inspektor Gadget",
-      "description": "Open source eBPF debugging and data collection tool for Kubernetes and Linux",
+      "description": "Open source eBPF debugging and data collection tool for Kubernetes and Linux.",
       "github_release_url": "https://api.github.com/repos/inspektor-gadget/inspektor-gadget/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/mcp/inspektor-gadget/tags/?page=1&page_size=100",
       "readme": "https://github.com/inspektor-gadget/inspektor-gadget/blob/main/README.md",
@@ -6643,7 +6643,7 @@
     },
     {
       "name": "Jaeger",
-      "description": "Open-source distributed tracing platform for monitoring and troubleshooting microservices-based architectures",
+      "description": "Open-source distributed tracing platform for monitoring and troubleshooting microservices-based architectures.",
       "github_release_url": "https://api.github.com/repos/jaegertracing/jaeger/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnamicharts/jaeger/tags/?page=1&page_size=100",
       "readme": "https://github.com/jaegertracing/jaeger/blob/main/README.md",
@@ -6759,7 +6759,7 @@
     },
     {
       "name": "k0s",
-      "description": "!GitHub Repo stars !GitHub release (latest by date) !GitHub release (latest SemVer including pre-releases) !GitHub commits since latest release (by date) !k0s-logo-dark !k0s-logo-light k0s is an open source, all-inclusive Kubernetes distribution, which is configured with all of the features neede...",
+      "description": "!GitHub Repo stars !GitHub release (latest by date) !GitHub release (latest SemVer including pre-releases) !GitHub commits since latest release (by date) !k0s-logo-dark !k0s-logo-light k0s is an open source, all-inclusive Kubernetes distribution,.",
       "github_release_url": "https://api.github.com/repos/k0sproject/k0s/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/k0sproject/k0s/tags/?page=1&page_size=100",
       "readme": "https://github.com/k0sproject/k0s/blob/main/README.md",
@@ -6875,7 +6875,7 @@
     },
     {
       "name": "k3s",
-      "description": "K3s is a fully conformant production-ready Kubernetes distribution with the following changes: 1. It is packaged as a single binary. 1.",
+      "description": "K3s is a fully conformant production-ready Kubernetes distribution with the following changes: 1.",
       "github_release_url": "https://api.github.com/repos/k3s-io/k3s/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/k3s/tags/?page=1&page_size=100",
       "readme": "https://github.com/k3s-io/k3s/blob/main/README.md",
@@ -6991,7 +6991,7 @@
     },
     {
       "name": "k8gb",
-      "description": "Kubernetes Global Balancer - provides global load balancing and disaster recovery for Kubernetes workloads across multiple clusters",
+      "description": "Kubernetes Global Balancer - provides global load balancing and disaster recovery for Kubernetes workloads across multiple clusters.",
       "github_release_url": "https://api.github.com/repos/k8gb-io/k8gb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/absaoss/k8gb/tags/?page=1&page_size=100",
       "readme": "https://github.com/k8gb-io/k8gb/blob/master/README.md",
@@ -7093,7 +7093,7 @@
     },
     {
       "name": "K8sGPT",
-      "description": "Tool for scanning Kubernetes clusters and diagnosing issues in simple English using AI-powered analysis",
+      "description": "Tool for scanning Kubernetes clusters and diagnosing issues in simple English using AI-powered analysis.",
       "github_release_url": "https://api.github.com/repos/k8sgpt-ai/k8sgpt/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/kubermatic-mirror/helm-charts/k8sgpt-operator/tag/?page=1&limit=100",
       "readme": "https://github.com/k8sgpt-ai/k8sgpt/blob/main/README.md",
@@ -7159,7 +7159,7 @@
     },
     {
       "name": "K8up",
-      "description": "Kubernetes backup operator based on Restic - provides scheduled backups, restores, and pruning for persistent volumes",
+      "description": "Kubernetes backup operator based on Restic - provides scheduled backups, restores, and pruning for persistent volumes.",
       "github_release_url": "https://api.github.com/repos/k8up-io/k8up/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/vshn/k8up/tags/?page=1&page_size=100",
       "readme": "https://github.com/k8up-io/k8up/blob/master/README.md",
@@ -7258,7 +7258,7 @@
     },
     {
       "name": "kagent",
-      "description": "Kagent is an open source programming framework designed for DevOps and platform engineers to run AI agents in Kubernetes",
+      "description": "Kagent is an open source programming framework designed for DevOps and platform engineers to run AI agents in Kubernetes.",
       "github_release_url": "https://api.github.com/repos/kagent-dev/kagent/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/txn2/kagent/tags/?page=1&page_size=100",
       "readme": "https://github.com/kagent-dev/kagent/blob/main/README.md",
@@ -7573,7 +7573,7 @@
     },
     {
       "name": "Karmada",
-      "description": "Open, Multi-Cloud, Multi-Cluster Kubernetes Orchestration",
+      "description": "Open, Multi-Cloud, Multi-Cluster Kubernetes Orchestration.",
       "github_release_url": "https://api.github.com/repos/karmada-io/karmada/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/karmada/karmada/tags/?page=1&page_size=100",
       "readme": "https://github.com/karmada-io/karmada/blob/master/README.md",
@@ -7863,7 +7863,7 @@
     },
     {
       "name": "KEDA",
-      "description": " KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes ",
+      "description": "KEDA is a Kubernetes-based Event Driven Autoscaling component.",
       "github_release_url": "https://api.github.com/repos/kedacore/keda/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/selenium/keda/tags/?page=1&page_size=100",
       "readme": "https://github.com/kedacore/keda/blob/main/README.md",
@@ -7955,7 +7955,7 @@
     },
     {
       "name": "Keptn",
-      "description": "Cloud-native application life-cycle orchestration. Keptn automates your SLO-driven multi-stage delivery and operations & remediation of your applications.",
+      "description": "Cloud-native application life-cycle orchestration Keptn automates your SLO-driven multi-stage delivery and operations & remediation of your applications.",
       "github_release_url": "https://api.github.com/repos/keptn/lifecycle-toolkit/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/keptn/distributor/tags/?page=1&page_size=100",
       "readme": "https://github.com/keptn/lifecycle-toolkit/blob/main/README.md",
@@ -8070,7 +8070,7 @@
     },
     {
       "name": "Keycloak",
-      "description": "Keycloak is an open-source identity and access management solution for modern applications and services,  built on top of industry security standard protocols.",
+      "description": "Keycloak is an open-source identity and access management solution for modern applications and services, built on top of industry security standard protocols.",
       "github_release_url": "https://api.github.com/repos/keycloak/keycloak/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/keycloak/keycloak/tags/?page=1&page_size=100",
       "readme": "https://github.com/keycloak/keycloak/blob/main/README.md",
@@ -8372,7 +8372,7 @@
     },
     {
       "name": "KitOps",
-      "description": "An open standard for packaging, managing, and deploying ML models and artifacts across different systems",
+      "description": "An open standard for packaging, managing, and deploying ML models and artifacts across different systems.",
       "github_release_url": "https://api.github.com/repos/kitops-ml/kitops/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/300481/kitops/tags/?page=1&page_size=100",
       "readme": "https://github.com/kitops-ml/kitops/blob/main/README.md",
@@ -8430,7 +8430,7 @@
     },
     {
       "name": "Kmesh",
-      "description": "Kmesh is a high-performance and low overhead service mesh data plane based on eBPF and programmable kernel. Kmesh brings traffic management, security and monitoring to service communication without...",
+      "description": "Kmesh is a high-performance and low overhead service mesh data plane based on eBPF and programmable kernel.",
       "github_release_url": "https://api.github.com/repos/kmesh-net/kmesh/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/zzuo1991/kmesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/kmesh-net/kmesh/blob/main/README.md",
@@ -8461,7 +8461,7 @@
     },
     {
       "name": "Knative",
-      "description": "Knative is a developer-focused serverless application layer which is a great complement to the existing Kubernetes application constructs. Knative consists of three components: an HTTP-triggered au...",
+      "description": "Knative is a developer-focused serverless application layer which is a great complement to the existing Kubernetes application constructs.",
       "github_release_url": "https://api.github.com/repos/knative/serving/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/openshift-knative/knative-eventing-sources-event-display/tag/?page=1&limit=100",
       "readme": "https://github.com/knative/serving/blob/main/README.md",
@@ -8542,7 +8542,7 @@
     },
     {
       "name": "ko",
-      "description": "> 🎉 Google has applied for ko to join the Cloud Native Computing Foundation as a Sandbox project. Learn more here. ko is a simple, fast container image builder for Go applications.",
+      "description": "Simple, fast container image builder for Go applications that doesn't require Docker.",
       "github_release_url": "https://api.github.com/repos/ko-build/ko/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/cloudhut/kowl/tag/?page=1&limit=100",
       "readme": "https://github.com/ko-build/ko/blob/main/README.md",
@@ -8645,7 +8645,7 @@
     },
     {
       "name": "Konveyor",
-      "description": "Konveyor is an open-source project that gives developers and platform teams visibility, analysis, and transformation tools to predictably re-platform and refactor legacy applications at scale for K...",
+      "description": "Konveyor is an open-source project that gives developers and platform teams visibility, analysis, and transformation tools to predictably re-platform.",
       "github_release_url": "https://api.github.com/repos/konveyor/operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/operatorhubio/konveyor-operator/tag/?page=1&limit=100",
       "readme": "https://github.com/konveyor/operator/blob/main/README.md",
@@ -8800,7 +8800,7 @@
     },
     {
       "name": "kpt",
-      "description": "Package-centric toolchain for Kubernetes configuration - enables CRUD operations on configuration as data using Git and OCI",
+      "description": "Package-centric toolchain for Kubernetes configuration - enables CRUD operations on configuration as data using Git and OCI.",
       "github_release_url": "https://api.github.com/repos/kptdev/kpt/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/gongpu/kpt/tags/?page=1&page_size=100",
       "readme": "https://github.com/kptdev/kpt/blob/main/README.md",
@@ -8875,7 +8875,7 @@
     },
     {
       "name": "Krator",
-      "description": ":construction: :construction: This project is highly experimental. :construction: :construction: It should not be used in production workloads. Krator acts as an Operator by watching Kubernetes resources and running.",
+      "description": ":construction::construction: This project is highly experimental.",
       "github_release_url": "https://api.github.com/repos/krator-rs/krator/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/krator/python3-django-gunicorn/tags/?page=1&page_size=100",
       "readme": "https://github.com/krator-rs/krator/blob/main/README.md",
@@ -9005,7 +9005,7 @@
     },
     {
       "name": "Krustlet",
-      "description": "⚠️ This project is currently not actively maintained. Most of the other maintainers have moved on to other WebAssembly related projects. This project could definitely still be useful to anyone who wants to write a custom Kubelet and its sister project Krator is a state machine-based solution for ...",
+      "description": "⚠️ This project is currently not actively maintained.",
       "github_release_url": "https://api.github.com/repos/krustlet/krustlet/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bloodorangeio/krustlet-wascc/tags/?page=1&page_size=100",
       "readme": "https://github.com/krustlet/krustlet/blob/main/README.md",
@@ -9031,7 +9031,7 @@
     },
     {
       "name": "KServe",
-      "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes",
+      "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes.",
       "github_release_url": "https://api.github.com/repos/kserve/kserve/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kserve/kserve-controller/tags/?page=1&page_size=100",
       "readme": "https://github.com/kserve/kserve/blob/master/README.md",
@@ -9127,7 +9127,7 @@
     },
     {
       "name": "Kuadrant",
-      "description": "Kuadrant combines Gateway API and Istio-based gateway controllers to enhance application connectivity. It enables platform engineers  and application developers to easily connect, secure, and prote...",
+      "description": "Kuadrant combines Gateway API and Istio-based gateway controllers to enhance application connectivity.",
       "github_release_url": "https://api.github.com/repos/Kuadrant/kuadrant-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kuadrant/authorino/tags/?page=1&page_size=100",
       "readme": "https://github.com/Kuadrant/kuadrant-operator/blob/main/README.md",
@@ -9236,7 +9236,7 @@
     },
     {
       "name": "Kube-burner",
-      "description": "Kubernetes performance and scale test orchestration framework written in golang",
+      "description": "Kubernetes performance and scale test orchestration framework written in golang.",
       "github_release_url": "https://api.github.com/repos/kube-burner/kube-burner/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/cloud-bulldozer/kube-burner/tag/?page=1&limit=100",
       "readme": "https://github.com/kube-burner/kube-burner/blob/main/README.md",
@@ -9352,7 +9352,7 @@
     },
     {
       "name": "Kube-OVN",
-      "description": "A Bridge between SDN and Cloud Native (Project under CNCF)",
+      "description": "A Bridge between SDN and Cloud Native (Project under CNCF).",
       "github_release_url": "https://api.github.com/repos/kubeovn/kube-ovn/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kubeovn/kube-ovn/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubeovn/kube-ovn/blob/master/README.md",
@@ -9467,7 +9467,7 @@
     },
     {
       "name": "kube-rs",
-      "description": "kube-rs is the core Rust ecosystem for building applications against Kubernetes",
+      "description": "Kube-rs is the core Rust ecosystem for building applications against Kubernetes.",
       "github_release_url": "https://api.github.com/repos/kube-rs/kube/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kubeovn/kube-ovn/tags/?page=1&page_size=100",
       "readme": "https://github.com/kube-rs/kube/blob/main/README.md",
@@ -9582,7 +9582,7 @@
     },
     {
       "name": "kube-vip",
-      "description": "Kubernetes Virtual IP and Load-Balancer for both control plane and Kubernetes services",
+      "description": "Kubernetes Virtual IP and Load-Balancer for both control plane and Kubernetes services.",
       "github_release_url": "https://api.github.com/repos/kube-vip/kube-vip/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/rtheobald/kube-vip/tag/?page=1&limit=100",
       "readme": "https://github.com/kube-vip/kube-vip/blob/main/README.md",
@@ -9717,7 +9717,7 @@
     },
     {
       "name": "KubeArmor",
-      "description": "Runtime protection for Kubernetes & other cloud Workloads. Kubearmor provides a observability and policy enforcement system to restrict any unwanted, malicious behaviour of cloud-native workloads a...",
+      "description": "Runtime protection for Kubernetes & other cloud Workloads.",
       "github_release_url": "https://api.github.com/repos/kubearmor/KubeArmor/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kubearmor/kubearmor/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubearmor/KubeArmor/blob/main/README.md",
@@ -9897,7 +9897,7 @@
     },
     {
       "name": "KubeEdge",
-      "description": "Kubernetes Native Edge Computing Framework (project under CNCF)",
+      "description": "Kubernetes Native Edge Computing Framework (project under CNCF).",
       "github_release_url": "https://api.github.com/repos/kubeedge/kubeedge/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kubeedge/cloudcore/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubeedge/kubeedge/blob/master/README.md",
@@ -10088,7 +10088,7 @@
     },
     {
       "name": "Kuberhealthy",
-      "description": "A Kubernetes operator for running synthetic checks as pods. Works great with Prometheus!",
+      "description": "A Kubernetes operator for running synthetic checks as pods.",
       "github_release_url": "https://api.github.com/repos/kuberhealthy/kuberhealthy/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kuberhealthy/kuberhealthy/tags/?page=1&page_size=100",
       "readme": "https://github.com/kuberhealthy/kuberhealthy/blob/main/README.md",
@@ -10173,7 +10173,7 @@
     },
     {
       "name": "Kubernetes",
-      "description": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications",
+      "description": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.",
       "github_release_url": "https://api.github.com/repos/kubernetes/kubernetes/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kindest/node/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubernetes/kubernetes/blob/master/README.md",
@@ -10289,7 +10289,7 @@
     },
     {
       "name": "Kubescape",
-      "description": "Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts), code repositories, container registries and images. It det...",
+      "description": "Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts), code repositories, container registries and images.",
       "github_release_url": "https://api.github.com/repos/kubescape/kubescape/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/kubescape/kubescape/tag/?page=1&limit=100",
       "readme": "https://github.com/kubescape/kubescape/blob/master/README.md",
@@ -10507,7 +10507,7 @@
     },
     {
       "name": "KubeStellar",
-      "description": "KubeStellar - a flexible solution for multi-cluster configuration management for edge, multi-cloud, and hybrid cloud",
+      "description": "KubeStellar - a flexible solution for multi-cluster configuration management for edge, multi-cloud, and hybrid cloud.",
       "github_release_url": "https://api.github.com/repos/kubestellar/kubestellar/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/kubestellar/kubestellar/tag/?page=1&limit=100",
       "readme": "https://github.com/kubestellar/kubestellar/blob/main/README.md",
@@ -10826,7 +10826,7 @@
     },
     {
       "name": "Kubewarden",
-      "description": "Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML, and others. Kubewarden simplifies Policy-As-Code...",
+      "description": "Kubewarden is a Policy Engine powered by WebAssembly policies.",
       "github_release_url": "https://api.github.com/repos/kubewarden/kubewarden-controller/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/jordonleach/kubewarden/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubewarden/kubewarden-controller/blob/main/README.md",
@@ -10892,7 +10892,7 @@
     },
     {
       "name": "KUDO",
-      "description": "Kubernetes Universal Declarative Operator - toolkit for building production-grade operators covering the entire application lifecycle",
+      "description": "Kubernetes Universal Declarative Operator - toolkit for building production-grade operators covering the entire application lifecycle.",
       "github_release_url": "https://api.github.com/repos/kudobuilder/kudo/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kudo/ubuntu-nonroot/tags/?page=1&page_size=100",
       "readme": "https://github.com/kudobuilder/kudo/blob/main/README.md",
@@ -10960,7 +10960,7 @@
     },
     {
       "name": "Kuma",
-      "description": "🐻 The multi-zone service mesh for containers, Kubernetes and VMs. Built with Envoy. CNCF Sandbox Project.",
+      "description": "🐻 The multi-zone service mesh for containers, Kubernetes and VMs.",
       "github_release_url": "https://api.github.com/repos/kumahq/kuma/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/yfdyh000/kuma/tags/?page=1&page_size=100",
       "readme": "https://github.com/kumahq/kuma/blob/master/README.md",
@@ -11026,7 +11026,7 @@
     },
     {
       "name": "Kured",
-      "description": "Kured (KUbernetes REboot Daemon) is a Kubernetes daemonset that performs safe automatic node reboots when the need to do so is indicated by the package management system of the underlying OS",
+      "description": "Kured (KUbernetes REboot Daemon) is a Kubernetes daemonset that performs safe automatic node reboots when the need to do so is indicated by the package management system of the underlying OS.",
       "github_release_url": "https://api.github.com/repos/kubereboot/kured/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/weaveworks/kured/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubereboot/kured/blob/main/README.md",
@@ -11250,7 +11250,7 @@
     },
     {
       "name": "Kyverno",
-      "description": "Cloud Native Policy Management 🎉 !License: Apache-2.0 - About Kyverno - Documentation - Demos & Tutorials - Popular Use Cases - Explore the Policy Library - Getting Help - Contributing - Software Bill of Materials.",
+      "description": "Cloud-native policy management engine for Kubernetes with declarative validation, mutation, and generation of configurations.",
       "github_release_url": "https://api.github.com/repos/kyverno/kyverno/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/nirmata/kyverno/tags/?page=1&page_size=100",
       "readme": "https://github.com/kyverno/kyverno/blob/main/README.md",
@@ -11366,7 +11366,7 @@
     },
     {
       "name": "Lima",
-      "description": "Linux virtual machines, typically on macOS, for running containerd",
+      "description": "Linux virtual machines, typically on macOS, for running containerd.",
       "github_release_url": "https://api.github.com/repos/lima-vm/lima/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/staphb/lima/tags/?page=1&page_size=100",
       "readme": "https://github.com/lima-vm/lima/blob/master/README.md",
@@ -11439,7 +11439,7 @@
     },
     {
       "name": "Linkerd",
-      "description": "Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.",
+      "description": "Ultra light, ultra simple, ultra powerful Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.",
       "github_release_url": "https://api.github.com/repos/linkerd/linkerd2/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/linkerd/namerctl/tags/?page=1&page_size=100",
       "readme": "https://github.com/linkerd/linkerd2/blob/main/README.md",
@@ -11507,7 +11507,7 @@
     },
     {
       "name": "Litmus",
-      "description": "Litmus helps  SREs and developers practice chaos engineering in a Cloud-native way. Chaos experiments are published at the ChaosHub  (https://hub.litmuschaos.io). Community notes is at https://hack...",
+      "description": "Litmus helps SREs and developers practice chaos engineering in a Cloud-native way.",
       "github_release_url": "https://api.github.com/repos/litmuschaos/litmus/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/ankitks/litmusportal-subscriber/tag/?page=1&limit=100",
       "readme": "https://github.com/litmuschaos/litmus/blob/master/README.md",
@@ -11573,7 +11573,7 @@
     },
     {
       "name": "Logging Operator (Kube Logging)",
-      "description": "The Logging operator is now a CNCF Sandbox project. The Logging operator solves your logging-related problems in Kubernetes environments by automating the deployment and configuration of a Kubernetes logging pipeline.",
+      "description": "The Logging operator is now a CNCF Sandbox project.",
       "github_release_url": "https://api.github.com/repos/kube-logging/logging-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/mirrored-kube-logging-logging-operator/tags/?page=1&page_size=100",
       "readme": "https://github.com/kube-logging/logging-operator/blob/master/README.md",
@@ -11656,7 +11656,7 @@
     },
     {
       "name": "Longhorn",
-      "description": "Cloud native distributed block storage system for Kubernetes - provides persistent storage with snapshots, backups, and disaster recovery",
+      "description": "Cloud native distributed block storage system for Kubernetes - provides persistent storage with snapshots, backups, and disaster recovery.",
       "github_release_url": "https://api.github.com/repos/longhorn/longhorn/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/longhornio/longhorn-manager/tags/?page=1&page_size=100",
       "readme": "https://github.com/longhorn/longhorn/blob/master/README.md",
@@ -11772,7 +11772,7 @@
     },
     {
       "name": "LoxiLB",
-      "description": "eBPF based cloud-native load-balancer. Powering Kubernetes|Edge|5G|IoT|XaaS Apps.",
+      "description": "EBPF based cloud-native load-balancer Powering Kubernetes|Edge|5G|IoT|XaaS Apps.",
       "github_release_url": "https://api.github.com/repos/loxilb-io/loxilb/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/operatorhubio/kube-loxilb-operator/tag/?page=1&limit=100",
       "readme": "https://github.com/loxilb-io/loxilb/blob/main/README.md",
@@ -11863,7 +11863,7 @@
     },
     {
       "name": "Meshery",
-      "description": "MESHERY IS A CLOUD NATIVE COMPUTING FOUNDATION PROJECT A self-service engineering platform, Meshery, is the open source, cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud). Among other features, As an extensible platfo...",
+      "description": "MESHERY IS A CLOUD NATIVE COMPUTING FOUNDATION PROJECT A self-service engineering platform, Meshery, is the open source, cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud).",
       "github_release_url": "https://api.github.com/repos/meshery/meshery/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/meshery/meshery/tags/?page=1&page_size=100",
       "readme": "https://github.com/meshery/meshery/blob/master/README.md",
@@ -11978,7 +11978,7 @@
     },
     {
       "name": "Meshery (Wasm)",
-      "description": "MESHERY IS A CLOUD NATIVE COMPUTING FOUNDATION PROJECT A self-service engineering platform, Meshery, is the open source, cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud). Among other features, As an extensible platfo...",
+      "description": "MESHERY IS A CLOUD NATIVE COMPUTING FOUNDATION PROJECT A self-service engineering platform, Meshery, is the open source, cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud).",
       "github_release_url": "https://api.github.com/repos/meshery/meshery/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/openpolicyagent/opa-wasm-builder/tags/?page=1&page_size=100",
       "readme": "https://github.com/meshery/meshery/blob/master/README.md",
@@ -12051,7 +12051,7 @@
     },
     {
       "name": "MetalLB",
-      "description": "A network load-balancer implementation for Kubernetes using standard routing protocols",
+      "description": "A network load-balancer implementation for Kubernetes using standard routing protocols.",
       "github_release_url": "https://api.github.com/repos/metallb/metallb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnamicharts/metallb/tags/?page=1&page_size=100",
       "readme": "https://github.com/metallb/metallb/blob/main/README.md",
@@ -12166,7 +12166,7 @@
     },
     {
       "name": "Metal³",
-      "description": "Bare metal host provisioning integration for Kubernetes",
+      "description": "Bare metal host provisioning integration for Kubernetes.",
       "github_release_url": "https://api.github.com/repos/metal3-io/baremetal-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/metal3-io/baremetal-operator/tag/?page=1&limit=100",
       "readme": "https://github.com/metal3-io/baremetal-operator/blob/main/README.md",
@@ -12268,7 +12268,7 @@
     },
     {
       "name": "Microcks",
-      "description": "The open source, cloud native tool for API Mocking and Testing. Microcks is a Cloud Native Computing Foundation sandbox project 🚀",
+      "description": "The open source, cloud native tool for API Mocking and Testing.",
       "github_release_url": "https://api.github.com/repos/microcks/microcks/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/microcks/microcks/tags/?page=1&page_size=100",
       "readme": "https://github.com/microcks/microcks/blob/master/README.md",
@@ -12397,7 +12397,7 @@
     },
     {
       "name": "NATS",
-      "description": "NATS.io is a connective technology for distributed systems and is a perfect fit to connect devices, edge, cloud or hybrid deployments. True multi-tenancy makes NATS ideal for SaaS and self-healing ...",
+      "description": "Connective technology for distributed systems providing messaging, streaming, and key-value storage for cloud, edge, and hybrid deployments.",
       "github_release_url": "https://api.github.com/repos/nats-io/nats-server/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/nats/tags/?page=1&page_size=100",
       "readme": "https://github.com/nats-io/nats-server/blob/main/README.md",
@@ -12629,7 +12629,7 @@
     },
     {
       "name": "Nocalhost",
-      "description": "Cloud native development environment for Kubernetes - enables developers to code, debug, and test directly in Kubernetes clusters",
+      "description": "Cloud native development environment for Kubernetes - enables developers to code, debug, and test directly in Kubernetes clusters.",
       "github_release_url": "https://api.github.com/repos/nocalhost/nocalhost/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/go2sheep/nocalhost/tags/?page=1&page_size=100",
       "readme": "https://github.com/nocalhost/nocalhost/blob/main/README.md",
@@ -12700,7 +12700,7 @@
     },
     {
       "name": "Notary Project",
-      "description": "Notation is a CLI project to add signatures as standard items in the OCI registry ecosystem, and to build a set of simple tooling for signing and verifying these signatures. This should be viewed as similar security to checking git commit signatures, although the signatures are generic and can be...",
+      "description": "Notation is a CLI project to add signatures as standard items in the OCI registry ecosystem, and to build a set of simple tooling for signing and verifying these signatures.",
       "github_release_url": "https://api.github.com/repos/notaryproject/notation/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/notary/tags/?page=1&page_size=100",
       "readme": "https://github.com/notaryproject/notation/blob/main/README.md",
@@ -12764,7 +12764,7 @@
     },
     {
       "name": "Open Cluster Management",
-      "description": "Core components in the OCM project. Report here if you found any issues in OCM.",
+      "description": "Core components in the OCM project Report here if you found any issues in OCM.",
       "github_release_url": "https://api.github.com/repos/open-cluster-management-io/ocm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/openjdk/tags/?page=1&page_size=100",
       "readme": "https://github.com/open-cluster-management-io/ocm/blob/main/README.md",
@@ -13073,7 +13073,7 @@
     },
     {
       "name": "Open Service Mesh",
-      "description": "Open Service Mesh (OSM) is a lightweight, extensible, cloud native service mesh that allows users to uniformly manage, secure, and get out-of-the-box observability features for highly dynamic micro...",
+      "description": "Open Service Mesh (OSM) is a lightweight, extensible, cloud native service mesh that allows users to uniformly manage, secure,.",
       "github_release_url": "https://api.github.com/repos/openservicemesh/osm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/openjdk/tags/?page=1&page_size=100",
       "readme": "https://github.com/openservicemesh/osm/blob/main/README.md",
@@ -13388,7 +13388,7 @@
     },
     {
       "name": "OpenELB",
-      "description": "Load Balancer Implementation for Kubernetes in Bare-Metal, Edge, and Virtualization",
+      "description": "Load Balancer Implementation for Kubernetes in Bare-Metal, Edge, and Virtualization.",
       "github_release_url": "https://api.github.com/repos/openelb/openelb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kubesphere/openelb/tags/?page=1&page_size=100",
       "readme": "https://github.com/openelb/openelb/blob/master/README.md",
@@ -13467,7 +13467,7 @@
     },
     {
       "name": "OpenFeature",
-      "description": "CNCF standard for feature flagging - provides vendor-agnostic API and SDK for feature flag management across languages",
+      "description": "CNCF standard for feature flagging - provides vendor-agnostic API and SDK for feature flag management across languages.",
       "github_release_url": "https://api.github.com/repos/open-feature/spec/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/chihhuiw/openfeature/tags/?page=1&page_size=100",
       "readme": "https://github.com/open-feature/spec/blob/main/README.md",
@@ -13494,7 +13494,7 @@
     },
     {
       "name": "OpenFGA",
-      "description": "OpenFGA is a high performance and flexible authorization/permission system built for developers and inspired by Google Zanzibar",
+      "description": "OpenFGA is a high performance and flexible authorization/permission system built for developers and inspired by Google Zanzibar.",
       "github_release_url": "https://api.github.com/repos/openfga/openfga/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/openfga/openfga/tags/?page=1&page_size=100",
       "readme": "https://github.com/openfga/openfga/blob/main/README.md",
@@ -13610,7 +13610,7 @@
     },
     {
       "name": "OpenFunction",
-      "description": "Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project)",
+      "description": "Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project).",
       "github_release_url": "https://api.github.com/repos/OpenFunction/OpenFunction/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/openfunction/openfunction/tags/?page=1&page_size=100",
       "readme": "https://github.com/OpenFunction/OpenFunction/blob/main/README.md",
@@ -13664,7 +13664,7 @@
     },
     {
       "name": "openGemini",
-      "description": "openGemini is an open source distributed time series DBMS with high concurrency, high performance, and high scalability, focusing on the storage and analysis of massive observability data.",
+      "description": "OpenGemini is an open source distributed time series DBMS with high concurrency, high performance, and high scalability, focusing on the storage and analysis of massive observability data.",
       "github_release_url": "https://api.github.com/repos/openGemini/openGemini/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ttbb/opengemini/tags/?page=1&page_size=100",
       "readme": "https://github.com/openGemini/openGemini/blob/main/README.md",
@@ -13698,7 +13698,7 @@
     },
     {
       "name": "OpenGitOps",
-      "description": "Repository for top-level information about the OpenGitOps project",
+      "description": "Repository for top-level information about the OpenGitOps project.",
       "github_release_url": "https://api.github.com/repos/open-gitops/project/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/open-gitops/project/blob/main/README.md",
@@ -13710,7 +13710,7 @@
     },
     {
       "name": "OpenKruise",
-      "description": "Automated management of large-scale applications on Kubernetes (incubating project under CNCF)",
+      "description": "Automated management of large-scale applications on Kubernetes (incubating project under CNCF).",
       "github_release_url": "https://api.github.com/repos/openkruise/kruise/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/openkruise/kruise-manager/tags/?page=1&page_size=100",
       "readme": "https://github.com/openkruise/kruise/blob/master/README.md",
@@ -13842,7 +13842,7 @@
     },
     {
       "name": "OpenTelemetry",
-      "description": "Table of Contents * Get Involved * Governing Bodies * Areas of Interest * Communication * Mailing Lists * Logos and Brand Guide * Special Interest Groups * Specification SIGs * Implementation SIGs * Related groups.",
+      "description": "Table of Contents Get Involved Governing Bodies Areas of Interest Communication Mailing Lists Logos and Brand Guide Special Interest Groups Specification SIGs Implementation SIGs Related groups.",
       "github_release_url": "https://api.github.com/repos/open-telemetry/community/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/paketobuildpacks/opentelemetry/tags/?page=1&page_size=100",
       "readme": "https://github.com/open-telemetry/community/blob/main/README.md",
@@ -13906,7 +13906,7 @@
     },
     {
       "name": "OpenTofu",
-      "description": "OpenTofu is an open source infrastructure as code tool that enables users to safely and predictably provision and manage cloud and on-prem infrastructure. It's a community-driven fork of Terraform ...",
+      "description": "OpenTofu is an open source infrastructure as code tool that enables users to safely and predictably provision and manage cloud and on-prem infrastructure.",
       "github_release_url": "https://api.github.com/repos/opentofu/opentofu/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/oowy/opentofu/tags/?page=1&page_size=100",
       "readme": "https://github.com/opentofu/opentofu/blob/main/README.md",
@@ -14011,7 +14011,7 @@
     },
     {
       "name": "OpenTracing",
-      "description": "OpenTracing API for Go. 🛑 This library is DEPRECATED! https://github.com/opentracing/specification/issues/163",
+      "description": "Vendor-neutral APIs and instrumentation for distributed tracing (deprecated, superseded by OpenTelemetry).",
       "github_release_url": "https://api.github.com/repos/opentracing/opentracing-go/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/opentracing/nginx-opentracing/tags/?page=1&page_size=100",
       "readme": "https://github.com/opentracing/opentracing-go/blob/master/README.md",
@@ -14183,7 +14183,7 @@
     },
     {
       "name": "Operator Framework",
-      "description": "SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding.",
+      "description": "SDK for building Kubernetes applications Provides high level APIs, useful abstractions, and project scaffolding.",
       "github_release_url": "https://api.github.com/repos/operator-framework/operator-sdk/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/cclose/operator-framework/tags/?page=1&page_size=100",
       "readme": "https://github.com/operator-framework/operator-sdk/blob/master/README.md",
@@ -14254,7 +14254,7 @@
     },
     {
       "name": "ORAS",
-      "description": "OCI registry client - managing content like artifacts, images, packages",
+      "description": "OCI registry client - managing content like artifacts, images, packages.",
       "github_release_url": "https://api.github.com/repos/oras-project/oras/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/konflux-ci/oras/tag/?page=1&limit=100",
       "readme": "https://github.com/oras-project/oras/blob/main/README.md",
@@ -14365,7 +14365,7 @@
     },
     {
       "name": "OSCAL-COMPASS",
-      "description": "The OSCAL COMPASS project is set of tools that enable the creation, validation, and governance of documentation artifacts for compliance needs. It leverages NIST's OSCAL (Open Security Controls Ass...",
+      "description": "The OSCAL COMPASS project is set of tools that enable the creation, validation, and governance of documentation artifacts for compliance needs.",
       "github_release_url": "https://api.github.com/repos/oscal-compass/compliance-trestle/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/rio-autoscaler/tags/?page=1&page_size=100",
       "readme": "https://github.com/oscal-compass/compliance-trestle/blob/main/README.md",
@@ -14463,7 +14463,7 @@
     },
     {
       "name": "OVN-Kubernetes",
-      "description": "![Build status][build-badge] [apache2-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg [apache2-url]: https://opensource.org/licenses/Apache-2.0 [build-badge]: https://img.shields.io/github/actions/workflow/status/ovn-org/ovn-kubernetes/test.yml?branch=master.",
+      "description": "Kubernetes networking solution based on Open Virtual Network (OVN) providing network virtualization and security.",
       "github_release_url": "https://api.github.com/repos/ovn-kubernetes/ovn-kubernetes/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/openshift/origin-ovn-kubernetes/tag/?page=1&limit=100",
       "readme": "https://github.com/ovn-kubernetes/ovn-kubernetes/blob/master/README.md",
@@ -14618,7 +14618,7 @@
     },
     {
       "name": "Parsec",
-      "description": "Platform AbstRaction for SECurity - provides common API to hardware security and cryptographic services across diverse platforms",
+      "description": "Platform AbstRaction for SECurity - provides common API to hardware security and cryptographic services across diverse platforms.",
       "github_release_url": "https://api.github.com/repos/parallaxsecond/parsec/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/anakli/parsec/tags/?page=1&page_size=100",
       "readme": "https://github.com/parallaxsecond/parsec/blob/main/README.md",
@@ -14747,7 +14747,7 @@
     },
     {
       "name": "PipeCD",
-      "description": "GitOps style continuous delivery platform that provides consistent deployment and operations experience for any applications",
+      "description": "GitOps style continuous delivery platform that provides consistent deployment and operations experience for any applications.",
       "github_release_url": "https://api.github.com/repos/pipe-cd/pipecd/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/funera1/pipecd/tags/?page=1&page_size=100",
       "readme": "https://github.com/pipe-cd/pipecd/blob/master/README.md",
@@ -14979,7 +14979,7 @@
     },
     {
       "name": "Pixie",
-      "description": "Open source Kubernetes observability for developers",
+      "description": "Open source Kubernetes observability for developers.",
       "github_release_url": "https://api.github.com/repos/pixie-io/pixie/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/evanljp/pixie/tags/?page=1&page_size=100",
       "readme": "https://github.com/pixie-io/pixie/blob/main/README.md",
@@ -15061,7 +15061,7 @@
     },
     {
       "name": "Podman Container Tools",
-      "description": "A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo,  which manage containers and images without requiring a daemon or root privileges.",
+      "description": "A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo, which manage containers and images without requiring a daemon or root privileges.",
       "github_release_url": "https://api.github.com/repos/containers/podman/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/rke-tools/tags/?page=1&page_size=100",
       "readme": "https://github.com/containers/podman/blob/main/README.md",
@@ -15177,7 +15177,7 @@
     },
     {
       "name": "Podman Desktop",
-      "description": "An open-source tool for developers to work with containers and Kubernetes with an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all fro...",
+      "description": "An open-source tool for developers to work with containers and Kubernetes with an intuitive and user-friendly interface to effortlessly build, manage,.",
       "github_release_url": "https://api.github.com/repos/podman-desktop/podman-desktop/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kasmweb/desktop/tags/?page=1&page_size=100",
       "readme": "https://github.com/podman-desktop/podman-desktop/blob/main/README.md",
@@ -15408,7 +15408,7 @@
     },
     {
       "name": "Pravega",
-      "description": "Pravega - Streaming as a new software defined storage primitive",
+      "description": "Pravega - Streaming as a new software defined storage primitive.",
       "github_release_url": "https://api.github.com/repos/pravega/pravega/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/pravega/pravega/tags/?page=1&page_size=100",
       "readme": "https://github.com/pravega/pravega/blob/master/README.md",
@@ -15622,7 +15622,7 @@
     },
     {
       "name": "Radius",
-      "description": "Radius is a cloud-native application platform that enables developers and the platform engineers that support them to collaborate on delivering and managing cloud-native applications that follow or...",
+      "description": "Radius is a cloud-native application platform that enables developers and the platform engineers that support them to collaborate on delivering.",
       "github_release_url": "https://api.github.com/repos/radius-project/radius/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/kanidm/radius/tags/?page=1&page_size=100",
       "readme": "https://github.com/radius-project/radius/blob/main/README.md",
@@ -15811,7 +15811,7 @@
     },
     {
       "name": "rkt",
-      "description": "[Project ended] rkt is a pod-native container engine for Linux. It is composable, secure, and built on standards.",
+      "description": "[Project ended] rkt is a pod-native container engine for Linux.",
       "github_release_url": "https://api.github.com/repos/rkt/rkt/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/ibmresilient/fn_darktrace/tag/?page=1&limit=100",
       "readme": "https://github.com/rkt/rkt/blob/master/README.md",
@@ -15877,7 +15877,7 @@
     },
     {
       "name": "Rook",
-      "description": "Rook is an open source cloud-native storage orchestrator for Kubernetes, providing the platform, framework, and support for Ceph storage to natively integrate with Kubernetes. Ceph is a distributed storage system that provides file, block and object storage and is deployed in large scale producti...",
+      "description": "Rook is an open source cloud-native storage orchestrator for Kubernetes, providing the platform, framework, and support for Ceph storage to natively integrate with Kubernetes.",
       "github_release_url": "https://api.github.com/repos/rook/rook/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rook/rook/tags/?page=1&page_size=100",
       "readme": "https://github.com/rook/rook/blob/master/README.md",
@@ -16108,7 +16108,7 @@
     },
     {
       "name": "SchemaHero",
-      "description": "A Kubernetes operator for declarative database schema management (gitops for database schemas)",
+      "description": "A Kubernetes operator for declarative database schema management (gitops for database schemas).",
       "github_release_url": "https://api.github.com/repos/schemahero/schemahero/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/schemahero/schemahero/tags/?page=1&page_size=100",
       "readme": "https://github.com/schemahero/schemahero/blob/main/README.md",
@@ -16261,7 +16261,7 @@
     },
     {
       "name": "sealer",
-      "description": "Build, Share and Run Both Your Kubernetes Cluster and Distributed Applications  (Project under CNCF)",
+      "description": "Build, Share and Run Both Your Kubernetes Cluster and Distributed Applications (Project under CNCF).",
       "github_release_url": "https://api.github.com/repos/sealerio/sealer/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/jetstack/vault-unsealer/tag/?page=1&limit=100",
       "readme": "https://github.com/sealerio/sealer/blob/main/README.md",
@@ -16380,7 +16380,7 @@
     },
     {
       "name": "Serverless Devs",
-      "description": ":fire: Serverless Devs: Serverless developer tool ( Serverless Devs: Serverless 开发者工具 )",
+      "description": ":fire: Serverless Devs: Serverless developer tool ( Serverless Devs: Serverless 开发者工具 ).",
       "github_release_url": "https://api.github.com/repos/Serverless-Devs/Serverless-Devs/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tencentcom/serverless-devs/tags/?page=1&page_size=100",
       "readme": "https://github.com/Serverless-Devs/Serverless-Devs/blob/master/readme.md",
@@ -16447,7 +16447,7 @@
     },
     {
       "name": "Serverless Workflow",
-      "description": "Contains the official specification for the Serverless Workflow Domain Specific Language. It provides detailed guidelines and standards for defining, executing, and managing workflows in serverless...",
+      "description": "Contains the official specification for the Serverless Workflow Domain Specific Language.",
       "github_release_url": "https://api.github.com/repos/serverlessworkflow/specification/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/orchestrator/serverless-workflow-greeting/tag/?page=1&limit=100",
       "readme": "https://github.com/serverlessworkflow/specification/blob/main/README.md",
@@ -16523,7 +16523,7 @@
     },
     {
       "name": "Service Mesh Interface (SMI)",
-      "description": "The Service Mesh Interface (SMI) is a specification for service meshes, with a focus on those that run on Kubernetes. It defines a common standard that can be implemented by a variety of providers. This allows for both standardization for end-users and innovation by providers of Service Mesh Tech...",
+      "description": "The Service Mesh Interface (SMI) is a specification for service meshes, with a focus on those that run on Kubernetes.",
       "github_release_url": "https://api.github.com/repos/servicemeshinterface/smi-spec/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/atlassian/bitbucket-mesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/servicemeshinterface/smi-spec/blob/main/README.md",
@@ -16592,7 +16592,7 @@
     },
     {
       "name": "Service Mesh Performance",
-      "description": "Standard for measuring and characterizing service mesh performance, providing objective metrics and benchmarks",
+      "description": "Standard for measuring and characterizing service mesh performance, providing objective metrics and benchmarks.",
       "github_release_url": "https://api.github.com/repos/service-mesh-performance/service-mesh-performance/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/atlassian/bitbucket-mesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/service-mesh-performance/service-mesh-performance/blob/master/README.md",
@@ -16668,7 +16668,7 @@
     },
     {
       "name": "Shipwright",
-      "description": "Shipwright - a framework for building container images on Kubernetes",
+      "description": "Shipwright - a framework for building container images on Kubernetes.",
       "github_release_url": "https://api.github.com/repos/shipwright-io/build/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/grafana/shipwright/tags/?page=1&page_size=100",
       "readme": "https://github.com/shipwright-io/build/blob/main/README.md",
@@ -16801,7 +16801,7 @@
     },
     {
       "name": "SlimFaaS",
-      "description": "Lightweight, fast Function as a Service platform for running serverless functions on Kubernetes with minimal overhead",
+      "description": "Lightweight, fast Function as a Service platform for running serverless functions on Kubernetes with minimal overhead.",
       "github_release_url": "https://api.github.com/repos/SlimPlanet/SlimFaas/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/axaguildev/slimfaas/tags/?page=1&page_size=100",
       "readme": "https://github.com/SlimPlanet/SlimFaas/blob/main/README.md",
@@ -16902,7 +16902,7 @@
     },
     {
       "name": "SlimToolkit",
-      "description": "Container optimization tool - automatically analyzes, minifies, and secures container images by removing unnecessary components",
+      "description": "Container optimization tool - automatically analyzes, minifies, and secures container images by removing unnecessary components.",
       "github_release_url": "https://api.github.com/repos/slimtoolkit/slim/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/slimtoolkit/slim/blob/master/README.md",
@@ -16964,7 +16964,7 @@
     },
     {
       "name": "SOPS",
-      "description": "sops is an editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault, age, and PGP.",
+      "description": "Sops is an editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault, age, and PGP.",
       "github_release_url": "https://api.github.com/repos/getsops/sops/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/stagex/sops/tags/?page=1&page_size=100",
       "readme": "https://github.com/getsops/sops/blob/main/README.rst",
@@ -17025,7 +17025,7 @@
     },
     {
       "name": "Spiderpool",
-      "description": "Spiderpool is the underlay and RDMA network solution of the Kubernetes, for bare metal, VM and public cloud",
+      "description": "Spiderpool is the underlay and RDMA network solution of the Kubernetes, for bare metal, VM and public cloud.",
       "github_release_url": "https://api.github.com/repos/spidernet-io/spiderpool/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apecloud/spiderpool-agent/tags/?page=1&page_size=100",
       "readme": "https://github.com/spidernet-io/spiderpool/blob/main/README.md",
@@ -17097,7 +17097,7 @@
     },
     {
       "name": "SPIFFE",
-      "description": "SPIFFE is a graduated project of the Cloud Native Computing Foundation (CNCF). If you are an organization that wants to help shape the evolution of technologies that are container-packaged, dynamically-scheduled and microservices-oriented, consider joining the CNCF.",
+      "description": "SPIFFE is a graduated project of the Cloud Native Computing Foundation (CNCF).",
       "github_release_url": "https://api.github.com/repos/spiffe/spiffe/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/jetstack/cert-manager-csi-driver-spiffe/tag/?page=1&limit=100",
       "readme": "https://github.com/spiffe/spiffe/blob/main/README.md",
@@ -17242,7 +17242,7 @@
     },
     {
       "name": "SPIRE",
-      "description": "SPIRE (the SPIFFE Runtime Environment) is a toolchain of APIs for establishing trust between software systems across a wide variety of hosting platforms. SPIRE exposes the SPIFFE Workload API, which can attest running software systems and issue SPIFFE IDs and SVIDs to them. This in turn allows tw...",
+      "description": "SPIRE (the SPIFFE Runtime Environment) is a toolchain of APIs for establishing trust between software systems across a wide variety of hosting platforms.",
       "github_release_url": "https://api.github.com/repos/spiffe/spire/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/accuknox/spire/tags/?page=1&page_size=100",
       "readme": "https://github.com/spiffe/spire/blob/main/README.md",
@@ -17411,7 +17411,7 @@
     },
     {
       "name": "Strimzi",
-      "description": "Strimzi provides a way to run an [Apache Kafka®][kafka] cluster on [Kubernetes][k8s] or [OpenShift][os] in various deployment configurations. See our [website][strimzi] for more details about the project.",
+      "description": "Strimzi provides a way to run an [Apache Kafka®][kafka] cluster on [Kubernetes][k8s] or [OpenShift][os] in various deployment configurations.",
       "github_release_url": "https://api.github.com/repos/strimzi/strimzi-kafka-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/strimzi/kafka/tags/?page=1&page_size=100",
       "readme": "https://github.com/strimzi/strimzi-kafka-operator/blob/main/README.md",
@@ -17593,7 +17593,7 @@
     },
     {
       "name": "SuperEdge",
-      "description": "An edge-native container management system for edge computing",
+      "description": "An edge-native container management system for edge computing.",
       "github_release_url": "https://api.github.com/repos/superedge/superedge/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/superedge/tunnel/tags/?page=1&page_size=100",
       "readme": "https://github.com/superedge/superedge/blob/main/README.md",
@@ -17627,7 +17627,7 @@
     },
     {
       "name": "Telepresence",
-      "description": "Local development against a remote Kubernetes or OpenShift cluster",
+      "description": "Local development against a remote Kubernetes or OpenShift cluster.",
       "github_release_url": "https://api.github.com/repos/telepresenceio/telepresence/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/datawire/demo-telepresence/tag/?page=1&limit=100",
       "readme": "https://github.com/telepresenceio/telepresence/blob/master/README.md",
@@ -17790,7 +17790,7 @@
     },
     {
       "name": "Tetragon",
-      "description": "eBPF-based Security Observability and Runtime Enforcement",
+      "description": "EBPF-based Security Observability and Runtime Enforcement.",
       "github_release_url": "https://api.github.com/repos/cilium/tetragon/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/cilium/tetragon/tag/?page=1&limit=100",
       "readme": "https://github.com/cilium/tetragon/blob/main/README.md",
@@ -17885,7 +17885,7 @@
     },
     {
       "name": "Thanos",
-      "description": "Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project.",
+      "description": "Highly available Prometheus setup with long term storage capabilities.",
       "github_release_url": "https://api.github.com/repos/thanos-io/thanos/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/thanos/thanos/tag/?page=1&limit=100",
       "readme": "https://github.com/thanos-io/thanos/blob/main/README.md",
@@ -18001,7 +18001,7 @@
     },
     {
       "name": "The Update Framework (TUF)",
-      "description": "Python reference implementation of The Update Framework (TUF)",
+      "description": "Python reference implementation of The Update Framework (TUF).",
       "github_release_url": "https://api.github.com/repos/theupdateframework/python-tuf/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rancher/etc-host-updater/tags/?page=1&page_size=100",
       "readme": "https://github.com/theupdateframework/python-tuf/blob/master/README.md",
@@ -18054,7 +18054,7 @@
     },
     {
       "name": "TiKV",
-      "description": "A distributed transactional key-value database. Based on the design of Google Spanner and HBase, but simpler to manage and without dependencies on any distributed filesystem",
+      "description": "A distributed transactional key-value database Based on the design of Google Spanner and HBase, but simpler to manage and without dependencies on any distributed filesystem.",
       "github_release_url": "https://api.github.com/repos/tikv/tikv/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tikv/tikv/tags/?page=1&page_size=100",
       "readme": "https://github.com/tikv/tikv/blob/master/README.md",
@@ -18200,7 +18200,7 @@
     },
     {
       "name": "Tokenetes",
-      "description": "Tokenetes implements Transaction Tokens (TraTs) for microservices call chains.  It's a Kubernetes-native framework providing immutable identity and context in  service-to-service communication to p...",
+      "description": "Tokenetes implements Transaction Tokens (TraTs) for microservices call chains.",
       "github_release_url": "https://api.github.com/repos/tokenetes/tokenetes/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/tokenetes/tokenetes/blob/main/README.md",
@@ -18215,7 +18215,7 @@
     },
     {
       "name": "Traefik Mesh",
-      "description": "Traefik Mesh is a simple, yet full-featured service mesh. It is container-native and fits as your de-facto service mesh in your Kubernetes cluster. It supports the latest Service Mesh Interface specification SMI that facilitates integration with pre-existing solution.",
+      "description": "Traefik Mesh is a simple, yet full-featured service mesh.",
       "github_release_url": "https://api.github.com/repos/traefik/mesh/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/roshan96sunaina/traefik-mesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/traefik/mesh/blob/master/README.md",
@@ -18257,7 +18257,7 @@
     },
     {
       "name": "Tremor",
-      "description": "In short, Tremor is an event- or stream-processing system. It is designed to perform well for high-volumetric data both in terms of consumption of memory and CPU resources and in terms of latency. The goal of Tremor is to be a convenient tool for the operator at the time of configuring Tremor and...",
+      "description": "In short, Tremor is an event- or stream-processing system.",
       "github_release_url": "https://api.github.com/repos/tremor-rs/tremor-runtime/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tremorproject/tremor/tags/?page=1&page_size=100",
       "readme": "https://github.com/tremor-rs/tremor-runtime/blob/main/README.md",
@@ -18372,7 +18372,7 @@
     },
     {
       "name": "Trickster",
-      "description": "Open Source HTTP Reverse Proxy Cache and Time Series Dashboard Accelerator",
+      "description": "Open Source HTTP Reverse Proxy Cache and Time Series Dashboard Accelerator.",
       "github_release_url": "https://api.github.com/repos/trickstercache/trickster/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tricksterio/trickster/tags/?page=1&page_size=100",
       "readme": "https://github.com/trickstercache/trickster/blob/main/README.md",
@@ -18457,7 +18457,7 @@
     },
     {
       "name": "urunc",
-      "description": "A CRI-compatible runtime for running unikernels and application kernels as containers.  urunc bridges the gap between unikernels and containerized environments, enabling seamless  integration with ...",
+      "description": "A CRI-compatible runtime for running unikernels and application kernels as containers.",
       "github_release_url": "https://api.github.com/repos/urunc-dev/urunc/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/michaelbeaumont/urunc/tags/?page=1&page_size=100",
       "readme": "https://github.com/urunc-dev/urunc/blob/main/README.md",
@@ -18868,7 +18868,7 @@
     },
     {
       "name": "Volcano",
-      "description": "Cloud native batch computing system for Kubernetes - manages high-performance workloads like AI/ML, big data, and HPC jobs",
+      "description": "Cloud native batch computing system for Kubernetes - manages high-performance workloads like AI/ML, big data, and HPC jobs.",
       "github_release_url": "https://api.github.com/repos/volcano-sh/volcano/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/account0123/volcano/tags/?page=1&page_size=100",
       "readme": "https://github.com/volcano-sh/volcano/blob/master/README.md",
@@ -18937,7 +18937,7 @@
     },
     {
       "name": "wasmCloud",
-      "description": "wasmCloud is an open source Cloud Native Computing Foundation (CNCF) project that enables teams to build, manage, and scale polyglot apps across any cloud, K8s, or edge.",
+      "description": "WasmCloud is an open source Cloud Native Computing Foundation (CNCF) project that enables teams to build, manage, and scale polyglot apps across any cloud, K8s, or edge.",
       "github_release_url": "https://api.github.com/repos/wasmCloud/wasmCloud/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/wasmcloud/wasmcloud/tags/?page=1&page_size=100",
       "readme": "https://github.com/wasmCloud/wasmCloud/blob/main/README.md",
@@ -19053,7 +19053,7 @@
     },
     {
       "name": "WasmEdge Runtime",
-      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices,...",
+      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications.",
       "github_release_url": "https://api.github.com/repos/WasmEdge/WasmEdge/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/ibm-semeru-runtimes/tags/?page=1&page_size=100",
       "readme": "https://github.com/WasmEdge/WasmEdge/blob/master/README.md",
@@ -19168,7 +19168,7 @@
     },
     {
       "name": "werf",
-      "description": "werf is a solution for implementing efficient and consistent software delivery to Kubernetes. It covers the entire CI/CD lifecycle and all related artifacts, glues commonly used tools (Git, Docker/...",
+      "description": "Werf is a solution for implementing efficient and consistent software delivery to Kubernetes.",
       "github_release_url": "https://api.github.com/repos/werf/werf/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tokend/werf/tags/?page=1&page_size=100",
       "readme": "https://github.com/werf/werf/blob/main/README.md",
@@ -19299,7 +19299,7 @@
     },
     {
       "name": "youki",
-      "description": "youki is an implementation of the OCI runtime-spec in Rust, similar to runc. Your ideas are welcome here. youki is pronounced as /joʊki/ or yoh-key.",
+      "description": "Youki is an implementation of the OCI runtime-spec in Rust, similar to runc.",
       "github_release_url": "https://api.github.com/repos/youki-dev/youki/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/youkims/ds-moe/tags/?page=1&page_size=100",
       "readme": "https://github.com/youki-dev/youki/blob/main/README.md",

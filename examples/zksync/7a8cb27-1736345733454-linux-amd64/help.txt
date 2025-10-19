@@ -1,0 +1,33 @@
+# zkSync - Help Output
+# Image: ghcr.io/matter-labs/server-v2:7a8cb27-1736345733454-linux-amd64
+# Command: /usr/bin/zksync_server --help
+# Exit Code: 0
+================================================================================
+
+ZKsync operator node
+
+Usage: zksync_server [OPTIONS]
+
+Options:
+      --genesis
+          Generate genesis block for the first contract deployment using temporary DB
+      --components <COMPONENTS>
+          Comma-separated list of components to launch [default: api,tree,eth,state_keeper,housekeeper,commitment_generator,da_dispatcher,vm_runner_protective_reads]
+      --config-path <CONFIG_PATH>
+          Path to the yaml config. If set, it will be used instead of env vars
+      --secrets-path <SECRETS_PATH>
+          Path to the yaml with secrets. If set, it will be used instead of env vars
+      --contracts-config-path <CONTRACTS_CONFIG_PATH>
+          Path to the yaml with contracts. If set, it will be used instead of env vars
+      --gateway-contracts-config-path <GATEWAY_CONTRACTS_CONFIG_PATH>
+          Path to the yaml with gateway contracts. Note, that at this moment, env-based config is not supported for gateway-related functionality
+      --wallets-path <WALLETS_PATH>
+          Path to the wallets config. If set, it will be used instead of env vars
+      --genesis-path <GENESIS_PATH>
+          Path to the yaml with genesis. If set, it will be used instead of env vars
+      --use-node-framework
+          Used to enable node framework. Now the node framework is used by default and this argument is left for backward compatibility
+  -h, --help
+          Print help
+  -V, --version
+          Print version

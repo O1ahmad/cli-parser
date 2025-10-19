@@ -1,0 +1,7 @@
+# Avalanche - Help Output
+# Image: docker.io/avaplatform/avalanchego:v1.0.0
+# Command: /avalanchego/build/avalanchego --help
+# Exit Code: -1
+================================================================================
+
+[Failed after trying all strategies]

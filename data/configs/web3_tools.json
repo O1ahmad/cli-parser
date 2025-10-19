@@ -134,7 +134,7 @@
         "alltools-v1.8.11"
       ],
       "image_name": "docker.io/ethereum/client-go",
-      "docker_help_command": "--help",
+      "docker_help_command": "/geth --help",
       "subcategory": "Ethereum Execution Client"
     },
     {
@@ -250,7 +250,7 @@
         "v1.3.0-arm64"
       ],
       "image_name": "docker.io/sigp/lighthouse",
-      "docker_help_command": "lighthouse --help",
+      "docker_help_command": "/usr/local/bin/lighthouse --help",
       "subcategory": "Ethereum Consensus Client"
     },
     {
@@ -326,8 +326,13 @@
         "nightly-1c415857dd7b617190834dbcb361506f6143fed4"
       ],
       "image_name": "ghcr.io/foundry-rs/foundry",
-      "docker_help_command": "forge --help",
-      "subcategory": "Development Tool"
+      "docker_help_command": "/usr/local/bin/forge --help",
+      "subcategory": "Development Tool",
+      "alternate_binaries": [
+        "/usr/local/bin/cast --help",
+        "/usr/local/bin/anvil --help",
+        "/usr/local/bin/chisel --help"
+      ]
     },
     {
       "name": "Hardhat",
@@ -390,17 +395,12 @@
         "@nomicfoundation/hardhat-toolbox-mocha-ethers@3.0.0"
       ],
       "image_tags": [
-        "latest",
-        "2.24.1",
-        "2.24.0",
-        "2.23.1",
-        "2.23.0",
-        "2.22.17"
+        "latest"
       ],
-      "image_name": null,
-      "docker_help_command": "npx hardhat help",
+      "image_name": "docker.io/ethereumoptimism/hardhat",
+      "docker_help_command": "/hardhat/node_modules/.bin/hardhat help",
       "notes": "No official Docker image - typically used as npm package",
-      "deprecated": true,
+      "deprecated": false,
       "subcategory": "Development Tool"
     },
     {
@@ -516,7 +516,7 @@
         "1.4.9"
       ],
       "image_name": "docker.io/nethermind/nethermind",
-      "docker_help_command": "nethermind --help",
+      "docker_help_command": "/nethermind --help",
       "subcategory": "Ethereum Execution Client"
     },
     {
@@ -632,7 +632,7 @@
         "1.4.5"
       ],
       "image_name": "docker.io/hyperledger/besu",
-      "docker_help_command": "besu --help",
+      "docker_help_command": "/opt/besu/bin/besu --help",
       "subcategory": "Ethereum Execution Client"
     },
     {
@@ -748,7 +748,7 @@
         "docker_diffsets"
       ],
       "image_name": "docker.io/erigontech/erigon",
-      "docker_help_command": "erigon --help",
+      "docker_help_command": "/usr/local/bin/erigon --help",
       "subcategory": "Ethereum Client"
     },
     {
@@ -812,59 +812,10 @@
         "v4.0.1"
       ],
       "image_tags": [
-        "master-d1e754",
-        "master-79fbaa",
-        "HEAD-79fbaa-debug",
-        "HEAD-79fbaa-alpine",
-        "HEAD-79fbaa",
-        "HEAD-27577b-debug",
-        "HEAD-27577b-alpine",
-        "HEAD-27577b",
-        "HEAD-18f28e-debug",
-        "HEAD-18f28e-alpine",
-        "HEAD-18f28e",
-        "HEAD-2bbae1-debug",
-        "HEAD-2bbae1-alpine",
-        "HEAD-2bbae1",
-        "HEAD-cd2ea8-debug",
-        "HEAD-cd2ea8-alpine",
-        "HEAD-cd2ea8",
-        "HEAD-774b4b-debug",
-        "HEAD-774b4b-alpine",
-        "HEAD-774b4b",
-        "HEAD-52e915-debug",
-        "HEAD-52e915-alpine",
-        "HEAD-52e915",
-        "HEAD-b099ca-debug",
-        "HEAD-b099ca-alpine",
-        "HEAD-b099ca",
-        "HEAD-e0c803-debug",
-        "HEAD-e0c803-alpine",
-        "HEAD-e0c803",
-        "HEAD-8fda48-debug",
-        "HEAD-8fda48-alpine",
-        "HEAD-8fda48",
-        "HEAD-ea32af-debug",
-        "HEAD-ea32af-alpine",
-        "HEAD-ea32af",
-        "HEAD-d9fd25-debug",
-        "HEAD-d9fd25-alpine",
-        "HEAD-d9fd25",
-        "HEAD-5278b7-debug",
-        "HEAD-5278b7-alpine",
-        "HEAD-5278b7",
-        "HEAD-eef9a7-debug",
-        "HEAD-eef9a7-alpine",
-        "HEAD-eef9a7",
-        "HEAD-d7bcea-debug",
-        "HEAD-d7bcea-alpine",
-        "HEAD-d7bcea",
-        "HEAD-fe14c5-debug",
-        "HEAD-fe14c5-alpine",
-        "HEAD-fe14c5"
+        "v6.1.2"
       ],
       "image_name": "docker.io/prysmaticlabs/prysm-beacon-chain",
-      "docker_help_command": "--help",
+      "docker_help_command": "/beacon-chain --help",
       "subcategory": "Ethereum Consensus Client"
     },
     {
@@ -980,7 +931,7 @@
         "21.4.1-jdk14"
       ],
       "image_name": "docker.io/consensys/teku",
-      "docker_help_command": "teku --help",
+      "docker_help_command": "/opt/teku/bin/teku --help",
       "subcategory": "Ethereum Consensus Client"
     },
     {
@@ -1096,8 +1047,11 @@
         "multiarch-v1.5.5"
       ],
       "image_name": "docker.io/statusim/nimbus-eth2",
-      "docker_help_command": "nimbus_beacon_node --help",
-      "subcategory": "Ethereum Consensus Client"
+      "docker_help_command": "/home/user/nimbus-eth2/build/nimbus_beacon_node --help",
+      "subcategory": "Ethereum Consensus Client",
+      "alternate_binaries": [
+        "/home/user/nimbus-eth2/build/nimbus_signing_process --help"
+      ]
     },
     {
       "name": "Reth",
@@ -1172,7 +1126,7 @@
         "v0.1.0-alpha.9"
       ],
       "image_name": "ghcr.io/paradigmxyz/reth",
-      "docker_help_command": "--help",
+      "docker_help_command": "/usr/local/bin/reth --help",
       "subcategory": "Ethereum Execution Client"
     },
     {
@@ -1404,8 +1358,13 @@
         "0.19"
       ],
       "image_name": "docker.io/ruimarinho/bitcoin-core",
-      "docker_help_command": "bitcoind --help",
-      "subcategory": "Bitcoin Client"
+      "docker_help_command": "/opt/bitcoin-0.15.0/bin/bitcoind --help",
+      "subcategory": "Bitcoin Client",
+      "alternate_binaries": [
+        "/opt/bitcoin-0.15.0/bin/bitcoin-qt --help",
+        "/opt/bitcoin-0.15.0/bin/bitcoin-cli --help",
+        "/opt/bitcoin-0.15.0/bin/bitcoin-tx --help"
+      ]
     },
     {
       "name": "Truffle Suite",
@@ -1585,7 +1544,7 @@
         "v7.9.2"
       ],
       "image_name": "docker.io/trufflesuite/ganache",
-      "docker_help_command": "ganache --help",
+      "docker_help_command": "node /app/dist/node/cli.js --help",
       "subcategory": "Development Tool"
     },
     {
@@ -1833,8 +1792,12 @@
         "nightly-20241007"
       ],
       "image_name": "docker.io/trailofbits/eth-security-toolbox",
-      "docker_help_command": "slither --help",
-      "subcategory": "Smart Contract Language"
+      "docker_help_command": "/home/ethsec/.local/bin/slither --help",
+      "subcategory": "Smart Contract Language",
+      "alternate_binaries": [
+        "/usr/bin/geth --help",
+        "/usr/bin/puppeth --help"
+      ]
     },
     {
       "name": "Mythril",
@@ -1949,8 +1912,11 @@
         "0.21.21"
       ],
       "image_name": "docker.io/mythril/myth",
-      "docker_help_command": "myth --help",
-      "subcategory": "Security Analysis"
+      "docker_help_command": "/usr/local/bin/myth --help",
+      "subcategory": "Security Analysis",
+      "alternate_binaries": [
+        "/opt/mythril/myth --help"
+      ]
     },
     {
       "name": "Etherscan",
@@ -2079,7 +2045,7 @@
         "99eebf5"
       ],
       "image_name": "docker.io/graphprotocol/graph-node",
-      "docker_help_command": "graph-node --help",
+      "docker_help_command": "/usr/local/cargo/bin/graph-node --help",
       "subcategory": "Indexing"
     },
     {
@@ -2143,59 +2109,11 @@
         "v0.23.0-rc1"
       ],
       "image_tags": [
-        "master-2022-07-06-d82dec3",
-        "master-2022-07-06-ab25bce",
-        "master-2022-07-06-e5f6339",
-        "master-2022-07-06-9ce802f",
-        "master-2022-07-06-fbd65e0",
-        "master-2022-07-07-58aaee0",
-        "master-2022-07-07-24b8dd5",
-        "master-2022-07-07-92c4dc6",
-        "master-2022-07-07-cbb9aee",
-        "master-2022-07-07-5e9f2df",
-        "v0.14.0-rc1",
-        "master-2022-07-08-506ecdf",
-        "master-2022-07-08-93847da",
-        "master-2022-07-08-fbb496b",
-        "master-2022-07-08-839b084",
-        "master-2022-07-18-a668774",
-        "master-2022-07-20-639155c",
-        "master-2022-07-20-d30e71f",
-        "master-2022-07-20-3181715",
-        "master-2022-07-21-e832cc2",
-        "v0.14.0",
-        "master-2022-07-21-84059cc",
-        "master-2022-07-21-2711028",
-        "master-2022-07-21-5b1e04a",
-        "master-2022-07-21-bcab64d",
-        "master-2022-07-21-cf82ae5",
-        "master-2022-07-22-7992025",
-        "master-2022-07-23-3902c9b",
-        "master-2022-07-25-2f08eb4",
-        "master-2022-07-25-0badd50",
-        "master-2022-07-25-8bc466f",
-        "master-2022-07-25-f9a020a",
-        "master-2022-07-25-a3bdea4",
-        "master-2022-07-25-846d362",
-        "master-2022-07-28-7ec0c24",
-        "master-2022-08-03-f9db823",
-        "master-2022-08-05-cb280cb",
-        "master-2022-08-08-d419c0e",
-        "master-2022-08-11-8fd49ba",
-        "master-2022-08-12-2fb7437",
-        "master-2022-08-12-310dca5",
-        "master-2022-08-12-837f6ee",
-        "master-2022-08-13-795c2cf",
-        "master-2022-08-13-f9410dc",
-        "master-2022-08-15-8059761",
-        "master-2022-08-16-17a1633",
-        "master-2022-08-16-9a87262",
-        "master-2022-08-16-a982068",
-        "master-2022-08-16-00f2a64",
-        "master-2022-08-17-1236eb0"
+        "latest"
       ],
       "image_name": "docker.io/ipfs/kubo",
-      "subcategory": "Decentralized Storage"
+      "subcategory": "Decentralized Storage",
+      "docker_help_command": "/usr/local/bin/ipfs --help"
     },
     {
       "name": "Chainlink",
@@ -2502,8 +2420,11 @@
         "v0.8.21"
       ],
       "image_name": "ghcr.io/apeworx/ape",
-      "docker_help_command": "ape --help",
-      "subcategory": "Development Framework"
+      "docker_help_command": "/usr/local/bin/ape --help",
+      "subcategory": "Development Framework",
+      "alternate_binaries": [
+        "/usr/bin/debconf-escape --help"
+      ]
     },
     {
       "name": "Waffle",
@@ -2750,7 +2671,7 @@
         "develop"
       ],
       "image_name": "docker.io/ethereumoptimism/op-node",
-      "docker_help_command": "op-node --help",
+      "docker_help_command": "/usr/local/bin/op-node --help",
       "subcategory": "Ethereum Client"
     },
     {
@@ -2858,7 +2779,7 @@
         "v0.2.17"
       ],
       "image_name": "docker.io/maticnetwork/bor",
-      "docker_help_command": "bor --help",
+      "docker_help_command": "/usr/local/bin/geth --help",
       "subcategory": "Ethereum Client"
     },
     {
@@ -3010,7 +2931,7 @@
         "84e3e31-1736849910030-linux-amd64"
       ],
       "image_name": "ghcr.io/matter-labs/server-v2",
-      "docker_help_command": "--help",
+      "docker_help_command": "/usr/bin/zksync_server --help",
       "subcategory": "Ethereum Client"
     },
     {
@@ -3247,8 +3168,11 @@
         "0.5.0-9b66efa7"
       ],
       "image_name": "docker.io/parity/polkadot",
-      "docker_help_command": "--help",
-      "subcategory": "Blockchain Client"
+      "docker_help_command": "/usr/local/bin/polkadot --help",
+      "subcategory": "Blockchain Client",
+      "alternate_binaries": [
+        "/polkadot --help"
+      ]
     },
     {
       "name": "Cosmos SDK",
@@ -3544,7 +3468,7 @@
         "master-f127f5504082ccfff5858a8b3be22f44411dfe60"
       ],
       "image_name": "docker.io/nearprotocol/nearcore",
-      "docker_help_command": "neard --help",
+      "docker_help_command": "/usr/local/bin/nearcore --help",
       "subcategory": "Blockchain Client"
     },
     {
@@ -3608,19 +3532,11 @@
         "1.35.4"
       ],
       "image_tags": [
-        "8.7.3",
-        "8.3.0-pre",
-        "8.3.1-pre",
-        "8.4.0-pre",
-        "8.5.0-pre",
-        "8.6.0-pre",
-        "8.7.0-pre",
-        "8.7.1-pre",
-        "8.7.2",
-        "8.8.0-pre"
+        "latest"
       ],
       "image_name": "ghcr.io/intersectmbo/cardano-node",
-      "subcategory": "Blockchain Client"
+      "subcategory": "Blockchain Client",
+      "docker_help_command": "/usr/local/bin/cardano-cli --help"
     },
     {
       "name": "Sui",
@@ -4227,8 +4143,14 @@
         "0.4.0rc1"
       ],
       "image_name": "docker.io/vyperlang/vyper",
-      "docker_help_command": "vyper --help",
-      "subcategory": "Smart Contract Language"
+      "docker_help_command": "/usr/local/bin/vyper --help",
+      "subcategory": "Smart Contract Language",
+      "alternate_binaries": [
+        "/usr/local/bin/vyper-serve --help",
+        "/usr/local/bin/vyper-lll --help",
+        "/code/vyper-serve --help",
+        "/code/vyper-bin --help"
+      ]
     },
     {
       "name": "Solidity",
@@ -4343,8 +4265,11 @@
         "nightly-0.4.11-a2eb2c0ae7359c5b54e606fe8c44efb8d491f0ce"
       ],
       "image_name": "docker.io/ethereum/solc",
-      "docker_help_command": "solc --help",
-      "subcategory": "Smart Contract Language"
+      "docker_help_command": "/usr/bin/solc --help",
+      "subcategory": "Smart Contract Language",
+      "alternate_binaries": [
+        "/solidity --help"
+      ]
     },
     {
       "name": "Infura",

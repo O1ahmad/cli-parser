@@ -1,0 +1,21 @@
+# Elasticsearch - Help Output
+# Image: docker.io/elastic/elasticsearch:8.18.8
+# Command: /usr/share/elasticsearch/bin/elasticsearch --help
+# Exit Code: 0
+================================================================================
+
+Starts Elasticsearch
+
+Option                Description                                               
+------                -----------                                               
+-E <KeyValuePair>     Configure a setting                                       
+-V, --version         Prints Elasticsearch version information and exits        
+-d, --daemonize       Starts Elasticsearch in the background                    
+--enrollment-token    An existing enrollment token for securely joining a       
+                        cluster                                                 
+-h, --help            Show help                                                 
+-p, --pidfile <Path>  Creates a pid file in the specified path on start         
+-q, --quiet           Turns off standard output/error streams logging in console
+-s, --silent          Show minimal output                                       
+-v, --verbose         Show verbose output                                       
+

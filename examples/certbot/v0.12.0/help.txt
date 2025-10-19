@@ -1,0 +1,95 @@
+# Certbot - Help Output
+# Image: docker.io/certbot/certbot:v0.12.0
+# Command: /usr/local/bin/certbot --help
+# Exit Code: 0
+================================================================================
+
+
+  certbot [SUBCOMMAND] [options] [-d DOMAIN] [-d DOMAIN] ...
+
+Certbot can obtain and install HTTPS/TLS/SSL certificates.  By default,
+it will attempt to use a webserver both for obtaining and installing the
+cert. The most common SUBCOMMANDS and flags are:
+
+obtain, install, and renew certificates:
+    (default) run   Obtain & install a cert in your current webserver
+    certonly        Obtain or renew a cert, but do not install it
+    renew           Renew all previously obtained certs that are near expiry
+   -d DOMAINS       Comma-separated list of domains to obtain a cert for
+
+  (the certbot apache plugin is not installed)
+  --standalone      Run a standalone webserver for authentication
+  (the certbot nginx plugin is not installed)
+  --webroot         Place files in a server's webroot folder for authentication
+  --manual          Obtain certs interactively, or using shell script hooks
+
+   -n               Run non-interactively
+  --test-cert       Obtain a test cert from a staging server
+  --dry-run         Test "renew" or "certonly" without saving any certs to disk
+
+manage certificates:
+    certificates    Display information about certs you have from Certbot
+    revoke          Revoke a certificate (supply --cert-path)
+    delete          Delete a certificate
+
+manage your account with Let's Encrypt:
+    register        Create a Let's Encrypt ACME account
+  --agree-tos       Agree to the ACME server's Subscriber Agreement
+   -m EMAIL         Email address for important account notifications
+
+More detailed help:
+
+  -h, --help [TOPIC]    print this message, or detailed help on a topic;
+                        the available TOPICS are:
+
+   all, automation, commands, paths, security, testing, or any of the
+   subcommands or plugins (certonly, renew, install, register, nginx,
+   apache, standalone, webroot, etc.)
+
+
+--- STDERR ---
+Unable to find image 'certbot/certbot:v0.12.0' locally
+v0.12.0: Pulling from certbot/certbot
+b7f33cc0b48e: Pulling fs layer
+8eda8bb6fee4: Pulling fs layer
+65cd0d3dd23a: Pulling fs layer
+aff517cecb4f: Pulling fs layer
+7773032f4cd5: Pulling fs layer
+0254972d9495: Pulling fs layer
+7d28ac397a80: Pulling fs layer
+dab692f3f6d0: Pulling fs layer
+b2e87224b5cb: Pulling fs layer
+aff517cecb4f: Waiting
+7773032f4cd5: Waiting
+dab692f3f6d0: Waiting
+0254972d9495: Waiting
+7d28ac397a80: Waiting
+b2e87224b5cb: Waiting
+b7f33cc0b48e: Verifying Checksum
+b7f33cc0b48e: Download complete
+8eda8bb6fee4: Verifying Checksum
+8eda8bb6fee4: Download complete
+b7f33cc0b48e: Pull complete
+8eda8bb6fee4: Pull complete
+65cd0d3dd23a: Verifying Checksum
+65cd0d3dd23a: Download complete
+7773032f4cd5: Verifying Checksum
+7773032f4cd5: Download complete
+aff517cecb4f: Verifying Checksum
+aff517cecb4f: Download complete
+65cd0d3dd23a: Pull complete
+aff517cecb4f: Pull complete
+7773032f4cd5: Pull complete
+0254972d9495: Verifying Checksum
+0254972d9495: Download complete
+0254972d9495: Pull complete
+dab692f3f6d0: Verifying Checksum
+dab692f3f6d0: Download complete
+7d28ac397a80: Download complete
+7d28ac397a80: Pull complete
+dab692f3f6d0: Pull complete
+b2e87224b5cb: Verifying Checksum
+b2e87224b5cb: Download complete
+b2e87224b5cb: Pull complete
+Digest: sha256:66061d6fce453d4c99efe10e34252b59e207f1fb46cea33779462949674c08ea
+Status: Downloaded newer image for certbot/certbot:v0.12.0

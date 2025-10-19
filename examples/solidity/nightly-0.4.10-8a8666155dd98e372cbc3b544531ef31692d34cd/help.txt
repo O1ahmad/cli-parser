@@ -1,0 +1,58 @@
+# Solidity - Help Output
+# Image: docker.io/ethereum/solc:nightly-0.4.10-8a8666155dd98e372cbc3b544531ef31692d34cd
+# Command: /usr/bin/solc --help
+# Exit Code: 0
+================================================================================
+
+solc, the Solidity commandline compiler.
+Usage: solc [options] [input_file...]
+Compiles the given Solidity input files (or the standard input if none given or
+"-" is used as a file name) and outputs the components specified in the options
+at standard output or in files in the output directory, if specified.
+Imports are automatically read from the filesystem, but it is also possible to
+remap paths using the context:prefix=path syntax.
+Example:
+    solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol
+
+Allowed options:
+  --help               Show help message and exit.
+  --version            Show version and exit.
+  --optimize           Enable bytecode optimizer.
+  --optimize-runs n (=200)
+                       Estimated number of contract runs for optimizer tuning.
+  --add-std            Add standard contracts.
+  --libraries libs     Direct string or file containing library addresses. 
+                       Syntax: <libraryName>: <address> [, or whitespace] ...
+                       Address is interpreted as a hex string optionally 
+                       prefixed by 0x.
+  -o [ --output-dir ] path
+                       If given, creates one file per component and 
+                       contract/file at the specified directory.
+  --combined-json abi,asm,ast,bin,bin-runtime,clone-bin,devdoc,interface,metadata,opcodes,srcmap,srcmap-runtime,userdoc
+                       Output a single json document containing the specified 
+                       information.
+  --gas                Print an estimate of the maximal gas usage for each 
+                       function.
+  --assemble           Switch to assembly mode, ignoring all options and 
+                       assumes input is assembly.
+  --link               Switch to linker mode, ignoring all options apart from 
+                       --libraries and modify binaries in place.
+  --metadata-literal   Store referenced sources are literal data in the 
+                       metadata output.
+
+Output Components:
+  --ast                AST of all source files.
+  --ast-json           AST of all source files in JSON format.
+  --asm                EVM assembly of the contracts.
+  --asm-json           EVM assembly of the contracts in JSON format.
+  --opcodes            Opcodes of the contracts.
+  --bin                Binary of the contracts in hex.
+  --bin-runtime        Binary of the runtime part of the contracts in hex.
+  --clone-bin          Binary of the clone contracts in hex.
+  --abi                ABI specification of the contracts.
+  --hashes             Function signature hashes of the contracts.
+  --userdoc            Natspec user documentation of all contracts.
+  --devdoc             Natspec developer documentation of all contracts.
+  --metadata           Combined Metadata JSON whose Swarm hash is stored 
+                       on-chain.
+  --formal             Translated source suitable for formal analysis.

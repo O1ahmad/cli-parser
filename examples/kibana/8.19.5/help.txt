@@ -1,0 +1,33 @@
+Kibana is currently running with legacy OpenSSL providers enabled! For details and instructions on how to disable see https://www.elastic.co/guide/en/kibana/8.19/production.html#openssl-legacy-provider
+{"log.level":"info","@timestamp":"2025-10-19T20:54:53.969Z","log.logger":"elastic-apm-node","ecs.version":"8.10.0","agentVersion":"4.13.0","env":{"pid":1,"proctitle":"/usr/share/kibana/bin/../node/glibc-217/bin/node","os":"linux 6.14.0-33-generic","arch":"x64","host":"cbc3b1656a6c","timezone":"UTC+00","runtime":"Node.js v22.17.1"},"config":{"active":{"source":"start","value":true},"breakdownMetrics":{"source":"start","value":false},"captureBody":{"source":"start","value":"off","commonName":"capture_body"},"captureHeaders":{"source":"start","value":false},"centralConfig":{"source":"start","value":false},"contextPropagationOnly":{"source":"start","value":true},"environment":{"source":"start","value":"production"},"globalLabels":{"source":"start","value":[["git_rev","2ceb68bd03a3cc20c26495ec986ed4f244589d69"]],"sourceValue":{"git_rev":"2ceb68bd03a3cc20c26495ec986ed4f244589d69"}},"logLevel":{"source":"default","value":"info","commonName":"log_level"},"metricsInterval":{"source":"start","value":120,"sourceValue":"120s"},"serverUrl":{"source":"start","value":"https://kibana-cloud-apm.apm.us-east-1.aws.found.io/","commonName":"server_url"},"transactionSampleRate":{"source":"start","value":0.1,"commonName":"transaction_sample_rate"},"captureSpanStackTraces":{"source":"start","sourceValue":false},"secretToken":{"source":"start","value":"[REDACTED]","commonName":"secret_token"},"serviceName":{"source":"start","value":"kibana","commonName":"service_name"},"serviceVersion":{"source":"start","value":"8.19.5","commonName":"service_version"}},"activationMethod":"require","message":"Elastic APM Node.js Agent v4.13.0"}
+
+  Usage: bin/kibana [command=serve] [options]
+  
+  Kibana is an open and free, browser based analytics and search dashboard for Elasticsearch.
+  
+  Commands:
+    serve  [options]  Run the kibana server
+    help  <command>   Get the help for a specific command
+  
+  "serve" Options:
+  
+    -e, --elasticsearch <uri1,uri2>  Elasticsearch instances
+    -c, --config <path>              Path to the config file, use multiple
+                                     --config args to include multiple config
+                                     files (default: [])
+    -p, --port <port>                The port to bind to
+    -Q, --silent                     Set the root logger level to off
+    --verbose                        Set the root logger level to all
+    -H, --host <host>                The host to bind to
+    -l, --log-file <path>            Deprecated, set logging file destination in
+                                     your configuration
+    --plugin-path <path>             A path to a plugin which should be included
+                                     by the server, this can be specified
+                                     multiple times to specify multiple paths
+                                     (default: [])
+    --allow-root                     Required if Kibana is ran as root
+    --optimize                       Deprecated, running the optimizer is no
+                                     longer required
+    -h, --help                       output usage information
+
+

@@ -1,0 +1,116 @@
+Analyzing Binary: free, Parent: None
+AI Token Usage: {'prompt_tokens': 455, 'completion_tokens': 654, 'total_tokens': 1109}
+Analyzing Binary Version: free
+AI Token Usage: {'prompt_tokens': 61, 'completion_tokens': 13, 'total_tokens': 74}
+{
+    "name": "free",
+    "description": "Display amount of free and used memory in the system",
+    "usage": "free [options]",
+    "options": [
+        {
+            "option": "--bytes",
+            "shortcut": "-b",
+            "description": "show output in bytes"
+        },
+        {
+            "option": "--committed",
+            "shortcut": "-v",
+            "description": "show committed memory and commit limit"
+        },
+        {
+            "option": "--count",
+            "shortcut": "-c",
+            "description": "repeat printing N times, then exit",
+            "value": "N"
+        },
+        {
+            "option": "--gibi",
+            "shortcut": "-g",
+            "description": "show output in gibibytes"
+        },
+        {
+            "option": "--giga",
+            "description": "show output in gigabytes"
+        },
+        {
+            "option": "--help",
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--human",
+            "shortcut": "-h",
+            "description": "show human-readable output"
+        },
+        {
+            "option": "--kibi",
+            "shortcut": "-k",
+            "description": "show output in kibibytes"
+        },
+        {
+            "option": "--kilo",
+            "description": "show output in kilobytes"
+        },
+        {
+            "option": "--line",
+            "shortcut": "-L",
+            "description": "show output on a single line"
+        },
+        {
+            "option": "--lohi",
+            "shortcut": "-l",
+            "description": "show detailed low and high memory statistics"
+        },
+        {
+            "option": "--mebi",
+            "shortcut": "-m",
+            "description": "show output in mebibytes"
+        },
+        {
+            "option": "--mega",
+            "description": "show output in megabytes"
+        },
+        {
+            "option": "--pebi",
+            "description": "show output in pebibytes"
+        },
+        {
+            "option": "--peta",
+            "description": "show output in petabytes"
+        },
+        {
+            "option": "--seconds",
+            "shortcut": "-s",
+            "description": "repeat printing every N seconds",
+            "value": "N"
+        },
+        {
+            "option": "--si",
+            "description": "use powers of 1000 not 1024"
+        },
+        {
+            "option": "--tebi",
+            "description": "show output in tebibytes"
+        },
+        {
+            "option": "--tera",
+            "description": "show output in terabytes"
+        },
+        {
+            "option": "--total",
+            "shortcut": "-t",
+            "description": "show total for RAM + swap"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "output version information and exit"
+        },
+        {
+            "option": "--wide",
+            "shortcut": "-w",
+            "description": "wide output"
+        }
+    ],
+    "subcommands": [],
+    "version": "4.0.4"
+}

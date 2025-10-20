@@ -1,0 +1,166 @@
+{
+    "name": "dmesg",
+    "description": "Display or control the kernel ring buffer.",
+    "usage": "dmesg [options]",
+    "options": [
+        {
+            "option": "--buffer-size",
+            "shortcut": "-s",
+            "description": "buffer size to query the kernel ring buffer",
+            "value": "<size>"
+        },
+        {
+            "option": "--clear",
+            "shortcut": "-C",
+            "description": "clear the kernel ring buffer"
+        },
+        {
+            "option": "--color",
+            "shortcut": "-L",
+            "description": "colorize messages (auto, always or never)",
+            "value": "[=<when>]",
+            "default": "colors are enabled by default"
+        },
+        {
+            "option": "--console-level",
+            "shortcut": "-n",
+            "description": "set level of messages printed to console",
+            "value": "<level>"
+        },
+        {
+            "option": "--console-off",
+            "shortcut": "-D",
+            "description": "disable printing messages to console"
+        },
+        {
+            "option": "--console-on",
+            "shortcut": "-E",
+            "description": "enable printing messages to console"
+        },
+        {
+            "option": "--ctime",
+            "shortcut": "-T",
+            "description": "show human-readable timestamp (may be inaccurate!)"
+        },
+        {
+            "option": "--decode",
+            "shortcut": "-x",
+            "description": "decode facility and level to readable string"
+        },
+        {
+            "option": "--facility",
+            "shortcut": "-f",
+            "description": "restrict output to defined facilities",
+            "value": "<list>"
+        },
+        {
+            "option": "--file",
+            "shortcut": "-F",
+            "description": "use the file instead of the kernel log buffer",
+            "value": "<file>"
+        },
+        {
+            "option": "--follow",
+            "shortcut": "-w",
+            "description": "wait for new messages"
+        },
+        {
+            "option": "--follow-new",
+            "shortcut": "-W",
+            "description": "wait and print only new messages"
+        },
+        {
+            "option": "--force-prefix",
+            "shortcut": "-p",
+            "description": "force timestamp output on each line of multi-line messages"
+        },
+        {
+            "option": "--help",
+            "shortcut": "-h",
+            "description": "display this help"
+        },
+        {
+            "option": "--human",
+            "shortcut": "-H",
+            "description": "human readable output"
+        },
+        {
+            "option": "--json",
+            "shortcut": "-J",
+            "description": "use JSON output format"
+        },
+        {
+            "option": "--kernel",
+            "shortcut": "-k",
+            "description": "display kernel messages"
+        },
+        {
+            "option": "--level",
+            "shortcut": "-l",
+            "description": "restrict output to defined levels",
+            "value": "<list>"
+        },
+        {
+            "option": "--noescape",
+            "description": "don't escape unprintable character"
+        },
+        {
+            "option": "--nopager",
+            "shortcut": "-P",
+            "description": "do not pipe output into a pager"
+        },
+        {
+            "option": "--raw",
+            "shortcut": "-r",
+            "description": "print the raw message buffer"
+        },
+        {
+            "option": "--read-clear",
+            "shortcut": "-c",
+            "description": "read and clear all messages"
+        },
+        {
+            "option": "--reltime",
+            "shortcut": "-e",
+            "description": "show local time and time delta in readable format"
+        },
+        {
+            "option": "--show-delta",
+            "shortcut": "-d",
+            "description": "show time delta between printed messages"
+        },
+        {
+            "option": "--since",
+            "description": "display the lines since the specified time",
+            "value": "<time>"
+        },
+        {
+            "option": "--syslog",
+            "shortcut": "-S",
+            "description": "force to use syslog(2) rather than /dev/kmsg"
+        },
+        {
+            "option": "--time-format",
+            "description": "show timestamp using the given format:",
+            "value": "<format>",
+            "default": "[delta|reltime|ctime|notime|iso]"
+        },
+        {
+            "option": "--until",
+            "description": "display the lines until the specified time",
+            "value": "<time>"
+        },
+        {
+            "option": "--userspace",
+            "shortcut": "-u",
+            "description": "display userspace messages"
+        },
+        {
+            "option": "--version",
+            "shortcut": "-V",
+            "description": "display version"
+        }
+    ],
+    "subcommands": [],
+    "version": "2.39.3"
+}

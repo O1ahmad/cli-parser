@@ -1,0 +1,135 @@
+{
+    "name": "du",
+    "description": "Summarize device usage of the set of FILEs, recursively for directories.",
+    "usage": [
+        "du [OPTION]... [FILE]...",
+        "du [OPTION]... --files0-from=F"
+    ],
+    "options": [
+        {
+            "option": "--all",
+            "shortcut": "-a",
+            "description": "write counts for all files, not just directories"
+        },
+        {
+            "option": "--apparent-size",
+            "description": "print apparent sizes rather than device usage; although the apparent size is usually smaller, it may be larger due to holes in ('sparse') files, internal fragmentation, indirect blocks, and the like"
+        },
+        {
+            "option": "--block-size",
+            "shortcut": "-B",
+            "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below",
+            "value": "SIZE"
+        },
+        {
+            "option": "--bytes",
+            "shortcut": "-b",
+            "description": "equivalent to '--apparent-size --block-size=1'"
+        },
+        {
+            "option": "--count-links",
+            "shortcut": "-l",
+            "description": "count sizes many times if hard linked"
+        },
+        {
+            "option": "--dereference",
+            "shortcut": "-L",
+            "description": "dereference all symbolic links"
+        },
+        {
+            "option": "--dereference-args",
+            "shortcut": "-D",
+            "description": "dereference only symlinks that are listed on the command line"
+        },
+        {
+            "option": "--exclude",
+            "description": "exclude files that match PATTERN",
+            "value": "PATTERN"
+        },
+        {
+            "option": "--exclude-from",
+            "shortcut": "-X",
+            "description": "exclude files that match any pattern in FILE",
+            "value": "FILE"
+        },
+        {
+            "option": "--files0-from",
+            "description": "summarize device usage of the NUL-terminated file names specified in file F; if F is -, then read names from standard input",
+            "value": "F"
+        },
+        {
+            "option": "--help",
+            "description": "display this help and exit"
+        },
+        {
+            "option": "--human-readable",
+            "shortcut": "-h",
+            "description": "print sizes in human readable format (e.g., 1K 234M 2G)"
+        },
+        {
+            "option": "--inodes",
+            "description": "list inode usage information instead of block usage"
+        },
+        {
+            "option": "--max-depth",
+            "shortcut": "-d",
+            "description": "print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument; --max-depth=0 is the same as --summarize",
+            "value": "N"
+        },
+        {
+            "option": "--no-dereference",
+            "shortcut": "-P",
+            "description": "don't follow any symbolic links (this is the default)"
+        },
+        {
+            "option": "--null",
+            "shortcut": "-0",
+            "description": "end each output line with NUL, not newline"
+        },
+        {
+            "option": "--one-file-system",
+            "shortcut": "-x",
+            "description": "skip directories on different file systems"
+        },
+        {
+            "option": "--separate-dirs",
+            "shortcut": "-S",
+            "description": "for directories do not include size of subdirectories"
+        },
+        {
+            "option": "--si",
+            "description": "like -h, but use powers of 1000 not 1024"
+        },
+        {
+            "option": "--summarize",
+            "shortcut": "-s",
+            "description": "display only a total for each argument"
+        },
+        {
+            "option": "--threshold",
+            "shortcut": "-t",
+            "description": "exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative",
+            "value": "SIZE"
+        },
+        {
+            "option": "--time",
+            "description": "show time of the last modification of any file in the directory, or any of its subdirectories"
+        },
+        {
+            "option": "--time",
+            "description": "show time as WORD instead of modification time: atime, access, use, ctime or status",
+            "value": "WORD"
+        },
+        {
+            "option": "--time-style",
+            "description": "show times using STYLE, which can be: full-iso, long-iso, iso, or +FORMAT; FORMAT is interpreted like in 'date'",
+            "value": "STYLE"
+        },
+        {
+            "option": "--version",
+            "description": "output version information and exit"
+        }
+    ],
+    "subcommands": [],
+    "version": "9.4"
+}

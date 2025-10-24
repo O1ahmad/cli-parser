@@ -1,0 +1,7 @@
+# Gomplate - Help Output
+# Image: docker.io/hairyhenderson/gomplate:1.8.0
+# Command: /gomplate --help
+# Exit Code: -1
+================================================================================
+
+[Failed after trying all strategies]

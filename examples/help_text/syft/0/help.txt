@@ -1,0 +1,7 @@
+# Syft - Help Output
+# Image: docker.io/anchore/syft:0
+# Command: /syft --help
+# Exit Code: -1
+================================================================================
+
+[Failed after trying all strategies]

@@ -1,0 +1,40 @@
+# Kustomize - Help Output
+# Image: docker.io/line/kubectl-kustomize:1.16.0-3.2.0
+# Command: /usr/local/bin/kustomize --help
+# Exit Code: 0
+================================================================================
+
+
+Manages declarative configuration of Kubernetes.
+See https://sigs.k8s.io/kustomize
+
+Usage:
+  kustomize [command]
+
+Available Commands:
+  build       Print configuration per contents of kustomization.yaml
+  config      Config Kustomize transformers
+  create      Create a new kustomization in the current directory
+  edit        Edits a kustomization file
+  help        Help about any command
+  version     Prints the kustomize version
+
+Flags:
+  -h, --help   help for kustomize
+
+Use "kustomize [command] --help" for more information about a command.
+
+--- STDERR ---
+Unable to find image 'line/kubectl-kustomize:1.16.0-3.2.0' locally
+1.16.0-3.2.0: Pulling from line/kubectl-kustomize
+9d48c3bd43c5: Already exists
+4f33ba0e48cb: Pulling fs layer
+aa99904fff6d: Pulling fs layer
+aa99904fff6d: Verifying Checksum
+aa99904fff6d: Download complete
+4f33ba0e48cb: Verifying Checksum
+4f33ba0e48cb: Download complete
+4f33ba0e48cb: Pull complete
+aa99904fff6d: Pull complete
+Digest: sha256:392b70c1cd3acbf3d34872939bd9eb39c5b776e3b32f256a3006f6203f7618cf
+Status: Downloaded newer image for line/kubectl-kustomize:1.16.0-3.2.0

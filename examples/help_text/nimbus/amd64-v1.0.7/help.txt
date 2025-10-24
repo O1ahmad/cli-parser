@@ -1,0 +1,200 @@
+# Nimbus - Help Output
+# Image: docker.io/statusim/nimbus-eth2:amd64-v1.0.7
+# Command: /home/user/nimbus-eth2/build/nimbus_beacon_node --help
+# Exit Code: 0
+================================================================================
+
+Nimbus beacon node v1.0.7-596b8c60-stateofus
+
+[0m[33mUsage: 
+[0m[1m
+[36mnimbus_beacon_node[0m [OPTIONS]... command
+
+The following options are available:
+
+     [34m[1m--log-level             [0m  Sets the log level for process and topics (e.g.
+                               "DEBUG; TRACE:discv5,libp2p; REQUIRED:none;
+                               DISABLED:none").[0m
+     [34m[1m--log-file              [0m  Specifies a path for the written Json log file.[0m
+     [34m[1m--network               [0m  The Eth2 network to join.[0m
+ [34m[1m-d, [0m[34m[1m--data-dir              [0m  The directory where nimbus will store all
+                               blockchain data.[0m
+     [34m[1m--validators-dir        [0m  A directory containing validator keystores.[0m
+     [34m[1m--secrets-dir           [0m  A directory containing validator keystore
+                               passwords.[0m
+     [34m[1m--wallets-dir           [0m  A directory containing wallet files.[0m
+     [34m[1m--web3-url              [0m  URL of the Web3 server to observe Eth1.[0m
+     [34m[1m--non-interactive       [0m  Do not display interative prompts. Quit on
+                               missing configuration.[0m
+     [34m[1m--netkey-file           [0m  Source of network (secp256k1) private key file
+                               (random|<path>) (default: random).[0m
+     [34m[1m--insecure-netkey-password[0m  Use pre-generated INSECURE password for network
+                               private key file (default: false).[0m
+     [34m[1m--agent-string          [0m  Node agent string which is used as identifier in
+                               network.[0m
+     [34m[1m--subscribe-all-subnets [0m  Subscribe to all attestation subnet topics when
+                               gossiping.[0m
+ [34m[1m-b, [0m[34m[1m--bootstrap-node        [0m  Specifies one or more bootstrap nodes to use when
+                               connecting to the network.[0m
+     [34m[1m--bootstrap-file        [0m  Specifies a line-delimited file of bootstrap
+                               Ethereum network addresses.[0m
+     [34m[1m--listen-address        [0m  Listening address for the Ethereum LibP2P and
+                               Discovery v5 traffic.[0m
+     [34m[1m--tcp-port              [0m  Listening TCP port for Ethereum LibP2P traffic.[0m
+     [34m[1m--udp-port              [0m  Listening UDP port for node discovery.[0m
+     [34m[1m--max-peers             [0m  The maximum number of peers to connect to.[0m
+     [34m[1m--nat                   [0m  Specify method to use for determining public
+                               address. Must be one of: any, none, upnp, pmp,
+                               extip:<IP>.[0m
+     [34m[1m--enr-auto-update       [0m  Discovery can automatically update its ENR with
+                               the IP address and UDP port as seen by other
+                               nodes it communicates with. This option allows to
+                               enable/disable this functionality.[0m
+     [34m[1m--weak-subjectivity-checkpoint[0m  Weak subjectivity checkpoint in the format
+                               block_root:epoch_number.[0m
+     [34m[1m--finalized-checkpoint-state[0m  SSZ file specifying a recent finalized state.[0m
+     [34m[1m--finalized-checkpoint-block[0m  SSZ file specifying a recent finalized block.[0m
+     [34m[1m--node-name             [0m  A name for this node that will appear in the
+                               logs. If you set this to 'auto', a persistent
+                               automatically generated ID will be selected for
+                               each --data-dir folder.[0m
+     [34m[1m--graffiti              [0m  The graffiti value that will appear in proposed
+                               blocks. You can use a 0x-prefixed hex encoded
+                               string to specify raw bytes.[0m
+     [34m[1m--verify-finalization   [0m  Specify whether to verify finalization occurs on
+                               schedule, for testing.[0m
+     [34m[1m--stop-at-epoch         [0m  A positive epoch selects the epoch at which to
+                               stop.[0m
+     [34m[1m--metrics               [0m  Enable the metrics server.[0m
+     [34m[1m--metrics-address       [0m  Listening address of the metrics server.[0m
+     [34m[1m--metrics-port          [0m  Listening HTTP port of the metrics server.[0m
+     [34m[1m--status-bar            [0m  Display a status bar at the bottom of the
+                               terminal screen.[0m
+     [34m[1m--status-bar-contents   [0m  Textual template for the contents of the status
+                               bar.[0m
+     [34m[1m--rpc                   [0m  Enable the JSON-RPC server.[0m
+     [34m[1m--rpc-port              [0m  HTTP port for the JSON-RPC service.[0m
+     [34m[1m--rpc-address           [0m  Listening address of the RPC server.[0m
+     [34m[1m--in-process-validators [0m  Disable the push model (the beacon node tells a
+                               signing process with the private keys of the
+                               validators what to sign and when) and load the
+                               validators in the beacon node itself.[0m
+     [34m[1m--discv5                [0m  Enable Discovery v5.[0m
+     [34m[1m--dump                  [0m  Write SSZ dumps of blocks, attestations and
+                               states to data dir.[0m
+     [34m[1m--doppelganger-detection[0m  Whether to detect whether another validator is be
+                               running the same validator keys (default true).[0m
+[33m
+Available sub-commands:
+[0m[1m
+[36mnimbus_beacon_node createTestnet[0m [OPTIONS]...
+
+The following options are available:
+
+     [34m[1m--deposits-file         [0m  A LaunchPad deposits file for the genesis state
+                               validators.[0m
+     [34m[1m--total-validators      [0m  The number of validator deposits in the newly
+                               created chain.[0m
+     [34m[1m--first-validator       [0m  Index of first validator to add to validator
+                               list.[0m
+     [34m[1m--last-user-validator   [0m  The last validator index that will be free for
+                               taking from a testnet participant.[0m
+     [34m[1m--bootstrap-address     [0m  The public IP address that will be advertised as
+                               a bootstrap node for the testnet.[0m
+     [34m[1m--bootstrap-port        [0m  The TCP/UDP port that will be used by the
+                               bootstrap node.[0m
+     [34m[1m--genesis-offset        [0m  Seconds from now to add to genesis time.[0m
+     [34m[1m--output-genesis        [0m  Output file where to write the initial state
+                               snapshot.[0m
+     [34m[1m--with-genesis-root     [0m  Include a genesis root in 'network.json'.[0m
+     [34m[1m--output-bootstrap-file [0m  Output file with list of bootstrap nodes for the
+                               network.[0m
+[1m
+[36mnimbus_beacon_node deposits[0m command
+[33m
+Available sub-commands:
+[0m[1m
+[36mnimbus_beacon_node deposits import[0m <importedDepositsDir>[0m
+
+Imports password-protected keystores interactively.
+[0m
+[34m[1m <importedDepositsDir>[0m        [0m  A directory with keystores to import.[0m
+[1m
+[36mnimbus_beacon_node deposits exit[0m [OPTIONS]...
+
+Submits a validator voluntary exit.
+[0m
+The following options are available:
+
+     [34m[1m--validator             [0m  Validator index or a public key of the exited
+                               validator.[0m
+     [34m[1m--rpc-url               [0m  URL of the beacon node JSON-RPC service.[0m
+     [34m[1m--epoch                 [0m  The desired exit epoch.[0m
+[1m
+[36mnimbus_beacon_node wallets[0m command
+[33m
+Available sub-commands:
+[0m[1m
+[36mnimbus_beacon_node wallets create[0m [OPTIONS]...
+
+Creates a new EIP-2386 wallet.
+[0m
+The following options are available:
+
+     [34m[1m--next-account          [0m  Initial value for the 'nextaccount' property of
+                               the wallet.[0m
+     [34m[1m--name                  [0m  An easy-to-remember name for the wallet of your
+                               choice.[0m
+     [34m[1m--out                   [0m  Output wallet file.[0m
+[1m
+[36mnimbus_beacon_node wallets restore[0m [OPTIONS]...
+
+Restores a wallet from cold storage.
+[0m
+The following options are available:
+
+     [34m[1m--name                  [0m  An easy-to-remember name for the wallet of your
+                               choice.[0m
+     [34m[1m--out                   [0m  Output wallet file.[0m
+     [34m[1m--deposits              [0m  Expected number of deposits to recover. If not
+                               specified, Nimbus will try to guess the number by
+                               inspecting the latest beacon state.[0m
+[1m
+[36mnimbus_beacon_node wallets list[0m
+
+Lists details about all wallets.
+[0m[1m
+[36mnimbus_beacon_node record[0m command
+[33m
+Available sub-commands:
+[0m[1m
+[36mnimbus_beacon_node record create[0m [OPTIONS]...
+
+Create a new ENR.
+[0m
+The following options are available:
+
+     [34m[1m--ip                    [0m  External IP address.[0m
+     [34m[1m--tcp-port              [0m  External TCP port.[0m
+     [34m[1m--udp-port              [0m  External UDP port.[0m
+     [34m[1m--seq-number            [0m  Record sequence number.[0m
+     [34m[1m--field                 [0m  Additional record key pairs, provide as
+                               <string>:<bytes in hex>.[0m
+[1m
+[36mnimbus_beacon_node record print[0m <enr>[0m
+
+Print the content of a given ENR.
+[0m
+[34m[1m <enr>[0m                        [0m  ENR URI of the record to print.[0m
+[1m
+[36mnimbus_beacon_node web3[0m command
+[33m
+Available sub-commands:
+[0m[1m
+[36mnimbus_beacon_node web3 test[0m <url>[0m
+
+Test a web3 provider.
+[0m
+[34m[1m <url>[0m                        [0m  The web3 provider URL to test.[0m
+
+[0m

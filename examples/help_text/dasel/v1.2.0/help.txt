@@ -1,0 +1,17 @@
+# Dasel - Help Output
+# Image: ghcr.io/tomwright/dasel:v1.2.0
+# Command: /usr/local/bin/dasel --help
+# Exit Code: 0
+================================================================================
+
+Select properties from the given file.
+
+Usage:
+  dasel select -f <file> -p <json,yaml> -s <selector> [flags]
+
+Flags:
+  -f, --file string       The file to query.
+  -h, --help              help for select
+  -p, --parser string     The parser to use with the given file.
+      --plain             Do not format output to the output data format.
+  -s, --selector string   The selector to use when querying the data structure.

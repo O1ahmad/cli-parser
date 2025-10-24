@@ -1,0 +1,70 @@
+# Restic - Help Output
+# Image: docker.io/restic/restic:0.8.1
+# Command: /usr/bin/restic --help
+# Exit Code: 0
+================================================================================
+
+
+restic is a backup program which allows saving multiple revisions of files and
+directories in an encrypted repository stored on different backends.
+
+Usage:
+  restic [command]
+
+Available Commands:
+  backup        Create a new backup of files and/or directories
+  cat           Print internal objects to stdout
+  check         Check the repository for errors
+  diff          Show differences between two snapshots
+  dump          Print a backed-up file to stdout
+  find          Find a file or directory
+  forget        Remove snapshots from the repository
+  generate      Generate manual pages and auto-completion files (bash, zsh)
+  help          Help about any command
+  init          Initialize a new repository
+  key           Manage keys (passwords)
+  list          List objects in the repository
+  ls            List files in a snapshot
+  migrate       Apply migrations
+  mount         Mount the repository
+  prune         Remove unneeded data from the repository
+  rebuild-index Build a new index file
+  restore       Extract the data from a snapshot
+  snapshots     List all snapshots
+  tag           Modify tags on snapshots
+  unlock        Remove locks other processes created
+  version       Print version information
+
+Flags:
+      --cacert stringSlice     path to load root certificates from (default: use system certificates)
+      --cache-dir string       set the cache directory
+      --cleanup-cache          auto remove old cache directories
+  -h, --help                   help for restic
+      --json                   set output mode to JSON for commands that support it
+      --limit-download int     limits downloads to a maximum rate in KiB/s. (default: unlimited)
+      --limit-upload int       limits uploads to a maximum rate in KiB/s. (default: unlimited)
+      --no-cache               do not use a local cache
+      --no-lock                do not lock the repo, this allows some operations on read-only repos
+  -o, --option key=value       set extended option (key=value, can be specified multiple times)
+  -p, --password-file string   read the repository password from a file (default: $RESTIC_PASSWORD_FILE)
+  -q, --quiet                  do not output comprehensive progress report
+  -r, --repo string            repository to backup to or restore from (default: $RESTIC_REPOSITORY)
+
+Use "restic [command] --help" for more information about a command.
+
+--- STDERR ---
+Unable to find image 'restic/restic:0.8.1' locally
+0.8.1: Pulling from restic/restic
+88286f41530e: Pulling fs layer
+58bee19ad4c6: Pulling fs layer
+6ca3e43bda1d: Pulling fs layer
+88286f41530e: Verifying Checksum
+88286f41530e: Download complete
+88286f41530e: Pull complete
+6ca3e43bda1d: Verifying Checksum
+6ca3e43bda1d: Download complete
+58bee19ad4c6: Download complete
+58bee19ad4c6: Pull complete
+6ca3e43bda1d: Pull complete
+Digest: sha256:32e5c057f2dd6f7190a59d9bac11c383ec1e19cbb2394eaa9ff2ad7ce49446d8
+Status: Downloaded newer image for restic/restic:0.8.1

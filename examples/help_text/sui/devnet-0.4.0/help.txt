@@ -1,0 +1,15 @@
+# Sui - Help Output
+# Image: docker.io/mysten/sui-node:devnet-0.4.0
+# Command: /usr/local/bin/sui-node --help
+# Exit Code: 0
+================================================================================
+
+sui-node 
+
+USAGE:
+    sui-node [OPTIONS] --config-path <CONFIG_PATH>
+
+OPTIONS:
+        --config-path <CONFIG_PATH>          
+    -h, --help                               Print help information
+        --listen-address <LISTEN_ADDRESS>    Specify address to listen on

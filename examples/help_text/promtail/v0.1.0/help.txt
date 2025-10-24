@@ -1,0 +1,192 @@
+# Promtail - Help Output
+# Image: docker.io/grafana/promtail:latest
+# Note: Used 'latest' tag instead of 'v0.1.0'
+# Command: /usr/bin/promtail --help
+# Exit Code: 0
+================================================================================
+
+Usage of config-file-loader:
+  -check-syntax
+    	Validate the config file of its syntax
+  -client.batch-size-bytes int
+    	Maximum batch size to accrue before sending (deprecated). (default 1048576)
+  -client.batch-wait duration
+    	Maximum wait period before sending batch (deprecated). (default 1s)
+  -client.drop-rate-limited-batches
+    	Do not retry batches that have been rate limited by Loki (deprecated).
+  -client.external-labels value
+    	list of external labels to add to each log (e.g: --client.external-labels=lb1=v1,lb2=v2) (deprecated).
+  -client.max-backoff duration
+    	Maximum backoff time between retries (deprecated). (default 5m0s)
+  -client.max-retries int
+    	Maximum number of retires when sending batches (deprecated). (default 10)
+  -client.min-backoff duration
+    	Initial backoff time between retries (deprecated). (default 500ms)
+  -client.tenant-id string
+    	Tenant ID to use when pushing logs to Loki (deprecated).
+  -client.timeout duration
+    	Maximum time to wait for server to respond to a request (deprecated). (default 10s)
+  -client.url value
+    	URL of log server (deprecated).
+  -config.expand-env
+    	Expands ${var} in config according to the values of the environment variables.
+  -config.file string
+    	yaml file to load
+  -dry-run
+    	Start Promtail but print entries instead of sending them to Loki.
+  -file-watch.max_poll_frequency duration
+    	Maximum period to poll for file changes (default 250ms)
+  -file-watch.min_poll_frequency duration
+    	Minimum period to poll for file changes (default 250ms)
+  -inspect
+    	Allows for detailed inspection of pipeline stages
+  -limit.readline-burst int
+    	The cap in the quantity of burst lines that this instance of Promtail may push to Loki. (default 10000)
+  -limit.readline-rate float
+    	The rate limit in log lines per second that this instance of Promtail may push to Loki. (default 10000)
+  -limit.readline-rate-drop
+    	When true, exceeding the rate limit causes this instance of Promtail to discard log lines, rather than sending them to Loki. (default true)
+  -limit.readline-rate-enabled
+    	When true, enforces rate limiting on this instance of Promtail.
+  -log-config-reverse-order
+    	Dump the entire Loki config object at Info log level with the order reversed, reversing the order makes viewing the entries easier in Grafana.
+  -log.format string
+    	Output log messages in the given format. Valid formats: [logfmt, json] (default "logfmt")
+  -log.level value
+    	Only log messages with the given severity or above. Valid levels: [debug, info, warn, error] (default info)
+  -max-line-size value
+    	Maximum log line byte size allowed without dropping. Example: 256kb, 2M. 0 to disable.
+  -max-line-size-truncate
+    	Whether to truncate lines that exceed max_line_size. No effect if max_line_size is disabled
+  -max-streams int
+    	Maximum number of active streams. 0 to disable.
+  -positions.file string
+    	Location to read/write positions from. (default "/var/log/positions.yaml")
+  -positions.ignore-invalid-yaml
+    	whether to ignore & later overwrite positions files that are corrupted
+  -positions.sync-period duration
+    	Period with this to sync the position file. (default 10s)
+  -print-config-stderr
+    	Dump the entire Loki config object to stderr
+  -server.cluster-validation.grpc.enabled
+    	When enabled, cluster label validation is executed: configured cluster validation label is compared with the cluster validation label received through the requests.
+  -server.cluster-validation.grpc.soft-validation
+    	When enabled, soft cluster label validation is executed. Can be enabled only together with server.cluster-validation.grpc.enabled
+  -server.cluster-validation.label string
+    	Optionally define the cluster validation label.
+  -server.disable
+    	Disable the http and grpc server.
+  -server.enable-runtime-reload
+    	Enable reload via HTTP request.
+  -server.graceful-shutdown-timeout duration
+    	Timeout for graceful shutdowns (default 30s)
+  -server.grpc-conn-limit int
+    	Maximum number of simultaneous grpc connections, <=0 to disable
+  -server.grpc-listen-address string
+    	gRPC server listen address.
+  -server.grpc-listen-network string
+    	gRPC server listen network (default "tcp")
+  -server.grpc-listen-port int
+    	gRPC server listen port. (default 9095)
+  -server.grpc-max-concurrent-streams uint
+    	Limit on the number of concurrent streams for gRPC calls per client connection (0 = unlimited) (default 100)
+  -server.grpc-max-recv-msg-size-bytes int
+    	Limit on the size of a gRPC message this server can receive (bytes). (default 4194304)
+  -server.grpc-max-send-msg-size-bytes int
+    	Limit on the size of a gRPC message this server can send (bytes). (default 4194304)
+  -server.grpc-tls-ca-path string
+    	GRPC TLS Client CA path.
+  -server.grpc-tls-cert-path string
+    	GRPC TLS server cert path.
+  -server.grpc-tls-client-auth string
+    	GRPC TLS Client Auth type.
+  -server.grpc-tls-key-path string
+    	GRPC TLS server key path.
+  -server.grpc.keepalive.max-connection-age duration
+    	The duration for the maximum amount of time a connection may exist before it will be closed. Default: infinity (default 2562047h47m16.854775807s)
+  -server.grpc.keepalive.max-connection-age-grace duration
+    	An additive period after max-connection-age after which the connection will be forcibly closed. Default: infinity (default 2562047h47m16.854775807s)
+  -server.grpc.keepalive.max-connection-idle duration
+    	The duration after which an idle connection should be closed. Default: infinity (default 2562047h47m16.854775807s)
+  -server.grpc.keepalive.min-time-between-pings duration
+    	Minimum amount of time a client should wait before sending a keepalive ping. If client sends keepalive ping more often, server will send GOAWAY and close the connection. (default 5m0s)
+  -server.grpc.keepalive.ping-without-stream-allowed
+    	If true, server allows keepalive pings even when there are no active streams(RPCs). If false, and client sends ping when there are no active streams, server will send GOAWAY and close the connection.
+  -server.grpc.keepalive.time duration
+    	Duration after which a keepalive probe is sent in case of no activity over the connection., Default: 2h (default 2h0m0s)
+  -server.grpc.keepalive.timeout duration
+    	After having pinged for keepalive check, the duration after which an idle connection should be closed, Default: 20s (default 20s)
+  -server.grpc.num-workers int
+    	If non-zero, configures the amount of GRPC server workers used to serve the requests.
+  -server.grpc.recv-buffer-pools-enabled
+    	Deprecated option, has no effect and will be removed in a future version.
+  -server.grpc.stats-tracking-enabled
+    	If true, the request_message_bytes, response_message_bytes, and inflight_requests metrics will be tracked. Enabling this option prevents the use of memory pools for parsing gRPC request bodies and may lead to more memory allocations. (default true)
+  -server.http-conn-limit int
+    	Maximum number of simultaneous http connections, <=0 to disable
+  -server.http-idle-timeout duration
+    	Idle timeout for HTTP server (default 2m0s)
+  -server.http-listen-address string
+    	HTTP server listen address.
+  -server.http-listen-network string
+    	HTTP server listen network, default tcp (default "tcp")
+  -server.http-listen-port int
+    	HTTP server listen port. (default 80)
+  -server.http-log-closed-connections-without-response-enabled
+    	Log closed connections that did not receive any response, most likely because client didn't send any request within timeout.
+  -server.http-read-header-timeout duration
+    	Read timeout for HTTP request headers. If set to 0, value of -server.http-read-timeout is used.
+  -server.http-read-timeout duration
+    	Read timeout for entire HTTP request, including headers and body. (default 30s)
+  -server.http-tls-ca-path string
+    	HTTP TLS Client CA path.
+  -server.http-tls-cert-path string
+    	HTTP server cert path.
+  -server.http-tls-client-auth string
+    	HTTP TLS Client Auth type.
+  -server.http-tls-key-path string
+    	HTTP server key path.
+  -server.http-write-timeout duration
+    	Write timeout for HTTP server (default 30s)
+  -server.log-request-at-info-level-enabled
+    	Optionally log requests at info level instead of debug level. Applies to request headers as well if server.log-request-headers is enabled.
+  -server.log-request-headers
+    	Optionally log request headers.
+  -server.log-request-headers-exclude-list string
+    	Comma separated list of headers to exclude from loggin. Only used if server.log-request-headers is true.
+  -server.log-source-ips-enabled
+    	Optionally log the source IPs.
+  -server.log-source-ips-full
+    	Log all source IPs instead of only the originating one. Only used if server.log-source-ips-enabled is true
+  -server.log-source-ips-header string
+    	Header field storing the source IPs. Only used if server.log-source-ips-enabled is true. If not set the default Forwarded, X-Real-IP and X-Forwarded-For headers are used
+  -server.log-source-ips-regex string
+    	Regex for matching the source IPs. Only used if server.log-source-ips-enabled is true. If not set the default Forwarded, X-Real-IP and X-Forwarded-For headers are used
+  -server.path-prefix string
+    	Base path to serve all API routes from (e.g. /v1/)
+  -server.profiling_enabled
+    	Enable the /debug/fgprof and /debug/pprof endpoints for profiling.
+  -server.proxy-protocol-enabled
+    	Enables PROXY protocol.
+  -server.register-instrumentation
+    	Register the intrumentation handlers (/metrics etc). (default true)
+  -server.report-grpc-codes-in-instrumentation-label-enabled
+    	If set to true, gRPC statuses will be reported in instrumentation labels with their string representations. Otherwise, they will be reported as "error".
+  -server.throughput.latency-cutoff duration
+    	Requests taking over the cutoff are be observed to measure throughput. Server-Timing header is used with specified unit as the indicator, for example 'Server-Timing: unit;val=8.2'. If set to 0, the throughput is not calculated.
+  -server.throughput.unit string
+    	Unit of the server throughput metric, for example 'processed_bytes' or 'samples_processed'. Observed values are gathered from the 'Server-Timing' header with the 'val' key. If set, it is appended to the request_server_throughput metric name. (default "samples_processed")
+  -server.tls-cipher-suites string
+    	Comma-separated list of cipher suites to use. If blank, the default Go cipher suites is used.
+  -server.tls-min-version string
+    	Minimum TLS version to use. Allowed values: VersionTLS10, VersionTLS11, VersionTLS12, VersionTLS13. If blank, the Go TLS minimum version is used.
+  -stdin
+    	Set to true to pipe logs to promtail.
+  -target.sync-period duration
+    	Period to resync directories being watched and files being tailed. (default 10s)
+  -tracing.enabled
+    	Set to false to disable tracing. (default true)
+  -tracing.profiling-enabled
+    	Set to true to enable profiling integration. (default true)
+  -version
+    	Print this builds version information

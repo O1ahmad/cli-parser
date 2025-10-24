@@ -1,0 +1,78 @@
+# Mythril - Help Output
+# Image: docker.io/mythril/myth:0.18.3
+# Command: /usr/local/bin/myth --help
+# Exit Code: 0
+================================================================================
+
+usage: myth [-h] [-g GRAPH] [-x] [-t] [-d] [-j OUTPUT_FILE] [-c BYTECODE]
+            [-a CONTRACT_ADDRESS] [-l] [-o <text/json>] [--verbose-report]
+            [--init-db] [-s EXPRESSION] [--hash SIGNATURE]
+            [--storage INDEX,NUM_SLOTS,[array] / mapping,INDEX,[KEY1,
+            KEY2...]] [--solv SOLV] [-m MODULES] [--max-depth MAX_DEPTH]
+            [--solc-args SOLC_ARGS] [--phrack] [--enable-physics]
+            [-v LOG_LEVEL] [--leveldb LEVELDB_PATH] [-i]
+            [--rpc HOST:PORT / ganache / infura-[network_name]]
+            [--rpctls RPCTLS] [--ipc]
+            [solidity_file [solidity_file ...]]
+
+Security analysis of Ethereum smart contracts
+
+positional arguments:
+  solidity_file
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+commands:
+  -g GRAPH, --graph GRAPH
+                        generate a control flow graph
+  -x, --fire-lasers     detect vulnerabilities, use with -c, -a or solidity
+                        file(s)
+  -t, --truffle         analyze a truffle project (run from project dir)
+  -d, --disassemble     print disassembly
+  -j OUTPUT_FILE, --statespace-json OUTPUT_FILE
+                        dumps the statespace json
+
+input arguments:
+  -c BYTECODE, --code BYTECODE
+                        hex-encoded bytecode string ("6060604052...")
+  -a CONTRACT_ADDRESS, --address CONTRACT_ADDRESS
+                        pull contract from the blockchain
+  -l, --dynld           auto-load dependencies from the blockchain
+
+output formats:
+  -o <text/json>, --outform <text/json>
+                        report output format
+  --verbose-report      Include debugging information in report
+
+local contracts database:
+  --init-db             initialize the contract database
+  -s EXPRESSION, --search EXPRESSION
+                        search the contract database
+
+utilities:
+  --hash SIGNATURE      calculate function signature hash
+  --storage INDEX,NUM_SLOTS,[array] / mapping,INDEX,[KEY1, KEY2...]
+                        read state variables from storage index, use with -a
+  --solv SOLV           specify solidity compiler version. If not present,
+                        will try to install it (Experimental)
+
+options:
+  -m MODULES, --modules MODULES
+                        Comma-separated list of security analysis modules
+  --max-depth MAX_DEPTH
+                        Maximum recursion depth for symbolic execution
+  --solc-args SOLC_ARGS
+                        Extra arguments for solc
+  --phrack              Phrack-style call graph
+  --enable-physics      enable graph physics simulation
+  -v LOG_LEVEL          log level (0-2)
+  --leveldb LEVELDB_PATH
+                        enable direct leveldb access operations
+
+RPC options:
+  -i                    Preset: Infura Node service (Mainnet)
+  --rpc HOST:PORT / ganache / infura-[network_name]
+                        custom RPC settings
+  --rpctls RPCTLS       RPC connection over TLS
+  --ipc                 Connect via local IPC

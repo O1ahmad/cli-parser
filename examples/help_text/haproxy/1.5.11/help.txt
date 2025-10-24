@@ -1,0 +1,52 @@
+# HAProxy - Help Output
+# Image: docker.io/haproxy:latest
+# Note: Used 'latest' tag instead of '1.5.11'
+# Command: /usr/local/sbin/haproxy -h
+# Exit Code: 0
+================================================================================
+
+HAProxy version 3.2.6-81568b2 2025/10/03 - https://haproxy.org/
+Status: long-term supported branch - will stop receiving fixes around Q2 2030.
+Known bugs: http://www.haproxy.org/bugs/bugs-3.2.6.html
+Running on: Linux 6.14.0-33-generic #33~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 19 17:02:30 UTC 2 x86_64
+
+--- STDERR ---
+Usage : haproxy [-f <cfgfile|cfgdir>]* [ -vdVD ] [ -n <maxconn> ] [ -N <maxpconn> ]
+        [ -p <pidfile> ] [ -m <max megs> ] [ -C <dir> ] [-- <cfgfile>*]
+        -v displays version ; -vv shows known build options.
+        -d enters debug mode ; -db only disables background mode.
+        -dM[<byte>,help,...] debug memory (default: poison with <byte>/0x50)
+        -dt activate traces on stderr
+        -V enters verbose mode (disables quiet mode)
+        -D goes daemon ; -C changes to <dir> before loading files.
+        -W master-worker mode.
+        -Ws master-worker mode with systemd notify support.
+        -q quiet mode : don't display messages
+        -c check mode : only check config files and exit
+        -cc check condition : evaluate a condition and exit
+        -4 force resolvers to consider IPv4 responses only
+        -n sets the maximum total # of connections (uses ulimit -n)
+        -m limits the usable amount of memory (in MB)
+        -N sets the default, per-proxy maximum # of connections (0)
+        -L set local peer name (default to hostname)
+        -p writes pids of all children to this file
+        -dC[[key],line] display the configuration file, if there is a key, the file will be anonymised
+        -de disables epoll() usage even when available
+        -dp disables poll() usage even when available
+        -dS disables splice usage (broken on old kernels)
+        -dG disables getaddrinfo() usage
+        -dR disables SO_REUSEPORT usage
+        -dL dumps loaded object files after config checks
+        -dc dumps the list of selected and evicted CPUs
+        -dK{class[,...]} dump registered keywords (use 'help' for list)
+        -dr ignores server address resolution failures
+        -dV disables SSL verify on servers side
+        -dW fails if any warning is emitted
+        -dD diagnostic mode : warn about suspicious configuration statements
+        -dF disable fast-forward
+        -dI enable insecure fork
+        -dZ disable zero-copy forwarding
+        -sf/-st [pid ]* finishes/terminates old pids.
+        -x <unix_socket> get listening sockets from a unix socket
+        -S <bind>[,<bind options>...] new master CLI
+

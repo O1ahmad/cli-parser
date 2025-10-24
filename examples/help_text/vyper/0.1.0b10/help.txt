@@ -1,0 +1,32 @@
+# Vyper - Help Output
+# Image: docker.io/vyperlang/vyper:0.1.0b10
+# Command: /usr/local/bin/vyper --help
+# Exit Code: 0
+================================================================================
+
+usage: vyper [-h] [--version] [--show-gas-estimates] [-f FORMAT] [--debug]
+             input_files [input_files ...]
+
+Vyper programming language for Ethereum
+
+positional arguments:
+  input_files           Vyper sourcecode to compile
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --show-gas-estimates  Show gas estimates in ir output mode.
+  -f FORMAT             Format to print, one or more of:
+                         bytecode (default) - Deployable bytecode
+                         bytecode_runtime   - Bytecode at runtime
+                         abi                - ABI in JSON format
+                         abi_python         - ABI in python format
+                         ast                - AST in JSON format
+                         source_map         - Vyper source map
+                         method_identifiers - Dictionary of method signature to method identifier.
+                         combined_json      - All of the above format options combined as single JSON output.
+                         interface          - Print Vyper interface of a contract
+                         external_interface - Print Externa Contract of a contract, to be used as outside contract calls.
+                         opcodes            - List of opcodes as a string
+                         opcodes_runtime    - List of runtime opcodes as a string
+  --debug               Add compiler debugging output

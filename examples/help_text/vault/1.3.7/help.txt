@@ -1,0 +1,60 @@
+# Vault - Help Output
+# Image: docker.io/hashicorp/vault:1.3.7
+# Command: /bin/vault -help
+# Exit Code: 0
+================================================================================
+
+
+--- STDERR ---
+Unable to find image 'hashicorp/vault:1.3.7' locally
+1.3.7: Pulling from hashicorp/vault
+21c83c524219: Pulling fs layer
+a73524b92853: Pulling fs layer
+9b979e9a64a0: Pulling fs layer
+fa228c7cb4d1: Pulling fs layer
+fa67874e0534: Pulling fs layer
+fa228c7cb4d1: Waiting
+fa67874e0534: Waiting
+21c83c524219: Download complete
+21c83c524219: Pull complete
+a73524b92853: Download complete
+a73524b92853: Pull complete
+9b979e9a64a0: Verifying Checksum
+9b979e9a64a0: Download complete
+9b979e9a64a0: Pull complete
+fa228c7cb4d1: Verifying Checksum
+fa228c7cb4d1: Download complete
+fa228c7cb4d1: Pull complete
+fa67874e0534: Verifying Checksum
+fa67874e0534: Download complete
+fa67874e0534: Pull complete
+Digest: sha256:3e41d93cbf31f0321b3f25b938879e13788a0ffe77002da79e2ef0bb4d2e1780
+Status: Downloaded newer image for hashicorp/vault:1.3.7
+Usage: vault <command> [args]
+
+Common commands:
+    read        Read data and retrieves secrets
+    write       Write data, configuration, and secrets
+    delete      Delete secrets and configuration
+    list        List data or secrets
+    login       Authenticate locally
+    agent       Start a Vault agent
+    server      Start a Vault server
+    status      Print seal and HA status
+    unwrap      Unwrap a wrapped secret
+
+Other commands:
+    audit          Interact with audit devices
+    auth           Interact with auth methods
+    debug          Runs the debug command
+    kv             Interact with Vault's Key-Value storage
+    lease          Interact with leases
+    namespace      Interact with namespaces
+    operator       Perform operator-specific tasks
+    path-help      Retrieve API help for paths
+    plugin         Interact with Vault plugins and catalog
+    policy         Interact with policies
+    print          Prints runtime configurations
+    secrets        Interact with secrets engines
+    ssh            Initiate an SSH session
+    token          Interact with tokens

@@ -1,0 +1,7 @@
+# Nginx - Help Output
+# Image: docker.io/nginx:1.7.11
+# Command: /usr/sbin/nginx -h
+# Exit Code: -1
+================================================================================
+
+[Failed after trying all strategies]

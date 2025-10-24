@@ -1,0 +1,73 @@
+# Consul - Help Output
+# Image: docker.io/hashicorp/consul:1.9.0
+# Command: /bin/consul -help
+# Exit Code: 0
+================================================================================
+
+Usage: consul [--version] [--help] <command> [<args>]
+
+Available commands are:
+    acl            Interact with Consul's ACLs
+    agent          Runs a Consul agent
+    catalog        Interact with the catalog
+    config         Interact with Consul's Centralized Configurations
+    connect        Interact with Consul Connect
+    debug          Records a debugging archive for operators
+    event          Fire a new event
+    exec           Executes a command on Consul nodes
+    force-leave    Forces a member of the cluster to enter the "left" state
+    info           Provides debugging information for operators.
+    intention      Interact with Connect service intentions
+    join           Tell Consul agent to join cluster
+    keygen         Generates a new encryption key
+    keyring        Manages gossip layer encryption keys
+    kv             Interact with the key-value store
+    leave          Gracefully leaves the Consul cluster and shuts down
+    lock           Execute a command holding a lock
+    login          Login to Consul using an auth method
+    logout         Destroy a Consul token created with login
+    maint          Controls node or service maintenance mode
+    members        Lists the members of a Consul cluster
+    monitor        Stream logs from a Consul agent
+    operator       Provides cluster-level tools for Consul operators
+    reload         Triggers the agent to reload configuration files
+    rtt            Estimates network round trip time between nodes
+    services       Interact with services
+    snapshot       Saves, restores and inspects snapshots of Consul server state
+    tls            Builtin helpers for creating CAs and certificates
+    validate       Validate config files/directories
+    version        Prints the Consul version
+    watch          Watch for changes in Consul
+
+
+--- STDERR ---
+Unable to find image 'hashicorp/consul:1.9.0' locally
+1.9.0: Pulling from hashicorp/consul
+188c0c94c7c5: Pulling fs layer
+9f7b601f31a8: Pulling fs layer
+9fa36564fdb3: Pulling fs layer
+f567635da591: Pulling fs layer
+5b2959968dc0: Pulling fs layer
+e3ee7d75a93f: Pulling fs layer
+5b2959968dc0: Waiting
+e3ee7d75a93f: Waiting
+f567635da591: Waiting
+188c0c94c7c5: Download complete
+188c0c94c7c5: Pull complete
+9f7b601f31a8: Verifying Checksum
+9f7b601f31a8: Download complete
+9f7b601f31a8: Pull complete
+f567635da591: Verifying Checksum
+f567635da591: Download complete
+5b2959968dc0: Verifying Checksum
+5b2959968dc0: Download complete
+e3ee7d75a93f: Verifying Checksum
+e3ee7d75a93f: Download complete
+9fa36564fdb3: Verifying Checksum
+9fa36564fdb3: Download complete
+9fa36564fdb3: Pull complete
+f567635da591: Pull complete
+5b2959968dc0: Pull complete
+e3ee7d75a93f: Pull complete
+Digest: sha256:ec9d9967259f10693533931dcf71504b161032b02bf9fe20c05e15ab5bec0bc0
+Status: Downloaded newer image for hashicorp/consul:1.9.0

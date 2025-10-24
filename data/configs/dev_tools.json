@@ -22,7 +22,7 @@
   "dev_tools": [
     {
       "name": "AWS CLI",
-      "description": "Universal Command Line Interface for Amazon Web Services.",
+      "description": "Command-line interface for Amazon Web Services.",
       "github_release_url": "https://api.github.com/repos/aws/aws-cli/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/amazon/aws-cli/tags/?page=1&page_size=100",
       "readme": "https://github.com/aws/aws-cli/blob/v2/README.rst",
@@ -157,7 +157,7 @@
     },
     {
       "name": "Azure CLI",
-      "description": "Command-line interface for Microsoft Azure - manages Azure resources, deploys applications, and automates cloud workflows.",
+      "description": "Command-line interface for Microsoft Azure services.",
       "github_release_url": "https://api.github.com/repos/Azure/azure-cli/releases?per_page=100&page=1",
       "docker_tags_url": "https://mcr.microsoft.com/v2/azure-cli/tags/list",
       "readme": "https://github.com/Azure/azure-cli/blob/dev/README.md",
@@ -274,7 +274,7 @@
     },
     {
       "name": "Terraform",
-      "description": "Infrastructure as Code tool for building, changing, and versioning infrastructure.",
+      "description": "Infrastructure as code tool for building, changing, and versioning cloud infrastructure.",
       "github_release_url": "https://api.github.com/repos/hashicorp/terraform/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hashicorp/terraform/tags/?page=1&page_size=100",
       "readme": "https://github.com/hashicorp/terraform/blob/main/README.md",
@@ -391,7 +391,7 @@
     },
     {
       "name": "Ansible",
-      "description": "IT automation platform that makes your applications and systems easier to deploy.",
+      "description": "Automation platform for configuration management, application deployment, and task automation.",
       "github_release_url": "https://api.github.com/repos/ansible/ansible/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ansible/ansible/tags/?page=1&page_size=100",
       "readme": "https://github.com/ansible/ansible/blob/devel/README.md",
@@ -471,7 +471,7 @@
     },
     {
       "name": "Docker",
-      "description": "Platform for developing, shipping, and running applications in containers.",
+      "description": "Platform for developing, shipping, and running containerized applications.",
       "github_release_url": "https://api.github.com/repos/docker/cli/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/docker/tags/?page=1&page_size=100",
       "readme": "https://github.com/docker/cli/blob/master/README.md",
@@ -537,7 +537,7 @@
     },
     {
       "name": "Git",
-      "description": "Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.",
+      "description": "Distributed version control system for tracking changes in source code.",
       "github_release_url": "https://api.github.com/repos/git/git/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/alpine/git/tags/?page=1&page_size=100",
       "readme": "https://github.com/git/git/blob/master/README.md",
@@ -815,7 +815,7 @@
     },
     {
       "name": "Node.js",
-      "description": "JavaScript runtime built on Chrome's V8 JavaScript engine.",
+      "description": "JavaScript runtime built on Chrome's V8 engine for server-side applications.",
       "github_release_url": "https://api.github.com/repos/nodejs/node/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/node/tags/?page=1&page_size=100",
       "readme": "https://github.com/nodejs/node/blob/main/README.md",
@@ -936,7 +936,7 @@
     },
     {
       "name": "Python",
-      "description": "High-level, interpreted programming language known for its simplicity, readability, and extensive standard library.",
+      "description": "High-level, interpreted programming language with dynamic typing and automatic memory management.",
       "github_release_url": "https://api.github.com/repos/python/cpython/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/python/tags/?page=1&page_size=100",
       "readme": "https://github.com/python/cpython/blob/main/README.rst",
@@ -1001,7 +1001,7 @@
     },
     {
       "name": "Go",
-      "description": "Statically typed, compiled programming language designed at Google for simplicity, reliability, and efficient concurrent programming.",
+      "description": "Statically typed, compiled programming language designed for simplicity and efficiency.",
       "github_release_url": "https://api.github.com/repos/golang/go/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/golang/tags/?page=1&page_size=100",
       "readme": "https://github.com/golang/go/blob/master/README.md",
@@ -1066,7 +1066,7 @@
     },
     {
       "name": "Rust",
-      "description": "Systems programming language focused on safety, concurrency, and performance without garbage collection.",
+      "description": "Systems programming language focused on safety, speed, and concurrency.",
       "github_release_url": "https://api.github.com/repos/rust-lang/rust/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/rust/tags/?page=1&page_size=100",
       "readme": "https://github.com/rust-lang/rust/blob/master/README.md",
@@ -1277,7 +1277,7 @@
     },
     {
       "name": "Ruby",
-      "description": "Ruby is an interpreted object-oriented programming language often used for web development.",
+      "description": "Dynamic, interpreted programming language with focus on simplicity and productivity.",
       "github_release_url": "https://api.github.com/repos/ruby/ruby/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/ruby/tags/?page=1&page_size=100",
       "readme": "https://github.com/ruby/ruby/blob/master/README.md",
@@ -1458,7 +1458,7 @@
     },
     {
       "name": "PostgreSQL",
-      "description": "Powerful, open source object-relational database system.",
+      "description": "Advanced open-source relational database with strong standards compliance.",
       "github_release_url": "https://api.github.com/repos/postgres/postgres/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/postgres/tags/?page=1&page_size=100",
       "readme": "https://www.postgresql.org/",
@@ -1522,7 +1522,7 @@
     },
     {
       "name": "MySQL",
-      "description": "World's most popular open-source relational database management system.",
+      "description": "Open-source relational database management system.",
       "github_release_url": "https://api.github.com/repos/mysql/mysql-server/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/mysql/tags/?page=1&page_size=100",
       "readme": "https://github.com/mysql/mysql-server/blob/trunk/README",
@@ -1586,7 +1586,7 @@
     },
     {
       "name": "Redis",
-      "description": "In-memory data structure store, used as database, cache, and message broker.",
+      "description": "In-memory data structure store used as database, cache, and message broker.",
       "github_release_url": "https://api.github.com/repos/redis/redis/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/redis/tags/?page=1&page_size=100",
       "readme": "https://github.com/redis/redis/blob/unstable/README.md",
@@ -1702,7 +1702,7 @@
     },
     {
       "name": "MongoDB",
-      "description": "Cross-platform document-oriented database.",
+      "description": "Document-oriented NoSQL database with flexible schema.",
       "github_release_url": "https://api.github.com/repos/mongodb/mongo/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/mongo/tags/?page=1&page_size=100",
       "readme": "https://github.com/mongodb/mongo/blob/master/README.md",
@@ -1766,7 +1766,7 @@
     },
     {
       "name": "Jenkins",
-      "description": "In a nutshell, Jenkins is the leading open-source automation server.",
+      "description": "Automation server for continuous integration and continuous delivery pipelines.",
       "github_release_url": "https://api.github.com/repos/jenkinsci/jenkins/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/jenkins/jenkins/tags/?page=1&page_size=100",
       "readme": "https://github.com/jenkinsci/jenkins/blob/master/README.md",
@@ -1946,7 +1946,7 @@
     },
     {
       "name": "Nginx",
-      "description": "High-performance HTTP server, reverse proxy, and IMAP/POP3 proxy server known for stability, rich feature set, and low resource consumption.",
+      "description": "High-performance web server, reverse proxy, and load balancer.",
       "github_release_url": "https://api.github.com/repos/nginx/nginx/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/nginx/tags/?page=1&page_size=100",
       "readme": "http://nginx.org/",
@@ -2021,7 +2021,7 @@
     },
     {
       "name": "Vault",
-      "description": "Tool for secrets management, encryption as a service, and privileged access management.",
+      "description": "Tool for managing secrets and protecting sensitive data.",
       "github_release_url": "https://api.github.com/repos/hashicorp/vault/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hashicorp/vault/tags/?page=1&page_size=100",
       "readme": "https://github.com/hashicorp/vault/blob/main/README.md",
@@ -2485,7 +2485,7 @@
     },
     {
       "name": "Helm",
-      "description": "Helm is a tool for managing Charts Charts are packages of pre-configured Kubernetes resources.",
+      "description": "Package manager for Kubernetes applications.",
       "github_release_url": "https://api.github.com/repos/helm/helm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/alpine/helm/tags/?page=1&page_size=100",
       "readme": "https://github.com/helm/helm/blob/main/README.md",
@@ -3087,7 +3087,7 @@
     },
     {
       "name": "Grafana",
-      "description": "Open source analytics and interactive visualization web application.",
+      "description": "Analytics and monitoring platform with customizable dashboards.",
       "github_release_url": "https://api.github.com/repos/grafana/grafana/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/grafana/grafana/tags/?page=1&page_size=100",
       "readme": "https://github.com/grafana/grafana/blob/main/README.md",
@@ -3203,7 +3203,7 @@
     },
     {
       "name": "Elasticsearch",
-      "description": "Distributed RESTful search and analytics engine built on Apache Lucene - powers full-text search, logging, and analytics at scale.",
+      "description": "Distributed search and analytics engine for full-text search.",
       "github_release_url": "https://api.github.com/repos/elastic/elasticsearch/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/elasticsearch/tags/?page=1&page_size=100",
       "readme": "https://github.com/elastic/elasticsearch/blob/main/README.asciidoc",
@@ -3319,7 +3319,7 @@
     },
     {
       "name": "Logstash",
-      "description": "Logstash is part of the Elastic Stack along with Beats, Elasticsearch and Kibana.",
+      "description": "Server-side data processing pipeline for ingesting, transforming, and sending data.",
       "github_release_url": "https://api.github.com/repos/elastic/logstash/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/logstash/tags/?page=1&page_size=100",
       "readme": "https://github.com/elastic/logstash/blob/main/README.md",
@@ -3435,7 +3435,7 @@
     },
     {
       "name": "Kibana",
-      "description": "Kibana is the window into the Elastic Stack Specifically, it's a browser-based analytics and search dashboard for Elasticsearch.",
+      "description": "Data visualization and exploration platform for Elasticsearch.",
       "github_release_url": "https://api.github.com/repos/elastic/kibana/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/kibana/tags/?page=1&page_size=100",
       "readme": "https://github.com/elastic/kibana/blob/main/README.md",
@@ -3551,7 +3551,7 @@
     },
     {
       "name": "MariaDB",
-      "description": "MariaDB was designed as a drop-in replacement of MySQL with more features, new storage engines, fewer bugs, and better performance.",
+      "description": "Open-source relational database forked from MySQL with enhanced features.",
       "github_release_url": "https://api.github.com/repos/MariaDB/server/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/mariadb/tags/?page=1&page_size=100",
       "readme": "https://github.com/MariaDB/server/blob/main/README.md",
@@ -3633,7 +3633,7 @@
     },
     {
       "name": "RabbitMQ",
-      "description": "Feature-rich, reliable messaging broker supporting multiple messaging protocols for distributed systems.",
+      "description": "Message broker implementing AMQP for reliable messaging between applications.",
       "github_release_url": "https://api.github.com/repos/rabbitmq/rabbitmq-server/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/rabbitmq/tags/?page=1&page_size=100",
       "readme": "https://github.com/rabbitmq/rabbitmq-server/blob/main/README.md",
@@ -3813,7 +3813,7 @@
     },
     {
       "name": "Traefik",
-      "description": "Modern cloud native HTTP reverse proxy and load balancer - features automatic service discovery and dynamic configuration.",
+      "description": "Modern HTTP reverse proxy and load balancer for microservices.",
       "github_release_url": "https://api.github.com/repos/traefik/traefik/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/library/traefik/tags/?page=1&page_size=100",
       "readme": "https://github.com/traefik/traefik/blob/master/README.md",
@@ -4109,7 +4109,7 @@
     },
     {
       "name": "Certbot",
-      "description": "Tool to automatically use Let's Encrypt certificates.",
+      "description": "Tool for automatically obtaining and renewing Let's Encrypt SSL certificates.",
       "github_release_url": "https://api.github.com/repos/certbot/certbot/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/certbot/certbot/tags/?page=1&page_size=100",
       "readme": "https://github.com/certbot/certbot/blob/master/README.rst",
@@ -4457,7 +4457,7 @@
     },
     {
       "name": "Trivy",
-      "description": "Comprehensive security scanner for vulnerabilities in containers.",
+      "description": "Comprehensive security scanner for vulnerabilities in containers and filesystems.",
       "github_release_url": "https://api.github.com/repos/aquasecurity/trivy/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/aquasec/trivy/tags/?page=1&page_size=100",
       "readme": "https://github.com/aquasecurity/trivy/blob/main/README.md",
@@ -4689,7 +4689,7 @@
     },
     {
       "name": "Syft",
-      "description": "CLI tool and library for generating a Software Bill of Materials from container images.",
+      "description": "Tool for generating Software Bill of Materials (SBOM) from container images.",
       "github_release_url": "https://api.github.com/repos/anchore/syft/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/anchore/syft/tags/?page=1&page_size=100",
       "readme": "https://github.com/anchore/syft/blob/main/README.md",
@@ -4805,7 +4805,7 @@
     },
     {
       "name": "Dive",
-      "description": "Tool for exploring a docker image, layer contents, and discovering ways to shrink size.",
+      "description": "Tool for exploring Docker image layers and analyzing layer contents.",
       "github_release_url": "https://api.github.com/repos/wagoodman/dive/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/wagoodman/dive/tags/?page=1&page_size=100",
       "readme": "https://github.com/wagoodman/dive/blob/main/README.md",
@@ -5082,7 +5082,7 @@
     },
     {
       "name": "K9s",
-      "description": "Terminal-based UI for managing Kubernetes clusters - provides fast, intuitive navigation and interaction with cluster resources.",
+      "description": "Terminal-based UI for managing Kubernetes clusters.",
       "github_release_url": "https://api.github.com/repos/derailed/k9s/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/derailed/k9s/tags/?page=1&page_size=100",
       "readme": "https://github.com/derailed/k9s/blob/master/README.md",
@@ -5198,7 +5198,7 @@
     },
     {
       "name": "Kustomize",
-      "description": "Kubernetes native configuration management tool - customizes YAML configurations without templates using declarative overlays.",
+      "description": "Kubernetes configuration customization tool using declarative specifications.",
       "github_release_url": "https://api.github.com/repos/kubernetes-sigs/kustomize/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/line/kubectl-kustomize/tags/?page=1&page_size=100",
       "readme": "https://github.com/kubernetes-sigs/kustomize/blob/master/README.md",
@@ -5767,7 +5767,7 @@
     },
     {
       "name": "lazydocker",
-      "description": "Simple terminal UI for both docker and docker-compose.",
+      "description": "Terminal UI for managing Docker containers, images, and volumes.",
       "github_release_url": "https://api.github.com/repos/jesseduffield/lazydocker/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/lazyteam/lazydocker/tags/?page=1&page_size=100",
       "readme": "https://github.com/jesseduffield/lazydocker/blob/master/README.md",
@@ -5909,7 +5909,7 @@
     },
     {
       "name": "Minio",
-      "description": "High performance object storage compatible with Amazon S3 APIs.",
+      "description": "High-performance object storage with S3-compatible API.",
       "github_release_url": "https://api.github.com/repos/minio/minio/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/minio/minio/tags/?page=1&page_size=100",
       "readme": "https://github.com/minio/minio/blob/master/README.md",
@@ -6025,7 +6025,7 @@
     },
     {
       "name": "Rclone",
-      "description": "Command line program to manage files on cloud storage.",
+      "description": "Command-line program for syncing files and directories to cloud storage.",
       "github_release_url": "https://api.github.com/repos/rclone/rclone/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/rclone/rclone/tags/?page=1&page_size=100",
       "readme": "https://github.com/rclone/rclone/blob/master/README.md",
@@ -6141,7 +6141,7 @@
     },
     {
       "name": "Restic",
-      "description": "Restic is a backup program that is fast, efficient and secure.",
+      "description": "Fast, secure, efficient backup program with encryption and deduplication.",
       "github_release_url": "https://api.github.com/repos/restic/restic/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/restic/restic/tags/?page=1&page_size=100",
       "readme": "https://github.com/restic/restic/blob/master/README.md",
@@ -6303,7 +6303,7 @@
     },
     {
       "name": "Etcd",
-      "description": "Distributed reliable key-value store for the most critical data of distributed systems with a focus on simplicity and reliability.",
+      "description": "Distributed, reliable key-value store for distributed systems configuration.",
       "github_release_url": "https://api.github.com/repos/etcd-io/etcd/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/coreos/etcd/tag/?page=1&limit=100",
       "readme": "https://github.com/etcd-io/etcd/blob/main/README.md",
@@ -6419,7 +6419,7 @@
     },
     {
       "name": "Nmap",
-      "description": "Network exploration and security auditing tool - discovers hosts, services, operating systems, and vulnerabilities on networks.",
+      "description": "Network discovery and security auditing tool.",
       "github_release_url": "https://api.github.com/repos/nmap/nmap/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/instrumentisto/nmap/tags/?page=1&page_size=100",
       "readme": "https://github.com/nmap/nmap/blob/master/README.md",
@@ -6664,7 +6664,7 @@
     },
     {
       "name": "Nuclei",
-      "description": "Fast vulnerability scanner based on simple YAML templates.",
+      "description": "Fast vulnerability scanner based on templates.",
       "github_release_url": "https://api.github.com/repos/projectdiscovery/nuclei/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/projectdiscovery/nuclei/tags/?page=1&page_size=100",
       "readme": "https://github.com/projectdiscovery/nuclei/blob/main/README.md",
@@ -6780,7 +6780,7 @@
     },
     {
       "name": "Subfinder",
-      "description": "Subfinder is a subdomain discovery tool that returns valid subdomains for websites, using passive online sources.",
+      "description": "Subdomain discovery tool for penetration testing and bug bounty.",
       "github_release_url": "https://api.github.com/repos/projectdiscovery/subfinder/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/projectdiscovery/subfinder/tags/?page=1&page_size=100",
       "readme": "https://github.com/projectdiscovery/subfinder/blob/main/README.md",
@@ -6869,7 +6869,7 @@
     },
     {
       "name": "Dasel",
-      "description": "Query and update data structures from the command line.",
+      "description": "Query and update data structures using selector syntax (JSON, YAML, TOML, XML).",
       "github_release_url": "https://api.github.com/repos/TomWright/dasel/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/TomWright/dasel/pkgs/container/dasel",
       "readme": "https://github.com/TomWright/dasel/blob/master/README.md",
@@ -6945,7 +6945,7 @@
     },
     {
       "name": "Crane",
-      "description": "Tool for interacting with remote images and registries.",
+      "description": "Tool for interacting with remote container registries.",
       "github_release_url": "https://api.github.com/repos/google/go-containerregistry/releases?per_page=100&page=1",
       "docker_tags_url": "https://console.cloud.google.com/gcr/images/go-containerregistry/global/crane",
       "readme": "https://github.com/google/go-containerregistry/blob/main/README.md",
@@ -7004,7 +7004,7 @@
     },
     {
       "name": "Cosign",
-      "description": "Signing OCI containers (and other artifacts) using Sigstore! Cosign aims to make signatures invisible infrastructure.",
+      "description": "Container image signing and verification tool.",
       "github_release_url": "https://api.github.com/repos/sigstore/cosign/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bitnami/cosign/tags/?page=1&page_size=100",
       "readme": "https://github.com/sigstore/cosign/blob/main/README.md",
@@ -7120,7 +7120,7 @@
     },
     {
       "name": "Loki",
-      "description": "Log aggregation system designed to be cost effective and easy to operate.",
+      "description": "Horizontally-scalable log aggregation system.",
       "github_release_url": "https://api.github.com/repos/grafana/loki/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/grafana/loki/tags/?page=1&page_size=100",
       "readme": "https://github.com/grafana/loki/blob/main/README.md",
@@ -7236,7 +7236,7 @@
     },
     {
       "name": "Promtail",
-      "description": "Agent which ships the contents of local logs to a Loki instance.",
+      "description": "Agent for shipping logs to Loki.",
       "github_release_url": "https://api.github.com/repos/grafana/loki/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/grafana/promtail/tags/?page=1&page_size=100",
       "readme": "https://github.com/grafana/loki/blob/main/README.md",
@@ -7352,7 +7352,7 @@
     },
     {
       "name": "Benthos",
-      "description": "Redpanda Connect is a high performance and resilient stream processor, able to connect various [sources][inputs] and [sinks][outputs] in a range of brokering patterns and perform [hydration, enrichments, transformations and filters][processors] on payloads.",
+      "description": "Stream processor for mundane data processing tasks.",
       "github_release_url": "https://api.github.com/repos/benthosdev/benthos/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/jeffail/benthos/tags/?page=1&page_size=100",
       "readme": "https://github.com/benthosdev/benthos/blob/main/README.md",
@@ -7468,7 +7468,7 @@
     },
     {
       "name": "Gomplate",
-      "description": "Template renderer supporting many datasources and template engines.",
+      "description": "Template processor with support for multiple data sources.",
       "github_release_url": "https://api.github.com/repos/hairyhenderson/gomplate/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hairyhenderson/gomplate/tags/?page=1&page_size=100",
       "readme": "https://github.com/hairyhenderson/gomplate/blob/main/README.md",
@@ -7584,7 +7584,7 @@
     },
     {
       "name": "Terraform-docs",
-      "description": "Utility to generate documentation from Terraform modules - automatically creates markdown, JSON, or YAML docs from code.",
+      "description": "Tool for generating documentation from Terraform modules.",
       "github_release_url": "https://api.github.com/repos/terraform-docs/terraform-docs/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/terraform-docs/terraform-docs/tag/?page=1&limit=100",
       "readme": "https://github.com/terraform-docs/terraform-docs/blob/master/README.md",
@@ -7669,7 +7669,7 @@
     },
     {
       "name": "Tflint",
-      "description": "Terraform linter focused on possible errors, best practices, etc.",
+      "description": "Linter for Terraform configurations focused on errors and best practices.",
       "github_release_url": "https://api.github.com/repos/terraform-linters/tflint/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/terraform-linters/tflint/pkgs/container/tflint",
       "readme": "https://github.com/terraform-linters/tflint/blob/master/README.md",
@@ -7745,7 +7745,7 @@
     },
     {
       "name": "Terragrunt",
-      "description": "Thin wrapper for Terraform that provides extra tools for keeping configurations DRY.",
+      "description": "Thin wrapper for Terraform providing extra tools for keeping configurations DRY.",
       "github_release_url": "https://api.github.com/repos/gruntwork-io/terragrunt/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/alpine/terragrunt/tags/?page=1&page_size=100",
       "readme": "https://github.com/gruntwork-io/terragrunt/blob/master/README.md",
@@ -7861,7 +7861,7 @@
     },
     {
       "name": "Checkov",
-      "description": "Static code analysis tool for infrastructure as code.",
+      "description": "Static analysis tool for infrastructure-as-code security scanning.",
       "github_release_url": "https://api.github.com/repos/bridgecrewio/checkov/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bridgecrew/checkov/tags/?page=1&page_size=100",
       "readme": "https://github.com/bridgecrewio/checkov/blob/main/README.md",
@@ -7977,7 +7977,7 @@
     },
     {
       "name": "Tfsec",
-      "description": "Static analysis security scanner for Terraform code - detects potential security issues before infrastructure deployment.",
+      "description": "Security scanner for Terraform code.",
       "github_release_url": "https://api.github.com/repos/aquasecurity/tfsec/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/aquasec/tfsec/tags/?page=1&page_size=100",
       "readme": "https://github.com/aquasecurity/tfsec/blob/master/README.md",
@@ -8093,7 +8093,7 @@
     },
     {
       "name": "Infracost",
-      "description": "Cloud cost estimates for Terraform in pull requests.",
+      "description": "Cost estimates for Terraform projects.",
       "github_release_url": "https://api.github.com/repos/infracost/infracost/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/infracost/infracost/tags/?page=1&page_size=100",
       "readme": "https://github.com/infracost/infracost/blob/master/README.md",
@@ -8209,7 +8209,7 @@
     },
     {
       "name": "Pulumi",
-      "description": "Infrastructure as Code SDK using general-purpose programming languages.",
+      "description": "Infrastructure as code platform using familiar programming languages.",
       "github_release_url": "https://api.github.com/repos/pulumi/pulumi/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/pulumi/pulumi/tags/?page=1&page_size=100",
       "readme": "https://github.com/pulumi/pulumi/blob/master/README.md",

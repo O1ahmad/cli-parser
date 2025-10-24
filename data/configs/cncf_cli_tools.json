@@ -3302,7 +3302,7 @@
     },
     {
       "name": "Copa",
-      "description": "🧵 CLI tool for directly patching container images!.",
+      "description": "\ud83e\uddf5 CLI tool for directly patching container images!.",
       "github_release_url": "https://api.github.com/repos/project-copacetic/copacetic/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/lib/alpine/tag/?page=1&limit=100",
       "readme": "https://github.com/project-copacetic/copacetic/blob/main/README.md",
@@ -4191,7 +4191,7 @@
     },
     {
       "name": "DevSpace",
-      "description": "DevSpace - The Fastest Developer Tool for Kubernetes ⚡ Automate your deployment workflow with DevSpace and develop software directly inside Kubernetes.",
+      "description": "DevSpace - The Fastest Developer Tool for Kubernetes \u26a1 Automate your deployment workflow with DevSpace and develop software directly inside Kubernetes.",
       "github_release_url": "https://api.github.com/repos/devspace-sh/devspace/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/devspacesh/devspace/tags/?page=1&page_size=100",
       "readme": "https://github.com/devspace-sh/devspace/blob/main/README.md",
@@ -6086,7 +6086,7 @@
     },
     {
       "name": "Helm",
-      "description": "Helm is a tool for managing Charts Charts are packages of pre-configured Kubernetes resources.",
+      "description": "Package manager for Kubernetes applications.",
       "github_release_url": "https://api.github.com/repos/helm/helm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/alpine/helm/tags/?page=1&page_size=100",
       "readme": "https://github.com/helm/helm/blob/main/README.md",
@@ -9005,7 +9005,7 @@
     },
     {
       "name": "Krustlet",
-      "description": "⚠️ This project is currently not actively maintained.",
+      "description": "\u26a0\ufe0f This project is currently not actively maintained.",
       "github_release_url": "https://api.github.com/repos/krustlet/krustlet/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/bloodorangeio/krustlet-wascc/tags/?page=1&page_size=100",
       "readme": "https://github.com/krustlet/krustlet/blob/main/README.md",
@@ -10960,7 +10960,7 @@
     },
     {
       "name": "Kuma",
-      "description": "🐻 The multi-zone service mesh for containers, Kubernetes and VMs.",
+      "description": "\ud83d\udc3b The multi-zone service mesh for containers, Kubernetes and VMs.",
       "github_release_url": "https://api.github.com/repos/kumahq/kuma/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/yfdyh000/kuma/tags/?page=1&page_size=100",
       "readme": "https://github.com/kumahq/kuma/blob/master/README.md",
@@ -12165,7 +12165,7 @@
       "subcategory": "Management"
     },
     {
-      "name": "Metal³",
+      "name": "Metal\u00b3",
       "description": "Bare metal host provisioning integration for Kubernetes.",
       "github_release_url": "https://api.github.com/repos/metal3-io/baremetal-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://quay.io/api/v1/repository/metal3-io/baremetal-operator/tag/?page=1&limit=100",
@@ -15506,7 +15506,7 @@
     },
     {
       "name": "Prometheus",
-      "description": "The Prometheus monitoring system and time series database.",
+      "description": "Monitoring system and time series database for metrics collection.",
       "github_release_url": "https://api.github.com/repos/prometheus/prometheus/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/prom/prometheus/tags/?page=1&page_size=100",
       "readme": "https://github.com/prometheus/prometheus/blob/main/README.md",
@@ -16380,7 +16380,7 @@
     },
     {
       "name": "Serverless Devs",
-      "description": ":fire: Serverless Devs: Serverless developer tool ( Serverless Devs: Serverless 开发者工具 ).",
+      "description": ":fire: Serverless Devs: Serverless developer tool ( Serverless Devs: Serverless \u5f00\u53d1\u8005\u5de5\u5177 ).",
       "github_release_url": "https://api.github.com/repos/Serverless-Devs/Serverless-Devs/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/tencentcom/serverless-devs/tags/?page=1&page_size=100",
       "readme": "https://github.com/Serverless-Devs/Serverless-Devs/blob/master/readme.md",
@@ -17411,7 +17411,7 @@
     },
     {
       "name": "Strimzi",
-      "description": "Strimzi provides a way to run an [Apache Kafka®][kafka] cluster on [Kubernetes][k8s] or [OpenShift][os] in various deployment configurations.",
+      "description": "Strimzi provides a way to run an [Apache Kafka\u00ae][kafka] cluster on [Kubernetes][k8s] or [OpenShift][os] in various deployment configurations.",
       "github_release_url": "https://api.github.com/repos/strimzi/strimzi-kafka-operator/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/strimzi/kafka/tags/?page=1&page_size=100",
       "readme": "https://github.com/strimzi/strimzi-kafka-operator/blob/main/README.md",

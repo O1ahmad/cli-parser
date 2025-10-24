@@ -18,7 +18,7 @@
   "apache_cli_tools": [
     {
       "name": "Kafka",
-      "description": "Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.",
+      "description": "Distributed event streaming platform for high-performance data pipelines and real-time applications.",
       "github_release_url": "https://api.github.com/repos/apache/kafka/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/kafka/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/kafka/blob/master/README.md",
@@ -139,7 +139,7 @@
     },
     {
       "name": "Hadoop",
-      "description": "Distributed computing framework for processing large datasets across clusters using the MapReduce programming model and HDFS storage.",
+      "description": "Distributed computing framework for processing large datasets across clusters using MapReduce and HDFS.",
       "github_release_url": "https://api.github.com/repos/apache/hadoop/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/hadoop/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/hadoop/blob/trunk/README.txt",
@@ -252,7 +252,7 @@
     },
     {
       "name": "Cassandra",
-      "description": "Apache Cassandra is a highly-scalable partitioned row store.",
+      "description": "Highly-scalable partitioned row store NoSQL database for distributed data management.",
       "github_release_url": "https://api.github.com/repos/apache/cassandra/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/cassandra",
       "readme": "https://github.com/apache/cassandra/blob/trunk/README.asc",
@@ -291,7 +291,7 @@
     },
     {
       "name": "Couchdb",
-      "description": "Multi-master sync NoSQL database with an intuitive HTTP/JSON API, designed for reliability and ease of use.",
+      "description": "Multi-master sync NoSQL database with HTTP/JSON API for reliability and ease of use.",
       "github_release_url": "https://api.github.com/repos/apache/couchdb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/couchdb/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/couchdb/blob/main/README.rst",
@@ -342,7 +342,7 @@
     },
     {
       "name": "Httpd",
-      "description": "The Apache HTTP Server - world's most popular open-source web server providing secure, efficient, and extensible HTTP services.",
+      "description": "Open-source web server providing secure, efficient, and extensible HTTP services.",
       "github_release_url": "https://api.github.com/repos/apache/httpd/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/httpd",
       "readme": "https://github.com/apache/httpd/blob/master/README.md",
@@ -367,7 +367,7 @@
     },
     {
       "name": "Tomcat",
-      "description": "The Apache Tomcat® software is an open source implementation of the Jakarta Servlet, Jakarta Pages, Jakarta Expression Language and Jakarta WebSocket technologies.",
+      "description": "Implementation of Jakarta Servlet, Server Pages, Expression Language and WebSocket technologies.",
       "github_release_url": "https://api.github.com/repos/apache/tomcat/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/tomcat",
       "readme": "https://github.com/apache/tomcat/blob/main/README.md",
@@ -392,7 +392,7 @@
     },
     {
       "name": "Maven",
-      "description": "Apache Maven is a software project management and comprehension tool.",
+      "description": "Software project management and comprehension tool for Java applications.",
       "github_release_url": "https://api.github.com/repos/apache/maven/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/maven",
       "readme": "https://github.com/apache/maven/blob/master/README.md",
@@ -444,7 +444,7 @@
     },
     {
       "name": "Ant",
-      "description": "Ant is a Java based build tool providing in theory it is kind of like \"make\" without makes wrinkles and with the full portability of pure java code.",
+      "description": "Java-based build tool with cross-platform portability for automated builds.",
       "github_release_url": "https://api.github.com/repos/apache/ant/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/ant/blob/master/README",
@@ -458,7 +458,7 @@
     },
     {
       "name": "Gradle",
-      "description": "Gradle is an open-source build automation tool focused on flexibility and performance - supports Java, Kotlin, Groovy, Scala, C/C++, and more.",
+      "description": "Build automation tool with flexibility and performance for Java, Kotlin, Groovy, Scala, C/C++, and more.",
       "github_release_url": "https://api.github.com/repos/gradle/gradle/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/gradle",
       "readme": "https://github.com/gradle/gradle/blob/master/README.md",
@@ -599,7 +599,7 @@
     },
     {
       "name": "Zookeeper",
-      "description": "Centralized service for maintaining configuration information, naming, providing distributed synchronization, and group services for distributed applications.",
+      "description": "Centralized service for configuration, naming, distributed synchronization, and group services.",
       "github_release_url": "https://api.github.com/repos/apache/zookeeper/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/zookeeper",
       "readme": "https://github.com/apache/zookeeper/blob/master/README.md",
@@ -622,7 +622,7 @@
     },
     {
       "name": "Activemq",
-      "description": "High-performance message broker supporting multiple protocols and messaging patterns for distributed applications.",
+      "description": "High-performance message broker supporting multiple protocols and messaging patterns.",
       "github_release_url": "https://api.github.com/repos/apache/activemq/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/activemq-classic/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/activemq/blob/main/README.md",
@@ -656,7 +656,7 @@
     },
     {
       "name": "Pulsar",
-      "description": "Pulsar is a distributed pub-sub messaging platform with a very flexible messaging model and an intuitive client API.",
+      "description": "Distributed pub-sub messaging platform with flexible messaging model and intuitive client API.",
       "github_release_url": "https://api.github.com/repos/apache/pulsar/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apachepulsar/pulsar/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/pulsar/blob/master/README.md",
@@ -772,7 +772,7 @@
     },
     {
       "name": "Rocketmq",
-      "description": "Distributed messaging and streaming platform with low latency, high performance, reliability, and trillion-level capacity.",
+      "description": "Distributed messaging and streaming platform with low latency and high performance.",
       "github_release_url": "https://api.github.com/repos/apache/rocketmq/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/rocketmq/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/rocketmq/blob/main/README.md",
@@ -839,7 +839,7 @@
     },
     {
       "name": "Ozone",
-      "description": "Ozone is a scalable, redundant, and distributed object store for Hadoop and Cloud-native environments.",
+      "description": "Scalable, redundant, and distributed object store for Hadoop and cloud-native environments.",
       "github_release_url": "https://api.github.com/repos/apache/ozone/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/ozone/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/ozone/blob/master/README.md",
@@ -877,7 +877,7 @@
     },
     {
       "name": "Bookkeeper",
-      "description": "Apache BookKeeper is a scalable, fault-tolerant and low latency storage service optimized for append-only workloads.",
+      "description": "Scalable, fault-tolerant, low-latency storage service optimized for append-only workloads.",
       "github_release_url": "https://api.github.com/repos/apache/bookkeeper/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/bookkeeper/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/bookkeeper/blob/master/README.md",
@@ -963,7 +963,7 @@
     },
     {
       "name": "Beam",
-      "description": "Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and Runners for executing them on distributed processing backends, including Apache Flink,.",
+      "description": "Unified model for defining batch and streaming data-parallel processing pipelines.",
       "github_release_url": "https://api.github.com/repos/apache/beam/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/beam/blob/master/README.md",
@@ -1028,7 +1028,7 @@
     },
     {
       "name": "Storm",
-      "description": "Storm is a distributed realtime computation system.",
+      "description": "Distributed realtime computation system for stream processing.",
       "github_release_url": "https://api.github.com/repos/apache/storm/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/storm/blob/master/README.markdown",
@@ -1048,7 +1048,7 @@
     },
     {
       "name": "Samza",
-      "description": "Samza is a distributed stream processing framework.",
+      "description": "Distributed stream processing framework for real-time data processing.",
       "github_release_url": "https://api.github.com/repos/apache/samza/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/samza/blob/master/README.md",
@@ -1062,7 +1062,7 @@
     },
     {
       "name": "Airflow",
-      "description": "| Badges | | |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.",
+      "description": "Workflow orchestration platform for programmatically authoring, scheduling, and monitoring data pipelines.",
       "github_release_url": "https://api.github.com/repos/apache/airflow/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/airflow/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/airflow/blob/main/README.md",
@@ -1177,7 +1177,7 @@
     },
     {
       "name": "Oozie",
-      "description": "Oozie is an extensible, scalable and reliable system to define, manage, schedule, and execute complex Hadoop workloads via web services.",
+      "description": "Workflow scheduler for managing Hadoop jobs and dependencies.",
       "github_release_url": "https://api.github.com/repos/apache/oozie/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/oozie/blob/master/README.md",
@@ -1191,7 +1191,7 @@
     },
     {
       "name": "Solr",
-      "description": "----------------------------------- Solr is the blazing-fast, open source, multi-modal search platform built on Apache Lucene.",
+      "description": "Blazing-fast, open-source, multi-modal search platform built on Apache Lucene.",
       "github_release_url": "https://api.github.com/repos/apache/solr/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/_/solr",
       "readme": "https://github.com/apache/solr/blob/main/README.md",
@@ -1216,7 +1216,7 @@
     },
     {
       "name": "Lucene",
-      "description": "!Lucene Logo Apache Lucene is a high-performance, full-featured text search engine library written in Java.",
+      "description": "High-performance, full-featured text search engine library written in Java.",
       "github_release_url": "https://api.github.com/repos/apache/lucene/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/lucene/blob/main/README.md",
@@ -1255,7 +1255,7 @@
     },
     {
       "name": "Arrow",
-      "description": "Apache Arrow is a universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics.",
+      "description": "Universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics.",
       "github_release_url": "https://api.github.com/repos/apache/arrow/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/arrow/blob/main/README.md",
@@ -1296,7 +1296,7 @@
     },
     {
       "name": "Thrift",
-      "description": "Thrift is a lightweight, language-independent software stack for point-to-point RPC implementation.",
+      "description": "Lightweight, language-independent software stack for point-to-point RPC implementation.",
       "github_release_url": "https://api.github.com/repos/apache/thrift/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/thrift/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/thrift/blob/master/README.md",
@@ -1330,7 +1330,7 @@
     },
     {
       "name": "Avro",
-      "description": "Data serialization system providing rich data structures, compact binary format, and schema evolution support.",
+      "description": "Data serialization system with rich data structures, compact binary format, and schema evolution support.",
       "github_release_url": "https://api.github.com/repos/apache/avro/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/avro/blob/main/README.md",
@@ -1367,7 +1367,7 @@
     },
     {
       "name": "Parquet",
-      "description": "This repository contains the specification for [Apache Parquet] and [Apache Thrift] definitions to read and write Parquet metadata.",
+      "description": "Columnar storage format specification for efficient data processing.",
       "github_release_url": "https://api.github.com/repos/apache/parquet/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/apache/parquet-format/blob/master/README.md",
@@ -1381,7 +1381,7 @@
     },
     {
       "name": "Druid",
-      "description": "Druid is a high performance real-time analytics database.",
+      "description": "High-performance real-time analytics database for fast aggregations and queries.",
       "github_release_url": "https://api.github.com/repos/apache/druid/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/druid/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/druid/blob/master/README.md",
@@ -1497,7 +1497,7 @@
     },
     {
       "name": "NiFi",
-      "description": "NiFi is an easy to use, powerful, and reliable system to process and distribute data.",
+      "description": "Easy-to-use, powerful, and reliable system for processing and distributing data.",
       "github_release_url": "https://api.github.com/repos/apache/nifi/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/nifi/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/nifi/blob/main/README.md",
@@ -1561,7 +1561,7 @@
     },
     {
       "name": "Superset",
-      "description": "Modern data exploration and visualization platform for enterprise business intelligence with an intuitive interface and rich visualizations.",
+      "description": "Modern data exploration and visualization platform for enterprise business intelligence.",
       "github_release_url": "https://api.github.com/repos/apache/superset/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/superset/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/superset/blob/master/README.md",
@@ -1676,7 +1676,7 @@
     },
     {
       "name": "Zeppelin",
-      "description": "Web-based notebook that enables interactive data analytics with multi-language support and visualization capabilities.",
+      "description": "Web-based notebook for interactive data analytics with multi-language support and visualization.",
       "github_release_url": "https://api.github.com/repos/apache/zeppelin/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/zeppelin/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/zeppelin/blob/master/README.md",
@@ -1702,7 +1702,7 @@
     },
     {
       "name": "Pinot",
-      "description": "Pinot is a real-time distributed OLAP datastore, built to deliver scalable real-time analytics with low latency.",
+      "description": "Real-time distributed OLAP datastore for scalable analytics with low latency.",
       "github_release_url": "https://api.github.com/repos/apache/pinot/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apachepinot/pinot/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/pinot/blob/master/README.md",
@@ -1789,7 +1789,7 @@
     },
     {
       "name": "IoTDB",
-      "description": "Time-series database for IoT scenarios with high-throughput data collection, storage, and analysis capabilities.",
+      "description": "Time-series database for IoT with high-throughput data collection, storage, and analysis.",
       "github_release_url": "https://api.github.com/repos/apache/iotdb/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/iotdb/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/iotdb/blob/master/README.md",
@@ -1901,7 +1901,7 @@
     },
     {
       "name": "DolphinScheduler",
-      "description": "Apache DolphinScheduler is a modern data orchestration platform that empowers agile, low-code development of high-performance workflows.",
+      "description": "Modern data orchestration platform for agile, low-code development of high-performance workflows.",
       "github_release_url": "https://api.github.com/repos/apache/dolphinscheduler/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/dolphinscheduler/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/dolphinscheduler/blob/dev/README.md",
@@ -1982,7 +1982,7 @@
     },
     {
       "name": "Doris",
-      "description": "Apache Doris is an easy-to-use, high-performance and real-time analytical database based on MPP architecture, known for its extreme speed and ease of use.",
+      "description": "Easy-to-use, high-performance real-time analytical database based on MPP architecture.",
       "github_release_url": "https://api.github.com/repos/apache/doris/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/doris/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/doris/blob/master/README.md",
@@ -2098,7 +2098,7 @@
     },
     {
       "name": "Drill",
-      "description": "Apache Drill is a distributed MPP query layer that supports SQL and alternative query languages against NoSQL and Hadoop data storage systems.",
+      "description": "Distributed MPP query layer supporting SQL and alternative query languages against NoSQL and Hadoop systems.",
       "github_release_url": "https://api.github.com/repos/apache/drill/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/drill/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/drill/blob/master/README.md",
@@ -2191,7 +2191,7 @@
     },
     {
       "name": "Kyuubi",
-      "description": "Apache Kyuubi™ is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.",
+      "description": "Distributed and multi-tenant gateway for serverless SQL on data warehouses and lakehouses.",
       "github_release_url": "https://api.github.com/repos/apache/kyuubi/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/kyuubi/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/kyuubi/blob/master/README.md",
@@ -2306,7 +2306,7 @@
     },
     {
       "name": "APISIX",
-      "description": "Apache APISIX is a dynamic, real-time, high-performance API Gateway.",
+      "description": "Dynamic, real-time, high-performance API Gateway.",
       "github_release_url": "https://api.github.com/repos/apache/apisix/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/apisix/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/apisix/blob/master/README.md",
@@ -2422,7 +2422,7 @@
     },
     {
       "name": "ShenYu",
-      "description": "ShenYu (神禹) is the honorific name of Chinese ancient monarch Xia Yu (also known in later times as Da Yu), who left behind the touching story of the three times he crossed the Yellow River.",
+      "description": "High-performance API Gateway for microservices with plugin-based architecture.",
       "github_release_url": "https://api.github.com/repos/apache/shenyu/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/shenyu-bootstrap/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/shenyu/blob/master/README.md",
@@ -2464,7 +2464,7 @@
     },
     {
       "name": "ShardingSphere",
-      "description": "Apache ShardingSphere is a distributed SQL transaction & query engine that allows for data sharding, scaling, encryption, and more - on any database.",
+      "description": "Distributed SQL transaction and query engine for data sharding, scaling, and encryption.",
       "github_release_url": "https://api.github.com/repos/apache/shardingsphere/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/shardingsphere-proxy/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/shardingsphere/blob/master/README.md",
@@ -2544,7 +2544,7 @@
     },
     {
       "name": "Camel",
-      "description": "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns with powerful Bean Integration.",
+      "description": "Open-source integration framework based on Enterprise Integration Patterns with powerful Bean Integration.",
       "github_release_url": "https://api.github.com/repos/apache/camel/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/camel-k/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/camel/blob/trunk/README.txt",
@@ -2609,7 +2609,7 @@
     },
     {
       "name": "EventMesh",
-      "description": "Apache EventMesh is a new generation serverless event middleware for building distributed event-driven applications.",
+      "description": "Serverless event middleware for building distributed event-driven applications.",
       "github_release_url": "https://api.github.com/repos/apache/eventmesh/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/eventmesh/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/eventmesh/blob/master/README.md",
@@ -2641,7 +2641,7 @@
     },
     {
       "name": "SeaTunnel",
-      "description": "- Why Choose SeaTunnel - Key Features - SeaTunnel Workflow - Supported Connectors - Getting Started - Multimodal Data Integration - Apache SeaTunnel Tools - Use Cases - Code of Conduct - Contributors - How to Compile.",
+      "description": "High-performance distributed data integration platform for synchronization and transformation.",
       "github_release_url": "https://api.github.com/repos/apache/seatunnel/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/seatunnel/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/seatunnel/blob/dev/README.md",
@@ -2712,7 +2712,7 @@
     },
     {
       "name": "Ranger",
-      "description": "Apache Ranger allows contributions via pull requests (PRs) on GitHub.",
+      "description": "Framework for enabling, monitoring and managing comprehensive data security across Hadoop platform.",
       "github_release_url": "https://api.github.com/repos/apache/ranger/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/ranger/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/ranger/blob/master/README.md",
@@ -2731,7 +2731,7 @@
     },
     {
       "name": "SkyWalking",
-      "description": "SkyWalking is an open-source APM system that provides monitoring, tracing and diagnosing capabilities for distributed systems in Cloud Native architectures.",
+      "description": "APM system for monitoring, tracing and diagnosing distributed systems in cloud-native architectures.",
       "github_release_url": "https://api.github.com/repos/apache/skywalking/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/skywalking-oap-server/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/skywalking/blob/master/README.md",
@@ -2846,7 +2846,7 @@
     },
     {
       "name": "Dubbo-Admin",
-      "description": "A Cloud-Native Microservice Framework Build apps with built-in rpc, traffic management, security, observability support that can deploy on kubernetes and vm.",
+      "description": "Administration console for Apache Dubbo microservice framework.",
       "github_release_url": "https://api.github.com/repos/apache/dubbo-admin/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/dubbo-admin/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/dubbo-admin/blob/develop/README.md",
@@ -2874,7 +2874,7 @@
     },
     {
       "name": "RocketMQ-Dashboard",
-      "description": "Web-based administration console for Apache RocketMQ, providing visualization and management of topics, consumers, producers, and message traces.",
+      "description": "Web-based administration console for Apache RocketMQ message queuing system.",
       "github_release_url": "https://api.github.com/repos/apache/rocketmq-dashboard/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apacherocketmq/rocketmq-dashboard/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/rocketmq-dashboard/blob/master/README.md",
@@ -2897,7 +2897,7 @@
     },
     {
       "name": "APISIX-Dashboard",
-      "description": "- The master version should be used with Apache APISIX master version.",
+      "description": "Dashboard UI for Apache APISIX API Gateway management.",
       "github_release_url": "https://api.github.com/repos/apache/apisix-dashboard/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/apisix-dashboard/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/apisix-dashboard/blob/master/README.md",
@@ -2970,7 +2970,7 @@
     },
     {
       "name": "Kudu",
-      "description": "Columnar storage manager for structured data supporting fast analytics on rapidly changing data.",
+      "description": "Columnar storage manager for structured data with fast analytics on rapidly changing data.",
       "github_release_url": "https://api.github.com/repos/apache/kudu/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/kudu/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/kudu/blob/master/README.md",
@@ -3041,7 +3041,7 @@
     },
     {
       "name": "Kylin",
-      "description": "Open-source distributed analytics engine providing SQL interface and multi-dimensional OLAP analysis on Hadoop for extremely large datasets.",
+      "description": "Distributed analytics engine providing SQL interface and OLAP analysis on Hadoop for large datasets.",
       "github_release_url": "https://api.github.com/repos/apache/kylin/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apachekylin/apache-kylin-standalone/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/kylin/blob/master/README.md",
@@ -3068,7 +3068,7 @@
     },
     {
       "name": "HBase",
-      "description": "NoSQL distributed database built on Hadoop for random, real-time read/write access to big data tables.",
+      "description": "NoSQL distributed database built on Hadoop for random, real-time read/write access to big data.",
       "github_release_url": "https://api.github.com/repos/apache/hbase/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/r/harisekhon/hbase",
       "readme": "https://github.com/apache/hbase/blob/master/README.txt",
@@ -3140,7 +3140,7 @@
     },
     {
       "name": "IoTDB-Web-Workbench",
-      "description": "Web-based workbench for Apache IoTDB, providing data visualization, query management, and database administration for time-series data.",
+      "description": "Web-based workbench for Apache IoTDB with data visualization and query management.",
       "github_release_url": "https://api.github.com/repos/apache/iotdb-web-workbench/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/apache/iotdb-web-workbench/tags/?page=1&page_size=100",
       "readme": "https://github.com/apache/iotdb-web-workbench/blob/main/README.md",

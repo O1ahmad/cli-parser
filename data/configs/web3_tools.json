@@ -23,7 +23,7 @@
   "blockchain_tools": [
     {
       "name": "Geth (go-ethereum)",
-      "description": "Official Go implementation of the Ethereum protocol - the most widely used Ethereum execution client.",
+      "description": "Official Go implementation of the Ethereum protocol execution client.",
       "github_release_url": "https://api.github.com/repos/ethereum/go-ethereum/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ethereum/client-go/tags/?page=1&page_size=100",
       "readme": "https://github.com/ethereum/go-ethereum/blob/master/README.md",
@@ -139,7 +139,7 @@
     },
     {
       "name": "Lighthouse",
-      "description": "Ethereum consensus client in Rust with a focus on speed and security.",
+      "description": "Ethereum consensus client implementation in Rust focused on security and performance.",
       "github_release_url": "https://api.github.com/repos/sigp/lighthouse/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/sigp/lighthouse/tags/?page=1&page_size=100",
       "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
@@ -255,7 +255,7 @@
     },
     {
       "name": "Foundry",
-      "description": "Blazing fast, portable and modular toolkit for Ethereum application development written in Rust - includes Forge, Cast, Anvil, and Chisel.",
+      "description": "Fast, portable Ethereum development toolkit written in Rust.",
       "github_release_url": "https://api.github.com/repos/foundry-rs/foundry/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/foundry-rs/foundry/pkgs/container/foundry",
       "readme": "https://github.com/foundry-rs/foundry/blob/master/README.md",
@@ -336,7 +336,7 @@
     },
     {
       "name": "Hardhat",
-      "description": "Ethereum development environment for professionals - flexible, extensible and fast.",
+      "description": "Ethereum development environment for compiling, deploying, testing, and debugging smart contracts.",
       "github_release_url": "https://api.github.com/repos/NomicFoundation/hardhat/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/NomicFoundation/hardhat/blob/main/README.md",
@@ -405,7 +405,7 @@
     },
     {
       "name": "Nethermind",
-      "description": "Fast, enterprise-grade .NET Ethereum execution client with JSON-RPC support and Eth2 readiness.",
+      "description": ".NET Ethereum execution client for enterprise and institutional use.",
       "github_release_url": "https://api.github.com/repos/NethermindEth/nethermind/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/nethermind/nethermind/tags/?page=1&page_size=100",
       "readme": "https://github.com/NethermindEth/nethermind/blob/master/README.md",
@@ -521,7 +521,7 @@
     },
     {
       "name": "Besu",
-      "description": "Enterprise-grade Java-based Ethereum execution client for public and private networks.",
+      "description": "Enterprise-grade Ethereum execution client supporting public and private networks.",
       "github_release_url": "https://api.github.com/repos/hyperledger/besu/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/hyperledger/besu/tags/?page=1&page_size=100",
       "readme": "https://github.com/hyperledger/besu/blob/main/README.md",
@@ -637,7 +637,7 @@
     },
     {
       "name": "Erigon",
-      "description": "Ethereum implementation focused on performance and disk space efficiency.",
+      "description": "Ethereum execution client focused on performance and disk space efficiency.",
       "github_release_url": "https://api.github.com/repos/erigontech/erigon/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/erigontech/erigon/tags/?page=1&page_size=100",
       "readme": "https://github.com/erigontech/erigon/blob/main/README.md",
@@ -753,7 +753,7 @@
     },
     {
       "name": "Prysm",
-      "description": "Go implementation of Ethereum consensus client with a focus on usability, security, and reliability.",
+      "description": "Go implementation of the Ethereum consensus protocol with focus on usability and security.",
       "github_release_url": "https://api.github.com/repos/prysmaticlabs/prysm/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/prysmaticlabs/prysm-beacon-chain/tags/?page=1&page_size=100",
       "readme": "https://github.com/prysmaticlabs/prysm/blob/develop/README.md",
@@ -820,7 +820,7 @@
     },
     {
       "name": "Teku",
-      "description": "Java implementation of the Ethereum consensus client built by ConsenSys.",
+      "description": "Enterprise-grade Ethereum consensus client written in Java.",
       "github_release_url": "https://api.github.com/repos/Consensys/teku/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/consensys/teku/tags/?page=1&page_size=100",
       "readme": "https://github.com/Consensys/teku/blob/master/README.md",
@@ -936,7 +936,7 @@
     },
     {
       "name": "Nimbus",
-      "description": "Lightweight Ethereum consensus client in Nim language.",
+      "description": "Lightweight Ethereum consensus client optimized for resource-restricted devices.",
       "github_release_url": "https://api.github.com/repos/status-im/nimbus-eth2/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/statusim/nimbus-eth2/tags/?page=1&page_size=100",
       "readme": "https://github.com/status-im/nimbus-eth2/blob/stable/README.md",
@@ -1055,7 +1055,7 @@
     },
     {
       "name": "Reth",
-      "description": "Modular, contributor-friendly Ethereum execution client in Rust by Paradigm.",
+      "description": "Modular, contributor-friendly Ethereum execution client written in Rust.",
       "github_release_url": "https://api.github.com/repos/paradigmxyz/reth/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/paradigmxyz/reth/pkgs/container/reth",
       "readme": "https://github.com/paradigmxyz/reth/blob/main/README.md",
@@ -1247,7 +1247,7 @@
     },
     {
       "name": "Bitcoin Core",
-      "description": "Bitcoin Core integration/staging tree - the reference implementation of Bitcoin.",
+      "description": "Reference implementation of the Bitcoin protocol.",
       "github_release_url": "https://api.github.com/repos/bitcoin/bitcoin/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ruimarinho/bitcoin-core/tags/?page=1&page_size=100",
       "readme": "https://github.com/bitcoin/bitcoin/blob/master/README.md",
@@ -1441,7 +1441,7 @@
     },
     {
       "name": "Ganache",
-      "description": "Personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests.",
+      "description": "Personal Ethereum blockchain for development and testing.",
       "github_release_url": "https://api.github.com/repos/trufflesuite/ganache/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/trufflesuite/ganache/tags/?page=1&page_size=100",
       "readme": "https://github.com/trufflesuite/ganache/blob/master/README.md",
@@ -1549,7 +1549,7 @@
     },
     {
       "name": "Brownie",
-      "description": "Python-based development and testing framework for smart contracts targeting EVM.",
+      "description": "Python-based development and testing framework for Ethereum smart contracts.",
       "github_release_url": "https://api.github.com/repos/eth-brownie/brownie/releases?per_page=100&page=1",
       "docker_tags_url": "",
       "readme": "https://github.com/eth-brownie/brownie/blob/master/README.md",
@@ -1801,7 +1801,7 @@
     },
     {
       "name": "Mythril",
-      "description": "Security analysis tool for EVM bytecode with symbolic execution.",
+      "description": "Security analysis tool for Ethereum smart contracts.",
       "github_release_url": "https://api.github.com/repos/Consensys/mythril/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/mythril/myth/tags/?page=1&page_size=100",
       "readme": "https://github.com/Consensys/mythril/blob/master/README.md",
@@ -1934,7 +1934,7 @@
     },
     {
       "name": "The Graph",
-      "description": "Indexing protocol for querying networks like Ethereum and IPFS.",
+      "description": "Indexing protocol for querying blockchain data with GraphQL.",
       "github_release_url": "https://api.github.com/repos/graphprotocol/graph-node/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/graphprotocol/graph-node/tags/?page=1&page_size=100",
       "readme": "https://github.com/graphprotocol/graph-node/blob/master/README.md",
@@ -2050,7 +2050,7 @@
     },
     {
       "name": "IPFS",
-      "description": "Peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge.",
+      "description": "Peer-to-peer hypermedia protocol for content-addressed, distributed file system.",
       "github_release_url": "https://api.github.com/repos/ipfs/kubo/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ipfs/kubo/tags/?page=1&page_size=100",
       "readme": "https://github.com/ipfs/kubo/blob/master/README.md",
@@ -2117,7 +2117,7 @@
     },
     {
       "name": "Chainlink",
-      "description": "Decentralized oracle network enabling smart contracts to securely access off-chain data.",
+      "description": "Decentralized oracle network connecting smart contracts with real-world data.",
       "github_release_url": "https://api.github.com/repos/smartcontractkit/chainlink/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/smartcontract/chainlink/tags/?page=1&page_size=100",
       "readme": "https://github.com/smartcontractkit/chainlink/blob/develop/README.md",
@@ -2349,7 +2349,7 @@
     },
     {
       "name": "Ape Framework",
-      "description": "Framework for Web3 Python Applications - Ethereum development framework for professionals.",
+      "description": "Framework for testing and deploying smart contracts with Python.",
       "github_release_url": "https://api.github.com/repos/ApeWorX/ape/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/ApeWorX/ape/pkgs/container/ape",
       "readme": "https://github.com/ApeWorX/ape/blob/main/README.md",
@@ -2784,7 +2784,7 @@
     },
     {
       "name": "Base",
-      "description": "Ethereum Layer 2 built on the OP Stack by Coinbase.",
+      "description": "Ethereum Layer 2 blockchain built on OP Stack for secure, low-cost transactions.",
       "github_release_url": "https://api.github.com/repos/base-org/node/releases?per_page=100&page=1",
       "docker_tags_url": "https://github.com/orgs/base-org/packages",
       "readme": "https://github.com/base-org/node/blob/main/README.md",
@@ -2936,7 +2936,7 @@
     },
     {
       "name": "Starknet",
-      "description": "Permissionless Layer 2 validity rollup using STARK proofs.",
+      "description": "Decentralized validity rollup (ZK-rollup) for Ethereum scalability.",
       "github_release_url": "https://api.github.com/repos/starkware-libs/cairo/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/starknet/cairo/tags/?page=1&page_size=100",
       "readme": "https://github.com/starkware-libs/cairo/blob/main/README.md",
@@ -3057,7 +3057,7 @@
     },
     {
       "name": "Polkadot",
-      "description": "Multi-chain heterogeneous sharded blockchain protocol enabling interoperability between different blockchains via cross-chain message passing.",
+      "description": "Heterogeneous multi-chain protocol enabling cross-chain transfers and interoperability.",
       "github_release_url": "https://api.github.com/repos/paritytech/polkadot-sdk/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/parity/polkadot/tags/?page=1&page_size=100",
       "readme": "https://github.com/paritytech/polkadot-sdk/blob/master/README.md",
@@ -3241,7 +3241,7 @@
     },
     {
       "name": "Avalanche",
-      "description": "Highly scalable blockchain platform with sub-second finality - supports custom blockchains, DeFi applications, and enterprise solutions.",
+      "description": "Platform for launching decentralized applications and enterprise blockchain deployments.",
       "github_release_url": "https://api.github.com/repos/ava-labs/avalanchego/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/avaplatform/avalanchego/tags/?page=1&page_size=100",
       "readme": "https://github.com/ava-labs/avalanchego/blob/master/README.md",
@@ -3357,7 +3357,7 @@
     },
     {
       "name": "Near Protocol",
-      "description": "Sharded, proof-of-stake blockchain designed to be scalable and usable.",
+      "description": "Sharded, proof-of-stake Layer 1 blockchain designed for usability and scalability.",
       "github_release_url": "https://api.github.com/repos/near/nearcore/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/nearprotocol/nearcore/tags/?page=1&page_size=100",
       "readme": "https://github.com/near/nearcore/blob/master/README.md",
@@ -3540,7 +3540,7 @@
     },
     {
       "name": "Sui",
-      "description": "Next-generation smart contract platform with high throughput, low latency.",
+      "description": "Layer 1 blockchain with object-centric data model and Move programming language.",
       "github_release_url": "https://api.github.com/repos/MystenLabs/sui/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/mysten/sui-node/tags/?page=1&page_size=100",
       "readme": "https://github.com/MystenLabs/sui/blob/main/README.md",
@@ -3656,7 +3656,7 @@
     },
     {
       "name": "Aptos",
-      "description": "Layer 1 blockchain focused on safety and scalability.",
+      "description": "Layer 1 blockchain using Move programming language with parallel execution engine.",
       "github_release_url": "https://api.github.com/repos/aptos-labs/aptos-core/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/aptoslabs/validator/tags/?page=1&page_size=100",
       "readme": "https://github.com/aptos-labs/aptos-core/blob/main/README.md",
@@ -4032,7 +4032,7 @@
     },
     {
       "name": "Vyper",
-      "description": "Pythonic smart contract language for Ethereum Virtual Machine - emphasizes security, simplicity, and auditability over flexibility.",
+      "description": "Pythonic smart contract language with security and auditability focus.",
       "github_release_url": "https://api.github.com/repos/vyperlang/vyper/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/vyperlang/vyper/tags/?page=1&page_size=100",
       "readme": "https://github.com/vyperlang/vyper/blob/master/README.md",
@@ -4154,7 +4154,7 @@
     },
     {
       "name": "Solidity",
-      "description": "Contract-oriented programming language for writing smart contracts.",
+      "description": "Object-oriented programming language for writing smart contracts on Ethereum.",
       "github_release_url": "https://api.github.com/repos/ethereum/solidity/releases?per_page=100&page=1",
       "docker_tags_url": "https://hub.docker.com/v2/repositories/ethereum/solc/tags/?page=1&page_size=100",
       "readme": "https://github.com/ethereum/solidity/blob/develop/README.md",

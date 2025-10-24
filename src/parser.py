@@ -43,6 +43,8 @@ def download_and_extract(url, dest="/usr/local/bin"):
     file_path = download_file(url, dest)
     return extract_file(file_path, dest)
 
+DOCKER_IMAGE = None
+
 def call_command(binary, commands):
     """
     Calls the specified command for the binary and returns the output.
@@ -58,10 +60,14 @@ def call_command(binary, commands):
         Exception: If all attempts to get command output fail.
     """
     for command in commands:
-        cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + command
+        if DOCKER_IMAGE:
+            cmd = ["docker", "run", "--rm", DOCKER_IMAGE, binary] + command
+        else:
+            cmd = ([binary] if len(binary.split()) < 2 else binary.split()) + command
         result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode == 0:
-            return result.stdout.strip()
+        output = result.stdout.strip() or result.stderr.strip()
+        if output:
+            return output
     raise Exception(f"Failed to get output for {binary} with commands {commands}")
 
 def call_help(binary, command=None):
@@ -182,7 +188,7 @@ def analyze_binary_version(binary):
         print(str(e))
         return None
 
-def main(binary_name, url=None, mongodb_url=None, override=False):
+def main(binary_name, url=None, mongodb_url=None, override=False, docker_image=None):
     """
     Main function to analyze a binary's help output and optionally save the results to MongoDB.
 
@@ -191,7 +197,10 @@ def main(binary_name, url=None, mongodb_url=None, override=False):
         url (str, optional): URL to download the binary or archive file. Defaults to None.
         mongodb_url (str, optional): MongoDB connection string. Defaults to None.
         override (bool, optional): Whether to override existing document if it exists. Defaults to False.
+        docker_image (str, optional): Docker image to run the binary in. Defaults to None.
     """
+    global DOCKER_IMAGE
+    DOCKER_IMAGE = docker_image
     db = None
     if mongodb_url:
         client = MongoClient(mongodb_url)
@@ -234,6 +243,7 @@ if __name__ == "__main__":
     parser.add_argument("--url", type=str, help="Optional URL to download the binary or archive file")
     parser.add_argument("--override", action='store_true', help="Override existing document if it exists")
     parser.add_argument("--mongodb-url", type=str, help="MongoDB connection string")
+    parser.add_argument("--docker", type=str, help="Docker image to run the binary in")
 
     args = parser.parse_args()
 
@@ -242,4 +252,4 @@ if __name__ == "__main__":
         parser.print_help()
         exit(1)
     
-    main(args.binary_name, args.url, args.mongodb_url, args.override)
+    main(args.binary_name, args.url, args.mongodb_url, args.override, args.docker)

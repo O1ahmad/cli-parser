@@ -1,0 +1,104 @@
+# Terragrunt - Help Output
+# Image: docker.io/alpine/terragrunt:0.11.13
+# Command: /usr/local/bin/terragrunt --help
+# Exit Code: 0
+================================================================================
+
+DESCRIPTION:
+   terragrunt - Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple
+   Terraform modules, remote state, and locking. For documentation, see https://github.com/gruntwork-io/terragrunt/.
+
+USAGE:
+   terragrunt <COMMAND>
+
+COMMANDS:
+   plan-all             Display the plans of a 'stack' by running 'terragrunt plan' in each subfolder
+   apply-all            Apply a 'stack' by running 'terragrunt apply' in each subfolder
+   output-all           Display the outputs of a 'stack' by running 'terragrunt output' in each subfolder
+   destroy-all          Destroy a 'stack' by running 'terragrunt destroy' in each subfolder
+   validate-all         Validate 'stack' by running 'terragrunt validate' in each subfolder
+   *                    Terragrunt forwards all other commands directly to Terraform
+
+GLOBAL OPTIONS:
+   terragrunt-config                        Path to the Terragrunt config file. Default is terraform.tfvars.
+   terragrunt-tfpath                        Path to the Terraform binary. Default is terraform (on PATH).
+   terragrunt-no-auto-init                  Don't automatically run 'terraform init' during other terragrunt commands. You must run 'terragrunt init' manually.
+   terragrunt-no-auto-retry                 Don't automatically re-run command in case of transient errors.
+   terragrunt-non-interactive               Assume "yes" for all prompts.
+   terragrunt-working-dir                   The path to the Terraform templates. Default is current directory.
+   terragrunt-download-dir                  The path where to download Terraform code. Default is .terragrunt-cache in the working directory.
+   terragrunt-source                        Download Terraform configurations from the specified source into a temporary folder, and run Terraform in that temporary folder.
+   terragrunt-source-update                 Delete the contents of the temporary folder to clear out any old, cached source code before downloading new source code into it.
+   terragrunt-iam-role                     Assume the specified IAM role before executing Terraform. Can also be set via the TERRAGRUNT_IAM_ROLE environment variable.
+   terragrunt-ignore-dependency-errors      *-all commands continue processing components even if a dependency fails.
+   terragrunt-ignore-external-dependencies  *-all commands will not attempt to include external dependencies
+   terragrunt-exclude-dir                   Unix-style glob of directories to exclude when running *-all commands
+   terragrunt-include-dir                   Unix-style glob of directories to include when running *-all commands
+
+VERSION:
+   v0.18.3
+
+AUTHOR(S):
+   Gruntwork <www.gruntwork.io>
+   
+
+--- STDERR ---
+Unable to find image 'alpine/terragrunt:0.11.13' locally
+0.11.13: Pulling from alpine/terragrunt
+bdf0201b3a05: Pulling fs layer
+67a4a175230f: Pulling fs layer
+5b688ca58800: Pulling fs layer
+d7ba3c159069: Pulling fs layer
+97cb7140decc: Pulling fs layer
+2fab4a406cd5: Pulling fs layer
+f181b190475f: Pulling fs layer
+cf5ea9cd26bc: Pulling fs layer
+93685cde0271: Pulling fs layer
+122e989a5a1d: Pulling fs layer
+b8e0ddfc059e: Pulling fs layer
+e152a250eec5: Pulling fs layer
+d7ba3c159069: Waiting
+97cb7140decc: Waiting
+2fab4a406cd5: Waiting
+cf5ea9cd26bc: Waiting
+93685cde0271: Waiting
+122e989a5a1d: Waiting
+b8e0ddfc059e: Waiting
+f181b190475f: Waiting
+e152a250eec5: Waiting
+bdf0201b3a05: Verifying Checksum
+bdf0201b3a05: Pull complete
+5b688ca58800: Verifying Checksum
+5b688ca58800: Download complete
+67a4a175230f: Verifying Checksum
+67a4a175230f: Download complete
+67a4a175230f: Pull complete
+5b688ca58800: Pull complete
+97cb7140decc: Verifying Checksum
+97cb7140decc: Download complete
+d7ba3c159069: Verifying Checksum
+d7ba3c159069: Download complete
+2fab4a406cd5: Verifying Checksum
+2fab4a406cd5: Download complete
+d7ba3c159069: Pull complete
+97cb7140decc: Pull complete
+f181b190475f: Verifying Checksum
+f181b190475f: Download complete
+2fab4a406cd5: Pull complete
+cf5ea9cd26bc: Verifying Checksum
+cf5ea9cd26bc: Download complete
+f181b190475f: Pull complete
+cf5ea9cd26bc: Pull complete
+93685cde0271: Verifying Checksum
+93685cde0271: Download complete
+93685cde0271: Pull complete
+e152a250eec5: Verifying Checksum
+e152a250eec5: Download complete
+122e989a5a1d: Download complete
+122e989a5a1d: Pull complete
+b8e0ddfc059e: Verifying Checksum
+b8e0ddfc059e: Download complete
+b8e0ddfc059e: Pull complete
+e152a250eec5: Pull complete
+Digest: sha256:947891e58ea7e1e625a3f2ceef694631e69462d9e4ff20fa282e76b862ba2667
+Status: Downloaded newer image for alpine/terragrunt:0.11.13

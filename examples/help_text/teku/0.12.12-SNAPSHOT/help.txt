@@ -1,0 +1,177 @@
+# Teku - Help Output
+# Image: docker.io/consensys/teku:0.12.12-SNAPSHOT
+# Command: /opt/teku/bin/teku --help
+# Exit Code: 0
+================================================================================
+
+
+teku [OPTIONS] [COMMAND]
+
+Description:
+
+Run the Teku beacon chain client and validator
+
+Options:
+  -c, --config-file=<FILENAME>
+                             Path/filename of the yaml config file (default:
+                               none)
+      --data-beacon-path=<FILENAME>
+                             Path to beacon node data
+                               Default: <data-base-path>/beacon
+      --data-path, --data-base-path=<FILENAME>
+                             Path to the base directory for storage
+                               Default: /opt/teku/.local/share/teku
+      --data-storage-archive-frequency=<FREQUENCY>
+                             Sets the frequency, in slots, at which to store
+                               finalized states to disk.
+                               Default: 2048
+      --data-storage-mode=<STORAGE_MODE>
+                             Sets the strategy for handling historical chain
+                               data.  (Valid values: ARCHIVE, PRUNE)
+                               Default: PRUNE
+      --data-validator-path=<FILENAME>
+                             Path to validator client data
+                               Default: <data-base-path>/validator
+      --eth1-deposit-contract-address=<ADDRESS>
+                             Contract address for the deposit contract.
+                               Required if eth1-endpoint is set.
+      --eth1-endpoint=<NETWORK>
+                             URL for Eth1 node.
+  -h, --help                 Show this help message and exit.
+      --initial-state=<STRING>
+                             Initial BeaconState to load
+  -l, --logging=<LOG VERBOSITY LEVEL>
+                             Logging verbosity levels: OFF, FATAL, ERROR, WARN,
+                               INFO, DEBUG, TRACE, ALL (default: INFO).
+      --log-color-enabled[=<BOOLEAN>]
+                             Whether Status and Event log messages include a
+                               console color display code
+      --log-destination=<LOG_DESTINATION>
+                             Whether a logger is added for the console, the log
+                               file, or both (Valid values: BOTH, CONSOLE,
+                               DEFAULT_BOTH, FILE)
+                               Default: DEFAULT_BOTH
+      --log-file=<FILENAME>  Path containing the location (relative or
+                               absolute) and the log filename.
+                               Default: /opt/teku/.local/share/teku/logs/teku.
+                               log
+      --log-file-name-pattern=<REGEX>
+                             Pattern for the filename to apply to rolled over
+                               log files.
+                               Default: /opt/teku/.local/share/teku/logs/teku_%d
+                               {yyyy-MM-dd}.log
+      --log-include-events-enabled[=<BOOLEAN>]
+                             Whether frequent update events are logged (e.g.
+                               every slot and epoch event)
+      --log-include-validator-duties-enabled[=<BOOLEAN>]
+                             Whether events are logged when validators perform
+                               duties
+      --metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]
+                             Metric categories to enable
+                               Default: [JVM, PROCESS, BEACON, EVENTBUS,
+                               EXECUTOR, LIBP2P, NETWORK, STORAGE,
+                               STORAGE_HOT_DB, STORAGE_FINALIZED_DB,
+                               REMOTE_VALIDATOR, VALIDATOR,
+                               VALIDATOR_PERFORMANCE]
+      --metrics-enabled[=<BOOLEAN>]
+                             Enables metrics collection via Prometheus
+      --metrics-host-allowlist[=<hostname>[,<hostname>...]...]
+                             Comma-separated list of hostnames to allow, or *
+                               to allow any host
+                               Default: [127.0.0.1, localhost]
+      --metrics-interface=<NETWORK>
+                             Metrics network interface to expose metrics for
+                               Prometheus
+                               Default: 0.0.0.0
+      --metrics-port=<INTEGER>
+                             Metrics port to expose metrics for Prometheus
+                               Default: 8008
+  -n, --network=<NETWORK>    Represents which network to use.
+                               Default: medalla
+      --p2p-advertised-ip=<NETWORK>
+                             P2P advertised IP
+      --p2p-advertised-port=<INTEGER>
+                             P2P advertised port
+      --p2p-discovery-bootnodes[=<enr:-...>[,<enr:-...>...]...]
+                             List of ENRs of the bootnodes
+      --p2p-discovery-enabled[=<BOOLEAN>]
+                             Enables discv5 discovery
+      --p2p-enabled[=<BOOLEAN>]
+                             Enables P2P
+      --p2p-interface=<NETWORK>
+                             P2P network interface
+                               Default: 0.0.0.0
+      --p2p-peer-lower-bound=<INTEGER>
+                             Lower bound on the target number of peers
+                               Default: 64
+      --p2p-peer-upper-bound=<INTEGER>
+                             Upper bound on the target number of peers
+                               Default: 74
+      --p2p-port=<INTEGER>   P2P port
+                               Default: 9000
+      --p2p-private-key-file=<FILENAME>
+                             This node's private key file
+      --p2p-static-peers[=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]
+                             Static peers
+                               Default: []
+      --p2p-subscribe-all-subnets-enabled=<BOOLEAN>
+
+      --rest-api-docs-enabled[=<BOOLEAN>]
+                             Enable swagger-docs and swagger-ui endpoints
+      --rest-api-enabled[=<BOOLEAN>]
+                             Enables Beacon Rest API
+      --rest-api-host-allowlist[=<hostname>[,<hostname>...]...]
+                             Comma-separated list of hostnames to allow, or *
+                               to allow any host
+                               Default: [127.0.0.1, localhost]
+      --rest-api-interface=<NETWORK>
+                             Interface of Beacon Rest API
+                               Default: 0.0.0.0
+      --rest-api-port=<INTEGER>
+                             Port number of Beacon Rest API
+                               Default: 5051
+  -V, --version              Print version information and exit.
+      --validator-keys=<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:
+        <PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...
+                             <KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json,
+                               and expect to find <PASS_DIR>/**.txt.
+                             <KEY_FILE>:<PASS_FILE> will expect that the file
+                               <KEY_FILE> exists, and the file containing the
+                               password for it is <PASS_FILE>.
+                             The path separator is operating system dependent,
+                               and should be ';' in windows rather than ':'.
+                               Default: []
+      --validators-external-signer-public-keys[=<STRINGS>[,<STRINGS>...]...]
+                             The list of external signer public keys
+                               Default: []
+      --validators-external-signer-timeout=<INTEGER>
+                             Timeout (in milliseconds) for the external signing
+                               service
+                               Default: 1000
+      --validators-external-signer-url=<NETWORK>
+                             URL for the external signing service
+      --validators-graffiti=<GRAFFITI STRING>
+                             Graffiti to include during block creation (gets
+                               converted to bytes and padded to Bytes32).
+      --validators-keystore-locking-enabled=<BOOLEAN>
+                             Enable locking validator keystore files
+      --validators-performance-tracking-enabled[=<BOOLEAN>]
+                             Enable validator performance tracking and logging
+      --ws-checkpoint=<BLOCK_ROOT>:<EPOCH_NUMBER>
+                             A recent checkpoint within the weak subjectivity
+                               period.
+Commands:
+  help                  Displays help information about the specified command
+  admin                 Holds advanced tools for node admins
+  transition            Manually run state transitions
+  peer                  Commands for LibP2P PeerID
+  genesis               Commands for generating genesis state
+  slashing-protection   Manage local slashing protection data used by the
+                          validator client.
+  debug-tools           Utilities for debugging issues
+  validator-client, vc  Run a Validator Client that connects to a remote Beacon
+                          Node
+  validator             [DEPRECATED] Register validators by sending deposit
+                          transactions to an Ethereum 1 node
+
+Teku is licensed under the Apache License 2.0

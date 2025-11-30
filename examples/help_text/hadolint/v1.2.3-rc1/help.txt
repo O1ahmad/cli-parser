@@ -1,0 +1,29 @@
+# Hadolint - Help Output
+# Image: docker.io/hadolint/hadolint:v1.2.3-rc1
+# Command: /bin/hadolint --help
+# Exit Code: 0
+================================================================================
+
+hadolint - Dockerfile Linter written in Haskell
+
+Usage: hadolint [-v|--version] [--ignore RULECODE] [DOCKERFILE...]
+  Lint Dockerfile for errors and best practices
+
+Available options:
+  -h,--help                Show this help text
+  -v,--version             Show version
+  --ignore RULECODE        Ignore rule
+
+--- STDERR ---
+Unable to find image 'hadolint/hadolint:v1.2.3-rc1' locally
+v1.2.3-rc1: Pulling from hadolint/hadolint
+8da261274716: Pulling fs layer
+195cec4e3018: Pulling fs layer
+8da261274716: Verifying Checksum
+8da261274716: Download complete
+8da261274716: Pull complete
+195cec4e3018: Verifying Checksum
+195cec4e3018: Download complete
+195cec4e3018: Pull complete
+Digest: sha256:79511eee9d9c5dc713d3ee53a62c40a75e36c2b38e7fd92af7412aa95404b742
+Status: Downloaded newer image for hadolint/hadolint:v1.2.3-rc1

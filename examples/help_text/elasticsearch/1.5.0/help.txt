@@ -1,0 +1,7 @@
+# Elasticsearch - Help Output
+# Image: docker.io/elastic/elasticsearch:1.5.0
+# Command: /usr/share/elasticsearch/bin/elasticsearch --help
+# Exit Code: -1
+================================================================================
+
+[Failed after trying all strategies]

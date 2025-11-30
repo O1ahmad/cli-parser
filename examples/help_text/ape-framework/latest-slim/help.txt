@@ -1,0 +1,25 @@
+# Ape Framework - Help Output
+# Image: ghcr.io/apeworx/ape:latest-slim
+# Command: /usr/local/bin/ape --help
+# Exit Code: 0
+================================================================================
+
+Usage: ape [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  -v, --verbosity LVL  One of ERROR, WARNING, SUCCESS, INFO, or DEBUG
+  --version            Show the version and exit.
+  --config             Show configuration options (using `ape-config.yaml`)
+  -h, --help           Show this message and exit.
+
+Core Commands:
+  accounts  Manage local accounts
+  cache     Query from caching database
+  compile   Compile select contract source files
+  console   Load the console
+  init      Initialize an ape project
+  networks  Manage networks
+  plugins   Manage ape plugins
+  pm        Package management tools
+  run       Run scripts from the `scripts/` folder
+  test      Launches pytest and runs the tests for a project

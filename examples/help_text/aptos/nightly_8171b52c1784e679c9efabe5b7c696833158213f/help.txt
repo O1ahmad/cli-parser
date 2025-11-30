@@ -1,0 +1,54 @@
+# Aptos - Help Output
+# Image: docker.io/aptoslabs/validator:nightly_8171b52c1784e679c9efabe5b7c696833158213f
+# Command: /usr/local/bin/aptos-node --help
+# Exit Code: 0
+================================================================================
+
+Runs an Aptos validator or fullnode
+
+Usage: aptos-node [OPTIONS]
+
+Options:
+  -f, --config <CONFIG>
+          Path to node configuration file (or template for local test mode)
+
+      --test-dir <TEST_DIR>
+          Directory to run the test mode in.
+          
+          Repeated runs will start up from previous state.
+
+      --test-config-override <TEST_CONFIG_OVERRIDE>
+          Path to node configuration file override for local test mode. Cannot be used with --config
+
+      --test
+          Run only a single validator node testnet
+
+      --performance
+          Optimize the single validator node testnet for higher performance
+
+      --seed <SEED>
+          Random number generator seed for starting a single validator testnet
+
+      --random-ports
+          Use random ports instead of ports from the node configuration
+
+      --genesis-framework <GENESIS_FRAMEWORK>
+          Paths to the Aptos framework release package to be used for genesis
+
+      --lazy
+          Enable lazy mode.
+          
+          Setting this flag will set `consensus#mempool_poll_count` config to `u64::MAX` and only
+          commit a block when there are user transactions in mempool.
+
+      --info
+          Display information about the build of this node
+
+      --stacktrace
+          Start as a child process to collect thread dump. See rstack-self crate for more details
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version

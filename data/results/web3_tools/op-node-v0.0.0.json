@@ -1,0 +1,233 @@
+{
+  "name": "op-node",
+  "description": "Optimism Rollup Node",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--l1",
+      "shortcut": null,
+      "description": "Address of L1 User JSON-RPC endpoint to use (eth namespace required)",
+      "value": "value",
+      "default": "http://127.0.0.1:8545"
+    },
+    {
+      "option": "--l2",
+      "shortcut": null,
+      "description": "Addresses of L2 Engine JSON-RPC endpoints to use (engine and eth namespace required)",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--rollup.config",
+      "shortcut": null,
+      "description": "Rollup chain parameters",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--l2.eth",
+      "shortcut": null,
+      "description": "Address of L2 User JSON-RPC endpoint to use (eth namespace required)",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--rpc.addr",
+      "shortcut": null,
+      "description": "RPC listening address",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--rpc.port",
+      "shortcut": null,
+      "description": "RPC listening port",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--l1.trustrpc",
+      "shortcut": null,
+      "description": "Trust the L1 RPC, sync faster at risk of malicious/buggy RPC providing bad or inconsistent L1 data",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--sequencing.enabled",
+      "shortcut": null,
+      "description": "enable sequencing",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log.level",
+      "shortcut": null,
+      "description": "The lowest log level that will be output",
+      "value": "value",
+      "default": "info"
+    },
+    {
+      "option": "--log.format",
+      "shortcut": null,
+      "description": "Format the log output. Supported formats: 'text', 'json'",
+      "value": "value",
+      "default": "text"
+    },
+    {
+      "option": "--log.color",
+      "shortcut": null,
+      "description": "Color the log output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--snapshotlog.file",
+      "shortcut": null,
+      "description": "Path to the snapshot log file",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--p2p.disable",
+      "shortcut": null,
+      "description": "Completely disable the P2P stack",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p.no-discovery",
+      "shortcut": null,
+      "description": "Disable Discv5 (node discovery)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p.priv.path",
+      "shortcut": null,
+      "description": "Read the hex-encoded 32-byte private key for the peer ID from this txt file. Created if not already exists. Important to persist to keep the same network identity after restarting, maintaining the previous advertised identity.",
+      "value": "value",
+      "default": "opnode_p2p_priv.txt"
+    },
+    {
+      "option": "--p2p.listen.ip",
+      "shortcut": null,
+      "description": "IP to bind LibP2P and Discv5 to",
+      "value": "value",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--p2p.listen.tcp",
+      "shortcut": null,
+      "description": "TCP port to bind LibP2P to. Any available system port if set to 0.",
+      "value": "value",
+      "default": 9222
+    },
+    {
+      "option": "--p2p.listen.udp",
+      "shortcut": null,
+      "description": "UDP port to bind Discv5 to. Same as TCP port if left 0.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--p2p.advertise.ip",
+      "shortcut": null,
+      "description": "The IP address to advertise in Discv5, put into the ENR of the node",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--p2p.advertise.tcp",
+      "shortcut": null,
+      "description": "The TCP port to advertise in Discv5, put into the ENR of the node. Set to p2p.listen.tcp value if 0.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--p2p.advertise.udp",
+      "shortcut": null,
+      "description": "The UDP port to advertise in Discv5 as fallback if not determined by Discv5, put into the ENR of the node. Set to p2p.listen.udp value if 0.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--p2p.bootnodes",
+      "shortcut": null,
+      "description": "Comma-separated base64-format ENR list. Bootnodes to start discovering other node records from.",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--p2p.static",
+      "shortcut": null,
+      "description": "Comma-separated multiaddr-format peer list. Static connections to make and maintain, these peers will be regarded as trusted.",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--p2p.peers.lo",
+      "shortcut": null,
+      "description": "Low-tide peer count. The node actively searches for new peer connections if below this amount.",
+      "value": "value",
+      "default": 20
+    },
+    {
+      "option": "--p2p.peers.hi",
+      "shortcut": null,
+      "description": "High-tide peer count. The node starts pruning peer connections slowly after reaching this number.",
+      "value": "value",
+      "default": 30
+    },
+    {
+      "option": "--p2p.peers.grace",
+      "shortcut": null,
+      "description": "Grace period to keep a newly connected peer around, if it is not misbehaving.",
+      "value": "value",
+      "default": "30s"
+    },
+    {
+      "option": "--p2p.nat",
+      "shortcut": null,
+      "description": "Enable NAT traversal with PMP/UPNP devices to learn external IP.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p.peerstore.path",
+      "shortcut": null,
+      "description": "Peerstore database location. Persisted peerstores help recover peers after restarts. Set to 'memory' to never persist the peerstore.",
+      "value": "value",
+      "default": "opnode_peerstore_db"
+    },
+    {
+      "option": "--p2p.discovery.path",
+      "shortcut": null,
+      "description": "Discovered ENRs are persisted in a database to recover from a restart without having to bootstrap the discovery process again. Set to 'memory' to never persist the peerstore.",
+      "value": "value",
+      "default": "opnode_discovery_db"
+    },
+    {
+      "option": "--p2p.sequencer.key",
+      "shortcut": null,
+      "description": "File path of hex-encoded private key for signing off on p2p application messages as sequencer.",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "NAME:\n   opnode - Optimism Rollup Node\n\nUSAGE:\n   op-node [global options] command [command options] [arguments...]\n\nVERSION:\n   v0.0.0\n\nDESCRIPTION:\n   The deposit only rollup node drives the L2 execution engine based on L1 deposits.\n\nCOMMANDS:\n   help, h  Shows a list of commands or help for one command\n\nGLOBAL OPTIONS:\n   --l1 value                  Address of L1 User JSON-RPC endpoint to use (eth namespace required) (default: \"http://127.0.0.1:8545\") [$ROLLUP_NODE_L1_ETH_RPC]\n   --l2 value                  Addresses of L2 Engine JSON-RPC endpoints to use (engine and eth namespace required) [$ROLLUP_NODE_L2_ENGINE_RPC]\n   --rollup.config value       Rollup chain parameters [$ROLLUP_NODE_ROLLUP_CONFIG]\n   --l2.eth value              Address of L2 User JSON-RPC endpoint to use (eth namespace required) [$ROLLUP_NODE_L2_ETH_RPC]\n   --rpc.addr value            RPC listening address [$ROLLUP_NODE_RPC_ADDR]\n   --rpc.port value            RPC listening port (default: 0) [$ROLLUP_NODE_RPC_PORT]\n   --l1.trustrpc               Trust the L1 RPC, sync faster at risk of malicious/buggy RPC providing bad or inconsistent L1 data [$ROLLUP_NODE_L1_TRUST_RPC]\n   --sequencing.enabled        enable sequencing [$ROLLUP_NODE_SEQUENCING_ENABLED]\n   --log.level value           The lowest log level that will be output (default: \"info\") [$ROLLUP_NODE_LOG_LEVEL]\n   --log.format value          Format the log output. Supported formats: 'text', 'json' (default: \"text\") [$ROLLUP_NODE_LOG_FORMAT]\n   --log.color                 Color the log output [$ROLLUP_NODE_LOG_COLOR]\n   --snapshotlog.file value    Path to the snapshot log file [$ROLLUP_NODE_SNAPSHOT_LOG]\n   --p2p.disable               Completely disable the P2P stack [$ROLLUP_NODE_P2P_DISABLE]\n   --p2p.no-discovery          Disable Discv5 (node discovery) [$ROLLUP_NODE_P2P_NO_DISCOVERY]\n   --p2p.priv.path value       Read the hex-encoded 32-byte private key for the peer ID from this txt file. Created if not already exists.Important to persist to keep the same network identity after restarting, maintaining the previous advertised identity. (default: \"opnode_p2p_priv.txt\") [$ROLLUP_NODE_P2P_PRIV_PATH]\n   --p2p.listen.ip value       IP to bind LibP2P and Discv5 to (default: \"0.0.0.0\") [$ROLLUP_NODE_P2P_LISTEN_IP]\n   --p2p.listen.tcp value      TCP port to bind LibP2P to. Any available system port if set to 0. (default: 9222) [$ROLLUP_NODE_P2P_LISTEN_TCP_PORT]\n   --p2p.listen.udp value      UDP port to bind Discv5 to. Same as TCP port if left 0. (default: 0) [$ROLLUP_NODE_P2P_LISTEN_UDP_PORT]\n   --p2p.advertise.ip value    The IP address to advertise in Discv5, put into the ENR of the node [$ROLLUP_NODE_P2P_ADVERTISE_IP]\n   --p2p.advertise.tcp value   The TCP port to advertise in Discv5, put into the ENR of the node. Set to p2p.listen.tcp value if 0. (default: 0) [$ROLLUP_NODE_P2P_ADVERTISE_TCP]\n   --p2p.advertise.udp value   The UDP port to advertise in Discv5 as fallback if not determined by Discv5, put into the ENR of the node. Set to p2p.listen.udp value if 0. (default: 0) [$ROLLUP_NODE_P2P_ADVERTISE_TCP]\n   --p2p.bootnodes value       Comma-separated base64-format ENR list. Bootnodes to start discovering other node records from. [$ROLLUP_NODE_P2P_BOOTNODES]\n   --p2p.static value          Comma-separated multiaddr-format peer list. Static connections to make and maintain, these peers will be regarded as trusted. [$ROLLUP_NODE_P2P_BOOTNODES]\n   --p2p.peers.lo value        Low-tide peer count. The node actively searches for new peer connections if below this amount. (default: 20) [$ROLLUP_NODE_P2P_PEERS_LO]\n   --p2p.peers.hi value        High-tide peer count. The node starts pruning peer connections slowly after reaching this number. (default: 30) [$ROLLUP_NODE_P2P_PEERS_HI]\n   --p2p.peers.grace value     Grace period to keep a newly connected peer around, if it is not misbehaving. (default: 30s) [$ROLLUP_NODE_P2P_PEERS_GRACE]\n   --p2p.nat                   Enable NAT traversal with PMP/UPNP devices to learn external IP. [$ROLLUP_NODE_P2P_NAT]\n   --p2p.peerstore.path value  Peerstore database location. Persisted peerstores help recover peers after restarts. Set to 'memory' to never persist the peerstore. Peerstore records will be pruned / expire as necessary. Warning: a copy of the priv network key of the local peer will be persisted here. (default: \"opnode_peerstore_db\") [$ROLLUP_NODE_P2P_PEERSTORE_PATH]\n   --p2p.discovery.path value  Discovered ENRs are persisted in a database to recover from a restart without having to bootstrap the discovery process again. Set to 'memory' to never persist the peerstore. (default: \"opnode_discovery_db\") [$ROLLUP_NODE_P2P_DISCOVERY_PATH]\n   --p2p.sequencer.key value   File path of hex-encoded private key for signing off on p2p application messages as sequencer. [$ROLLUP_NODE_P2P_SEQUENCER_KEY]\n   --help, -h                  show help\n   --version, -v               print the version",
+  "version": "v0.0.0"
+}

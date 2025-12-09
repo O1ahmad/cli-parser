@@ -1,0 +1,232 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--auto-rehash",
+      "shortcut": null,
+      "description": "Enable automatic rehashing.",
+      "value": null,
+      "default": "Defaults to on; use --skip-auto-rehash to disable."
+    },
+    {
+      "option": "--batch",
+      "shortcut": "-B",
+      "description": "Don't use history file. Disable interactive behavior.",
+      "value": null,
+      "default": "(Enables --silent.)"
+    },
+    {
+      "option": "--bind-address=name",
+      "shortcut": null,
+      "description": "IP address to bind to.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--character-sets-dir=name",
+      "shortcut": null,
+      "description": "Directory for character set files.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--commands",
+      "shortcut": null,
+      "description": "Enable or disable processing of local mysql commands.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--compress",
+      "shortcut": "-C",
+      "description": "Use compression in server/client protocol.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--debug-check",
+      "shortcut": null,
+      "description": "This is a non-debug version. Catch this and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--default-character-set=name",
+      "shortcut": null,
+      "description": "Set the default character set.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--delimiter=name",
+      "shortcut": null,
+      "description": "Delimiter to be used.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--enable-cleartext-plugin",
+      "shortcut": null,
+      "description": "Enable/disable the clear text authentication plugin.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--histignore=name",
+      "shortcut": null,
+      "description": "A colon-separated list of patterns to keep statements from getting logged into syslog and mysql history.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--init-command=name",
+      "shortcut": null,
+      "description": "Single SQL Command to execute when connecting to MySQL server.",
+      "value": null,
+      "default": "Will automatically be re-executed when reconnecting."
+    },
+    {
+      "option": "--local-infile",
+      "shortcut": null,
+      "description": "Enable/disable LOAD DATA LOCAL INFILE.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--pager[=name]",
+      "shortcut": null,
+      "description": "Pager to use to display results.",
+      "value": null,
+      "default": "This option does not work in batch mode."
+    },
+    {
+      "option": "--ssl-mode=name",
+      "shortcut": null,
+      "description": "SSL connection mode.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tls-version=name",
+      "shortcut": null,
+      "description": "TLS version to use, permitted values are: TLSv1.2, TLSv1.3",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--telemetry-client",
+      "shortcut": null,
+      "description": "Load the telemetry_client plugin.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--system-command",
+      "shortcut": null,
+      "description": "Enable or disable (by default) the 'system' mysql command.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--print-defaults",
+      "shortcut": null,
+      "description": "Print the program argument list and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-defaults",
+      "shortcut": null,
+      "description": "Don't read default options from any option file, except for login file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--login-path=#",
+      "shortcut": null,
+      "description": "Read this path from the login file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--defaults-file=#",
+      "shortcut": null,
+      "description": "Only read default options from the given file #.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--defaults-extra-file=#",
+      "shortcut": null,
+      "description": "Read this file after the global files are read.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--defaults-group-suffix=#",
+      "shortcut": null,
+      "description": "Also read groups with concat(group, suffix)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-login-paths",
+      "shortcut": null,
+      "description": "Don't read login paths from the login path file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--authentication-openid-connect-client-id-token-file=name",
+      "shortcut": null,
+      "description": "Specifies the location of the ID token file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--authentication-oci-client-config-profile=name",
+      "shortcut": null,
+      "description": "Specifies the configuration profile whose configuration options are to be read from the OCI configuration file.",
+      "value": null,
+      "default": "Default is DEFAULT."
+    },
+    {
+      "option": "--oci-config-file=name",
+      "shortcut": null,
+      "description": "Specifies the location of the OCI configuration file.",
+      "value": null,
+      "default": "Default for Linux is ~/.oci/config and %HOME/.oci/config on Windows."
+    },
+    {
+      "option": "--plugin-dir=name",
+      "shortcut": null,
+      "description": "Directory for client-side plugins.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--default-auth=name",
+      "shortcut": null,
+      "description": "Default authentication client-side plugin to use.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--compression-algorithms=name",
+      "shortcut": null,
+      "description": "Use compression algorithm in server/client protocol.",
+      "value": null,
+      "default": "Valid values are any combination of 'zstd','zlib','uncompressed'."
+    },
+    {
+      "option": "--zstd-compression-level=#",
+      "shortcut": null,
+      "description": "Use this compression level in the client/server protocol.",
+      "value": null,
+      "default": "Valid range is between 1 and 22, inclusive. Default is 3."
+    }
+  ],
+  "name": "mysql",
+  "raw_help_text": "/usr/bin/mysql  Ver 9.5.0 for Linux on x86_64 (MySQL Community Server - GPL)\nCopyright (c) 2000, 2025, Oracle and/or its affiliates.\n\nOracle is a registered trademark of Oracle Corporation and/or its\naffiliates. Other names may be trademarks of their respective\nowners.\n\nUsage: /usr/bin/mysql [OPTIONS] [database]\n  -?, --help          Display this help and exit.\n  -I, --help          Synonym for -?\n  --auto-rehash       Enable automatic rehashing. One doesn't need to use\n                      'rehash' to get table and field completion, but startup\n                      and reconnecting may take a longer time. Disable with\n                      --disable-auto-rehash.\n                      (Defaults to on; use --skip-auto-rehash to disable.)\n  -A, --no-auto-rehash \n                      No automatic rehashing. One has to use 'rehash' to get\n                      table and field completion. This gives a quicker start of\n                      mysql and disables rehashing on reconnect.\n  --auto-vertical-output \n                      Automatically switch to vertical output mode if the\n                      result is wider than the terminal width.\n  -B, --batch         Don't use history file. Disable interactive behavior.\n                      (Enables --silent.)\n  --bind-address=name IP address to bind to.\n  --binary-as-hex     Print binary data as hex. Enabled by default for\n                      interactive terminals.\n  --character-sets-dir=name \n                      Directory for character set files.\n  --column-type-info  Display column type information.\n  --commands          Enable or disable processing of local mysql commands.\n  -c, --comments      Preserve comments. Send comments to the server. The\n                      default is --comments (keep comments), disable with\n                      --skip-comments.\n                      (Defaults to on; use --skip-comments to disable.)\n  -C, --compress      Use compression in server/client protocol.\n  -#, --debug[=#]     This is a non-debug version. Catch this and exit.\n  --debug-check       This is a non-debug version. Catch this and exit.\n  -T, --debug-info    This is a non-debug version. Catch this and exit.\n  -D, --database=name Database to use.\n  --default-character-set=name \n                      Set the default character set.\n  --delimiter=name    Delimiter to be used.\n  --enable-cleartext-plugin \n                      Enable/disable the clear text authentication plugin.\n  -e, --execute=name  Execute command and quit. (Disables --force and history\n                      file.)\n  -E, --vertical      Print the output of a query (rows) vertically.\n  -f, --force         Continue even if we get an SQL error.\n  --histignore=name   A colon-separated list of patterns to keep statements\n                      from getting logged into syslog and mysql history.\n  -G, --named-commands \n                      Enable named commands. Named commands mean this program's\n                      internal commands; see mysql> help . When enabled, the\n                      named commands can be used from any line of the query,\n                      otherwise only from the first line, before an enter.\n                      Disable with --disable-named-commands. This option is\n                      disabled by default.\n  -i, --ignore-spaces Ignore space after function names.\n  --init-command=name Single SQL Command to execute when connecting to MySQL\n                      server. Will automatically be re-executed when\n                      reconnecting.\n  --init-command-add=name \n                      Add SQL command to the list to execute when connecting to\n                      MySQL server. Will automatically be re-executed when\n                      reconnecting.\n  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.\n  -b, --no-beep       Turn off beep on error.\n  -h, --host=name     Connect to host.\n  --dns-srv-name=name Connect to a DNS SRV resource\n  -H, --html          Produce HTML output.\n  -X, --xml           Produce XML output.\n  --line-numbers      Write line numbers for errors.\n                      (Defaults to on; use --skip-line-numbers to disable.)\n  -L, --skip-line-numbers \n                      Don't write line number for errors.\n  -n, --unbuffered    Flush buffer after each query.\n  --column-names      Write column names in results.\n                      (Defaults to on; use --skip-column-names to disable.)\n  -N, --skip-column-names \n                      Don't write column names in results.\n  --sigint-ignore     Ignore SIGINT (CTRL-C).\n  -o, --one-database  Ignore statements except those that occur while the\n                      default database is the one named at the command line.\n  --pager[=name]      Pager to use to display results. If you don't supply an\n                      option, the default pager is taken from your ENV variable\n                      PAGER. Valid pagers are less, more, cat [> filename],\n                      etc. See interactive help (\\h) also. This option does not\n                      work in batch mode. Disable with --disable-pager. This\n                      option is disabled by default.\n  -p, --password[=name] \n                      Password to use when connecting to server. If password is\n                      not given it's asked from the tty.\n  --password1[=name]  Password for first factor authentication plugin.\n  --password2[=name]  Password for second factor authentication plugin.\n  --password3[=name]  Password for third factor authentication plugin.\n  -P, --port=#        Port number to use for connection or 0 for default to, in\n                      order of preference, my.cnf, $MYSQL_TCP_PORT,\n                      /etc/services, built-in default (3306).\n  --prompt=name       Set the mysql prompt to this value.\n  --protocol=name     The protocol to use for connection (tcp, socket, pipe,\n                      memory).\n  -q, --quick         Don't cache result, print it row by row. This may slow\n                      down the server if the output is suspended. Doesn't use\n                      history file.\n  -r, --raw           Write fields without conversion. Used with --batch.\n  --reconnect         Reconnect if the connection is lost. Disable with\n                      --disable-reconnect. This option is enabled by default.\n                      (Defaults to on; use --skip-reconnect to disable.)\n  -s, --silent        Be more silent. Print results with a tab as separator,\n                      each row on new line.\n  -S, --socket=name   The socket file to use for connection.\n  --server-public-key-path=name \n                      File path to the server public RSA key in PEM format.\n  --get-server-public-key \n                      Get server public key\n  --ssl-mode=name     SSL connection mode.\n  --ssl-ca=name       CA file in PEM format.\n  --ssl-capath=name   CA directory.\n  --ssl-cert=name     X509 cert in PEM format.\n  --ssl-cipher=name   SSL cipher to use.\n  --ssl-key=name      X509 key in PEM format.\n  --ssl-crl=name      Certificate revocation list.\n  --ssl-crlpath=name  Certificate revocation list path.\n  --tls-version=name  TLS version to use, permitted values are: TLSv1.2,\n                      TLSv1.3\n  --ssl-fips-mode=name \n                      SSL FIPS mode (applies only for OpenSSL); permitted\n                      values are: OFF, ON, STRICT\n  --tls-ciphersuites=name \n                      TLS v1.3 cipher to use.\n  --ssl-session-data=name \n                      Session data file to use to enable ssl session reuse\n  --ssl-session-data-continue-on-failed-reuse \n                      If set to ON, this option will allow connection to\n                      succeed even if session data cannot be reused.\n  --tls-sni-servername=name \n                      The SNI server name to pass to server\n  -t, --table         Output in table format.\n  --tee=name          Append everything into outfile. See interactive help (\\h)\n                      also. Does not work in batch mode. Disable with\n                      --disable-tee. This option is disabled by default.\n  -u, --user=name     User for login if not current user.\n  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.\n  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.\n  -v, --verbose       Write more. (-v -v -v gives the table output format).\n  -V, --version       Output version information and exit.\n  -w, --wait          Wait and retry if connection is down.\n  --connect-timeout=# Number of seconds before connection timeout.\n  --max-allowed-packet=# \n                      The maximum packet length to send to or receive from\n                      server.\n  --net-buffer-length=# \n                      The buffer size for TCP/IP and socket communication.\n  --select-limit=#    Automatic limit for SELECT when using --safe-updates.\n  --max-join-size=#   Automatic limit for rows in a join when using\n                      --safe-updates.\n  --show-warnings     Show warnings after every statement.\n  -j, --syslog        Log filtered interactive commands to syslog. Filtering of\n                      commands depends on the patterns supplied via histignore\n                      option besides the default patterns.\n  --plugin-dir=name   Directory for client-side plugins.\n  --default-auth=name Default authentication client-side plugin to use.\n  --binary-mode       By default, ASCII '\\0' is disallowed and '\\r\\n' is\n                      translated to '\\n'. This switch turns off both features,\n                      and also turns off parsing of all clientcommands except\n                      \\C and DELIMITER, in non-interactive mode (for input\n                      piped to mysql or loaded using the 'source' command).\n                      This is necessary when processing output from mysqlbinlog\n                      that may contain blobs.\n  --connect-expired-password \n                      Notify the server that this client is prepared to handle\n                      expired password sandbox mode.\n  --network-namespace=name \n                      Network namespace to use for connection via tcp with a\n                      server.\n  --compression-algorithms=name \n                      Use compression algorithm in server/client protocol.\n                      Valid values are any combination of\n                      'zstd','zlib','uncompressed'.\n  --zstd-compression-level=# \n                      Use this compression level in the client/server protocol,\n                      in case --compression-algorithms=zstd. Valid range is\n                      between 1 and 22, inclusive. Default is 3.\n  --load-data-local-dir=name \n                      Directory path safe for LOAD DATA LOCAL INFILE to read\n                      from.\n  --authentication-oci-client-config-profile=name \n                      Specifies the configuration profile whose configuration\n                      options are to be read from the OCI configuration file.\n                      Default is DEFAULT.\n  --oci-config-file=name \n                      Specifies the location of the OCI configuration file.\n                      Default for Linux is ~/.oci/config and %HOME/.oci/config\n                      on Windows.\n  --authentication-openid-connect-client-id-token-file=name \n                      Specifies the location of the ID token file.\n  --telemetry-client  Load the telemetry_client plugin.\n  --plugin-authentication-webauthn-client-preserve-privacy \n                      Allows selection of discoverable credential to be used\n                      for signing challenge. default is false - implies\n                      challenge is signed by all credentials for given relying\n                      party.\n  --plugin-authentication-webauthn-device=# \n                      Specifies what libfido2 device to use. 0 (the first\n                      device) is the default.\n  --register-factor=name \n                      Specifies factor for which registration needs to be done\n                      for.\n  --system-command    Enable or disable (by default) the 'system' mysql\n                      command.\n\nDefault options are read from the following files in the given order:\n/etc/my.cnf /etc/mysql/my.cnf /usr/etc/my.cnf ~/.my.cnf \nThe following groups are read: mysql client\nThe following options may be given as the first argument:\n--print-defaults        Print the program argument list and exit.\n--no-defaults           Don't read default options from any option file,\n                        except for login file.\n--defaults-file=#       Only read default options from the given file #.\n--defaults-extra-file=# Read this file after the global files are read.\n--defaults-group-suffix=#\n                        Also read groups with concat(group, suffix)\n--login-path=#          Read this path from the login file.\n--no-login-paths        Don't read login paths from the login path file.\n\nVariables (--variable-name=value)\nand boolean options {FALSE|TRUE}                       Value (after reading options)\n------------------------------------------------------ -------------------\nauto-rehash                                            TRUE\nauto-vertical-output                                   FALSE\nbind-address                                           (No default value)\nbinary-as-hex                                          FALSE\ncharacter-sets-dir                                     (No default value)\ncolumn-type-info                                       FALSE\ncommands                                               FALSE\ncomments                                               TRUE\ncompress                                               FALSE\ndatabase                                               (No default value)\ndefault-character-set                                  auto\ndelimiter                                              ;\nenable-cleartext-plugin                                FALSE\nvertical                                               FALSE\nforce                                                  FALSE\nhistignore                                             (No default value)\nnamed-commands                                         FALSE\nignore-spaces                                          FALSE\nlocal-infile                                           FALSE\nno-beep                                                FALSE\nhost                                                   (No default value)\ndns-srv-name                                           (No default value)\nhtml                                                   FALSE\nxml                                                    FALSE\nline-numbers                                           TRUE\nunbuffered                                             FALSE\ncolumn-names                                           TRUE\nsigint-ignore                                          FALSE\nport                                                   0\nprompt                                                 mysql> \nquick                                                  FALSE\nraw                                                    FALSE\nreconnect                                              TRUE\nsocket                                                 /var/run/mysqld/mysqld.sock\nserver-public-key-path                                 (No default value)\nget-server-public-key                                  FALSE\nssl-ca                                                 (No default value)\nssl-capath                                             (No default value)\nssl-cert                                               (No default value)\nssl-cipher                                             (No default value)\nssl-key                                                (No default value)\nssl-crl                                                (No default value)\nssl-crlpath                                            (No default value)\ntls-version                                            (No default value)\ntls-ciphersuites                                       (No default value)\nssl-session-data                                       (No default value)\nssl-session-data-continue-on-failed-reuse              FALSE\ntls-sni-servername                                     (No default value)\ntable                                                  FALSE\nuser                                                   (No default value)\nsafe-updates                                           FALSE\ni-am-a-dummy                                           FALSE\nwait                                                   FALSE\nconnect-timeout                                        0\nmax-allowed-packet                                     16777216\nnet-buffer-length                                      16384\nselect-limit                                           1000\nmax-join-size                                          1000000\nshow-warnings                                          FALSE\nplugin-dir                                             (No default value)\ndefault-auth                                           (No default value)\nbinary-mode                                            FALSE\nconnect-expired-password                               FALSE\nnetwork-namespace                                      (No default value)\ncompression-algorithms                                 (No default value)\nzstd-compression-level                                 3\nload-data-local-dir                                    (No default value)\nauthentication-oci-client-config-profile               (No default value)\noci-config-file                                        (No default value)\nauthentication-openid-connect-client-id-token-file     (No default value)\ntelemetry-client                                       FALSE\nplugin-authentication-webauthn-client-preserve-privacy FALSE\nplugin-authentication-webauthn-device                  0\nregister-factor                                        (No default value)\nsystem-command                                         FALSE",
+  "version": "9.5.0"
+}

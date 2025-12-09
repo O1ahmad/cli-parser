@@ -1,0 +1,51 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--config-path",
+      "shortcut": null,
+      "description": "Specify configuration path",
+      "value": "<CONFIG_PATH>",
+      "default": null
+    },
+    {
+      "option": "--listen-address",
+      "shortcut": null,
+      "description": "Specify address to listen on",
+      "value": "<LISTEN_ADDRESS>",
+      "default": null
+    },
+    {
+      "option": "--run-with-range-checkpoint",
+      "shortcut": null,
+      "description": "Specify range checkpoint",
+      "value": "<RUN_WITH_RANGE_CHECKPOINT>",
+      "default": null
+    },
+    {
+      "option": "--run-with-range-epoch",
+      "shortcut": null,
+      "description": "Specify range epoch",
+      "value": "<RUN_WITH_RANGE_EPOCH>",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Print help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "description": "Sui node command line interface",
+  "name": "sui-node",
+  "raw_help_text": "Usage: sui-node [OPTIONS] --config-path <CONFIG_PATH>\n\nOptions:\n      --config-path <CONFIG_PATH>                              \n      --listen-address <LISTEN_ADDRESS>                        Specify address to listen on\n      --run-with-range-epoch <RUN_WITH_RANGE_EPOCH>            \n      --run-with-range-checkpoint <RUN_WITH_RANGE_CHECKPOINT>  \n  -h, --help                                                   Print help\n  -V, --version                                                Print version",
+  "version": null
+}

@@ -1,0 +1,191 @@
+{
+  "description": "Send command to Bitcoin Core",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--addrinfo",
+      "shortcut": "-addrinfo",
+      "description": "Get the number of addresses known to the node, per network and total, after filtering for quality and recency. The total number of addresses known to the node may be higher.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--chain=<chain>",
+      "shortcut": "-chain=<chain>",
+      "description": "Use the chain <chain> (default: main). Allowed values: main, test, signet, regtest",
+      "value": "<chain>",
+      "default": "main"
+    },
+    {
+      "option": "--color=<when>",
+      "shortcut": "-color=<when>",
+      "description": "Color setting for CLI output (default: auto). Valid values: always, auto (add color codes when standard output is connected to a terminal and OS is not WIN32), never.",
+      "value": "<when>",
+      "default": "auto"
+    },
+    {
+      "option": "--conf=<file>",
+      "shortcut": "-conf=<file>",
+      "description": "Specify configuration file. Relative paths will be prefixed by datadir location. (default: bitcoin.conf)",
+      "value": "<file>",
+      "default": "bitcoin.conf"
+    },
+    {
+      "option": "--datadir=<dir>",
+      "shortcut": "-datadir=<dir>",
+      "description": "Specify data directory",
+      "value": "<dir>",
+      "default": null
+    },
+    {
+      "option": "--generate",
+      "shortcut": "-generate",
+      "description": "Generate blocks, equivalent to RPC getnewaddress followed by RPC generatetoaddress. Optional positional integer arguments are number of blocks to generate (default: 1) and maximum iterations to try (default: 1000000), equivalent to RPC generatetoaddress nblocks and maxtries arguments. Example: bitcoin-cli -generate 4 1000",
+      "value": null,
+      "default": "1"
+    },
+    {
+      "option": "--getinfo",
+      "shortcut": "-getinfo",
+      "description": "Get general information from the remote server. Note that unlike server-side RPC calls, the results of -getinfo is the result of multiple non-atomic requests. Some entries in the result may represent results from different states (e.g. wallet balance may be as of a different block from the chain state reported)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--named",
+      "shortcut": "-named",
+      "description": "Pass named instead of positional arguments (default: false)",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--netinfo",
+      "shortcut": "-netinfo",
+      "description": "Get network peer connection information from the remote server. An optional integer argument from 0 to 4 can be passed for different peers listings (default: 0). Pass \"help\" for detailed help documentation.",
+      "value": null,
+      "default": "0"
+    },
+    {
+      "option": "--rpcclienttimeout=<n>",
+      "shortcut": "-rpcclienttimeout=<n>",
+      "description": "Timeout in seconds during HTTP requests, or 0 for no timeout. (default: 900)",
+      "value": "<n>",
+      "default": "900"
+    },
+    {
+      "option": "--rpcconnect=<ip>",
+      "shortcut": "-rpcconnect=<ip>",
+      "description": "Send commands to node running on <ip> (default: 127.0.0.1)",
+      "value": "<ip>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--rpccookiefile=<loc>",
+      "shortcut": "-rpccookiefile=<loc>",
+      "description": "Location of the auth cookie. Relative paths will be prefixed by a net-specific datadir location. (default: data dir)",
+      "value": "<loc>",
+      "default": "data dir"
+    },
+    {
+      "option": "--rpcpassword=<pw>",
+      "shortcut": "-rpcpassword=<pw>",
+      "description": "Password for JSON-RPC connections",
+      "value": "<pw>",
+      "default": null
+    },
+    {
+      "option": "--rpcport=<port>",
+      "shortcut": "-rpcport=<port>",
+      "description": "Connect to JSON-RPC on <port> (default: 8332, testnet: 18332, signet: 38332, regtest: 18443)",
+      "value": "<port>",
+      "default": "8332"
+    },
+    {
+      "option": "--rpcuser=<user>",
+      "shortcut": "-rpcuser=<user>",
+      "description": "Username for JSON-RPC connections",
+      "value": "<user>",
+      "default": null
+    },
+    {
+      "option": "--rpcwait",
+      "shortcut": "-rpcwait",
+      "description": "Wait for RPC server to start",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--rpcwaittimeout=<n>",
+      "shortcut": "-rpcwaittimeout=<n>",
+      "description": "Timeout in seconds to wait for the RPC server to start, or 0 for no timeout. (default: 0)",
+      "value": "<n>",
+      "default": "0"
+    },
+    {
+      "option": "--rpcwallet=<walletname>",
+      "shortcut": "-rpcwallet=<walletname>",
+      "description": "Send RPC for non-default wallet on RPC server (needs to exactly match corresponding -wallet option passed to bitcoind). This changes the RPC endpoint used, e.g. http://127.0.0.1:8332/wallet/<walletname>",
+      "value": "<walletname>",
+      "default": null
+    },
+    {
+      "option": "--stdin",
+      "shortcut": "-stdin",
+      "description": "Read extra arguments from standard input, one per line until EOF/Ctrl-D (recommended for sensitive information such as passphrases). When combined with -stdinrpcpass, the first line from standard input is used for the RPC password.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--stdinrpcpass",
+      "shortcut": "-stdinrpcpass",
+      "description": "Read RPC password from standard input as a single line. When combined with -stdin, the first line from standard input is used for the RPC password. When combined with -stdinwalletpassphrase, -stdinrpcpass consumes the first line, and -stdinwalletpassphrase consumes the second.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--stdinwalletpassphrase",
+      "shortcut": "-stdinwalletpassphrase",
+      "description": "Read wallet passphrase from standard input as a single line. When combined with -stdin, the first line from standard input is used for the wallet passphrase.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signet",
+      "shortcut": "-signet",
+      "description": "Use the signet chain. Equivalent to -chain=signet. Note that the network is defined by the -signetchallenge parameter",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signetchallenge",
+      "shortcut": "-signetchallenge",
+      "description": "Blocks must satisfy the given script to be considered valid (only for signet networks; defaults to the global default signet test network challenge)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signetseednode",
+      "shortcut": "-signetseednode",
+      "description": "Specify a seed node for the signet network, in the hostname[:port] format, e.g. sig.net:1234 (may be used multiple times to specify multiple seed nodes; defaults to the global default signet test network seed node(s))",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--testnet",
+      "shortcut": "-testnet",
+      "description": "Use the test chain. Equivalent to -chain=test.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-version",
+      "description": "Print version and exit",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "bitcoin-cli",
+  "raw_help_text": "Bitcoin Core RPC client version v24.0.1\n\nUsage:  bitcoin-cli [options] <command> [params]  Send command to Bitcoin Core\nor:     bitcoin-cli [options] -named <command> [name=value]...  Send command to Bitcoin Core (with named arguments)\nor:     bitcoin-cli [options] help                List commands\nor:     bitcoin-cli [options] help <command>      Get help for a command\n\nOptions:\n\n  -?\n       Print this help message and exit\n\n  -addrinfo\n       Get the number of addresses known to the node, per network and total,\n       after filtering for quality and recency. The total number of\n       addresses known to the node may be higher.\n\n  -color=<when>\n       Color setting for CLI output (default: auto). Valid values: always, auto\n       (add color codes when standard output is connected to a terminal\n       and OS is not WIN32), never.\n\n  -conf=<file>\n       Specify configuration file. Relative paths will be prefixed by datadir\n       location. (default: bitcoin.conf)\n\n  -datadir=<dir>\n       Specify data directory\n\n  -generate\n       Generate blocks, equivalent to RPC getnewaddress followed by RPC\n       generatetoaddress. Optional positional integer arguments are\n       number of blocks to generate (default: 1) and maximum iterations\n       to try (default: 1000000), equivalent to RPC generatetoaddress\n       nblocks and maxtries arguments. Example: bitcoin-cli -generate 4\n       1000\n\n  -getinfo\n       Get general information from the remote server. Note that unlike\n       server-side RPC calls, the results of -getinfo is the result of\n       multiple non-atomic requests. Some entries in the result may\n       represent results from different states (e.g. wallet balance may\n       be as of a different block from the chain state reported)\n\n  -named\n       Pass named instead of positional arguments (default: false)\n\n  -netinfo\n       Get network peer connection information from the remote server. An\n       optional integer argument from 0 to 4 can be passed for different\n       peers listings (default: 0). Pass \"help\" for detailed help\n       documentation.\n\n  -rpcclienttimeout=<n>\n       Timeout in seconds during HTTP requests, or 0 for no timeout. (default:\n       900)\n\n  -rpcconnect=<ip>\n       Send commands to node running on <ip> (default: 127.0.0.1)\n\n  -rpccookiefile=<loc>\n       Location of the auth cookie. Relative paths will be prefixed by a\n       net-specific datadir location. (default: data dir)\n\n  -rpcpassword=<pw>\n       Password for JSON-RPC connections\n\n  -rpcport=<port>\n       Connect to JSON-RPC on <port> (default: 8332, testnet: 18332, signet:\n       38332, regtest: 18443)\n\n  -rpcuser=<user>\n       Username for JSON-RPC connections\n\n  -rpcwait\n       Wait for RPC server to start\n\n  -rpcwaittimeout=<n>\n       Timeout in seconds to wait for the RPC server to start, or 0 for no\n       timeout. (default: 0)\n\n  -rpcwallet=<walletname>\n       Send RPC for non-default wallet on RPC server (needs to exactly match\n       corresponding -wallet option passed to bitcoind). This changes\n       the RPC endpoint used, e.g.\n       http://127.0.0.1:8332/wallet/<walletname>\n\n  -stdin\n       Read extra arguments from standard input, one per line until EOF/Ctrl-D\n       (recommended for sensitive information such as passphrases). When\n       combined with -stdinrpcpass, the first line from standard input\n       is used for the RPC password.\n\n  -stdinrpcpass\n       Read RPC password from standard input as a single line. When combined\n       with -stdin, the first line from standard input is used for the\n       RPC password. When combined with -stdinwalletpassphrase,\n       -stdinrpcpass consumes the first line, and -stdinwalletpassphrase\n       consumes the second.\n\n  -stdinwalletpassphrase\n       Read wallet passphrase from standard input as a single line. When\n       combined with -stdin, the first line from standard input is used\n       for the wallet passphrase.\n\n  -version\n       Print version and exit\n\nDebugging/Testing options:\n\nChain selection options:\n\n  -chain=<chain>\n       Use the chain <chain> (default: main). Allowed values: main, test,\n       signet, regtest\n\n  -signet\n       Use the signet chain. Equivalent to -chain=signet. Note that the network\n       is defined by the -signetchallenge parameter\n\n  -signetchallenge\n       Blocks must satisfy the given script to be considered valid (only for\n       signet networks; defaults to the global default signet test\n       network challenge)\n\n  -signetseednode\n       Specify a seed node for the signet network, in the hostname[:port]\n       format, e.g. sig.net:1234 (may be used multiple times to specify\n       multiple seed nodes; defaults to the global default signet test\n       network seed node(s))\n\n  -testnet\n       Use the test chain. Equivalent to -chain=test.",
+  "version": "v24.0.1"
+}

@@ -1,0 +1,43 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--config",
+      "shortcut": "-c",
+      "description": "Print the current default config",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--debug",
+      "shortcut": "-d",
+      "description": "a boolean",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Displays help with available flag, subcommand, and positional value parameters.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "Displays the program version string.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--file",
+      "shortcut": "-f",
+      "description": "Specify alternate compose files",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "lazydocker",
+  "raw_help_text": "lazydocker - The lazier way to manage everything docker\nhttps://github.com/jesseduffield/lazydocker\n\n  Flags: \n       --version   Displays the program version string.\n    -h --help      Displays help with available flag, subcommand, and positional value parameters.\n    -c --config    Print the current default config\n    -d --debug     a boolean\n    -f --file      Specify alternate compose files",
+  "version": ""
+}

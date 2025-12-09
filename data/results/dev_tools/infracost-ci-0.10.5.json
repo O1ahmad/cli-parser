@@ -1,0 +1,892 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file",
+          "shortcut": null,
+          "description": "Path to Infracost config file. Cannot be used with path, terraform* or usage-file flags",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--exclude-path",
+          "shortcut": null,
+          "description": "Paths of directories to exclude, glob patterns need quotes",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--fields",
+          "shortcut": null,
+          "description": "Comma separated list of output fields: all,price,monthlyQuantity,unit,hourlyCost,monthlyCost. Supported by table and html output formats (default [monthlyQuantity,unit,monthlyCost])",
+          "value": "strings",
+          "default": "[monthlyQuantity,unit,monthlyCost]"
+        },
+        {
+          "option": "--format",
+          "shortcut": null,
+          "description": "Output format: json, table, html (default \"table\")",
+          "value": "string",
+          "default": "table"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for breakdown",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--no-cache",
+          "shortcut": null,
+          "description": "Don't attempt to cache Terraform plans",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--out-file",
+          "shortcut": null,
+          "description": "Save output to a file, helpful with format flag",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--path",
+          "shortcut": "-p",
+          "description": "Path to the Terraform directory or JSON/plan file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--project-name",
+          "shortcut": null,
+          "description": "Name of project in the output. Defaults to path or git repo name",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--show-skipped",
+          "shortcut": null,
+          "description": "List unsupported and free resources",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--sync-usage-file",
+          "shortcut": null,
+          "description": "Sync usage-file with missing resources, needs usage-file too (experimental)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--terraform-var",
+          "shortcut": null,
+          "description": "Set value for an input variable, similar to Terraform's -var flag",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--terraform-var-file",
+          "shortcut": null,
+          "description": "Load variable files, similar to Terraform's -var-file flag. Provided files must be relative to the --path flag",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--terraform-workspace",
+          "shortcut": null,
+          "description": "Terraform workspace to use. Applicable when path is a Terraform directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--usage-file",
+          "shortcut": null,
+          "description": "Path to Infracost usage file that specifies values for usage-based resources",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost breakdown",
+      "raw_help_text": "Show breakdown of costs\n\nUSAGE\n  infracost breakdown [flags]\n\nEXAMPLES\n  Use Terraform directory:\n\n      infracost breakdown --path /code --terraform-var-file my.tfvars\n\n  Use Terraform plan JSON:\n\n      terraform plan -out tfplan.binary\n      terraform show -json tfplan.binary > plan.json\n      infracost breakdown --path plan.json\n\nFLAGS\n      --config-file string           Path to Infracost config file. Cannot be used with path, terraform* or usage-file flags\n      --exclude-path strings         Paths of directories to exclude, glob patterns need quotes\n      --fields strings               Comma separated list of output fields: all,price,monthlyQuantity,unit,hourlyCost,monthlyCost.\n                                     Supported by table and html output formats (default [monthlyQuantity,unit,monthlyCost])\n      --format string                Output format: json, table, html (default \"table\")\n  -h, --help                         help for breakdown\n      --no-cache                     Don't attempt to cache Terraform plans\n      --out-file string              Save output to a file, helpful with format flag\n  -p, --path string                  Path to the Terraform directory or JSON/plan file\n      --project-name string          Name of project in the output. Defaults to path or git repo name\n      --show-skipped                 List unsupported and free resources\n      --sync-usage-file              Sync usage-file with missing resources, needs usage-file too (experimental)\n      --terraform-var strings        Set value for an input variable, similar to Terraform's -var flag\n      --terraform-var-file strings   Load variable files, similar to Terraform's -var-file flag. Provided files must be relative to the --path flag\n      --terraform-workspace string   Terraform workspace to use. Applicable when path is a Terraform directory\n      --usage-file string            Path to Infracost usage file that specifies values for usage-based resources\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+      "description": "Show breakdown of costs"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--azure-access-token",
+              "shortcut": "",
+              "description": "Azure DevOps access token",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--behavior",
+              "shortcut": "",
+              "description": "Behavior when posting comment, one of: update (default), new, delete-and-new",
+              "value": "string",
+              "default": "update"
+            },
+            {
+              "option": "--dry-run",
+              "shortcut": "",
+              "description": "Generate comment without actually posting to Azure Repos",
+              "value": "",
+              "default": ""
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for azure-repos",
+              "value": "",
+              "default": ""
+            },
+            {
+              "option": "--path",
+              "shortcut": "-p",
+              "description": "Path to Infracost JSON files, glob patterns need quotes",
+              "value": "stringArray",
+              "default": ""
+            },
+            {
+              "option": "--policy-path",
+              "shortcut": "",
+              "description": "Path to Infracost policy files, glob patterns need quotes (experimental)",
+              "value": "stringArray",
+              "default": ""
+            },
+            {
+              "option": "--pull-request",
+              "shortcut": "",
+              "description": "Pull request number to post comment on",
+              "value": "int",
+              "default": ""
+            },
+            {
+              "option": "--repo-url",
+              "shortcut": "",
+              "description": "Repository URL, e.g. https://dev.azure.com/my-org/my-project/_git/my-repo",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--tag",
+              "shortcut": "",
+              "description": "Customize hidden markdown tag used to detect comments posted by Infracost",
+              "value": "string",
+              "default": ""
+            }
+          ],
+          "aliases": [],
+          "name": "infracost comment azure-repos",
+          "raw_help_text": "Post an Infracost comment to Azure Repos\n\nUSAGE\n  infracost comment azure-repos [flags]\n\nEXAMPLES\n  Update comment on a pull request:\n\n      infracost comment azure-repos --repo-url https://dev.azure.com/my-org/my-project/_git/my-repo --pull-request 3 --path infracost.json --azure-access-token $AZURE_ACCESS_TOKEN\n\nFLAGS\n      --azure-access-token string   Azure DevOps access token\n      --behavior string             Behavior when posting comment, one of:\n                                      update (default)  Update latest comment\n                                      new               Create a new comment\n                                      delete-and-new    Delete previous matching comments and create a new comment (default \"update\")\n      --dry-run                     Generate comment without actually posting to Azure Repos\n  -h, --help                        help for azure-repos\n  -p, --path stringArray            Path to Infracost JSON files, glob patterns need quotes\n      --policy-path stringArray     Path to Infracost policy files, glob patterns need quotes (experimental)\n      --pull-request int            Pull request number to post comment on\n      --repo-url string             Repository URL, e.g. https://dev.azure.com/my-org/my-project/_git/my-repo\n      --tag string                  Customize hidden markdown tag used to detect comments posted by Infracost\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Post an Infracost comment to Azure Repos"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--behavior",
+              "shortcut": null,
+              "description": "Behavior when posting comment, one of: update (default)  Update latest comment, new  Create a new comment, delete-and-new  Delete previous matching comments and create a new comment (default \"update\")",
+              "value": "string",
+              "default": "update"
+            },
+            {
+              "option": "--bitbucket-server-url",
+              "shortcut": null,
+              "description": "Bitbucket Server URL",
+              "value": "string",
+              "default": "https://bitbucket.org"
+            },
+            {
+              "option": "--bitbucket-token",
+              "shortcut": null,
+              "description": "Bitbucket access token. Use 'username:app-password' for Bitbucket Cloud and HTTP access token for Bitbucket Server",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--commit",
+              "shortcut": null,
+              "description": "Commit SHA to post comment on, mutually exclusive with pull-request. Not available when bitbucket-server-url is set",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--dry-run",
+              "shortcut": "-d",
+              "description": "Generate comment without actually posting to Bitbucket",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for bitbucket",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--path",
+              "shortcut": "-p",
+              "description": "Path to Infracost JSON files, glob patterns need quotes",
+              "value": "stringArray",
+              "default": null
+            },
+            {
+              "option": "--policy-path",
+              "shortcut": null,
+              "description": "Path to Infracost policy files, glob patterns need quotes (experimental)",
+              "value": "stringArray",
+              "default": null
+            },
+            {
+              "option": "--pull-request",
+              "shortcut": null,
+              "description": "Pull request number to post comment on",
+              "value": "int",
+              "default": null
+            },
+            {
+              "option": "--repo",
+              "shortcut": null,
+              "description": "Repository in format workspace/repo",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--tag",
+              "shortcut": null,
+              "description": "Customize special text used to detect comments posted by Infracost (placed at the bottom of a comment)",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Log level (trace, debug, info, warn, error, fatal)",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--no-color",
+              "shortcut": null,
+              "description": "Turn off colored output",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "infracost comment bitbucket",
+          "raw_help_text": "Post an Infracost comment to Bitbucket\n\nUSAGE\n  infracost comment bitbucket [flags]\n\nEXAMPLES\n  Update comment on a pull request:\n\n      infracost comment bitbucket --repo my-org/my-repo --pull-request 3 --path infracost.json --bitbucket-token $BITBUCKET_TOKEN\n\n  Post a new comment to a commit:\n\n      infracost comment bitbucket --repo my-org/my-repo --commit 2ca7182 --path infracost.json --behavior delete-and-new --bitbucket-token $BITBUCKET_TOKEN\n\nFLAGS\n      --behavior string               Behavior when posting comment, one of:\n                                        update (default)  Update latest comment\n                                        new               Create a new comment\n                                        delete-and-new    Delete previous matching comments and create a new comment (default \"update\")\n      --bitbucket-server-url string   Bitbucket Server URL (default \"https://bitbucket.org\")\n      --bitbucket-token string        Bitbucket access token. Use 'username:app-password' for Bitbucket Cloud and HTTP access token for Bitbucket Server\n      --commit string                 Commit SHA to post comment on, mutually exclusive with pull-request. Not available when bitbucket-server-url is set\n      --dry-run                       Generate comment without actually posting to Bitbucket\n  -h, --help                          help for bitbucket\n  -p, --path stringArray              Path to Infracost JSON files, glob patterns need quotes\n      --policy-path stringArray       Path to Infracost policy files, glob patterns need quotes (experimental)\n      --pull-request int              Pull request number to post comment on\n      --repo string                   Repository in format workspace/repo\n      --tag string                    Customize special text used to detect comments posted by Infracost (placed at the bottom of a comment)\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Post an Infracost comment to Bitbucket"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--behavior",
+              "shortcut": null,
+              "description": "Behavior when posting comment, one of: update (default)  Update latest comment, new               Create a new comment, hide-and-new      Hide previous matching comments and create a new comment, delete-and-new    Delete previous matching comments and create a new comment (default \"update\")",
+              "value": "string",
+              "default": "update"
+            },
+            {
+              "option": "--commit",
+              "shortcut": null,
+              "description": "Commit SHA to post comment on, mutually exclusive with pull-request",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--dry-run",
+              "shortcut": null,
+              "description": "Generate comment without actually posting to GitHub",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--github-api-url",
+              "shortcut": null,
+              "description": "GitHub API URL",
+              "value": "string",
+              "default": "https://api.github.com"
+            },
+            {
+              "option": "--github-token",
+              "shortcut": null,
+              "description": "GitHub token",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "-h, --help",
+              "shortcut": "-h",
+              "description": "help for github",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "-p, --path",
+              "shortcut": "-p",
+              "description": "Path to Infracost JSON files, glob patterns need quotes",
+              "value": "stringArray",
+              "default": null
+            },
+            {
+              "option": "--policy-path",
+              "shortcut": null,
+              "description": "Path to Infracost policy files, glob patterns need quotes (experimental)",
+              "value": "stringArray",
+              "default": null
+            },
+            {
+              "option": "--pull-request",
+              "shortcut": null,
+              "description": "Pull request number to post comment on, mutually exclusive with commit",
+              "value": "int",
+              "default": null
+            },
+            {
+              "option": "--repo",
+              "shortcut": null,
+              "description": "Repository in format owner/repo",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--tag",
+              "shortcut": null,
+              "description": "Customize hidden markdown tag used to detect comments posted by Infracost",
+              "value": "string",
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "infracost comment github",
+          "raw_help_text": "Post an Infracost comment to GitHub\n\nUSAGE\n  infracost comment github [flags]\n\nEXAMPLES\n  Update comment on a pull request:\n\n      infracost comment github --repo my-org/my-repo --pull-request 3 --path infracost.json --github-token $GITHUB_TOKEN\n\n  Post a new comment to a commit:\n\n      infracost comment github --repo my-org/my-repo --commit 2ca7182 --path infracost.json --behavior hide-and-new --github-token $GITHUB_TOKEN\n\nFLAGS\n      --behavior string           Behavior when posting comment, one of:\n                                    update (default)  Update latest comment\n                                    new               Create a new comment\n                                    hide-and-new      Hide previous matching comments and create a new comment\n                                    delete-and-new    Delete previous matching comments and create a new comment (default \"update\")\n      --commit string             Commit SHA to post comment on, mutually exclusive with pull-request\n      --dry-run                   Generate comment without actually posting to GitHub\n      --github-api-url string     GitHub API URL (default \"https://api.github.com\")\n      --github-token string       GitHub token\n  -h, --help                      help for github\n  -p, --path stringArray          Path to Infracost JSON files, glob patterns need quotes\n      --policy-path stringArray   Path to Infracost policy files, glob patterns need quotes (experimental)\n      --pull-request int          Pull request number to post comment on, mutually exclusive with commit\n      --repo string               Repository in format owner/repo\n      --tag string                Customize hidden markdown tag used to detect comments posted by Infracost\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Post an Infracost comment to GitHub"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--behavior",
+              "shortcut": "",
+              "description": "Behavior when posting comment, one of: update (default)  Update latest comment, new  Create a new comment, delete-and-new  Delete previous matching comments and create a new comment (default \"update\")",
+              "value": "string",
+              "default": "update"
+            },
+            {
+              "option": "--commit",
+              "shortcut": "",
+              "description": "Commit SHA to post comment on, mutually exclusive with merge-request",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--dry-run",
+              "shortcut": "",
+              "description": "Generate comment without actually posting to GitLab",
+              "value": "",
+              "default": ""
+            },
+            {
+              "option": "--gitlab-server-url",
+              "shortcut": "",
+              "description": "GitLab Server URL",
+              "value": "string",
+              "default": "https://gitlab.com"
+            },
+            {
+              "option": "--gitlab-token",
+              "shortcut": "",
+              "description": "GitLab token",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for gitlab",
+              "value": "",
+              "default": ""
+            },
+            {
+              "option": "--merge-request",
+              "shortcut": "",
+              "description": "Merge request number to post comment on, mutually exclusive with commit",
+              "value": "int",
+              "default": ""
+            },
+            {
+              "option": "--path",
+              "shortcut": "-p",
+              "description": "Path to Infracost JSON files, glob patterns need quotes",
+              "value": "stringArray",
+              "default": ""
+            },
+            {
+              "option": "--policy-path",
+              "shortcut": "",
+              "description": "Path to Infracost policy files, glob patterns need quotes (experimental)",
+              "value": "stringArray",
+              "default": ""
+            },
+            {
+              "option": "--repo",
+              "shortcut": "",
+              "description": "Repository in format owner/repo",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--tag",
+              "shortcut": "",
+              "description": "Customize hidden markdown tag used to detect comments posted by Infracost",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--log-level",
+              "shortcut": "",
+              "description": "Log level (trace, debug, info, warn, error, fatal)",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--no-color",
+              "shortcut": "",
+              "description": "Turn off colored output",
+              "value": "",
+              "default": ""
+            }
+          ],
+          "aliases": [],
+          "name": "infracost comment gitlab",
+          "raw_help_text": "Post an Infracost comment to GitLab\n\nUSAGE\n  infracost comment gitlab [flags]\n\nEXAMPLES\n  Update comment on a merge request:\n\n      infracost comment gitlab --repo my-org/my-repo --merge-request 3 --path infracost.json --gitlab-token $GITLAB_TOKEN\n\n  Post a new comment to a commit:\n\n      infracost comment gitlab --repo my-org/my-repo --commit 2ca7182 --path infracost.json --behavior delete-and-new --gitlab-token $GITLAB_TOKEN\n\nFLAGS\n      --behavior string            Behavior when posting comment, one of:\n                                     update (default)  Update latest comment\n                                     new               Create a new comment\n                                     delete-and-new    Delete previous matching comments and create a new comment (default \"update\")\n      --commit string              Commit SHA to post comment on, mutually exclusive with merge-request\n      --dry-run                    Generate comment without actually posting to GitLab\n      --gitlab-server-url string   GitLab Server URL (default \"https://gitlab.com\")\n      --gitlab-token string        GitLab token\n  -h, --help                       help for gitlab\n      --merge-request int          Merge request number to post comment on, mutually exclusive with commit\n  -p, --path stringArray           Path to Infracost JSON files, glob patterns need quotes\n      --policy-path stringArray    Path to Infracost policy files, glob patterns need quotes (experimental)\n      --repo string                Repository in format owner/repo\n      --tag string                 Customize hidden markdown tag used to detect comments posted by Infracost\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Post an Infracost comment to GitLab"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for comment",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost comment",
+      "raw_help_text": "Post an Infracost comment to GitHub, GitLab, Azure Repos or Bitbucket\n\nUSAGE\n  infracost comment [flags]\n  infracost comment [command]\n\nEXAMPLES\n  Update the Infracost comment on a GitHub pull request:\n\n      infracost comment github --repo my-org/my-repo --pull-request 3 --path infracost.json --behavior update --github-token $GITHUB_TOKEN\n\n  Delete old Infracost comments and post a new comment to a GitLab commit:\n\n      infracost comment gitlab --repo my-org/my-repo --commit 2ca7182 --path infracost.json --behavior delete-and-new --gitlab-token $GITLAB_TOKEN\n\n  Post a new comment to an Azure Repos pull request:\n\n      infracost comment azure-repos --repo-url https://dev.azure.com/my-org/my-project/_git/my-repo --pull-request 3 --path infracost.json --behavior new --azure-access-token $AZURE_ACCESS_TOKEN\n\nAVAILABLE COMMANDS\n  azure-repos Post an Infracost comment to Azure Repos\n  bitbucket   Post an Infracost comment to Bitbucket\n  github      Post an Infracost comment to GitHub\n  gitlab      Post an Infracost comment to GitLab\n\nFLAGS\n  -h, --help   help for comment\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output\n\nUse \"infracost comment [command] --help\" for more information about a command.",
+      "description": "Post an Infracost comment to GitHub, GitLab, Azure Repos or Bitbucket"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for completion",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--shell",
+          "shortcut": null,
+          "description": "supported shell formats: bash, zsh, fish, powershell",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost completion",
+      "raw_help_text": "To load completions:\n\t\n\tBash:\n\t\n\t\t$ source <(infracost completion --shell bash)\n\t\n\t\t# To load completions for each session, execute once:\n\t\t# Linux:\n\t\t$ infracost completion --shell bash > /etc/bash_completion.d/infracost\n\t\t# macOS:\n\t\t$ infracost completion --shell bash > /usr/local/etc/bash_completion.d/infracost\n\t\n\tZsh:\n\t\n\t\t# If shell completion is not already enabled in your environment,\n\t\t# you will need to enable it.  You can execute the following once:\n\t\n\t\t$ echo \"autoload -U compinit; compinit\" >> ~/.zshrc\n\t\n\t\t# To load completions for each session, execute once:\n\t\t$ infracost completion --shell zsh > \"${fpath[1]}/_infracost\"\n\t\n\t\t# You will need to start a new shell for this setup to take effect.\n\t\n\tfish:\n\t\n\t\t$ infracost completion --shell fish | source\n\t\n\t\t# To load completions for each session, execute once:\n\t\t$ infracost completion --shell fish > ~/.config/fish/completions/infracost.fish\n\t\n\tPowerShell:\n\t\n\t\tPS> infracost completion --shell powershell | Out-String | Invoke-Expression\n\t\n\t\t# To load completions for every new session, run:\n\t\tPS> infracost completion --shell powershell > infracost.ps1\n\t\t# and source this file from your PowerShell profile.\n\nUSAGE\n  infracost completion --shell [bash | zsh | fish | powershell] [flags]\n\nFLAGS\n  -h, --help           help for completion\n      --shell string   supported shell formats: bash, zsh, fish, powershell\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+      "description": "Generate shell completion script"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for get",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Log level (trace, debug, info, warn, error, fatal)",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--no-color",
+              "shortcut": null,
+              "description": "Turn off colored output",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "infracost configure get",
+          "raw_help_text": "Get global configuration.\n\nSupported settings:\n  - api_key: Infracost API key\n  - pricing_api_endpoint: endpoint of the Cloud Pricing API\n  - currency: convert output from USD to your preferred currency\n  - tls_insecure_skip_verify: skip TLS certificate checks for a self-hosted Cloud Pricing API\n  - tls_ca_cert_file: verify certificate of a self-hosted Cloud Pricing API using this CA certificate\n\nUSAGE\n  infracost configure get <key> [flags]\n\nEXAMPLES\n  Get your saved Infracost API key:\n\n      infracost configure get api_key\n\n  Get your saved Cloud Pricing API endpoint:\n\n      infracost\tconfigure get pricing_api_endpoint\n\n  Get your preferred currency:\n\n      infracost\tconfigure get currency\n\n\nFLAGS\n  -h, --help   help for get\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Get global configuration"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for set",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Log level (trace, debug, info, warn, error, fatal)",
+              "value": "string",
+              "default": null
+            },
+            {
+              "option": "--no-color",
+              "shortcut": null,
+              "description": "Turn off colored output",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "infracost configure set",
+          "raw_help_text": "Set global configuration.\n\nSupported settings:\n  - api_key: Infracost API key\n  - pricing_api_endpoint: endpoint of the Cloud Pricing API\n  - currency: convert output from USD to your preferred currency\n  - tls_insecure_skip_verify: skip TLS certificate checks for a self-hosted Cloud Pricing API\n  - tls_ca_cert_file: verify certificate of a self-hosted Cloud Pricing API using this CA certificate\n\nUSAGE\n  infracost configure set <key> <value> [flags]\n\nEXAMPLES\n  Set your Infracost API key:\n\n      infracost configure set api_key MY_API_KEY\n\n  Set your Cloud Pricing API endpoint:\n\n      infracost\tconfigure set pricing_api_endpoint https://cloud-pricing-api\n\n  Set your preferred currency code (ISO 4217):\n\n      infracost\tconfigure set currency EUR\n\n\nFLAGS\n  -h, --help   help for set\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+          "description": "Set global configuration"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for configure",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost configure",
+      "raw_help_text": "Display or change global configuration.\n\nSupported settings:\n  - api_key: Infracost API key\n  - pricing_api_endpoint: endpoint of the Cloud Pricing API\n  - currency: convert output from USD to your preferred currency\n  - tls_insecure_skip_verify: skip TLS certificate checks for a self-hosted Cloud Pricing API\n  - tls_ca_cert_file: verify certificate of a self-hosted Cloud Pricing API using this CA certificate\n\nUSAGE\n  infracost configure [flags]\n  infracost configure [command]\n\nAVAILABLE COMMANDS\n  get         Get global configuration\n  set         Set global configuration\n\nFLAGS\n  -h, --help   help for configure\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output\n\nUse \"infracost configure [command] --help\" for more information about a command.",
+      "description": "Display or change global configuration"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--compare-to",
+          "shortcut": null,
+          "description": "Path to Infracost JSON file to compare against",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--config-file",
+          "shortcut": null,
+          "description": "Path to Infracost config file. Cannot be used with path, terraform* or usage-file flags",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--exclude-path",
+          "shortcut": null,
+          "description": "Paths of directories to exclude, glob patterns need quotes",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--format",
+          "shortcut": null,
+          "description": "Output format: json, diff (default \"diff\")",
+          "value": "string",
+          "default": "diff"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for diff",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--no-cache",
+          "shortcut": null,
+          "description": "Don't attempt to cache Terraform plans",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--out-file",
+          "shortcut": null,
+          "description": "Save output to a file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--path",
+          "shortcut": "-p",
+          "description": "Path to the Terraform directory or JSON/plan file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--project-name",
+          "shortcut": null,
+          "description": "Name of project in the output. Defaults to path or git repo name",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--show-skipped",
+          "shortcut": null,
+          "description": "List unsupported and free resources",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--sync-usage-file",
+          "shortcut": null,
+          "description": "Sync usage-file with missing resources, needs usage-file too (experimental)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--terraform-var",
+          "shortcut": null,
+          "description": "Set value for an input variable, similar to Terraform's -var flag",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--terraform-var-file",
+          "shortcut": null,
+          "description": "Load variable files, similar to Terraform's -var-file flag. Provided files must be relative to the --path flag",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--terraform-workspace",
+          "shortcut": null,
+          "description": "Terraform workspace to use. Applicable when path is a Terraform directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--usage-file",
+          "shortcut": null,
+          "description": "Path to Infracost usage file that specifies values for usage-based resources",
+          "value": "string",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost diff",
+      "raw_help_text": "Show diff of monthly costs between current and planned state\n\nUSAGE\n  infracost diff [flags]\n\nEXAMPLES\n  Use Terraform directory:\n\n      infracost breakdown --path /code --format json --out-file infracost-base.json\n      # Make Terraform code changes\n      infracost diff --path /code --compare-to infracost-base.json\n\n  Use Terraform plan JSON:\n\n      terraform plan -out tfplan.binary\n      terraform show -json tfplan.binary > plan.json\n      infracost diff --path plan.json\n\nFLAGS\n      --compare-to string            Path to Infracost JSON file to compare against\n      --config-file string           Path to Infracost config file. Cannot be used with path, terraform* or usage-file flags\n      --exclude-path strings         Paths of directories to exclude, glob patterns need quotes\n      --format string                Output format: json, diff (default \"diff\")\n  -h, --help                         help for diff\n      --no-cache                     Don't attempt to cache Terraform plans\n      --out-file string              Save output to a file\n  -p, --path string                  Path to the Terraform directory or JSON/plan file\n      --project-name string          Name of project in the output. Defaults to path or git repo name\n      --show-skipped                 List unsupported and free resources\n      --sync-usage-file              Sync usage-file with missing resources, needs usage-file too (experimental)\n      --terraform-var strings        Set value for an input variable, similar to Terraform's -var flag\n      --terraform-var-file strings   Load variable files, similar to Terraform's -var-file flag. Provided files must be relative to the --path flag\n      --terraform-workspace string   Terraform workspace to use. Applicable when path is a Terraform directory\n      --usage-file string            Path to Infracost usage file that specifies values for usage-based resources\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+      "description": "Show diff of monthly costs between current and planned state"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--fields",
+          "shortcut": null,
+          "description": "Comma separated list of output fields: all,price,monthlyQuantity,unit,hourlyCost,monthlyCost. Supported by table and html output formats.",
+          "value": "strings",
+          "default": "[monthlyQuantity,unit,monthlyCost]"
+        },
+        {
+          "option": "--format",
+          "shortcut": null,
+          "description": "Output format: json, diff, table, html, github-comment, gitlab-comment, azure-repos-comment, bitbucket-comment, slack-message.",
+          "value": "string",
+          "default": "\"table\""
+        },
+        {
+          "option": "-h, --help",
+          "shortcut": "-h",
+          "description": "help for output",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-o, --out-file",
+          "shortcut": "-o",
+          "description": "Save output to a file, helpful with format flag",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "-p, --path",
+          "shortcut": "-p",
+          "description": "Path to Infracost JSON files, glob patterns need quotes",
+          "value": "stringArray",
+          "default": null
+        },
+        {
+          "option": "--show-skipped",
+          "shortcut": null,
+          "description": "List unsupported and free resources",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost output",
+      "raw_help_text": "Combine and output Infracost JSON files in different formats\n\nUSAGE\n  infracost output [flags]\n\nEXAMPLES\n  Show a breakdown from multiple Infracost JSON files:\n\n      infracost output --path out1.json --path out2.json --path out3.json\n\n  Create HTML report from multiple Infracost JSON files:\n\n      infracost output --format html --path \"out*.json\" --out-file output.html # glob needs quotes\n\n  Merge multiple Infracost JSON files:\n\n      infracost output --format json --path \"out*.json\" # glob needs quotes\n\n  Create markdown report to post in a GitHub comment:\n\n      infracost output --format github-comment --path \"out*.json\" # glob needs quotes\n\n  Create markdown report to post in a GitLab comment:\n\n      infracost output --format gitlab-comment --path \"out*.json\" # glob needs quotes\n\n  Create markdown report to post in a Azure DevOps Repos comment:\n\n      infracost output --format azure-repos-comment --path \"out*.json\" # glob needs quotes\n\n  Create markdown report to post in a Bitbucket comment:\n\n      infracost output --format bitbucket-comment --path \"out*.json\" # glob needs quotes\n\nFLAGS\n      --fields strings     Comma separated list of output fields: all,price,monthlyQuantity,unit,hourlyCost,monthlyCost.\n                           Supported by table and html output formats (default [monthlyQuantity,unit,monthlyCost])\n      --format string      Output format: json, diff, table, html, github-comment, gitlab-comment, azure-repos-comment, bitbucket-comment, slack-message (default \"table\")\n  -h, --help               help for output\n  -o, --out-file string    Save output to a file, helpful with format flag\n  -p, --path stringArray   Path to Infracost JSON files, glob patterns need quotes\n      --show-skipped       List unsupported and free resources\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+      "description": "Combine and output Infracost JSON files in different formats"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for register",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Log level (trace, debug, info, warn, error, fatal)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--no-color",
+          "shortcut": null,
+          "description": "Turn off colored output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "infracost register",
+      "raw_help_text": "Register for a free Infracost API key\n\nUSAGE\n  infracost register [flags]\n\nFLAGS\n  -h, --help   help for register\n\nGLOBAL FLAGS\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output",
+      "description": "Register for a free Infracost API key"
+    }
+  ],
+  "options": [
+    {
+      "option": "--log-level",
+      "shortcut": "-",
+      "description": "Log level (trace, debug, info, warn, error, fatal)",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--no-color",
+      "shortcut": null,
+      "description": "Turn off colored output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for infracost",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "version for infracost",
+      "value": null,
+      "default": null
+    }
+  ],
+  "aliases": [],
+  "name": "infracost",
+  "raw_help_text": "Infracost - cloud cost estimates for Terraform\n\nDOCS\n  Quick start: https://infracost.io/docs\n  Add cost estimates to your pull requests: https://infracost.io/cicd\n\nUSAGE\n  infracost [flags]\n  infracost [command]\n\nEXAMPLES\n  Show cost diff from Terraform directory:\n\n      infracost breakdown --path /code --format json --out-file infracost-base.json\n      # Make Terraform code changes\n      infracost diff --path /code --compare-to infracost-base.json\n\n  Show cost breakdown from Terraform directory:\n\n      infracost breakdown --path /code --terraform-var-file my.tfvars\n\nAVAILABLE COMMANDS\n  breakdown        Show breakdown of costs\n  comment          Post an Infracost comment to GitHub, GitLab, Azure Repos or Bitbucket\n  completion       Generate shell completion script\n  configure        Display or change global configuration\n  diff             Show diff of monthly costs between current and planned state\n  help             Help about any command\n  output           Combine and output Infracost JSON files in different formats\n  register         Register for a free Infracost API key\n\nFLAGS\n  -h, --help               help for infracost\n      --log-level string   Log level (trace, debug, info, warn, error, fatal)\n      --no-color           Turn off colored output\n  -v, --version            version for infracost\n\nUse \"infracost [command] --help\" for more information about a command.",
+  "version": "0.10.5"
+}

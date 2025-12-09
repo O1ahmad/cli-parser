@@ -1,0 +1,627 @@
+{
+  "name": "op-node",
+  "description": "Optimism Rollup Node",
+  "subcommands": [
+    {
+      "subcommands": [
+        {
+          "name": "op-node doc metrics",
+          "description": "Dumps a list of supported metrics to stdout",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--format",
+              "shortcut": null,
+              "description": "Output format (json|markdown)",
+              "value": "value",
+              "default": "markdown"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": null,
+              "default": "false"
+            }
+          ],
+          "raw_help_text": "NAME:\n   op-node doc metrics - Dumps a list of supported metrics to stdout\n\nUSAGE:\n   op-node doc metrics [command options]\n\nOPTIONS:\n   \n    --format value                      (default: \"markdown\")             \n          Output format (json|markdown)\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": "false",
+          "default": "false"
+        }
+      ],
+      "name": "op-node doc",
+      "raw_help_text": "NAME:\n   op-node doc\n\nUSAGE:\n   op-node doc command [command options]\n\nCOMMANDS:\n   metrics  Dumps a list of supported metrics to stdout\n   help, h  Shows a list of commands or help for one command\n\nOPTIONS:\n   \n          --help, -h                          (default: false)                  \n                show help",
+      "description": "Display documentation or help information"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--deploy-config",
+              "shortcut": null,
+              "description": "Path to deploy config file",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--l1-allocs",
+              "shortcut": null,
+              "description": "Path to L1 genesis state dump",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--l1-deployments",
+              "shortcut": null,
+              "description": "Path to L1 deployments JSON file as in superchain-registry",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--outfile.l1",
+              "shortcut": null,
+              "description": "Path to L1 genesis output file",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": null,
+              "default": "false"
+            }
+          ],
+          "name": "op-node genesis l1",
+          "raw_help_text": "NAME:\n   op-node genesis l1 - Generates a L1 genesis state file\n\nUSAGE:\n   op-node genesis l1 [command options]\n\nOPTIONS:\n   \n    --deploy-config value                                                 \n          Path to deploy config file\n   \n    --l1-allocs value                                                     \n          Path to L1 genesis state dump\n   \n    --l1-deployments value                                                \n          Path to L1 deployments JSON file as in superchain-registry\n   \n    --outfile.l1 value                                                    \n          Path to L1 genesis output file\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Generates a L1 genesis state file"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--deploy-config",
+              "shortcut": null,
+              "description": "Path to deploy config file",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--l1-deployments",
+              "shortcut": null,
+              "description": "Path to L1 deployments JSON file as in superchain-registry",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--l1-rpc",
+              "shortcut": null,
+              "description": "RPC URL for an Ethereum L1 node",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--l2-allocs",
+              "shortcut": null,
+              "description": "Path to L2 genesis state dump",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--outfile.l2",
+              "shortcut": null,
+              "description": "Path to L2 genesis output file",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--outfile.rollup",
+              "shortcut": null,
+              "description": "Path to rollup output file",
+              "value": "value",
+              "default": null
+            }
+          ],
+          "description": "Generates an L2 genesis file and rollup config suitable for a deployed network",
+          "name": "op-node genesis l2",
+          "raw_help_text": "NAME:\n   op-node genesis l2 - Generates an L2 genesis file and rollup config suitable for a deployed network\n\nUSAGE:\n   op-node genesis l2 [command options]\n\nDESCRIPTION:\n   Generating the L2 genesis depends on knowledge of L1 contract addresses for the bridge to be secure. A deploy config and either a deployment directory or an L1 deployments file are used to create the L2 genesis. The deploy directory and L1 deployments file are generated by the L1 contract deployments. An L1 starting block is necessary, it can either be fetched dynamically using config in the deploy config or it can be provided as a JSON file.\n\nOPTIONS:\n   \n    --deploy-config value                                                 \n          Path to deploy config file\n   \n    --l1-deployments value                                                \n          Path to L1 deployments JSON file as in superchain-registry\n   \n    --l1-rpc value                                                        \n          RPC URL for an Ethereum L1 node\n   \n    --l2-allocs value                                                     \n          Path to L2 genesis state dump\n   \n    --outfile.l2 value                                                    \n          Path to L2 genesis output file\n   \n    --outfile.rollup value                                                \n          Path to rollup output file\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": false
+        }
+      ],
+      "description": "Manage genesis state files for the op-node",
+      "name": "op-node genesis",
+      "raw_help_text": "NAME:\n   op-node genesis\n\nUSAGE:\n   op-node genesis command [command options]\n\nCOMMANDS:\n   l1       Generates a L1 genesis state file\n   l2       Generates an L2 genesis file and rollup config suitable for a deployed network\n   help, h  Shows a list of commands or help for one command\n\nOPTIONS:\n   \n          --help, -h                          (default: false)                  \n                show help"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--artifacts-dir",
+              "shortcut": null,
+              "description": "Directory for artifacts",
+              "value": "value",
+              "default": "packages/contracts-bedrock/forge-artifacts"
+            },
+            {
+              "option": "--foundry-dir",
+              "shortcut": null,
+              "description": "Optional, for source-map info during genesis generation",
+              "value": "value",
+              "default": "packages/contracts-bedrock"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--l1.chainid",
+              "shortcut": null,
+              "description": "Chain ID for L1",
+              "value": "value",
+              "default": "900100"
+            },
+            {
+              "option": "--l2.chainids",
+              "shortcut": null,
+              "description": "Chain IDs for L2s",
+              "value": "value",
+              "default": "900200, 900201"
+            },
+            {
+              "option": "--log.color",
+              "shortcut": null,
+              "description": "Color the log output if in terminal mode",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--log.format",
+              "shortcut": null,
+              "description": "Format the log output. Supported formats: 'text', 'terminal', 'logfmt', 'json', 'json-pretty'",
+              "value": "value",
+              "default": "text"
+            },
+            {
+              "option": "--log.level",
+              "shortcut": null,
+              "description": "The lowest log level that will be output",
+              "value": "value",
+              "default": "INFO"
+            },
+            {
+              "option": "--log.pid",
+              "shortcut": null,
+              "description": "Show pid in the log",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--mnemonic",
+              "shortcut": null,
+              "description": "Mnemonic for the operation",
+              "value": "value",
+              "default": "\"test test test test test test test test test test test junk\""
+            },
+            {
+              "option": "--out-dir",
+              "shortcut": null,
+              "description": "Output directory",
+              "value": "value",
+              "default": ".interop-devnet"
+            },
+            {
+              "option": "--timestamp",
+              "shortcut": null,
+              "description": "Will use current timestamp, plus 5 seconds, if not set",
+              "value": "value",
+              "default": "0"
+            }
+          ],
+          "name": "op-node interop dev-setup",
+          "raw_help_text": "NAME:\n   op-node interop dev-setup - Generate devnet genesis configs with one L1 and multiple L2s\n\nUSAGE:\n   op-node interop dev-setup [command options]\n\nOPTIONS:\n   \n    --artifacts-dir value               (default: \"packages/contracts-bedrock/forge-artifacts\") ($OP_INTEROP_ARTIFACTS_DIR)\n          \n   \n    --foundry-dir value                 (default: \"packages/contracts-bedrock\") ($OP_INTEROP_FOUNDRY_DIR)\n          Optional, for source-map info during genesis generation\n   \n    --l1.chainid value                  (default: 900100)                  ($OP_INTEROP_L1_CHAINID)\n          \n   \n    --l2.chainids value                 (default: 900200, 900201)          ($OP_INTEROP_L2_CHAINIDS)\n          \n   \n    --log.color                         (default: false)                   ($OP_INTEROP_LOG_COLOR)\n          Color the log output if in terminal mode\n   \n    --log.format value                  (default: text)                    ($OP_INTEROP_LOG_FORMAT)\n          Format the log output. Supported formats: 'text', 'terminal', 'logfmt', 'json',\n          'json-pretty',\n   \n    --log.level value                   (default: INFO)                    ($OP_INTEROP_LOG_LEVEL)\n          The lowest log level that will be output\n   \n    --log.pid                           (default: false)                   ($OP_INTEROP_LOG_PID)\n          Show pid in the log\n   \n    --mnemonic value                    (default: \"test test test test test test test test test test test junk\") ($OP_INTEROP_MNEMONIC)\n          \n   \n    --out-dir value                     (default: \".interop-devnet\")       ($OP_INTEROP_OUT_DIR)\n          \n   \n    --timestamp value                   (default: 0)                       ($OP_INTEROP_TIMESTAMP)\n          Will use current timestamp, plus 5 seconds, if not set\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Generate devnet genesis configs with one L1 and multiple L2s"
+        },
+        {
+          "subcommands": [
+            {
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--chainid",
+                  "shortcut": null,
+                  "description": "Chain ID",
+                  "value": "value",
+                  "default": "0"
+                },
+                {
+                  "option": "--domain",
+                  "shortcut": null,
+                  "description": "Domain",
+                  "value": "value",
+                  "default": "\"chain-operator\""
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "Show help",
+                  "value": null,
+                  "default": "false"
+                },
+                {
+                  "option": "--mnemonic",
+                  "shortcut": null,
+                  "description": "Mnemonic phrase",
+                  "value": "value",
+                  "default": "\"test test test test test test test test test test test junk\""
+                },
+                {
+                  "option": "--name",
+                  "shortcut": null,
+                  "description": "Name",
+                  "value": "value",
+                  "default": null
+                }
+              ],
+              "name": "op-node interop devkey address",
+              "raw_help_text": "NAME:\n   op-node interop devkey address - Retrieve devkey address, by specifying domain, chain ID, name.\n\nUSAGE:\n   op-node interop devkey address [command options]\n\nOPTIONS:\n   \n    --chainid value                     (default: 0)                       ($OP_INTEROP_DEVKEY_CHAINID)\n          \n   \n    --domain value                      (default: \"chain-operator\")        ($OP_INTEROP_DEVKEY_DOMAIN)\n          \n   \n    --mnemonic value                    (default: \"test test test test test test test test test test test junk\") ($OP_INTEROP_MNEMONIC)\n          \n   \n    --name value                                                           ($OP_INTEROP_DEVKEY_NAME)\n          \n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+              "description": "Retrieve devkey address, by specifying domain, chain ID, name."
+            },
+            {
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--chainid",
+                  "shortcut": null,
+                  "description": "Chain ID for the operation.",
+                  "value": "value",
+                  "default": "0"
+                },
+                {
+                  "option": "--domain",
+                  "shortcut": null,
+                  "description": "Domain for the operation.",
+                  "value": "value",
+                  "default": "\"chain-operator\""
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "Show help.",
+                  "value": null,
+                  "default": "false"
+                },
+                {
+                  "option": "--mnemonic",
+                  "shortcut": null,
+                  "description": "Mnemonic phrase for the operation.",
+                  "value": "value",
+                  "default": "\"test test test test test test test test test test test junk\""
+                },
+                {
+                  "option": "--name",
+                  "shortcut": null,
+                  "description": "Name for the operation.",
+                  "value": "value",
+                  "default": null
+                }
+              ],
+              "name": "op-node interop devkey secret",
+              "raw_help_text": "NAME:\n   op-node interop devkey secret - Retrieve devkey secret, by specifying domain, chain ID, name.\n\nUSAGE:\n   op-node interop devkey secret [command options]\n\nOPTIONS:\n   \n    --chainid value                     (default: 0)                       ($OP_INTEROP_DEVKEY_CHAINID)\n          \n   \n    --domain value                      (default: \"chain-operator\")        ($OP_INTEROP_DEVKEY_DOMAIN)\n          \n   \n    --mnemonic value                    (default: \"test test test test test test test test test test test junk\") ($OP_INTEROP_MNEMONIC)\n          \n   \n    --name value                                                           ($OP_INTEROP_DEVKEY_NAME)\n          \n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+              "description": "Retrieve devkey secret, by specifying domain, chain ID, name."
+            }
+          ],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": false,
+              "default": "false"
+            }
+          ],
+          "name": "op-node interop devkey",
+          "raw_help_text": "NAME:\n   op-node interop devkey - Retrieve devkey secret or address\n\nUSAGE:\n   op-node interop devkey command [command options]\n\nCOMMANDS:\n   secret   Retrieve devkey secret, by specifying domain, chain ID, name.\n   address  Retrieve devkey address, by specifying domain, chain ID, name.\n   help, h  Shows a list of commands or help for one command\n\nOPTIONS:\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Retrieve devkey secret or address"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": false,
+          "default": "false"
+        }
+      ],
+      "name": "op-node interop",
+      "raw_help_text": "NAME:\n   op-node interop - Experimental tools for OP-Stack interop networks.\n\nUSAGE:\n   op-node interop command [command options]\n\nCOMMANDS:\n   dev-setup  Generate devnet genesis configs with one L1 and multiple L2s\n   devkey     Retrieve devkey secret or address\n   help, h    Shows a list of commands or help for one command\n\nOPTIONS:\n   \n          --help, -h                          (default: false)                  \n                show help",
+      "description": "Experimental tools for OP-Stack interop networks"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "Predefined network selection. Available networks: automata-mainnet, base-devnet-0-sepolia-dev-0, base-mainnet, base-sepolia, cyber-mainnet, cyber-sepolia, ethernity-mainnet, ethernity-sepolia, funki-mainnet, funki-sepolia, ink-sepolia, lisk-mainnet, lisk-sepolia, lyra-mainnet, metal-mainnet, metal-sepolia, minato-sepolia, mode-mainnet, mode-sepolia, op-mainnet, op-sepolia, oplabs-devnet-0-sepolia-dev-0, orderly-mainnet, race-mainnet, race-sepolia, shape-mainnet, shape-sepolia, swan-mainnet, swell-mainnet, tbn-mainnet, tbn-sepolia, unichain-sepolia, worldchain-mainnet, worldchain-sepolia, zora-mainnet, zora-sepolia",
+              "value": "$OP_NODE_NETWORK",
+              "default": null
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": null,
+              "default": "false"
+            }
+          ],
+          "name": "op-node networks dump-rollup-config",
+          "raw_help_text": "NAME:\n   op-node networks dump-rollup-config - Dumps network configs\n\nUSAGE:\n   op-node networks dump-rollup-config [command options]\n\nOPTIONS:\n   \n    --network value                                                        ($OP_NODE_NETWORK)\n          Predefined network selection. Available networks: automata-mainnet,\n          base-devnet-0-sepolia-dev-0, base-mainnet, base-sepolia, cyber-mainnet,\n          cyber-sepolia, ethernity-mainnet, ethernity-sepolia, funki-mainnet,\n          funki-sepolia, ink-sepolia, lisk-mainnet, lisk-sepolia, lyra-mainnet,\n          metal-mainnet, metal-sepolia, minato-sepolia, mode-mainnet, mode-sepolia,\n          op-mainnet, op-sepolia, oplabs-devnet-0-sepolia-dev-0, orderly-mainnet,\n          race-mainnet, race-sepolia, shape-mainnet, shape-sepolia, swan-mainnet,\n          swell-mainnet, tbn-mainnet, tbn-sepolia, unichain-sepolia, worldchain-mainnet,\n          worldchain-sepolia, zora-mainnet, zora-sepolia\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Dumps network configs"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": false,
+          "default": false
+        }
+      ],
+      "name": "op-node networks",
+      "raw_help_text": "NAME:\n   op-node networks\n\nUSAGE:\n   op-node networks command [command options]\n\nCOMMANDS:\n   dump-rollup-config  Dumps network configs\n   help, h             Shows a list of commands or help for one command\n\nOPTIONS:\n   \n          --help, -h                          (default: false)                  \n                show help",
+      "description": "Manage network configurations"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": false,
+              "default": "false"
+            }
+          ],
+          "name": "op-node p2p genkey",
+          "raw_help_text": "NAME:\n   op-node p2p genkey - Generates a private key\n\nUSAGE:\n   op-node p2p genkey [command options]\n\nOPTIONS:\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Generates a private key"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": false,
+              "default": "false"
+            }
+          ],
+          "name": "op-node p2p priv2id",
+          "raw_help_text": "NAME:\n   op-node p2p priv2id - Reads a private key from STDIN, and returns a peer ID\n\nUSAGE:\n   op-node p2p priv2id [command options]\n\nOPTIONS:\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help",
+          "description": "Reads a private key from STDIN, and returns a peer ID"
+        },
+        {
+          "name": "op-node p2p pub2id",
+          "description": "Reads a public key from STDIN, and returns a peer ID",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help",
+              "value": false,
+              "default": false
+            }
+          ],
+          "raw_help_text": "NAME:\n   op-node p2p pub2id - Reads a public key from STDIN, and returns a peer ID\n\nUSAGE:\n   op-node p2p pub2id [command options]\n\nOPTIONS:\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": false,
+          "default": false
+        }
+      ],
+      "name": "op-node p2p",
+      "raw_help_text": "NAME:\n   op-node p2p\n\nUSAGE:\n   op-node p2p command [command options]\n\nCOMMANDS:\n   priv2id  Reads a private key from STDIN, and returns a peer ID\n   pub2id   Reads a public key from STDIN, and returns a peer ID\n   genkey   Generates a private key\n   help, h  Shows a list of commands or help for one command\n\nOPTIONS:\n   \n          --help, -h                          (default: false)                  \n                show help",
+      "description": "Manage peer-to-peer networking"
+    }
+  ],
+  "options": [
+    {
+      "option": "--altda.da-server",
+      "shortcut": null,
+      "description": "HTTP address of a DA Server",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--altda.da-service",
+      "shortcut": null,
+      "description": "Use DA service type where commitments are generated by Alt-DA server",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--altda.enabled",
+      "shortcut": null,
+      "description": "Enable Alt-DA mode",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--altda.get-timeout",
+      "shortcut": null,
+      "description": "Timeout for get requests. 0 means no timeout.",
+      "value": null,
+      "default": "0s"
+    },
+    {
+      "option": "--altda.max-concurrent-da-requests",
+      "shortcut": null,
+      "description": "Maximum number of concurrent requests to the DA server",
+      "value": null,
+      "default": "1"
+    },
+    {
+      "option": "--altda.put-timeout",
+      "shortcut": null,
+      "description": "Timeout for put requests. 0 means no timeout.",
+      "value": null,
+      "default": "0s"
+    },
+    {
+      "option": "--altda.verify-on-read",
+      "shortcut": null,
+      "description": "Verify input data matches the commitments from the DA storage service",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--l1",
+      "shortcut": null,
+      "description": "Address of L1 User JSON-RPC endpoint to use (eth namespace required)",
+      "value": null,
+      "default": "\"http://127.0.0.1:8545\""
+    },
+    {
+      "option": "--l1.beacon",
+      "shortcut": null,
+      "description": "Address of L1 Beacon-node HTTP endpoint to use.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--l2",
+      "shortcut": null,
+      "description": "Address of L2 Engine JSON-RPC endpoints to use (engine and eth namespace required)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--l2.enginekind",
+      "shortcut": null,
+      "description": "The kind of engine client, used to control the behavior of optimism in respect to different types of engine clients.",
+      "value": null,
+      "default": "geth"
+    },
+    {
+      "option": "--l2.jwt-secret",
+      "shortcut": null,
+      "description": "Path to JWT secret key. Keys are 32 bytes, hex encoded in a file. A new key will be generated if the file is empty.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--network",
+      "shortcut": null,
+      "description": "Predefined network selection. Available networks: automata-mainnet, base-devnet-0-sepolia-dev-0, base-mainnet, base-sepolia, cyber-mainnet, cyber-sepolia, ethernity-mainnet, ethernity-sepolia, funki-mainnet, funki-sepolia, ink-sepolia, lisk-mainnet, lisk-sepolia, lyra-mainnet, metal-mainnet, metal-sepolia, minato-sepolia, mode-mainnet, mode-sepolia, op-mainnet, op-sepolia, oplabs-devnet-0-sepolia-dev-0, orderly-mainnet, race-mainnet, race-sepolia, shape-mainnet, shape-sepolia, swan-mainnet, swell-mainnet, tbn-mainnet, tbn-sepolia, unichain-sepolia, worldchain-mainnet, worldchain-sepolia, zora-mainnet, zora-sepolia",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signer.address",
+      "shortcut": null,
+      "description": "Address the signer is signing requests for",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signer.endpoint",
+      "shortcut": null,
+      "description": "Signer endpoint the client will connect to",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signer.header",
+      "shortcut": null,
+      "description": "Headers to pass to the remote signer. Format `key=value`. Value can contain any character allowed in a HTTP header.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--signer.tls.ca",
+      "shortcut": null,
+      "description": "tls ca cert path",
+      "value": null,
+      "default": "\"tls/ca.crt\""
+    },
+    {
+      "option": "--signer.tls.cert",
+      "shortcut": null,
+      "description": "tls cert path",
+      "value": null,
+      "default": "\"tls/tls.crt\""
+    },
+    {
+      "option": "--signer.tls.enabled",
+      "shortcut": null,
+      "description": "Enable or disable TLS client authentication for the signer",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--signer.tls.key",
+      "shortcut": null,
+      "description": "tls key",
+      "value": null,
+      "default": "\"tls/tls.key\""
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version",
+      "value": null,
+      "default": "false"
+    }
+  ],
+  "raw_help_text": "NAME:\n   op-node - Optimism Rollup Node\n\nUSAGE:\n   op-node [global options] command [command options]\n\nVERSION:\n   v1.10.2-rc.2-8bf7ff60-1734088434\n\nDESCRIPTION:\n   The Optimism Rollup Node derives L2 block inputs from L1 data and drives an external L2 Execution Engine to build a L2 chain.\n\nCOMMANDS:\n   p2p       \n   genesis   \n   doc       \n   networks  \n   interop   Experimental tools for OP-Stack interop networks.\n   help, h   Shows a list of commands or help for one command\n\nGLOBAL OPTIONS:\n   \n    --signer.header value                                                  ($OP_NODE_SIGNER_HEADER)\n          Headers to pass to the remote signer. Format `key=value`. Value can contain any\n          character allowed in a HTTP header. When using env vars, split with commas. When\n          using flags one key value pair per flag.\n   \n    --signer.tls.enabled                (default: true)                    ($OP_NODE_SIGNER_TLS_ENABLED)\n          Enable or disable TLS client authentication for the signer\n\n   1. ROLLUP\n\n   \n    --l1 value                          (default: \"http://127.0.0.1:8545\") ($OP_NODE_L1_ETH_RPC)\n          Address of L1 User JSON-RPC endpoint to use (eth namespace required)\n   \n    --l1.beacon value                                                      ($OP_NODE_L1_BEACON)\n          Address of L1 Beacon-node HTTP endpoint to use.\n   \n    --l2 value                                                             ($OP_NODE_L2_ENGINE_RPC)\n          Address of L2 Engine JSON-RPC endpoints to use (engine and eth namespace\n          required)\n   \n    --l2.enginekind value               (default: geth)                    ($OP_NODE_L2_ENGINE_KIND)\n          The kind of engine client, used to control the behavior of optimism in respect\n          to different types of engine clients. Valid options: geth, reth, erigon\n   \n    --l2.jwt-secret value                                                  ($OP_NODE_L2_ENGINE_AUTH)\n          Path to JWT secret key. Keys are 32 bytes, hex encoded in a file. A new key will\n          be generated if the file is empty.\n   \n    --network value                                                        ($OP_NODE_NETWORK)\n          Predefined network selection. Available networks: automata-mainnet,\n          base-devnet-0-sepolia-dev-0, base-mainnet, base-sepolia, cyber-mainnet,\n          cyber-sepolia, ethernity-mainnet, ethernity-sepolia, funki-mainnet,\n          funki-sepolia, ink-sepolia, lisk-mainnet, lisk-sepolia, lyra-mainnet,\n          metal-mainnet, metal-sepolia, minato-sepolia, mode-mainnet, mode-sepolia,\n          op-mainnet, op-sepolia, oplabs-devnet-0-sepolia-dev-0, orderly-mainnet,\n          race-mainnet, race-sepolia, shape-mainnet, shape-sepolia, swan-mainnet,\n          swell-mainnet, tbn-mainnet, tbn-sepolia, unichain-sepolia, worldchain-mainnet,\n          worldchain-sepolia, zora-mainnet, zora-sepolia\n   \n    --override.canyon value             (default: 0)                       ($OP_NODE_OVERRIDE_CANYON)\n          Manually specify the Canyon fork timestamp, overriding the bundled setting\n   \n    --override.delta value              (default: 0)                       ($OP_NODE_OVERRIDE_DELTA)\n          Manually specify the Delta fork timestamp, overriding the bundled setting\n   \n    --override.ecotone value            (default: 0)                       ($OP_NODE_OVERRIDE_ECOTONE)\n          Manually specify the Ecotone fork timestamp, overriding the bundled setting\n   \n    --override.fjord value              (default: 0)                       ($OP_NODE_OVERRIDE_FJORD)\n          Manually specify the Fjord fork timestamp, overriding the bundled setting\n   \n    --override.granite value            (default: 0)                       ($OP_NODE_OVERRIDE_GRANITE)\n          Manually specify the Granite fork timestamp, overriding the bundled setting\n   \n    --override.holocene value           (default: 0)                       ($OP_NODE_OVERRIDE_HOLOCENE)\n          Manually specify the Holocene fork timestamp, overriding the bundled setting\n   \n    --rollup.config value                                                  ($OP_NODE_ROLLUP_CONFIG)\n          Rollup chain parameters\n   \n    --rollup.halt value                                                    ($OP_NODE_ROLLUP_HALT)\n          Opt-in option to halt on incompatible protocol version requirements of the given\n          level (major/minor/patch/none), as signaled onchain in L1\n   \n    --rollup.load-protocol-versions     (default: false)                   ($OP_NODE_ROLLUP_LOAD_PROTOCOL_VERSIONS)\n          Load protocol versions from the superchain L1 ProtocolVersions contract (if\n          available), and report in logs and metrics\n   \n    --syncmode value                    (default: consensus-layer)         ($OP_NODE_SYNCMODE)\n          Blockchain sync mode (options: consensus-layer, execution-layer)\n\n   2. L1 RPC\n\n   \n    --l1.beacon-fallbacks value, --l1.beacon-archiver value                                    ($OP_NODE_L1_BEACON_FALLBACKS, $OP_NODE_L1_BEACON_ARCHIVER)\n          Addresses of L1 Beacon-API compatible HTTP fallback endpoints. Used to fetch\n          blob sidecars not availalbe at the l1.beacon (e.g. expired blobs).\n   \n    --l1.beacon-header value                                               ($OP_NODE_L1_BEACON_HEADER)\n          Optional HTTP header to add to all requests to the L1 Beacon endpoint. Format:\n          'X-Key: Value'\n   \n    --l1.beacon.fetch-all-sidecars      (default: false)                   ($OP_NODE_L1_BEACON_FETCH_ALL_SIDECARS)\n          If true, all sidecars are fetched and filtered locally. Workaround for buggy\n          Beacon nodes.\n   \n    --l1.beacon.ignore                  (default: false)                   ($OP_NODE_L1_BEACON_IGNORE)\n          When false, halts op-node startup if the healthcheck to the Beacon-node endpoint\n          fails.\n   \n    --l1.epoch-poll-interval value      (default: 6m24s)                   ($OP_NODE_L1_EPOCH_POLL_INTERVAL)\n          Poll interval for retrieving new L1 epoch updates such as safe and finalized\n          block changes. Disabled if 0 or negative.\n   \n    --l1.http-poll-interval value       (default: 12s)                     ($OP_NODE_L1_HTTP_POLL_INTERVAL)\n          Polling interval for latest-block subscription when using an HTTP RPC provider.\n          Ignored for other types of RPC endpoints.\n   \n    --l1.max-concurrency value          (default: 10)                      ($OP_NODE_L1_MAX_CONCURRENCY)\n          Maximum number of concurrent RPC requests to make to the L1 RPC provider.\n   \n    --l1.rpc-max-batch-size value       (default: 20)                      ($OP_NODE_L1_RPC_MAX_BATCH_SIZE)\n          Maximum number of RPC requests to bundle, e.g. during L1 blocks receipt\n          fetching. The L1 RPC rate limit counts this as N items, but allows it to burst\n          at once.\n   \n    --l1.rpc-rate-limit value           (default: 0)                       ($OP_NODE_L1_RPC_RATE_LIMIT)\n          Optional self-imposed global rate-limit on L1 RPC requests, specified in\n          requests / second. Disabled if set to 0.\n   \n    --l1.rpckind value                  (default: standard)                ($OP_NODE_L1_RPC_KIND)\n          The kind of RPC provider, used to inform optimal transactions receipts fetching,\n          and thus reduce costs. Valid options: alchemy, quicknode, infura, parity,\n          nethermind, debug_geth, erigon, basic, any, standard\n   \n    --l1.runtime-config-reload-interval value (default: 10m0s)                   ($OP_NODE_L1_RUNTIME_CONFIG_RELOAD_INTERVAL)\n          Poll interval for reloading the runtime config, useful when config events are\n          not being picked up. Disabled if 0 or negative.\n   \n    --l1.trustrpc                       (default: false)                   ($OP_NODE_L1_TRUST_RPC)\n          Trust the L1 RPC, sync faster at risk of malicious/buggy RPC providing bad or\n          inconsistent L1 data\n   \n    --verifier.l1-confs value           (default: 0)                       ($OP_NODE_VERIFIER_L1_CONFS)\n          Number of L1 blocks to keep distance from the L1 head before deriving L2 data\n          from. Reorgs are supported, but may be slow to perform.\n\n   3. SEQUENCER\n\n   \n    --conductor.enabled                 (default: false)                   ($OP_NODE_CONDUCTOR_ENABLED)\n          Enable the conductor service\n   \n    --conductor.rpc value               (default: \"http://127.0.0.1:8547\") ($OP_NODE_CONDUCTOR_RPC)\n          Conductor service rpc endpoint\n   \n    --conductor.rpc-timeout value       (default: 1s)                      ($OP_NODE_CONDUCTOR_RPC_TIMEOUT)\n          Conductor service rpc timeout\n   \n    --sequencer.enabled                 (default: false)                   ($OP_NODE_SEQUENCER_ENABLED)\n          Enable sequencing of new L2 blocks. A separate batch submitter has to be\n          deployed to publish the data for verifiers.\n   \n    --sequencer.l1-confs value          (default: 4)                       ($OP_NODE_SEQUENCER_L1_CONFS)\n          Number of L1 blocks to keep distance from the L1 head as a sequencer for picking\n          an L1 origin.\n   \n    --sequencer.max-safe-lag value      (default: 0)                       ($OP_NODE_SEQUENCER_MAX_SAFE_LAG)\n          Maximum number of L2 blocks for restricting the distance between L2 safe and\n          unsafe. Disabled if 0.\n   \n    --sequencer.stopped                 (default: false)                   ($OP_NODE_SEQUENCER_STOPPED)\n          Initialize the sequencer in a stopped state. The sequencer can be started using\n          the admin_startSequencer RPC\n\n   4. LOGGING, METRICS, DEBUGGING, AND API\n\n   \n    --log.color                         (default: false)                   ($OP_NODE_LOG_COLOR)\n          Color the log output if in terminal mode\n   \n    --log.format value                  (default: text)                    ($OP_NODE_LOG_FORMAT)\n          Format the log output. Supported formats: 'text', 'terminal', 'logfmt', 'json',\n          'json-pretty',\n   \n    --log.level value                   (default: INFO)                    ($OP_NODE_LOG_LEVEL)\n          The lowest log level that will be output\n   \n    --log.pid                           (default: false)                   ($OP_NODE_LOG_PID)\n          Show pid in the log\n   \n    --metrics.addr value                (default: \"0.0.0.0\")               ($OP_NODE_METRICS_ADDR)\n          Metrics listening address\n   \n    --metrics.enabled                   (default: false)                   ($OP_NODE_METRICS_ENABLED)\n          Enable the metrics server\n   \n    --metrics.port value                (default: 7300)                    ($OP_NODE_METRICS_PORT)\n          Metrics listening port\n   \n    --pprof.addr value                  (default: \"0.0.0.0\")               ($OP_NODE_PPROF_ADDR)\n          pprof listening address\n   \n    --pprof.enabled                     (default: false)                   ($OP_NODE_PPROF_ENABLED)\n          Enable the pprof server\n   \n    --pprof.path value                                                     ($OP_NODE_PPROF_PATH)\n          pprof file path. If it is a directory, the path is {dir}/{profileType}.prof\n   \n    --pprof.port value                  (default: 6060)                    ($OP_NODE_PPROF_PORT)\n          pprof listening port\n   \n    --pprof.type value                                                     ($OP_NODE_PPROF_TYPE)\n          pprof profile type. One of cpu, heap, goroutine, threadcreate, block, mutex,\n          allocs\n   \n    --rpc.addr value                    (default: \"127.0.0.1\")             ($OP_NODE_RPC_ADDR)\n          RPC listening address\n   \n    --rpc.admin-state value                                                ($OP_NODE_RPC_ADMIN_STATE)\n          File path used to persist state changes made via the admin API so they persist\n          across restarts. Disabled if not set.\n   \n    --rpc.enable-admin                  (default: false)                   ($OP_NODE_RPC_ENABLE_ADMIN)\n          Enable the admin API (experimental)\n   \n    --rpc.port value                    (default: 9545)                    ($OP_NODE_RPC_PORT)\n          RPC listening port\n   \n    --safedb.path value                                                    ($OP_NODE_SAFEDB_PATH)\n          File path used to persist safe head update data. Disabled if not set.\n\n   5. PEER-TO-PEER\n\n   \n    --p2p.advertise.ip value                                               ($OP_NODE_P2P_ADVERTISE_IP)\n          The IP address to advertise in Discv5, put into the ENR of the node. This may\n          also be a hostname / domain name to resolve to an IP.\n   \n    --p2p.advertise.tcp value           (default: 0)                       ($OP_NODE_P2P_ADVERTISE_TCP)\n          The TCP port to advertise in Discv5, put into the ENR of the node. Set to\n          p2p.listen.tcp value if 0.\n   \n    --p2p.advertise.udp value           (default: 0)                       ($OP_NODE_P2P_ADVERTISE_UDP)\n          The UDP port to advertise in Discv5 as fallback if not determined by Discv5, put\n          into the ENR of the node. Set to p2p.listen.udp value if 0.\n   \n    --p2p.ban.duration value            (default: 1h0m0s)                  ($OP_NODE_P2P_PEER_BANNING_DURATION)\n          The duration that peers are banned for.\n   \n    --p2p.ban.peers                     (default: true)                    ($OP_NODE_P2P_PEER_BANNING)\n          Enables peer banning.\n   \n    --p2p.ban.threshold value           (default: -100)                    ($OP_NODE_P2P_PEER_BANNING_THRESHOLD)\n          The minimum score below which peers are disconnected and banned.\n   \n    --p2p.bootnodes value                                                  ($OP_NODE_P2P_BOOTNODES)\n          Comma-separated base64-format ENR list. Bootnodes to start discovering other\n          node records from.\n   \n    --p2p.disable                       (default: false)                   ($OP_NODE_P2P_DISABLE)\n          Completely disable the P2P stack\n   \n    --p2p.discovery.path value          (default: \"opnode_discovery_db\")   ($OP_NODE_P2P_DISCOVERY_PATH)\n          Discovered ENRs are persisted in a database to recover from a restart without\n          having to bootstrap the discovery process again. Set to 'memory' to never\n          persist the peerstore.\n   \n    --p2p.listen.ip value               (default: \"0.0.0.0\")               ($OP_NODE_P2P_LISTEN_IP)\n          IP to bind LibP2P and Discv5 to\n   \n    --p2p.listen.tcp value              (default: 9222)                    ($OP_NODE_P2P_LISTEN_TCP_PORT)\n          TCP port to bind LibP2P to. Any available system port if set to 0.\n   \n    --p2p.listen.udp value              (default: 0)                       ($OP_NODE_P2P_LISTEN_UDP_PORT)\n          UDP port to bind Discv5 to. Same as TCP port if left 0.\n   \n    --p2p.nat                           (default: false)                   ($OP_NODE_P2P_NAT)\n          Enable NAT traversal with PMP/UPNP devices to learn external IP.\n   \n    --p2p.netrestrict value                                                ($OP_NODE_P2P_NETRESTRICT)\n          Comma-separated list of CIDR masks. P2P will only try to connect on these\n          networks\n   \n    --p2p.no-discovery                  (default: false)                   ($OP_NODE_P2P_NO_DISCOVERY)\n          Disable Discv5 (node discovery)\n   \n    --p2p.peers.grace value             (default: 30s)                     ($OP_NODE_P2P_PEERS_GRACE)\n          Grace period to keep a newly connected peer around, if it is not misbehaving.\n   \n    --p2p.peers.hi value                (default: 30)                      ($OP_NODE_P2P_PEERS_HI)\n          High-tide peer count. The node starts pruning peer connections slowly after\n          reaching this number.\n   \n    --p2p.peers.lo value                (default: 20)                      ($OP_NODE_P2P_PEERS_LO)\n          Low-tide peer count. The node actively searches for new peer connections if\n          below this amount.\n   \n    --p2p.peerstore.path value          (default: \"opnode_peerstore_db\")   ($OP_NODE_P2P_PEERSTORE_PATH)\n          Peerstore database location. Persisted peerstores help recover peers after\n          restarts. Set to 'memory' to never persist the peerstore. Peerstore records will\n          be pruned / expire as necessary. Warning: a copy of the priv network key of the\n          local peer will be persisted here.\n   \n    --p2p.priv.path value               (default: \"opnode_p2p_priv.txt\")   ($OP_NODE_P2P_PRIV_PATH)\n          Read the hex-encoded 32-byte private key for the peer ID from this txt file.\n          Created if not already exists.Important to persist to keep the same network\n          identity after restarting, maintaining the previous advertised identity.\n   \n    --p2p.scoring value                 (default: \"light\")                 ($OP_NODE_P2P_PEER_SCORING)\n          Sets the peer scoring strategy for the P2P stack. Can be one of: none or light.\n   \n    --p2p.sequencer.key value                                              ($OP_NODE_P2P_SEQUENCER_KEY)\n          Hex-encoded private key for signing off on p2p application messages as\n          sequencer.\n   \n    --p2p.static value                                                     ($OP_NODE_P2P_STATIC)\n          Comma-separated multiaddr-format peer list. Static connections to make and\n          maintain, these peers will be regarded as trusted. Addresses of the local peer\n          are ignored. Duplicate/Alternative addresses for the same peer all apply, but\n          only a single connection per peer is maintained.\n   \n    --p2p.sync.onlyreqtostatic          (default: false)                   ($OP_NODE_P2P_SYNC_ONLYREQTOSTATIC)\n          Configure P2P to forward RequestL2Range requests to static peers only.\n   \n    --p2p.sync.req-resp                 (default: true)                    ($OP_NODE_P2P_SYNC_REQ_RESP)\n          Enables P2P req-resp alternative sync method, on both server and client side.\n   \n    --signer.address value                                                 ($OP_NODE_SIGNER_ADDRESS)\n          Address the signer is signing requests for\n   \n    --signer.endpoint value                                                ($OP_NODE_SIGNER_ENDPOINT)\n          Signer endpoint the client will connect to\n   \n    --signer.tls.ca value               (default: \"tls/ca.crt\")            ($OP_NODE_SIGNER_TLS_CA)\n          tls ca cert path\n   \n    --signer.tls.cert value             (default: \"tls/tls.crt\")           ($OP_NODE_SIGNER_TLS_CERT)\n          tls cert path\n   \n    --signer.tls.key value              (default: \"tls/tls.key\")           ($OP_NODE_SIGNER_TLS_KEY)\n          tls key\n\n   6. ALT-DA (EXPERIMENTAL)\n\n   \n    --altda.da-server value                                                ($OP_NODE_ALTDA_DA_SERVER)\n          HTTP address of a DA Server\n   \n    --altda.da-service                  (default: false)                   ($OP_NODE_ALTDA_DA_SERVICE)\n          Use DA service type where commitments are generated by Alt-DA server\n   \n    --altda.enabled                     (default: false)                   ($OP_NODE_ALTDA_ENABLED)\n          Enable Alt-DA mode\n          Alt-DA Mode is a Beta feature of the MIT licensed OP Stack. \n          While it has received initial review from core contributors, it is still\n          undergoing testing, and may have bugs or other issues.\n   \n    --altda.get-timeout value           (default: 0s)                      ($OP_NODE_ALTDA_GET_TIMEOUT)\n          Timeout for get requests. 0 means no timeout.\n   \n    --altda.max-concurrent-da-requests value (default: 1)                       ($OP_NODE_ALTDA_MAX_CONCURRENT_DA_REQUESTS)\n          Maximum number of concurrent requests to the DA server\n   \n    --altda.put-timeout value           (default: 0s)                      ($OP_NODE_ALTDA_PUT_TIMEOUT)\n          Timeout for put requests. 0 means no timeout.\n   \n    --altda.verify-on-read              (default: true)                    ($OP_NODE_ALTDA_VERIFY_ON_READ)\n          Verify input data matches the commitments from the DA storage service\n\n   7. MISC\n\n   \n    --help, -h                          (default: false)                  \n          show help\n   \n    --version, -v                       (default: false)                  \n          print the version\n\n   8. INTEROP (SUPER EXPERIMENTAL)\n\n   \n    --interop.jwt-secret value                                             ($OP_NODE_INTEROP_JWT_SECRET)\n          Interop RPC server authentication. Path to JWT secret key. Keys are 32 bytes,\n          hex encoded in a file. A new key will be generated if the file is empty. Applies\n          only to Interop-enabled networks.\n   \n    --interop.rpc.addr value            (default: \"127.0.0.1\")             ($OP_NODE_INTEROP_RPC_ADDR)\n          Interop Websocket-only RPC listening address, to serve supervisor\n          syncing.Applies only to Interop-enabled networks. Optional, alternative to\n          follow-mode.\n   \n    --interop.rpc.port value            (default: 9645)                    ($OP_NODE_INTEROP_RPC_PORT)\n          Interop RPC listening port, to serve supervisor syncing.Applies only to\n          Interop-enabled networks.\n   \n    --interop.supervisor value                                             ($OP_NODE_INTEROP_SUPERVISOR)\n          Interop standard-mode: RPC address of interop supervisor to use for cross-chain\n          safety verification.Applies only to Interop-enabled networks.",
+  "version": null
+}

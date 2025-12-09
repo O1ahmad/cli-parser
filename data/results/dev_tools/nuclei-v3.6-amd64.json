@@ -1,0 +1,1016 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "-u",
+      "shortcut": "-target",
+      "description": "target URLs/hosts to scan",
+      "value": "string[]"
+    },
+    {
+      "option": "-l",
+      "shortcut": "-list",
+      "description": "path to file containing a list of target URLs/hosts to scan (one per line)",
+      "value": "string"
+    },
+    {
+      "option": "-eh",
+      "shortcut": "-exclude-hosts",
+      "description": "hosts to exclude to scan from the input list (ip, cidr, hostname)",
+      "value": "string[]"
+    },
+    {
+      "option": "-resume",
+      "description": "resume scan from and save to specified file (clustering will be disabled)",
+      "value": "string"
+    },
+    {
+      "option": "-sa",
+      "shortcut": "-scan-all-ips",
+      "description": "scan all the IP's associated with dns record"
+    },
+    {
+      "option": "-iv",
+      "shortcut": "-ip-version",
+      "description": "IP version to scan of hostname (4,6) - (default 4)",
+      "value": "string[]"
+    },
+    {
+      "option": "-im",
+      "shortcut": "-input-mode",
+      "description": "mode of input file (list, burp, jsonl, yaml, openapi, swagger) (default \"list\")",
+      "value": "string"
+    },
+    {
+      "option": "-ro",
+      "shortcut": "-required-only",
+      "description": "use only required fields in input format when generating requests"
+    },
+    {
+      "option": "-sfv",
+      "shortcut": "-skip-format-validation",
+      "description": "skip format validation (like missing vars) when parsing input file"
+    },
+    {
+      "option": "-vtt",
+      "shortcut": "-vars-text-templating",
+      "description": "enable text templating for vars in input file (only for yaml input mode)"
+    },
+    {
+      "option": "-vfp",
+      "shortcut": "-var-file-paths",
+      "description": "list of yaml file contained vars to inject into yaml input",
+      "value": "string[]"
+    },
+    {
+      "option": "-nt",
+      "shortcut": "-new-templates",
+      "description": "run only new templates added in latest nuclei-templates release"
+    },
+    {
+      "option": "-ntv",
+      "shortcut": "-new-templates-version",
+      "description": "run new templates added in specific version",
+      "value": "string[]"
+    },
+    {
+      "option": "-as",
+      "shortcut": "-automatic-scan",
+      "description": "automatic web scan using wappalyzer technology detection to tags mapping"
+    },
+    {
+      "option": "-t",
+      "shortcut": "-templates",
+      "description": "list of template or template directory to run (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-turl",
+      "shortcut": "-template-url",
+      "description": "template url or list containing template urls to run (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-ai",
+      "shortcut": "-prompt",
+      "description": "generate and run template using ai prompt"
+    },
+    {
+      "option": "-w",
+      "shortcut": "-workflows",
+      "description": "list of workflow or workflow directory to run (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-wurl",
+      "shortcut": "-workflow-url",
+      "description": "workflow url or list containing workflow urls to run (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-validate",
+      "description": "validate the passed templates to nuclei"
+    },
+    {
+      "option": "-nss",
+      "shortcut": "-no-strict-syntax",
+      "description": "disable strict syntax check on templates"
+    },
+    {
+      "option": "-td",
+      "shortcut": "-template-display",
+      "description": "displays the templates content"
+    },
+    {
+      "option": "-tl",
+      "description": "list all templates matching current filters"
+    },
+    {
+      "option": "-tgl",
+      "description": "list all available tags"
+    },
+    {
+      "option": "-sign",
+      "description": "signs the templates with the private key defined in NUCLEI_SIGNATURE_PRIVATE_KEY env variable"
+    },
+    {
+      "option": "-code",
+      "description": "enable loading code protocol-based templates"
+    },
+    {
+      "option": "-dut",
+      "shortcut": "-disable-unsigned-templates",
+      "description": "disable running unsigned templates or templates with mismatched signature"
+    },
+    {
+      "option": "-esc",
+      "shortcut": "-enable-self-contained",
+      "description": "enable loading self-contained templates"
+    },
+    {
+      "option": "-egm",
+      "shortcut": "-enable-global-matchers",
+      "description": "enable loading global matchers templates"
+    },
+    {
+      "option": "-file",
+      "description": "enable loading file templates"
+    },
+    {
+      "option": "-a",
+      "shortcut": "-author",
+      "description": "templates to run based on authors (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-tags",
+      "description": "templates to run based on tags (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-etags",
+      "shortcut": "-exclude-tags",
+      "description": "templates to exclude based on tags (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-itags",
+      "shortcut": "-include-tags",
+      "description": "tags to be executed even if they are excluded either by default or configuration",
+      "value": "string[]"
+    },
+    {
+      "option": "-id",
+      "shortcut": "-template-id",
+      "description": "templates to run based on template ids (comma-separated, file, allow-wildcard)",
+      "value": "string[]"
+    },
+    {
+      "option": "-eid",
+      "shortcut": "-exclude-id",
+      "description": "templates to exclude based on template ids (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-it",
+      "shortcut": "-include-templates",
+      "description": "path to template file or directory to be executed even if they are excluded either by default or configuration",
+      "value": "string[]"
+    },
+    {
+      "option": "-et",
+      "shortcut": "-exclude-templates",
+      "description": "path to template file or directory to exclude (comma-separated, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-em",
+      "shortcut": "-exclude-matchers",
+      "description": "template matchers to exclude in result",
+      "value": "string[]"
+    },
+    {
+      "option": "-s",
+      "shortcut": "-severity",
+      "description": "templates to run based on severity. Possible values: info, low, medium, high, critical, unknown",
+      "value": "value[]"
+    },
+    {
+      "option": "-es",
+      "shortcut": "-exclude-severity",
+      "description": "templates to exclude based on severity. Possible values: info, low, medium, high, critical, unknown",
+      "value": "value[]"
+    },
+    {
+      "option": "-pt",
+      "shortcut": "-type",
+      "description": "templates to run based on protocol type. Possible values: dns, file, http, headless, tcp, workflow, ssl, websocket, whois, code, javascript",
+      "value": "value[]"
+    },
+    {
+      "option": "-ept",
+      "shortcut": "-exclude-type",
+      "description": "templates to exclude based on protocol type. Possible values: dns, file, http, headless, tcp, workflow, ssl, websocket, whois, code, javascript",
+      "value": "value[]"
+    },
+    {
+      "option": "-tc",
+      "shortcut": "-template-condition",
+      "description": "templates to run based on expression condition",
+      "value": "string[]"
+    },
+    {
+      "option": "-o",
+      "shortcut": "-output",
+      "description": "output file to write found issues/vulnerabilities",
+      "value": "string"
+    },
+    {
+      "option": "-sresp",
+      "shortcut": "-store-resp",
+      "description": "store all request/response passed through nuclei to output directory"
+    },
+    {
+      "option": "-srd",
+      "shortcut": "-store-resp-dir",
+      "description": "store all request/response passed through nuclei to custom directory (default \"output\")",
+      "value": "string"
+    },
+    {
+      "option": "-silent",
+      "description": "display findings only"
+    },
+    {
+      "option": "-nc",
+      "shortcut": "-no-color",
+      "description": "disable output content coloring (ANSI escape codes)"
+    },
+    {
+      "option": "-j",
+      "description": "write output in JSONL(ines) format"
+    },
+    {
+      "option": "-irr",
+      "shortcut": "-include-rr",
+      "description": "include request/response pairs in the JSON, JSONL, and Markdown outputs (for findings only) [DEPRECATED use -omit-raw] (default true)"
+    },
+    {
+      "option": "-or",
+      "shortcut": "-omit-raw",
+      "description": "omit request/response pairs in the JSON, JSONL, and Markdown outputs (for findings only)"
+    },
+    {
+      "option": "-ot",
+      "shortcut": "-omit-template",
+      "description": "omit encoded template in the JSON, JSONL output"
+    },
+    {
+      "option": "-nm",
+      "shortcut": "-no-meta",
+      "description": "disable printing result metadata in cli output"
+    },
+    {
+      "option": "-ts",
+      "shortcut": "-timestamp",
+      "description": "enables printing timestamp in cli output"
+    },
+    {
+      "option": "-rdb",
+      "shortcut": "-report-db",
+      "description": "nuclei reporting database (always use this to persist report data)",
+      "value": "string"
+    },
+    {
+      "option": "-ms",
+      "shortcut": "-matcher-status",
+      "description": "display match failure status"
+    },
+    {
+      "option": "-me",
+      "shortcut": "-markdown-export",
+      "description": "directory to export results in markdown format",
+      "value": "string"
+    },
+    {
+      "option": "-se",
+      "shortcut": "-sarif-export",
+      "description": "file to export results in SARIF format",
+      "value": "string"
+    },
+    {
+      "option": "-je",
+      "shortcut": "-json-export",
+      "description": "file to export results in JSON format",
+      "value": "string"
+    },
+    {
+      "option": "-jle",
+      "shortcut": "-jsonl-export",
+      "description": "file to export results in JSONL(ine) format",
+      "value": "string"
+    },
+    {
+      "option": "-rd",
+      "shortcut": "-redact",
+      "description": "redact given list of keys from query parameter, request header and body",
+      "value": "string[]"
+    },
+    {
+      "option": "-config",
+      "description": "path to the nuclei configuration file",
+      "value": "string"
+    },
+    {
+      "option": "-tp",
+      "shortcut": "-profile",
+      "description": "template profile config file to run",
+      "value": "string"
+    },
+    {
+      "option": "-tpl",
+      "shortcut": "-profile-list",
+      "description": "list community template profiles"
+    },
+    {
+      "option": "-fr",
+      "shortcut": "-follow-redirects",
+      "description": "enable following redirects for http templates"
+    },
+    {
+      "option": "-fhr",
+      "shortcut": "-follow-host-redirects",
+      "description": "follow redirects on the same host"
+    },
+    {
+      "option": "-mr",
+      "shortcut": "-max-redirects",
+      "description": "max number of redirects to follow for http templates (default 10)",
+      "value": "int"
+    },
+    {
+      "option": "-dr",
+      "shortcut": "-disable-redirects",
+      "description": "disable redirects for http templates"
+    },
+    {
+      "option": "-rc",
+      "shortcut": "-report-config",
+      "description": "nuclei reporting module configuration file",
+      "value": "string"
+    },
+    {
+      "option": "-H",
+      "shortcut": "-header",
+      "description": "custom header/cookie to include in all http request in header:value format (cli, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-V",
+      "shortcut": "-var",
+      "description": "custom vars in key=value format",
+      "value": "value"
+    },
+    {
+      "option": "-r",
+      "shortcut": "-resolvers",
+      "description": "file containing resolver list for nuclei",
+      "value": "string"
+    },
+    {
+      "option": "-sr",
+      "shortcut": "-system-resolvers",
+      "description": "use system DNS resolving as error fallback"
+    },
+    {
+      "option": "-dc",
+      "shortcut": "-disable-clustering",
+      "description": "disable clustering of requests"
+    },
+    {
+      "option": "-passive",
+      "description": "enable passive HTTP response processing mode"
+    },
+    {
+      "option": "-fh2",
+      "shortcut": "-force-http2",
+      "description": "force http2 connection on requests"
+    },
+    {
+      "option": "-ev",
+      "shortcut": "-env-vars",
+      "description": "enable environment variables to be used in template"
+    },
+    {
+      "option": "-cc",
+      "shortcut": "-client-cert",
+      "description": "client certificate file (PEM-encoded) used for authenticating against scanned hosts",
+      "value": "string"
+    },
+    {
+      "option": "-ck",
+      "shortcut": "-client-key",
+      "description": "client key file (PEM-encoded) used for authenticating against scanned hosts",
+      "value": "string"
+    },
+    {
+      "option": "-ca",
+      "shortcut": "-client-ca",
+      "description": "client certificate authority file (PEM-encoded) used for authenticating against scanned hosts",
+      "value": "string"
+    },
+    {
+      "option": "-sml",
+      "shortcut": "-show-match-line",
+      "description": "show match lines for file templates, works with extractors only"
+    },
+    {
+      "option": "-ztls",
+      "description": "use ztls library with autofallback to standard one for tls13 [Deprecated] autofallback to ztls is enabled by default"
+    },
+    {
+      "option": "-sni",
+      "description": "tls sni hostname to use (default: input domain name)",
+      "value": "string"
+    },
+    {
+      "option": "-dka",
+      "shortcut": "-dialer-keep-alive",
+      "description": "keep-alive duration for network requests.",
+      "value": "value"
+    },
+    {
+      "option": "-lfa",
+      "shortcut": "-allow-local-file-access",
+      "description": "allows file (payload) access anywhere on the system"
+    },
+    {
+      "option": "-lna",
+      "shortcut": "-restrict-local-network-access",
+      "description": "blocks connections to the local / private network"
+    },
+    {
+      "option": "-i",
+      "shortcut": "-interface",
+      "description": "network interface to use for network scan",
+      "value": "string"
+    },
+    {
+      "option": "-at",
+      "shortcut": "-attack-type",
+      "description": "type of payload combinations to perform (batteringram,pitchfork,clusterbomb)",
+      "value": "string"
+    },
+    {
+      "option": "-sip",
+      "shortcut": "-source-ip",
+      "description": "source ip address to use for network scan",
+      "value": "string"
+    },
+    {
+      "option": "-rsr",
+      "shortcut": "-response-size-read",
+      "description": "max response size to read in bytes",
+      "value": "int"
+    },
+    {
+      "option": "-rss",
+      "shortcut": "-response-size-save",
+      "description": "max response size to read in bytes (default 1048576)",
+      "value": "int"
+    },
+    {
+      "option": "-reset",
+      "description": "reset removes all nuclei configuration and data files (including nuclei-templates)"
+    },
+    {
+      "option": "-tlsi",
+      "shortcut": "-tls-impersonate",
+      "description": "enable experimental client hello (ja3) tls randomization"
+    },
+    {
+      "option": "-hae",
+      "shortcut": "-http-api-endpoint",
+      "description": "experimental http api endpoint",
+      "value": "string"
+    },
+    {
+      "option": "-iserver",
+      "shortcut": "-interactsh-server",
+      "description": "interactsh server url for self-hosted instance (default: oast.pro,oast.live,oast.site,oast.online,oast.fun,oast.me)",
+      "value": "string"
+    },
+    {
+      "option": "-itoken",
+      "shortcut": "-interactsh-token",
+      "description": "authentication token for self-hosted interactsh server",
+      "value": "string"
+    },
+    {
+      "option": "-interactions-cache-size",
+      "description": "number of requests to keep in the interactions cache (default 5000)",
+      "value": "int"
+    },
+    {
+      "option": "-interactions-eviction",
+      "description": "number of seconds to wait before evicting requests from cache (default 60)",
+      "value": "int"
+    },
+    {
+      "option": "-interactions-poll-duration",
+      "description": "number of seconds to wait before each interaction poll request (default 5)",
+      "value": "int"
+    },
+    {
+      "option": "-interactions-cooldown-period",
+      "description": "extra time for interaction polling before exiting (default 5)",
+      "value": "int"
+    },
+    {
+      "option": "-ni",
+      "shortcut": "-no-interactsh",
+      "description": "disable interactsh server for OAST testing, exclude OAST based templates"
+    },
+    {
+      "option": "-ft",
+      "shortcut": "-fuzzing-type",
+      "description": "overrides fuzzing type set in template (replace, prefix, postfix, infix)",
+      "value": "string"
+    },
+    {
+      "option": "-fm",
+      "shortcut": "-fuzzing-mode",
+      "description": "overrides fuzzing mode set in template (multiple, single)",
+      "value": "string"
+    },
+    {
+      "option": "-fuzz",
+      "description": "enable loading fuzzing templates (Deprecated: use -dast instead)"
+    },
+    {
+      "option": "-dast",
+      "description": "enable / run dast (fuzz) nuclei templates"
+    },
+    {
+      "option": "-dts",
+      "shortcut": "-dast-server",
+      "description": "enable dast server mode (live fuzzing)"
+    },
+    {
+      "option": "-dtr",
+      "shortcut": "-dast-report",
+      "description": "write dast scan report to file"
+    },
+    {
+      "option": "-dtst",
+      "shortcut": "-dast-server-token",
+      "description": "dast server token (optional)",
+      "value": "string"
+    },
+    {
+      "option": "-dtsa",
+      "shortcut": "-dast-server-address",
+      "description": "dast server address (default \"localhost:9055\")",
+      "value": "string"
+    },
+    {
+      "option": "-dfp",
+      "shortcut": "-display-fuzz-points",
+      "description": "display fuzz points in the output for debugging"
+    },
+    {
+      "option": "-fuzz-param-frequency",
+      "description": "frequency of uninteresting parameters for fuzzing before skipping (default 10)",
+      "value": "int"
+    },
+    {
+      "option": "-fa",
+      "shortcut": "-fuzz-aggression",
+      "description": "fuzzing aggression level controls payload count for fuzz (low, medium, high) (default \"low\")",
+      "value": "string"
+    },
+    {
+      "option": "-cs",
+      "shortcut": "-fuzz-scope",
+      "description": "in scope url regex to be followed by fuzzer",
+      "value": "string[]"
+    },
+    {
+      "option": "-cos",
+      "shortcut": "-fuzz-out-scope",
+      "description": "out of scope url regex to be excluded by fuzzer",
+      "value": "string[]"
+    },
+    {
+      "option": "-uc",
+      "shortcut": "-uncover",
+      "description": "enable uncover engine"
+    },
+    {
+      "option": "-uq",
+      "shortcut": "-uncover-query",
+      "description": "uncover search query",
+      "value": "string[]"
+    },
+    {
+      "option": "-ue",
+      "shortcut": "-uncover-engine",
+      "description": "uncover search engine (shodan,censys,fofa,shodan-idb,quake,hunter,zoomeye,netlas,criminalip,publicwww,hunterhow,google,odin,binaryedge,onyphe,driftnet,greynoise) (default shodan)",
+      "value": "string[]"
+    },
+    {
+      "option": "-uf",
+      "shortcut": "-uncover-field",
+      "description": "uncover fields to return (ip,port,host) (default \"ip:port\")",
+      "value": "string"
+    },
+    {
+      "option": "-ul",
+      "shortcut": "-uncover-limit",
+      "description": "uncover results to return (default 100)",
+      "value": "int"
+    },
+    {
+      "option": "-ur",
+      "shortcut": "-uncover-ratelimit",
+      "description": "override ratelimit of engines with unknown ratelimit (default 60 req/min) (default 60)",
+      "value": "int"
+    },
+    {
+      "option": "-rl",
+      "shortcut": "-rate-limit",
+      "description": "maximum number of requests to send per second (default 150)",
+      "value": "int"
+    },
+    {
+      "option": "-rld",
+      "shortcut": "-rate-limit-duration",
+      "description": "maximum number of requests to send per second (default 1s)",
+      "value": "value"
+    },
+    {
+      "option": "-rlm",
+      "shortcut": "-rate-limit-minute",
+      "description": "maximum number of requests to send per minute (DEPRECATED)",
+      "value": "int"
+    },
+    {
+      "option": "-bs",
+      "shortcut": "-bulk-size",
+      "description": "maximum number of hosts to be analyzed in parallel per template (default 25)",
+      "value": "int"
+    },
+    {
+      "option": "-c",
+      "shortcut": "-concurrency",
+      "description": "maximum number of templates to be executed in parallel (default 25)",
+      "value": "int"
+    },
+    {
+      "option": "-hbs",
+      "shortcut": "-headless-bulk-size",
+      "description": "maximum number of headless hosts to be analyzed in parallel per template (default 10)",
+      "value": "int"
+    },
+    {
+      "option": "-headc",
+      "shortcut": "-headless-concurrency",
+      "description": "maximum number of headless templates to be executed in parallel (default 10)",
+      "value": "int"
+    },
+    {
+      "option": "-jsc",
+      "shortcut": "-js-concurrency",
+      "description": "maximum number of javascript runtimes to be executed in parallel (default 120)",
+      "value": "int"
+    },
+    {
+      "option": "-pc",
+      "shortcut": "-payload-concurrency",
+      "description": "max payload concurrency for each template (default 25)",
+      "value": "int"
+    },
+    {
+      "option": "-prc",
+      "shortcut": "-probe-concurrency",
+      "description": "http probe concurrency with httpx (default 50)",
+      "value": "int"
+    },
+    {
+      "option": "-tlc",
+      "shortcut": "-template-loading-concurrency",
+      "description": "maximum number of concurrent template loading operations (default 50)",
+      "value": "int"
+    },
+    {
+      "option": "-timeout",
+      "description": "time to wait in seconds before timeout (default 10)",
+      "value": "int"
+    },
+    {
+      "option": "-retries",
+      "description": "number of times to retry a failed request (default 1)",
+      "value": "int"
+    },
+    {
+      "option": "-ldp",
+      "shortcut": "-leave-default-ports",
+      "description": "leave default HTTP/HTTPS ports (eg. host:80,host:443)"
+    },
+    {
+      "option": "-mhe",
+      "shortcut": "-max-host-error",
+      "description": "max errors for a host before skipping from scan (default 30)",
+      "value": "int"
+    },
+    {
+      "option": "-te",
+      "shortcut": "-track-error",
+      "description": "adds given error to max-host-error watchlist (standard, file)",
+      "value": "string[]"
+    },
+    {
+      "option": "-nmhe",
+      "shortcut": "-no-mhe",
+      "description": "disable skipping host from scan based on errors"
+    },
+    {
+      "option": "-project",
+      "description": "use a project folder to avoid sending same request multiple times"
+    },
+    {
+      "option": "-project-path",
+      "description": "set a specific project path (default \"/tmp\")",
+      "value": "string"
+    },
+    {
+      "option": "-spm",
+      "shortcut": "-stop-at-first-match",
+      "description": "stop processing HTTP requests after the first match (may break template/workflow logic)"
+    },
+    {
+      "option": "-stream",
+      "description": "stream mode - start elaborating without sorting the input"
+    },
+    {
+      "option": "-ss",
+      "shortcut": "-scan-strategy",
+      "description": "strategy to use while scanning(auto/host-spray/template-spray) (default auto)",
+      "value": "value"
+    },
+    {
+      "option": "-irt",
+      "shortcut": "-input-read-timeout",
+      "description": "timeout on input read (default 3m0s)",
+      "value": "value"
+    },
+    {
+      "option": "-nh",
+      "shortcut": "-no-httpx",
+      "description": "disable httpx probing for non-url input"
+    },
+    {
+      "option": "-no-stdin",
+      "description": "disable stdin processing"
+    },
+    {
+      "option": "-headless",
+      "description": "enable templates that require headless browser support (root user on Linux will disable sandbox)"
+    },
+    {
+      "option": "-page-timeout",
+      "description": "seconds to wait for each page in headless mode (default 20)",
+      "value": "int"
+    },
+    {
+      "option": "-sb",
+      "shortcut": "-show-browser",
+      "description": "show the browser on the screen when running templates with headless mode"
+    },
+    {
+      "option": "-ho",
+      "shortcut": "-headless-options",
+      "description": "start headless chrome with additional options",
+      "value": "string[]"
+    },
+    {
+      "option": "-sc",
+      "shortcut": "-system-chrome",
+      "description": "use local installed Chrome browser instead of nuclei installed"
+    },
+    {
+      "option": "-lha",
+      "shortcut": "-list-headless-action",
+      "description": "list available headless actions"
+    },
+    {
+      "option": "-debug",
+      "description": "show all requests and responses"
+    },
+    {
+      "option": "-dreq",
+      "shortcut": "-debug-req",
+      "description": "show all sent requests"
+    },
+    {
+      "option": "-dresp",
+      "shortcut": "-debug-resp",
+      "description": "show all received responses"
+    },
+    {
+      "option": "-p",
+      "shortcut": "-proxy",
+      "description": "list of http/socks5 proxy to use (comma separated or file input)",
+      "value": "string[]"
+    },
+    {
+      "option": "-pi",
+      "shortcut": "-proxy-internal",
+      "description": "proxy all internal requests"
+    },
+    {
+      "option": "-ldf",
+      "shortcut": "-list-dsl-function",
+      "description": "list all supported DSL function signatures"
+    },
+    {
+      "option": "-tlog",
+      "shortcut": "-trace-log",
+      "description": "file to write sent requests trace log",
+      "value": "string"
+    },
+    {
+      "option": "-elog",
+      "shortcut": "-error-log",
+      "description": "file to write sent requests error log",
+      "value": "string"
+    },
+    {
+      "option": "-version",
+      "description": "show nuclei version"
+    },
+    {
+      "option": "-hm",
+      "shortcut": "-hang-monitor",
+      "description": "enable nuclei hang monitoring"
+    },
+    {
+      "option": "-v",
+      "shortcut": "-verbose",
+      "description": "show verbose output"
+    },
+    {
+      "option": "-profile-mem",
+      "description": "generate memory (heap) profile & trace files",
+      "value": "string"
+    },
+    {
+      "option": "-vv",
+      "description": "display templates loaded for scan"
+    },
+    {
+      "option": "-svd",
+      "shortcut": "-show-var-dump",
+      "description": "show variables dump for debugging"
+    },
+    {
+      "option": "-vdl",
+      "shortcut": "-var-dump-limit",
+      "description": "limit the number of characters displayed in var dump (default 255)",
+      "value": "int"
+    },
+    {
+      "option": "-ep",
+      "shortcut": "-enable-pprof",
+      "description": "enable pprof debugging server"
+    },
+    {
+      "option": "-tv",
+      "shortcut": "-templates-version",
+      "description": "shows the version of the installed nuclei-templates"
+    },
+    {
+      "option": "-hc",
+      "shortcut": "-health-check",
+      "description": "run diagnostic check up"
+    },
+    {
+      "option": "-up",
+      "shortcut": "-update",
+      "description": "update nuclei engine to the latest released version"
+    },
+    {
+      "option": "-ut",
+      "shortcut": "-update-templates",
+      "description": "update nuclei-templates to latest released version"
+    },
+    {
+      "option": "-ud",
+      "shortcut": "-update-template-dir",
+      "description": "custom directory to install / update nuclei-templates",
+      "value": "string"
+    },
+    {
+      "option": "-duc",
+      "shortcut": "-disable-update-check",
+      "description": "disable automatic nuclei/templates update check"
+    },
+    {
+      "option": "-stats",
+      "description": "display statistics about the running scan"
+    },
+    {
+      "option": "-sj",
+      "shortcut": "-stats-json",
+      "description": "display statistics in JSONL(ines) format"
+    },
+    {
+      "option": "-si",
+      "shortcut": "-stats-interval",
+      "description": "number of seconds to wait between showing a statistics update (default 5)",
+      "value": "int"
+    },
+    {
+      "option": "-mp",
+      "shortcut": "-metrics-port",
+      "description": "port to expose nuclei metrics on (default 9092)",
+      "value": "int"
+    },
+    {
+      "option": "-hps",
+      "shortcut": "-http-stats",
+      "description": "enable http status capturing (experimental)"
+    },
+    {
+      "option": "-auth",
+      "description": "configure projectdiscovery cloud (pdcp) api key (default true)"
+    },
+    {
+      "option": "-tid",
+      "shortcut": "-team-id",
+      "description": "upload scan results to given team id (optional) (default \"none\")",
+      "value": "string"
+    },
+    {
+      "option": "-cup",
+      "shortcut": "-cloud-upload",
+      "description": "upload scan results to pdcp dashboard [DEPRECATED use -dashboard]"
+    },
+    {
+      "option": "-sid",
+      "shortcut": "-scan-id",
+      "description": "upload scan results to existing scan id (optional)",
+      "value": "string"
+    },
+    {
+      "option": "-sname",
+      "shortcut": "-scan-name",
+      "description": "scan name to set (optional)",
+      "value": "string"
+    },
+    {
+      "option": "-pd",
+      "shortcut": "-dashboard",
+      "description": "upload / view nuclei results in projectdiscovery cloud (pdcp) UI dashboard"
+    },
+    {
+      "option": "-pdu",
+      "shortcut": "-dashboard-upload",
+      "description": "upload / view nuclei results file (jsonl) in projectdiscovery cloud (pdcp) UI dashboard"
+    },
+    {
+      "option": "-sf",
+      "shortcut": "-secret-file",
+      "description": "path to config file containing secrets for nuclei authenticated scan",
+      "value": "string[]"
+    },
+    {
+      "option": "-ps",
+      "shortcut": "-prefetch-secrets",
+      "description": "prefetch secrets from the secrets file"
+    }
+  ],
+  "aliases": [],
+  "name": "nuclei",
+  "raw_help_text": "Nuclei is a fast, template based vulnerability scanner focusing\non extensive configurability, massive extensibility and ease of use.\n\nUsage:\n  /usr/local/bin/nuclei [flags]\n\nFlags:\nTARGET:\n   -u, -target string[]          target URLs/hosts to scan\n   -l, -list string              path to file containing a list of target URLs/hosts to scan (one per line)\n   -eh, -exclude-hosts string[]  hosts to exclude to scan from the input list (ip, cidr, hostname)\n   -resume string                resume scan from and save to specified file (clustering will be disabled)\n   -sa, -scan-all-ips            scan all the IP's associated with dns record\n   -iv, -ip-version string[]     IP version to scan of hostname (4,6) - (default 4)\n\nTARGET-FORMAT:\n   -im, -input-mode string         mode of input file (list, burp, jsonl, yaml, openapi, swagger) (default \"list\")\n   -ro, -required-only             use only required fields in input format when generating requests\n   -sfv, -skip-format-validation   skip format validation (like missing vars) when parsing input file\n   -vtt, -vars-text-templating     enable text templating for vars in input file (only for yaml input mode)\n   -vfp, -var-file-paths string[]  list of yaml file contained vars to inject into yaml input\n\nTEMPLATES:\n   -nt, -new-templates                    run only new templates added in latest nuclei-templates release\n   -ntv, -new-templates-version string[]  run new templates added in specific version\n   -as, -automatic-scan                   automatic web scan using wappalyzer technology detection to tags mapping\n   -t, -templates string[]                list of template or template directory to run (comma-separated, file)\n   -turl, -template-url string[]          template url or list containing template urls to run (comma-separated, file)\n   -ai, -prompt string                    generate and run template using ai prompt\n   -w, -workflows string[]                list of workflow or workflow directory to run (comma-separated, file)\n   -wurl, -workflow-url string[]          workflow url or list containing workflow urls to run (comma-separated, file)\n   -validate                              validate the passed templates to nuclei\n   -nss, -no-strict-syntax                disable strict syntax check on templates\n   -td, -template-display                 displays the templates content\n   -tl                                    list all templates matching current filters\n   -tgl                                   list all available tags\n   -sign                                  signs the templates with the private key defined in NUCLEI_SIGNATURE_PRIVATE_KEY env variable\n   -code                                  enable loading code protocol-based templates\n   -dut, -disable-unsigned-templates      disable running unsigned templates or templates with mismatched signature\n   -esc, -enable-self-contained           enable loading self-contained templates\n   -egm, -enable-global-matchers          enable loading global matchers templates\n   -file                                  enable loading file templates\n\nFILTERING:\n   -a, -author string[]               templates to run based on authors (comma-separated, file)\n   -tags string[]                     templates to run based on tags (comma-separated, file)\n   -etags, -exclude-tags string[]     templates to exclude based on tags (comma-separated, file)\n   -itags, -include-tags string[]     tags to be executed even if they are excluded either by default or configuration\n   -id, -template-id string[]         templates to run based on template ids (comma-separated, file, allow-wildcard)\n   -eid, -exclude-id string[]         templates to exclude based on template ids (comma-separated, file)\n   -it, -include-templates string[]   path to template file or directory to be executed even if they are excluded either by default or configuration\n   -et, -exclude-templates string[]   path to template file or directory to exclude (comma-separated, file)\n   -em, -exclude-matchers string[]    template matchers to exclude in result\n   -s, -severity value[]              templates to run based on severity. Possible values: info, low, medium, high, critical, unknown\n   -es, -exclude-severity value[]     templates to exclude based on severity. Possible values: info, low, medium, high, critical, unknown\n   -pt, -type value[]                 templates to run based on protocol type. Possible values: dns, file, http, headless, tcp, workflow, ssl, websocket, whois, code, javascript\n   -ept, -exclude-type value[]        templates to exclude based on protocol type. Possible values: dns, file, http, headless, tcp, workflow, ssl, websocket, whois, code, javascript\n   -tc, -template-condition string[]  templates to run based on expression condition\n\nOUTPUT:\n   -o, -output string            output file to write found issues/vulnerabilities\n   -sresp, -store-resp           store all request/response passed through nuclei to output directory\n   -srd, -store-resp-dir string  store all request/response passed through nuclei to custom directory (default \"output\")\n   -silent                       display findings only\n   -nc, -no-color                disable output content coloring (ANSI escape codes)\n   -j, -jsonl                    write output in JSONL(ines) format\n   -irr, -include-rr -omit-raw   include request/response pairs in the JSON, JSONL, and Markdown outputs (for findings only) [DEPRECATED use -omit-raw] (default true)\n   -or, -omit-raw                omit request/response pairs in the JSON, JSONL, and Markdown outputs (for findings only)\n   -ot, -omit-template           omit encoded template in the JSON, JSONL output\n   -nm, -no-meta                 disable printing result metadata in cli output\n   -ts, -timestamp               enables printing timestamp in cli output\n   -rdb, -report-db string       nuclei reporting database (always use this to persist report data)\n   -ms, -matcher-status          display match failure status\n   -me, -markdown-export string  directory to export results in markdown format\n   -se, -sarif-export string     file to export results in SARIF format\n   -je, -json-export string      file to export results in JSON format\n   -jle, -jsonl-export string    file to export results in JSONL(ine) format\n   -rd, -redact string[]         redact given list of keys from query parameter, request header and body\n\nCONFIGURATIONS:\n   -config string                        path to the nuclei configuration file\n   -tp, -profile string                  template profile config file to run\n   -tpl, -profile-list                   list community template profiles\n   -fr, -follow-redirects                enable following redirects for http templates\n   -fhr, -follow-host-redirects          follow redirects on the same host\n   -mr, -max-redirects int               max number of redirects to follow for http templates (default 10)\n   -dr, -disable-redirects               disable redirects for http templates\n   -rc, -report-config string            nuclei reporting module configuration file\n   -H, -header string[]                  custom header/cookie to include in all http request in header:value format (cli, file)\n   -V, -var value                        custom vars in key=value format\n   -r, -resolvers string                 file containing resolver list for nuclei\n   -sr, -system-resolvers                use system DNS resolving as error fallback\n   -dc, -disable-clustering              disable clustering of requests\n   -passive                              enable passive HTTP response processing mode\n   -fh2, -force-http2                    force http2 connection on requests\n   -ev, -env-vars                        enable environment variables to be used in template\n   -cc, -client-cert string              client certificate file (PEM-encoded) used for authenticating against scanned hosts\n   -ck, -client-key string               client key file (PEM-encoded) used for authenticating against scanned hosts\n   -ca, -client-ca string                client certificate authority file (PEM-encoded) used for authenticating against scanned hosts\n   -sml, -show-match-line                show match lines for file templates, works with extractors only\n   -ztls                                 use ztls library with autofallback to standard one for tls13 [Deprecated] autofallback to ztls is enabled by default\n   -sni string                           tls sni hostname to use (default: input domain name)\n   -dka, -dialer-keep-alive value        keep-alive duration for network requests.\n   -lfa, -allow-local-file-access        allows file (payload) access anywhere on the system\n   -lna, -restrict-local-network-access  blocks connections to the local / private network\n   -i, -interface string                 network interface to use for network scan\n   -at, -attack-type string              type of payload combinations to perform (batteringram,pitchfork,clusterbomb)\n   -sip, -source-ip string               source ip address to use for network scan\n   -rsr, -response-size-read int         max response size to read in bytes\n   -rss, -response-size-save int         max response size to read in bytes (default 1048576)\n   -reset                                reset removes all nuclei configuration and data files (including nuclei-templates)\n   -tlsi, -tls-impersonate               enable experimental client hello (ja3) tls randomization\n   -hae, -http-api-endpoint string       experimental http api endpoint\n\nINTERACTSH:\n   -iserver, -interactsh-server string  interactsh server url for self-hosted instance (default: oast.pro,oast.live,oast.site,oast.online,oast.fun,oast.me)\n   -itoken, -interactsh-token string    authentication token for self-hosted interactsh server\n   -interactions-cache-size int         number of requests to keep in the interactions cache (default 5000)\n   -interactions-eviction int           number of seconds to wait before evicting requests from cache (default 60)\n   -interactions-poll-duration int      number of seconds to wait before each interaction poll request (default 5)\n   -interactions-cooldown-period int    extra time for interaction polling before exiting (default 5)\n   -ni, -no-interactsh                  disable interactsh server for OAST testing, exclude OAST based templates\n\nFUZZING:\n   -ft, -fuzzing-type string           overrides fuzzing type set in template (replace, prefix, postfix, infix)\n   -fm, -fuzzing-mode string           overrides fuzzing mode set in template (multiple, single)\n   -fuzz                               enable loading fuzzing templates (Deprecated: use -dast instead)\n   -dast                               enable / run dast (fuzz) nuclei templates\n   -dts, -dast-server                  enable dast server mode (live fuzzing)\n   -dtr, -dast-report                  write dast scan report to file\n   -dtst, -dast-server-token string    dast server token (optional)\n   -dtsa, -dast-server-address string  dast server address (default \"localhost:9055\")\n   -dfp, -display-fuzz-points          display fuzz points in the output for debugging\n   -fuzz-param-frequency int           frequency of uninteresting parameters for fuzzing before skipping (default 10)\n   -fa, -fuzz-aggression string        fuzzing aggression level controls payload count for fuzz (low, medium, high) (default \"low\")\n   -cs, -fuzz-scope string[]           in scope url regex to be followed by fuzzer\n   -cos, -fuzz-out-scope string[]      out of scope url regex to be excluded by fuzzer\n\nUNCOVER:\n   -uc, -uncover                  enable uncover engine\n   -uq, -uncover-query string[]   uncover search query\n   -ue, -uncover-engine string[]  uncover search engine (shodan,censys,fofa,shodan-idb,quake,hunter,zoomeye,netlas,criminalip,publicwww,hunterhow,google,odin,binaryedge,onyphe,driftnet,greynoise) (default shodan)\n   -uf, -uncover-field string     uncover fields to return (ip,port,host) (default \"ip:port\")\n   -ul, -uncover-limit int        uncover results to return (default 100)\n   -ur, -uncover-ratelimit int    override ratelimit of engines with unknown ratelimit (default 60 req/min) (default 60)\n\nRATE-LIMIT:\n   -rl, -rate-limit int                     maximum number of requests to send per second (default 150)\n   -rld, -rate-limit-duration value         maximum number of requests to send per second (default 1s)\n   -rlm, -rate-limit-minute int             maximum number of requests to send per minute (DEPRECATED)\n   -bs, -bulk-size int                      maximum number of hosts to be analyzed in parallel per template (default 25)\n   -c, -concurrency int                     maximum number of templates to be executed in parallel (default 25)\n   -hbs, -headless-bulk-size int            maximum number of headless hosts to be analyzed in parallel per template (default 10)\n   -headc, -headless-concurrency int        maximum number of headless templates to be executed in parallel (default 10)\n   -jsc, -js-concurrency int                maximum number of javascript runtimes to be executed in parallel (default 120)\n   -pc, -payload-concurrency int            max payload concurrency for each template (default 25)\n   -prc, -probe-concurrency int             http probe concurrency with httpx (default 50)\n   -tlc, -template-loading-concurrency int  maximum number of concurrent template loading operations (default 50)\n\nOPTIMIZATIONS:\n   -timeout int                     time to wait in seconds before timeout (default 10)\n   -retries int                     number of times to retry a failed request (default 1)\n   -ldp, -leave-default-ports       leave default HTTP/HTTPS ports (eg. host:80,host:443)\n   -mhe, -max-host-error int        max errors for a host before skipping from scan (default 30)\n   -te, -track-error string[]       adds given error to max-host-error watchlist (standard, file)\n   -nmhe, -no-mhe                   disable skipping host from scan based on errors\n   -project                         use a project folder to avoid sending same request multiple times\n   -project-path string             set a specific project path (default \"/tmp\")\n   -spm, -stop-at-first-match       stop processing HTTP requests after the first match (may break template/workflow logic)\n   -stream                          stream mode - start elaborating without sorting the input\n   -ss, -scan-strategy value        strategy to use while scanning(auto/host-spray/template-spray) (default auto)\n   -irt, -input-read-timeout value  timeout on input read (default 3m0s)\n   -nh, -no-httpx                   disable httpx probing for non-url input\n   -no-stdin                        disable stdin processing\n\nHEADLESS:\n   -headless                        enable templates that require headless browser support (root user on Linux will disable sandbox)\n   -page-timeout int                seconds to wait for each page in headless mode (default 20)\n   -sb, -show-browser               show the browser on the screen when running templates with headless mode\n   -ho, -headless-options string[]  start headless chrome with additional options\n   -sc, -system-chrome              use local installed Chrome browser instead of nuclei installed\n   -lha, -list-headless-action      list available headless actions\n\nDEBUG:\n   -debug                     show all requests and responses\n   -dreq, -debug-req          show all sent requests\n   -dresp, -debug-resp        show all received responses\n   -p, -proxy string[]        list of http/socks5 proxy to use (comma separated or file input)\n   -pi, -proxy-internal       proxy all internal requests\n   -ldf, -list-dsl-function   list all supported DSL function signatures\n   -tlog, -trace-log string   file to write sent requests trace log\n   -elog, -error-log string   file to write sent requests error log\n   -version                   show nuclei version\n   -hm, -hang-monitor         enable nuclei hang monitoring\n   -v, -verbose               show verbose output\n   -profile-mem string        generate memory (heap) profile & trace files\n   -vv                        display templates loaded for scan\n   -svd, -show-var-dump       show variables dump for debugging\n   -vdl, -var-dump-limit int  limit the number of characters displayed in var dump (default 255)\n   -ep, -enable-pprof         enable pprof debugging server\n   -tv, -templates-version    shows the version of the installed nuclei-templates\n   -hc, -health-check         run diagnostic check up\n\nUPDATE:\n   -up, -update                      update nuclei engine to the latest released version\n   -ut, -update-templates            update nuclei-templates to latest released version\n   -ud, -update-template-dir string  custom directory to install / update nuclei-templates\n   -duc, -disable-update-check       disable automatic nuclei/templates update check\n\nSTATISTICS:\n   -stats                    display statistics about the running scan\n   -sj, -stats-json          display statistics in JSONL(ines) format\n   -si, -stats-interval int  number of seconds to wait between showing a statistics update (default 5)\n   -mp, -metrics-port int    port to expose nuclei metrics on (default 9092)\n   -hps, -http-stats         enable http status capturing (experimental)\n\nCLOUD:\n   -auth                           configure projectdiscovery cloud (pdcp) api key (default true)\n   -tid, -team-id string           upload scan results to given team id (optional) (default \"none\")\n   -cup, -cloud-upload             upload scan results to pdcp dashboard [DEPRECATED use -dashboard]\n   -sid, -scan-id string           upload scan results to existing scan id (optional)\n   -sname, -scan-name string       scan name to set (optional)\n   -pd, -dashboard                 upload / view nuclei results in projectdiscovery cloud (pdcp) UI dashboard\n   -pdu, -dashboard-upload string  upload / view nuclei results file (jsonl) in projectdiscovery cloud (pdcp) UI dashboard\n\nAUTHENTICATION:\n   -sf, -secret-file string[]  path to config file containing secrets for nuclei authenticated scan\n   -ps, -prefetch-secrets      prefetch secrets from the secrets file\n\n\nEXAMPLES:\nRun nuclei on single host:\n\t$ nuclei -target example.com\n\nRun nuclei with specific template directories:\n\t$ nuclei -target example.com -t http/cves/ -t ssl\n\nRun nuclei against a list of hosts:\n\t$ nuclei -list hosts.txt\n\nRun nuclei with a JSON output:\n\t$ nuclei -target example.com -json-export output.json\n\nRun nuclei with sorted Markdown outputs (with environment variables):\n\t$ MARKDOWN_EXPORT_SORT_MODE=template nuclei -target example.com -markdown-export nuclei_report/\n\nAdditional documentation is available at: https://docs.nuclei.sh/getting-started/running",
+  "version": "3.6.0"
+}

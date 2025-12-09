@@ -1,0 +1,328 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for bash",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--no-descriptions",
+              "shortcut": null,
+              "description": "disable completion descriptions",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "k9s completion bash",
+          "raw_help_text": "Generate the autocompletion script for the bash shell.\n\nThis script depends on the 'bash-completion' package.\nIf it is not installed already, you can install it via your OS's package manager.\n\nTo load completions in your current shell session:\n\n\tsource <(k9s completion bash)\n\nTo load completions for every new session, execute once:\n\n#### Linux:\n\n\tk9s completion bash > /etc/bash_completion.d/k9s\n\n#### macOS:\n\n\tk9s completion bash > $(brew --prefix)/etc/bash_completion.d/k9s\n\nYou will need to start a new shell for this setup to take effect.\n\nUsage:\n  k9s completion bash\n\nFlags:\n  -h, --help              help for bash\n      --no-descriptions   disable completion descriptions",
+          "description": "Generate the autocompletion script for bash"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for fish",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--no-descriptions",
+              "shortcut": null,
+              "description": "disable completion descriptions",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "k9s completion fish",
+          "raw_help_text": "Generate the autocompletion script for the fish shell.\n\nTo load completions in your current shell session:\n\n\tk9s completion fish | source\n\nTo load completions for every new session, execute once:\n\n\tk9s completion fish > ~/.config/fish/completions/k9s.fish\n\nYou will need to start a new shell for this setup to take effect.\n\nUsage:\n  k9s completion fish [flags]\n\nFlags:\n  -h, --help              help for fish\n      --no-descriptions   disable completion descriptions",
+          "description": "Generate the autocompletion script for fish"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for powershell"
+            },
+            {
+              "option": "--no-descriptions",
+              "shortcut": null,
+              "description": "disable completion descriptions"
+            }
+          ],
+          "name": "k9s completion powershell",
+          "raw_help_text": "Generate the autocompletion script for powershell.\n\nTo load completions in your current shell session:\n\n\tk9s completion powershell | Out-String | Invoke-Expression\n\nTo load completions for every new session, add the output of the above command\nto your powershell profile.\n\nUsage:\n  k9s completion powershell [flags]\n\nFlags:\n  -h, --help              help for powershell\n      --no-descriptions   disable completion descriptions",
+          "description": "Generate the autocompletion script for powershell"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for zsh",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--no-descriptions",
+              "shortcut": null,
+              "description": "disable completion descriptions",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "k9s completion zsh",
+          "raw_help_text": "Generate the autocompletion script for the zsh shell.\n\nIf shell completion is not already enabled in your environment you will need\nto enable it.  You can execute the following once:\n\n\techo \"autoload -U compinit; compinit\" >> ~/.zshrc\n\nTo load completions in your current shell session:\n\n\tsource <(k9s completion zsh)\n\nTo load completions for every new session, execute once:\n\n#### Linux:\n\n\tk9s completion zsh > \"${fpath[1]}/_k9s\"\n\n#### macOS:\n\n\tk9s completion zsh > $(brew --prefix)/share/zsh/site-functions/_k9s\n\nYou will need to start a new shell for this setup to take effect.\n\nUsage:\n  k9s completion zsh [flags]\n\nFlags:\n  -h, --help              help for zsh\n      --no-descriptions   disable completion descriptions",
+          "description": "Generate the autocompletion script for zsh"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for completion",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "k9s completion",
+      "raw_help_text": "Generate the autocompletion script for k9s for the specified shell.\nSee each sub-command's help for details on how to use the generated script.\n\nUsage:\n  k9s completion [command]\n\nAvailable Commands:\n  bash        Generate the autocompletion script for bash\n  fish        Generate the autocompletion script for fish\n  powershell  Generate the autocompletion script for powershell\n  zsh         Generate the autocompletion script for zsh\n\nFlags:\n  -h, --help   help for completion\n\nUse \"k9s completion [command] --help\" for more information about a command.",
+      "description": "Generate the autocompletion script for the specified shell"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for info",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "k9s info",
+      "raw_help_text": "List K9s configurations info\n\nUsage:\n  k9s info [flags]\n\nFlags:\n  -h, --help   help for info",
+      "description": "List K9s configurations info"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for version",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--short",
+          "shortcut": "-s",
+          "description": "Prints K9s version info in short format",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "k9s version",
+      "raw_help_text": "Print version/build information\n\nUsage:\n  k9s version [flags]\n\nFlags:\n  -h, --help    help for version\n  -s, --short   Prints K9s version info in short format",
+      "description": "Print version/build info"
+    }
+  ],
+  "options": [
+    {
+      "option": "--all-namespaces",
+      "shortcut": "-A",
+      "description": "Launch K9s in all namespaces",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--as",
+      "shortcut": null,
+      "description": "Username to impersonate for the operation",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--as-group",
+      "shortcut": null,
+      "description": "Group to impersonate for the operation",
+      "value": "stringArray",
+      "default": null
+    },
+    {
+      "option": "--certificate-authority",
+      "shortcut": null,
+      "description": "Path to a cert file for the certificate authority",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--client-certificate",
+      "shortcut": null,
+      "description": "Path to a client certificate file for TLS",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--client-key",
+      "shortcut": null,
+      "description": "Path to a client key file for TLS",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--cluster",
+      "shortcut": null,
+      "description": "The name of the kubeconfig cluster to use",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--command",
+      "shortcut": "-c",
+      "description": "Overrides the default resource to load when the application launches",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--context",
+      "shortcut": null,
+      "description": "The name of the kubeconfig context to use",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--crumbsless",
+      "shortcut": null,
+      "description": "Turn K9s crumbs off",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--headless",
+      "shortcut": null,
+      "description": "Turn K9s header off",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for k9s",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--insecure-skip-tls-verify",
+      "shortcut": null,
+      "description": "If true, the server's caCertFile will not be checked for validity",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--kubeconfig",
+      "shortcut": null,
+      "description": "Path to the kubeconfig file to use for CLI requests",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--logFile",
+      "shortcut": null,
+      "description": "Specify the log file (default \"/root/.local/state/k9s/k9s.log\")",
+      "value": "string",
+      "default": "/root/.local/state/k9s/k9s.log"
+    },
+    {
+      "option": "--logLevel",
+      "shortcut": "-l",
+      "description": "Specify a log level (error, warn, info, debug) (default \"info\")",
+      "value": "string",
+      "default": "info"
+    },
+    {
+      "option": "--logoless",
+      "shortcut": null,
+      "description": "Turn K9s logo off",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--namespace",
+      "shortcut": "-n",
+      "description": "If present, the namespace scope for this CLI request",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--readonly",
+      "shortcut": null,
+      "description": "Sets readOnly mode by overriding readOnly configuration setting",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--refresh",
+      "shortcut": "-r",
+      "description": "Specify the default refresh rate as a float (sec) (default 2)",
+      "value": "float32",
+      "default": 2
+    },
+    {
+      "option": "--request-timeout",
+      "shortcut": null,
+      "description": "The length of time to wait before giving up on a single server request",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--screen-dump-dir",
+      "shortcut": null,
+      "description": "Sets a path to a dir for a screen dumps",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--splashless",
+      "shortcut": null,
+      "description": "Turn K9s splash screen off",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--token",
+      "shortcut": null,
+      "description": "Bearer token for authentication to the API server",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--user",
+      "shortcut": null,
+      "description": "The name of the kubeconfig user to use",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--write",
+      "shortcut": null,
+      "description": "Sets write mode by overriding the readOnly configuration setting",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "k9s",
+  "raw_help_text": "K9s is a CLI to view and manage your Kubernetes clusters.\n\nUsage:\n  k9s [flags]\n  k9s [command]\n\nAvailable Commands:\n  completion  Generate the autocompletion script for the specified shell\n  help        Help about any command\n  info        List K9s configurations info\n  version     Print version/build info\n\nFlags:\n  -A, --all-namespaces                 Launch K9s in all namespaces\n      --as string                      Username to impersonate for the operation\n      --as-group stringArray           Group to impersonate for the operation\n      --certificate-authority string   Path to a cert file for the certificate authority\n      --client-certificate string      Path to a client certificate file for TLS\n      --client-key string              Path to a client key file for TLS\n      --cluster string                 The name of the kubeconfig cluster to use\n  -c, --command string                 Overrides the default resource to load when the application launches\n      --context string                 The name of the kubeconfig context to use\n      --crumbsless                     Turn K9s crumbs off\n      --headless                       Turn K9s header off\n  -h, --help                           help for k9s\n      --insecure-skip-tls-verify       If true, the server's caCertFile will not be checked for validity\n      --kubeconfig string              Path to the kubeconfig file to use for CLI requests\n      --logFile string                 Specify the log file (default \"/root/.local/state/k9s/k9s.log\")\n  -l, --logLevel string                Specify a log level (error, warn, info, debug) (default \"info\")\n      --logoless                       Turn K9s logo off\n  -n, --namespace string               If present, the namespace scope for this CLI request\n      --readonly                       Sets readOnly mode by overriding readOnly configuration setting\n  -r, --refresh float32                Specify the default refresh rate as a float (sec) (default 2)\n      --request-timeout string         The length of time to wait before giving up on a single server request\n      --screen-dump-dir string         Sets a path to a dir for a screen dumps\n      --splashless                     Turn K9s splash screen off\n      --token string                   Bearer token for authentication to the API server\n      --user string                    The name of the kubeconfig user to use\n      --write                          Sets write mode by overriding the readOnly configuration setting\n\nUse \"k9s [command] --help\" for more information about a command.",
+  "version": "v0.50.16"
+}

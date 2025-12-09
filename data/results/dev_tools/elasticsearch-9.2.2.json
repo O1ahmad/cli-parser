@@ -1,0 +1,134 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--enrollment-token",
+          "description": "An existing enrollment token for securely joining a cluster",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-E <KeyValuePair>",
+          "description": "Configure a setting",
+          "value": "<KeyValuePair>",
+          "default": null
+        },
+        {
+          "option": "-h, --help",
+          "description": "Show help",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-p, --pidfile <Path>",
+          "description": "Creates a pid file in the specified path on start",
+          "value": "<Path>",
+          "default": null
+        },
+        {
+          "option": "-q, --quiet",
+          "description": "Turns off standard output/error streams logging in console",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-s, --silent",
+          "description": "Show minimal output",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-V, --version",
+          "description": "Prints Elasticsearch version information and exits",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-d, --daemonize",
+          "description": "Starts Elasticsearch in the background",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-v, --verbose",
+          "description": "Show verbose output",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "elasticsearch start",
+      "raw_help_text": "Starts Elasticsearch\n\nOption                Description                                               \n------                -----------                                               \n-E <KeyValuePair>     Configure a setting                                       \n-V, --version         Prints Elasticsearch version information and exits        \n-d, --daemonize       Starts Elasticsearch in the background                    \n--enrollment-token    An existing enrollment token for securely joining a       \n                        cluster                                                 \n-h, --help            Show help                                                 \n-p, --pidfile <Path>  Creates a pid file in the specified path on start         \n-q, --quiet           Turns off standard output/error streams logging in console\n-s, --silent          Show minimal output                                       \n-v, --verbose         Show verbose output",
+      "description": "Starts Elasticsearch"
+    }
+  ],
+  "options": [
+    {
+      "option": "--daemonize",
+      "shortcut": "-d",
+      "description": "Starts Elasticsearch in the background",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--enrollment-token",
+      "shortcut": null,
+      "description": "An existing enrollment token for securely joining a cluster",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Show help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--pidfile",
+      "shortcut": "-p",
+      "description": "Creates a pid file in the specified path on start",
+      "value": "<Path>",
+      "default": null
+    },
+    {
+      "option": "--quiet",
+      "shortcut": "-q",
+      "description": "Turns off standard output/error streams logging in console",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--silent",
+      "shortcut": "-s",
+      "description": "Show minimal output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Prints Elasticsearch version information and exits",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "Show verbose output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-E",
+      "shortcut": null,
+      "description": "Configure a setting",
+      "value": "<KeyValuePair>",
+      "default": null
+    }
+  ],
+  "name": "elasticsearch",
+  "raw_help_text": "Starts Elasticsearch\n\nOption                Description                                               \n------                -----------                                               \n-E <KeyValuePair>     Configure a setting                                       \n-V, --version         Prints Elasticsearch version information and exits        \n-d, --daemonize       Starts Elasticsearch in the background                    \n--enrollment-token    An existing enrollment token for securely joining a       \n                        cluster                                                 \n-h, --help            Show help                                                 \n-p, --pidfile <Path>  Creates a pid file in the specified path on start         \n-q, --quiet           Turns off standard output/error streams logging in console\n-s, --silent          Show minimal output                                       \n-v, --verbose         Show verbose output",
+  "version": "9.2.2"
+}

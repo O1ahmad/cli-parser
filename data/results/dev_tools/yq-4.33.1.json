@@ -1,0 +1,737 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for eval"
+        },
+        {
+          "option": "-C",
+          "shortcut": "--colors",
+          "description": "force print with colors"
+        },
+        {
+          "option": "-e",
+          "shortcut": "--exit-status",
+          "description": "set exit status if there are no matches or null or false is returned"
+        },
+        {
+          "option": "--expression",
+          "description": "forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.",
+          "value": "string"
+        },
+        {
+          "option": "--from-file",
+          "description": "Load expression from specified file.",
+          "value": "string"
+        },
+        {
+          "option": "-f",
+          "shortcut": "--front-matter",
+          "description": "(extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact",
+          "value": "string"
+        },
+        {
+          "option": "--header-preprocess",
+          "description": "Slurp any header comments and separators before processing expression.",
+          "default": "true"
+        },
+        {
+          "option": "-I",
+          "shortcut": "--indent",
+          "description": "sets indent level for output",
+          "value": "int",
+          "default": "2"
+        },
+        {
+          "option": "-i",
+          "shortcut": "--inplace",
+          "description": "update the file inplace of first file given."
+        },
+        {
+          "option": "-p",
+          "shortcut": "--input-format",
+          "description": "[auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml.",
+          "default": "auto"
+        },
+        {
+          "option": "-M",
+          "shortcut": "--no-colors",
+          "description": "force print with no colors"
+        },
+        {
+          "option": "-N",
+          "shortcut": "--no-doc",
+          "description": "Don't print document separators (---)"
+        },
+        {
+          "option": "-n",
+          "shortcut": "--null-input",
+          "description": "Don't read input, simply evaluate the expression given. Useful for creating docs from scratch."
+        },
+        {
+          "option": "-o",
+          "shortcut": "--output-format",
+          "description": "[auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type.",
+          "default": "auto"
+        },
+        {
+          "option": "-P",
+          "shortcut": "--prettyPrint",
+          "description": "pretty print, shorthand for '... style = \"\"'"
+        },
+        {
+          "option": "-s",
+          "shortcut": "--split-exp",
+          "description": "print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter."
+        },
+        {
+          "option": "--split-exp-file",
+          "description": "Use a file to specify the split-exp expression.",
+          "value": "string"
+        },
+        {
+          "option": "-r",
+          "shortcut": "--unwrapScalar",
+          "description": "unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml.",
+          "default": "true"
+        },
+        {
+          "option": "-v",
+          "shortcut": "--verbose",
+          "description": "verbose mode"
+        },
+        {
+          "option": "--xml-attribute-prefix",
+          "description": "prefix for xml attributes.",
+          "default": "+@"
+        },
+        {
+          "option": "--xml-content-name",
+          "description": "name for xml content (if no attribute name is present).",
+          "default": "+content"
+        },
+        {
+          "option": "--xml-directive-name",
+          "description": "name for xml directives (e.g. <!DOCTYPE thing cat>)",
+          "default": "+directive"
+        },
+        {
+          "option": "--xml-keep-namespace",
+          "description": "enables keeping namespace after parsing attributes.",
+          "default": "true"
+        },
+        {
+          "option": "--xml-proc-inst-prefix",
+          "description": "prefix for xml processing instructions (e.g. <?xml version=\"1\"?>).",
+          "default": "+p_"
+        },
+        {
+          "option": "--xml-raw-token",
+          "description": "enables using RawToken method instead Token. Commonly disables namespace translations.",
+          "default": "true"
+        },
+        {
+          "option": "--xml-skip-directives",
+          "description": "skip over directives (e.g. <!DOCTYPE thing cat>)"
+        },
+        {
+          "option": "--xml-skip-proc-inst",
+          "description": "skip over process instructions (e.g. <?xml version=\"1\"?>)"
+        },
+        {
+          "option": "--xml-strict-mode",
+          "description": "enables strict parsing of XML."
+        }
+      ],
+      "aliases": [
+        "eval",
+        "e"
+      ],
+      "name": "yq completion",
+      "raw_help_text": "yq is a portable command-line YAML processor (https://github.com/mikefarah/yq/) \nSee https://mikefarah.gitbook.io/yq/ for detailed documentation and examples.\n\n## Evaluate Sequence ##\nThis command iterates over each yaml document from each given file, applies the \nexpression and prints the result in sequence.\n\nUsage:\n  yq eval [expression] [yaml_file1]... [flags]\n\nAliases:\n  eval, e\n\nExamples:\n\n# Reads field under the given path for each file\nyq e '.a.b' f1.yml f2.yml \n\n# Prints out the file\nyq e sample.yaml \n\n# Pipe from STDIN\n## use '-' as a filename to pipe from STDIN\ncat file2.yml | yq e '.a.b' file1.yml - file3.yml\n\n# Creates a new yaml document\n## Note that editing an empty file does not work.\nyq e -n '.a.b.c = \"cat\"' \n\n# Update a file inplace\nyq e '.a.b = \"cool\"' -i file.yaml \n\n\nFlags:\n  -h, --help   help for eval\n\nGlobal Flags:\n  -C, --colors                        force print with colors\n  -e, --exit-status                   set exit status if there are no matches or null or false is returned\n      --expression string             forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.\n      --from-file string              Load expression from specified file.\n  -f, --front-matter string           (extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact\n      --header-preprocess             Slurp any header comments and separators before processing expression. (default true)\n  -I, --indent int                    sets indent level for output (default 2)\n  -i, --inplace                       update the file inplace of first file given.\n  -p, --input-format string           [auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")\n  -M, --no-colors                     force print with no colors\n  -N, --no-doc                        Don't print document separators (---)\n  -n, --null-input                    Don't read input, simply evaluate the expression given. Useful for creating docs from scratch.\n  -o, --output-format string          [auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")\n  -P, --prettyPrint                   pretty print, shorthand for '... style = \"\"'\n  -s, --split-exp string              print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.\n      --split-exp-file string         Use a file to specify the split-exp expression.\n  -r, --unwrapScalar                  unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)\n  -v, --verbose                       verbose mode\n      --xml-attribute-prefix string   prefix for xml attributes (default \"+@\")\n      --xml-content-name string       name for xml content (if no attribute name is present). (default \"+content\")\n      --xml-directive-name string     name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")\n      --xml-keep-namespace            enables keeping namespace after parsing attributes (default true)\n      --xml-proc-inst-prefix string   prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")\n      --xml-raw-token                 enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)\n      --xml-skip-directives           skip over directives (e.g. <!DOCTYPE thing cat>)\n      --xml-skip-proc-inst            skip over process instructions (e.g. <?xml version=\"1\"?>)\n      --xml-strict-mode               enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details.",
+      "description": "Generate the autocompletion script for the specified shell"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for eval"
+        },
+        {
+          "option": "--colors",
+          "shortcut": "-C",
+          "description": "force print with colors"
+        },
+        {
+          "option": "--exit-status",
+          "shortcut": "-e",
+          "description": "set exit status if there are no matches or null or false is returned"
+        },
+        {
+          "option": "--expression",
+          "description": "forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file."
+        },
+        {
+          "option": "--from-file",
+          "description": "Load expression from specified file."
+        },
+        {
+          "option": "--front-matter",
+          "shortcut": "-f",
+          "description": "(extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact"
+        },
+        {
+          "option": "--header-preprocess",
+          "description": "Slurp any header comments and separators before processing expression. (default true)"
+        },
+        {
+          "option": "--indent",
+          "shortcut": "-I",
+          "description": "sets indent level for output (default 2)"
+        },
+        {
+          "option": "--inplace",
+          "shortcut": "-i",
+          "description": "update the file inplace of first file given."
+        },
+        {
+          "option": "--input-format",
+          "shortcut": "-p",
+          "description": "[auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")"
+        },
+        {
+          "option": "--no-colors",
+          "shortcut": "-M",
+          "description": "force print with no colors"
+        },
+        {
+          "option": "--no-doc",
+          "shortcut": "-N",
+          "description": "Don't print document separators (---)"
+        },
+        {
+          "option": "--null-input",
+          "shortcut": "-n",
+          "description": "Don't read input, simply evaluate the expression given. Useful for creating docs from scratch."
+        },
+        {
+          "option": "--output-format",
+          "shortcut": "-o",
+          "description": "[auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")"
+        },
+        {
+          "option": "--prettyPrint",
+          "shortcut": "-P",
+          "description": "pretty print, shorthand for '... style = \"\"'"
+        },
+        {
+          "option": "--split-exp",
+          "shortcut": "-s",
+          "description": "print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter."
+        },
+        {
+          "option": "--split-exp-file",
+          "description": "Use a file to specify the split-exp expression."
+        },
+        {
+          "option": "--unwrapScalar",
+          "shortcut": "-r",
+          "description": "unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)"
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "verbose mode"
+        },
+        {
+          "option": "--xml-attribute-prefix",
+          "description": "prefix for xml attributes (default \"+@\")"
+        },
+        {
+          "option": "--xml-content-name",
+          "description": "name for xml content (if no attribute name is present). (default \"+content\")"
+        },
+        {
+          "option": "--xml-directive-name",
+          "description": "name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")"
+        },
+        {
+          "option": "--xml-keep-namespace",
+          "description": "enables keeping namespace after parsing attributes (default true)"
+        },
+        {
+          "option": "--xml-proc-inst-prefix",
+          "description": "prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")"
+        },
+        {
+          "option": "--xml-raw-token",
+          "description": "enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)"
+        },
+        {
+          "option": "--xml-skip-directives",
+          "description": "skip over directives (e.g. <!DOCTYPE thing cat>)"
+        },
+        {
+          "option": "--xml-skip-proc-inst",
+          "description": "skip over process instructions (e.g. <?xml version=\"1\"?>)"
+        },
+        {
+          "option": "--xml-strict-mode",
+          "description": "enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details."
+        }
+      ],
+      "aliases": [
+        "eval",
+        "e"
+      ],
+      "name": "yq eval",
+      "raw_help_text": "yq is a portable command-line YAML processor (https://github.com/mikefarah/yq/) \nSee https://mikefarah.gitbook.io/yq/ for detailed documentation and examples.\n\n## Evaluate Sequence ##\nThis command iterates over each yaml document from each given file, applies the \nexpression and prints the result in sequence.\n\nUsage:\n  yq eval [expression] [yaml_file1]... [flags]\n\nAliases:\n  eval, e\n\nExamples:\n\n# Reads field under the given path for each file\nyq e '.a.b' f1.yml f2.yml \n\n# Prints out the file\nyq e sample.yaml \n\n# Pipe from STDIN\n## use '-' as a filename to pipe from STDIN\ncat file2.yml | yq e '.a.b' file1.yml - file3.yml\n\n# Creates a new yaml document\n## Note that editing an empty file does not work.\nyq e -n '.a.b.c = \"cat\"' \n\n# Update a file inplace\nyq e '.a.b = \"cool\"' -i file.yaml \n\n\nFlags:\n  -h, --help   help for eval\n\nGlobal Flags:\n  -C, --colors                        force print with colors\n  -e, --exit-status                   set exit status if there are no matches or null or false is returned\n      --expression string             forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.\n      --from-file string              Load expression from specified file.\n  -f, --front-matter string           (extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact\n      --header-preprocess             Slurp any header comments and separators before processing expression. (default true)\n  -I, --indent int                    sets indent level for output (default 2)\n  -i, --inplace                       update the file inplace of first file given.\n  -p, --input-format string           [auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")\n  -M, --no-colors                     force print with no colors\n  -N, --no-doc                        Don't print document separators (---)\n  -n, --null-input                    Don't read input, simply evaluate the expression given. Useful for creating docs from scratch.\n  -o, --output-format string          [auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")\n  -P, --prettyPrint                   pretty print, shorthand for '... style = \"\"'\n  -s, --split-exp string              print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.\n      --split-exp-file string         Use a file to specify the split-exp expression.\n  -r, --unwrapScalar                  unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)\n  -v, --verbose                       verbose mode\n      --xml-attribute-prefix string   prefix for xml attributes (default \"+@\")\n      --xml-content-name string       name for xml content (if no attribute name is present). (default \"+content\")\n      --xml-directive-name string     name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")\n      --xml-keep-namespace            enables keeping namespace after parsing attributes (default true)\n      --xml-proc-inst-prefix string   prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")\n      --xml-raw-token                 enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)\n      --xml-skip-directives           skip over directives (e.g. <!DOCTYPE thing cat>)\n      --xml-skip-proc-inst            skip over process instructions (e.g. <?xml version=\"1\"?>)\n      --xml-strict-mode               enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details.",
+      "description": "(default) Apply the expression to each document in each yaml file in sequence"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for eval-all"
+        },
+        {
+          "option": "--colors",
+          "shortcut": "-C",
+          "description": "force print with colors"
+        },
+        {
+          "option": "--exit-status",
+          "shortcut": "-e",
+          "description": "set exit status if there are no matches or null or false is returned"
+        },
+        {
+          "option": "--expression",
+          "description": "forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file."
+        },
+        {
+          "option": "--from-file",
+          "description": "Load expression from specified file."
+        },
+        {
+          "option": "--front-matter",
+          "shortcut": "-f",
+          "description": "(extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact"
+        },
+        {
+          "option": "--header-preprocess",
+          "description": "Slurp any header comments and separators before processing expression. (default true)"
+        },
+        {
+          "option": "--indent",
+          "shortcut": "-I",
+          "description": "sets indent level for output (default 2)"
+        },
+        {
+          "option": "--inplace",
+          "shortcut": "-i",
+          "description": "update the file inplace of first file given."
+        },
+        {
+          "option": "--input-format",
+          "shortcut": "-p",
+          "description": "[auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")"
+        },
+        {
+          "option": "--no-colors",
+          "shortcut": "-M",
+          "description": "force print with no colors"
+        },
+        {
+          "option": "--no-doc",
+          "shortcut": "-N",
+          "description": "Don't print document separators (---)"
+        },
+        {
+          "option": "--null-input",
+          "shortcut": "-n",
+          "description": "Don't read input, simply evaluate the expression given. Useful for creating docs from scratch."
+        },
+        {
+          "option": "--output-format",
+          "shortcut": "-o",
+          "description": "[auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")"
+        },
+        {
+          "option": "--prettyPrint",
+          "shortcut": "-P",
+          "description": "pretty print, shorthand for '... style = \"\"'"
+        },
+        {
+          "option": "--split-exp",
+          "shortcut": "-s",
+          "description": "print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter."
+        },
+        {
+          "option": "--split-exp-file",
+          "description": "Use a file to specify the split-exp expression."
+        },
+        {
+          "option": "--unwrapScalar",
+          "shortcut": "-r",
+          "description": "unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)"
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "verbose mode"
+        },
+        {
+          "option": "--xml-attribute-prefix",
+          "description": "prefix for xml attributes (default \"+@\")"
+        },
+        {
+          "option": "--xml-content-name",
+          "description": "name for xml content (if no attribute name is present). (default \"+content\")"
+        },
+        {
+          "option": "--xml-directive-name",
+          "description": "name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")"
+        },
+        {
+          "option": "--xml-keep-namespace",
+          "description": "enables keeping namespace after parsing attributes (default true)"
+        },
+        {
+          "option": "--xml-proc-inst-prefix",
+          "description": "prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")"
+        },
+        {
+          "option": "--xml-raw-token",
+          "description": "enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)"
+        },
+        {
+          "option": "--xml-skip-directives",
+          "description": "skip over directives (e.g. <!DOCTYPE thing cat>)"
+        },
+        {
+          "option": "--xml-skip-proc-inst",
+          "description": "skip over process instructions (e.g. <?xml version=\"1\"?>)"
+        },
+        {
+          "option": "--xml-strict-mode",
+          "description": "enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details."
+        }
+      ],
+      "aliases": [
+        "eval-all",
+        "ea"
+      ],
+      "name": "yq eval-all",
+      "raw_help_text": "yq is a portable command-line YAML processor (https://github.com/mikefarah/yq/) \nSee https://mikefarah.gitbook.io/yq/ for detailed documentation and examples.\n\n## Evaluate All ##\nThis command loads _all_ yaml documents of _all_ yaml files and runs expression once\nUseful when you need to run an expression across several yaml documents or files (like merge).\nNote that it consumes more memory than eval.\n\nUsage:\n  yq eval-all [expression] [yaml_file1]... [flags]\n\nAliases:\n  eval-all, ea\n\nExamples:\n\n# Merge f2.yml into f1.yml (inplace)\nyq eval-all --inplace 'select(fileIndex == 0) * select(fileIndex == 1)' f1.yml f2.yml\n## the same command and expression using shortened names:\nyq ea -i 'select(fi == 0) * select(fi == 1)' f1.yml f2.yml\n\n\n# Merge all given files\nyq ea '. as $item ireduce ({}; . * $item )' file1.yml file2.yml ...\n\n# Pipe from STDIN\n## use '-' as a filename to pipe from STDIN\ncat file2.yml | yq ea '.a.b' file1.yml - file3.yml\n\n\nFlags:\n  -h, --help   help for eval-all\n\nGlobal Flags:\n  -C, --colors                        force print with colors\n  -e, --exit-status                   set exit status if there are no matches or null or false is returned\n      --expression string             forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.\n      --from-file string              Load expression from specified file.\n  -f, --front-matter string           (extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact\n      --header-preprocess             Slurp any header comments and separators before processing expression. (default true)\n  -I, --indent int                    sets indent level for output (default 2)\n  -i, --inplace                       update the file inplace of first file given.\n  -p, --input-format string           [auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")\n  -M, --no-colors                     force print with no colors\n  -N, --no-doc                        Don't print document separators (---)\n  -n, --null-input                    Don't read input, simply evaluate the expression given. Useful for creating docs from scratch.\n  -o, --output-format string          [auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")\n  -P, --prettyPrint                   pretty print, shorthand for '... style = \"\"'\n  -s, --split-exp string              print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.\n      --split-exp-file string         Use a file to specify the split-exp expression.\n  -r, --unwrapScalar                  unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)\n  -v, --verbose                       verbose mode\n      --xml-attribute-prefix string   prefix for xml attributes (default \"+@\")\n      --xml-content-name string       name for xml content (if no attribute name is present). (default \"+content\")\n      --xml-directive-name string     name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")\n      --xml-keep-namespace            enables keeping namespace after parsing attributes (default true)\n      --xml-proc-inst-prefix string   prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")\n      --xml-raw-token                 enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)\n      --xml-skip-directives           skip over directives (e.g. <!DOCTYPE thing cat>)\n      --xml-skip-proc-inst            skip over process instructions (e.g. <?xml version=\"1\"?>)\n      --xml-strict-mode               enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details.",
+      "description": "Loads _all_ yaml documents of _all_ yaml files and runs expression once"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for shell-completion"
+        },
+        {
+          "option": "--colors",
+          "shortcut": "-C",
+          "description": "force print with colors"
+        },
+        {
+          "option": "--exit-status",
+          "shortcut": "-e",
+          "description": "set exit status if there are no matches or null or false is returned"
+        },
+        {
+          "option": "--expression",
+          "description": "forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file."
+        },
+        {
+          "option": "--from-file",
+          "description": "Load expression from specified file."
+        },
+        {
+          "option": "--front-matter",
+          "shortcut": "-f",
+          "description": "(extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact"
+        },
+        {
+          "option": "--header-preprocess",
+          "description": "Slurp any header comments and separators before processing expression. (default true)"
+        },
+        {
+          "option": "--indent",
+          "shortcut": "-I",
+          "value": "int",
+          "description": "sets indent level for output (default 2)"
+        },
+        {
+          "option": "--inplace",
+          "shortcut": "-i",
+          "description": "update the file inplace of first file given."
+        },
+        {
+          "option": "--input-format",
+          "shortcut": "-p",
+          "value": "string",
+          "description": "[auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")"
+        },
+        {
+          "option": "--no-colors",
+          "shortcut": "-M",
+          "description": "force print with no colors"
+        },
+        {
+          "option": "--no-doc",
+          "shortcut": "-N",
+          "description": "Don't print document separators (---)"
+        },
+        {
+          "option": "--null-input",
+          "shortcut": "-n",
+          "description": "Don't read input, simply evaluate the expression given. Useful for creating docs from scratch."
+        },
+        {
+          "option": "--output-format",
+          "shortcut": "-o",
+          "value": "string",
+          "description": "[auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")"
+        },
+        {
+          "option": "--prettyPrint",
+          "shortcut": "-P",
+          "description": "pretty print, shorthand for '... style = \"\"'"
+        },
+        {
+          "option": "--split-exp",
+          "shortcut": "-s",
+          "value": "string",
+          "description": "print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter."
+        },
+        {
+          "option": "--split-exp-file",
+          "description": "Use a file to specify the split-exp expression."
+        },
+        {
+          "option": "--unwrapScalar",
+          "shortcut": "-r",
+          "description": "unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)"
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "verbose mode"
+        },
+        {
+          "option": "--xml-attribute-prefix",
+          "description": "prefix for xml attributes (default \"+@\")"
+        },
+        {
+          "option": "--xml-content-name",
+          "description": "name for xml content (if no attribute name is present). (default \"+content\")"
+        },
+        {
+          "option": "--xml-directive-name",
+          "description": "name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")"
+        },
+        {
+          "option": "--xml-keep-namespace",
+          "description": "enables keeping namespace after parsing attributes (default true)"
+        },
+        {
+          "option": "--xml-proc-inst-prefix",
+          "description": "prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")"
+        },
+        {
+          "option": "--xml-raw-token",
+          "description": "enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)"
+        },
+        {
+          "option": "--xml-skip-directives",
+          "description": "skip over directives (e.g. <!DOCTYPE thing cat>)"
+        },
+        {
+          "option": "--xml-skip-proc-inst",
+          "description": "skip over process instructions (e.g. <?xml version=\"1\"?>)"
+        },
+        {
+          "option": "--xml-strict-mode",
+          "description": "enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details."
+        }
+      ],
+      "aliases": [],
+      "name": "yq shell-completion",
+      "raw_help_text": "To load completions:\n\nBash:\n\n$ source <(yq shell-completion bash)\n\n# To load completions for each session, execute once:\nLinux:\n  $ yq shell-completion bash > /etc/bash_completion.d/yq\nMacOS:\n  $ yq shell-completion bash > /usr/local/etc/bash_completion.d/yq\n\nZsh:\n\n# If shell completion is not already enabled in your environment you will need\n# to enable it.  You can execute the following once:\n\n$ echo \"autoload -U compinit; compinit\" >> ~/.zshrc\n\n# To load completions for each session, execute once:\n$ yq shell-completion zsh > \"${fpath[1]}/_yq\"\n\n# You will need to start a new shell for this setup to take effect.\n\nFish:\n\n$ yq shell-completion fish | source\n\n# To load completions for each session, execute once:\n$ yq shell-completion fish > ~/.config/fish/completions/yq.fish\n\nUsage:\n  yq shell-completion [bash|zsh|fish|powershell]\n\nFlags:\n  -h, --help   help for shell-completion\n\nGlobal Flags:\n  -C, --colors                        force print with colors\n  -e, --exit-status                   set exit status if there are no matches or null or false is returned\n      --expression string             forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.\n      --from-file string              Load expression from specified file.\n  -f, --front-matter string           (extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact\n      --header-preprocess             Slurp any header comments and separators before processing expression. (default true)\n  -I, --indent int                    sets indent level for output (default 2)\n  -i, --inplace                       update the file inplace of first file given.\n  -p, --input-format string           [auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")\n  -M, --no-colors                     force print with no colors\n  -N, --no-doc                        Don't print document separators (---)\n  -n, --null-input                    Don't read input, simply evaluate the expression given. Useful for creating docs from scratch.\n  -o, --output-format string          [auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")\n  -P, --prettyPrint                   pretty print, shorthand for '... style = \"\"'\n  -s, --split-exp string              print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.\n      --split-exp-file string         Use a file to specify the split-exp expression.\n  -r, --unwrapScalar                  unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)\n  -v, --verbose                       verbose mode\n      --xml-attribute-prefix string   prefix for xml attributes (default \"+@\")\n      --xml-content-name string       name for xml content (if no attribute name is present). (default \"+content\")\n      --xml-directive-name string     name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")\n      --xml-keep-namespace            enables keeping namespace after parsing attributes (default true)\n      --xml-proc-inst-prefix string   prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")\n      --xml-raw-token                 enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)\n      --xml-skip-directives           skip over directives (e.g. <!DOCTYPE thing cat>)\n      --xml-skip-proc-inst            skip over process instructions (e.g. <?xml version=\"1\"?>)\n      --xml-strict-mode               enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details.",
+      "description": "Generate completion script"
+    }
+  ],
+  "options": [
+    {
+      "option": "--colors",
+      "shortcut": "-C",
+      "description": "force print with colors"
+    },
+    {
+      "option": "--exit-status",
+      "shortcut": "-e",
+      "description": "set exit status if there are no matches or null or false is returned"
+    },
+    {
+      "option": "--expression",
+      "description": "forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.",
+      "value": "string"
+    },
+    {
+      "option": "--from-file",
+      "description": "Load expression from specified file.",
+      "value": "string"
+    },
+    {
+      "option": "--front-matter",
+      "shortcut": "-f",
+      "description": "(extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact",
+      "value": "string"
+    },
+    {
+      "option": "--header-preprocess",
+      "description": "Slurp any header comments and separators before processing expression.",
+      "default": "true"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for yq"
+    },
+    {
+      "option": "--indent",
+      "shortcut": "-I",
+      "description": "sets indent level for output",
+      "default": "2",
+      "value": "int"
+    },
+    {
+      "option": "--inplace",
+      "shortcut": "-i",
+      "description": "update the file inplace of first file given."
+    },
+    {
+      "option": "--input-format",
+      "shortcut": "-p",
+      "description": "[auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml.",
+      "default": "auto",
+      "value": "string"
+    },
+    {
+      "option": "--no-colors",
+      "shortcut": "-M",
+      "description": "force print with no colors"
+    },
+    {
+      "option": "--no-doc",
+      "shortcut": "-N",
+      "description": "Don't print document separators (---)"
+    },
+    {
+      "option": "--null-input",
+      "shortcut": "-n",
+      "description": "Don't read input, simply evaluate the expression given. Useful for creating docs from scratch."
+    },
+    {
+      "option": "--output-format",
+      "shortcut": "-o",
+      "description": "[auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type.",
+      "default": "auto",
+      "value": "string"
+    },
+    {
+      "option": "--prettyPrint",
+      "shortcut": "-P",
+      "description": "pretty print, shorthand for '... style = \"\"'"
+    },
+    {
+      "option": "--split-exp",
+      "shortcut": "-s",
+      "description": "print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.",
+      "value": "string"
+    },
+    {
+      "option": "--split-exp-file",
+      "description": "Use a file to specify the split-exp expression.",
+      "value": "string"
+    },
+    {
+      "option": "--unwrapScalar",
+      "shortcut": "-r",
+      "description": "unwrap scalar, print the value with no quotes, colors or comments.",
+      "default": "true"
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "verbose mode"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version information and quit"
+    },
+    {
+      "option": "--xml-attribute-prefix",
+      "description": "prefix for xml attributes",
+      "default": "+@",
+      "value": "string"
+    },
+    {
+      "option": "--xml-content-name",
+      "description": "name for xml content (if no attribute name is present).",
+      "default": "+content",
+      "value": "string"
+    },
+    {
+      "option": "--xml-directive-name",
+      "description": "name for xml directives (e.g. <!DOCTYPE thing cat>)",
+      "default": "+directive",
+      "value": "string"
+    },
+    {
+      "option": "--xml-keep-namespace",
+      "description": "enables keeping namespace after parsing attributes",
+      "default": "true"
+    },
+    {
+      "option": "--xml-proc-inst-prefix",
+      "description": "prefix for xml processing instructions (e.g. <?xml version=\"1\"?>)",
+      "default": "+p_"
+    },
+    {
+      "option": "--xml-raw-token",
+      "description": "enables using RawToken method instead Token. Commonly disables namespace translations.",
+      "default": "true"
+    },
+    {
+      "option": "--xml-skip-directives",
+      "description": "skip over directives (e.g. <!DOCTYPE thing cat>)"
+    },
+    {
+      "option": "--xml-skip-proc-inst",
+      "description": "skip over process instructions (e.g. <?xml version=\"1\"?>)"
+    },
+    {
+      "option": "--xml-strict-mode",
+      "description": "enables strict parsing of XML."
+    }
+  ],
+  "aliases": [],
+  "name": "yq",
+  "raw_help_text": "yq is a portable command-line YAML processor (https://github.com/mikefarah/yq/) \nSee https://mikefarah.gitbook.io/yq/ for detailed documentation and examples.\n\nUsage:\n  yq [flags]\n  yq [command]\n\nExamples:\n\n# yq defaults to 'eval' command if no command is specified. See \"yq eval --help\" for more examples.\n\n# read the \"stuff\" node from \"myfile.yml\"\nyq '.stuff' < myfile.yml\n\n# update myfile.yml in place\nyq -i '.stuff = \"foo\"' myfile.yml\n\n# print contents of sample.json as idiomatic YAML\nyq -P sample.json\n\n\nAvailable Commands:\n  completion       Generate the autocompletion script for the specified shell\n  eval             (default) Apply the expression to each document in each yaml file in sequence\n  eval-all         Loads _all_ yaml documents of _all_ yaml files and runs expression once\n  help             Help about any command\n  shell-completion Generate completion script\n\nFlags:\n  -C, --colors                        force print with colors\n  -e, --exit-status                   set exit status if there are no matches or null or false is returned\n      --expression string             forcibly set the expression argument. Useful when yq argument detection thinks your expression is a file.\n      --from-file string              Load expression from specified file.\n  -f, --front-matter string           (extract|process) first input as yaml front-matter. Extract will pull out the yaml content, process will run the expression against the yaml content, leaving the remaining data intact\n      --header-preprocess             Slurp any header comments and separators before processing expression. (default true)\n  -h, --help                          help for yq\n  -I, --indent int                    sets indent level for output (default 2)\n  -i, --inplace                       update the file inplace of first file given.\n  -p, --input-format string           [auto|a|yaml|y|props|p|xml|x|tsv|t|csv|c|toml] parse format for input. Note that json is a subset of yaml. (default \"auto\")\n  -M, --no-colors                     force print with no colors\n  -N, --no-doc                        Don't print document separators (---)\n  -n, --null-input                    Don't read input, simply evaluate the expression given. Useful for creating docs from scratch.\n  -o, --output-format string          [auto|a|yaml|y|json|j|props|p|xml|x|tsv|t|csv|c] output format type. (default \"auto\")\n  -P, --prettyPrint                   pretty print, shorthand for '... style = \"\"'\n  -s, --split-exp string              print each result (or doc) into a file named (exp). [exp] argument must return a string. You can use $index in the expression as the result counter.\n      --split-exp-file string         Use a file to specify the split-exp expression.\n  -r, --unwrapScalar                  unwrap scalar, print the value with no quotes, colors or comments. Defaults to true for yaml (default true)\n  -v, --verbose                       verbose mode\n  -V, --version                       Print version information and quit\n      --xml-attribute-prefix string   prefix for xml attributes (default \"+@\")\n      --xml-content-name string       name for xml content (if no attribute name is present). (default \"+content\")\n      --xml-directive-name string     name for xml directives (e.g. <!DOCTYPE thing cat>) (default \"+directive\")\n      --xml-keep-namespace            enables keeping namespace after parsing attributes (default true)\n      --xml-proc-inst-prefix string   prefix for xml processing instructions (e.g. <?xml version=\"1\"?>) (default \"+p_\")\n      --xml-raw-token                 enables using RawToken method instead Token. Commonly disables namespace translations. See https://pkg.go.dev/encoding/xml#Decoder.RawToken for details. (default true)\n      --xml-skip-directives           skip over directives (e.g. <!DOCTYPE thing cat>)\n      --xml-skip-proc-inst            skip over process instructions (e.g. <?xml version=\"1\"?>)\n      --xml-strict-mode               enables strict parsing of XML. See https://pkg.go.dev/encoding/xml for more details.\n\nUse \"yq [command] --help\" for more information about a command.",
+  "version": "v4.33.1"
+}

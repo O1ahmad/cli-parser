@@ -1,0 +1,163 @@
+{
+  "description": "Update hex-encoded bitcoin transaction or create hex-encoded bitcoin transaction",
+  "subcommands": [
+    {
+      "name": "bitcoin-tx create",
+      "subcommands": [],
+      "options": [],
+      "description": "Create new, empty TX."
+    },
+    {
+      "name": "bitcoin-tx delin",
+      "subcommands": [],
+      "options": [],
+      "description": "Delete input N from TX"
+    },
+    {
+      "name": "bitcoin-tx delout",
+      "subcommands": [],
+      "options": [],
+      "description": "Delete output N from TX"
+    },
+    {
+      "name": "bitcoin-tx in",
+      "subcommands": [],
+      "options": [],
+      "description": "Add input to TX"
+    },
+    {
+      "name": "bitcoin-tx locktime",
+      "subcommands": [],
+      "options": [],
+      "description": "Set TX lock time to N"
+    },
+    {
+      "name": "bitcoin-tx nversion",
+      "subcommands": [],
+      "options": [],
+      "description": "Set TX version to N"
+    },
+    {
+      "name": "bitcoin-tx outaddr",
+      "subcommands": [],
+      "options": [],
+      "description": "Add address-based output to TX"
+    },
+    {
+      "name": "bitcoin-tx outdata",
+      "subcommands": [],
+      "options": [],
+      "description": "Add data-based output to TX"
+    },
+    {
+      "name": "bitcoin-tx outmultisig",
+      "subcommands": [],
+      "options": [],
+      "description": "Add Pay To n-of-m Multi-sig output to TX"
+    },
+    {
+      "name": "bitcoin-tx outpubkey",
+      "subcommands": [],
+      "options": [],
+      "description": "Add pay-to-pubkey output to TX"
+    },
+    {
+      "name": "bitcoin-tx outscript",
+      "subcommands": [],
+      "options": [],
+      "description": "Add raw script output to TX"
+    },
+    {
+      "name": "bitcoin-tx replaceable",
+      "subcommands": [],
+      "options": [],
+      "description": "Set RBF opt-in sequence number for input N"
+    },
+    {
+      "name": "bitcoin-tx sign",
+      "subcommands": [],
+      "options": [],
+      "description": "Add zero or more signatures to transaction"
+    },
+    {
+      "name": "bitcoin-tx load",
+      "subcommands": [],
+      "options": [],
+      "description": "Load JSON file FILENAME into register NAME"
+    },
+    {
+      "name": "bitcoin-tx set",
+      "subcommands": [],
+      "options": [],
+      "description": "Set register NAME to given JSON-STRING"
+    }
+  ],
+  "options": [
+    {
+      "option": "-?",
+      "shortcut": null,
+      "description": "Print this help message and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-json",
+      "shortcut": null,
+      "description": "Select JSON output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-txid",
+      "shortcut": null,
+      "description": "Output only the hex-encoded transaction id of the resultant transaction",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-version",
+      "shortcut": null,
+      "description": "Print version and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-chain=<chain>",
+      "shortcut": null,
+      "description": "Use the chain <chain> (default: main)",
+      "value": "main, test, signet, regtest",
+      "default": "main"
+    },
+    {
+      "option": "-signet",
+      "shortcut": null,
+      "description": "Use the signet chain. Equivalent to -chain=signet.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-signetchallenge",
+      "shortcut": null,
+      "description": "Blocks must satisfy the given script to be considered valid (only for signet networks)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-signetseednode",
+      "shortcut": null,
+      "description": "Specify a seed node for the signet network, in the hostname[:port] format",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-testnet",
+      "shortcut": null,
+      "description": "Use the test chain. Equivalent to -chain=test.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "bitcoin-tx",
+  "raw_help_text": "Bitcoin Core bitcoin-tx utility version v24.0.1\n\nUsage:  bitcoin-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\nor:     bitcoin-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n\nOptions:\n\n  -?\n       Print this help message and exit\n\n  -create\n       Create new, empty TX.\n\n  -json\n       Select JSON output\n\n  -txid\n       Output only the hex-encoded transaction id of the resultant transaction.\n\n  -version\n       Print version and exit\n\nDebugging/Testing options:\n\nChain selection options:\n\n  -chain=<chain>\n       Use the chain <chain> (default: main). Allowed values: main, test,\n       signet, regtest\n\n  -signet\n       Use the signet chain. Equivalent to -chain=signet. Note that the network\n       is defined by the -signetchallenge parameter\n\n  -signetchallenge\n       Blocks must satisfy the given script to be considered valid (only for\n       signet networks; defaults to the global default signet test\n       network challenge)\n\n  -signetseednode\n       Specify a seed node for the signet network, in the hostname[:port]\n       format, e.g. sig.net:1234 (may be used multiple times to specify\n       multiple seed nodes; defaults to the global default signet test\n       network seed node(s))\n\n  -testnet\n       Use the test chain. Equivalent to -chain=test.\n\nCommands:\n\n  delin=N\n       Delete input N from TX\n\n  delout=N\n       Delete output N from TX\n\n  in=TXID:VOUT(:SEQUENCE_NUMBER)\n       Add input to TX\n\n  locktime=N\n       Set TX lock time to N\n\n  nversion=N\n       Set TX version to N\n\n  outaddr=VALUE:ADDRESS\n       Add address-based output to TX\n\n  outdata=[VALUE:]DATA\n       Add data-based output to TX\n\n  outmultisig=VALUE:REQUIRED:PUBKEYS:PUBKEY1:PUBKEY2:....[:FLAGS]\n       Add Pay To n-of-m Multi-sig output to TX. n = REQUIRED, m = PUBKEYS.\n       Optionally add the \"W\" flag to produce a\n       pay-to-witness-script-hash output. Optionally add the \"S\" flag to\n       wrap the output in a pay-to-script-hash.\n\n  outpubkey=VALUE:PUBKEY[:FLAGS]\n       Add pay-to-pubkey output to TX. Optionally add the \"W\" flag to produce a\n       pay-to-witness-pubkey-hash output. Optionally add the \"S\" flag to\n       wrap the output in a pay-to-script-hash.\n\n  outscript=VALUE:SCRIPT[:FLAGS]\n       Add raw script output to TX. Optionally add the \"W\" flag to produce a\n       pay-to-witness-script-hash output. Optionally add the \"S\" flag to\n       wrap the output in a pay-to-script-hash.\n\n  replaceable(=N)\n       Set RBF opt-in sequence number for input N (if not provided, opt-in all\n       available inputs)\n\n  sign=SIGHASH-FLAGS\n       Add zero or more signatures to transaction. This command requires JSON\n       registers:prevtxs=JSON object, privatekeys=JSON object. See\n       signrawtransactionwithkey docs for format of sighash flags, JSON\n       objects.\n\nRegister Commands:\n\n  load=NAME:FILENAME\n       Load JSON file FILENAME into register NAME\n\n  set=NAME:JSON-STRING\n       Set register NAME to given JSON-STRING",
+  "version": "v24.0.1"
+}

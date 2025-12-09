@@ -1,6 +1,0 @@
-# Nginx - Help Output
-# Image: docker.io/nginx:latest
-# Command: /usr/sbin/nginx -h
-# Exit Code: 0
-================================================================================
-

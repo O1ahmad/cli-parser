@@ -1,7 +1,0 @@
-# Aptos - Help Output
-# Image: docker.io/aptoslabs/validator:devnet_a27fd18b
-# Command: /usr/local/bin/aptos-node --help
-# Exit Code: -1
-================================================================================
-
-[Failed after trying all strategies]

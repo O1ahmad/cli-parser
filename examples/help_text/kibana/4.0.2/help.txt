@@ -1,7 +1,0 @@
-# Kibana - Help Output
-# Image: docker.io/elastic/kibana:4.0.2
-# Command: /usr/share/kibana/bin/kibana --help
-# Exit Code: -1
-================================================================================
-
-[Failed after trying all strategies]

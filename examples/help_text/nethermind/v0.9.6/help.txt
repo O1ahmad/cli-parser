@@ -1,7 +1,0 @@
-# Nethermind - Help Output
-# Image: docker.io/nethermind/nethermind:v0.9.6
-# Command: /nethermind --help
-# Exit Code: -1
-================================================================================
-
-[Failed after trying all strategies]

@@ -1,0 +1,839 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--avax-apikey",
+          "shortcut": null,
+          "description": "Etherscan API key.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--brownie-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run brownie compile",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--buidler-cache-directory",
+          "shortcut": null,
+          "description": "Use an alternative buidler cache directory (default ./cache)",
+          "value": "BUIDLER_CACHE_DIRECTORY",
+          "default": "./cache"
+        },
+        {
+          "option": "--buidler-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run buidler compile",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--checklist",
+          "shortcut": null,
+          "description": "Generate a markdown page with the detector results",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--checklist-limit",
+          "shortcut": null,
+          "description": "Limit the number of results per detector in the markdown file",
+          "value": "CHECKLIST_LIMIT",
+          "default": null
+        },
+        {
+          "option": "--codex",
+          "shortcut": null,
+          "description": "Enable codex (require an OpenAI API Key)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--codex-contracts",
+          "shortcut": null,
+          "description": "Comma separated list of contracts to submit to OpenAI Codex",
+          "value": "CODEX_CONTRACTS",
+          "default": null
+        },
+        {
+          "option": "--codex-log",
+          "shortcut": null,
+          "description": "Log codex queries (in crytic_export/codex/)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--codex-max-tokens",
+          "shortcut": null,
+          "description": "Maximum amount of tokens to use on the response. This number plus the size of the prompt can be no larger than the limit (4097 for text-davinci-003)",
+          "value": "CODEX_MAX_TOKENS",
+          "default": null
+        },
+        {
+          "option": "--codex-model",
+          "shortcut": null,
+          "description": "Name of the Codex model to use (affects pricing). Defaults to 'text-davinci-003'",
+          "value": "CODEX_MODEL",
+          "default": "text-davinci-003"
+        },
+        {
+          "option": "--codex-temperature",
+          "shortcut": null,
+          "description": "Temperature to use with Codex. Lower number indicates a more precise answer while higher numbers return more creative answers. Defaults to 0",
+          "value": "CODEX_TEMPERATURE",
+          "default": "0"
+        },
+        {
+          "option": "--config-file",
+          "shortcut": null,
+          "description": "Provide a config file (default: slither.config.json)",
+          "value": "CONFIG_FILE",
+          "default": "slither.config.json"
+        },
+        {
+          "option": "--disable-color",
+          "shortcut": null,
+          "description": "Disable output colorization",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--dapp-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run dapp build",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--embark-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run embark build",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--embark-overwrite-config",
+          "shortcut": null,
+          "description": "Install @trailofbits/embark-contract-export and add it to embark.json",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--etherscan-apikey",
+          "shortcut": null,
+          "description": "Etherscan API key.",
+          "value": "ETHERSCAN_API_KEY",
+          "default": null
+        },
+        {
+          "option": "--etherscan-export-directory",
+          "shortcut": null,
+          "description": "Directory in which to save the analyzed contracts.",
+          "value": "ETHERSCAN_EXPORT_DIR",
+          "default": null
+        },
+        {
+          "option": "--etherscan-only-bytecode",
+          "shortcut": null,
+          "description": "Only looks for bytecode.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--etherscan-only-source-code",
+          "shortcut": null,
+          "description": "Only compile if the source code is available.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude",
+          "shortcut": null,
+          "description": "Comma-separated list of detectors that should be excluded",
+          "value": "DETECTORS_TO_EXCLUDE",
+          "default": null
+        },
+        {
+          "option": "--exclude-dependencies",
+          "shortcut": null,
+          "description": "Exclude results that are only related to dependencies",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude-high",
+          "shortcut": null,
+          "description": "Exclude high impact analyses",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude-low",
+          "shortcut": null,
+          "description": "Exclude low impact analyses",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude-medium",
+          "shortcut": null,
+          "description": "Exclude medium impact analyses",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude-optimization",
+          "shortcut": null,
+          "description": "Exclude optimization analyses",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--exclude-informational",
+          "shortcut": null,
+          "description": "Exclude informational impact analyses",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--fail-high",
+          "shortcut": null,
+          "description": "Fail if any high impact findings are detected",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--fail-low",
+          "shortcut": null,
+          "description": "Fail if any low or greater impact findings are detected",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--fail-medium",
+          "shortcut": null,
+          "description": "Fail if any medium or greater impact findings are detected",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--fail-none",
+          "shortcut": "--no-fail-pedantic",
+          "description": "Do not return the number of findings in the exit code",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--foundry-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run foundry compile",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--foundry-out-directory",
+          "shortcut": null,
+          "description": "Use an alternative out directory (default: out)",
+          "value": "FOUNDRY_OUT_DIRECTORY",
+          "default": "out"
+        },
+        {
+          "option": "--foundry-compile-all",
+          "shortcut": null,
+          "description": "Don't skip compiling test and script",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--generate-patches",
+          "shortcut": null,
+          "description": "Generate patches (json output only)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--hardhat-artifacts-directory",
+          "shortcut": null,
+          "description": "Use an alternative hardhat artifacts directory (default ./artifacts)",
+          "value": "HARDHAT_ARTIFACTS_DIRECTORY",
+          "default": "./artifacts"
+        },
+        {
+          "option": "--hardhat-cache-directory",
+          "shortcut": null,
+          "description": "Use an alternative hardhat cache directory (default ./cache)",
+          "value": "HARDHAT_CACHE_DIRECTORY",
+          "default": "./cache"
+        },
+        {
+          "option": "--hardhat-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run hardhat compile",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--include-detectors",
+          "shortcut": null,
+          "description": "Comma-separated list of detectors that should be included",
+          "value": "DETECTORS_TO_INCLUDE",
+          "default": null
+        },
+        {
+          "option": "--include-interfaces",
+          "shortcut": null,
+          "description": "Include interfaces from inheritance-graph printer",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--include-paths",
+          "shortcut": null,
+          "description": "Regex filter to include detector results matching file path e.g. (src/|contracts/). Opposite of --filter-paths",
+          "value": "INCLUDE_PATHS",
+          "default": null
+        },
+        {
+          "option": "--json",
+          "shortcut": null,
+          "description": "Export the results as a JSON file ('--json -' to export to stdout)",
+          "value": "JSON",
+          "default": null
+        },
+        {
+          "option": "--json-types",
+          "shortcut": null,
+          "description": "Comma-separated list of result types to output to JSON, defaults to detectors,printers. Available types: compilations,console,detectors,printers,list-detectors,list-printers",
+          "value": "JSON_TYPES",
+          "default": "detectors,printers"
+        },
+        {
+          "option": "--list-detectors",
+          "shortcut": null,
+          "description": "List available detectors",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--list-printers",
+          "shortcut": null,
+          "description": "List available printers",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--markdown-root",
+          "shortcut": null,
+          "description": "URL for markdown generation",
+          "value": "MARKDOWN_ROOT",
+          "default": null
+        },
+        {
+          "option": "--npx-disable",
+          "shortcut": null,
+          "description": "Do not use npx",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--sarif",
+          "shortcut": null,
+          "description": "Export the results as a SARIF JSON file ('--sarif -' to export to stdout)",
+          "value": "SARIF",
+          "default": null
+        },
+        {
+          "option": "--sarif-input",
+          "shortcut": null,
+          "description": "Sarif input (beta)",
+          "value": "SARIF_INPUT",
+          "default": null
+        },
+        {
+          "option": "--sarif-triage",
+          "shortcut": null,
+          "description": "Sarif triage (beta)",
+          "value": "SARIF_TRIAGE",
+          "default": null
+        },
+        {
+          "option": "--show-ignored-findings",
+          "shortcut": null,
+          "description": "Show all the findings",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--skip-clean",
+          "shortcut": null,
+          "description": "Do not attempt to clean before compiling with a platform",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--solc",
+          "shortcut": null,
+          "description": "solc path",
+          "value": "SOLC",
+          "default": null
+        },
+        {
+          "option": "--solc-args",
+          "shortcut": null,
+          "description": "Add custom solc arguments. Example: --solc-args '--allow-path /tmp --evm-version byzantium'.",
+          "value": "SOLC_ARGS",
+          "default": null
+        },
+        {
+          "option": "--solc-disable-warnings",
+          "shortcut": null,
+          "description": "Disable solc warnings",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--solc-force-legacy-json",
+          "shortcut": null,
+          "description": "Force the solc compiler to use the legacy json ast format over the compact json ast format",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--solc-remaps",
+          "shortcut": null,
+          "description": "Add remapping",
+          "value": "SOLC_REMAPS",
+          "default": null
+        },
+        {
+          "option": "--solc-solcs-bin",
+          "shortcut": null,
+          "description": "Specify different solc version to try (path config). Example: --solc-solcs-bin solc-0.4.24,solc-0.5.3",
+          "value": "SOLC_SOLCS_BIN",
+          "default": null
+        },
+        {
+          "option": "--solc-solcs-select",
+          "shortcut": null,
+          "description": "Specify different solc version to try (env config). Depends on solc-select",
+          "value": "SOLC_SOLCS_SELECT",
+          "default": null
+        },
+        {
+          "option": "--solc-standard-json",
+          "shortcut": null,
+          "description": "Compile all specified targets in a single compilation using solc standard json",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--triage-database",
+          "shortcut": null,
+          "description": "File path to the triage database (default: slither.db.json)",
+          "value": "TRIAGE_DATABASE",
+          "default": "slither.db.json"
+        },
+        {
+          "option": "--triage-mode",
+          "shortcut": null,
+          "description": "Run triage mode (save results in triage database)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": null,
+          "description": "displays the current version",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--waffle-config-file",
+          "shortcut": null,
+          "description": "Provide a waffle config file",
+          "value": "WAFFLE_CONFIG_FILE",
+          "default": null
+        },
+        {
+          "option": "--waffle-ignore-compile",
+          "shortcut": null,
+          "description": "Do not run waffle compile",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--zip",
+          "shortcut": null,
+          "description": "Export the results as a zipped JSON file",
+          "value": "ZIP",
+          "default": null
+        },
+        {
+          "option": "--zip-type",
+          "shortcut": null,
+          "description": "Zip compression type. One of lzma,stored,deflated,bzip2. Default lzma",
+          "value": "ZIP_TYPE",
+          "default": "lzma"
+        }
+      ],
+      "name": "slither target",
+      "raw_help_text": "usage: slither target [flag]\n\ntarget can be:\n\t- file.sol // a Solidity file\n\t- project_directory // a project directory. See https://github.com/crytic/crytic-compile/#crytic-compile for the supported platforms\n\t- 0x.. // a contract on mainnet\n\t- NETWORK:0x.. // a contract on a different network. Supported networks: mainne,sepoli,holesk,hood,bs,testnet.bs,pol,amoy.pol,bas,sepolia.bas,arb,nova.arb,sepolia.arb,line,sepolia.line,blas,sepolia.blas,opti,sepolia.opti,ava,testnet.ava,btt,testnet.btt,cel,sepolia.cel,fra,hoodi.fra,gn,mantl,sepolia.mantl,memecor,moonbea,moonrive,moonbas,opbn,testnet.opbn,scrol,sepolia.scrol,taik,hoodi.taik,era.zksyn,sepoliaera.zksyn,xd,testnet.xd,apechai,curtis.apechai,worl,sepolia.worl,sopho,testnet.sopho,soni,testnet.soni,unichai,sepolia.unichai,abstrac,sepolia.abstrac,berachai,testnet.berachai,swellchai,testnet.swellchai,testnet.mona,hyperev,katan,bokuto.katan,se,testnet.se\n\nFor usage information, see https://github.com/crytic/slither/wiki/Usage\n\noptions:\n  -h, --help            show this help message and exit\n  --version             displays the current version\n  --filter-paths FILTER_PATHS\n                        Regex filter to exclude detector results matching file\n                        path e.g. (mocks/|test/)\n  --include-paths INCLUDE_PATHS\n                        Regex filter to include detector results matching file\n                        path e.g. (src/|contracts/). Opposite of --filter-\n                        paths\n\nCompile options:\n  --compile-force-framework COMPILE_FORCE_FRAMEWORK\n                        Force the compile to a given framework (foundry,buidle\n                        r,hardhat,truffle,waffle,solc,embark,dapp,etherlime,et\n                        herscan,vyper,brownie,solc-json,standard,archive)\n  --compile-libraries COMPILE_LIBRARIES\n                        Libraries used for linking. Format: --compile-\n                        libraries \"(name1, 0x00),(name2, 0x02)\"\n  --compile-remove-metadata\n                        Remove the metadata from the bytecodes\n  --compile-custom-build COMPILE_CUSTOM_BUILD\n                        Replace platform specific build command\n  --ignore-compile      Do not run compile of any platform\n  --skip-clean          Do not attempt to clean before compiling with a\n                        platform\n\nSolc options:\n  --solc SOLC           solc path\n  --solc-remaps SOLC_REMAPS\n                        Add remapping\n  --solc-args SOLC_ARGS\n                        Add custom solc arguments. Example: --solc-args \"--\n                        allow-path /tmp --evm-version byzantium\".\n  --solc-disable-warnings\n                        Disable solc warnings\n  --solc-working-dir SOLC_WORKING_DIR\n                        Change the default working directory\n  --solc-solcs-select SOLC_SOLCS_SELECT\n                        Specify different solc version to try (env config).\n                        Depends on solc-select\n  --solc-solcs-bin SOLC_SOLCS_BIN\n                        Specify different solc version to try (path config).\n                        Example: --solc-solcs-bin solc-0.4.24,solc-0.5.3\n  --solc-standard-json  Compile all specified targets in a single compilation\n                        using solc standard json\n  --solc-force-legacy-json\n                        Force the solc compiler to use the legacy json ast\n                        format over the compact json ast format\n\nTruffle options:\n  --truffle-ignore-compile\n                        Do not run truffle compile\n  --truffle-build-directory TRUFFLE_BUILD_DIRECTORY\n                        Use an alternative truffle build directory\n  --truffle-version TRUFFLE_VERSION\n                        Use a local Truffle version (with npx)\n  --truffle-overwrite-config\n                        Use a simplified version of truffle-config.js for\n                        compilation\n  --truffle-overwrite-version TRUFFLE_OVERWRITE_VERSION\n                        Overwrite solc version in truffle-config.js (only if\n                        --truffle-overwrite-config)\n\nEmbark options:\n  --embark-ignore-compile\n                        Do not run embark build\n  --embark-overwrite-config\n                        Install @trailofbits/embark-contract-export and add it\n                        to embark.json\n\nBrownie options:\n  --brownie-ignore-compile\n                        Do not run brownie compile\n\nDapp options:\n  --dapp-ignore-compile\n                        Do not run dapp build\n\nEtherlime options:\n  --etherlime-ignore-compile\n                        Do not run etherlime compile\n  --etherlime-compile-arguments\n                        Add arbitrary arguments to etherlime compile (note:\n                        [dir] is the the directory provided to crytic-compile)\n\nEtherscan options:\n  --etherscan-only-source-code\n                        Only compile if the source code is available.\n  --etherscan-only-bytecode\n                        Only looks for bytecode.\n  --etherscan-apikey ETHERSCAN_API_KEY\n                        Etherscan API key.\n  --avax-apikey AVAX_API_KEY\n                        Etherscan API key.\n  --etherscan-export-directory ETHERSCAN_EXPORT_DIR\n                        Directory in which to save the analyzed contracts.\n\nWaffle options:\n  --waffle-ignore-compile\n                        Do not run waffle compile\n  --waffle-config-file WAFFLE_CONFIG_FILE\n                        Provide a waffle config file\n\nNPX options:\n  --npx-disable         Do not use npx\n\nBuidler options:\n  --buidler-ignore-compile\n                        Do not run buidler compile\n  --buidler-cache-directory BUIDLER_CACHE_DIRECTORY\n                        Use an alternative buidler cache directory (default\n                        ./cache)\n  --buidler-skip-directory-name-fix\n                        Disable directory name fix (see\n                        https://github.com/crytic/crytic-compile/issues/116)\n\nHardhat options:\n  --hardhat-ignore-compile\n                        Do not run hardhat compile\n  --hardhat-cache-directory HARDHAT_CACHE_DIRECTORY\n                        Use an alternative hardhat cache directory (default\n                        ./cache)\n  --hardhat-artifacts-directory HARDHAT_ARTIFACTS_DIRECTORY\n                        Use an alternative hardhat artifacts directory\n                        (default ./artifacts)\n\nFoundry options:\n  --foundry-ignore-compile\n                        Do not run foundry compile\n  --foundry-out-directory FOUNDRY_OUT_DIRECTORY\n                        Use an alternative out directory (default: out)\n  --foundry-compile-all\n                        Don't skip compiling test and script\n\nDetectors:\n  --detect DETECTORS_TO_RUN\n                        Comma-separated list of detectors, defaults to all,\n                        available detectors: abiencoderv2-array, arbitrary-\n                        send-erc20, arbitrary-send-erc20-permit, arbitrary-\n                        send-eth, array-by-reference, controlled-array-length,\n                        assembly, assert-state-change, backdoor, weak-prng,\n                        boolean-cst, boolean-equal, shadowing-builtin, cache-\n                        array-length, chainlink-feed-registry, chronicle-\n                        unchecked-price, codex, constant-function-asm,\n                        constant-function-state, pragma, controlled-\n                        delegatecall, costly-loop, constable-states,\n                        immutable-states, cyclomatic-complexity, dead-code,\n                        delegatecall-loop, deprecated-standards, divide-\n                        before-multiply, domain-separator-collision, encode-\n                        packed-collision, enum-conversion, external-function,\n                        function-init-state, gelato-unprotected-randomness,\n                        erc20-interface, erc721-interface, incorrect-exp,\n                        incorrect-return, solc-version, incorrect-equality,\n                        incorrect-unary, incorrect-using-for, shadowing-local,\n                        locked-ether, low-level-calls, mapping-deletion,\n                        events-access, events-maths, missing-inheritance,\n                        missing-zero-check, incorrect-modifier, msg-value-\n                        loop, calls-loop, multiple-constructors, name-reused,\n                        naming-convention, optimism-deprecation, out-of-order-\n                        retryable, variable-scope, protected-vars, public-\n                        mappings-nested, pyth-deprecated-functions, pyth-\n                        unchecked-confidence, pyth-unchecked-publishtime,\n                        redundant-statements, reentrancy-benign, reentrancy-\n                        eth, reentrancy-events, reentrancy-unlimited-gas,\n                        reentrancy-no-eth, return-bomb, return-leave, reused-\n                        constructor, rtlo, shadowing-abstract, incorrect-\n                        shift, shadowing-state, storage-array, suicidal,\n                        tautological-compare, timestamp, too-many-digits, tx-\n                        origin, tautology, unchecked-lowlevel, unchecked-send,\n                        unchecked-transfer, unimplemented-functions,\n                        erc20-indexed, uninitialized-fptr-cst, uninitialized-\n                        local, uninitialized-state, uninitialized-storage,\n                        unprotected-upgrade, unused-return, unused-state, var-\n                        read-using-this, void-cst, write-after-write\n  --list-detectors      List available detectors\n  --exclude DETECTORS_TO_EXCLUDE\n                        Comma-separated list of detectors that should be\n                        excluded\n  --exclude-dependencies\n                        Exclude results that are only related to dependencies\n  --exclude-optimization\n                        Exclude optimization analyses\n  --exclude-informational\n                        Exclude informational impact analyses\n  --exclude-low         Exclude low impact analyses\n  --exclude-medium      Exclude medium impact analyses\n  --exclude-high        Exclude high impact analyses\n  --include-detectors DETECTORS_TO_INCLUDE\n                        Comma-separated list of detectors that should be\n                        included\n  --fail-pedantic       Fail if any findings are detected\n  --fail-low            Fail if any low or greater impact findings are\n                        detected\n  --fail-medium         Fail if any medium or greater impact findings are\n                        detected\n  --fail-high           Fail if any high impact findings are detected\n  --fail-none, --no-fail-pedantic\n                        Do not return the number of findings in the exit code\n  --show-ignored-findings\n                        Show all the findings\n\nPrinters:\n  --print PRINTERS_TO_RUN\n                        Comma-separated list of contract information printers,\n                        available printers: cfg, ck, cheatcode, constructor-\n                        calls, contract-summary, data-dependency, declaration,\n                        dominator, echidna, function-id, function-summary,\n                        halstead, loc, martin, modifiers, call-graph, evm,\n                        entry-points, human-summary, inheritance, inheritance-\n                        graph, slithir, slithir-ssa, not-pausable, vars-and-\n                        auth, require, variable-order\n  --include-interfaces  Include interfaces from inheritance-graph printer\n  --list-printers       List available printers\n\nChecklist (consider using https://github.com/crytic/slither-action):\n  --checklist           Generate a markdown page with the detector results\n  --checklist-limit CHECKLIST_LIMIT\n                        Limit the number of results per detector in the\n                        markdown file\n  --markdown-root MARKDOWN_ROOT\n                        URL for markdown generation\n\nAdditional options:\n  --json JSON           Export the results as a JSON file (\"--json -\" to\n                        export to stdout)\n  --sarif SARIF         Export the results as a SARIF JSON file (\"--sarif -\"\n                        to export to stdout)\n  --sarif-input SARIF_INPUT\n                        Sarif input (beta)\n  --sarif-triage SARIF_TRIAGE\n                        Sarif triage (beta)\n  --json-types JSON_TYPES\n                        Comma-separated list of result types to output to\n                        JSON, defaults to detectors,printers. Available types:\n                        compilations,console,detectors,printers,list-\n                        detectors,list-printers\n  --zip ZIP             Export the results as a zipped JSON file\n  --zip-type ZIP_TYPE   Zip compression type. One of\n                        lzma,stored,deflated,bzip2. Default lzma\n  --disable-color       Disable output colorization\n  --triage-mode         Run triage mode (save results in triage database)\n  --triage-database TRIAGE_DATABASE\n                        File path to the triage database (default:\n                        slither.db.json)\n  --config-file CONFIG_FILE\n                        Provide a config file (default: slither.config.json)\n  --change-line-prefix CHANGE_LINE_PREFIX\n                        Change the line prefix (default #) for the displayed\n                        source codes (i.e. file.sol#1).\n  --solc-ast            Provide the contract as a json AST\n  --generate-patches    Generate patches (json output only)\n  --no-fail             Do not fail in case of parsing (echidna mode only)\n\nCodex (https://beta.openai.com/docs/guides/code):\n  --codex               Enable codex (require an OpenAI API Key)\n  --codex-log           Log codex queries (in crytic_export/codex/)\n  --codex-contracts CODEX_CONTRACTS\n                        Comma separated list of contracts to submit to OpenAI\n                        Codex\n  --codex-model CODEX_MODEL\n                        Name of the Codex model to use (affects pricing).\n                        Defaults to 'text-davinci-003'\n  --codex-temperature CODEX_TEMPERATURE\n                        Temperature to use with Codex. Lower number indicates\n                        a more precise answer while higher numbers return more\n                        creative answers. Defaults to 0\n  --codex-max-tokens CODEX_MAX_TOKENS\n                        Maximum amount of tokens to use on the response. This\n                        number plus the size of the prompt can be no larger\n                        than the limit (4097 for text-davinci-003)\n  --codex-organization CODEX_ORGANIZATION\n                        Codex organization",
+      "description": "Specify the target for the Slither analysis."
+    }
+  ],
+  "options": [
+    {
+      "option": "--checklist",
+      "shortcut": null,
+      "description": "Generate a markdown page with the detector results",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--checklist-limit",
+      "shortcut": null,
+      "description": "Limit the number of results per detector in the markdown file",
+      "value": "CHECKLIST_LIMIT",
+      "default": null
+    },
+    {
+      "option": "--change-line-prefix",
+      "shortcut": null,
+      "description": "Change the line prefix (default #) for the displayed source codes (i.e. file.sol#1).",
+      "value": "CHANGE_LINE_PREFIX",
+      "default": "#"
+    },
+    {
+      "option": "--codex",
+      "shortcut": null,
+      "description": "Enable codex (require an OpenAI API Key)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--codex-log",
+      "shortcut": null,
+      "description": "Log codex queries (in crytic_export/codex/)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--codex-model",
+      "shortcut": null,
+      "description": "Name of the Codex model to use (affects pricing). Defaults to 'text-davinci-003'",
+      "value": "CODEX_MODEL",
+      "default": "text-davinci-003"
+    },
+    {
+      "option": "--codex-temperature",
+      "shortcut": null,
+      "description": "Temperature to use with Codex. Lower number indicates a more precise answer while higher numbers return more creative answers. Defaults to 0",
+      "value": "CODEX_TEMPERATURE",
+      "default": "0"
+    },
+    {
+      "option": "--codex-contracts",
+      "shortcut": null,
+      "description": "Comma separated list of contracts to submit to OpenAI Codex",
+      "value": "CODEX_CONTRACTS",
+      "default": null
+    },
+    {
+      "option": "--codex-organization",
+      "shortcut": null,
+      "description": "Codex organization",
+      "value": "CODEX_ORGANIZATION",
+      "default": null
+    },
+    {
+      "option": "--disable-color",
+      "shortcut": null,
+      "description": "Disable output colorization",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--embark-ignore-compile",
+      "shortcut": null,
+      "description": "Do not run embark build",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--embark-overwrite-config",
+      "shortcut": null,
+      "description": "Install @trailofbits/embark-contract-export and add it to embark.json",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude",
+      "shortcut": null,
+      "description": "Comma-separated list of detectors that should be excluded",
+      "value": "DETECTORS_TO_EXCLUDE",
+      "default": null
+    },
+    {
+      "option": "--exclude-dependencies",
+      "shortcut": null,
+      "description": "Exclude results that are only related to dependencies",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude-high",
+      "shortcut": null,
+      "description": "Exclude high impact analyses",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude-low",
+      "shortcut": null,
+      "description": "Exclude low impact analyses",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude-medium",
+      "shortcut": null,
+      "description": "Exclude medium impact analyses",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude-optimization",
+      "shortcut": null,
+      "description": "Exclude optimization analyses",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--exclude-informational",
+      "shortcut": null,
+      "description": "Exclude informational impact analyses",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--fail-high",
+      "shortcut": null,
+      "description": "Fail if any high impact findings are detected",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--fail-low",
+      "shortcut": null,
+      "description": "Fail if any low or greater impact findings are detected",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--fail-medium",
+      "shortcut": null,
+      "description": "Fail if any medium or greater impact findings are detected",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--fail-none",
+      "shortcut": "--no-fail-pedantic",
+      "description": "Do not return the number of findings in the exit code",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--filter-paths",
+      "shortcut": null,
+      "description": "Regex filter to exclude detector results matching file path e.g. (mocks/|test/)",
+      "value": "FILTER_PATHS",
+      "default": null
+    },
+    {
+      "option": "--include-detectors",
+      "shortcut": null,
+      "description": "Comma-separated list of detectors that should be included",
+      "value": "DETECTORS_TO_INCLUDE",
+      "default": null
+    },
+    {
+      "option": "--include-paths",
+      "shortcut": null,
+      "description": "Regex filter to include detector results matching file path e.g. (src/|contracts/). Opposite of --filter-paths",
+      "value": "INCLUDE_PATHS",
+      "default": null
+    },
+    {
+      "option": "--json",
+      "shortcut": null,
+      "description": "Export the results as a JSON file ('--json -' to export to stdout)",
+      "value": "JSON",
+      "default": null
+    },
+    {
+      "option": "--json-types",
+      "shortcut": null,
+      "description": "Comma-separated list of result types to output to JSON, defaults to detectors,printers. Available types: compilations,console,detectors,printers,list-detectors,list-printers",
+      "value": "JSON_TYPES",
+      "default": "detectors,printers"
+    },
+    {
+      "option": "--list-detectors",
+      "shortcut": null,
+      "description": "List available detectors",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--list-printers",
+      "shortcut": null,
+      "description": "List available printers",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--markdown-root",
+      "shortcut": null,
+      "description": "URL for markdown generation",
+      "value": "MARKDOWN_ROOT",
+      "default": null
+    },
+    {
+      "option": "--npx-disable",
+      "shortcut": null,
+      "description": "Do not use npx",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--sarif",
+      "shortcut": null,
+      "description": "Export the results as a SARIF JSON file ('--sarif -' to export to stdout)",
+      "value": "SARIF",
+      "default": null
+    },
+    {
+      "option": "--sarif-input",
+      "shortcut": null,
+      "description": "Sarif input (beta)",
+      "value": "SARIF_INPUT",
+      "default": null
+    },
+    {
+      "option": "--sarif-triage",
+      "shortcut": null,
+      "description": "Sarif triage (beta)",
+      "value": "SARIF_TRIAGE",
+      "default": null
+    },
+    {
+      "option": "--show-ignored-findings",
+      "shortcut": null,
+      "description": "Show all the findings",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--skip-clean",
+      "shortcut": null,
+      "description": "Do not attempt to clean before compiling with a platform",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--solc",
+      "shortcut": null,
+      "description": "solc path",
+      "value": "SOLC",
+      "default": null
+    },
+    {
+      "option": "--solc-args",
+      "shortcut": null,
+      "description": "Add custom solc arguments. Example: --solc-args \"--allow-path /tmp --evm-version byzantium\".",
+      "value": "SOLC_ARGS",
+      "default": null
+    },
+    {
+      "option": "--solc-disable-warnings",
+      "shortcut": null,
+      "description": "Disable solc warnings",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--solc-force-legacy-json",
+      "shortcut": null,
+      "description": "Force the solc compiler to use the legacy json ast format over the compact json ast format",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--solc-remaps",
+      "shortcut": null,
+      "description": "Add remapping",
+      "value": "SOLC_REMAPS",
+      "default": null
+    },
+    {
+      "option": "--solc-standard-json",
+      "shortcut": null,
+      "description": "Compile all specified targets in a single compilation using solc standard json",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--solc-working-dir",
+      "shortcut": null,
+      "description": "Change the default working directory",
+      "value": "SOLC_WORKING_DIR",
+      "default": null
+    },
+    {
+      "option": "--triage-database",
+      "shortcut": null,
+      "description": "File path to the triage database (default: slither.db.json)",
+      "value": "TRIAGE_DATABASE",
+      "default": "slither.db.json"
+    },
+    {
+      "option": "--triage-mode",
+      "shortcut": null,
+      "description": "Run triage mode (save results in triage database)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "displays the current version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--zip",
+      "shortcut": null,
+      "description": "Export the results as a zipped JSON file",
+      "value": "ZIP",
+      "default": null
+    },
+    {
+      "option": "--zip-type",
+      "shortcut": null,
+      "description": "Zip compression type. One of lzma,stored,deflated,bzip2. Default lzma",
+      "value": "ZIP_TYPE",
+      "default": "lzma"
+    }
+  ],
+  "name": "slither",
+  "raw_help_text": "usage: slither target [flag]\n\ntarget can be:\n\t- file.sol // a Solidity file\n\t- project_directory // a project directory. See https://github.com/crytic/crytic-compile/#crytic-compile for the supported platforms\n\t- 0x.. // a contract on mainnet\n\t- NETWORK:0x.. // a contract on a different network. Supported networks: mainne,sepoli,holesk,hood,bs,testnet.bs,pol,amoy.pol,bas,sepolia.bas,arb,nova.arb,sepolia.arb,line,sepolia.line,blas,sepolia.blas,opti,sepolia.opti,ava,testnet.ava,btt,testnet.btt,cel,sepolia.cel,fra,hoodi.fra,gn,mantl,sepolia.mantl,memecor,moonbea,moonrive,moonbas,opbn,testnet.opbn,scrol,sepolia.scrol,taik,hoodi.taik,era.zksyn,sepoliaera.zksyn,xd,testnet.xd,apechai,curtis.apechai,worl,sepolia.worl,sopho,testnet.sopho,soni,testnet.soni,unichai,sepolia.unichai,abstrac,sepolia.abstrac,berachai,testnet.berachai,swellchai,testnet.swellchai,testnet.mona,hyperev,katan,bokuto.katan,se,testnet.se\n\nFor usage information, see https://github.com/crytic/slither/wiki/Usage\n\noptions:\n  -h, --help            show this help message and exit\n  --version             displays the current version\n  --filter-paths FILTER_PATHS\n                        Regex filter to exclude detector results matching file\n                        path e.g. (mocks/|test/)\n  --include-paths INCLUDE_PATHS\n                        Regex filter to include detector results matching file\n                        path e.g. (src/|contracts/). Opposite of --filter-\n                        paths\n\nCompile options:\n  --compile-force-framework COMPILE_FORCE_FRAMEWORK\n                        Force the compile to a given framework (foundry,buidle\n                        r,hardhat,truffle,waffle,solc,embark,dapp,etherlime,et\n                        herscan,vyper,brownie,solc-json,standard,archive)\n  --compile-libraries COMPILE_LIBRARIES\n                        Libraries used for linking. Format: --compile-\n                        libraries \"(name1, 0x00),(name2, 0x02)\"\n  --compile-remove-metadata\n                        Remove the metadata from the bytecodes\n  --compile-custom-build COMPILE_CUSTOM_BUILD\n                        Replace platform specific build command\n  --ignore-compile      Do not run compile of any platform\n  --skip-clean          Do not attempt to clean before compiling with a\n                        platform\n\nSolc options:\n  --solc SOLC           solc path\n  --solc-remaps SOLC_REMAPS\n                        Add remapping\n  --solc-args SOLC_ARGS\n                        Add custom solc arguments. Example: --solc-args \"--\n                        allow-path /tmp --evm-version byzantium\".\n  --solc-disable-warnings\n                        Disable solc warnings\n  --solc-working-dir SOLC_WORKING_DIR\n                        Change the default working directory\n  --solc-solcs-select SOLC_SOLCS_SELECT\n                        Specify different solc version to try (env config).\n                        Depends on solc-select\n  --solc-solcs-bin SOLC_SOLCS_BIN\n                        Specify different solc version to try (path config).\n                        Example: --solc-solcs-bin solc-0.4.24,solc-0.5.3\n  --solc-standard-json  Compile all specified targets in a single compilation\n                        using solc standard json\n  --solc-force-legacy-json\n                        Force the solc compiler to use the legacy json ast\n                        format over the compact json ast format\n\nTruffle options:\n  --truffle-ignore-compile\n                        Do not run truffle compile\n  --truffle-build-directory TRUFFLE_BUILD_DIRECTORY\n                        Use an alternative truffle build directory\n  --truffle-version TRUFFLE_VERSION\n                        Use a local Truffle version (with npx)\n  --truffle-overwrite-config\n                        Use a simplified version of truffle-config.js for\n                        compilation\n  --truffle-overwrite-version TRUFFLE_OVERWRITE_VERSION\n                        Overwrite solc version in truffle-config.js (only if\n                        --truffle-overwrite-config)\n\nEmbark options:\n  --embark-ignore-compile\n                        Do not run embark build\n  --embark-overwrite-config\n                        Install @trailofbits/embark-contract-export and add it\n                        to embark.json\n\nBrownie options:\n  --brownie-ignore-compile\n                        Do not run brownie compile\n\nDapp options:\n  --dapp-ignore-compile\n                        Do not run dapp build\n\nEtherlime options:\n  --etherlime-ignore-compile\n                        Do not run etherlime compile\n  --etherlime-compile-arguments\n                        Add arbitrary arguments to etherlime compile (note:\n                        [dir] is the the directory provided to crytic-compile)\n\nEtherscan options:\n  --etherscan-only-source-code\n                        Only compile if the source code is available.\n  --etherscan-only-bytecode\n                        Only looks for bytecode.\n  --etherscan-apikey ETHERSCAN_API_KEY\n                        Etherscan API key.\n  --avax-apikey AVAX_API_KEY\n                        Etherscan API key.\n  --etherscan-export-directory ETHERSCAN_EXPORT_DIR\n                        Directory in which to save the analyzed contracts.\n\nWaffle options:\n  --waffle-ignore-compile\n                        Do not run waffle compile\n  --waffle-config-file WAFFLE_CONFIG_FILE\n                        Provide a waffle config file\n\nNPX options:\n  --npx-disable         Do not use npx\n\nBuidler options:\n  --buidler-ignore-compile\n                        Do not run buidler compile\n  --buidler-cache-directory BUIDLER_CACHE_DIRECTORY\n                        Use an alternative buidler cache directory (default\n                        ./cache)\n  --buidler-skip-directory-name-fix\n                        Disable directory name fix (see\n                        https://github.com/crytic/crytic-compile/issues/116)\n\nHardhat options:\n  --hardhat-ignore-compile\n                        Do not run hardhat compile\n  --hardhat-cache-directory HARDHAT_CACHE_DIRECTORY\n                        Use an alternative hardhat cache directory (default\n                        ./cache)\n  --hardhat-artifacts-directory HARDHAT_ARTIFACTS_DIRECTORY\n                        Use an alternative hardhat artifacts directory\n                        (default ./artifacts)\n\nFoundry options:\n  --foundry-ignore-compile\n                        Do not run foundry compile\n  --foundry-out-directory FOUNDRY_OUT_DIRECTORY\n                        Use an alternative out directory (default: out)\n  --foundry-compile-all\n                        Don't skip compiling test and script\n\nDetectors:\n  --detect DETECTORS_TO_RUN\n                        Comma-separated list of detectors, defaults to all,\n                        available detectors: abiencoderv2-array, arbitrary-\n                        send-erc20, arbitrary-send-erc20-permit, arbitrary-\n                        send-eth, array-by-reference, controlled-array-length,\n                        assembly, assert-state-change, backdoor, weak-prng,\n                        boolean-cst, boolean-equal, shadowing-builtin, cache-\n                        array-length, chainlink-feed-registry, chronicle-\n                        unchecked-price, codex, constant-function-asm,\n                        constant-function-state, pragma, controlled-\n                        delegatecall, costly-loop, constable-states,\n                        immutable-states, cyclomatic-complexity, dead-code,\n                        delegatecall-loop, deprecated-standards, divide-\n                        before-multiply, domain-separator-collision, encode-\n                        packed-collision, enum-conversion, external-function,\n                        function-init-state, gelato-unprotected-randomness,\n                        erc20-interface, erc721-interface, incorrect-exp,\n                        incorrect-return, solc-version, incorrect-equality,\n                        incorrect-unary, incorrect-using-for, shadowing-local,\n                        locked-ether, low-level-calls, mapping-deletion,\n                        events-access, events-maths, missing-inheritance,\n                        missing-zero-check, incorrect-modifier, msg-value-\n                        loop, calls-loop, multiple-constructors, name-reused,\n                        naming-convention, optimism-deprecation, out-of-order-\n                        retryable, variable-scope, protected-vars, public-\n                        mappings-nested, pyth-deprecated-functions, pyth-\n                        unchecked-confidence, pyth-unchecked-publishtime,\n                        redundant-statements, reentrancy-benign, reentrancy-\n                        eth, reentrancy-events, reentrancy-unlimited-gas,\n                        reentrancy-no-eth, return-bomb, return-leave, reused-\n                        constructor, rtlo, shadowing-abstract, incorrect-\n                        shift, shadowing-state, storage-array, suicidal,\n                        tautological-compare, timestamp, too-many-digits, tx-\n                        origin, tautology, unchecked-lowlevel, unchecked-send,\n                        unchecked-transfer, unimplemented-functions,\n                        erc20-indexed, uninitialized-fptr-cst, uninitialized-\n                        local, uninitialized-state, uninitialized-storage,\n                        unprotected-upgrade, unused-return, unused-state, var-\n                        read-using-this, void-cst, write-after-write\n  --list-detectors      List available detectors\n  --exclude DETECTORS_TO_EXCLUDE\n                        Comma-separated list of detectors that should be\n                        excluded\n  --exclude-dependencies\n                        Exclude results that are only related to dependencies\n  --exclude-optimization\n                        Exclude optimization analyses\n  --exclude-informational\n                        Exclude informational impact analyses\n  --exclude-low         Exclude low impact analyses\n  --exclude-medium      Exclude medium impact analyses\n  --exclude-high        Exclude high impact analyses\n  --include-detectors DETECTORS_TO_INCLUDE\n                        Comma-separated list of detectors that should be\n                        included\n  --fail-pedantic       Fail if any findings are detected\n  --fail-low            Fail if any low or greater impact findings are\n                        detected\n  --fail-medium         Fail if any medium or greater impact findings are\n                        detected\n  --fail-high           Fail if any high impact findings are detected\n  --fail-none, --no-fail-pedantic\n                        Do not return the number of findings in the exit code\n  --show-ignored-findings\n                        Show all the findings\n\nPrinters:\n  --print PRINTERS_TO_RUN\n                        Comma-separated list of contract information printers,\n                        available printers: cfg, ck, cheatcode, constructor-\n                        calls, contract-summary, data-dependency, declaration,\n                        dominator, echidna, function-id, function-summary,\n                        halstead, loc, martin, modifiers, call-graph, evm,\n                        entry-points, human-summary, inheritance, inheritance-\n                        graph, slithir, slithir-ssa, not-pausable, vars-and-\n                        auth, require, variable-order\n  --include-interfaces  Include interfaces from inheritance-graph printer\n  --list-printers       List available printers\n\nChecklist (consider using https://github.com/crytic/slither-action):\n  --checklist           Generate a markdown page with the detector results\n  --checklist-limit CHECKLIST_LIMIT\n                        Limit the number of results per detector in the\n                        markdown file\n  --markdown-root MARKDOWN_ROOT\n                        URL for markdown generation\n\nAdditional options:\n  --json JSON           Export the results as a JSON file (\"--json -\" to\n                        export to stdout)\n  --sarif SARIF         Export the results as a SARIF JSON file (\"--sarif -\"\n                        to export to stdout)\n  --sarif-input SARIF_INPUT\n                        Sarif input (beta)\n  --sarif-triage SARIF_TRIAGE\n                        Sarif triage (beta)\n  --json-types JSON_TYPES\n                        Comma-separated list of result types to output to\n                        JSON, defaults to detectors,printers. Available types:\n                        compilations,console,detectors,printers,list-\n                        detectors,list-printers\n  --zip ZIP             Export the results as a zipped JSON file\n  --zip-type ZIP_TYPE   Zip compression type. One of\n                        lzma,stored,deflated,bzip2. Default lzma\n  --disable-color       Disable output colorization\n  --triage-mode         Run triage mode (save results in triage database)\n  --triage-database TRIAGE_DATABASE\n                        File path to the triage database (default:\n                        slither.db.json)\n  --config-file CONFIG_FILE\n                        Provide a config file (default: slither.config.json)\n  --change-line-prefix CHANGE_LINE_PREFIX\n                        Change the line prefix (default #) for the displayed\n                        source codes (i.e. file.sol#1).\n  --solc-ast            Provide the contract as a json AST\n  --generate-patches    Generate patches (json output only)\n  --no-fail             Do not fail in case of parsing (echidna mode only)\n\nCodex (https://beta.openai.com/docs/guides/code):\n  --codex               Enable codex (require an OpenAI API Key)\n  --codex-log           Log codex queries (in crytic_export/codex/)\n  --codex-contracts CODEX_CONTRACTS\n                        Comma separated list of contracts to submit to OpenAI\n                        Codex\n  --codex-model CODEX_MODEL\n                        Name of the Codex model to use (affects pricing).\n                        Defaults to 'text-davinci-003'\n  --codex-temperature CODEX_TEMPERATURE\n                        Temperature to use with Codex. Lower number indicates\n                        a more precise answer while higher numbers return more\n                        creative answers. Defaults to 0\n  --codex-max-tokens CODEX_MAX_TOKENS\n                        Maximum amount of tokens to use on the response. This\n                        number plus the size of the prompt can be no larger\n                        than the limit (4097 for text-davinci-003)\n  --codex-organization CODEX_ORGANIZATION\n                        Codex organization",
+  "version": {
+    "number": "unknown",
+    "commit_sha": "unknown"
+  }
+}

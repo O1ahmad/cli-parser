@@ -1,0 +1,252 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "path to configuration file, defaults to first file found in precedence.",
+          "value": "CONFIG_FILE",
+          "default": null
+        },
+        {
+          "option": "--type",
+          "shortcut": "-t",
+          "description": "Filter down to a specific plugin type.",
+          "value": "{all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "default": null
+        },
+        {
+          "option": "--only-changed",
+          "shortcut": null,
+          "description": "Only show configurations that have changed from the default",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--format",
+          "shortcut": "-f",
+          "description": "Output format for dump",
+          "value": "{json,yaml,display}",
+          "default": null
+        }
+      ],
+      "name": "ansible-config dump",
+      "raw_help_text": "usage: ansible-config dump [-h] [-v] [-c CONFIG_FILE]\n                           [-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}]\n                           [--only-changed] [--format {json,yaml,display}]\n                           [args ...]\n\npositional arguments:\n  args                  Specific plugin to target, requires type of plugin to\n                        be set\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  -c CONFIG_FILE, --config CONFIG_FILE\n                        path to configuration file, defaults to first file\n                        found in precedence.\n  -t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}, --type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}\n                        Filter down to a specific plugin type.\n  --only-changed, --changed-only\n                        Only show configurations that have changed from the\n                        default\n  --format {json,yaml,display}, -f {json,yaml,display}\n                        Output format for dump",
+      "description": "Dump configuration"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--disabled",
+          "shortcut": null,
+          "description": "Prefixes all entries with a comment character to disable them.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--format",
+          "shortcut": "-f",
+          "description": "Output format for init.",
+          "value": "{ini,env,vars}",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--type",
+          "shortcut": "-t",
+          "description": "Filter down to a specific plugin type.",
+          "value": "{all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Path to configuration file, defaults to first file found in precedence.",
+          "value": "CONFIG_FILE",
+          "default": null
+        }
+      ],
+      "name": "ansible-config init",
+      "raw_help_text": "usage: ansible-config init [-h] [-v] [-c CONFIG_FILE]\n                           [-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}]\n                           [--format {ini,env,vars}] [--disabled]\n                           [args ...]\n\npositional arguments:\n  args                  Specific plugin to target, requires type of plugin to\n                        be set\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  -c CONFIG_FILE, --config CONFIG_FILE\n                        path to configuration file, defaults to first file\n                        found in precedence.\n  -t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}, --type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}\n                        Filter down to a specific plugin type.\n  --format {ini,env,vars}, -f {ini,env,vars}\n                        Output format for init\n  --disabled            Prefixes all entries with a comment character to\n                        disable them",
+      "description": "Create initial configuration"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "path to configuration file, defaults to first file found in precedence.",
+          "value": "CONFIG_FILE",
+          "default": null
+        },
+        {
+          "option": "--type",
+          "shortcut": "-t",
+          "description": "Filter down to a specific plugin type.",
+          "value": "{all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "default": null
+        },
+        {
+          "option": "--format",
+          "shortcut": "-f",
+          "description": "Output format for list",
+          "value": "{json,yaml}",
+          "default": null
+        }
+      ],
+      "name": "ansible-config list",
+      "raw_help_text": "usage: ansible-config list [-h] [-v] [-c CONFIG_FILE]\n                           [-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}]\n                           [--format {json,yaml}]\n                           [args ...]\n\npositional arguments:\n  args                  Specific plugin to target, requires type of plugin to\n                        be set\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  -c CONFIG_FILE, --config CONFIG_FILE\n                        path to configuration file, defaults to first file\n                        found in precedence.\n  -t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}, --type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}\n                        Filter down to a specific plugin type.\n  --format {json,yaml}, -f {json,yaml}\n                        Output format for list",
+      "description": "Print all config options"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "path to configuration file, defaults to first file found in precedence.",
+          "value": "CONFIG_FILE",
+          "default": null
+        },
+        {
+          "option": "--type",
+          "shortcut": "-t",
+          "description": "Filter down to a specific plugin type.",
+          "value": "{all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "default": null
+        },
+        {
+          "option": "--format",
+          "shortcut": "-f",
+          "description": "Output format for init",
+          "value": "{ini,env}",
+          "default": null
+        }
+      ],
+      "name": "ansible-config validate",
+      "raw_help_text": "usage: ansible-config validate [-h] [-v] [-c CONFIG_FILE]\n                               [-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}]\n                               [--format {ini,env}]\n                               [args ...]\n\npositional arguments:\n  args                  Specific plugin to target, requires type of plugin to\n                        be set\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  -c CONFIG_FILE, --config CONFIG_FILE\n                        path to configuration file, defaults to first file\n                        found in precedence.\n  -t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}, --type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}\n                        Filter down to a specific plugin type.\n  --format {ini,env}, -f {ini,env}\n                        Output format for init",
+      "description": "Validate the configuration file and environment variables."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config CONFIG_FILE",
+          "shortcut": "-c",
+          "description": "path to configuration file, defaults to first file found in precedence.",
+          "value": "CONFIG_FILE",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "shortcut": "-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "description": "Filter down to a specific plugin type.",
+          "value": "{all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}",
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-config view",
+      "raw_help_text": "usage: ansible-config view [-h] [-v] [-c CONFIG_FILE]\n                           [-t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}]\n                           [args ...]\n\npositional arguments:\n  args                  Specific plugin to target, requires type of plugin to\n                        be set\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  -c CONFIG_FILE, --config CONFIG_FILE\n                        path to configuration file, defaults to first file\n                        found in precedence.\n  -t {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}, --type {all,base,become,cache,callback,cliconf,connection,httpapi,inventory,lookup,netconf,shell,vars}\n                        Filter down to a specific plugin type.",
+      "description": "View configuration file"
+    }
+  ],
+  "options": [
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "show program's version number, config file location, configured module search path, module location, executable location and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "show this help message and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-v",
+      "shortcut": null,
+      "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "ansible-config",
+  "raw_help_text": "usage: ansible-config [-h] [--version] [-v] {list,dump,view,init,validate} ...\n\nView ansible configuration.\n\npositional arguments:\n  {list,dump,view,init,validate}\n    list                Print all config options\n    dump                Dump configuration\n    view                View configuration file\n    init                Create initial configuration\n    validate            Validate the configuration file and environment\n                        variables. By default it only checks the base settings\n                        without accounting for plugins (see -t).\n\noptions:\n  --version             show program's version number, config file location,\n                        configured module search path, module location,\n                        executable location and exit\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.",
+  "version": "core 2.18.6"
+}

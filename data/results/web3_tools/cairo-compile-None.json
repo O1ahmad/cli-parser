@@ -1,0 +1,44 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--single-file",
+      "shortcut": "-s",
+      "description": "Whether path is a single file",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--replace-ids",
+      "shortcut": "-r",
+      "description": "Replaces sierra ids with human-readable ones",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--inlining-strategy",
+      "shortcut": "-i",
+      "description": "Overrides inlining behavior",
+      "value": "<INLINING_STRATEGY>",
+      "default": "default"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Print help (see a summary with '-h')",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "description": "Compiles a Cairo project to Sierra.",
+  "name": "cairo-compile",
+  "raw_help_text": "Compiles a Cairo project to Sierra.\nExits with 0/1 if the compilation succeeds/fails.\n\nUsage: cairo-compile [OPTIONS] <PATH> [OUTPUT]\n\nArguments:\n  <PATH>\n          The Cairo project path\n\n  [OUTPUT]\n          The output file name (default: stdout)\n\nOptions:\n  -s, --single-file\n          Whether path is a single file\n\n  -r, --replace-ids\n          Replaces sierra ids with human-readable ones\n\n  -i, --inlining-strategy <INLINING_STRATEGY>\n          Overrides inlining behavior\n          \n          [default: default]\n\n          Possible values:\n          - default: Do not override inlining strategy\n          - avoid:   Inline only in the case of an `inline(always)` annotation\n\n  -h, --help\n          Print help (see a summary with '-h')\n\n  -V, --version\n          Print version",
+  "version": null
+}

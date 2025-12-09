@@ -1,0 +1,78 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--components",
+      "shortcut": null,
+      "description": "Comma-separated list of components to launch",
+      "value": "<COMPONENTS>",
+      "default": "api,tree,eth,state_keeper,housekeeper,commitment_generator,da_dispatcher,vm_runner_protective_reads"
+    },
+    {
+      "option": "--config-path",
+      "shortcut": null,
+      "description": "Path to the yaml config. If set, it will be used instead of env vars",
+      "value": "<CONFIG_PATH>",
+      "default": null
+    },
+    {
+      "option": "--gateway-contracts-config-path",
+      "shortcut": null,
+      "description": "Path to the yaml with gateway contracts. Note, that at this moment, env-based config is not supported for gateway-related functionality",
+      "value": "<GATEWAY_CONTRACTS_CONFIG_PATH>",
+      "default": null
+    },
+    {
+      "option": "--genesis",
+      "shortcut": null,
+      "description": "Generate genesis block for the first contract deployment using temporary DB",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--genesis-path",
+      "shortcut": null,
+      "description": "Path to the yaml with genesis. If set, it will be used instead of env vars",
+      "value": "<GENESIS_PATH>",
+      "default": null
+    },
+    {
+      "option": "--contracts-config-path",
+      "shortcut": null,
+      "description": "Path to the yaml with contracts. If set, it will be used instead of env vars",
+      "value": "<CONTRACTS_CONFIG_PATH>",
+      "default": null
+    },
+    {
+      "option": "--secrets-path",
+      "shortcut": null,
+      "description": "Path to the yaml with secrets. If set, it will be used instead of env vars",
+      "value": "<SECRETS_PATH>",
+      "default": null
+    },
+    {
+      "option": "--use-node-framework",
+      "shortcut": null,
+      "description": "Used to enable node framework. Now the node framework is used by default and this argument is left for backward compatibility",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "Print help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-V",
+      "shortcut": "--version",
+      "description": "Print version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "zksync_server",
+  "raw_help_text": "ZKsync operator node\n\nUsage: zksync_server [OPTIONS]\n\nOptions:\n      --genesis\n          Generate genesis block for the first contract deployment using temporary DB\n      --components <COMPONENTS>\n          Comma-separated list of components to launch [default: api,tree,eth,state_keeper,housekeeper,commitment_generator,da_dispatcher,vm_runner_protective_reads]\n      --config-path <CONFIG_PATH>\n          Path to the yaml config. If set, it will be used instead of env vars\n      --secrets-path <SECRETS_PATH>\n          Path to the yaml with secrets. If set, it will be used instead of env vars\n      --contracts-config-path <CONTRACTS_CONFIG_PATH>\n          Path to the yaml with contracts. If set, it will be used instead of env vars\n      --gateway-contracts-config-path <GATEWAY_CONTRACTS_CONFIG_PATH>\n          Path to the yaml with gateway contracts. Note, that at this moment, env-based config is not supported for gateway-related functionality\n      --wallets-path <WALLETS_PATH>\n          Path to the wallets config. If set, it will be used instead of env vars\n      --genesis-path <GENESIS_PATH>\n          Path to the yaml with genesis. If set, it will be used instead of env vars\n      --use-node-framework\n          Used to enable node framework. Now the node framework is used by default and this argument is left for backward compatibility\n  -h, --help\n          Print help\n  -V, --version\n          Print version",
+  "version": null
+}

@@ -1,0 +1,197 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--auth-file=<file>",
+      "shortcut": null,
+      "description": "(EXPERIMENTAL) enable ASCII protocol authentication. format: user:pass\\nuser2:pass2\\n",
+      "value": "<file>",
+      "default": null
+    },
+    {
+      "option": "--daemon",
+      "shortcut": "-d",
+      "description": "run as a daemon",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-cas",
+      "shortcut": "-C",
+      "description": "disable use of CAS",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-dumping",
+      "shortcut": "-X",
+      "description": "disable stats cachedump, stats detail, and lru_crawler metadump",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-flush-all",
+      "shortcut": "-F",
+      "description": "disable flush_all command",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-watch",
+      "shortcut": "-W",
+      "description": "disable watch commands (live logging)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--enable-largepages",
+      "shortcut": "-L",
+      "description": "try to use large memory pages (if available)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--enable-sasl",
+      "shortcut": "-S",
+      "description": "turn on Sasl authentication",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--enable-shutdown",
+      "shortcut": "-A",
+      "description": "enable ascii \"shutdown\" command",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--extended",
+      "shortcut": "-o",
+      "description": "comma separated list of extended options",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "print this help and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--license",
+      "shortcut": "-i",
+      "description": "print memcached and libevent license",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--max-reqs-per-event",
+      "shortcut": "-R",
+      "description": "maximum number of requests per event, limits the requests processed per connection to prevent starvation",
+      "value": null,
+      "default": "20"
+    },
+    {
+      "option": "--memory-file=<file>",
+      "shortcut": "-e",
+      "description": "(EXPERIMENTAL) mmap a file for item memory.",
+      "value": "<file>",
+      "default": null
+    },
+    {
+      "option": "--memory-limit=<num>",
+      "shortcut": "-m",
+      "description": "item memory in megabytes",
+      "value": "<num>",
+      "default": "64"
+    },
+    {
+      "option": "--napi_ids",
+      "shortcut": "-N",
+      "description": "number of napi ids. see doc/napi_ids.txt for more details",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--pidfile=<file>",
+      "shortcut": "-P",
+      "description": "save PID in <file>, only used with -d option",
+      "value": "<file>",
+      "default": null
+    },
+    {
+      "option": "--port=<num>",
+      "shortcut": "-p",
+      "description": "TCP port to listen on",
+      "value": "<num>",
+      "default": "11211"
+    },
+    {
+      "option": "--protocol=<name>",
+      "shortcut": "-B",
+      "description": "protocol - one of ascii, binary, or auto",
+      "value": "<name>",
+      "default": "auto-negotiate"
+    },
+    {
+      "option": "--slab-growth-factor=<num>",
+      "shortcut": "-f",
+      "description": "chunk size growth factor",
+      "value": "<num>",
+      "default": "1.25"
+    },
+    {
+      "option": "--slab-min-size=<bytes>",
+      "shortcut": "-n",
+      "description": "min space used for key+value+flags",
+      "value": "<bytes>",
+      "default": "48"
+    },
+    {
+      "option": "--threads=<num>",
+      "shortcut": "-t",
+      "description": "number of threads to use",
+      "value": "<num>",
+      "default": "4"
+    },
+    {
+      "option": "--udp-port=<num>",
+      "shortcut": "-U",
+      "description": "UDP port to listen on",
+      "value": "<num>",
+      "default": "0, off"
+    },
+    {
+      "option": "--unix-mask=<mask>",
+      "shortcut": "-a",
+      "description": "access mask for UNIX socket, in octal",
+      "value": "<mask>",
+      "default": "700"
+    },
+    {
+      "option": "--unix-socket=<file>",
+      "shortcut": "-s",
+      "description": "UNIX socket to listen on (disables network support)",
+      "value": "<file>",
+      "default": null
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "verbose (print errors/warnings while in event loop)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "print version and exit",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "memcached",
+  "raw_help_text": "memcached 1.6.39\n-p, --port=<num>          TCP port to listen on (default: 11211)\n-U, --udp-port=<num>      UDP port to listen on (default: 0, off)\n-s, --unix-socket=<file>  UNIX socket to listen on (disables network support)\n-a, --unix-mask=<mask>    access mask for UNIX socket, in octal (default: 700)\n-A, --enable-shutdown     enable ascii \"shutdown\" command\n-l, --listen=<addr>       interface to listen on (default: INADDR_ANY)\n                          if TLS/SSL is enabled, 'notls' prefix can be used to\n                          disable for specific listeners (-l notls:<ip>:<port>) \n-d, --daemon              run as a daemon\n-r, --enable-coredumps    maximize core file limit\n-u, --user=<user>         assume identity of <username> (only when run as root)\n-m, --memory-limit=<num>  item memory in megabytes (default: 64)\n-M, --disable-evictions   return error on memory exhausted instead of evicting\n-c, --conn-limit=<num>    max simultaneous connections (default: 1024)\n-k, --lock-memory         lock down all paged memory\n-v, --verbose             verbose (print errors/warnings while in event loop)\n-vv                       very verbose (also print client commands/responses)\n-vvv                      extremely verbose (internal state transitions)\n-h, --help                print this help and exit\n-i, --license             print memcached and libevent license\n-V, --version             print version and exit\n-P, --pidfile=<file>      save PID in <file>, only used with -d option\n-f, --slab-growth-factor=<num> chunk size growth factor (default: 1.25)\n-n, --slab-min-size=<bytes> min space used for key+value+flags (default: 48)\n-L, --enable-largepages  try to use large memory pages (if available)\n-D <char>     Use <char> as the delimiter between key prefixes and IDs.\n              This is used for per-prefix stats reporting. The default is\n              \":\" (colon). If this option is specified, stats collection\n              is turned on automatically; if not, then it may be turned on\n              by sending the \"stats detail on\" command to the server.\n-t, --threads=<num>       number of threads to use (default: 4)\n-R, --max-reqs-per-event  maximum number of requests per event, limits the\n                          requests processed per connection to prevent \n                          starvation (default: 20)\n-C, --disable-cas         disable use of CAS\n-b, --listen-backlog=<num> set the backlog queue limit (default: 1024)\n-B, --protocol=<name>     protocol - one of ascii, binary, or auto (default: auto-negotiate)\n-I, --max-item-size=<num> adjusts max item size\n                          (default: 1m, min: 1k, max: 1024m)\n-S, --enable-sasl         turn on Sasl authentication\n-F, --disable-flush-all   disable flush_all command\n-X, --disable-dumping     disable stats cachedump, stats detail, and lru_crawler metadump\n-W  --disable-watch       disable watch commands (live logging)\n-Y, --auth-file=<file>    (EXPERIMENTAL) enable ASCII protocol authentication. format:\n                          user:pass\\nuser2:pass2\\n\n-e, --memory-file=<file>  (EXPERIMENTAL) mmap a file for item memory.\n                          use only in ram disks or persistent memory mounts!\n                          enables restartable cache (stop with SIGUSR1)\n-Z, --enable-ssl          enable TLS/SSL\n-o, --extended            comma separated list of extended options\n                          most options have a 'no_' prefix to disable\n   - maxconns_fast:       immediately close new connections after limit (default: enabled)\n   - hashpower:           an integer multiplier for how large the hash\n                          table should be. normally grows at runtime. (default starts at: 0)\n                          set based on \"STAT hash_power_level\"\n   - tail_repair_time:    time in seconds for how long to wait before\n                          forcefully killing LRU tail item.\n                          disabled by default; very dangerous option.\n   - hash_algorithm:      the hash table algorithm\n                          default is murmur3 hash. options: jenkins, murmur3, xxh3\n   - no_lru_crawler:      disable LRU Crawler background thread.\n   - lru_crawler_sleep:   microseconds to sleep between items\n                          default is 100.\n   - lru_crawler_tocrawl: max items to crawl per slab per run\n                          default is 0 (unlimited)\n   - read_buf_mem_limit:  limit in megabytes for connection read/response buffers.\n                          do not adjust unless you have high (20k+) conn. limits.\n                          0 means unlimited (default: 0)\n   - no_lru_maintainer:   disable new LRU system + background thread.\n   - hot_lru_pct:         pct of slab memory to reserve for hot lru.\n                          (requires lru_maintainer, default pct: 20)\n   - warm_lru_pct:        pct of slab memory to reserve for warm lru.\n                          (requires lru_maintainer, default pct: 40)\n   - hot_max_factor:      items idle > cold lru age * drop from hot lru. (default: 0.20)\n   - warm_max_factor:     items idle > cold lru age * this drop from warm. (default: 2.00)\n   - temporary_ttl:       TTL's below get separate LRU, can't be evicted.\n                          (requires lru_maintainer, default: 61)\n   - idle_timeout:        timeout for idle connections. (default: 0, no timeout)\n   - slab_chunk_max:      (EXPERIMENTAL) maximum slab size in kilobytes. use extreme care. (default: 512)\n   - watcher_logbuf_size: size in kilobytes of per-watcher write buffer. (default: 256)\n   - worker_logbuf_size:  size in kilobytes of per-worker-thread buffer\n                          read by background thread, then written to watchers. (default: 64)\n   - track_sizes:         enable dynamic reports for 'stats sizes' command.\n                          note that counts for each size are approximate.\n   - no_hashexpand:       disables hash table expansion (dangerous)\n   - modern:              enables options which will be default in future.\n                          currently: nothing\n   - no_modern:           uses defaults of previous major version (1.4.x)\n   - sock_cookie_id:      attributes an ID to a socket for ip filtering/firewalls \n\n   - External storage (ext_*) related options (see: https://memcached.org/extstore)\n   - ext_path:            file to write to for external storage.\n                          ie: ext_path=/mnt/d1/extstore:1G\n   - ext_page_size:       size in megabytes of storage pages. (default: 64)\n   - ext_wbuf_size:       size in megabytes of page write buffers. (default: 4)\n   - ext_threads:         number of IO threads to run. (default: 1)\n   - ext_item_size:       store items larger than this (bytes, default 512)\n   - ext_item_age:        store items idle at least this long (seconds, default: no age limit)\n   - ext_low_ttl:         consider TTLs lower than this specially (default: 0)\n   - ext_drop_unread:     don't re-write unread values during compaction (default: disabled)\n   - ext_recache_rate:    recache an item every N accesses (default: 2000)\n   - ext_compact_under:   compact when fewer than this many free pages\n                          (default: 1 percent of the assigned storage)\n   - ext_drop_under:      drop COLD items when fewer than this many free pages\n                          (default: 1/4th of the assigned storage)\n   - ext_max_frag:        only defrag pages if they are less full than this pct-wise (default: 0.80)\n   - ext_max_sleep:       max sleep time of background threads in us (default: 1000000)\n   - slab_automove_freeratio: ratio of memory to hold free as buffer.\n                          (see doc/storage.txt for more info, default: 0.010)\n   - proxy_config:        path to lua library file. separate with ':' for multiple files\n                          use proxy_config=routelib to use built-in library\n                          see https://memcached.org/proxy for information\n   - proxy_arg:           argument string (file path) to pass to proxy config\n   - ssl_chain_cert:      certificate chain file in PEM format\n   - ssl_key:             private key, if not part of the -ssl_chain_cert\n   - ssl_keyformat:       private key format (PEM, DER or ENGINE) (default: PEM)\n   - ssl_verify_mode:     peer certificate verification mode, default is 0(None).\n                          valid values are 0(None), 1(Request), 2(Require)\n                          or 3(Once)\n   - ssl_ciphers:         specify cipher list to be used\n   - ssl_ca_cert:         PEM format file of acceptable client CA's\n   - ssl_wbuf_size:       size in kilobytes of per-connection SSL output buffer\n                          (default: 16)\n   - ssl_session_cache:   enable server-side SSL session cache, to support session\n                          resumption\n   - ssl_kernel_tls:      enable kernel TLS offload\n   - ssl_min_version:     minimum protocol version to accept (default: tlsv1.2)\n                          valid values are 0(tlsv1.0), 1(tlsv1.1), 2(tlsv1.2), or 3(tlsv1.3).\n-N, --napi_ids            number of napi ids. see doc/napi_ids.txt for more details",
+  "version": "1.6.39"
+}

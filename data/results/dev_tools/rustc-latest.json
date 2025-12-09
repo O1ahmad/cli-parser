@@ -1,0 +1,198 @@
+{
+  "description": "The Rust compiler.",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--allow",
+      "shortcut": "-A",
+      "description": "Set lint allowed",
+      "value": "<LINT>",
+      "default": null
+    },
+    {
+      "option": "--cap-lints",
+      "shortcut": null,
+      "description": "Set the most restrictive lint level. More restrictive lints are capped at this level",
+      "value": "<LEVEL>",
+      "default": null
+    },
+    {
+      "option": "--check-cfg",
+      "shortcut": null,
+      "description": "Provide list of expected cfgs for checking",
+      "value": "<SPEC>",
+      "default": null
+    },
+    {
+      "option": "--cfg",
+      "shortcut": null,
+      "description": "Configure the compilation environment. SPEC supports the syntax `<NAME>[=\"<VALUE>\"]`.",
+      "value": "<SPEC>",
+      "default": null
+    },
+    {
+      "option": "--codegen",
+      "shortcut": "-C",
+      "description": "Set a codegen option",
+      "value": "<OPT>[=<VALUE>]",
+      "default": null
+    },
+    {
+      "option": "--crate-name",
+      "shortcut": null,
+      "description": "Specify the name of the crate being built",
+      "value": "<NAME>",
+      "default": null
+    },
+    {
+      "option": "--crate-type",
+      "shortcut": null,
+      "description": "Comma separated list of types of crates for the compiler to emit",
+      "value": "<bin|lib|rlib|dylib|cdylib|staticlib|proc-macro>",
+      "default": null
+    },
+    {
+      "option": "--edition",
+      "shortcut": null,
+      "description": "Specify which edition of the compiler to use when compiling code. The default is 2015 and the latest stable edition is 2024.",
+      "value": "<2015|2018|2021|2024|future>",
+      "default": "2015"
+    },
+    {
+      "option": "--emit",
+      "shortcut": null,
+      "description": "Comma separated list of types of output for the compiler to emit.",
+      "value": "<TYPE>[=<FILE>]",
+      "default": null
+    },
+    {
+      "option": "--explain",
+      "shortcut": null,
+      "description": "Provide a detailed explanation of an error message",
+      "value": "<OPT>",
+      "default": null
+    },
+    {
+      "option": "--force-warn",
+      "shortcut": null,
+      "description": "Set lint force-warn",
+      "value": "<LINT>",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Display this message",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--out-dir",
+      "shortcut": null,
+      "description": "Write output to compiler-chosen filename in DIR",
+      "value": "<DIR>",
+      "default": null
+    },
+    {
+      "option": "--print",
+      "shortcut": null,
+      "description": "Compiler information to print on stdout (or to a file)",
+      "value": "<INFO>[=<FILE>]",
+      "default": null
+    },
+    {
+      "option": "--target",
+      "shortcut": null,
+      "description": "Target triple for which the code is compiled",
+      "value": "<TARGET>",
+      "default": null
+    },
+    {
+      "option": "--test",
+      "shortcut": null,
+      "description": "Build a test harness",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "Use verbose output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version info and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-C",
+      "shortcut": null,
+      "description": "Set a codegen option",
+      "value": "<OPT>[=<VALUE>]",
+      "default": null
+    },
+    {
+      "option": "-D",
+      "shortcut": "--deny",
+      "description": "Set lint denied",
+      "value": "<LINT>",
+      "default": null
+    },
+    {
+      "option": "-F",
+      "shortcut": "--forbid",
+      "description": "Set lint forbidden",
+      "value": "<LINT>",
+      "default": null
+    },
+    {
+      "option": "-g",
+      "shortcut": null,
+      "description": "Equivalent to -C debuginfo=2",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-L",
+      "shortcut": null,
+      "description": "Add a directory to the library search path. The optional KIND can be one of <dependency|crate|native|framework|all> (default: all).",
+      "value": "[<KIND>=]<PATH>",
+      "default": null
+    },
+    {
+      "option": "-l",
+      "shortcut": null,
+      "description": "Link the generated crate(s) to the specified native library NAME. The optional KIND can be one of <static|framework|dylib> (default: dylib).",
+      "value": "[<KIND>[:<MODIFIERS>]=]<NAME>[:<RENAME>]",
+      "default": null
+    },
+    {
+      "option": "-O",
+      "shortcut": null,
+      "description": "Equivalent to -C opt-level=3",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-v",
+      "shortcut": "--verbose",
+      "description": "Use verbose output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-W",
+      "shortcut": "--warn",
+      "description": "Set lint warnings",
+      "value": "<LINT>",
+      "default": null
+    }
+  ],
+  "name": "rustc",
+  "raw_help_text": "Usage: rustc [OPTIONS] INPUT\n\nOptions:\n    -h, --help          Display this message\n        --cfg <SPEC>    Configure the compilation environment.\n                        SPEC supports the syntax `<NAME>[=\"<VALUE>\"]`.\n        --check-cfg <SPEC>\n                        Provide list of expected cfgs for checking\n    -L [<KIND>=]<PATH>  Add a directory to the library search path. The\n                        optional KIND can be one of\n                        <dependency|crate|native|framework|all> (default:\n                        all).\n    -l [<KIND>[:<MODIFIERS>]=]<NAME>[:<RENAME>]\n                        Link the generated crate(s) to the specified native\n                        library NAME. The optional KIND can be one of\n                        <static|framework|dylib> (default: dylib).\n                        Optional comma separated MODIFIERS\n                        <bundle|verbatim|whole-archive|as-needed>\n                        may be specified each with a prefix of either '+' to\n                        enable or '-' to disable.\n        --crate-type <bin|lib|rlib|dylib|cdylib|staticlib|proc-macro>\n                        Comma separated list of types of crates\n                        for the compiler to emit\n        --crate-name <NAME>\n                        Specify the name of the crate being built\n        --edition <2015|2018|2021|2024|future>\n                        Specify which edition of the compiler to use when\n                        compiling code. The default is 2015 and the latest\n                        stable edition is 2024.\n        --emit <TYPE>[=<FILE>]\n                        Comma separated list of types of output for the\n                        compiler to emit.\n                        Each TYPE has the default FILE name:\n                        * asm - CRATE_NAME.s\n                        * llvm-bc - CRATE_NAME.bc\n                        * dep-info - CRATE_NAME.d\n                        * link - (platform and crate-type dependent)\n                        * llvm-ir - CRATE_NAME.ll\n                        * metadata - libCRATE_NAME.rmeta\n                        * mir - CRATE_NAME.mir\n                        * obj - CRATE_NAME.o\n                        * thin-link-bitcode - CRATE_NAME.indexing.o\n        --print <INFO>[=<FILE>]\n                        Compiler information to print on stdout (or to a file)\n                        INFO may be one of\n                        <all-target-specs-json|calling-conventions|cfg|check-cfg|code-models|crate-name|crate-root-lint-levels|deployment-target|file-names|host-tuple|link-args|native-static-libs|relocation-models|split-debuginfo|stack-protector-strategies|supported-crate-types|sysroot|target-cpus|target-features|target-libdir|target-list|target-spec-json|target-spec-json-schema|tls-models>.\n    -g                  Equivalent to -C debuginfo=2\n    -O                  Equivalent to -C opt-level=3\n    -o <FILENAME>       Write output to FILENAME\n        --out-dir <DIR> Write output to compiler-chosen filename in DIR\n        --explain <OPT> Provide a detailed explanation of an error message\n        --test          Build a test harness\n        --target <TARGET>\n                        Target triple for which the code is compiled\n    -A, --allow <LINT>  Set lint allowed\n    -W, --warn <LINT>   Set lint warnings\n        --force-warn <LINT>\n                        Set lint force-warn\n    -D, --deny <LINT>   Set lint denied\n    -F, --forbid <LINT> Set lint forbidden\n        --cap-lints <LEVEL>\n                        Set the most restrictive lint level. More restrictive\n                        lints are capped at this level\n    -C, --codegen <OPT>[=<VALUE>]\n                        Set a codegen option\n    -V, --version       Print version info and exit\n    -v, --verbose       Use verbose output\n\nAdditional help:\n    -C help             Print codegen options\n    -W help             Print 'lint' options and default settings\n    --help -v           Print the full set of options rustc accepts",
+  "version": "1.91.1"
+}

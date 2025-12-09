@@ -1,0 +1,2298 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--anchor",
+              "shortcut": null,
+              "description": "create anchor links",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "-c",
+              "shortcut": "--config",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--default",
+              "shortcut": null,
+              "description": "show Default column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--indent",
+              "shortcut": null,
+              "description": "indention level of AsciiDoc sections [1, 2, 3, 4, 5]",
+              "value": "int",
+              "default": "2"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--required",
+              "shortcut": null,
+              "description": "show Required column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sensitive",
+              "shortcut": null,
+              "description": "show Sensitive column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--type",
+              "shortcut": null,
+              "description": "show Type column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "-h",
+              "shortcut": "--help",
+              "description": "help for document",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [
+            "document",
+            "doc"
+          ],
+          "name": "terraform-docs asciidoc document",
+          "raw_help_text": "Generate AsciiDoc document of inputs and outputs\n\nUsage:\n  terraform-docs asciidoc document [PATH] [flags]\n\nAliases:\n  document, doc\n\nFlags:\n  -h, --help   help for document\n\nGlobal Flags:\n      --anchor                      create anchor links (default true)\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --default                     show Default column or section (default true)\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --indent int                  indention level of AsciiDoc sections [1, 2, 3, 4, 5] (default 2)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --required                    show Required column or section (default true)\n      --sensitive                   show Sensitive column or section (default true)\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n      --type                        show Type column or section (default true)",
+          "description": "Generate AsciiDoc document of inputs and outputs"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--anchor",
+              "shortcut": null,
+              "description": "create anchor links",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--default",
+              "shortcut": null,
+              "description": "show Default column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--indent",
+              "shortcut": null,
+              "description": "indention level of AsciiDoc sections [1, 2, 3, 4, 5]",
+              "value": "int",
+              "default": "2"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--required",
+              "shortcut": null,
+              "description": "show Required column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sensitive",
+              "shortcut": null,
+              "description": "show Sensitive column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--type",
+              "shortcut": null,
+              "description": "show Type column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "-h",
+              "shortcut": "--help",
+              "description": "help for table",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [
+            "tbl"
+          ],
+          "name": "terraform-docs asciidoc table",
+          "raw_help_text": "Generate AsciiDoc tables of inputs and outputs\n\nUsage:\n  terraform-docs asciidoc table [PATH] [flags]\n\nAliases:\n  table, tbl\n\nFlags:\n  -h, --help   help for table\n\nGlobal Flags:\n      --anchor                      create anchor links (default true)\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --default                     show Default column or section (default true)\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --indent int                  indention level of AsciiDoc sections [1, 2, 3, 4, 5] (default 2)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --required                    show Required column or section (default true)\n      --sensitive                   show Sensitive column or section (default true)\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n      --type                        show Type column or section (default true)",
+          "description": "Generate AsciiDoc tables of inputs and outputs"
+        }
+      ],
+      "options": [
+        {
+          "option": "--anchor",
+          "shortcut": null,
+          "description": "create anchor links",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--default",
+          "shortcut": null,
+          "description": "show Default column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for asciidoc",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--indent",
+          "shortcut": null,
+          "description": "indention level of AsciiDoc sections",
+          "value": "[1, 2, 3, 4, 5]",
+          "default": "2"
+        },
+        {
+          "option": "--required",
+          "shortcut": null,
+          "description": "show Required column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sensitive",
+          "shortcut": null,
+          "description": "show Sensitive column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--type",
+          "shortcut": null,
+          "description": "show Type column or section",
+          "value": null,
+          "default": "true"
+        }
+      ],
+      "aliases": [
+        "adoc"
+      ],
+      "name": "terraform-docs asciidoc",
+      "raw_help_text": "Generate AsciiDoc of inputs and outputs\n\nUsage:\n  terraform-docs asciidoc [PATH] [flags]\n  terraform-docs asciidoc [command]\n\nAliases:\n  asciidoc, adoc\n\nAvailable Commands:\n  document    Generate AsciiDoc document of inputs and outputs\n  table       Generate AsciiDoc tables of inputs and outputs\n\nFlags:\n      --anchor       create anchor links (default true)\n      --default      show Default column or section (default true)\n  -h, --help         help for asciidoc\n      --indent int   indention level of AsciiDoc sections [1, 2, 3, 4, 5] (default 2)\n      --required     show Required column or section (default true)\n      --sensitive    show Sensitive column or section (default true)\n      --type         show Type column or section (default true)\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n\nUse \"terraform-docs asciidoc [command] --help\" for more information about a command.",
+      "description": "Generate AsciiDoc of inputs and outputs"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--footer-from",
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": ""
+            },
+            {
+              "option": "--hide-all",
+              "description": "hide all sections",
+              "value": "",
+              "default": "false"
+            },
+            {
+              "option": "--output-file",
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "description": "inject output values into outputs",
+              "value": "",
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--show",
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": ""
+            },
+            {
+              "option": "--show-all",
+              "description": "show all sections",
+              "value": "",
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "description": "sort items",
+              "value": "",
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "description": "sort items by name and print required ones first",
+              "value": "",
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "description": "sort items by type of them",
+              "value": "",
+              "default": "false"
+            }
+          ],
+          "aliases": [],
+          "name": "terraform-docs completion bash",
+          "raw_help_text": "Generate shell completion for bash\n\nUsage:\n  terraform-docs completion bash [flags]\n\nFlags:\n  -h, --help   help for bash\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+          "description": "Generate shell completion for bash"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for zsh",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "terraform-docs completion zsh",
+          "raw_help_text": "Generate shel completion for zsh\n\nUsage:\n  terraform-docs completion zsh [flags]\n\nFlags:\n  -h, --help   help for zsh\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+          "description": "Generate shell completion for zsh"
+        }
+      ],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--hide-all",
+          "description": "hide all sections",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "description": "inject output values into outputs",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--show-all",
+          "description": "show all sections",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "description": "sort items",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "description": "sort items by name and print required ones first",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "description": "sort items by type of them",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for completion",
+          "value": "",
+          "default": ""
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs completion",
+      "raw_help_text": "Outputs terraform-doc shell completion for the given shell (bash or zsh)\nThis depends on the bash-completion binary.  Example installation instructions:\n# for bash users\n\t$ terraform-doc completion bash > ~/.terraform-doc-completion\n\t$ source ~/.terraform-doc-completion\n\n# for zsh users\n\t% terraform-doc completion zsh > /usr/local/share/zsh/site-functions/_terraform-doc\n\t% autoload -U compinit && compinit\n# or if zsh-completion is installed via homebrew\n    % terraform-doc completion zsh > \"${fpath[1]}/_terraform-doc\"\n\nAdditionally, you may want to output the completion to a file and source in your .bashrc\nNote for zsh users: [1] zsh completions are only supported in versions of zsh >= 5.2\n\nUsage:\n  terraform-docs completion [command]\n\nAvailable Commands:\n  bash        Generate shell completion for bash\n  zsh         Generate shel completion for zsh\n\nFlags:\n  -h, --help   help for completion\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n\nUse \"terraform-docs completion [command] --help\" for more information about a command.",
+      "description": "Generate shell completion code for the specified shell (bash or zsh)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--escape",
+          "shortcut": null,
+          "description": "escape special characters",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "-h, --help",
+          "shortcut": "-h",
+          "description": "help for json",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-c, --config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "shortcut": null,
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "shortcut": null,
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "shortcut": null,
+          "description": "hide section",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--hide-all",
+          "shortcut": null,
+          "description": "hide all sections",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "shortcut": null,
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "shortcut": null,
+          "description": "Output to file method",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "shortcut": null,
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "shortcut": null,
+          "description": "inject output values into outputs",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "shortcut": null,
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "shortcut": null,
+          "description": "show section",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--show-all",
+          "shortcut": null,
+          "description": "show all sections",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "shortcut": null,
+          "description": "sort items",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "shortcut": null,
+          "description": "sort items by name and print required ones first",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "shortcut": null,
+          "description": "sort items by type of them",
+          "value": null,
+          "default": "false"
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs json",
+      "raw_help_text": "Generate JSON of inputs and outputs\n\nUsage:\n  terraform-docs json [PATH] [flags]\n\nFlags:\n      --escape   escape special characters (default true)\n  -h, --help     help for json\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Generate JSON of inputs and outputs"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--anchor",
+              "shortcut": null,
+              "description": "create anchor links",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--default",
+              "shortcut": null,
+              "description": "show Default column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--escape",
+              "shortcut": null,
+              "description": "escape special characters",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--indent",
+              "shortcut": null,
+              "description": "indention level of Markdown sections [1, 2, 3, 4, 5]",
+              "value": "int",
+              "default": "2"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--required",
+              "shortcut": null,
+              "description": "show Required column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sensitive",
+              "shortcut": null,
+              "description": "show Sensitive column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--type",
+              "shortcut": null,
+              "description": "show Type column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "-h",
+              "shortcut": null,
+              "description": "help for document",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [
+            "document",
+            "doc"
+          ],
+          "name": "terraform-docs markdown document",
+          "raw_help_text": "Generate Markdown document of inputs and outputs\n\nUsage:\n  terraform-docs markdown document [PATH] [flags]\n\nAliases:\n  document, doc\n\nFlags:\n  -h, --help   help for document\n\nGlobal Flags:\n      --anchor                      create anchor links (default true)\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --default                     show Default column or section (default true)\n      --escape                      escape special characters (default true)\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --indent int                  indention level of Markdown sections [1, 2, 3, 4, 5] (default 2)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --required                    show Required column or section (default true)\n      --sensitive                   show Sensitive column or section (default true)\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n      --type                        show Type column or section (default true)",
+          "description": "Generate Markdown document of inputs and outputs"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--anchor",
+              "shortcut": null,
+              "description": "create anchor links",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--default",
+              "shortcut": null,
+              "description": "show Default column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--escape",
+              "shortcut": null,
+              "description": "escape special characters",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--indent",
+              "shortcut": null,
+              "description": "indention level of Markdown sections [1, 2, 3, 4, 5]",
+              "value": "int",
+              "default": "2"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--required",
+              "shortcut": null,
+              "description": "show Required column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sensitive",
+              "shortcut": null,
+              "description": "show Sensitive column or section",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--type",
+              "shortcut": null,
+              "description": "show Type column or section",
+              "value": null,
+              "default": "true"
+            }
+          ],
+          "aliases": [
+            "table",
+            "tbl"
+          ],
+          "name": "terraform-docs markdown table",
+          "raw_help_text": "Generate Markdown tables of inputs and outputs\n\nUsage:\n  terraform-docs markdown table [PATH] [flags]\n\nAliases:\n  table, tbl\n\nFlags:\n  -h, --help   help for table\n\nGlobal Flags:\n      --anchor                      create anchor links (default true)\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --default                     show Default column or section (default true)\n      --escape                      escape special characters (default true)\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --indent int                  indention level of Markdown sections [1, 2, 3, 4, 5] (default 2)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --required                    show Required column or section (default true)\n      --sensitive                   show Sensitive column or section (default true)\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n      --type                        show Type column or section (default true)",
+          "description": "Generate Markdown tables of inputs and outputs"
+        }
+      ],
+      "options": [
+        {
+          "option": "--anchor",
+          "shortcut": null,
+          "description": "create anchor links",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--default",
+          "shortcut": null,
+          "description": "show Default column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--escape",
+          "shortcut": null,
+          "description": "escape special characters",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for markdown",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--indent",
+          "shortcut": null,
+          "description": "indention level of Markdown sections",
+          "value": "[1, 2, 3, 4, 5]",
+          "default": "2"
+        },
+        {
+          "option": "--required",
+          "shortcut": null,
+          "description": "show Required column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sensitive",
+          "shortcut": null,
+          "description": "show Sensitive column or section",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--type",
+          "shortcut": null,
+          "description": "show Type column or section",
+          "value": null,
+          "default": "true"
+        }
+      ],
+      "aliases": [
+        "md"
+      ],
+      "name": "terraform-docs markdown",
+      "raw_help_text": "Generate Markdown of inputs and outputs\n\nUsage:\n  terraform-docs markdown [PATH] [flags]\n  terraform-docs markdown [command]\n\nAliases:\n  markdown, md\n\nAvailable Commands:\n  document    Generate Markdown document of inputs and outputs\n  table       Generate Markdown tables of inputs and outputs\n\nFlags:\n      --anchor       create anchor links (default true)\n      --default      show Default column or section (default true)\n      --escape       escape special characters (default true)\n  -h, --help         help for markdown\n      --indent int   indention level of Markdown sections [1, 2, 3, 4, 5] (default 2)\n      --required     show Required column or section (default true)\n      --sensitive    show Sensitive column or section (default true)\n      --type         show Type column or section (default true)\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n\nUse \"terraform-docs markdown [command] --help\" for more information about a command.",
+      "description": "Generate Markdown of inputs and outputs"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--color",
+          "shortcut": null,
+          "description": "colorize printed result",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for pretty",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "shortcut": null,
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "shortcut": null,
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "shortcut": null,
+          "description": "hide section",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--hide-all",
+          "shortcut": null,
+          "description": "hide all sections",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "shortcut": null,
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "shortcut": null,
+          "description": "Output to file method",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "shortcut": null,
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "shortcut": null,
+          "description": "inject output values into outputs",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "shortcut": null,
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "shortcut": null,
+          "description": "show section",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--show-all",
+          "shortcut": null,
+          "description": "show all sections",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "shortcut": null,
+          "description": "sort items",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "shortcut": null,
+          "description": "sort items by name and print required ones first",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "shortcut": null,
+          "description": "sort items by type of them",
+          "value": null,
+          "default": "false"
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs pretty",
+      "raw_help_text": "Generate colorized pretty of inputs and outputs\n\nUsage:\n  terraform-docs pretty [PATH] [flags]\n\nFlags:\n      --color   colorize printed result (default true)\n  -h, --help    help for pretty\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Generate colorized pretty of inputs and outputs"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--footer-from",
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": ""
+            },
+            {
+              "option": "--hide-all",
+              "description": "hide all sections",
+              "value": "boolean",
+              "default": "false"
+            },
+            {
+              "option": "--output-file",
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "description": "inject output values into outputs",
+              "value": "boolean",
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--show",
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": ""
+            },
+            {
+              "option": "--show-all",
+              "description": "show all sections",
+              "value": "boolean",
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "description": "sort items",
+              "value": "boolean",
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "description": "sort items by name and print required ones first",
+              "value": "boolean",
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "description": "sort items by type of them",
+              "value": "boolean",
+              "default": "false"
+            },
+            {
+              "option": "-h",
+              "shortcut": "--help",
+              "description": "help for hcl",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "terraform-docs tfvars hcl",
+          "raw_help_text": "Generate HCL format of terraform.tfvars of inputs\n\nUsage:\n  terraform-docs tfvars hcl [PATH] [flags]\n\nFlags:\n  -h, --help   help for hcl\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+          "description": "Generate HCL format of terraform.tfvars of inputs"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--config",
+              "shortcut": "-c",
+              "description": "config file name",
+              "value": "string",
+              "default": ".terraform-docs.yml"
+            },
+            {
+              "option": "--footer-from",
+              "shortcut": null,
+              "description": "relative path of a file to read footer from",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--header-from",
+              "shortcut": null,
+              "description": "relative path of a file to read header from",
+              "value": "string",
+              "default": "main.tf"
+            },
+            {
+              "option": "--hide",
+              "shortcut": null,
+              "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--hide-all",
+              "shortcut": null,
+              "description": "hide all sections",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-file",
+              "shortcut": null,
+              "description": "File in module directory to insert output into",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--output-mode",
+              "shortcut": null,
+              "description": "Output to file method [inject, replace]",
+              "value": "string",
+              "default": "inject"
+            },
+            {
+              "option": "--output-template",
+              "shortcut": null,
+              "description": "Output template",
+              "value": "string",
+              "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+            },
+            {
+              "option": "--output-values",
+              "shortcut": null,
+              "description": "inject output values into outputs",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--output-values-from",
+              "shortcut": null,
+              "description": "inject output values from file into outputs",
+              "value": "string",
+              "default": ""
+            },
+            {
+              "option": "--show",
+              "shortcut": null,
+              "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+              "value": "strings",
+              "default": null
+            },
+            {
+              "option": "--show-all",
+              "shortcut": null,
+              "description": "show all sections",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort",
+              "shortcut": null,
+              "description": "sort items",
+              "value": null,
+              "default": "true"
+            },
+            {
+              "option": "--sort-by-required",
+              "shortcut": null,
+              "description": "sort items by name and print required ones first",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--sort-by-type",
+              "shortcut": null,
+              "description": "sort items by type of them",
+              "value": null,
+              "default": "false"
+            }
+          ],
+          "aliases": [],
+          "name": "terraform-docs tfvars json",
+          "raw_help_text": "Generate JSON format of terraform.tfvars of inputs\n\nUsage:\n  terraform-docs tfvars json [PATH] [flags]\n\nFlags:\n  -h, --help   help for json\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+          "description": "Generate JSON format of terraform.tfvars of inputs"
+        }
+      ],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--hide-all",
+          "description": "hide all sections",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "description": "inject output values into outputs",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--show-all",
+          "description": "show all sections",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "description": "sort items",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "description": "sort items by name and print required ones first",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "description": "sort items by type of them",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for tfvars",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs tfvars",
+      "raw_help_text": "Generate terraform.tfvars of inputs\n\nUsage:\n  terraform-docs tfvars [command]\n\nAvailable Commands:\n  hcl         Generate HCL format of terraform.tfvars of inputs\n  json        Generate JSON format of terraform.tfvars of inputs\n\nFlags:\n  -h, --help   help for tfvars\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n\nUse \"terraform-docs tfvars [command] --help\" for more information about a command.",
+      "description": "Generate terraform.tfvars of inputs"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--hide-all",
+          "description": "hide all sections",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "description": "inject output values into outputs",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--show-all",
+          "description": "show all sections",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "description": "sort items",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "description": "sort items by name and print required ones first",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "description": "sort items by type of them",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for toml",
+          "value": "",
+          "default": ""
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs toml",
+      "raw_help_text": "Generate TOML of inputs and outputs\n\nUsage:\n  terraform-docs toml [PATH] [flags]\n\nFlags:\n  -h, --help   help for toml\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Generate TOML of inputs and outputs"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--hide-all",
+          "description": "hide all sections",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "description": "inject output values into outputs",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": ""
+        },
+        {
+          "option": "--show-all",
+          "description": "show all sections",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "description": "sort items",
+          "value": "",
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "description": "sort items by name and print required ones first",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "description": "sort items by type of them",
+          "value": "",
+          "default": "false"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for version",
+          "value": "",
+          "default": ""
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs version",
+      "raw_help_text": "Print the version number of terraform-docs\n\nUsage:\n  terraform-docs version [flags]\n\nFlags:\n  -h, --help   help for version\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Print the version number of terraform-docs"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "shortcut": null,
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "shortcut": null,
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "shortcut": null,
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--hide-all",
+          "shortcut": null,
+          "description": "hide all sections",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "shortcut": null,
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "shortcut": null,
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "shortcut": null,
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "shortcut": null,
+          "description": "inject output values into outputs",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "shortcut": null,
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "shortcut": null,
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--show-all",
+          "shortcut": null,
+          "description": "show all sections",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "shortcut": null,
+          "description": "sort items",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "shortcut": null,
+          "description": "sort items by name and print required ones first",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "shortcut": null,
+          "description": "sort items by type of them",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for xml",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs xml",
+      "raw_help_text": "Generate XML of inputs and outputs\n\nUsage:\n  terraform-docs xml [PATH] [flags]\n\nFlags:\n  -h, --help   help for xml\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Generate XML of inputs and outputs"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "config file name",
+          "value": "string",
+          "default": ".terraform-docs.yml"
+        },
+        {
+          "option": "--footer-from",
+          "shortcut": null,
+          "description": "relative path of a file to read footer from",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--header-from",
+          "shortcut": null,
+          "description": "relative path of a file to read header from",
+          "value": "string",
+          "default": "main.tf"
+        },
+        {
+          "option": "--hide",
+          "shortcut": null,
+          "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--hide-all",
+          "shortcut": null,
+          "description": "hide all sections",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-file",
+          "shortcut": null,
+          "description": "File in module directory to insert output into",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--output-mode",
+          "shortcut": null,
+          "description": "Output to file method [inject, replace]",
+          "value": "string",
+          "default": "inject"
+        },
+        {
+          "option": "--output-template",
+          "shortcut": null,
+          "description": "Output template",
+          "value": "string",
+          "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+        },
+        {
+          "option": "--output-values",
+          "shortcut": null,
+          "description": "inject output values into outputs",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--output-values-from",
+          "shortcut": null,
+          "description": "inject output values from file into outputs",
+          "value": "string",
+          "default": ""
+        },
+        {
+          "option": "--show",
+          "shortcut": null,
+          "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+          "value": "strings",
+          "default": null
+        },
+        {
+          "option": "--show-all",
+          "shortcut": null,
+          "description": "show all sections",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort",
+          "shortcut": null,
+          "description": "sort items",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--sort-by-required",
+          "shortcut": null,
+          "description": "sort items by name and print required ones first",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--sort-by-type",
+          "shortcut": null,
+          "description": "sort items by type of them",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "help for yaml",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "terraform-docs yaml",
+      "raw_help_text": "Generate YAML of inputs and outputs\n\nUsage:\n  terraform-docs yaml [PATH] [flags]\n\nFlags:\n  -h, --help   help for yaml\n\nGlobal Flags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)",
+      "description": "Generate YAML of inputs and outputs"
+    }
+  ],
+  "options": [
+    {
+      "option": "--config",
+      "shortcut": "-c",
+      "description": "config file name",
+      "value": "string",
+      "default": ".terraform-docs.yml"
+    },
+    {
+      "option": "--footer-from",
+      "shortcut": "",
+      "description": "relative path of a file to read footer from",
+      "value": "string",
+      "default": ""
+    },
+    {
+      "option": "--header-from",
+      "shortcut": "",
+      "description": "relative path of a file to read header from",
+      "value": "string",
+      "default": "main.tf"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for terraform-docs",
+      "value": "",
+      "default": ""
+    },
+    {
+      "option": "--hide",
+      "shortcut": "",
+      "description": "hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+      "value": "strings",
+      "default": ""
+    },
+    {
+      "option": "--hide-all",
+      "shortcut": "",
+      "description": "hide all sections",
+      "value": "",
+      "default": "false"
+    },
+    {
+      "option": "--output-file",
+      "shortcut": "",
+      "description": "File in module directory to insert output into",
+      "value": "string",
+      "default": ""
+    },
+    {
+      "option": "--output-mode",
+      "shortcut": "",
+      "description": "Output to file method [inject, replace]",
+      "value": "string",
+      "default": "inject"
+    },
+    {
+      "option": "--output-template",
+      "shortcut": "",
+      "description": "Output template",
+      "value": "string",
+      "default": "<!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->"
+    },
+    {
+      "option": "--output-values",
+      "shortcut": "",
+      "description": "inject output values into outputs",
+      "value": "",
+      "default": "false"
+    },
+    {
+      "option": "--output-values-from",
+      "shortcut": "",
+      "description": "inject output values from file into outputs",
+      "value": "string",
+      "default": ""
+    },
+    {
+      "option": "--show",
+      "shortcut": "",
+      "description": "show section [footer, header, inputs, modules, outputs, providers, requirements, resources]",
+      "value": "strings",
+      "default": ""
+    },
+    {
+      "option": "--show-all",
+      "shortcut": "",
+      "description": "show all sections",
+      "value": "",
+      "default": "true"
+    },
+    {
+      "option": "--sort",
+      "shortcut": "",
+      "description": "sort items",
+      "value": "",
+      "default": "true"
+    },
+    {
+      "option": "--sort-by-required",
+      "shortcut": "",
+      "description": "sort items by name and print required ones first",
+      "value": "",
+      "default": "false"
+    },
+    {
+      "option": "--sort-by-type",
+      "shortcut": "",
+      "description": "sort items by type of them",
+      "value": "",
+      "default": "false"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "version for terraform-docs",
+      "value": "",
+      "default": ""
+    }
+  ],
+  "aliases": [],
+  "name": "terraform-docs",
+  "raw_help_text": "A utility to generate documentation from Terraform modules in various output formats\n\nUsage:\n  terraform-docs [PATH] [flags]\n  terraform-docs [command]\n\nAvailable Commands:\n  asciidoc    Generate AsciiDoc of inputs and outputs\n  completion  Generate shell completion code for the specified shell (bash or zsh)\n  help        Help about any command\n  json        Generate JSON of inputs and outputs\n  markdown    Generate Markdown of inputs and outputs\n  pretty      Generate colorized pretty of inputs and outputs\n  tfvars      Generate terraform.tfvars of inputs\n  toml        Generate TOML of inputs and outputs\n  version     Print the version number of terraform-docs\n  xml         Generate XML of inputs and outputs\n  yaml        Generate YAML of inputs and outputs\n\nFlags:\n  -c, --config string               config file name (default \".terraform-docs.yml\")\n      --footer-from string          relative path of a file to read footer from (default \"\")\n      --header-from string          relative path of a file to read header from (default \"main.tf\")\n  -h, --help                        help for terraform-docs\n      --hide strings                hide section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --hide-all                    hide all sections (default false)\n      --output-file string          File in module directory to insert output into (default \"\")\n      --output-mode string          Output to file method [inject, replace] (default \"inject\")\n      --output-template string      Output template (default \"<!-- BEGIN_TF_DOCS -->\\n{{ .Content }}\\n<!-- END_TF_DOCS -->\")\n      --output-values               inject output values into outputs (default false)\n      --output-values-from string   inject output values from file into outputs (default \"\")\n      --show strings                show section [footer, header, inputs, modules, outputs, providers, requirements, resources]\n      --show-all                    show all sections (default true)\n      --sort                        sort items (default true)\n      --sort-by-required            sort items by name and print required ones first (default false)\n      --sort-by-type                sort items by type of them (default false)\n  -v, --version                     version for terraform-docs\n\nUse \"terraform-docs [command] --help\" for more information about a command.",
+  "version": "0.12.0"
+}

@@ -1,0 +1,23 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--dev",
+      "shortcut": null,
+      "description": "Start a default L2-only dev chain",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": null,
+      "description": "Show help information",
+      "value": null,
+      "default": null
+    }
+  ],
+  "description": "Nitro CLI for managing L2 chains",
+  "name": "nitro",
+  "raw_help_text": "Version: v3.8.0-rc.16-8419934, time: 2025-10-22T06:59:12-07:00\nSample usage: /usr/local/bin/nitro [OPTIONS] \n\nOptions:\n  --help\n  --dev: Start a default L2-only dev chain",
+  "version": "v3.8.0-rc.16-8419934"
+}

@@ -1,0 +1,1409 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--id",
+          "shortcut": null,
+          "description": "The build ID to download and upload artifacts for",
+          "value": "value",
+          "default": "\"0\""
+        },
+        {
+          "option": "--token",
+          "shortcut": null,
+          "description": "Build token",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--url",
+          "shortcut": null,
+          "description": "GitLab CI URL",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--tls-ca-file",
+          "shortcut": null,
+          "description": "File containing the certificates to verify the peer when using HTTPS",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--tls-cert-file",
+          "shortcut": null,
+          "description": "File containing certificate for TLS client auth with runner when using HTTPS",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--tls-key-file",
+          "shortcut": null,
+          "description": "File containing private key for TLS client auth with runner when using HTTPS",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--retry",
+          "shortcut": null,
+          "description": "How many times to retry upload",
+          "value": "value",
+          "default": "\"2\""
+        },
+        {
+          "option": "--retry-time",
+          "shortcut": null,
+          "description": "How long to wait between retries",
+          "value": "value",
+          "default": "\"1s\""
+        },
+        {
+          "option": "--transfer-meter-frequency",
+          "shortcut": null,
+          "description": "If set to more than 0s it enables an interactive transfer meter",
+          "value": "value",
+          "default": "\"0s\""
+        },
+        {
+          "option": "--direct-download",
+          "shortcut": null,
+          "description": "Support direct download for data stored externally to GitLab",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--archiver-staging-dir",
+          "shortcut": null,
+          "description": "Directory to stage artifact archives",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner artifacts-downloader",
+      "raw_help_text": "NAME:\n   gitlab-runner artifacts-downloader - download and extract build artifacts (internal)\n\nUSAGE:\n   gitlab-runner artifacts-downloader [command options] [arguments...]\n\nOPTIONS:\n   --id value                        The build ID to download and upload artifacts for (default: \"0\") [$CI_JOB_ID]\n   --token value                     Build token [$CI_JOB_TOKEN]\n   --url value                       GitLab CI URL [$CI_SERVER_URL]\n   --tls-ca-file value               File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value             File containing certificate for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value              File containing private key for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   --retry value                     How many times to retry upload (default: \"2\")\n   --retry-time value                How long to wait between retries (default: \"1s\")\n   --transfer-meter-frequency value  If set to more than 0s it enables an interactive transfer meter (default: \"0s\") [$TRANSFER_METER_FREQUENCY]\n   --direct-download                 Support direct download for data stored externally to GitLab [$FF_USE_DIRECT_DOWNLOAD]\n   --archiver-staging-dir value      Directory to stage artifact archives [$ARCHIVER_STAGING_DIR]",
+      "description": "download and extract build artifacts (internal)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--artifact-format",
+          "description": "Format of generated artifacts"
+        },
+        {
+          "option": "--artifact-type",
+          "description": "Type of generated artifacts"
+        },
+        {
+          "option": "--compression-level",
+          "description": "Compression level (fastest, fast, default, slow, slowest) [$ARTIFACT_COMPRESSION_LEVEL]"
+        },
+        {
+          "option": "--exclude",
+          "description": "Exclude paths from the archive"
+        },
+        {
+          "option": "--expire-in",
+          "description": "When to expire artifacts"
+        },
+        {
+          "option": "--generate-artifacts-metadata",
+          "description": ""
+        },
+        {
+          "option": "--id",
+          "value": "value",
+          "default": "0",
+          "description": "The build ID to download and upload artifacts for (default: \"0\") [$CI_JOB_ID]"
+        },
+        {
+          "option": "--job-name",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--metadata-parameter",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--name",
+          "value": "value",
+          "default": "artifacts",
+          "description": "The name of the archive (default: \"artifacts\")"
+        },
+        {
+          "option": "--path",
+          "value": "value",
+          "description": "Add paths to archive"
+        },
+        {
+          "option": "--repo-digest",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--repo-url",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--runner-id",
+          "value": "value",
+          "default": "0",
+          "description": "(default: \"0\")"
+        },
+        {
+          "option": "--runner-name",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--tls-ca-file",
+          "value": "value",
+          "description": "File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]"
+        },
+        {
+          "option": "--tls-cert-file",
+          "value": "value",
+          "description": "File containing certificate for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_CERT_FILE]"
+        },
+        {
+          "option": "--tls-key-file",
+          "value": "value",
+          "description": "File containing private key for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_KEY_FILE]"
+        },
+        {
+          "option": "--token",
+          "value": "value",
+          "description": "Build token [$CI_JOB_TOKEN]"
+        },
+        {
+          "option": "--transfer-meter-frequency",
+          "value": "value",
+          "default": "0s",
+          "description": "If set to more than 0s it enables an interactive transfer meter (default: \"0s\") [$TRANSFER_METER_FREQUENCY]"
+        },
+        {
+          "option": "--untracked",
+          "description": "Add git untracked files"
+        },
+        {
+          "option": "--url",
+          "value": "value",
+          "description": "GitLab CI URL [$CI_SERVER_URL]"
+        },
+        {
+          "option": "--verbose",
+          "description": "Detailed information"
+        },
+        {
+          "option": "--ci-debug-trace",
+          "description": "enable debug trace logging [$CI_DEBUG_TRACE]"
+        },
+        {
+          "option": "--started-at",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--ended-at",
+          "value": "value",
+          "description": ""
+        },
+        {
+          "option": "--schema-version",
+          "value": "value",
+          "description": ""
+        }
+      ],
+      "name": "gitlab-runner artifacts-uploader",
+      "raw_help_text": "NAME:\n   gitlab-runner artifacts-uploader - create and upload build artifacts (internal)\n\nUSAGE:\n   gitlab-runner artifacts-uploader [command options] [arguments...]\n\nOPTIONS:\n   --id value                        The build ID to download and upload artifacts for (default: \"0\") [$CI_JOB_ID]\n   --token value                     Build token [$CI_JOB_TOKEN]\n   --url value                       GitLab CI URL [$CI_SERVER_URL]\n   --tls-ca-file value               File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value             File containing certificate for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value              File containing private key for TLS client auth with runner when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   --path value                      Add paths to archive\n   --exclude value                   Exclude paths from the archive\n   --untracked                       Add git untracked files\n   --verbose                         Detailed information\n   --transfer-meter-frequency value  If set to more than 0s it enables an interactive transfer meter (default: \"0s\") [$TRANSFER_METER_FREQUENCY]\n   --generate-artifacts-metadata     \n   --runner-id value                 (default: \"0\")\n   --repo-url value                  \n   --repo-digest value               \n   --job-name value                  \n   --executor-name value             \n   --runner-name value               \n   --metadata-parameter value        \n   --started-at value                \n   --ended-at value                  \n   --schema-version value            \n   --name value                      The name of the archive (default: \"artifacts\")\n   --expire-in value                 When to expire artifacts\n   --artifact-format value           Format of generated artifacts\n   --artifact-type value             Type of generated artifacts\n   --compression-level value         Compression level (fastest, fast, default, slow, slowest) [$ARTIFACT_COMPRESSION_LEVEL]\n   --ci-debug-trace                  enable debug trace logging [$CI_DEBUG_TRACE]",
+      "description": "create and upload build artifacts (internal)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--compression-format",
+          "shortcut": null,
+          "description": "Compression format (zip, tarzstd)",
+          "value": "value",
+          "default": "$CACHE_COMPRESSION_FORMAT"
+        },
+        {
+          "option": "--compression-level",
+          "shortcut": null,
+          "description": "Compression level (fastest, fast, default, slow, slowest)",
+          "value": "value",
+          "default": "$CACHE_COMPRESSION_LEVEL"
+        },
+        {
+          "option": "--env-file",
+          "shortcut": null,
+          "description": "Filename containing environment variables to read",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--exclude",
+          "shortcut": null,
+          "description": "Exclude paths from the archive",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--file",
+          "shortcut": null,
+          "description": "The path to file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--gocloud-url",
+          "shortcut": null,
+          "description": "Go Cloud URL of remote cache resource (requires credentials)",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--header",
+          "shortcut": null,
+          "description": "HTTP headers to send with PUT request (in form of 'key:value')",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--max-uploaded-archive-size",
+          "shortcut": null,
+          "description": "Limit the size of the cache archive being uploaded to cloud storage, in bytes.",
+          "value": "value",
+          "default": "$CACHE_MAX_UPLOADED_ARCHIVE_SIZE"
+        },
+        {
+          "option": "--metadata",
+          "shortcut": null,
+          "description": "Metadata for the cache artifact (JSON encoded key-value-pairs, e.g. '{\"foo\":\"bar\",\"blerp\":\"blip\"}')",
+          "value": "value",
+          "default": "$CACHE_METADATA"
+        },
+        {
+          "option": "--path",
+          "shortcut": null,
+          "description": "Add paths to archive",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--retry",
+          "shortcut": null,
+          "description": "How many times to retry upload",
+          "value": "value",
+          "default": "\"2\""
+        },
+        {
+          "option": "--retry-time",
+          "shortcut": null,
+          "description": "How long to wait between retries",
+          "value": "value",
+          "default": "\"1s\""
+        },
+        {
+          "option": "--timeout",
+          "shortcut": null,
+          "description": "Overall timeout for cache uploading request (in minutes)",
+          "value": "value",
+          "default": "\"0\""
+        },
+        {
+          "option": "--transfer-meter-frequency",
+          "shortcut": null,
+          "description": "If set to more than 0s it enables an interactive transfer meter",
+          "value": "value",
+          "default": "\"0s\""
+        },
+        {
+          "option": "--untracked",
+          "shortcut": null,
+          "description": "Add git untracked files",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": null,
+          "description": "Detailed information",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--url",
+          "shortcut": null,
+          "description": "URL of remote cache resource (pre-signed URL)",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner cache-archiver",
+      "raw_help_text": "NAME:\n   gitlab-runner cache-archiver - create and upload cache artifacts (internal)\n\nUSAGE:\n   gitlab-runner cache-archiver [command options] [arguments...]\n\nOPTIONS:\n   --path value                       Add paths to archive\n   --exclude value                    Exclude paths from the archive\n   --untracked                        Add git untracked files\n   --verbose                          Detailed information\n   --retry value                      How many times to retry upload (default: \"2\")\n   --retry-time value                 How long to wait between retries (default: \"1s\")\n   --transfer-meter-frequency value   If set to more than 0s it enables an interactive transfer meter (default: \"0s\") [$TRANSFER_METER_FREQUENCY]\n   --file value                       The path to file\n   --url value                        URL of remote cache resource (pre-signed URL)\n   --gocloud-url value                Go Cloud URL of remote cache resource (requires credentials)\n   --timeout value                    Overall timeout for cache uploading request (in minutes) (default: \"0\")\n   --header value                     HTTP headers to send with PUT request (in form of 'key:value')\n   --metadata value                   Metadata for the cache artifact (JSON encoded key-value-pairs, e.g. '{\"foo\":\"bar\",\"blerp\":\"blip\"}') (default: \"{}\") [$CACHE_METADATA]\n   --compression-level value          Compression level (fastest, fast, default, slow, slowest) [$CACHE_COMPRESSION_LEVEL]\n   --compression-format value         Compression format (zip, tarzstd) [$CACHE_COMPRESSION_FORMAT]\n   --max-uploaded-archive-size value  Limit the size of the cache archive being uploaded to cloud storage, in bytes. (default: \"0\") [$CACHE_MAX_UPLOADED_ARCHIVE_SIZE]\n   --env-file value                   Filename containing environment variables to read",
+      "description": "create and upload cache artifacts (internal)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--env-file",
+          "shortcut": null,
+          "description": "Filename containing environment variables to read",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--file",
+          "shortcut": null,
+          "description": "The file containing your cache artifacts",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--gocloud-url",
+          "shortcut": null,
+          "description": "Go Cloud URL of remote cache resource (requires credentials)",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--retry",
+          "shortcut": null,
+          "description": "How many times to retry upload",
+          "value": "value",
+          "default": "2"
+        },
+        {
+          "option": "--retry-time",
+          "shortcut": null,
+          "description": "How long to wait between retries",
+          "value": "value",
+          "default": "1s"
+        },
+        {
+          "option": "--timeout",
+          "shortcut": null,
+          "description": "Overall timeout for cache downloading request (in minutes)",
+          "value": "value",
+          "default": "0"
+        },
+        {
+          "option": "--transfer-meter-frequency",
+          "shortcut": null,
+          "description": "If set to more than 0s it enables an interactive transfer meter",
+          "value": "value",
+          "default": "0s"
+        },
+        {
+          "option": "--url",
+          "shortcut": null,
+          "description": "URL of remote cache resource",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner cache-extractor",
+      "raw_help_text": "NAME:\n   gitlab-runner cache-extractor - download and extract cache artifacts (internal)\n\nUSAGE:\n   gitlab-runner cache-extractor [command options] [arguments...]\n\nOPTIONS:\n   --retry value                     How many times to retry upload (default: \"2\")\n   --retry-time value                How long to wait between retries (default: \"1s\")\n   --transfer-meter-frequency value  If set to more than 0s it enables an interactive transfer meter (default: \"0s\") [$TRANSFER_METER_FREQUENCY]\n   --file value                      The file containing your cache artifacts\n   --url value                       URL of remote cache resource\n   --gocloud-url value               Go Cloud URL of remote cache resource (requires credentials)\n   --timeout value                   Overall timeout for cache downloading request (in minutes) (default: \"0\")\n   --env-file value                  Filename containing environment variables to read",
+      "description": "download and extract cache artifacts (internal)"
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "name": "gitlab-runner cache-init",
+      "raw_help_text": "NAME:\n   gitlab-runner cache-init - changed permissions for cache paths (internal)\n\nUSAGE:\n   gitlab-runner cache-init [arguments...]",
+      "description": "changed permissions for cache paths (internal)"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--upgrade",
+              "shortcut": null,
+              "description": "Upgrade the fleeting plugins",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "gitlab-runner fleeting install",
+          "raw_help_text": "NAME:\n   gitlab-runner fleeting install - install or update fleeting plugins\n\nUSAGE:\n   gitlab-runner fleeting install [command options] [arguments...]\n\nOPTIONS:\n   --upgrade",
+          "description": "install or update fleeting plugins"
+        },
+        {
+          "subcommands": [],
+          "options": [],
+          "name": "gitlab-runner fleeting list",
+          "raw_help_text": "NAME:\n   gitlab-runner fleeting list - list installed plugins\n\nUSAGE:\n   gitlab-runner fleeting list [arguments...]",
+          "description": "list installed plugins"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--username",
+              "shortcut": null,
+              "description": "",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--password",
+              "shortcut": null,
+              "description": "",
+              "value": "value",
+              "default": null
+            },
+            {
+              "option": "--password-stdin",
+              "shortcut": null,
+              "description": "take the password from stdin",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "gitlab-runner fleeting login",
+          "raw_help_text": "NAME:\n   gitlab-runner fleeting login - login to container registry\n\nUSAGE:\n   gitlab-runner fleeting login [command options] [server]\n\nOPTIONS:\n   --username value  \n   --password value  \n   --password-stdin  take the password from stdin",
+          "description": "login to container registry"
+        }
+      ],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "configuration file",
+          "value": "value",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner fleeting",
+      "raw_help_text": "NAME:\n   gitlab-runner fleeting - manage fleeting plugins\n\nUSAGE:\n   gitlab-runner fleeting command [command options] [arguments...]\n\nCOMMANDS:\n   install  install or update fleeting plugins\n   list     list installed plugins\n   login    login to container registry\n\nOPTIONS:\n   --config value, -c value  (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   --help, -h                show help",
+      "description": "manage fleeting plugins"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--port",
+          "shortcut": "-p",
+          "description": "Service port",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner health-check",
+      "raw_help_text": "NAME:\n   gitlab-runner health-check - check health for a specific address\n\nUSAGE:\n   gitlab-runner health-check [command options] [arguments...]\n\nOPTIONS:\n   -p value, --port value  Service port",
+      "description": "check health for a specific address"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Specify custom config file",
+          "value": "value",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "--init-user",
+          "shortcut": "-i",
+          "description": "Specify user-name to secure the runner in the init script or systemd unit file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Specify service name to use",
+          "value": "value",
+          "default": "gitlab-runner"
+        },
+        {
+          "option": "--user",
+          "shortcut": "-u",
+          "description": "Specify user-name to secure the runner",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--working-directory",
+          "shortcut": "-d",
+          "description": "Specify custom root directory where all data are stored",
+          "value": "value",
+          "default": "/"
+        },
+        {
+          "option": "--syslog",
+          "shortcut": null,
+          "description": "Setup system logging integration",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner install",
+      "raw_help_text": "NAME:\n   gitlab-runner install - install service\n\nUSAGE:\n   gitlab-runner install [command options] [arguments...]\n\nOPTIONS:\n   --service value, -n value            Specify service name to use (default: \"gitlab-runner\")\n   --working-directory value, -d value  Specify custom root directory where all data are stored (default: \"/\")\n   --config value, -c value             Specify custom config file (default: \"/etc/gitlab-runner/config.toml\")\n   --syslog                             Setup system logging integration\n   --user value, -u value               Specify user-name to secure the runner\n   --init-user value, -i value          Specify user-name to secure the runner in the init script or systemd unit file",
+      "description": "install service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Config file",
+          "value": "value",
+          "default": "/etc/gitlab-runner/config.toml"
+        }
+      ],
+      "name": "gitlab-runner list",
+      "raw_help_text": "NAME:\n   gitlab-runner list - List all configured runners\n\nUSAGE:\n   gitlab-runner list [command options] [arguments...]\n\nOPTIONS:\n   -c value, --config value  Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]",
+      "description": "List all configured runners"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--access-level",
+          "description": "Set access_level of the runner to not_protected or ref_protected; defaults to not_protected",
+          "value": "value",
+          "default": "[RUNNER_ACCESS_LEVEL]"
+        },
+        {
+          "option": "--builds-dir",
+          "description": "Directory where builds are stored",
+          "value": "value",
+          "default": "[RUNNER_BUILDS_DIR]"
+        },
+        {
+          "option": "--cache-dir",
+          "description": "Directory where build cache is stored",
+          "value": "value",
+          "default": "[RUNNER_CACHE_DIR]"
+        },
+        {
+          "option": "--cache-type",
+          "description": "Select caching method",
+          "value": "value",
+          "default": "[CACHE_TYPE]"
+        },
+        {
+          "option": "--cache-shared",
+          "description": "Enable cache sharing between runners.",
+          "value": null,
+          "default": "[CACHE_SHARED]"
+        },
+        {
+          "option": "--docker-host",
+          "description": "Docker daemon address",
+          "value": "value",
+          "default": "[DOCKER_HOST]"
+        },
+        {
+          "option": "--docker-image",
+          "description": "Docker image to be used",
+          "value": "value",
+          "default": "[DOCKER_IMAGE]"
+        },
+        {
+          "option": "--docker-runtime",
+          "description": "Docker runtime to be used",
+          "value": "value",
+          "default": "[DOCKER_RUNTIME]"
+        },
+        {
+          "option": "--docker-privileged",
+          "description": "Give extended privileges to container",
+          "value": null,
+          "default": "[DOCKER_PRIVILEGED]"
+        },
+        {
+          "option": "--docker-cgroup-parent",
+          "description": "String value containing the cgroup parent to use",
+          "value": "value",
+          "default": "[DOCKER_CGROUP_PARENT]"
+        },
+        {
+          "option": "--executor",
+          "description": "Select executor, eg. shell, docker, etc.",
+          "value": "value",
+          "default": "[RUNNER_EXECUTOR]"
+        },
+        {
+          "option": "--name",
+          "description": "Runner name",
+          "value": "value",
+          "default": "[RUNNER_NAME]"
+        },
+        {
+          "option": "--token",
+          "description": "Runner token",
+          "value": "value",
+          "default": "[CI_SERVER_TOKEN]"
+        },
+        {
+          "option": "--url",
+          "description": "GitLab instance URL",
+          "value": "value",
+          "default": "[CI_SERVER_URL]"
+        },
+        {
+          "option": "--kubernetes-host",
+          "description": "Optional Kubernetes master host URL (auto-discovery attempted if not specified)",
+          "value": "value",
+          "default": "[KUBERNETES_HOST]"
+        },
+        {
+          "option": "--kubernetes-image",
+          "description": "Default docker image to use for builds when none is specified",
+          "value": "value",
+          "default": "[KUBERNETES_IMAGE]"
+        },
+        {
+          "option": "--kubernetes-namespace",
+          "description": "Namespace to run Kubernetes jobs in",
+          "value": "value",
+          "default": "[KUBERNETES_NAMESPACE]"
+        },
+        {
+          "option": "--kubernetes-privileged",
+          "description": "Run all containers with the privileged flag enabled",
+          "value": null,
+          "default": "[KUBERNETES_PRIVILEGED]"
+        },
+        {
+          "option": "--kubernetes-service-account",
+          "description": "Executor pods will use this Service Account to talk to kubernetes API",
+          "value": "value",
+          "default": "[KUBERNETES_SERVICE_ACCOUNT]"
+        },
+        {
+          "option": "--template-config",
+          "description": "Path to the configuration template file",
+          "value": "value",
+          "default": "[TEMPLATE_CONFIG_FILE]"
+        },
+        {
+          "option": "--config",
+          "description": "Config file",
+          "value": "value",
+          "default": "[CONFIG_FILE]"
+        },
+        {
+          "option": "--tag-list",
+          "description": "Tag list",
+          "value": "value",
+          "default": "[RUNNER_TAG_LIST]"
+        },
+        {
+          "option": "--non-interactive",
+          "description": "Run registration unattended",
+          "value": null,
+          "default": "[REGISTER_NON_INTERACTIVE]"
+        },
+        {
+          "option": "--leave-runner",
+          "description": "Don't remove runner if registration fails",
+          "value": null,
+          "default": "[REGISTER_LEAVE_RUNNER]"
+        },
+        {
+          "option": "--run-untagged",
+          "description": "Register to run untagged builds; defaults to 'true' when 'tag-list' is empty",
+          "value": null,
+          "default": "[REGISTER_RUN_UNTAGGED]"
+        },
+        {
+          "option": "--locked",
+          "description": "Lock Runner for current project, defaults to 'true'",
+          "value": null,
+          "default": "[REGISTER_LOCKED]"
+        },
+        {
+          "option": "--maximum-timeout",
+          "description": "What is the maximum timeout (in seconds) that will be set for job when using this Runner",
+          "value": "value",
+          "default": "[REGISTER_MAXIMUM_TIMEOUT]"
+        },
+        {
+          "option": "--paused",
+          "description": "Set Runner to be paused, defaults to 'false'",
+          "value": null,
+          "default": "[REGISTER_PAUSED]"
+        }
+      ],
+      "name": "gitlab-runner register",
+      "raw_help_text": "NAME:\n   gitlab-runner register - register a new runner\n\nUSAGE:\n   gitlab-runner register [command options] [arguments...]\n\nOPTIONS:\n   --template-config value                                                                    Path to the configuration template file [$TEMPLATE_CONFIG_FILE]\n   -c value, --config value                                                                   Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   --tag-list value                                                                           Tag list [$RUNNER_TAG_LIST]\n   -n, --non-interactive                                                                      Run registration unattended [$REGISTER_NON_INTERACTIVE]\n   --leave-runner                                                                             Don't remove runner if registration fails [$REGISTER_LEAVE_RUNNER]\n   -r value, --registration-token value                                                       Runner's registration token (deprecated, use --token) [$REGISTRATION_TOKEN]\n   --run-untagged                                                                             Register to run untagged builds; defaults to 'true' when 'tag-list' is empty [$REGISTER_RUN_UNTAGGED]\n   --locked                                                                                   Lock Runner for current project, defaults to 'true' [$REGISTER_LOCKED]\n   --access-level value                                                                       Set access_level of the runner to not_protected or ref_protected; defaults to not_protected [$REGISTER_ACCESS_LEVEL]\n   --maximum-timeout value                                                                    What is the maximum timeout (in seconds) that will be set for job when using this Runner (default: \"0\") [$REGISTER_MAXIMUM_TIMEOUT]\n   --paused                                                                                   Set Runner to be paused, defaults to 'false' [$REGISTER_PAUSED]\n   --maintenance-note value                                                                   Runner's maintenance note [$REGISTER_MAINTENANCE_NOTE]\n   --name value, --description value                                                          Runner name (default: \"5efd405935eb\") [$RUNNER_NAME]\n   --limit value                                                                              Maximum number of builds processed by this runner (default: \"0\") [$RUNNER_LIMIT]\n   --output-limit value                                                                       Maximum build trace size in kilobytes (default: \"0\") [$RUNNER_OUTPUT_LIMIT]\n   --request-concurrency value                                                                Maximum concurrency for job requests (default: \"0\") [$RUNNER_REQUEST_CONCURRENCY]\n   --unhealthy-requests-limit value                                                           The number of 'unhealthy' responses to new job requests after which a runner worker will be disabled (default: \"0\") [$RUNNER_UNHEALTHY_REQUESTS_LIMIT]\n   --unhealthy-interval value                                                                 Duration for which a runner worker is disabled after exceeding the unhealthy requests limit. Supports syntax like '3600s', '1h30min' etc\n   --job-status-final-update-retry-limit value                                                The maximum number of times GitLab Runner can retry to push the final job status to the GitLab instance. (default: \"0\") [$RUNNER_job_status_final_update_retry_limit]\n   -u value, --url value                                                                      GitLab instance URL [$CI_SERVER_URL]\n   -t value, --token value                                                                    Runner token [$CI_SERVER_TOKEN]\n   --tls-ca-file value                                                                        File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value                                                                      File containing certificate for TLS client auth when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value                                                                       File containing private key for TLS client auth when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   --executor value                                                                           Select executor, eg. shell, docker, etc. [$RUNNER_EXECUTOR]\n   --builds-dir value                                                                         Directory where builds are stored [$RUNNER_BUILDS_DIR]\n   --cache-dir value                                                                          Directory where build cache is stored [$RUNNER_CACHE_DIR]\n   --clone-url value                                                                          Overwrite the default URL used to clone or fetch the git ref [$CLONE_URL]\n   --env value                                                                                Custom environment variables injected to build environment [$RUNNER_ENV]\n   --proxy-exec value                                                                         (Experimental) Proxy execution via helper binary [$RUNNER_PROXY_EXEC]\n   --pre-get-sources-script value                                                             Runner-specific commands to be executed on the runner before updating the Git repository an updating submodules. [$RUNNER_PRE_GET_SOURCES_SCRIPT]\n   --post-get-sources-script value                                                            Runner-specific commands to be executed on the runner after updating the Git repository and updating submodules. [$RUNNER_POST_GET_SOURCES_SCRIPT]\n   --pre-build-script value                                                                   Runner-specific command script executed just before build executes [$RUNNER_PRE_BUILD_SCRIPT]\n   --post-build-script value                                                                  Runner-specific command script executed just after build executes [$RUNNER_POST_BUILD_SCRIPT]\n   --debug-trace-disabled                                                                     When set to true Runner will disable the possibility of using the CI_DEBUG_TRACE feature [$RUNNER_DEBUG_TRACE_DISABLED]\n   --safe-directory-checkout value                                                            When set to true, Git global configuration will get a safe.directory directive pointing the job's working directory' [$RUNNER_SAFE_DIRECTORY_CHECKOUT]\n   --clean-git-config value                                                                   Clean git configuration before and after the build. Defaults to true, except the shell executor is used or the git strategy is \"none\" [$RUNNER_CLEAN_GIT_CONFIG]\n   --shell value                                                                              Select bash, sh, cmd, pwsh or powershell [$RUNNER_SHELL]\n   --custom_build_dir-enabled value                                                           Enable job specific build directories [$CUSTOM_BUILD_DIR_ENABLED]\n   --cache-type value                                                                         Select caching method [$CACHE_TYPE]\n   --cache-path value                                                                         Name of the path to prepend to the cache URL [$CACHE_PATH]\n   --cache-shared                                                                             Enable cache sharing between runners. [$CACHE_SHARED]\n   --cache-max_uploaded_archive_size value                                                    Limit the size of the cache archive being uploaded to cloud storage, in bytes. (default: \"0\") [$CACHE_MAXIMUM_UPLOADED_ARCHIVE_SIZE]\n   --cache-s3-server-address value                                                            A host:port to the used S3-compatible server [$CACHE_S3_SERVER_ADDRESS]\n   --cache-s3-access-key value                                                                S3 Access Key [$CACHE_S3_ACCESS_KEY]\n   --cache-s3-secret-key value                                                                S3 Secret Key [$CACHE_S3_SECRET_KEY]\n   --cache-s3-session-token value                                                             S3 Session Token [$CACHE_S3_SESSION_TOKEN]\n   --cache-s3-bucket-name value                                                               Name of the bucket where cache will be stored [$CACHE_S3_BUCKET_NAME]\n   --cache-s3-bucket-location value                                                           Name of S3 region [$CACHE_S3_BUCKET_LOCATION]\n   --cache-s3-insecure                                                                        Use insecure mode (without https) [$CACHE_S3_INSECURE]\n   --cache-s3-authentication_type value                                                       IAM or credentials [$CACHE_S3_AUTHENTICATION_TYPE]\n   --cache-s3-server-side-encryption value                                                    Server side encryption type (S3, or KMS) [$CACHE_S3_SERVER_SIDE_ENCRYPTION]\n   --cache-s3-server-side-encryption-key-id value                                             Server side encryption key ID (alias or Key ID or Key ARN) [$CACHE_S3_SERVER_SIDE_ENCRYPTION_KEY_ID]\n   --cache-s3-dual-stack value                                                                Enable dual-stack (IPv4 and IPv6) endpoints (default: true) [$CACHE_S3_DUAL_STACK]\n   --cache-s3-path-style value                                                                Use path style access (default: false) [$CACHE_S3_PATH_STYLE]\n   --cache-s3-accelerate                                                                      Enable S3 Transfer Acceleration [$CACHE_S3_ACCELERATE]\n   --cache-s3-role-arn value                                                                  Role ARN for transferring cache to S3 [$CACHE_S3_ROLE_ARN]\n   --cache-s3-upload-role-arn value                                                           Role ARN for uploading cache to S3 [$CACHE_S3_UPLOAD_ROLE_ARN]\n   --cache-gcs-access-id value                                                                ID of GCP Service Account used to access the storage [$CACHE_GCS_ACCESS_ID]\n   --cache-gcs-private-key value                                                              Private key used to sign GCS requests [$CACHE_GCS_PRIVATE_KEY]\n   --cache-gcs-credentials-file value                                                         File with GCP credentials, containing AccessID and PrivateKey [$GOOGLE_APPLICATION_CREDENTIALS]\n   --cache-gcs-bucket-name value                                                              Name of the bucket where cache will be stored [$CACHE_GCS_BUCKET_NAME]\n   --cache-azure-account-name value                                                           Account name for Azure Blob Storage [$CACHE_AZURE_ACCOUNT_NAME]\n   --cache-azure-account-key value                                                            Access key for Azure Blob Storage [$CACHE_AZURE_ACCOUNT_KEY]\n   --cache-azure-container-name value                                                         Name of the Azure container where cache will be stored [$CACHE_AZURE_CONTAINER_NAME]\n   --cache-azure-storage-domain value                                                         Domain name of the Azure storage (e.g. blob.core.windows.net) [$CACHE_AZURE_STORAGE_DOMAIN]\n   --feature-flags value                                                                      Enable/Disable feature flags https://docs.gitlab.com/runner/configuration/feature-flags/ (default: \"{}\") [$FEATURE_FLAGS]\n   --use-slot-cgroups                                                                         Use slot-derived cgroup names for resource isolation [$RUNNER_USE_SLOT_CGROUPS]\n   --slot-cgroup-template slot                                                                Template for slot-derived cgroup names (use $slot placeholder) [$RUNNER_SLOT_CGROUP_TEMPLATE]\n   --ssh-user value                                                                           User name [$SSH_USER]\n   --ssh-password value                                                                       User password [$SSH_PASSWORD]\n   --ssh-host value                                                                           Remote host [$SSH_HOST]\n   --ssh-port value                                                                           Remote host port [$SSH_PORT]\n   --ssh-identity-file value                                                                  Identity file to be used [$SSH_IDENTITY_FILE]\n   --ssh-disable-strict-host-key-checking value                                               Disable SSH strict host key checking [$DISABLE_STRICT_HOST_KEY_CHECKING]\n   --ssh-known-hosts-file value                                                               Location of known_hosts file. Defaults to ~/.ssh/known_hosts [$KNOWN_HOSTS_FILE]\n   --docker-host value                                                                        Docker daemon address [$DOCKER_HOST]\n   --docker-cert-path value                                                                   Certificate path [$DOCKER_CERT_PATH]\n   --docker-tlsverify                                                                         Use TLS and verify the remote [$DOCKER_TLS_VERIFY]\n   --docker-hostname value                                                                    Custom container hostname [$DOCKER_HOSTNAME]\n   --docker-image value                                                                       Docker image to be used [$DOCKER_IMAGE]\n   --docker-runtime value                                                                     Docker runtime to be used [$DOCKER_RUNTIME]\n   --docker-memory value                                                                      Memory limit (format: <number>[<unit>]). Unit can be one of b, k, m, or g. Minimum is 4M. [$DOCKER_MEMORY]\n   --docker-memory-swap value                                                                 Total memory limit (memory + swap, format: <number>[<unit>]). Unit can be one of b, k, m, or g. [$DOCKER_MEMORY_SWAP]\n   --docker-memory-reservation value                                                          Memory soft limit (format: <number>[<unit>]). Unit can be one of b, k, m, or g. [$DOCKER_MEMORY_RESERVATION]\n   --docker-cgroup-parent value                                                               String value containing the cgroup parent to use [$DOCKER_CGROUP_PARENT]\n   --docker-cpuset-cpus value                                                                 String value containing the cgroups CpusetCpus to use [$DOCKER_CPUSET_CPUS]\n   --docker-cpuset-mems value                                                                 String value containing the cgroups CpusetMems to use [$DOCKER_CPUSET_MEMS]\n   --docker-cpus value                                                                        Number of CPUs [$DOCKER_CPUS]\n   --docker-cpu-shares value                                                                  Number of CPU shares (default: \"0\") [$DOCKER_CPU_SHARES]\n   --docker-dns value                                                                         A list of DNS servers for the container to use [$DOCKER_DNS]\n   --docker-dns-search value                                                                  A list of DNS search domains [$DOCKER_DNS_SEARCH]\n   --docker-privileged                                                                        Give extended privileges to container [$DOCKER_PRIVILEGED]\n   --docker-services_privileged value                                                         When set this will give or remove extended privileges to container services [$DOCKER_SERVICES_PRIVILEGED]\n   --docker-disable-entrypoint-overwrite                                                      Disable the possibility for a container to overwrite the default image entrypoint [$DOCKER_DISABLE_ENTRYPOINT_OVERWRITE]\n   --docker-user value                                                                        Run all commands in the container as the specified user. [$DOCKER_USER]\n   --docker-allowed_users value                                                               List of allowed users under which to run commands in the build container. [$DOCKER_ALLOWED_USERS]\n   --docker-group-add value                                                                   Add additional groups to join [$DOCKER_GROUP_ADD]\n   --docker-userns value                                                                      User namespace to use [$DOCKER_USERNS_MODE]\n   --docker-cap-add value                                                                     Add Linux capabilities [$DOCKER_CAP_ADD]\n   --docker-cap-drop value                                                                    Drop Linux capabilities [$DOCKER_CAP_DROP]\n   --docker-oom-kill-disable                                                                  Do not kill processes in a container if an out-of-memory (OOM) error occurs [$DOCKER_OOM_KILL_DISABLE]\n   --docker-oom-score-adjust value                                                            Adjust OOM score (default: \"0\") [$DOCKER_OOM_SCORE_ADJUST]\n   --docker-security-opt value                                                                Security Options [$DOCKER_SECURITY_OPT]\n   --docker-services-security-opt value                                                       Security Options for container services [$DOCKER_SERVICES_SECURITY_OPT]\n   --docker-devices value                                                                     Add a host device to the container [$DOCKER_DEVICES]\n   --docker-device-cgroup-rules value                                                         Add a device cgroup rule to the container [$DOCKER_DEVICE_CGROUP_RULES]\n   --docker-gpus value                                                                        Request GPUs to be used by Docker [$DOCKER_GPUS]\n   --docker-services_devices value                                                            A toml table/json object with the format key=values. Expose host devices to services based on image name. (default: \"{}\") [$DOCKER_SERVICES_DEVICES]\n   --docker-disable-cache                                                                     Disable all container caching [$DOCKER_DISABLE_CACHE]\n   --docker-volumes value                                                                     Bind-mount a volume and create it if it doesn't exist prior to mounting. Can be specified multiple times once per mountpoint, e.g. --docker-volumes 'test0:/test0' --docker-volumes 'test1:/test1' [$DOCKER_VOLUMES]\n   --docker-volume-driver value                                                               Volume driver to be used [$DOCKER_VOLUME_DRIVER]\n   --docker-volume-driver-ops value                                                           A toml table/json object with the format key=values. Volume driver ops to be specified (default: \"{}\") [$DOCKER_VOLUME_DRIVER_OPS]\n   --docker-cache-dir value                                                                   Directory where to store caches [$DOCKER_CACHE_DIR]\n   --docker-extra-hosts value                                                                 Add a custom host-to-IP mapping [$DOCKER_EXTRA_HOSTS]\n   --docker-volumes-from value                                                                A list of volumes to inherit from another container [$DOCKER_VOLUMES_FROM]\n   --docker-network-mode value                                                                Add container to a custom network [$DOCKER_NETWORK_MODE]\n   --docker-ipcmode value                                                                     Select IPC mode for container [$DOCKER_IPC_MODE]\n   --docker-mac-address value                                                                 Container MAC address (e.g., 92:d0:c6:0a:29:33) [$DOCKER_MAC_ADDRESS]\n   --docker-links value                                                                       Add link to another container [$DOCKER_LINKS]\n   --docker-services-limit value                                                              The maximum amount of services allowed [$DOCKER_SERVICES_LIMIT]\n   --docker-service-memory value                                                              Service memory limit (format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. Minimum is 4M. [$DOCKER_SERVICE_MEMORY]\n   --docker-service-memory-swap value                                                         Service total memory limit (memory + swap, format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. [$DOCKER_SERVICE_MEMORY_SWAP]\n   --docker-service-memory-reservation value                                                  Service memory soft limit (format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. [$DOCKER_SERVICE_MEMORY_RESERVATION]\n   --docker-service-cgroup-parent value                                                       String value containing the cgroup parent to use for service [$DOCKER_SERVICE_CGROUP_PARENT]\n   --docker-service-slot-cgroup-template slot                                                 Template for service slot-derived cgroup names (use $slot placeholder) [$DOCKER_SERVICE_SLOT_CGROUP_TEMPLATE]\n   --docker-service-cpuset-cpus value                                                         String value containing the cgroups CpusetCpus to use for service [$DOCKER_SERVICE_CPUSET_CPUS]\n   --docker-service-cpus value                                                                Number of CPUs for service [$DOCKER_SERVICE_CPUS]\n   --docker-service-cpu-shares value                                                          Number of CPU shares for service (default: \"0\") [$DOCKER_SERVICE_CPU_SHARES]\n   --docker-service_gpus value                                                                Request GPUs to be used by Docker for services [$DOCKER_SERVICE_GPUS]\n   --docker-wait-for-services-timeout value                                                   How long to wait for service startup (default: \"0\") [$DOCKER_WAIT_FOR_SERVICES_TIMEOUT]\n   --docker-allowed-images value                                                              Image allowlist [$DOCKER_ALLOWED_IMAGES]\n   --docker-allowed-privileged-images value                                                   Privileged image allowlist [$DOCKER_ALLOWED_PRIVILEGED_IMAGES]\n   --docker-allowed-privileged-services value                                                 Privileged Service allowlist [$DOCKER_ALLOWED_PRIVILEGED_SERVICES]\n   --docker-allowed-pull-policies value                                                       Pull policy allowlist [$DOCKER_ALLOWED_PULL_POLICIES]\n   --docker-allowed-services value                                                            Service allowlist [$DOCKER_ALLOWED_SERVICES]\n   --docker-pull-policy value                                                                 Image pull policy: never, if-not-present, always [$DOCKER_PULL_POLICY]\n   --docker-isolation value                                                                   Container isolation technology. Windows only [$DOCKER_ISOLATION]\n   --docker-shm-size value                                                                    Shared memory size for docker images (in bytes) (default: \"0\") [$DOCKER_SHM_SIZE]\n   --docker-tmpfs value                                                                       A toml table/json object with the format key=values. When set this will mount the specified path in the key as a tmpfs volume in the main container, using the options specified as key. For the supported options, see the documentation for the unix 'mount' command (default: \"{}\") [$DOCKER_TMPFS]\n   --docker-services-tmpfs value                                                              A toml table/json object with the format key=values. When set this will mount the specified path in the key as a tmpfs volume in all the service containers, using the options specified as key. For the supported options, see the documentation for the unix 'mount' command (default: \"{}\") [$DOCKER_SERVICES_TMPFS]\n   --docker-sysctls value                                                                     Sysctl options, a toml table/json object of key=value. Value is expected to be a string. (default: \"{}\") [$DOCKER_SYSCTLS]\n   --docker-helper-image value                                                                [ADVANCED] Override the default helper image used to clone repos and upload artifacts [$DOCKER_HELPER_IMAGE]\n   --docker-helper-image-flavor value                                                         Set helper image flavor (alpine, ubuntu), defaults to alpine [$DOCKER_HELPER_IMAGE_FLAVOR]\n   --docker-container-labels value                                                            A toml table/json object of key-value. Value is expected to be a string. When set, this will create containers with the given container labels. Environment variables will be substituted for values here. (default: \"{}\")\n   --docker-enable-ipv6                                                                       Enable IPv6 for automatically created networks. This is only takes affect when the feature flag FF_NETWORK_PER_BUILD is enabled.\n   --docker-ulimit value                                                                      Ulimit options for container (default: \"{}\") [$DOCKER_ULIMIT]\n   --docker-network-mtu value                                                                 MTU of the Docker network created for the job IFF the FF_NETWORK_PER_BUILD feature-flag was specified. (default: \"0\")\n   --parallels-base-name value                                                                VM name to be used [$PARALLELS_BASE_NAME]\n   --parallels-template-name value                                                            VM template to be created [$PARALLELS_TEMPLATE_NAME]\n   --parallels-disable-snapshots                                                              Disable snapshoting to speedup VM creation [$PARALLELS_DISABLE_SNAPSHOTS]\n   --parallels-time-server value                                                              Timeserver to sync the guests time from. Defaults to time.apple.com [$PARALLELS_TIME_SERVER]\n   --parallels-allowed-images value                                                           Image (base_name) allowlist [$PARALLELS_ALLOWED_IMAGES]\n   --virtualbox-base-name value                                                               VM name to be used [$VIRTUALBOX_BASE_NAME]\n   --virtualbox-base-snapshot value                                                           Name or UUID of a specific VM snapshot to clone [$VIRTUALBOX_BASE_SNAPSHOT]\n   --virtualbox-base-folder value                                                             Folder in which to save the new VM. If empty, uses VirtualBox default [$VIRTUALBOX_BASE_FOLDER]\n   --virtualbox-disable-snapshots                                                             Disable snapshoting to speedup VM creation [$VIRTUALBOX_DISABLE_SNAPSHOTS]\n   --virtualbox-allowed-images value                                                          Image allowlist [$VIRTUALBOX_ALLOWED_IMAGES]\n   --virtualbox-start-type value                                                              Graphical front-end type [$VIRTUALBOX_START_TYPE]\n   --machine-max-growth-rate value                                                            Maximum machines being provisioned concurrently, set to 0 for unlimited (default: \"0\") [$MACHINE_MAX_GROWTH_RATE]\n   --machine-idle-nodes value                                                                 Maximum idle machines (default: \"0\") [$MACHINE_IDLE_COUNT]\n   --machine-idle-scale-factor value                                                          (Experimental) Defines what factor of in-use machines should be used as current idle value, but never more then defined IdleCount. 0.0 means use IdleCount as a static number (defaults to 0.0). Must be defined as float number. (default: \"0\") [$MACHINE_IDLE_SCALE_FACTOR]\n   --machine-idle-count-min value                                                             Minimal number of idle machines when IdleScaleFactor is in use. Defaults to 1. (default: \"0\") [$MACHINE_IDLE_COUNT_MIN]\n   --machine-idle-time value                                                                  Minimum time after node can be destroyed (default: \"0\") [$MACHINE_IDLE_TIME]\n   --machine-max-builds value                                                                 Maximum number of builds processed by machine (default: \"0\") [$MACHINE_MAX_BUILDS]\n   --machine-machine-driver value                                                             The driver to use when creating machine [$MACHINE_DRIVER]\n   --machine-machine-name value                                                               The template for machine name (needs to include %s) [$MACHINE_NAME]\n   --machine-machine-options value                                                            Additional machine creation options [$MACHINE_OPTIONS]\n   --machine-machine-options-with-name value                                                  Template for additional options that may reference the machine name (need to include %s) [$MACHINE_OPTIONS_WITH_NAME]\n   --kubernetes-host value                                                                    Optional Kubernetes master host URL (auto-discovery attempted if not specified) [$KUBERNETES_HOST]\n   --kubernetes-context value                                                                 Optional Kubernetes context name to use if host is not specified (kubectl config get-contexts). [$KUBECTL_CONTEXT]\n   --kubernetes-cert-file value                                                               Optional Kubernetes master auth certificate [$KUBERNETES_CERT_FILE]\n   --kubernetes-key-file value                                                                Optional Kubernetes master auth private key [$KUBERNETES_KEY_FILE]\n   --kubernetes-ca-file value                                                                 Optional Kubernetes master auth ca certificate [$KUBERNETES_CA_FILE]\n   --kubernetes-bearer_token_overwrite_allowed                                                Bool to authorize builds to specify their own bearer token for creation. [$KUBERNETES_BEARER_TOKEN_OVERWRITE_ALLOWED]\n   --kubernetes-bearer_token value                                                            Optional Kubernetes service account token used to start build pods. [$KUBERNETES_BEARER_TOKEN]\n   --kubernetes-image value                                                                   Default docker image to use for builds when none is specified [$KUBERNETES_IMAGE]\n   --kubernetes-namespace value                                                               Namespace to run Kubernetes jobs in [$KUBERNETES_NAMESPACE]\n   --kubernetes-namespace_overwrite_allowed value                                             Regex to validate 'KUBERNETES_NAMESPACE_OVERWRITE' value [$KUBERNETES_NAMESPACE_OVERWRITE_ALLOWED]\n   --kubernetes-namespace_per_job                                                             Use separate namespace for each job. If set, 'KUBERNETES_NAMESPACE' and 'KUBERNETES_NAMESPACE_OVERWRITE_ALLOWED' are ignored. [$KUBERNETES_NAMESPACE_PER_JOB]\n   --kubernetes-privileged value                                                              Run all containers with the privileged flag enabled [$KUBERNETES_PRIVILEGED]\n   --kubernetes-runtime-class-name value                                                      A Runtime Class to use for all created pods, errors if the feature is unsupported by the cluster [$KUBERNETES_RUNTIME_CLASS_NAME]\n   --kubernetes-allow-privilege-escalation value                                              Run all containers with the security context allowPrivilegeEscalation flag enabled. When empty, it does not define the allowPrivilegeEscalation flag in the container SecurityContext and allows Kubernetes to use the default privilege escalation behavior. [$KUBERNETES_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-cpu-limit value                                                               The CPU allocation given to build containers [$KUBERNETES_CPU_LIMIT]\n   --kubernetes-cpu-limit-overwrite-max-allowed value                                         If set, the max amount the cpu limit can be set to. Used with the KUBERNETES_CPU_LIMIT variable in the build. [$KUBERNETES_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-cpu-request value                                                             The CPU allocation requested for build containers [$KUBERNETES_CPU_REQUEST]\n   --kubernetes-cpu-request-overwrite-max-allowed value                                       If set, the max amount the cpu request can be set to. Used with the KUBERNETES_CPU_REQUEST variable in the build. [$KUBERNETES_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-memory-limit value                                                            The amount of memory allocated to build containers [$KUBERNETES_MEMORY_LIMIT]\n   --kubernetes-memory-limit-overwrite-max-allowed value                                      If set, the max amount the memory limit can be set to. Used with the KUBERNETES_MEMORY_LIMIT variable in the build. [$KUBERNETES_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-memory-request value                                                          The amount of memory requested from build containers [$KUBERNETES_MEMORY_REQUEST]\n   --kubernetes-memory-request-overwrite-max-allowed value                                    If set, the max amount the memory request can be set to. Used with the KUBERNETES_MEMORY_REQUEST variable in the build. [$KUBERNETES_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-ephemeral-storage-limit value                                                 The amount of ephemeral storage allocated to build containers [$KUBERNETES_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-ephemeral-storage-limit-overwrite-max-allowed value                           If set, the max amount the ephemeral limit can be set to. Used with the KUBERNETES_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-ephemeral-storage-request value                                               The amount of ephemeral storage requested from build containers [$KUBERNETES_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-ephemeral-storage-request-overwrite-max-allowed value                         If set, the max amount the ephemeral storage request can be set to. Used with the KUBERNETES_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-cpu-limit value                                                       The CPU allocation given to build service containers [$KUBERNETES_SERVICE_CPU_LIMIT]\n   --kubernetes-service-cpu-limit-overwrite-max-allowed value                                 If set, the max amount the service cpu limit can be set to. Used with the KUBERNETES_SERVICE_CPU_LIMIT variable in the build. [$KUBERNETES_SERVICE_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-cpu-request value                                                     The CPU allocation requested for build service containers [$KUBERNETES_SERVICE_CPU_REQUEST]\n   --kubernetes-service-cpu-request-overwrite-max-allowed value                               If set, the max amount the service cpu request can be set to. Used with the KUBERNETES_SERVICE_CPU_REQUEST variable in the build. [$KUBERNETES_SERVICE_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-memory-limit value                                                    The amount of memory allocated to build service containers [$KUBERNETES_SERVICE_MEMORY_LIMIT]\n   --kubernetes-service-memory-limit-overwrite-max-allowed value                              If set, the max amount the service memory limit can be set to. Used with the KUBERNETES_SERVICE_MEMORY_LIMIT variable in the build. [$KUBERNETES_SERVICE_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-memory-request value                                                  The amount of memory requested for build service containers [$KUBERNETES_SERVICE_MEMORY_REQUEST]\n   --kubernetes-service-memory-request-overwrite-max-allowed value                            If set, the max amount the service memory request can be set to. Used with the KUBERNETES_SERVICE_MEMORY_REQUEST variable in the build. [$KUBERNETES_SERVICE_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-ephemeral_storage-limit value                                         The amount of ephemeral storage allocated to build service containers [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-service-ephemeral_storage-limit-overwrite-max-allowed value                   If set, the max amount the service ephemeral storage limit can be set to. Used with the KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-ephemeral_storage-request value                                       The amount of ephemeral storage requested for build service containers [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-service-ephemeral_storage-request-overwrite-max-allowed value                 If set, the max amount the service ephemeral storage request can be set to. Used with the KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-cpu-limit value                                                        The CPU allocation given to build helper containers [$KUBERNETES_HELPER_CPU_LIMIT]\n   --kubernetes-helper-cpu-limit-overwrite-max-allowed value                                  If set, the max amount the helper cpu limit can be set to. Used with the KUBERNETES_HELPER_CPU_LIMIT variable in the build. [$KUBERNETES_HELPER_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-cpu-request value                                                      The CPU allocation requested for build helper containers [$KUBERNETES_HELPER_CPU_REQUEST]\n   --kubernetes-helper-cpu-request-overwrite-max-allowed value                                If set, the max amount the helper cpu request can be set to. Used with the KUBERNETES_HELPER_CPU_REQUEST variable in the build. [$KUBERNETES_HELPER_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-memory-limit value                                                     The amount of memory allocated to build helper containers [$KUBERNETES_HELPER_MEMORY_LIMIT]\n   --kubernetes-helper-memory-limit-overwrite-max-allowed value                               If set, the max amount the helper memory limit can be set to. Used with the KUBERNETES_HELPER_MEMORY_LIMIT variable in the build. [$KUBERNETES_HELPER_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-memory-request value                                                   The amount of memory requested for build helper containers [$KUBERNETES_HELPER_MEMORY_REQUEST]\n   --kubernetes-helper-memory-request-overwrite-max-allowed value                             If set, the max amount the helper memory request can be set to. Used with the KUBERNETES_HELPER_MEMORY_REQUEST variable in the build. [$KUBERNETES_HELPER_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-ephemeral_storage-limit value                                          The amount of ephemeral storage allocated to build helper containers [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-helper-ephemeral_storage-limit-overwrite-max-allowed value                    If set, the max amount the helper ephemeral storage limit can be set to. Used with the KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-ephemeral_storage-request value                                        The amount of ephemeral storage requested for build helper containers [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-helper-ephemeral_storage-request-overwrite-max-allowed value                  If set, the max amount the helper ephemeral storage request can be set to. Used with the KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-allowed-images value                                                          Image allowlist [$KUBERNETES_ALLOWED_IMAGES]\n   --kubernetes-allowed-pull-policies value                                                   Pull policy allowlist [$KUBERNETES_ALLOWED_PULL_POLICIES]\n   --kubernetes-allowed-services value                                                        Service allowlist [$KUBERNETES_ALLOWED_SERVICES]\n   --kubernetes-allowed-users value                                                           User allowlist [$KUBERNETES_ALLOWED_USERS]\n   --kubernetes-allowed-groups value                                                          Group allowlist [$KUBERNETES_ALLOWED_GROUPS]\n   --kubernetes-pull-policy value                                                             Policy for if/when to pull a container image (never, if-not-present, always). The cluster default will be used if not set [$KUBERNETES_PULL_POLICY]\n   --kubernetes-node-selector value                                                           A toml table/json object of key:value. Value is expected to be a string. When set this will create pods on k8s nodes that match all the key:value pairs. Only one selector is supported through environment variable configuration. (default: \"{}\") [$KUBERNETES_NODE_SELECTOR]\n   --kubernetes-node_selector_overwrite_allowed value                                         Regex to validate 'KUBERNETES_NODE_SELECTOR_*' values [$KUBERNETES_NODE_SELECTOR_OVERWRITE_ALLOWED]\n   --kubernetes-node-tolerations value                                                        A toml table/json object of key=value:effect. Value and effect are expected to be strings. When set, pods will tolerate the given taints. Only one toleration is supported through environment variable configuration. (default: \"{}\") [$KUBERNETES_NODE_TOLERATIONS]\n   --kubernetes-node_tolerations_overwrite_allowed value                                      Regex to validate 'KUBERNETES_NODE_TOLERATIONS_*' values [$KUBERNETES_NODE_TOLERATIONS_OVERWRITE_ALLOWED]\n   --kubernetes-image-pull-secrets value                                                      A list of image pull secrets that are used for pulling docker image [$KUBERNETES_IMAGE_PULL_SECRETS]\n   --kubernetes-use-service-account-image-pull-secrets                                        Do not provide any image pull secrets to the Pod created, so the secrets from the ServiceAccount can be used [$KUBERNETES_USE_SERVICE_ACCOUNT_IMAGE_PULL_SECRETS]\n   --kubernetes-helper-image value                                                            [ADVANCED] Override the default helper image used to clone repos and upload artifacts [$KUBERNETES_HELPER_IMAGE]\n   --kubernetes-helper-image-flavor value                                                     Set helper image flavor (alpine, ubuntu), defaults to alpine [$KUBERNETES_HELPER_IMAGE_FLAVOR]\n   --kubernetes-helper-image-autoset-arch-and-os                                              When set, it uses the underlying OS to set the Helper Image ARCH and OS [$KUBERNETES_HELPER_IMAGE_AUTOSET_ARCH_AND_OS]\n   --kubernetes-pod_termination_grace_period_seconds value                                    Pod-level setting which determines the duration in seconds which the pod has to terminate gracefully. After this, the processes are forcibly halted with a kill signal. Ignored if KUBERNETES_TERMINATIONGRACEPERIODSECONDS is specified. [$KUBERNETES_POD_TERMINATION_GRACE_PERIOD_SECONDS]\n   --kubernetes-cleanup_grace_period_seconds value                                            When cleaning up a pod on completion of a job, the duration in seconds which the pod has to terminate gracefully. After this, the processes are forcibly halted with a kill signal. Ignored if KUBERNETES_TERMINATIONGRACEPERIODSECONDS is specified. [$KUBERNETES_CLEANUP_GRACE_PERIOD_SECONDS]\n   --kubernetes-cleanup_resources_timeout value                                               The total amount of time for Kubernetes resources to be cleaned up after the job completes. Supported syntax: '1h30m', '300s', '10m'. Default is 5 minutes ('5m'). [$KUBERNETES_CLEANUP_RESOURCES_TIMEOUT]\n   --kubernetes-poll-interval value                                                           How frequently, in seconds, the runner will poll the Kubernetes pod it has just created to check its status (default: \"0\") [$KUBERNETES_POLL_INTERVAL]\n   --kubernetes-poll-timeout value                                                            The total amount of time, in seconds, that needs to pass before the runner will timeout attempting to connect to the pod it has just created (useful for queueing more builds that the cluster can handle at a time) (default: \"0\") [$KUBERNETES_POLL_TIMEOUT]\n   --kubernetes-resource-availability-check-max-attempts value                                The maximum number of attempts to check if a resource (service account and/or pull secret) set is available before giving up. There is 5 seconds interval between each attempt (default: \"0\") [$KUBERNETES_RESOURCE_AVAILABILITY_CHECK_MAX_ATTEMPTS]\n   --kubernetes-retry-limit value                                                             The maximum number of attempts to communicate with Kubernetes API. The retry interval between each attempt is based on a backoff algorithm starting at 500 ms (default: \"0\") [$KUBERNETES_REQUEST_RETRY_LIMIT]\n   --kubernetes-retry-backoff-max value                                                       The max backoff interval value in milliseconds that can be reached for retry attempts to communicate with Kubernetes API (default: \"0\") [$KUBERNETES_REQUEST_RETRY_BACKOFF_MAX]\n   --kubernetes-retry-limits value                                                            How many times each request error is to be retried (default: \"{}\") [$KUBERNETES_RETRY_LIMITS]\n   --kubernetes-pod-labels value                                                              A toml table/json object of key-value. Value is expected to be a string. When set, this will create pods with the given pod labels. Environment variables will be substituted for values here. (default: \"{}\")\n   --kubernetes-pod_labels_overwrite_allowed value                                            Regex to validate 'KUBERNETES_POD_LABELS_*' values [$KUBERNETES_POD_LABELS_OVERWRITE_ALLOWED]\n   --kubernetes-scheduler-name value                                                          Pods will be scheduled using this scheduler, if it exists [$KUBERNETES_SCHEDULER_NAME]\n   --kubernetes-service-account value                                                         Executor pods will use this Service Account to talk to kubernetes API [$KUBERNETES_SERVICE_ACCOUNT]\n   --kubernetes-service_account_overwrite_allowed value                                       Regex to validate 'KUBERNETES_SERVICE_ACCOUNT' value [$KUBERNETES_SERVICE_ACCOUNT_OVERWRITE_ALLOWED]\n   --kubernetes-automount-service-account-token value                                         Boolean to control the automount of the service account token in the build pod. [$KUBERNETES_AUTOMOUNT_SERVICE_ACCOUNT_TOKEN]\n   --kubernetes-pod-annotations value                                                         A toml table/json object of key-value. Value is expected to be a string. When set, this will create pods with the given annotations. Can be overwritten in build with KUBERNETES_POD_ANNOTATION_* variables (default: \"{}\")\n   --kubernetes-pod_annotations_overwrite_allowed value                                       Regex to validate 'KUBERNETES_POD_ANNOTATIONS_*' values [$KUBERNETES_POD_ANNOTATIONS_OVERWRITE_ALLOWED]\n   --kubernetes-pod-security-context-fs-group value                                           A special supplemental group that applies to all containers in a pod [$KUBERNETES_POD_SECURITY_CONTEXT_FS_GROUP]\n   --kubernetes-pod-security-context-run-as-group value                                       The GID to run the entrypoint of the container process [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-pod-security-context-run-as-non-root value                                    Indicates that the container must run as a non-root user [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-pod-security-context-run-as-user value                                        The UID to run the entrypoint of the container process [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-pod-security-context-supplemental-groups value                                A list of groups applied to the first process run in each container, in addition to the container's primary GID\n   --kubernetes-pod-security-context-selinux-type value                                       The SELinux type label that applies to all containers in a pod\n   --kubernetes-init_permissions_container_security_context-capabilities-add value            List of capabilities to add to the build container [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-init_permissions_container_security_context-capabilities-drop value           List of capabilities to drop from the build container [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-init_permissions_container_security_context-privileged value                  Run container in privileged mode [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-init_permissions_container_security_context-run-as-user value                 The UID to run the entrypoint of the container process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-init_permissions_container_security_context-run-as-group value                The GID to run the entrypoint of the container process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-init_permissions_container_security_context-run-as-non-root value             Indicates that the container must run as a non-root user [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-init_permissions_container_security_context-read-only-root-filesystem value   Whether this container has a read-only root filesystem. [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-init_permissions_container_security_context-allow-privilege-escalation value  AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-init_permissions_container_security_context-selinux-type value                The SELinux type label that is associated with the container process\n   --kubernetes-init_permissions_container_security_context-proc-mount value                  Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-build_container_security_context-capabilities-add value                       List of capabilities to add to the build container [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-build_container_security_context-capabilities-drop value                      List of capabilities to drop from the build container [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-build_container_security_context-privileged value                             Run container in privileged mode [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-build_container_security_context-run-as-user value                            The UID to run the entrypoint of the container process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-build_container_security_context-run-as-group value                           The GID to run the entrypoint of the container process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-build_container_security_context-run-as-non-root value                        Indicates that the container must run as a non-root user [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-build_container_security_context-read-only-root-filesystem value              Whether this container has a read-only root filesystem. [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-build_container_security_context-allow-privilege-escalation value             AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-build_container_security_context-selinux-type value                           The SELinux type label that is associated with the container process\n   --kubernetes-build_container_security_context-proc-mount value                             Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-helper_container_security_context-capabilities-add value                      List of capabilities to add to the build container [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-helper_container_security_context-capabilities-drop value                     List of capabilities to drop from the build container [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-helper_container_security_context-privileged value                            Run container in privileged mode [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-helper_container_security_context-run-as-user value                           The UID to run the entrypoint of the container process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-helper_container_security_context-run-as-group value                          The GID to run the entrypoint of the container process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-helper_container_security_context-run-as-non-root value                       Indicates that the container must run as a non-root user [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-helper_container_security_context-read-only-root-filesystem value             Whether this container has a read-only root filesystem. [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-helper_container_security_context-allow-privilege-escalation value            AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-helper_container_security_context-selinux-type value                          The SELinux type label that is associated with the container process\n   --kubernetes-helper_container_security_context-proc-mount value                            Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-service_container_security_context-capabilities-add value                     List of capabilities to add to the build container [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-service_container_security_context-capabilities-drop value                    List of capabilities to drop from the build container [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-service_container_security_context-privileged value                           Run container in privileged mode [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-service_container_security_context-run-as-user value                          The UID to run the entrypoint of the container process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-service_container_security_context-run-as-group value                         The GID to run the entrypoint of the container process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-service_container_security_context-run-as-non-root value                      Indicates that the container must run as a non-root user [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-service_container_security_context-read-only-root-filesystem value            Whether this container has a read-only root filesystem. [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-service_container_security_context-allow-privilege-escalation value           AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-service_container_security_context-selinux-type value                         The SELinux type label that is associated with the container process\n   --kubernetes-service_container_security_context-proc-mount value                           Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-host_aliases value                                                            Add a custom host-to-IP mapping\n   --kubernetes-cap-add value                                                                 Add Linux capabilities [$KUBERNETES_CAP_ADD]\n   --kubernetes-cap-drop value                                                                Drop Linux capabilities [$KUBERNETES_CAP_DROP]\n   --kubernetes-dns-policy value                                                              How Kubernetes should try to resolve DNS from the created pods. If unset, Kubernetes will use the default 'ClusterFirst'. Valid values are: none, default, cluster-first, cluster-first-with-host-net [$KUBERNETES_DNS_POLICY]\n   --kubernetes-priority_class_name value                                                     If set, the Kubernetes Priority Class to be set to the Pods [$KUBERNETES_PRIORITY_CLASS_NAME]\n   --kubernetes-logs-base-dir value                                                           Base directory for the path where build logs are stored. This directory is prepended to the final generated path. For example, <logs_base_dir>/logs-<project_id>-<job_id>. [$KUBERNETES_LOGS_BASE_DIR]\n   --kubernetes-scripts-base-dir value                                                        Base directory for the path where build scripts are stored. This directory is prepended to the final generated path. For example, <scripts_base_dir>/scripts-<project_id>-<job_id>. [$KUBERNETES_SCRIPTS_BASE_DIR]\n   --kubernetes-print-pod-warning-events value                                                When enabled, all warning events associated with the pod are retrieved when the job fails. Enabled by default. [$KUBERNETES_PRINT_POD_WARNING_EVENTS]\n   --custom-config-exec value                                                                 Executable that allows to inject configuration values to the executor [$CUSTOM_CONFIG_EXEC]\n   --custom-config-args value                                                                 Arguments for the config executable\n   --custom-config-exec-timeout value                                                         Timeout for the config executable (in seconds) [$CUSTOM_CONFIG_EXEC_TIMEOUT]\n   --custom-prepare-exec value                                                                Executable that prepares executor [$CUSTOM_PREPARE_EXEC]\n   --custom-prepare-args value                                                                Arguments for the prepare executable\n   --custom-prepare-exec-timeout value                                                        Timeout for the prepare executable (in seconds) [$CUSTOM_PREPARE_EXEC_TIMEOUT]\n   --custom-run-exec value                                                                    Executable that runs the job script in executor [$CUSTOM_RUN_EXEC]\n   --custom-run-args value                                                                    Arguments for the run executable\n   --custom-cleanup-exec value                                                                Executable that cleanups after executor run [$CUSTOM_CLEANUP_EXEC]\n   --custom-cleanup-args value                                                                Arguments for the cleanup executable\n   --custom-cleanup-exec-timeout value                                                        Timeout for the cleanup executable (in seconds) [$CUSTOM_CLEANUP_EXEC_TIMEOUT]\n   --custom-graceful-kill-timeout value                                                       Graceful timeout for scripts execution after SIGTERM is sent to the process (in seconds). This limits the time given for scripts to perform the cleanup before exiting [$CUSTOM_GRACEFUL_KILL_TIMEOUT]\n   --custom-force-kill-timeout value                                                          Force timeout for scripts execution (in seconds). Counted from the force kill call; if process will be not terminated, Runner will abandon process termination and log an error [$CUSTOM_FORCE_KILL_TIMEOUT]\n   --step-runner-image value                                                                  [ADVANCED] Override the default step-runner image used to inject the step-runner binary into the build container [$STEP_RUNNER_IMAGE]",
+      "description": "register a new runner"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--all-runners",
+          "shortcut": null,
+          "description": "Reset all runner authentication tokens",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Config file",
+          "value": "/etc/gitlab-runner/config.toml",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "--id",
+          "shortcut": "-i",
+          "description": "ID of the runner whose token you wish to reset (as defined in the configuration file)",
+          "value": "0",
+          "default": "0"
+        },
+        {
+          "option": "--name",
+          "shortcut": "-n",
+          "description": "Name of the runner whose token you wish to reset (as defined in the configuration file)",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--pat",
+          "shortcut": null,
+          "description": "Personal access token to use in lieu of runner's old authentication token",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--url",
+          "shortcut": "-u",
+          "description": "URL of the runner whose token you wish to reset (as defined in the configuration file)",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner reset-token",
+      "raw_help_text": "NAME:\n   gitlab-runner reset-token - reset a runner's token\n\nUSAGE:\n   gitlab-runner reset-token [command options] [arguments...]\n\nOPTIONS:\n   -c value, --config value  Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   -n value, --name value    Name of the runner whose token you wish to reset (as defined in the configuration file)\n   -u value, --url value     URL of the runner whose token you wish to reset (as defined in the configuration file)\n   -i value, --id value      ID of the runner whose token you wish to reset (as defined in the configuration file) (default: \"0\")\n   --all-runners             Reset all runner authentication tokens\n   --pat value               Personal access token to use in lieu of runner's old authentication token",
+      "description": "reset a runner's token"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Specify service name to use",
+          "value": "value",
+          "default": "gitlab-runner"
+        }
+      ],
+      "name": "gitlab-runner restart",
+      "raw_help_text": "NAME:\n   gitlab-runner restart - restart service\n\nUSAGE:\n   gitlab-runner restart [command options] [arguments...]\n\nOPTIONS:\n   --service value, -n value  Specify service name to use (default: \"gitlab-runner\")",
+      "description": "restart service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--listen-address",
+          "shortcut": null,
+          "description": "Metrics / pprof server listening address",
+          "value": "value",
+          "default": "$LISTEN_ADDRESS"
+        },
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Config file",
+          "value": "value",
+          "default": "\"/etc/gitlab-runner/config.toml\""
+        },
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Use different names for different services",
+          "value": "value",
+          "default": "\"gitlab-runner\""
+        },
+        {
+          "option": "--working-directory",
+          "shortcut": "-d",
+          "description": "Specify custom working directory",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--user",
+          "shortcut": "-u",
+          "description": "Use specific user to execute shell scripts",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--syslog",
+          "shortcut": null,
+          "description": "Log to system service logger",
+          "value": null,
+          "default": "$LOG_SYSLOG"
+        }
+      ],
+      "name": "gitlab-runner run",
+      "raw_help_text": "NAME:\n   gitlab-runner run - run multi runner service\n\nUSAGE:\n   gitlab-runner run [command options] [arguments...]\n\nOPTIONS:\n   --listen-address value               Metrics / pprof server listening address [$LISTEN_ADDRESS]\n   -c value, --config value             Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   -n value, --service value            Use different names for different services (default: \"gitlab-runner\")\n   -d value, --working-directory value  Specify custom working directory\n   -u value, --user value               Use specific user to execute shell scripts\n   --syslog                             Log to system service logger [$LOG_SYSLOG]",
+      "description": "run multi runner service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--builds-dir",
+          "shortcut": null,
+          "description": "Directory where builds are stored",
+          "value": "[$RUNNER_BUILDS_DIR]",
+          "default": null
+        },
+        {
+          "option": "--cache-dir",
+          "shortcut": null,
+          "description": "Directory where build cache is stored",
+          "value": "[$RUNNER_CACHE_DIR]",
+          "default": null
+        },
+        {
+          "option": "--cache-max_uploaded_archive_size",
+          "shortcut": null,
+          "description": "Limit the size of the cache archive being uploaded to cloud storage, in bytes.",
+          "value": "(default: \"0\") [$CACHE_MAXIMUM_UPLOADED_ARCHIVE_SIZE]",
+          "default": "0"
+        },
+        {
+          "option": "--cache-s3-bucket-name",
+          "shortcut": null,
+          "description": "Name of the bucket where cache will be stored",
+          "value": "[$CACHE_S3_BUCKET_NAME]",
+          "default": null
+        },
+        {
+          "option": "--custom-config-args",
+          "shortcut": null,
+          "description": "Arguments for the config executable",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--custom-config-exec",
+          "shortcut": null,
+          "description": "Executable that allows to inject configuration values to the executor",
+          "value": "[$CUSTOM_CONFIG_EXEC]",
+          "default": null
+        },
+        {
+          "option": "--custom-config-exec-timeout",
+          "shortcut": null,
+          "description": "Timeout for the config executable (in seconds)",
+          "value": "[$CUSTOM_CONFIG_EXEC_TIMEOUT]",
+          "default": null
+        },
+        {
+          "option": "--custom-cleanup-args",
+          "shortcut": null,
+          "description": "Arguments for the cleanup executable",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--custom-cleanup-exec",
+          "shortcut": null,
+          "description": "Executable that cleanups after executor run",
+          "value": "[$CUSTOM_CLEANUP_EXEC]",
+          "default": null
+        },
+        {
+          "option": "--custom-cleanup-exec-timeout",
+          "shortcut": null,
+          "description": "Timeout for the cleanup executable (in seconds)",
+          "value": "[$CUSTOM_CLEANUP_EXEC_TIMEOUT]",
+          "default": null
+        },
+        {
+          "option": "--custom-prepare-args",
+          "shortcut": null,
+          "description": "Arguments for the prepare executable",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--custom-prepare-exec",
+          "shortcut": null,
+          "description": "Executable that prepares executor",
+          "value": "[$CUSTOM_PREPARE_EXEC]",
+          "default": null
+        },
+        {
+          "option": "--custom-prepare-exec-timeout",
+          "shortcut": null,
+          "description": "Timeout for the prepare executable (in seconds)",
+          "value": "[$CUSTOM_PREPARE_EXEC_TIMEOUT]",
+          "default": null
+        },
+        {
+          "option": "--custom-run-args",
+          "shortcut": null,
+          "description": "Arguments for the run executable",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--custom-run-exec",
+          "shortcut": null,
+          "description": "Executable that runs the job script in executor",
+          "value": "[$CUSTOM_RUN_EXEC]",
+          "default": null
+        },
+        {
+          "option": "--docker-cgroup-parent",
+          "shortcut": null,
+          "description": "String value containing the cgroup parent to use",
+          "value": "[$DOCKER_CGROUP_PARENT]",
+          "default": null
+        },
+        {
+          "option": "--docker-cpuset-cpus",
+          "shortcut": null,
+          "description": "String value containing the cgroups CpusetCpus to use",
+          "value": "[$DOCKER_CPUSET_CPUS]",
+          "default": null
+        },
+        {
+          "option": "--docker-cpuset-mems",
+          "shortcut": null,
+          "description": "String value containing the cgroups CpusetMems to use",
+          "value": "[$DOCKER_CPUSET_MEMS]",
+          "default": null
+        },
+        {
+          "option": "--docker-dns",
+          "shortcut": null,
+          "description": "A list of DNS servers for the container to use",
+          "value": "[$DOCKER_DNS]",
+          "default": null
+        },
+        {
+          "option": "--docker-dns-search",
+          "shortcut": null,
+          "description": "A list of DNS search domains",
+          "value": "[$DOCKER_DNS_SEARCH]",
+          "default": null
+        },
+        {
+          "option": "--docker-image",
+          "shortcut": null,
+          "description": "Docker image to be used",
+          "value": "[$DOCKER_IMAGE]",
+          "default": null
+        },
+        {
+          "option": "--docker-memory",
+          "shortcut": null,
+          "description": "Memory limit (format: <number>[<unit>]). Unit can be one of b, k, m, or g. Minimum is 4M.",
+          "value": "[$DOCKER_MEMORY]",
+          "default": null
+        },
+        {
+          "option": "--docker-service-memory",
+          "shortcut": null,
+          "description": "Service memory limit (format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. Minimum is 4M.",
+          "value": "[$DOCKER_SERVICE_MEMORY]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-allowed-images",
+          "shortcut": null,
+          "description": "Image allowlist",
+          "value": "[$KUBERNETES_ALLOWED_IMAGES]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-bearer_token",
+          "shortcut": null,
+          "description": "Optional Kubernetes service account token used to start build pods.",
+          "value": "[$KUBERNETES_BEARER_TOKEN]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-bearer_token_overwrite_allowed",
+          "shortcut": null,
+          "description": "Bool to authorize builds to specify their own bearer token for creation.",
+          "value": "[$KUBERNETES_BEARER_TOKEN_OVERWRITE_ALLOWED]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-host",
+          "shortcut": null,
+          "description": "Optional Kubernetes master host URL (auto-discovery attempted if not specified)",
+          "value": "[$KUBERNETES_HOST]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-image",
+          "shortcut": null,
+          "description": "Default docker image to use for builds when none is specified",
+          "value": "[$KUBERNETES_IMAGE]",
+          "default": null
+        },
+        {
+          "option": "--kubernetes-namespace",
+          "shortcut": null,
+          "description": "Namespace to run Kubernetes jobs in",
+          "value": "[$KUBERNETES_NAMESPACE]",
+          "default": null
+        },
+        {
+          "option": "--max-builds",
+          "shortcut": null,
+          "description": "How many builds to process before exiting (default: \"0\")",
+          "value": "[$MACHINE_MAX_BUILDS]",
+          "default": "0"
+        },
+        {
+          "option": "--shutdown-timeout",
+          "shortcut": null,
+          "description": "Number of seconds after which the forceful shutdown operation will timeout and process will exit (default: \"0\")",
+          "value": "[$SHUTDOWN_TIMEOUT]",
+          "default": "0"
+        },
+        {
+          "option": "--wait-timeout",
+          "shortcut": null,
+          "description": "How long to wait in seconds before receiving the first job (default: \"0\")",
+          "value": "[$WAIT_TIMEOUT]",
+          "default": "0"
+        },
+        {
+          "option": "-c",
+          "shortcut": "--config",
+          "description": "Config file (default: \"/etc/gitlab-runner/config.toml\")",
+          "value": "[$CONFIG_FILE]",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "-r",
+          "shortcut": "--runner",
+          "description": "Runner name from the config file to use instead of command-line arguments",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner run-single",
+      "raw_help_text": "NAME:\n   gitlab-runner run-single - start single runner\n\nUSAGE:\n   gitlab-runner run-single [command options] [arguments...]\n\nOPTIONS:\n   --name value, --description value                                                          Runner name [$RUNNER_NAME]\n   --limit value                                                                              Maximum number of builds processed by this runner (default: \"0\") [$RUNNER_LIMIT]\n   --output-limit value                                                                       Maximum build trace size in kilobytes (default: \"0\") [$RUNNER_OUTPUT_LIMIT]\n   --request-concurrency value                                                                Maximum concurrency for job requests (default: \"0\") [$RUNNER_REQUEST_CONCURRENCY]\n   --unhealthy-requests-limit value                                                           The number of 'unhealthy' responses to new job requests after which a runner worker will be disabled (default: \"0\") [$RUNNER_UNHEALTHY_REQUESTS_LIMIT]\n   --unhealthy-interval value                                                                 Duration for which a runner worker is disabled after exceeding the unhealthy requests limit. Supports syntax like '3600s', '1h30min' etc\n   --job-status-final-update-retry-limit value                                                The maximum number of times GitLab Runner can retry to push the final job status to the GitLab instance. (default: \"0\") [$RUNNER_job_status_final_update_retry_limit]\n   -u value, --url value                                                                      GitLab instance URL [$CI_SERVER_URL]\n   -t value, --token value                                                                    Runner token [$CI_SERVER_TOKEN]\n   --tls-ca-file value                                                                        File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value                                                                      File containing certificate for TLS client auth when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value                                                                       File containing private key for TLS client auth when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   --executor value                                                                           Select executor, eg. shell, docker, etc. [$RUNNER_EXECUTOR]\n   --builds-dir value                                                                         Directory where builds are stored [$RUNNER_BUILDS_DIR]\n   --cache-dir value                                                                          Directory where build cache is stored [$RUNNER_CACHE_DIR]\n   --clone-url value                                                                          Overwrite the default URL used to clone or fetch the git ref [$CLONE_URL]\n   --env value                                                                                Custom environment variables injected to build environment [$RUNNER_ENV]\n   --proxy-exec value                                                                         (Experimental) Proxy execution via helper binary [$RUNNER_PROXY_EXEC]\n   --pre-get-sources-script value                                                             Runner-specific commands to be executed on the runner before updating the Git repository an updating submodules. [$RUNNER_PRE_GET_SOURCES_SCRIPT]\n   --post-get-sources-script value                                                            Runner-specific commands to be executed on the runner after updating the Git repository and updating submodules. [$RUNNER_POST_GET_SOURCES_SCRIPT]\n   --pre-build-script value                                                                   Runner-specific command script executed just before build executes [$RUNNER_PRE_BUILD_SCRIPT]\n   --post-build-script value                                                                  Runner-specific command script executed just after build executes [$RUNNER_POST_BUILD_SCRIPT]\n   --debug-trace-disabled                                                                     When set to true Runner will disable the possibility of using the CI_DEBUG_TRACE feature [$RUNNER_DEBUG_TRACE_DISABLED]\n   --safe-directory-checkout value                                                            When set to true, Git global configuration will get a safe.directory directive pointing the job's working directory' [$RUNNER_SAFE_DIRECTORY_CHECKOUT]\n   --clean-git-config value                                                                   Clean git configuration before and after the build. Defaults to true, except the shell executor is used or the git strategy is \"none\" [$RUNNER_CLEAN_GIT_CONFIG]\n   --shell value                                                                              Select bash, sh, cmd, pwsh or powershell [$RUNNER_SHELL]\n   --custom_build_dir-enabled value                                                           Enable job specific build directories [$CUSTOM_BUILD_DIR_ENABLED]\n   --cache-type value                                                                         Select caching method [$CACHE_TYPE]\n   --cache-path value                                                                         Name of the path to prepend to the cache URL [$CACHE_PATH]\n   --cache-shared                                                                             Enable cache sharing between runners. [$CACHE_SHARED]\n   --cache-max_uploaded_archive_size value                                                    Limit the size of the cache archive being uploaded to cloud storage, in bytes. (default: \"0\") [$CACHE_MAXIMUM_UPLOADED_ARCHIVE_SIZE]\n   --cache-s3-server-address value                                                            A host:port to the used S3-compatible server [$CACHE_S3_SERVER_ADDRESS]\n   --cache-s3-access-key value                                                                S3 Access Key [$CACHE_S3_ACCESS_KEY]\n   --cache-s3-secret-key value                                                                S3 Secret Key [$CACHE_S3_SECRET_KEY]\n   --cache-s3-session-token value                                                             S3 Session Token [$CACHE_S3_SESSION_TOKEN]\n   --cache-s3-bucket-name value                                                               Name of the bucket where cache will be stored [$CACHE_S3_BUCKET_NAME]\n   --cache-s3-bucket-location value                                                           Name of S3 region [$CACHE_S3_BUCKET_LOCATION]\n   --cache-s3-insecure                                                                        Use insecure mode (without https) [$CACHE_S3_INSECURE]\n   --cache-s3-authentication_type value                                                       IAM or credentials [$CACHE_S3_AUTHENTICATION_TYPE]\n   --cache-s3-server-side-encryption value                                                    Server side encryption type (S3, or KMS) [$CACHE_S3_SERVER_SIDE_ENCRYPTION]\n   --cache-s3-server-side-encryption-key-id value                                             Server side encryption key ID (alias or Key ID or Key ARN) [$CACHE_S3_SERVER_SIDE_ENCRYPTION_KEY_ID]\n   --cache-s3-dual-stack value                                                                Enable dual-stack (IPv4 and IPv6) endpoints (default: true) [$CACHE_S3_DUAL_STACK]\n   --cache-s3-path-style value                                                                Use path style access (default: false) [$CACHE_S3_PATH_STYLE]\n   --cache-s3-accelerate                                                                      Enable S3 Transfer Acceleration [$CACHE_S3_ACCELERATE]\n   --cache-s3-role-arn value                                                                  Role ARN for transferring cache to S3 [$CACHE_S3_ROLE_ARN]\n   --cache-s3-upload-role-arn value                                                           Role ARN for uploading cache to S3 [$CACHE_S3_UPLOAD_ROLE_ARN]\n   --cache-gcs-access-id value                                                                ID of GCP Service Account used to access the storage [$CACHE_GCS_ACCESS_ID]\n   --cache-gcs-private-key value                                                              Private key used to sign GCS requests [$CACHE_GCS_PRIVATE_KEY]\n   --cache-gcs-credentials-file value                                                         File with GCP credentials, containing AccessID and PrivateKey [$GOOGLE_APPLICATION_CREDENTIALS]\n   --cache-gcs-bucket-name value                                                              Name of the bucket where cache will be stored [$CACHE_GCS_BUCKET_NAME]\n   --cache-azure-account-name value                                                           Account name for Azure Blob Storage [$CACHE_AZURE_ACCOUNT_NAME]\n   --cache-azure-account-key value                                                            Access key for Azure Blob Storage [$CACHE_AZURE_ACCOUNT_KEY]\n   --cache-azure-container-name value                                                         Name of the Azure container where cache will be stored [$CACHE_AZURE_CONTAINER_NAME]\n   --cache-azure-storage-domain value                                                         Domain name of the Azure storage (e.g. blob.core.windows.net) [$CACHE_AZURE_STORAGE_DOMAIN]\n   --feature-flags value                                                                      Enable/Disable feature flags https://docs.gitlab.com/runner/configuration/feature-flags/ (default: \"{}\") [$FEATURE_FLAGS]\n   --use-slot-cgroups                                                                         Use slot-derived cgroup names for resource isolation [$RUNNER_USE_SLOT_CGROUPS]\n   --slot-cgroup-template slot                                                                Template for slot-derived cgroup names (use $slot placeholder) [$RUNNER_SLOT_CGROUP_TEMPLATE]\n   --ssh-user value                                                                           User name [$SSH_USER]\n   --ssh-password value                                                                       User password [$SSH_PASSWORD]\n   --ssh-host value                                                                           Remote host [$SSH_HOST]\n   --ssh-port value                                                                           Remote host port [$SSH_PORT]\n   --ssh-identity-file value                                                                  Identity file to be used [$SSH_IDENTITY_FILE]\n   --ssh-disable-strict-host-key-checking value                                               Disable SSH strict host key checking [$DISABLE_STRICT_HOST_KEY_CHECKING]\n   --ssh-known-hosts-file value                                                               Location of known_hosts file. Defaults to ~/.ssh/known_hosts [$KNOWN_HOSTS_FILE]\n   --docker-host value                                                                        Docker daemon address [$DOCKER_HOST]\n   --docker-cert-path value                                                                   Certificate path [$DOCKER_CERT_PATH]\n   --docker-tlsverify                                                                         Use TLS and verify the remote [$DOCKER_TLS_VERIFY]\n   --docker-hostname value                                                                    Custom container hostname [$DOCKER_HOSTNAME]\n   --docker-image value                                                                       Docker image to be used [$DOCKER_IMAGE]\n   --docker-runtime value                                                                     Docker runtime to be used [$DOCKER_RUNTIME]\n   --docker-memory value                                                                      Memory limit (format: <number>[<unit>]). Unit can be one of b, k, m, or g. Minimum is 4M. [$DOCKER_MEMORY]\n   --docker-memory-swap value                                                                 Total memory limit (memory + swap, format: <number>[<unit>]). Unit can be one of b, k, m, or g. [$DOCKER_MEMORY_SWAP]\n   --docker-memory-reservation value                                                          Memory soft limit (format: <number>[<unit>]). Unit can be one of b, k, m, or g. [$DOCKER_MEMORY_RESERVATION]\n   --docker-cgroup-parent value                                                               String value containing the cgroup parent to use [$DOCKER_CGROUP_PARENT]\n   --docker-cpuset-cpus value                                                                 String value containing the cgroups CpusetCpus to use [$DOCKER_CPUSET_CPUS]\n   --docker-cpuset-mems value                                                                 String value containing the cgroups CpusetMems to use [$DOCKER_CPUSET_MEMS]\n   --docker-cpus value                                                                        Number of CPUs [$DOCKER_CPUS]\n   --docker-cpu-shares value                                                                  Number of CPU shares (default: \"0\") [$DOCKER_CPU_SHARES]\n   --docker-dns value                                                                         A list of DNS servers for the container to use [$DOCKER_DNS]\n   --docker-dns-search value                                                                  A list of DNS search domains [$DOCKER_DNS_SEARCH]\n   --docker-privileged                                                                        Give extended privileges to container [$DOCKER_PRIVILEGED]\n   --docker-services_privileged value                                                         When set this will give or remove extended privileges to container services [$DOCKER_SERVICES_PRIVILEGED]\n   --docker-disable-entrypoint-overwrite                                                      Disable the possibility for a container to overwrite the default image entrypoint [$DOCKER_DISABLE_ENTRYPOINT_OVERWRITE]\n   --docker-user value                                                                        Run all commands in the container as the specified user. [$DOCKER_USER]\n   --docker-allowed_users value                                                               List of allowed users under which to run commands in the build container. [$DOCKER_ALLOWED_USERS]\n   --docker-group-add value                                                                   Add additional groups to join [$DOCKER_GROUP_ADD]\n   --docker-userns value                                                                      User namespace to use [$DOCKER_USERNS_MODE]\n   --docker-cap-add value                                                                     Add Linux capabilities [$DOCKER_CAP_ADD]\n   --docker-cap-drop value                                                                    Drop Linux capabilities [$DOCKER_CAP_DROP]\n   --docker-oom-kill-disable                                                                  Do not kill processes in a container if an out-of-memory (OOM) error occurs [$DOCKER_OOM_KILL_DISABLE]\n   --docker-oom-score-adjust value                                                            Adjust OOM score (default: \"0\") [$DOCKER_OOM_SCORE_ADJUST]\n   --docker-security-opt value                                                                Security Options [$DOCKER_SECURITY_OPT]\n   --docker-services-security-opt value                                                       Security Options for container services [$DOCKER_SERVICES_SECURITY_OPT]\n   --docker-devices value                                                                     Add a host device to the container [$DOCKER_DEVICES]\n   --docker-device-cgroup-rules value                                                         Add a device cgroup rule to the container [$DOCKER_DEVICE_CGROUP_RULES]\n   --docker-gpus value                                                                        Request GPUs to be used by Docker [$DOCKER_GPUS]\n   --docker-services_devices value                                                            A toml table/json object with the format key=values. Expose host devices to services based on image name. (default: \"{}\") [$DOCKER_SERVICES_DEVICES]\n   --docker-disable-cache                                                                     Disable all container caching [$DOCKER_DISABLE_CACHE]\n   --docker-volumes value                                                                     Bind-mount a volume and create it if it doesn't exist prior to mounting. Can be specified multiple times once per mountpoint, e.g. --docker-volumes 'test0:/test0' --docker-volumes 'test1:/test1' [$DOCKER_VOLUMES]\n   --docker-volume-driver value                                                               Volume driver to be used [$DOCKER_VOLUME_DRIVER]\n   --docker-volume-driver-ops value                                                           A toml table/json object with the format key=values. Volume driver ops to be specified (default: \"{}\") [$DOCKER_VOLUME_DRIVER_OPS]\n   --docker-cache-dir value                                                                   Directory where to store caches [$DOCKER_CACHE_DIR]\n   --docker-extra-hosts value                                                                 Add a custom host-to-IP mapping [$DOCKER_EXTRA_HOSTS]\n   --docker-volumes-from value                                                                A list of volumes to inherit from another container [$DOCKER_VOLUMES_FROM]\n   --docker-network-mode value                                                                Add container to a custom network [$DOCKER_NETWORK_MODE]\n   --docker-ipcmode value                                                                     Select IPC mode for container [$DOCKER_IPC_MODE]\n   --docker-mac-address value                                                                 Container MAC address (e.g., 92:d0:c6:0a:29:33) [$DOCKER_MAC_ADDRESS]\n   --docker-links value                                                                       Add link to another container [$DOCKER_LINKS]\n   --docker-services-limit value                                                              The maximum amount of services allowed [$DOCKER_SERVICES_LIMIT]\n   --docker-service-memory value                                                              Service memory limit (format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. Minimum is 4M. [$DOCKER_SERVICE_MEMORY]\n   --docker-service-memory-swap value                                                         Service total memory limit (memory + swap, format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. [$DOCKER_SERVICE_MEMORY_SWAP]\n   --docker-service-memory-reservation value                                                  Service memory soft limit (format: <number>[<unit>]). Unit can be one of b (if omitted), k, m, or g. [$DOCKER_SERVICE_MEMORY_RESERVATION]\n   --docker-service-cgroup-parent value                                                       String value containing the cgroup parent to use for service [$DOCKER_SERVICE_CGROUP_PARENT]\n   --docker-service-slot-cgroup-template slot                                                 Template for service slot-derived cgroup names (use $slot placeholder) [$DOCKER_SERVICE_SLOT_CGROUP_TEMPLATE]\n   --docker-service-cpuset-cpus value                                                         String value containing the cgroups CpusetCpus to use for service [$DOCKER_SERVICE_CPUSET_CPUS]\n   --docker-service-cpus value                                                                Number of CPUs for service [$DOCKER_SERVICE_CPUS]\n   --docker-service-cpu-shares value                                                          Number of CPU shares for service (default: \"0\") [$DOCKER_SERVICE_CPU_SHARES]\n   --docker-service_gpus value                                                                Request GPUs to be used by Docker for services [$DOCKER_SERVICE_GPUS]\n   --docker-wait-for-services-timeout value                                                   How long to wait for service startup (default: \"0\") [$DOCKER_WAIT_FOR_SERVICES_TIMEOUT]\n   --docker-allowed-images value                                                              Image allowlist [$DOCKER_ALLOWED_IMAGES]\n   --docker-allowed-privileged-images value                                                   Privileged image allowlist [$DOCKER_ALLOWED_PRIVILEGED_IMAGES]\n   --docker-allowed-privileged-services value                                                 Privileged Service allowlist [$DOCKER_ALLOWED_PRIVILEGED_SERVICES]\n   --docker-allowed-pull-policies value                                                       Pull policy allowlist [$DOCKER_ALLOWED_PULL_POLICIES]\n   --docker-allowed-services value                                                            Service allowlist [$DOCKER_ALLOWED_SERVICES]\n   --docker-pull-policy value                                                                 Image pull policy: never, if-not-present, always [$DOCKER_PULL_POLICY]\n   --docker-isolation value                                                                   Container isolation technology. Windows only [$DOCKER_ISOLATION]\n   --docker-shm-size value                                                                    Shared memory size for docker images (in bytes) (default: \"0\") [$DOCKER_SHM_SIZE]\n   --docker-tmpfs value                                                                       A toml table/json object with the format key=values. When set this will mount the specified path in the key as a tmpfs volume in the main container, using the options specified as key. For the supported options, see the documentation for the unix 'mount' command (default: \"{}\") [$DOCKER_TMPFS]\n   --docker-services-tmpfs value                                                              A toml table/json object with the format key=values. When set this will mount the specified path in the key as a tmpfs volume in all the service containers, using the options specified as key. For the supported options, see the documentation for the unix 'mount' command (default: \"{}\") [$DOCKER_SERVICES_TMPFS]\n   --docker-sysctls value                                                                     Sysctl options, a toml table/json object of key=value. Value is expected to be a string. (default: \"{}\") [$DOCKER_SYSCTLS]\n   --docker-helper-image value                                                                [ADVANCED] Override the default helper image used to clone repos and upload artifacts [$DOCKER_HELPER_IMAGE]\n   --docker-helper-image-flavor value                                                         Set helper image flavor (alpine, ubuntu), defaults to alpine [$DOCKER_HELPER_IMAGE_FLAVOR]\n   --docker-container-labels value                                                            A toml table/json object of key-value. Value is expected to be a string. When set, this will create containers with the given container labels. Environment variables will be substituted for values here. (default: \"{}\")\n   --docker-enable-ipv6                                                                       Enable IPv6 for automatically created networks. This is only takes affect when the feature flag FF_NETWORK_PER_BUILD is enabled.\n   --docker-ulimit value                                                                      Ulimit options for container (default: \"{}\") [$DOCKER_ULIMIT]\n   --docker-network-mtu value                                                                 MTU of the Docker network created for the job IFF the FF_NETWORK_PER_BUILD feature-flag was specified. (default: \"0\")\n   --parallels-base-name value                                                                VM name to be used [$PARALLELS_BASE_NAME]\n   --parallels-template-name value                                                            VM template to be created [$PARALLELS_TEMPLATE_NAME]\n   --parallels-disable-snapshots                                                              Disable snapshoting to speedup VM creation [$PARALLELS_DISABLE_SNAPSHOTS]\n   --parallels-time-server value                                                              Timeserver to sync the guests time from. Defaults to time.apple.com [$PARALLELS_TIME_SERVER]\n   --parallels-allowed-images value                                                           Image (base_name) allowlist [$PARALLELS_ALLOWED_IMAGES]\n   --virtualbox-base-name value                                                               VM name to be used [$VIRTUALBOX_BASE_NAME]\n   --virtualbox-base-snapshot value                                                           Name or UUID of a specific VM snapshot to clone [$VIRTUALBOX_BASE_SNAPSHOT]\n   --virtualbox-base-folder value                                                             Folder in which to save the new VM. If empty, uses VirtualBox default [$VIRTUALBOX_BASE_FOLDER]\n   --virtualbox-disable-snapshots                                                             Disable snapshoting to speedup VM creation [$VIRTUALBOX_DISABLE_SNAPSHOTS]\n   --virtualbox-allowed-images value                                                          Image allowlist [$VIRTUALBOX_ALLOWED_IMAGES]\n   --virtualbox-start-type value                                                              Graphical front-end type [$VIRTUALBOX_START_TYPE]\n   --machine-max-growth-rate value                                                            Maximum machines being provisioned concurrently, set to 0 for unlimited (default: \"0\") [$MACHINE_MAX_GROWTH_RATE]\n   --machine-idle-nodes value                                                                 Maximum idle machines (default: \"0\") [$MACHINE_IDLE_COUNT]\n   --machine-idle-scale-factor value                                                          (Experimental) Defines what factor of in-use machines should be used as current idle value, but never more then defined IdleCount. 0.0 means use IdleCount as a static number (defaults to 0.0). Must be defined as float number. (default: \"0\") [$MACHINE_IDLE_SCALE_FACTOR]\n   --machine-idle-count-min value                                                             Minimal number of idle machines when IdleScaleFactor is in use. Defaults to 1. (default: \"0\") [$MACHINE_IDLE_COUNT_MIN]\n   --machine-idle-time value                                                                  Minimum time after node can be destroyed (default: \"0\") [$MACHINE_IDLE_TIME]\n   --machine-max-builds value                                                                 Maximum number of builds processed by machine (default: \"0\") [$MACHINE_MAX_BUILDS]\n   --machine-machine-driver value                                                             The driver to use when creating machine [$MACHINE_DRIVER]\n   --machine-machine-name value                                                               The template for machine name (needs to include %s) [$MACHINE_NAME]\n   --machine-machine-options value                                                            Additional machine creation options [$MACHINE_OPTIONS]\n   --machine-machine-options-with-name value                                                  Template for additional options that may reference the machine name (need to include %s) [$MACHINE_OPTIONS_WITH_NAME]\n   --kubernetes-host value                                                                    Optional Kubernetes master host URL (auto-discovery attempted if not specified) [$KUBERNETES_HOST]\n   --kubernetes-context value                                                                 Optional Kubernetes context name to use if host is not specified (kubectl config get-contexts). [$KUBECTL_CONTEXT]\n   --kubernetes-cert-file value                                                               Optional Kubernetes master auth certificate [$KUBERNETES_CERT_FILE]\n   --kubernetes-key-file value                                                                Optional Kubernetes master auth private key [$KUBERNETES_KEY_FILE]\n   --kubernetes-ca-file value                                                                 Optional Kubernetes master auth ca certificate [$KUBERNETES_CA_FILE]\n   --kubernetes-bearer_token_overwrite_allowed                                                Bool to authorize builds to specify their own bearer token for creation. [$KUBERNETES_BEARER_TOKEN_OVERWRITE_ALLOWED]\n   --kubernetes-bearer_token value                                                            Optional Kubernetes service account token used to start build pods. [$KUBERNETES_BEARER_TOKEN]\n   --kubernetes-image value                                                                   Default docker image to use for builds when none is specified [$KUBERNETES_IMAGE]\n   --kubernetes-namespace value                                                               Namespace to run Kubernetes jobs in [$KUBERNETES_NAMESPACE]\n   --kubernetes-namespace_overwrite_allowed value                                             Regex to validate 'KUBERNETES_NAMESPACE_OVERWRITE' value [$KUBERNETES_NAMESPACE_OVERWRITE_ALLOWED]\n   --kubernetes-namespace_per_job                                                             Use separate namespace for each job. If set, 'KUBERNETES_NAMESPACE' and 'KUBERNETES_NAMESPACE_OVERWRITE_ALLOWED' are ignored. [$KUBERNETES_NAMESPACE_PER_JOB]\n   --kubernetes-privileged value                                                              Run all containers with the privileged flag enabled [$KUBERNETES_PRIVILEGED]\n   --kubernetes-runtime-class-name value                                                      A Runtime Class to use for all created pods, errors if the feature is unsupported by the cluster [$KUBERNETES_RUNTIME_CLASS_NAME]\n   --kubernetes-allow-privilege-escalation value                                              Run all containers with the security context allowPrivilegeEscalation flag enabled. When empty, it does not define the allowPrivilegeEscalation flag in the container SecurityContext and allows Kubernetes to use the default privilege escalation behavior. [$KUBERNETES_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-cpu-limit value                                                               The CPU allocation given to build containers [$KUBERNETES_CPU_LIMIT]\n   --kubernetes-cpu-limit-overwrite-max-allowed value                                         If set, the max amount the cpu limit can be set to. Used with the KUBERNETES_CPU_LIMIT variable in the build. [$KUBERNETES_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-cpu-request value                                                             The CPU allocation requested for build containers [$KUBERNETES_CPU_REQUEST]\n   --kubernetes-cpu-request-overwrite-max-allowed value                                       If set, the max amount the cpu request can be set to. Used with the KUBERNETES_CPU_REQUEST variable in the build. [$KUBERNETES_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-memory-limit value                                                            The amount of memory allocated to build containers [$KUBERNETES_MEMORY_LIMIT]\n   --kubernetes-memory-limit-overwrite-max-allowed value                                      If set, the max amount the memory limit can be set to. Used with the KUBERNETES_MEMORY_LIMIT variable in the build. [$KUBERNETES_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-memory-request value                                                          The amount of memory requested from build containers [$KUBERNETES_MEMORY_REQUEST]\n   --kubernetes-memory-request-overwrite-max-allowed value                                    If set, the max amount the memory request can be set to. Used with the KUBERNETES_MEMORY_REQUEST variable in the build. [$KUBERNETES_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-ephemeral-storage-limit value                                                 The amount of ephemeral storage allocated to build containers [$KUBERNETES_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-ephemeral-storage-limit-overwrite-max-allowed value                           If set, the max amount the ephemeral limit can be set to. Used with the KUBERNETES_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-ephemeral-storage-request value                                               The amount of ephemeral storage requested from build containers [$KUBERNETES_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-ephemeral-storage-request-overwrite-max-allowed value                         If set, the max amount the ephemeral storage request can be set to. Used with the KUBERNETES_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-cpu-limit value                                                       The CPU allocation given to build service containers [$KUBERNETES_SERVICE_CPU_LIMIT]\n   --kubernetes-service-cpu-limit-overwrite-max-allowed value                                 If set, the max amount the service cpu limit can be set to. Used with the KUBERNETES_SERVICE_CPU_LIMIT variable in the build. [$KUBERNETES_SERVICE_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-cpu-request value                                                     The CPU allocation requested for build service containers [$KUBERNETES_SERVICE_CPU_REQUEST]\n   --kubernetes-service-cpu-request-overwrite-max-allowed value                               If set, the max amount the service cpu request can be set to. Used with the KUBERNETES_SERVICE_CPU_REQUEST variable in the build. [$KUBERNETES_SERVICE_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-memory-limit value                                                    The amount of memory allocated to build service containers [$KUBERNETES_SERVICE_MEMORY_LIMIT]\n   --kubernetes-service-memory-limit-overwrite-max-allowed value                              If set, the max amount the service memory limit can be set to. Used with the KUBERNETES_SERVICE_MEMORY_LIMIT variable in the build. [$KUBERNETES_SERVICE_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-memory-request value                                                  The amount of memory requested for build service containers [$KUBERNETES_SERVICE_MEMORY_REQUEST]\n   --kubernetes-service-memory-request-overwrite-max-allowed value                            If set, the max amount the service memory request can be set to. Used with the KUBERNETES_SERVICE_MEMORY_REQUEST variable in the build. [$KUBERNETES_SERVICE_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-ephemeral_storage-limit value                                         The amount of ephemeral storage allocated to build service containers [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-service-ephemeral_storage-limit-overwrite-max-allowed value                   If set, the max amount the service ephemeral storage limit can be set to. Used with the KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-service-ephemeral_storage-request value                                       The amount of ephemeral storage requested for build service containers [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-service-ephemeral_storage-request-overwrite-max-allowed value                 If set, the max amount the service ephemeral storage request can be set to. Used with the KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_SERVICE_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-cpu-limit value                                                        The CPU allocation given to build helper containers [$KUBERNETES_HELPER_CPU_LIMIT]\n   --kubernetes-helper-cpu-limit-overwrite-max-allowed value                                  If set, the max amount the helper cpu limit can be set to. Used with the KUBERNETES_HELPER_CPU_LIMIT variable in the build. [$KUBERNETES_HELPER_CPU_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-cpu-request value                                                      The CPU allocation requested for build helper containers [$KUBERNETES_HELPER_CPU_REQUEST]\n   --kubernetes-helper-cpu-request-overwrite-max-allowed value                                If set, the max amount the helper cpu request can be set to. Used with the KUBERNETES_HELPER_CPU_REQUEST variable in the build. [$KUBERNETES_HELPER_CPU_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-memory-limit value                                                     The amount of memory allocated to build helper containers [$KUBERNETES_HELPER_MEMORY_LIMIT]\n   --kubernetes-helper-memory-limit-overwrite-max-allowed value                               If set, the max amount the helper memory limit can be set to. Used with the KUBERNETES_HELPER_MEMORY_LIMIT variable in the build. [$KUBERNETES_HELPER_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-memory-request value                                                   The amount of memory requested for build helper containers [$KUBERNETES_HELPER_MEMORY_REQUEST]\n   --kubernetes-helper-memory-request-overwrite-max-allowed value                             If set, the max amount the helper memory request can be set to. Used with the KUBERNETES_HELPER_MEMORY_REQUEST variable in the build. [$KUBERNETES_HELPER_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-ephemeral_storage-limit value                                          The amount of ephemeral storage allocated to build helper containers [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT]\n   --kubernetes-helper-ephemeral_storage-limit-overwrite-max-allowed value                    If set, the max amount the helper ephemeral storage limit can be set to. Used with the KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT variable in the build. [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_LIMIT_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-helper-ephemeral_storage-request value                                        The amount of ephemeral storage requested for build helper containers [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST]\n   --kubernetes-helper-ephemeral_storage-request-overwrite-max-allowed value                  If set, the max amount the helper ephemeral storage request can be set to. Used with the KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST variable in the build. [$KUBERNETES_HELPER_EPHEMERAL_STORAGE_REQUEST_OVERWRITE_MAX_ALLOWED]\n   --kubernetes-allowed-images value                                                          Image allowlist [$KUBERNETES_ALLOWED_IMAGES]\n   --kubernetes-allowed-pull-policies value                                                   Pull policy allowlist [$KUBERNETES_ALLOWED_PULL_POLICIES]\n   --kubernetes-allowed-services value                                                        Service allowlist [$KUBERNETES_ALLOWED_SERVICES]\n   --kubernetes-allowed-users value                                                           User allowlist [$KUBERNETES_ALLOWED_USERS]\n   --kubernetes-allowed-groups value                                                          Group allowlist [$KUBERNETES_ALLOWED_GROUPS]\n   --kubernetes-pull-policy value                                                             Policy for if/when to pull a container image (never, if-not-present, always). The cluster default will be used if not set [$KUBERNETES_PULL_POLICY]\n   --kubernetes-node-selector value                                                           A toml table/json object of key:value. Value is expected to be a string. When set this will create pods on k8s nodes that match all the key:value pairs. Only one selector is supported through environment variable configuration. (default: \"{}\") [$KUBERNETES_NODE_SELECTOR]\n   --kubernetes-node_selector_overwrite_allowed value                                         Regex to validate 'KUBERNETES_NODE_SELECTOR_*' values [$KUBERNETES_NODE_SELECTOR_OVERWRITE_ALLOWED]\n   --kubernetes-node-tolerations value                                                        A toml table/json object of key=value:effect. Value and effect are expected to be strings. When set, pods will tolerate the given taints. Only one toleration is supported through environment variable configuration. (default: \"{}\") [$KUBERNETES_NODE_TOLERATIONS]\n   --kubernetes-node_tolerations_overwrite_allowed value                                      Regex to validate 'KUBERNETES_NODE_TOLERATIONS_*' values [$KUBERNETES_NODE_TOLERATIONS_OVERWRITE_ALLOWED]\n   --kubernetes-image-pull-secrets value                                                      A list of image pull secrets that are used for pulling docker image [$KUBERNETES_IMAGE_PULL_SECRETS]\n   --kubernetes-use-service-account-image-pull-secrets                                        Do not provide any image pull secrets to the Pod created, so the secrets from the ServiceAccount can be used [$KUBERNETES_USE_SERVICE_ACCOUNT_IMAGE_PULL_SECRETS]\n   --kubernetes-helper-image value                                                            [ADVANCED] Override the default helper image used to clone repos and upload artifacts [$KUBERNETES_HELPER_IMAGE]\n   --kubernetes-helper-image-flavor value                                                     Set helper image flavor (alpine, ubuntu), defaults to alpine [$KUBERNETES_HELPER_IMAGE_FLAVOR]\n   --kubernetes-helper-image-autoset-arch-and-os                                              When set, it uses the underlying OS to set the Helper Image ARCH and OS [$KUBERNETES_HELPER_IMAGE_AUTOSET_ARCH_AND_OS]\n   --kubernetes-pod_termination_grace_period_seconds value                                    Pod-level setting which determines the duration in seconds which the pod has to terminate gracefully. After this, the processes are forcibly halted with a kill signal. Ignored if KUBERNETES_TERMINATIONGRACEPERIODSECONDS is specified. [$KUBERNETES_POD_TERMINATION_GRACE_PERIOD_SECONDS]\n   --kubernetes-cleanup_grace_period_seconds value                                            When cleaning up a pod on completion of a job, the duration in seconds which the pod has to terminate gracefully. After this, the processes are forcibly halted with a kill signal. Ignored if KUBERNETES_TERMINATIONGRACEPERIODSECONDS is specified. [$KUBERNETES_CLEANUP_GRACE_PERIOD_SECONDS]\n   --kubernetes-cleanup_resources_timeout value                                               The total amount of time for Kubernetes resources to be cleaned up after the job completes. Supported syntax: '1h30m', '300s', '10m'. Default is 5 minutes ('5m'). [$KUBERNETES_CLEANUP_RESOURCES_TIMEOUT]\n   --kubernetes-poll-interval value                                                           How frequently, in seconds, the runner will poll the Kubernetes pod it has just created to check its status (default: \"0\") [$KUBERNETES_POLL_INTERVAL]\n   --kubernetes-poll-timeout value                                                            The total amount of time, in seconds, that needs to pass before the runner will timeout attempting to connect to the pod it has just created (useful for queueing more builds that the cluster can handle at a time) (default: \"0\") [$KUBERNETES_POLL_TIMEOUT]\n   --kubernetes-resource-availability-check-max-attempts value                                The maximum number of attempts to check if a resource (service account and/or pull secret) set is available before giving up. There is 5 seconds interval between each attempt (default: \"0\") [$KUBERNETES_RESOURCE_AVAILABILITY_CHECK_MAX_ATTEMPTS]\n   --kubernetes-retry-limit value                                                             The maximum number of attempts to communicate with Kubernetes API. The retry interval between each attempt is based on a backoff algorithm starting at 500 ms (default: \"0\") [$KUBERNETES_REQUEST_RETRY_LIMIT]\n   --kubernetes-retry-backoff-max value                                                       The max backoff interval value in milliseconds that can be reached for retry attempts to communicate with Kubernetes API (default: \"0\") [$KUBERNETES_REQUEST_RETRY_BACKOFF_MAX]\n   --kubernetes-retry-limits value                                                            How many times each request error is to be retried (default: \"{}\") [$KUBERNETES_RETRY_LIMITS]\n   --kubernetes-pod-labels value                                                              A toml table/json object of key-value. Value is expected to be a string. When set, this will create pods with the given pod labels. Environment variables will be substituted for values here. (default: \"{}\")\n   --kubernetes-pod_labels_overwrite_allowed value                                            Regex to validate 'KUBERNETES_POD_LABELS_*' values [$KUBERNETES_POD_LABELS_OVERWRITE_ALLOWED]\n   --kubernetes-scheduler-name value                                                          Pods will be scheduled using this scheduler, if it exists [$KUBERNETES_SCHEDULER_NAME]\n   --kubernetes-service-account value                                                         Executor pods will use this Service Account to talk to kubernetes API [$KUBERNETES_SERVICE_ACCOUNT]\n   --kubernetes-service_account_overwrite_allowed value                                       Regex to validate 'KUBERNETES_SERVICE_ACCOUNT' value [$KUBERNETES_SERVICE_ACCOUNT_OVERWRITE_ALLOWED]\n   --kubernetes-automount-service-account-token value                                         Boolean to control the automount of the service account token in the build pod. [$KUBERNETES_AUTOMOUNT_SERVICE_ACCOUNT_TOKEN]\n   --kubernetes-pod-annotations value                                                         A toml table/json object of key-value. Value is expected to be a string. When set, this will create pods with the given annotations. Can be overwritten in build with KUBERNETES_POD_ANNOTATION_* variables (default: \"{}\")\n   --kubernetes-pod_annotations_overwrite_allowed value                                       Regex to validate 'KUBERNETES_POD_ANNOTATIONS_*' values [$KUBERNETES_POD_ANNOTATIONS_OVERWRITE_ALLOWED]\n   --kubernetes-pod-security-context-fs-group value                                           A special supplemental group that applies to all containers in a pod [$KUBERNETES_POD_SECURITY_CONTEXT_FS_GROUP]\n   --kubernetes-pod-security-context-run-as-group value                                       The GID to run the entrypoint of the container process [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-pod-security-context-run-as-non-root value                                    Indicates that the container must run as a non-root user [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-pod-security-context-run-as-user value                                        The UID to run the entrypoint of the container process [$KUBERNETES_POD_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-pod-security-context-supplemental-groups value                                A list of groups applied to the first process run in each container, in addition to the container's primary GID\n   --kubernetes-pod-security-context-selinux-type value                                       The SELinux type label that applies to all containers in a pod\n   --kubernetes-init_permissions_container_security_context-capabilities-add value            List of capabilities to add to the build container [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-init_permissions_container_security_context-capabilities-drop value           List of capabilities to drop from the build container [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-init_permissions_container_security_context-privileged value                  Run container in privileged mode [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-init_permissions_container_security_context-run-as-user value                 The UID to run the entrypoint of the container process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-init_permissions_container_security_context-run-as-group value                The GID to run the entrypoint of the container process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-init_permissions_container_security_context-run-as-non-root value             Indicates that the container must run as a non-root user [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-init_permissions_container_security_context-read-only-root-filesystem value   Whether this container has a read-only root filesystem. [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-init_permissions_container_security_context-allow-privilege-escalation value  AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-init_permissions_container_security_context-selinux-type value                The SELinux type label that is associated with the container process\n   --kubernetes-init_permissions_container_security_context-proc-mount value                  Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_INIT_PERMISSIONS_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-build_container_security_context-capabilities-add value                       List of capabilities to add to the build container [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-build_container_security_context-capabilities-drop value                      List of capabilities to drop from the build container [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-build_container_security_context-privileged value                             Run container in privileged mode [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-build_container_security_context-run-as-user value                            The UID to run the entrypoint of the container process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-build_container_security_context-run-as-group value                           The GID to run the entrypoint of the container process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-build_container_security_context-run-as-non-root value                        Indicates that the container must run as a non-root user [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-build_container_security_context-read-only-root-filesystem value              Whether this container has a read-only root filesystem. [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-build_container_security_context-allow-privilege-escalation value             AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-build_container_security_context-selinux-type value                           The SELinux type label that is associated with the container process\n   --kubernetes-build_container_security_context-proc-mount value                             Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_BUILD_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-helper_container_security_context-capabilities-add value                      List of capabilities to add to the build container [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-helper_container_security_context-capabilities-drop value                     List of capabilities to drop from the build container [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-helper_container_security_context-privileged value                            Run container in privileged mode [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-helper_container_security_context-run-as-user value                           The UID to run the entrypoint of the container process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-helper_container_security_context-run-as-group value                          The GID to run the entrypoint of the container process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-helper_container_security_context-run-as-non-root value                       Indicates that the container must run as a non-root user [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-helper_container_security_context-read-only-root-filesystem value             Whether this container has a read-only root filesystem. [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-helper_container_security_context-allow-privilege-escalation value            AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-helper_container_security_context-selinux-type value                          The SELinux type label that is associated with the container process\n   --kubernetes-helper_container_security_context-proc-mount value                            Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_HELPER_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-service_container_security_context-capabilities-add value                     List of capabilities to add to the build container [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_ADD]\n   --kubernetes-service_container_security_context-capabilities-drop value                    List of capabilities to drop from the build container [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_CAPABILITIES_DROP]\n   --kubernetes-service_container_security_context-privileged value                           Run container in privileged mode [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_PRIVILEGED]\n   --kubernetes-service_container_security_context-run-as-user value                          The UID to run the entrypoint of the container process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_USER]\n   --kubernetes-service_container_security_context-run-as-group value                         The GID to run the entrypoint of the container process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_GROUP]\n   --kubernetes-service_container_security_context-run-as-non-root value                      Indicates that the container must run as a non-root user [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_RUN_AS_NON_ROOT]\n   --kubernetes-service_container_security_context-read-only-root-filesystem value            Whether this container has a read-only root filesystem. [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_READ_ONLY_ROOT_FILESYSTEM]\n   --kubernetes-service_container_security_context-allow-privilege-escalation value           AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_ALLOW_PRIVILEGE_ESCALATION]\n   --kubernetes-service_container_security_context-selinux-type value                         The SELinux type label that is associated with the container process\n   --kubernetes-service_container_security_context-proc-mount value                           Denotes the type of proc mount to use for the container. Valid values: default | unmasked. Set to unmasked if this container will be used to build OCI images. [$KUBERNETES_SERVICE_CONTAINER_SECURITY_CONTEXT_PROC_MOUNT]\n   --kubernetes-host_aliases value                                                            Add a custom host-to-IP mapping\n   --kubernetes-cap-add value                                                                 Add Linux capabilities [$KUBERNETES_CAP_ADD]\n   --kubernetes-cap-drop value                                                                Drop Linux capabilities [$KUBERNETES_CAP_DROP]\n   --kubernetes-dns-policy value                                                              How Kubernetes should try to resolve DNS from the created pods. If unset, Kubernetes will use the default 'ClusterFirst'. Valid values are: none, default, cluster-first, cluster-first-with-host-net [$KUBERNETES_DNS_POLICY]\n   --kubernetes-priority_class_name value                                                     If set, the Kubernetes Priority Class to be set to the Pods [$KUBERNETES_PRIORITY_CLASS_NAME]\n   --kubernetes-logs-base-dir value                                                           Base directory for the path where build logs are stored. This directory is prepended to the final generated path. For example, <logs_base_dir>/logs-<project_id>-<job_id>. [$KUBERNETES_LOGS_BASE_DIR]\n   --kubernetes-scripts-base-dir value                                                        Base directory for the path where build scripts are stored. This directory is prepended to the final generated path. For example, <scripts_base_dir>/scripts-<project_id>-<job_id>. [$KUBERNETES_SCRIPTS_BASE_DIR]\n   --kubernetes-print-pod-warning-events value                                                When enabled, all warning events associated with the pod are retrieved when the job fails. Enabled by default. [$KUBERNETES_PRINT_POD_WARNING_EVENTS]\n   --custom-config-exec value                                                                 Executable that allows to inject configuration values to the executor [$CUSTOM_CONFIG_EXEC]\n   --custom-config-args value                                                                 Arguments for the config executable\n   --custom-config-exec-timeout value                                                         Timeout for the config executable (in seconds) [$CUSTOM_CONFIG_EXEC_TIMEOUT]\n   --custom-prepare-exec value                                                                Executable that prepares executor [$CUSTOM_PREPARE_EXEC]\n   --custom-prepare-args value                                                                Arguments for the prepare executable\n   --custom-prepare-exec-timeout value                                                        Timeout for the prepare executable (in seconds) [$CUSTOM_PREPARE_EXEC_TIMEOUT]\n   --custom-run-exec value                                                                    Executable that runs the job script in executor [$CUSTOM_RUN_EXEC]\n   --custom-run-args value                                                                    Arguments for the run executable\n   --custom-cleanup-exec value                                                                Executable that cleanups after executor run [$CUSTOM_CLEANUP_EXEC]\n   --custom-cleanup-args value                                                                Arguments for the cleanup executable\n   --custom-cleanup-exec-timeout value                                                        Timeout for the cleanup executable (in seconds) [$CUSTOM_CLEANUP_EXEC_TIMEOUT]\n   --custom-graceful-kill-timeout value                                                       Graceful timeout for scripts execution after SIGTERM is sent to the process (in seconds). This limits the time given for scripts to perform the cleanup before exiting [$CUSTOM_GRACEFUL_KILL_TIMEOUT]\n   --custom-force-kill-timeout value                                                          Force timeout for scripts execution (in seconds). Counted from the force kill call; if process will be not terminated, Runner will abandon process termination and log an error [$CUSTOM_FORCE_KILL_TIMEOUT]\n   --step-runner-image value                                                                  [ADVANCED] Override the default step-runner image used to inject the step-runner binary into the build container [$STEP_RUNNER_IMAGE]\n   --wait-timeout value                                                                       How long to wait in seconds before receiving the first job (default: \"0\")\n   --max-builds value                                                                         How many builds to process before exiting (default: \"0\")\n   -c value, --config value                                                                   Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   -r value, --runner value                                                                   Runner name from the config file to use instead of command-line arguments\n   --shutdown-timeout value                                                                   Number of seconds after which the forceful shutdown operation will timeout and process will exit (default: \"0\")",
+      "description": "start single runner"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Specify service name to use",
+          "value": "value",
+          "default": "gitlab-runner"
+        }
+      ],
+      "name": "gitlab-runner status",
+      "raw_help_text": "NAME:\n   gitlab-runner status - get status of a service\n\nUSAGE:\n   gitlab-runner status [command options] [arguments...]\n\nOPTIONS:\n   --service value, -n value  Specify service name to use (default: \"gitlab-runner\")",
+      "description": "get status of a service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Specify service name to use",
+          "value": "value",
+          "default": "gitlab-runner"
+        }
+      ],
+      "name": "gitlab-runner stop",
+      "raw_help_text": "NAME:\n   gitlab-runner stop - stop service\n\nUSAGE:\n   gitlab-runner stop [command options] [arguments...]\n\nOPTIONS:\n   --service value, -n value  Specify service name to use (default: \"gitlab-runner\")",
+      "description": "stop service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--service",
+          "shortcut": "-n",
+          "description": "Specify service name to use",
+          "value": "value",
+          "default": "gitlab-runner"
+        }
+      ],
+      "name": "gitlab-runner uninstall",
+      "raw_help_text": "NAME:\n   gitlab-runner uninstall - uninstall service\n\nUSAGE:\n   gitlab-runner uninstall [command options] [arguments...]\n\nOPTIONS:\n   --service value, -n value  Specify service name to use (default: \"gitlab-runner\")",
+      "description": "uninstall service"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--all-runners",
+          "shortcut": null,
+          "description": "Unregister all runners",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--config value",
+          "shortcut": "-c value",
+          "description": "Config file",
+          "value": "/etc/gitlab-runner/config.toml",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "--name value",
+          "shortcut": "-n value",
+          "description": "Name of the runner you wish to unregister",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--tls-ca-file value",
+          "shortcut": null,
+          "description": "File containing the certificates to verify the peer when using HTTPS",
+          "value": null,
+          "default": "$CI_SERVER_TLS_CA_FILE"
+        },
+        {
+          "option": "--tls-cert-file value",
+          "shortcut": null,
+          "description": "File containing certificate for TLS client auth when using HTTPS",
+          "value": null,
+          "default": "$CI_SERVER_TLS_CERT_FILE"
+        },
+        {
+          "option": "--tls-key-file value",
+          "shortcut": null,
+          "description": "File containing private key for TLS client auth when using HTTPS",
+          "value": null,
+          "default": "$CI_SERVER_TLS_KEY_FILE"
+        },
+        {
+          "option": "--token value",
+          "shortcut": "-t value",
+          "description": "Runner token",
+          "value": null,
+          "default": "$CI_SERVER_TOKEN"
+        },
+        {
+          "option": "--url value",
+          "shortcut": "-u value",
+          "description": "GitLab instance URL",
+          "value": null,
+          "default": "$CI_SERVER_URL"
+        }
+      ],
+      "name": "gitlab-runner unregister",
+      "raw_help_text": "NAME:\n   gitlab-runner unregister - unregister specific runner\n\nUSAGE:\n   gitlab-runner unregister [command options] [arguments...]\n\nOPTIONS:\n   -u value, --url value     GitLab instance URL [$CI_SERVER_URL]\n   -t value, --token value   Runner token [$CI_SERVER_TOKEN]\n   --tls-ca-file value       File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value     File containing certificate for TLS client auth when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value      File containing private key for TLS client auth when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   -c value, --config value  Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   -n value, --name value    Name of the runner you wish to unregister\n   --all-runners             Unregister all runners",
+      "description": "unregister specific runner"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": "-c",
+          "description": "Config file",
+          "value": "value",
+          "default": "/etc/gitlab-runner/config.toml"
+        },
+        {
+          "option": "--delete",
+          "shortcut": null,
+          "description": "Delete no longer existing runners?",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--name",
+          "shortcut": "-n",
+          "description": "Name of the runner you wish to verify",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--tls-ca-file",
+          "shortcut": null,
+          "description": "File containing the certificates to verify the peer when using HTTPS",
+          "value": "value",
+          "default": "$CI_SERVER_TLS_CA_FILE"
+        },
+        {
+          "option": "--tls-cert-file",
+          "shortcut": null,
+          "description": "File containing certificate for TLS client auth when using HTTPS",
+          "value": "value",
+          "default": "$CI_SERVER_TLS_CERT_FILE"
+        },
+        {
+          "option": "--tls-key-file",
+          "shortcut": null,
+          "description": "File containing private key for TLS client auth when using HTTPS",
+          "value": "value",
+          "default": "$CI_SERVER_TLS_KEY_FILE"
+        },
+        {
+          "option": "--token",
+          "shortcut": "-t",
+          "description": "Runner token",
+          "value": "value",
+          "default": "$CI_SERVER_TOKEN"
+        },
+        {
+          "option": "--url",
+          "shortcut": "-u",
+          "description": "GitLab instance URL",
+          "value": "value",
+          "default": "$CI_SERVER_URL"
+        }
+      ],
+      "name": "gitlab-runner verify",
+      "raw_help_text": "NAME:\n   gitlab-runner verify - verify all registered runners\n\nUSAGE:\n   gitlab-runner verify [command options] [arguments...]\n\nOPTIONS:\n   -u value, --url value     GitLab instance URL [$CI_SERVER_URL]\n   -t value, --token value   Runner token [$CI_SERVER_TOKEN]\n   --tls-ca-file value       File containing the certificates to verify the peer when using HTTPS [$CI_SERVER_TLS_CA_FILE]\n   --tls-cert-file value     File containing certificate for TLS client auth when using HTTPS [$CI_SERVER_TLS_CERT_FILE]\n   --tls-key-file value      File containing private key for TLS client auth when using HTTPS [$CI_SERVER_TLS_KEY_FILE]\n   -c value, --config value  Config file (default: \"/etc/gitlab-runner/config.toml\") [$CONFIG_FILE]\n   -n value, --name value    Name of the runner you wish to verify\n   --delete                  Delete no longer existing runners?",
+      "description": "verify all registered runners"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--grpc-listen",
+          "shortcut": null,
+          "description": "(default: \"tcp://localhost:7777\")",
+          "value": "value",
+          "default": "tcp://localhost:7777"
+        },
+        {
+          "option": "--process-termination-timeout",
+          "shortcut": null,
+          "description": "(default: \"10s\")",
+          "value": "value",
+          "default": "10s"
+        }
+      ],
+      "name": "gitlab-runner wrapper",
+      "raw_help_text": "NAME:\n   gitlab-runner wrapper - start multi runner service wrapped with gRPC manager server\n\nUSAGE:\n   gitlab-runner wrapper [command options] [arguments...]\n\nOPTIONS:\n   --grpc-listen value                  (default: \"tcp://localhost:7777\")\n   --process-termination-timeout value  (default: \"10s\")",
+      "description": "start multi runner service wrapped with gRPC manager server"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--path",
+          "shortcut": null,
+          "description": "",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--offset",
+          "shortcut": null,
+          "description": "(default: \"0\")",
+          "value": "value",
+          "default": "0"
+        },
+        {
+          "option": "--wait-file-timeout",
+          "shortcut": null,
+          "description": "(default: \"1s\")",
+          "value": "value",
+          "default": "1s"
+        }
+      ],
+      "name": "gitlab-runner read-logs",
+      "raw_help_text": "NAME:\n   gitlab-runner read-logs - reads job logs from a file, used by kubernetes executor (internal)\n\nUSAGE:\n   gitlab-runner read-logs [command options] [arguments...]\n\nOPTIONS:\n   --path value               \n   --offset value             (default: \"0\")\n   --wait-file-timeout value  (default: \"1s\")",
+      "description": "reads job logs from a file, used by kubernetes executor (internal)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--bootstrap",
+          "shortcut": null,
+          "description": "bootstrap helper binary",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--temp-dir",
+          "shortcut": null,
+          "description": "temporary directory",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "gitlab-runner proxy-exec",
+      "raw_help_text": "NAME:\n   gitlab-runner proxy-exec - execute internal commands (internal)\n\nUSAGE:\n   gitlab-runner proxy-exec [command options] [arguments...]\n\nOPTIONS:\n   --bootstrap       bootstrap helper binary\n   --temp-dir value  temporary directory",
+      "description": "execute internal commands (internal)"
+    }
+  ],
+  "options": [
+    {
+      "option": "--cpuprofile",
+      "shortcut": null,
+      "description": "write cpu profile to file",
+      "value": "value",
+      "default": "$CPU_PROFILE"
+    },
+    {
+      "option": "--debug",
+      "shortcut": null,
+      "description": "debug mode",
+      "value": null,
+      "default": "$RUNNER_DEBUG"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-format",
+      "shortcut": null,
+      "description": "Choose log format (options: runner, text, json)",
+      "value": "value",
+      "default": "$LOG_FORMAT"
+    },
+    {
+      "option": "--log-level",
+      "shortcut": "-l",
+      "description": "Log level (options: debug, info, warn, error, fatal, panic)",
+      "value": "value",
+      "default": "$LOG_LEVEL"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "gitlab-runner",
+  "raw_help_text": "NAME:\n   gitlab-runner - a GitLab Runner\n\nUSAGE:\n   gitlab-runner [global options] command [command options] [arguments...]\n\nVERSION:\n   18.6.5 (5908bc19)\n\nAUTHOR:\n   GitLab Inc. <support@gitlab.com>\n\nCOMMANDS:\n   list                  List all configured runners\n   run                   run multi runner service\n   register              register a new runner\n   reset-token           reset a runner's token\n   install               install service\n   uninstall             uninstall service\n   start                 start service\n   stop                  stop service\n   restart               restart service\n   status                get status of a service\n   run-single            start single runner\n   unregister            unregister specific runner\n   verify                verify all registered runners\n   wrapper               start multi runner service wrapped with gRPC manager server\n   fleeting              manage fleeting plugins\n   artifacts-downloader  download and extract build artifacts (internal)\n   artifacts-uploader    create and upload build artifacts (internal)\n   cache-archiver        create and upload cache artifacts (internal)\n   cache-extractor       download and extract cache artifacts (internal)\n   cache-init            changed permissions for cache paths (internal)\n   health-check          check health for a specific address\n   proxy-exec            execute internal commands (internal)\n   read-logs             reads job logs from a file, used by kubernetes executor (internal)\n   help, h               Shows a list of commands or help for one command\n\nGLOBAL OPTIONS:\n   --cpuprofile value           write cpu profile to file [$CPU_PROFILE]\n   --debug                      debug mode [$RUNNER_DEBUG]\n   --log-format value           Choose log format (options: runner, text, json) [$LOG_FORMAT]\n   --log-level value, -l value  Log level (options: debug, info, warn, error, fatal, panic) [$LOG_LEVEL]\n   --help, -h                   show help\n   --version, -v                print the version",
+  "version": "18.6.5"
+}

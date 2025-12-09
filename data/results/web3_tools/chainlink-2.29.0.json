@@ -1,0 +1,116 @@
+{
+  "command": {
+    "name": "chainlink",
+    "description": "CLI for Chainlink",
+    "subcommands": [
+      {
+        "name": "admin",
+        "description": "Commands for remotely taking admin related actions"
+      },
+      {
+        "name": "attempts",
+        "description": "Commands for managing Ethereum Transaction Attempts"
+      },
+      {
+        "name": "blocks",
+        "description": "Commands for managing blocks"
+      },
+      {
+        "name": "bridges",
+        "description": "Commands for Bridges communicating with External Adapters"
+      },
+      {
+        "name": "chains",
+        "description": "Commands for handling chain configuration"
+      },
+      {
+        "name": "config",
+        "description": "Commands for the node's configuration"
+      },
+      {
+        "name": "forwarders",
+        "description": "Commands for managing forwarder addresses."
+      },
+      {
+        "name": "health",
+        "description": "Prints a health report"
+      },
+      {
+        "name": "help",
+        "description": "Shows a list of commands or help for one command"
+      },
+      {
+        "name": "initiators",
+        "description": "Commands for managing External Initiators"
+      },
+      {
+        "name": "jobs",
+        "description": "Commands for managing Jobs"
+      },
+      {
+        "name": "keys",
+        "description": "Commands for managing various types of keys used by the Chainlink node"
+      },
+      {
+        "name": "local",
+        "description": "Commands for admin actions that must be run locally"
+      },
+      {
+        "name": "nodes",
+        "description": "Commands for handling node configuration"
+      },
+      {
+        "name": "txs",
+        "description": "Commands for handling transactions"
+      }
+    ],
+    "options": [
+      {
+        "option": "--admin-credentials-file",
+        "shortcut": null,
+        "description": "optional, applies only in client mode when making remote API calls. If provided, FILE containing admin credentials will be used for logging in, allowing to avoid an additional login step. If `FILE` is missing, it will be ignored. Defaults to <RootDir>/apicredentials",
+        "value": "FILE",
+        "default": "<RootDir>/apicredentials"
+      },
+      {
+        "option": "--help",
+        "shortcut": "-h",
+        "description": "show help",
+        "value": null,
+        "default": null
+      },
+      {
+        "option": "--insecure-skip-verify",
+        "shortcut": null,
+        "description": "optional, applies only in client mode when making remote API calls. If turned on, SSL certificate verification will be disabled. This is mostly useful for people who want to use Chainlink with a self-signed TLS certificate",
+        "value": null,
+        "default": null
+      },
+      {
+        "option": "--json",
+        "shortcut": "-j",
+        "description": "json output as opposed to table",
+        "value": null,
+        "default": null
+      },
+      {
+        "option": "--remote-node-url",
+        "shortcut": null,
+        "description": "optional, applies only in client mode when making remote API calls. If provided, URL will be used as the remote Chainlink API endpoint (default: \"http://localhost:6688\")",
+        "value": "URL",
+        "default": "\"http://localhost:6688\""
+      },
+      {
+        "option": "--version",
+        "shortcut": "-v",
+        "description": "print the version",
+        "value": null,
+        "default": null
+      }
+    ]
+  },
+  "name": "chainlink",
+  "raw_help_text": "NAME:\n   chainlink - CLI for Chainlink\n\nUSAGE:\n   chainlink [global options] command [command options] [arguments...]\n\nVERSION:\n   2.29.0@10bd946f63887e15b6aafb63c0ba5aedd6b1e73f\n\nCOMMANDS:\n   admin           Commands for remotely taking admin related actions\n   attempts, txas  Commands for managing Ethereum Transaction Attempts\n   blocks          Commands for managing blocks\n   bridges         Commands for Bridges communicating with External Adapters\n   config          Commands for the node's configuration\n   health          Prints a health report\n   jobs            Commands for managing Jobs\n   keys            Commands for managing various types of keys used by the Chainlink node\n   node, local     Commands for admin actions that must be run locally\n   initiators      Commands for managing External Initiators\n   txs             Commands for handling transactions\n   chains          Commands for handling chain configuration\n   nodes           Commands for handling node configuration\n   forwarders      Commands for managing forwarder addresses.\n   help-all        Shows a list of all commands and sub-commands\n   help, h         Shows a list of commands or help for one command\n\nGLOBAL OPTIONS:\n   --json, -j                     json output as opposed to table\n   --admin-credentials-file FILE  optional, applies only in client mode when making remote API calls. If provided, FILE containing admin credentials will be used for logging in, allowing to avoid an additional login step. If `FILE` is missing, it will be ignored. Defaults to <RootDir>/apicredentials\n   --remote-node-url URL          optional, applies only in client mode when making remote API calls. If provided, URL will be used as the remote Chainlink API endpoint (default: \"http://localhost:6688\")\n   --insecure-skip-verify         optional, applies only in client mode when making remote API calls. If turned on, SSL certificate verification will be disabled. This is mostly useful for people who want to use Chainlink with a self-signed TLS certificate\n   --help, -h                     show help\n   --version, -v                  print the version",
+  "subcommands": [],
+  "version": "2.29.0"
+}

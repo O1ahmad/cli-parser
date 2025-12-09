@@ -1,0 +1,260 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--ask-become-pass",
+      "shortcut": "-K",
+      "description": "ask for privilege escalation password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--ask-pass",
+      "shortcut": "-k",
+      "description": "ask for connection password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--become",
+      "shortcut": "-b",
+      "description": "run operations with become (does not imply password prompting)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--become-method BECOME_METHOD",
+      "shortcut": null,
+      "description": "privilege escalation method to use (default=sudo), use `ansible-doc -t become -l` to list valid choices.",
+      "value": "BECOME_METHOD",
+      "default": "sudo"
+    },
+    {
+      "option": "--become-password-file BECOME_PASSWORD_FILE",
+      "shortcut": "--become-pass-file BECOME_PASSWORD_FILE",
+      "description": "Become password file",
+      "value": "BECOME_PASSWORD_FILE",
+      "default": null
+    },
+    {
+      "option": "--check",
+      "shortcut": "-C",
+      "description": "don't make any changes; instead, try to predict some of the changes that may occur",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--connection CONNECTION",
+      "shortcut": "-c",
+      "description": "connection type to use (default=ssh)",
+      "value": "CONNECTION",
+      "default": "ssh"
+    },
+    {
+      "option": "--connection-password-file CONNECTION_PASSWORD_FILE",
+      "shortcut": "--conn-pass-file CONNECTION_PASSWORD_FILE",
+      "description": "Connection password file",
+      "value": "CONNECTION_PASSWORD_FILE",
+      "default": null
+    },
+    {
+      "option": "--diff",
+      "shortcut": "-D",
+      "description": "when changing (small) files and templates, show the differences in those files; works great with --check",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--flush-cache",
+      "shortcut": null,
+      "description": "clear the fact cache for every host in inventory",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--force-handlers",
+      "shortcut": null,
+      "description": "run handlers even if a task fails",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--list-hosts",
+      "shortcut": null,
+      "description": "outputs a list of matching hosts; does not execute anything else",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--list-tags",
+      "shortcut": null,
+      "description": "list all available tags",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--list-tasks",
+      "shortcut": null,
+      "description": "list all tasks that would be executed",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--private-key PRIVATE_KEY_FILE",
+      "shortcut": "--key-file PRIVATE_KEY_FILE",
+      "description": "use this file to authenticate the connection",
+      "value": "PRIVATE_KEY_FILE",
+      "default": null
+    },
+    {
+      "option": "--scp-extra-args SCP_EXTRA_ARGS",
+      "shortcut": null,
+      "description": "specify extra arguments to pass to scp only (e.g. -l)",
+      "value": "SCP_EXTRA_ARGS",
+      "default": null
+    },
+    {
+      "option": "--sftp-extra-args SFTP_EXTRA_ARGS",
+      "shortcut": null,
+      "description": "specify extra arguments to pass to sftp only (e.g. -f, -l)",
+      "value": "SFTP_EXTRA_ARGS",
+      "default": null
+    },
+    {
+      "option": "--ssh-common-args SSH_COMMON_ARGS",
+      "shortcut": null,
+      "description": "specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)",
+      "value": "SSH_COMMON_ARGS",
+      "default": null
+    },
+    {
+      "option": "--ssh-extra-args SSH_EXTRA_ARGS",
+      "shortcut": null,
+      "description": "specify extra arguments to pass to ssh only (e.g. -R)",
+      "value": "SSH_EXTRA_ARGS",
+      "default": null
+    },
+    {
+      "option": "--skip-tags SKIP_TAGS",
+      "shortcut": null,
+      "description": "only run plays and tasks whose tags do not match these values. This argument may be specified multiple times.",
+      "value": "SKIP_TAGS",
+      "default": null
+    },
+    {
+      "option": "--start-at-task START_AT_TASK",
+      "shortcut": null,
+      "description": "start the playbook at the task matching this name",
+      "value": "START_AT_TASK",
+      "default": null
+    },
+    {
+      "option": "--step",
+      "shortcut": null,
+      "description": "one-step-at-a-time: confirm each task before running",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--syntax-check",
+      "shortcut": null,
+      "description": "perform a syntax check on the playbook, but do not execute it",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tags TAGS",
+      "shortcut": "-t",
+      "description": "only run plays and tasks tagged with these values. This argument may be specified multiple times.",
+      "value": "TAGS",
+      "default": null
+    },
+    {
+      "option": "--timeout TIMEOUT",
+      "shortcut": "-T",
+      "description": "override the connection timeout in seconds (default depends on connection)",
+      "value": "TIMEOUT",
+      "default": null
+    },
+    {
+      "option": "--vault-id VAULT_IDS",
+      "shortcut": null,
+      "description": "the vault identity to use. This argument may be specified multiple times.",
+      "value": "VAULT_IDS",
+      "default": null
+    },
+    {
+      "option": "--vault-password-file VAULT_PASSWORD_FILES",
+      "shortcut": "--vault-pass-file VAULT_PASSWORD_FILES",
+      "description": "vault password file",
+      "value": "VAULT_PASSWORD_FILES",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "show program's version number, config file location, configured module search path, module location, executable location and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-e EXTRA_VARS",
+      "shortcut": null,
+      "description": "set additional variables as key=value or YAML/JSON, if filename prepend with @. This argument may be specified multiple times.",
+      "value": "EXTRA_VARS",
+      "default": null
+    },
+    {
+      "option": "-f FORKS",
+      "shortcut": null,
+      "description": "specify number of parallel processes to use (default=5)",
+      "value": "FORKS",
+      "default": "5"
+    },
+    {
+      "option": "-h, --help",
+      "shortcut": null,
+      "description": "show this help message and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-i INVENTORY",
+      "shortcut": "--inventory INVENTORY, --inventory-file INVENTORY",
+      "description": "specify inventory host path or comma separated host list. --inventory-file is deprecated. This argument may be specified multiple times.",
+      "value": "INVENTORY",
+      "default": null
+    },
+    {
+      "option": "-l SUBSET",
+      "shortcut": "--limit SUBSET",
+      "description": "further limit selected hosts to an additional pattern",
+      "value": "SUBSET",
+      "default": null
+    },
+    {
+      "option": "-M MODULE_PATH, --module-path MODULE_PATH",
+      "shortcut": null,
+      "description": "prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME ~ \"/plugins/modules:/usr/share/ansible/plugins/modules\" }}). This argument may be specified multiple times.",
+      "value": "MODULE_PATH",
+      "default": "{{ ANSIBLE_HOME ~ \"/plugins/modules:/usr/share/ansible/plugins/modules\" }}"
+    },
+    {
+      "option": "-t TAGS",
+      "shortcut": "--tags TAGS",
+      "description": "only run plays and tasks tagged with these values. This argument may be specified multiple times.",
+      "value": "TAGS",
+      "default": null
+    },
+    {
+      "option": "-v, --verbose",
+      "shortcut": null,
+      "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "name": "ansible-playbook",
+  "raw_help_text": "usage: ansible-playbook [-h] [--version] [-v] [--private-key PRIVATE_KEY_FILE]\n                        [-u REMOTE_USER] [-c CONNECTION] [-T TIMEOUT]\n                        [--ssh-common-args SSH_COMMON_ARGS]\n                        [--sftp-extra-args SFTP_EXTRA_ARGS]\n                        [--scp-extra-args SCP_EXTRA_ARGS]\n                        [--ssh-extra-args SSH_EXTRA_ARGS]\n                        [-k | --connection-password-file CONNECTION_PASSWORD_FILE]\n                        [--force-handlers] [--flush-cache] [-b]\n                        [--become-method BECOME_METHOD]\n                        [--become-user BECOME_USER]\n                        [-K | --become-password-file BECOME_PASSWORD_FILE]\n                        [-t TAGS] [--skip-tags SKIP_TAGS] [-C] [-D]\n                        [-i INVENTORY] [--list-hosts] [-l SUBSET]\n                        [-e EXTRA_VARS] [--vault-id VAULT_IDS]\n                        [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                        [-f FORKS] [-M MODULE_PATH] [--syntax-check]\n                        [--list-tasks] [--list-tags] [--step]\n                        [--start-at-task START_AT_TASK]\n                        playbook [playbook ...]\n\nRuns Ansible playbooks, executing the defined tasks on the targeted hosts.\n\npositional arguments:\n  playbook              Playbook(s)\n\noptions:\n  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE\n                        Become password file\n  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE\n                        Connection password file\n  --flush-cache         clear the fact cache for every host in inventory\n  --force-handlers      run handlers even if a task fails\n  --list-hosts          outputs a list of matching hosts; does not execute\n                        anything else\n  --list-tags           list all available tags\n  --list-tasks          list all tasks that would be executed\n  --skip-tags SKIP_TAGS\n                        only run plays and tasks whose tags do not match these\n                        values. This argument may be specified multiple times.\n  --start-at-task START_AT_TASK\n                        start the playbook at the task matching this name\n  --step                one-step-at-a-time: confirm each task before running\n  --syntax-check        perform a syntax check on the playbook, but do not\n                        execute it\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  --version             show program's version number, config file location,\n                        configured module search path, module location,\n                        executable location and exit\n  -C, --check           don't make any changes; instead, try to predict some\n                        of the changes that may occur\n  -D, --diff            when changing (small) files and templates, show the\n                        differences in those files; works great with --check\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  -K, --ask-become-pass\n                        ask for privilege escalation password\n  -M MODULE_PATH, --module-path MODULE_PATH\n                        prepend colon-separated path(s) to module library\n                        (default={{ ANSIBLE_HOME ~\n                        \"/plugins/modules:/usr/share/ansible/plugins/modules\"\n                        }}). This argument may be specified multiple times.\n  -e EXTRA_VARS, --extra-vars EXTRA_VARS\n                        set additional variables as key=value or YAML/JSON, if\n                        filename prepend with @. This argument may be\n                        specified multiple times.\n  -f FORKS, --forks FORKS\n                        specify number of parallel processes to use\n                        (default=5)\n  -h, --help            show this help message and exit\n  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY\n                        specify inventory host path or comma separated host\n                        list. --inventory-file is deprecated. This argument\n                        may be specified multiple times.\n  -k, --ask-pass        ask for connection password\n  -l SUBSET, --limit SUBSET\n                        further limit selected hosts to an additional pattern\n  -t TAGS, --tags TAGS  only run plays and tasks tagged with these values.\n                        This argument may be specified multiple times.\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n\nConnection Options:\n  control as whom and how to connect to hosts\n\n  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE\n                        use this file to authenticate the connection\n  --scp-extra-args SCP_EXTRA_ARGS\n                        specify extra arguments to pass to scp only (e.g. -l)\n  --sftp-extra-args SFTP_EXTRA_ARGS\n                        specify extra arguments to pass to sftp only (e.g. -f,\n                        -l)\n  --ssh-common-args SSH_COMMON_ARGS\n                        specify common arguments to pass to sftp/scp/ssh (e.g.\n                        ProxyCommand)\n  --ssh-extra-args SSH_EXTRA_ARGS\n                        specify extra arguments to pass to ssh only (e.g. -R)\n  -T TIMEOUT, --timeout TIMEOUT\n                        override the connection timeout in seconds (default\n                        depends on connection)\n  -c CONNECTION, --connection CONNECTION\n                        connection type to use (default=ssh)\n  -u REMOTE_USER, --user REMOTE_USER\n                        connect as this user (default=None)\n\nPrivilege Escalation Options:\n  control how and which user you become as on target hosts\n\n  --become-method BECOME_METHOD\n                        privilege escalation method to use (default=sudo), use\n                        `ansible-doc -t become -l` to list valid choices.\n  --become-user BECOME_USER\n                        run operations as this user (default=root)\n  -b, --become          run operations with become (does not imply password\n                        prompting)",
+  "version": "2.18.6"
+}

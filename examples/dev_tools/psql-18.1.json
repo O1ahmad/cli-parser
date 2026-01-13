@@ -1,0 +1,267 @@
+{
+  "name": "psql",
+  "version": "18.1",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--command",
+      "shortcut": "-c",
+      "description": "run only single command (SQL or internal) and exit",
+      "value": "COMMAND",
+      "default": null
+    },
+    {
+      "option": "--dbname",
+      "shortcut": "-d",
+      "description": "database name to connect to",
+      "value": "DBNAME",
+      "default": null
+    },
+    {
+      "option": "--file",
+      "shortcut": "-f",
+      "description": "execute commands from file, then exit",
+      "value": "FILENAME",
+      "default": null
+    },
+    {
+      "option": "--list",
+      "shortcut": "-l",
+      "description": "list available databases, then exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--set",
+      "shortcut": "-v",
+      "description": "set psql variable NAME to VALUE (e.g., -v ON_ERROR_STOP=1)",
+      "value": "NAME=VALUE",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "output version information, then exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-psqlrc",
+      "shortcut": "-X",
+      "description": "do not read startup file (~/.psqlrc)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--single-transaction",
+      "shortcut": "-1",
+      "description": "execute as a single transaction (if non-interactive)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-?",
+      "description": "show this help, then exit",
+      "value": "options",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": null,
+      "description": "list backslash commands, then exit",
+      "value": "commands",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": null,
+      "description": "list special variables, then exit",
+      "value": "variables",
+      "default": null
+    },
+    {
+      "option": "--echo-all",
+      "shortcut": "-a",
+      "description": "echo all input from script",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--echo-errors",
+      "shortcut": "-b",
+      "description": "echo failed commands",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--echo-queries",
+      "shortcut": "-e",
+      "description": "echo commands sent to server",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--echo-hidden",
+      "shortcut": "-E",
+      "description": "display queries that internal commands generate",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-file",
+      "shortcut": "-L",
+      "description": "send session log to file",
+      "value": "FILENAME",
+      "default": null
+    },
+    {
+      "option": "--no-readline",
+      "shortcut": "-n",
+      "description": "disable enhanced command line editing (readline)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--output",
+      "shortcut": "-o",
+      "description": "send query results to file (or |pipe)",
+      "value": "FILENAME",
+      "default": null
+    },
+    {
+      "option": "--quiet",
+      "shortcut": "-q",
+      "description": "run quietly (no messages, only query output)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--single-step",
+      "shortcut": "-s",
+      "description": "single-step mode (confirm each query)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--single-line",
+      "shortcut": "-S",
+      "description": "single-line mode (end of line terminates SQL command)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-align",
+      "shortcut": "-A",
+      "description": "unaligned table output mode",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--csv",
+      "shortcut": null,
+      "description": "CSV (Comma-Separated Values) table output mode",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--field-separator",
+      "shortcut": "-F",
+      "description": "field separator for unaligned output (default: \"|\")",
+      "value": "STRING",
+      "default": "|"
+    },
+    {
+      "option": "--html",
+      "shortcut": "-H",
+      "description": "HTML table output mode",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--pset",
+      "shortcut": "-P",
+      "description": "set printing option VAR to ARG (see \\pset command)",
+      "value": "VAR[=ARG]",
+      "default": null
+    },
+    {
+      "option": "--record-separator",
+      "shortcut": "-R",
+      "description": "record separator for unaligned output (default: newline)",
+      "value": "STRING",
+      "default": "newline"
+    },
+    {
+      "option": "--tuples-only",
+      "shortcut": "-t",
+      "description": "print rows only",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--table-attr",
+      "shortcut": "-T",
+      "description": "set HTML table tag attributes (e.g., width, border)",
+      "value": "TEXT",
+      "default": null
+    },
+    {
+      "option": "--expanded",
+      "shortcut": "-x",
+      "description": "turn on expanded table output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--field-separator-zero",
+      "shortcut": "-z",
+      "description": "set field separator for unaligned output to zero byte",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--record-separator-zero",
+      "shortcut": "-0",
+      "description": "set record separator for unaligned output to zero byte",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--host",
+      "shortcut": "-h",
+      "description": "database server host or socket directory",
+      "value": "HOSTNAME",
+      "default": null
+    },
+    {
+      "option": "--port",
+      "shortcut": "-p",
+      "description": "database server port",
+      "value": "PORT",
+      "default": null
+    },
+    {
+      "option": "--username",
+      "shortcut": "-U",
+      "description": "database user name",
+      "value": "USERNAME",
+      "default": null
+    },
+    {
+      "option": "--no-password",
+      "shortcut": "-w",
+      "description": "never prompt for password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--password",
+      "shortcut": "-W",
+      "description": "force password prompt (should happen automatically)",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "psql is the PostgreSQL interactive terminal.\n\nUsage:\n  psql [OPTION]... [DBNAME [USERNAME]]\n\nGeneral options:\n  -c, --command=COMMAND    run only single command (SQL or internal) and exit\n  -d, --dbname=DBNAME      database name to connect to\n  -f, --file=FILENAME      execute commands from file, then exit\n  -l, --list               list available databases, then exit\n  -v, --set=, --variable=NAME=VALUE\n                           set psql variable NAME to VALUE\n                           (e.g., -v ON_ERROR_STOP=1)\n  -V, --version            output version information, then exit\n  -X, --no-psqlrc          do not read startup file (~/.psqlrc)\n  -1 (\"one\"), --single-transaction\n                           execute as a single transaction (if non-interactive)\n  -?, --help[=options]     show this help, then exit\n      --help=commands      list backslash commands, then exit\n      --help=variables     list special variables, then exit\n\nInput and output options:\n  -a, --echo-all           echo all input from script\n  -b, --echo-errors        echo failed commands\n  -e, --echo-queries       echo commands sent to server\n  -E, --echo-hidden        display queries that internal commands generate\n  -L, --log-file=FILENAME  send session log to file\n  -n, --no-readline        disable enhanced command line editing (readline)\n  -o, --output=FILENAME    send query results to file (or |pipe)\n  -q, --quiet              run quietly (no messages, only query output)\n  -s, --single-step        single-step mode (confirm each query)\n  -S, --single-line        single-line mode (end of line terminates SQL command)\n\nOutput format options:\n  -A, --no-align           unaligned table output mode\n      --csv                CSV (Comma-Separated Values) table output mode\n  -F, --field-separator=STRING\n                           field separator for unaligned output (default: \"|\")\n  -H, --html               HTML table output mode\n  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \\pset command)\n  -R, --record-separator=STRING\n                           record separator for unaligned output (default: newline)\n  -t, --tuples-only        print rows only\n  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, border)\n  -x, --expanded           turn on expanded table output\n  -z, --field-separator-zero\n                           set field separator for unaligned output to zero byte\n  -0, --record-separator-zero\n                           set record separator for unaligned output to zero byte\n\nConnection options:\n  -h, --host=HOSTNAME      database server host or socket directory\n  -p, --port=PORT          database server port\n  -U, --username=USERNAME  database user name\n  -w, --no-password        never prompt for password\n  -W, --password           force password prompt (should happen automatically)\n\nFor more information, type \"\\?\" (for internal commands) or \"\\help\" (for SQL\ncommands) from within psql, or consult the psql section in the PostgreSQL\ndocumentation.\n\nReport bugs to <pgsql-bugs@lists.postgresql.org>.\nPostgreSQL home page: <https://www.postgresql.org/>"
+}

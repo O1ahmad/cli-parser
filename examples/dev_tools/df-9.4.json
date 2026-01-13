@@ -1,0 +1,96 @@
+{
+  "name": "df",
+  "version": "9.4",
+  "description": "Show information about the file system on which each FILE resides, or all file systems by default.",
+  "usage": "df [OPTION]... [FILE]...",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--all",
+      "shortcut": "-a",
+      "description": "include pseudo, duplicate, inaccessible file systems"
+    },
+    {
+      "option": "--block-size",
+      "shortcut": "-B",
+      "description": "scale sizes by SIZE before printing them; e.g., '-BM' prints sizes in units of 1,048,576 bytes; see SIZE format below",
+      "value": "SIZE"
+    },
+    {
+      "option": "--exclude-type",
+      "shortcut": "-x",
+      "description": "limit listing to file systems not of type TYPE",
+      "value": "TYPE"
+    },
+    {
+      "option": "--help",
+      "description": "display this help and exit"
+    },
+    {
+      "option": "--human-readable",
+      "shortcut": "-h",
+      "description": "print sizes in powers of 1024 (e.g., 1023M)"
+    },
+    {
+      "option": "--inodes",
+      "shortcut": "-i",
+      "description": "list inode information instead of block usage"
+    },
+    {
+      "option": "--local",
+      "shortcut": "-l",
+      "description": "limit listing to local file systems"
+    },
+    {
+      "option": "--no-sync",
+      "description": "do not invoke sync before getting usage info",
+      "default": "default"
+    },
+    {
+      "option": "--output",
+      "description": "use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted.",
+      "value": "FIELD_LIST"
+    },
+    {
+      "option": "--portability",
+      "shortcut": "-P",
+      "description": "use the POSIX output format"
+    },
+    {
+      "option": "--print-type",
+      "shortcut": "-T",
+      "description": "print file system type"
+    },
+    {
+      "option": "--si",
+      "shortcut": "-H",
+      "description": "print sizes in powers of 1000 (e.g., 1.1G)"
+    },
+    {
+      "option": "--sync",
+      "description": "invoke sync before getting usage info"
+    },
+    {
+      "option": "--total",
+      "description": "elide all entries insignificant to available space, and produce a grand total"
+    },
+    {
+      "option": "--type",
+      "shortcut": "-t",
+      "description": "limit listing to file systems of type TYPE",
+      "value": "TYPE"
+    },
+    {
+      "option": "--version",
+      "description": "output version information and exit"
+    },
+    {
+      "option": "-k",
+      "description": "like --block-size=1K"
+    },
+    {
+      "option": "-v",
+      "description": "(ignored)"
+    }
+  ]
+}

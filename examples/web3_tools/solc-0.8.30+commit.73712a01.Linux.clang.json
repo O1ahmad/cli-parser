@@ -1,0 +1,226 @@
+{
+  "name": "solc",
+  "version": "0.8.30+commit.73712a01.Linux.clang",
+  "description": "Compiles the given Solidity input files and outputs specified components.",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--allow-paths",
+      "shortcut": null,
+      "description": "Allow a given path for imports. A list of paths can be supplied by separating them with a comma.",
+      "value": "path(s)",
+      "default": null
+    },
+    {
+      "option": "--asm",
+      "shortcut": null,
+      "description": "EVM assembly of the contracts.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--asm-json",
+      "shortcut": null,
+      "description": "EVM assembly of the contracts in JSON format.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--base-path",
+      "shortcut": null,
+      "description": "Use the given path as the root of the source tree instead of the root of the filesystem.",
+      "value": "path",
+      "default": null
+    },
+    {
+      "option": "--color",
+      "shortcut": null,
+      "description": "Force colored output.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--combined-json",
+      "shortcut": null,
+      "description": "Output a single json document containing the specified information.",
+      "value": "abi,asm,ast,bin,bin-runtime,devdoc,function-debug,function-debug-runtime,generated-sources,generated-sources-runtime,hashes,metadata,opcodes,srcmap,srcmap-runtime,storage-layout,transient-storage-layout,userdoc",
+      "default": null
+    },
+    {
+      "option": "--debug-info",
+      "shortcut": null,
+      "description": "Debug info components to be included in the produced EVM assembly and Yul code.",
+      "value": "arg",
+      "default": "ast-id,location,snippet"
+    },
+    {
+      "option": "--evm-version",
+      "shortcut": null,
+      "description": "Select desired EVM version.",
+      "value": "version",
+      "default": "prague"
+    },
+    {
+      "option": "--experimental-via-ir",
+      "shortcut": null,
+      "description": "Deprecated synonym of --via-ir.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--gas",
+      "shortcut": null,
+      "description": "Print an estimate of the maximal gas usage for each function.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": null,
+      "description": "Show help message and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--ignore-missing",
+      "shortcut": null,
+      "description": "Ignore missing files.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--input-file",
+      "shortcut": null,
+      "description": "input file",
+      "value": "arg",
+      "default": null
+    },
+    {
+      "option": "--lsp",
+      "shortcut": null,
+      "description": "Switch to language server mode (\"LSP\"). Allows the compiler to be used as an analysis backend for your favourite IDE.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--license",
+      "shortcut": null,
+      "description": "Show licensing information and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--link",
+      "shortcut": null,
+      "description": "Switch to linker mode, ignoring all options apart from --libraries and modify binaries in place.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--metadata-hash",
+      "shortcut": null,
+      "description": "Choose hash method for the bytecode metadata or disable it.",
+      "value": "ipfs,none,swarm",
+      "default": null
+    },
+    {
+      "option": "--no-color",
+      "shortcut": null,
+      "description": "Explicitly disable colored output, disabling terminal auto-detection.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-cbor-metadata",
+      "shortcut": null,
+      "description": "Do not append CBOR metadata to the end of the bytecode.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-import-callback",
+      "shortcut": null,
+      "description": "Disable the default import callback to prevent the compiler from loading any source files not listed on the command line or given in the Standard JSON input.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--optimize",
+      "shortcut": null,
+      "description": "Enable optimizer.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--optimize-runs",
+      "shortcut": null,
+      "description": "The number of runs specifies roughly how often each opcode of the deployed code will be executed across the lifetime of the contract.",
+      "value": "n",
+      "default": "200"
+    },
+    {
+      "option": "--output-dir",
+      "shortcut": "-o",
+      "description": "If given, creates one file per output component and contract/file at the specified directory.",
+      "value": "path",
+      "default": null
+    },
+    {
+      "option": "--overwrite",
+      "shortcut": null,
+      "description": "Overwrite existing files (used together with -o).",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--pretty-json",
+      "shortcut": null,
+      "description": "Output JSON in pretty format.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--revert-strings",
+      "shortcut": null,
+      "description": "Strip revert (and require) reason strings or add additional debugging information.",
+      "value": "debug,default,strip,verboseDebug",
+      "default": null
+    },
+    {
+      "option": "--standard-json",
+      "shortcut": null,
+      "description": "Switch to Standard JSON input / output mode, ignoring all options.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--stop-after",
+      "shortcut": null,
+      "description": "Stop execution after the given compiler stage.",
+      "value": "stage",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "Show version and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--via-ir",
+      "shortcut": null,
+      "description": "Turn on compilation mode via the IR.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--yul-optimizations",
+      "shortcut": null,
+      "description": "Forces Yul optimizer to use the specified sequence of optimization steps instead of the built-in one.",
+      "value": "steps",
+      "default": null
+    }
+  ],
+  "raw_help_text": "solc, the Solidity commandline compiler.\n\nThis program comes with ABSOLUTELY NO WARRANTY. This is free software, and you\nare welcome to redistribute it under certain conditions. See 'solc --license'\nfor details.\n\nUsage: solc [options] [input_file...]\nCompiles the given Solidity input files (or the standard input if \"-\" is\nused as a file name) and outputs the components specified in the options\nat standard output or in files in the output directory, if specified.\nImports are automatically read from the filesystem, but it is also possible to\nremap paths using the context:prefix=path syntax.\nExample:\nsolc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol\n\nGeneral Information:\n  --help               Show help message and exit.\n  --version            Show version and exit.\n  --license            Show licensing information and exit.\n  --input-file arg     input file\n\nInput Options:\n  --base-path path     Use the given path as the root of the source tree \n                       instead of the root of the filesystem.\n  --include-path path  Make an additional source directory available to the \n                       default import callback. Use this option if you want to \n                       import contracts whose location is not fixed in relation\n                       to your main source tree, e.g. third-party libraries \n                       installed using a package manager. Can be used multiple \n                       times. Can only be used if base path has a non-empty \n                       value.\n  --allow-paths path(s)\n                       Allow a given path for imports. A list of paths can be \n                       supplied by separating them with a comma.\n  --ignore-missing     Ignore missing files.\n  --no-import-callback \n                       Disable the default import callback to prevent the \n                       compiler from loading any source files not listed on the\n                       command line or given in the Standard JSON input.\n\nOutput Options:\n  -o [ --output-dir ] path\n                       If given, creates one file per output component and \n                       contract/file at the specified directory.\n  --overwrite          Overwrite existing files (used together with -o).\n  --evm-version version (=prague)\n                       Select desired EVM version: homestead, tangerineWhistle,\n                       spuriousDragon, byzantium, constantinople, petersburg, \n                       istanbul, berlin, london, paris, shanghai, cancun, \n                       prague or osaka (experimental).\n  --experimental-via-ir \n                       Deprecated synonym of --via-ir.\n  --via-ir             Turn on compilation mode via the IR.\n  --revert-strings debug,default,strip,verboseDebug\n                       Strip revert (and require) reason strings or add \n                       additional debugging information.\n  --debug-info arg (=ast-id,location,snippet)\n                       Debug info components to be included in the produced EVM\n                       assembly and Yul code. Value can be all, none or a \n                       comma-separated list containing one or more of the \n                       following components: ast-id, location, snippet.\n  --stop-after stage   Stop execution after the given compiler stage. Valid \n                       options: \"parsing\".\n\nAlternative Input Modes:\n  --standard-json      Switch to Standard JSON input / output mode, ignoring \n                       all options. It reads from standard input, if no input \n                       file was given, otherwise it reads from the provided \n                       input file. The result will be written to standard \n                       output.\n  --link               Switch to linker mode, ignoring all options apart from \n                       --libraries and modify binaries in place.\n  --assemble           Switch to assembly mode and assume input is assembly.\n  --strict-assembly    Switch to strict assembly mode and assume input is \n                       strict assembly.\n  --import-ast         Import ASTs to be compiled, assumes input holds the AST \n                       in compact JSON format. Supported Inputs is the output \n                       of the --standard-json or the one produced by \n                       --combined-json ast\n  --import-asm-json    Import EVM assembly in JSON format produced by \n                       --asm-json. WARNING: --asm-json output is already \n                       optimized according to settings stored in metadata. \n                       Using --optimize in this mode is allowed, but not \n                       necessary under normal circumstances. It forces the \n                       optimizer to run again and can produce bytecode that is \n                       not reproducible from metadata.\n  --lsp                Switch to language server mode (\"LSP\"). Allows the \n                       compiler to be used as an analysis backend for your \n                       favourite IDE.\n\nAssembly Mode Options:\n  --machine evm        Target machine in assembly or Yul mode.\n  --yul-dialect evm    Input dialect to use in assembly or yul mode.\n\nLinker Mode Options:\n  --libraries libs     Direct string or file containing library addresses. \n                       Syntax: <libraryName>=<address> [, or whitespace] ...\n                       Address is interpreted as a hex string prefixed by 0x.\n\nOutput Formatting:\n  --pretty-json        Output JSON in pretty format.\n  --json-indent N (=2) Indent pretty-printed JSON with N spaces. Enables \n                       '--pretty-json' automatically.\n  --color              Force colored output.\n  --no-color           Explicitly disable colored output, disabling terminal \n                       auto-detection.\n  --error-codes        Output error codes.\n\nOutput Components:\n  --ast-compact-json   AST of all source files in a compact JSON format.\n  --asm                EVM assembly of the contracts.\n  --asm-json           EVM assembly of the contracts in JSON format.\n  --opcodes            Opcodes of the contracts.\n  --bin                Binary of the contracts in hex.\n  --bin-runtime        Binary of the runtime part of the contracts in hex.\n  --abi                ABI specification of the contracts.\n  --ir                 Intermediate Representation (IR) of all contracts.\n  --ir-ast-json        AST of Intermediate Representation (IR) of all contracts\n                       in a compact JSON format.\n  --ir-optimized       Optimized Intermediate Representation (IR) of all \n                       contracts.\n  --ir-optimized-ast-json \n                       AST of optimized Intermediate Representation (IR) of all\n                       contracts in a compact JSON format.\n  --hashes             Function signature hashes of the contracts.\n  --userdoc            Natspec user documentation of all contracts.\n  --devdoc             Natspec developer documentation of all contracts.\n  --metadata           Combined Metadata JSON whose IPFS hash is stored \n                       on-chain.\n  --storage-layout     Slots, offsets and types of the contract's state \n                       variables located in storage.\n  --transient-storage-layout \n                       Slots, offsets and types of the contract's state \n                       variables located in transient storage.\n\nExtra Output:\n  --gas                Print an estimate of the maximal gas usage for each \n                       function.\n  --combined-json abi,asm,ast,bin,bin-runtime,devdoc,function-debug,function-debug-runtime,generated-sources,generated-sources-runtime,hashes,metadata,opcodes,srcmap,srcmap-runtime,storage-layout,transient-storage-layout,userdoc\n                       Output a single json document containing the specified \n                       information.\n\nMetadata Options:\n  --no-cbor-metadata   Do not append CBOR metadata to the end of the bytecode.\n  --metadata-hash ipfs,none,swarm\n                       Choose hash method for the bytecode metadata or disable \n                       it.\n  --metadata-literal   Store referenced sources as literal data in the metadata\n                       output.\n\nOptimizer Options:\n  --optimize           Enable optimizer.\n  --optimize-runs n (=200)\n                       The number of runs specifies roughly how often each \n                       opcode of the deployed code will be executed across the \n                       lifetime of the contract. Lower values will optimize \n                       more for initial deployment cost, higher values will \n                       optimize more for high-frequency usage.\n  --optimize-yul       Enable Yul optimizer (independently of the EVM assembly \n                       optimizer). The general --optimize option automatically \n                       enables this unless --no-optimize-yul is specified.\n  --no-optimize-yul    Disable Yul optimizer (independently of the EVM assembly\n                       optimizer).\n  --yul-optimizations steps\n                       Forces Yul optimizer to use the specified sequence of \n                       optimization steps instead of the built-in one.\n\nModel Checker Options:\n  --model-checker-contracts default,<source>:<contract> (=default)\n                       Select which contracts should be analyzed using the form\n                       <source>:<contract>.Multiple pairs <source>:<contract> \n                       can be selected at the same time, separated by a comma \n                       and no spaces.\n  --model-checker-div-mod-no-slacks \n                       Encode division and modulo operations with their precise\n                       operators instead of multiplication with slack \n                       variables.\n  --model-checker-engine all,bmc,chc,none (=none)\n                       Select model checker engine.\n  --model-checker-ext-calls untrusted,trusted (=untrusted)\n                       Select whether to assume (trusted) that external calls \n                       always invoke the code given by the type of the \n                       contract, if that code is available.\n  --model-checker-invariants default,all,contract,reentrancy (=default)\n                       Select whether to report inferred contract inductive \n                       invariants. Multiple types of invariants can be selected\n                       at the same time, separated by a comma and no spaces. By\n                       default no invariants are reported.\n  --model-checker-print-query \n                       Print the queries created by the SMTChecker in the \n                       SMTLIB2 format.\n  --model-checker-show-proved-safe \n                       Show all targets that were proved safe separately.\n  --model-checker-show-unproved \n                       Show all unproved targets separately.\n  --model-checker-show-unsupported \n                       Show all unsupported language features separately.\n  --model-checker-solvers cvc5,eld,z3,smtlib2 (=z3)\n                       Select model checker solvers.\n  --model-checker-targets default,all,constantCondition,underflow,overflow,divByZero,balance,assert,popEmptyArray,outOfBounds (=default)\n                       Select model checker verification targets.Multiple \n                       targets can be selected at the same time, separated by a\n                       comma and no spaces. By default all targets except \n                       underflow and overflow are selected.\n  --model-checker-timeout ms\n                       Set model checker timeout per query in milliseconds.The \n                       default is a deterministic resource limit.A timeout of 0\n                       means no resource/time restrictions for any query.\n  --model-checker-bmc-loop-iterations arg\n                       Set loop unrolling depth for BMC engine.Default is 1."
+}

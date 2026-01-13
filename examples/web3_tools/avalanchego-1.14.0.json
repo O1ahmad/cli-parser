@@ -1,0 +1,1401 @@
+{
+  "name": "avalanchego",
+  "version": "1.14.0",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--acp-object",
+      "shortcut": null,
+      "description": "ACPs to object adoption",
+      "value": "ints",
+      "default": null
+    },
+    {
+      "option": "--acp-support",
+      "shortcut": null,
+      "description": "ACPs to support adoption",
+      "value": "ints",
+      "default": null
+    },
+    {
+      "option": "--api-admin-enabled",
+      "shortcut": null,
+      "description": "If true, this node exposes the Admin API",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--api-health-enabled",
+      "shortcut": null,
+      "description": "If true, this node exposes the Health API (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--api-info-enabled",
+      "shortcut": null,
+      "description": "If true, this node exposes the Info API (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--api-metrics-enabled",
+      "shortcut": null,
+      "description": "If true, this node exposes the Metrics API (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--benchlist-duration",
+      "shortcut": null,
+      "description": "Max amount of time a peer is benchlisted after surpassing the threshold (default 15m0s)",
+      "value": "duration",
+      "default": "15m0s"
+    },
+    {
+      "option": "--benchlist-fail-threshold",
+      "shortcut": null,
+      "description": "Number of consecutive failed queries before benchlisting a node (default 10)",
+      "value": "int",
+      "default": "10"
+    },
+    {
+      "option": "--benchlist-min-failing-duration",
+      "shortcut": null,
+      "description": "Minimum amount of time messages to a peer must be failing before the peer is benched (default 2m30s)",
+      "value": "duration",
+      "default": "2m30s"
+    },
+    {
+      "option": "--bootstrap-ancestors-max-containers-received",
+      "shortcut": null,
+      "description": "This node reads at most this many containers from an incoming Ancestors message (default 2000)",
+      "value": "uint",
+      "default": "2000"
+    },
+    {
+      "option": "--bootstrap-ancestors-max-containers-sent",
+      "shortcut": null,
+      "description": "Max number of containers in an Ancestors message sent by this node (default 2000)",
+      "value": "uint",
+      "default": "2000"
+    },
+    {
+      "option": "--bootstrap-beacon-connection-timeout",
+      "shortcut": null,
+      "description": "Timeout before emitting a warn log when connecting to bootstrapping beacons (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--bootstrap-ids",
+      "shortcut": null,
+      "description": "Comma separated list of bootstrap peer ids to connect to. Example: NodeID-JR4dVmy6ffUGAKCBDkyCbeZbyHQBeDsET,NodeID-8CrVPQZ4VSqgL8zTdvL14G8HqAfrBr4z",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--bootstrap-ips",
+      "shortcut": null,
+      "description": "Comma separated list of bootstrap peer ips to connect to. Example: 127.0.0.1:9630,127.0.0.1:9631",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--bootstrap-max-time-get-ancestors",
+      "shortcut": null,
+      "description": "Max Time to spend fetching a container and its ancestors when responding to a GetAncestors (default 50ms)",
+      "value": "duration",
+      "default": "50ms"
+    },
+    {
+      "option": "--chain-aliases-file",
+      "shortcut": null,
+      "description": "Specifies a JSON file that maps blockchainIDs with custom aliases. Ignored if chain-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/chains/aliases.json\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/configs/chains/aliases.json"
+    },
+    {
+      "option": "--chain-aliases-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded map from blockchainID to custom aliases",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--chain-config-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded chains configurations",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--chain-config-dir",
+      "shortcut": null,
+      "description": "Chain specific configurations parent directory. Ignored if chain-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/chains\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/configs/chains"
+    },
+    {
+      "option": "--chain-data-dir",
+      "shortcut": null,
+      "description": "Chain specific data directory (default \"$AVALANCHEGO_DATA_DIR/chainData\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/chainData"
+    },
+    {
+      "option": "--config-file",
+      "shortcut": null,
+      "description": "Specifies a config file. Ignored if config-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--config-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded config content",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--config-file-content-type",
+      "shortcut": null,
+      "description": "Specifies the format of the base64 encoded config content. Available values: 'json', 'yaml', 'toml' (default \"json\")",
+      "value": "string",
+      "default": "json"
+    },
+    {
+      "option": "--consensus-app-concurrency",
+      "shortcut": null,
+      "description": "Maximum number of goroutines to use when handling App messages on a chain (default 2)",
+      "value": "uint",
+      "default": "2"
+    },
+    {
+      "option": "--consensus-frontier-poll-frequency",
+      "shortcut": null,
+      "description": "Frequency of polling for new consensus frontiers (default 100ms)",
+      "value": "duration",
+      "default": "100ms"
+    },
+    {
+      "option": "--consensus-shutdown-timeout",
+      "shortcut": null,
+      "description": "Timeout before killing an unresponsive chain (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--create-asset-tx-fee",
+      "shortcut": null,
+      "description": "Transaction fee, in nAVAX, for transactions that create new assets (default 1000000)",
+      "value": "uint",
+      "default": "1000000"
+    },
+    {
+      "option": "--data-dir",
+      "shortcut": null,
+      "description": "Sets the base data directory where default sub-directories will be placed unless otherwise specified. (default \"$HOME/.avalanchego\")",
+      "value": "string",
+      "default": "$HOME/.avalanchego"
+    },
+    {
+      "option": "--db-config-file",
+      "shortcut": null,
+      "description": "Path to database config file. Ignored if db-config-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--db-config-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded database config content",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--db-dir",
+      "shortcut": null,
+      "description": "Path to database directory (default \"$AVALANCHEGO_DATA_DIR/db\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/db"
+    },
+    {
+      "option": "--db-read-only",
+      "shortcut": null,
+      "description": "If true, database writes are to memory and never persisted. May still initialize database directory/files on disk if they don't exist",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--db-type",
+      "shortcut": null,
+      "description": "Database type to use. Must be one of {leveldb, memdb, pebbledb} (default \"leveldb\")",
+      "value": "string",
+      "default": "leveldb"
+    },
+    {
+      "option": "--dynamic-fees-bandwidth-weight",
+      "shortcut": null,
+      "description": "Complexity multiplier used to convert Bandwidth into Gas (default 1)",
+      "value": "uint",
+      "default": "1"
+    },
+    {
+      "option": "--dynamic-fees-compute-weight",
+      "shortcut": null,
+      "description": "Complexity multiplier used to convert Compute into Gas (default 4)",
+      "value": "uint",
+      "default": "4"
+    },
+    {
+      "option": "--dynamic-fees-db-read-weight",
+      "shortcut": null,
+      "description": "Complexity multiplier used to convert DB Reads into Gas (default 1000)",
+      "value": "uint",
+      "default": "1000"
+    },
+    {
+      "option": "--dynamic-fees-db-write-weight",
+      "shortcut": null,
+      "description": "Complexity multiplier used to convert DB Writes into Gas (default 1000)",
+      "value": "uint",
+      "default": "1000"
+    },
+    {
+      "option": "--dynamic-fees-excess-conversion-constant",
+      "shortcut": null,
+      "description": "Constant to convert excess Gas to the Gas price (default 2164043)",
+      "value": "uint",
+      "default": "2164043"
+    },
+    {
+      "option": "--dynamic-fees-max-gas-capacity",
+      "shortcut": null,
+      "description": "Maximum amount of Gas the chain is allowed to store for future use (default 1000000)",
+      "value": "uint",
+      "default": "1000000"
+    },
+    {
+      "option": "--dynamic-fees-max-gas-per-second",
+      "shortcut": null,
+      "description": "Rate at which Gas is stored for future use (default 100000)",
+      "value": "uint",
+      "default": "100000"
+    },
+    {
+      "option": "--dynamic-fees-min-gas-price",
+      "shortcut": null,
+      "description": "Minimum Gas price (default 1)",
+      "value": "uint",
+      "default": "1"
+    },
+    {
+      "option": "--dynamic-fees-target-gas-per-second",
+      "shortcut": null,
+      "description": "Target rate of Gas usage (default 50000)",
+      "value": "uint",
+      "default": "50000"
+    },
+    {
+      "option": "--fd-limit",
+      "shortcut": null,
+      "description": "Attempts to raise the process file descriptor limit to at least this value and error if the value is above the system max (default 32768)",
+      "value": "uint",
+      "default": "32768"
+    },
+    {
+      "option": "--genesis-file",
+      "shortcut": null,
+      "description": "Specifies a genesis config file path. Ignored when running standard networks or if genesis-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--genesis-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded genesis content",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--health-check-averager-halflife",
+      "shortcut": null,
+      "description": "Halflife of averager when calculating a running average in a health check (default 10s)",
+      "value": "duration",
+      "default": "10s"
+    },
+    {
+      "option": "--health-check-frequency",
+      "shortcut": null,
+      "description": "Time between health checks (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--http-allowed-hosts",
+      "shortcut": null,
+      "description": "List of acceptable host names in API requests. Provide the wildcard ('*') to accept requests from all hosts. An API call whose HTTP Host field isn't acceptable will receive a 403 error code (default [localhost])",
+      "value": "strings",
+      "default": "[localhost]"
+    },
+    {
+      "option": "--http-allowed-origins",
+      "shortcut": null,
+      "description": "Origins to allow on the HTTP port. Defaults to * which allows all origins. Example: https://*.avax.network https://*.avax-test.network (default \"*\")",
+      "value": "string",
+      "default": "*"
+    },
+    {
+      "option": "--http-host",
+      "shortcut": null,
+      "description": "Address of the HTTP server. If the address is empty or a literal unspecified IP address, the server will bind on all available unicast and anycast IP addresses of the local system (default \"127.0.0.1\")",
+      "value": "string",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--http-idle-timeout",
+      "shortcut": null,
+      "description": "Maximum duration to wait for the next request when keep-alives are enabled. If http-idle-timeout is zero, the value of http-read-timeout is used. If both are zero, there is no timeout. (default 2m0s)",
+      "value": "duration",
+      "default": "2m0s"
+    },
+    {
+      "option": "--http-port",
+      "shortcut": null,
+      "description": "Port of the HTTP server. If the port is 0 a port number is automatically chosen (default 9650)",
+      "value": "uint",
+      "default": "9650"
+    },
+    {
+      "option": "--http-read-header-timeout",
+      "shortcut": null,
+      "description": "Maximum duration to read request headers. The connection's read deadline is reset after reading the headers. If http-read-header-timeout is zero, the value of http-read-timeout is used. If both are zero, there is no timeout. (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--http-read-timeout",
+      "shortcut": null,
+      "description": "Maximum duration for reading the entire request, including the body. A zero or negative value means there will be no timeout (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--http-shutdown-timeout",
+      "shortcut": null,
+      "description": "Maximum duration to wait for existing connections to complete during node shutdown (default 10s)",
+      "value": "duration",
+      "default": "10s"
+    },
+    {
+      "option": "--http-shutdown-wait",
+      "shortcut": null,
+      "description": "Duration to wait after receiving SIGTERM or SIGINT before initiating shutdown. The /health endpoint will return unhealthy during this duration",
+      "value": "duration",
+      "default": null
+    },
+    {
+      "option": "--http-tls-cert-file",
+      "shortcut": null,
+      "description": "TLS certificate file for the HTTPs server. Ignored if http-tls-cert-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--http-tls-cert-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded TLS certificate for the HTTPs server",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--http-tls-enabled",
+      "shortcut": null,
+      "description": "Upgrade the HTTP server to HTTPs",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--http-tls-key-file",
+      "shortcut": null,
+      "description": "TLS private key file for the HTTPs server. Ignored if http-tls-key-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--http-tls-key-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded TLS private key for the HTTPs server",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--http-write-timeout",
+      "shortcut": null,
+      "description": "Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read. A zero or negative value means there will be no timeout. (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--index-allow-incomplete",
+      "shortcut": null,
+      "description": "If true, allow running the node in such a way that could cause an index to miss transactions. Ignored if index is disabled",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--index-enabled",
+      "shortcut": null,
+      "description": "If true, index all accepted containers and transactions and expose them via an API",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-dir",
+      "shortcut": null,
+      "description": "Logging directory for Avalanche (default \"$AVALANCHEGO_DATA_DIR/logs\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/logs"
+    },
+    {
+      "option": "--log-disable-display-plugin-logs",
+      "shortcut": null,
+      "description": "Disables displaying plugin logs in stdout.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-display-level",
+      "shortcut": null,
+      "description": "The log display level. If left blank, will inherit the value of log-level. Otherwise, should be one of {verbo, debug, trace, info, warn, error, fatal, off}",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--log-format",
+      "shortcut": null,
+      "description": "The structure of log format. Defaults to 'auto' which formats terminal-like logs, when the output is a terminal. Otherwise, should be one of {auto, plain, colors, json} (default \"auto\")",
+      "value": "string",
+      "default": "auto"
+    },
+    {
+      "option": "--log-level",
+      "shortcut": null,
+      "description": "The log level. Should be one of {verbo, debug, trace, info, warn, error, fatal, off} (default \"info\")",
+      "value": "string",
+      "default": "info"
+    },
+    {
+      "option": "--log-rotater-compress-enabled",
+      "shortcut": null,
+      "description": "Enables the compression of rotated log files through gzip.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-rotater-max-age",
+      "shortcut": null,
+      "description": "The maximum number of days to retain old log files based on the timestamp encoded in their filename. 0 means retain all old log files.",
+      "value": "uint",
+      "default": null
+    },
+    {
+      "option": "--log-rotater-max-files",
+      "shortcut": null,
+      "description": "The maximum number of old log files to retain. 0 means retain all old log files. (default 7)",
+      "value": "uint",
+      "default": "7"
+    },
+    {
+      "option": "--log-rotater-max-size",
+      "shortcut": null,
+      "description": "The maximum file size in megabytes of the log file before it gets rotated. (default 8)",
+      "value": "uint",
+      "default": "8"
+    },
+    {
+      "option": "--max-stake-duration",
+      "shortcut": null,
+      "description": "Maximum staking duration (default 8760h0m0s)",
+      "value": "duration",
+      "default": "8760h0m0s"
+    },
+    {
+      "option": "--max-validator-stake",
+      "shortcut": null,
+      "description": "Maximum stake, in nAVAX, that can be placed on a validator on the primary network (default 3000000000000000)",
+      "value": "uint",
+      "default": "3000000000000000"
+    },
+    {
+      "option": "--meter-vms-enabled",
+      "shortcut": null,
+      "description": "Enable Meter VMs to track VM performance with more granularity (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--min-delegation-fee",
+      "shortcut": null,
+      "description": "Minimum delegation fee, in the range [0, 1000000], that can be charged for delegation on the primary network (default 20000)",
+      "value": "uint",
+      "default": "20000"
+    },
+    {
+      "option": "--min-delegator-stake",
+      "shortcut": null,
+      "description": "Minimum stake, in nAVAX, that can be delegated on the primary network (default 25000000000)",
+      "value": "uint",
+      "default": "25000000000"
+    },
+    {
+      "option": "--min-stake-duration",
+      "shortcut": null,
+      "description": "Minimum staking duration (default 24h0m0s)",
+      "value": "duration",
+      "default": "24h0m0s"
+    },
+    {
+      "option": "--min-validator-stake",
+      "shortcut": null,
+      "description": "Minimum stake, in nAVAX, required to validate the primary network (default 2000000000000)",
+      "value": "uint",
+      "default": "2000000000000"
+    },
+    {
+      "option": "--network-allow-private-ips",
+      "shortcut": null,
+      "description": "Allows the node to initiate outbound connection attempts to peers with private IPs. If the provided --network-id is one of [mainnet, fuji] the default is false. Otherwise, the default is true",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--network-compression-type",
+      "shortcut": null,
+      "description": "Compression type for outbound messages. Must be one of [zstd, none] (default \"zstd\")",
+      "value": "string",
+      "default": "zstd"
+    },
+    {
+      "option": "--network-health-max-outstanding-request-duration",
+      "shortcut": null,
+      "description": "Node reports unhealthy if there has been a request outstanding for this duration (default 5m0s)",
+      "value": "duration",
+      "default": "5m0s"
+    },
+    {
+      "option": "--network-health-max-portion-send-queue-full",
+      "shortcut": null,
+      "description": "Network layer returns unhealthy if more than this portion of the pending send queue is full (default 0.9)",
+      "value": "float",
+      "default": "0.9"
+    },
+    {
+      "option": "--network-health-max-send-fail-rate",
+      "shortcut": null,
+      "description": "Network layer reports unhealthy if more than this portion of attempted message sends fail (default 0.9)",
+      "value": "float",
+      "default": "0.9"
+    },
+    {
+      "option": "--network-health-max-time-since-msg-received",
+      "shortcut": null,
+      "description": "Network layer returns unhealthy if haven't received a message for at least this much time (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--network-health-max-time-since-msg-sent",
+      "shortcut": null,
+      "description": "Network layer returns unhealthy if haven't sent a message for at least this much time (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--network-health-min-conn-peers",
+      "shortcut": null,
+      "description": "Network layer returns unhealthy if connected to less than this many peers (default 1)",
+      "value": "uint",
+      "default": "1"
+    },
+    {
+      "option": "--network-id",
+      "shortcut": null,
+      "description": "Network ID this node will connect to (default \"mainnet\")",
+      "value": "string",
+      "default": "mainnet"
+    },
+    {
+      "option": "--network-inbound-connection-throttling-cooldown",
+      "shortcut": null,
+      "description": "Upgrade an inbound connection from a given IP at most once per this duration. If 0, don't rate-limit inbound connection upgrades (default 10s)",
+      "value": "duration",
+      "default": "10s"
+    },
+    {
+      "option": "--network-inbound-connection-throttling-max-conns-per-sec",
+      "shortcut": null,
+      "description": "Max number of inbound connections to accept (from all peers) per second (default 256)",
+      "value": "float",
+      "default": "256"
+    },
+    {
+      "option": "--network-initial-reconnect-delay",
+      "shortcut": null,
+      "description": "Initial delay duration must be waited before attempting to reconnect a peer (default 1s)",
+      "value": "duration",
+      "default": "1s"
+    },
+    {
+      "option": "--network-initial-timeout",
+      "shortcut": null,
+      "description": "Initial timeout value of the adaptive timeout manager (default 5s)",
+      "value": "duration",
+      "default": "5s"
+    },
+    {
+      "option": "--network-max-clock-difference",
+      "shortcut": null,
+      "description": "Max allowed clock difference value between this node and peers (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--network-max-reconnect-delay",
+      "shortcut": null,
+      "description": "Maximum delay duration must be waited before attempting to reconnect a peer (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--network-maximum-inbound-timeout",
+      "shortcut": null,
+      "description": "Maximum timeout value of an inbound message. Defines duration within which an incoming message must be fulfilled. Incoming messages containing deadline higher than this value will be overridden with this value. (default 10s)",
+      "value": "duration",
+      "default": "10s"
+    },
+    {
+      "option": "--network-maximum-timeout",
+      "shortcut": null,
+      "description": "Maximum timeout value of the adaptive timeout manager (default 10s)",
+      "value": "duration",
+      "default": "10s"
+    },
+    {
+      "option": "--network-minimum-timeout",
+      "shortcut": null,
+      "description": "Minimum timeout value of the adaptive timeout manager (default 2s)",
+      "value": "duration",
+      "default": "2s"
+    },
+    {
+      "option": "--network-no-ingress-connections-grace-period",
+      "shortcut": null,
+      "description": "Time after which nodes are expected to be connected to us if we are a primary network validator, otherwise a health check fails (default 10m0s)",
+      "value": "duration",
+      "default": "10m0s"
+    },
+    {
+      "option": "--network-outbound-connection-throttling-rps",
+      "shortcut": null,
+      "description": "Make at most this number of outgoing peer connection attempts per second (default 50)",
+      "value": "uint",
+      "default": "50"
+    },
+    {
+      "option": "--network-outbound-connection-timeout",
+      "shortcut": null,
+      "description": "Timeout when dialing a peer (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--network-peer-list-bloom-reset-frequency",
+      "shortcut": null,
+      "description": "Frequency to recalculate the bloom filter used to request new peers from other nodes (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--network-peer-list-num-validator-ips",
+      "shortcut": null,
+      "description": "Number of validator IPs to gossip to other nodes (default 15)",
+      "value": "uint",
+      "default": "15"
+    },
+    {
+      "option": "--network-peer-list-pull-gossip-frequency",
+      "shortcut": null,
+      "description": "Frequency to request peers from other nodes (default 2s)",
+      "value": "duration",
+      "default": "2s"
+    },
+    {
+      "option": "--network-peer-read-buffer-size",
+      "shortcut": null,
+      "description": "Size, in bytes, of the buffer that we read peer messages into (there is one buffer per peer) (default 8192)",
+      "value": "uint",
+      "default": "8192"
+    },
+    {
+      "option": "--network-peer-write-buffer-size",
+      "shortcut": null,
+      "description": "Size, in bytes, of the buffer that we write peer messages into (there is one buffer per peer) (default 8192)",
+      "value": "uint",
+      "default": "8192"
+    },
+    {
+      "option": "--network-ping-frequency",
+      "shortcut": null,
+      "description": "Frequency of pinging other peers (default 22.5s)",
+      "value": "duration",
+      "default": "22.5s"
+    },
+    {
+      "option": "--network-ping-timeout",
+      "shortcut": null,
+      "description": "Timeout value for Ping-Pong with a peer (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--network-read-handshake-timeout",
+      "shortcut": null,
+      "description": "Timeout value for reading handshake messages (default 15s)",
+      "value": "duration",
+      "default": "15s"
+    },
+    {
+      "option": "--network-require-validator-to-connect",
+      "shortcut": null,
+      "description": "If true, this node will only maintain a connection with another node if this node is a validator, the other node is a validator, or the other node is a beacon",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--network-tcp-proxy-enabled",
+      "shortcut": null,
+      "description": "Require all P2P connections to be initiated with a TCP proxy header",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--network-tcp-proxy-read-timeout",
+      "shortcut": null,
+      "description": "Maximum duration to wait for a TCP proxy header (default 3s)",
+      "value": "duration",
+      "default": "3s"
+    },
+    {
+      "option": "--network-timeout-coefficient",
+      "shortcut": null,
+      "description": "Multiplied by average network response time to get the network timeout. Must be >= 1 (default 2)",
+      "value": "float",
+      "default": "2"
+    },
+    {
+      "option": "--network-timeout-halflife",
+      "shortcut": null,
+      "description": "Halflife of average network response time. Higher value --> network timeout is less volatile. Can't be 0 (default 5m0s)",
+      "value": "duration",
+      "default": "5m0s"
+    },
+    {
+      "option": "--network-tls-key-log-file-unsafe",
+      "shortcut": null,
+      "description": "TLS key log file path. Should only be specified for debugging",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--partial-sync-primary-network",
+      "shortcut": null,
+      "description": "Only sync the P-chain on the Primary Network. If the node is a Primary Network validator, it will report unhealthy",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--plugin-dir",
+      "shortcut": null,
+      "description": "Path to the plugin directory (default \"$AVALANCHEGO_DATA_DIR/plugins\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/plugins"
+    },
+    {
+      "option": "--process-context-file",
+      "shortcut": null,
+      "description": "The path to write process context to (including PID, API URI, and staking address). (default \"$AVALANCHEGO_DATA_DIR/process.json\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/process.json"
+    },
+    {
+      "option": "--profile-continuous-enabled",
+      "shortcut": null,
+      "description": "Whether the app should continuously produce performance profiles",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--profile-continuous-freq",
+      "shortcut": null,
+      "description": "How frequently to rotate performance profiles (default 15m0s)",
+      "value": "duration",
+      "default": "15m0s"
+    },
+    {
+      "option": "--profile-continuous-max-files",
+      "shortcut": null,
+      "description": "Maximum number of historical profiles to keep (default 5)",
+      "value": "int",
+      "default": "5"
+    },
+    {
+      "option": "--profile-dir",
+      "shortcut": null,
+      "description": "Path to the profile directory (default \"$AVALANCHEGO_DATA_DIR/profiles\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/profiles"
+    },
+    {
+      "option": "--proposervm-min-block-delay",
+      "shortcut": null,
+      "description": "Minimum delay to enforce when building a snowman++ block for the primary network chains and the default minimum delay for subnets (default 1s)",
+      "value": "duration",
+      "default": "1s"
+    },
+    {
+      "option": "--proposervm-use-current-height",
+      "shortcut": null,
+      "description": "Have the ProposerVM always report the last accepted P-chain block height",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--public-ip",
+      "shortcut": null,
+      "description": "Public IP of this node for P2P communication",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--public-ip-resolution-frequency",
+      "shortcut": null,
+      "description": "Frequency at which this node resolves/updates its public IP and renew NAT mappings, if applicable (default 5m0s)",
+      "value": "duration",
+      "default": "5m0s"
+    },
+    {
+      "option": "--public-ip-resolution-service",
+      "shortcut": null,
+      "description": "Only acceptable values are \"opendns\", \"ifconfigco\" or \"ifconfigme\". When provided, the node will use that service to periodically resolve/update its public IP",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--router-health-max-drop-rate",
+      "shortcut": null,
+      "description": "Node reports unhealthy if the router drops more than this portion of messages (default 1)",
+      "value": "float",
+      "default": "1"
+    },
+    {
+      "option": "--router-health-max-outstanding-requests",
+      "shortcut": null,
+      "description": "Node reports unhealthy if there are more than this many outstanding consensus requests (Get, PullQuery, etc.) over all chains (default 1024)",
+      "value": "uint",
+      "default": "1024"
+    },
+    {
+      "option": "--snow-commit-threshold",
+      "shortcut": null,
+      "description": "Beta value to use for consensus (default 20)",
+      "value": "int",
+      "default": "20"
+    },
+    {
+      "option": "--snow-concurrent-repolls",
+      "shortcut": null,
+      "description": "Minimum number of concurrent polls for finalizing consensus (default 4)",
+      "value": "int",
+      "default": "4"
+    },
+    {
+      "option": "--snow-confidence-quorum-size",
+      "shortcut": null,
+      "description": "Threshold of nodes required to increase this node's confidence in a network poll. Ignored if snow-quorum-size is provided (default 15)",
+      "value": "int",
+      "default": "15"
+    },
+    {
+      "option": "--snow-max-processing",
+      "shortcut": null,
+      "description": "Maximum number of processing items to be considered healthy (default 256)",
+      "value": "int",
+      "default": "256"
+    },
+    {
+      "option": "--snow-max-time-processing",
+      "shortcut": null,
+      "description": "Maximum amount of time an item should be processing and still be healthy (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--snow-optimal-processing",
+      "shortcut": null,
+      "description": "Optimal number of processing containers in consensus (default 10)",
+      "value": "int",
+      "default": "10"
+    },
+    {
+      "option": "--snow-preference-quorum-size",
+      "shortcut": null,
+      "description": "Threshold of nodes required to update this node's preference in a network poll. Ignored if snow-quorum-size is provided (default 15)",
+      "value": "int",
+      "default": "15"
+    },
+    {
+      "option": "--snow-quorum-size",
+      "shortcut": null,
+      "description": "Threshold of nodes required to update this node's preference and increase its confidence in a network poll (default 15)",
+      "value": "int",
+      "default": "15"
+    },
+    {
+      "option": "--snow-sample-size",
+      "shortcut": null,
+      "description": "Number of nodes to query for each network poll (default 20)",
+      "value": "int",
+      "default": "20"
+    },
+    {
+      "option": "--stake-max-consumption-rate",
+      "shortcut": null,
+      "description": "Maximum consumption rate of the remaining tokens to mint in the staking function (default 120000)",
+      "value": "uint",
+      "default": "120000"
+    },
+    {
+      "option": "--stake-min-consumption-rate",
+      "shortcut": null,
+      "description": "Minimum consumption rate of the remaining tokens to mint in the staking function (default 100000)",
+      "value": "uint",
+      "default": "100000"
+    },
+    {
+      "option": "--stake-minting-period",
+      "shortcut": null,
+      "description": "Consumption period of the staking function (default 8760h0m0s)",
+      "value": "duration",
+      "default": "8760h0m0s"
+    },
+    {
+      "option": "--stake-supply-cap",
+      "shortcut": null,
+      "description": "Supply cap of the staking function (default 720000000000000000)",
+      "value": "uint",
+      "default": "720000000000000000"
+    },
+    {
+      "option": "--staking-ephemeral-cert-enabled",
+      "shortcut": null,
+      "description": "If true, the node uses an ephemeral staking TLS key and certificate, and has an ephemeral node ID",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--staking-ephemeral-signer-enabled",
+      "shortcut": null,
+      "description": "If true, the node uses an ephemeral staking signer key",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--staking-host",
+      "shortcut": null,
+      "description": "Address of the consensus server. If the address is empty or a literal unspecified IP address, the server will bind on all available unicast and anycast IP addresses of the local system",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--staking-port",
+      "shortcut": null,
+      "description": "Port of the consensus server. If the port is 0 a port number is automatically chosen (default 9651)",
+      "value": "uint",
+      "default": "9651"
+    },
+    {
+      "option": "--staking-rpc-signer-endpoint",
+      "shortcut": null,
+      "description": "Specifies the RPC endpoint of the staking signer",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--staking-signer-key-file",
+      "shortcut": null,
+      "description": "Path to the signer private key for staking. Ignored if staking-signer-key-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/signer.key\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/staking/signer.key"
+    },
+    {
+      "option": "--staking-signer-key-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded signer private key for staking",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--staking-tls-cert-file",
+      "shortcut": null,
+      "description": "Path to the TLS certificate for staking. Ignored if staking-tls-cert-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/staker.crt\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/staking/staker.crt"
+    },
+    {
+      "option": "--staking-tls-cert-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded TLS certificate for staking",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--staking-tls-key-file",
+      "shortcut": null,
+      "description": "Path to the TLS private key for staking. Ignored if staking-tls-key-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/staker.key\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/staking/staker.key"
+    },
+    {
+      "option": "--staking-tls-key-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded TLS private key for staking",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--state-sync-ids",
+      "shortcut": null,
+      "description": "Comma separated list of state sync peer ids to connect to. Example: NodeID-JR4dVmy6ffUGAKCBDkyCbeZbyHQBeDsET,NodeID-8CrVPQZ4VSqgL8zTdvL14G8HqAfrBr4z",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--state-sync-ips",
+      "shortcut": null,
+      "description": "Comma separated list of state sync peer ips to connect to. Example: 127.0.0.1:9630,127.0.0.1:9631",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--subnet-config-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded subnets configurations",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--subnet-config-dir",
+      "shortcut": null,
+      "description": "Subnet specific configurations parent directory. Ignored if subnet-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/subnets\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/configs/subnets"
+    },
+    {
+      "option": "--sybil-protection-disabled-weight",
+      "shortcut": null,
+      "description": "Weight to provide to each peer when sybil protection is disabled (default 100)",
+      "value": "uint",
+      "default": "100"
+    },
+    {
+      "option": "--sybil-protection-enabled",
+      "shortcut": null,
+      "description": "Enables sybil protection. If enabled, Network TLS is required (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--system-tracker-cpu-halflife",
+      "shortcut": null,
+      "description": "Halflife to use for the cpu tracker. Larger halflife --> cpu usage metrics change more slowly (default 15s)",
+      "value": "duration",
+      "default": "15s"
+    },
+    {
+      "option": "--system-tracker-disk-halflife",
+      "shortcut": null,
+      "description": "Halflife to use for the disk tracker. Larger halflife --> disk usage metrics change more slowly (default 1m0s)",
+      "value": "duration",
+      "default": "1m0s"
+    },
+    {
+      "option": "--system-tracker-disk-required-available-space",
+      "shortcut": null,
+      "description": "Minimum number of available bytes on disk, under which the node will shutdown. (default 10737418240)",
+      "value": "uint",
+      "default": "10737418240"
+    },
+    {
+      "option": "--system-tracker-disk-warning-threshold-available-space",
+      "shortcut": null,
+      "description": "Warning threshold for the number of available bytes on disk, under which the node will be considered unhealthy. Must be >= [system-tracker-disk-required-available-space] (default 214748364800)",
+      "value": "uint",
+      "default": "214748364800"
+    },
+    {
+      "option": "--system-tracker-disk-warning-threshold-available-space-percentage",
+      "shortcut": null,
+      "description": "Warning threshold for the percentage (between 0 and 50) of available disk space, under which the node will be considered unhealthy. (default 3)",
+      "value": "uint",
+      "default": "3"
+    },
+    {
+      "option": "--system-tracker-frequency",
+      "shortcut": null,
+      "description": "Frequency to check the real system usage of tracked processes. More frequent checks --> usage metrics are more accurate, but more expensive to track (default 500ms)",
+      "value": "duration",
+      "default": "500ms"
+    },
+    {
+      "option": "--system-tracker-processing-halflife",
+      "shortcut": null,
+      "description": "Halflife to use for the processing requests tracker. Larger halflife --> usage metrics change more slowly (default 15s)",
+      "value": "duration",
+      "default": "15s"
+    },
+    {
+      "option": "--throttler-inbound-at-large-alloc-size",
+      "shortcut": null,
+      "description": "Size, in bytes, of at-large byte allocation in inbound message throttler (default 6291456)",
+      "value": "uint",
+      "default": "6291456"
+    },
+    {
+      "option": "--throttler-inbound-bandwidth-max-burst-size",
+      "shortcut": null,
+      "description": "Max inbound bandwidth a node can use at once. Must be at least the max message size. See BandwidthThrottler (default 2097152)",
+      "value": "uint",
+      "default": "2097152"
+    },
+    {
+      "option": "--throttler-inbound-bandwidth-refill-rate",
+      "shortcut": null,
+      "description": "Max average inbound bandwidth usage of a peer, in bytes per second. See BandwidthThrottler (default 524288)",
+      "value": "uint",
+      "default": "524288"
+    },
+    {
+      "option": "--throttler-inbound-cpu-max-non-validator-node-usage",
+      "shortcut": null,
+      "description": "Maximum number of CPUs that a non-validator can utilize. Value should be in range [0, total core count] (default 1.5)",
+      "value": "float",
+      "default": "1.5"
+    },
+    {
+      "option": "--throttler-inbound-cpu-max-non-validator-usage",
+      "shortcut": null,
+      "description": "Number of CPUs that if fully utilized, will rate limit all non-validators. Value should be in range [0, total core count] (default 9.600000000000001)",
+      "value": "float",
+      "default": "9.600000000000001"
+    },
+    {
+      "option": "--throttler-inbound-cpu-max-recheck-delay",
+      "shortcut": null,
+      "description": "In the CPU-based network throttler, check at least this often whether the node's CPU usage has fallen to an acceptable level (default 5s)",
+      "value": "duration",
+      "default": "5s"
+    },
+    {
+      "option": "--throttler-inbound-cpu-validator-alloc",
+      "shortcut": null,
+      "description": "Maximum number of CPUs to allocate for use by validators. Value should be in range [0, total core count] (default 12)",
+      "value": "float",
+      "default": "12"
+    },
+    {
+      "option": "--throttler-inbound-disk-max-non-validator-node-usage",
+      "shortcut": null,
+      "description": "Maximum number of disk reads/writes per second that a non-validator can utilize. Must be >= 0 (default 1.073741824e+12)",
+      "value": "float",
+      "default": "1.073741824e+12"
+    },
+    {
+      "option": "--throttler-inbound-disk-max-non-validator-usage",
+      "shortcut": null,
+      "description": "Number of disk reads/writes per second that, if fully utilized, will rate limit all non-validators. Must be >= 0 (default 1.073741824e+12)",
+      "value": "float",
+      "default": "1.073741824e+12"
+    },
+    {
+      "option": "--throttler-inbound-disk-max-recheck-delay",
+      "shortcut": null,
+      "description": "In the disk-based network throttler, check at least this often whether the node's disk usage has fallen to an acceptable level (default 5s)",
+      "value": "duration",
+      "default": "5s"
+    },
+    {
+      "option": "--throttler-inbound-disk-validator-alloc",
+      "shortcut": null,
+      "description": "Maximum number of disk reads/writes per second to allocate for use by validators. Must be > 0 (default 1.073741824e+12)",
+      "value": "float",
+      "default": "1.073741824e+12"
+    },
+    {
+      "option": "--throttler-outbound-at-large-alloc-size",
+      "shortcut": null,
+      "description": "Size, in bytes, of at-large byte allocation in outbound message throttler (default 33554432)",
+      "value": "uint",
+      "default": "33554432"
+    },
+    {
+      "option": "--throttler-outbound-node-max-at-large-bytes",
+      "shortcut": null,
+      "description": "Max number of bytes a node can take from the outbound message throttler's at-large allocation. Must be at least the max message size (default 2097152)",
+      "value": "uint",
+      "default": "2097152"
+    },
+    {
+      "option": "--throttler-outbound-validator-alloc-size",
+      "shortcut": null,
+      "description": "Size, in bytes, of validator byte allocation in outbound message throttler (default 33554432)",
+      "value": "uint",
+      "default": "33554432"
+    },
+    {
+      "option": "--tracing-endpoint",
+      "shortcut": null,
+      "description": "The endpoint to send trace data to. If unspecified, the default endpoint will be used; depending on the exporter type",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--tracing-exporter-type",
+      "shortcut": null,
+      "description": "Type of exporter to use for tracing. Options are [disabled, grpc, http] (default \"disabled\")",
+      "value": "string",
+      "default": "disabled"
+    },
+    {
+      "option": "--tracing-headers",
+      "shortcut": null,
+      "description": "The headers to provide the trace indexer (default [])",
+      "value": "stringToString",
+      "default": "[]"
+    },
+    {
+      "option": "--tracing-insecure",
+      "shortcut": null,
+      "description": "If true, don't use TLS when sending trace data (default true)",
+      "value": null,
+      "default": "true"
+    },
+    {
+      "option": "--tracing-sample-rate",
+      "shortcut": null,
+      "description": "The fraction of traces to sample. If >= 1, always sample. If <= 0, never sample (default 0.1)",
+      "value": "float",
+      "default": "0.1"
+    },
+    {
+      "option": "--track-subnets",
+      "shortcut": null,
+      "description": "List of subnets for the node to track. A node tracking a subnet will track the uptimes of the subnet validators and attempt to sync all the chains in the subnet. Before validating a subnet, a node should be tracking the subnet to avoid impacting their subnet validation uptime",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--tx-fee",
+      "shortcut": null,
+      "description": "Transaction fee, in nAVAX (default 1000000)",
+      "value": "uint",
+      "default": "1000000"
+    },
+    {
+      "option": "--upgrade-file",
+      "shortcut": null,
+      "description": "Specifies an upgrade config file path. Ignored when running standard networks or if upgrade-file-content is specified",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--upgrade-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded upgrade content",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--uptime-metric-freq",
+      "shortcut": null,
+      "description": "Frequency of renewing this node's average uptime metric (default 30s)",
+      "value": "duration",
+      "default": "30s"
+    },
+    {
+      "option": "--uptime-requirement",
+      "shortcut": null,
+      "description": "Fraction of time a validator must be online to receive rewards (default 0.8)",
+      "value": "float",
+      "default": "0.8"
+    },
+    {
+      "option": "--validator-fees-capacity",
+      "shortcut": null,
+      "description": "Maximum number of validators (default 20000)",
+      "value": "uint",
+      "default": "20000"
+    },
+    {
+      "option": "--validator-fees-excess-conversion-constant",
+      "shortcut": null,
+      "description": "Constant to convert validator excess price (default 865617)",
+      "value": "uint",
+      "default": "865617"
+    },
+    {
+      "option": "--validator-fees-min-price",
+      "shortcut": null,
+      "description": "Minimum validator price in nAVAX per second (default 1)",
+      "value": "uint",
+      "default": "1"
+    },
+    {
+      "option": "--validator-fees-target",
+      "shortcut": null,
+      "description": "Target number of validators (default 10000)",
+      "value": "uint",
+      "default": "10000"
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "If true, print version and quit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version-json",
+      "shortcut": null,
+      "description": "If true, print version in JSON format and quit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--vm-aliases-file",
+      "shortcut": null,
+      "description": "Specifies a JSON file that maps vmIDs with custom aliases. Ignored if vm-aliases-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/vms/aliases.json\")",
+      "value": "string",
+      "default": "$AVALANCHEGO_DATA_DIR/configs/vms/aliases.json"
+    },
+    {
+      "option": "--vm-aliases-file-content",
+      "shortcut": null,
+      "description": "Specifies base64 encoded maps vmIDs with custom aliases",
+      "value": "string",
+      "default": null
+    }
+  ],
+  "raw_help_text": "Usage of avalanchego:\n      --acp-object ints                                                         ACPs to object adoption\n      --acp-support ints                                                        ACPs to support adoption\n      --api-admin-enabled                                                       If true, this node exposes the Admin API\n      --api-health-enabled                                                      If true, this node exposes the Health API (default true)\n      --api-info-enabled                                                        If true, this node exposes the Info API (default true)\n      --api-metrics-enabled                                                     If true, this node exposes the Metrics API (default true)\n      --benchlist-duration duration                                             Max amount of time a peer is benchlisted after surpassing the threshold (default 15m0s)\n      --benchlist-fail-threshold int                                            Number of consecutive failed queries before benchlisting a node (default 10)\n      --benchlist-min-failing-duration duration                                 Minimum amount of time messages to a peer must be failing before the peer is benched (default 2m30s)\n      --bootstrap-ancestors-max-containers-received uint                        This node reads at most this many containers from an incoming Ancestors message (default 2000)\n      --bootstrap-ancestors-max-containers-sent uint                            Max number of containers in an Ancestors message sent by this node (default 2000)\n      --bootstrap-beacon-connection-timeout duration                            Timeout before emitting a warn log when connecting to bootstrapping beacons (default 1m0s)\n      --bootstrap-ids string                                                    Comma separated list of bootstrap peer ids to connect to. Example: NodeID-JR4dVmy6ffUGAKCBDkyCbeZbyHQBeDsET,NodeID-8CrVPQZ4VSqgL8zTdvL14G8HqAfrBr4z\n      --bootstrap-ips string                                                    Comma separated list of bootstrap peer ips to connect to. Example: 127.0.0.1:9630,127.0.0.1:9631\n      --bootstrap-max-time-get-ancestors duration                               Max Time to spend fetching a container and its ancestors when responding to a GetAncestors (default 50ms)\n      --chain-aliases-file string                                               Specifies a JSON file that maps blockchainIDs with custom aliases. Ignored if chain-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/chains/aliases.json\")\n      --chain-aliases-file-content string                                       Specifies base64 encoded map from blockchainID to custom aliases\n      --chain-config-content string                                             Specifies base64 encoded chains configurations\n      --chain-config-dir string                                                 Chain specific configurations parent directory. Ignored if chain-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/chains\")\n      --chain-data-dir string                                                   Chain specific data directory (default \"$AVALANCHEGO_DATA_DIR/chainData\")\n      --config-file string                                                      Specifies a config file. Ignored if config-file-content is specified\n      --config-file-content string                                              Specifies base64 encoded config content\n      --config-file-content-type string                                         Specifies the format of the base64 encoded config content. Available values: 'json', 'yaml', 'toml' (default \"json\")\n      --consensus-app-concurrency uint                                          Maximum number of goroutines to use when handling App messages on a chain (default 2)\n      --consensus-frontier-poll-frequency duration                              Frequency of polling for new consensus frontiers (default 100ms)\n      --consensus-shutdown-timeout duration                                     Timeout before killing an unresponsive chain (default 1m0s)\n      --create-asset-tx-fee uint                                                Transaction fee, in nAVAX, for transactions that create new assets (default 1000000)\n      --data-dir string                                                         Sets the base data directory where default sub-directories will be placed unless otherwise specified. (default \"$HOME/.avalanchego\")\n      --db-config-file string                                                   Path to database config file. Ignored if db-config-file-content is specified\n      --db-config-file-content string                                           Specifies base64 encoded database config content\n      --db-dir string                                                           Path to database directory (default \"$AVALANCHEGO_DATA_DIR/db\")\n      --db-read-only                                                            If true, database writes are to memory and never persisted. May still initialize database directory/files on disk if they don't exist\n      --db-type string                                                          Database type to use. Must be one of {leveldb, memdb, pebbledb} (default \"leveldb\")\n      --dynamic-fees-bandwidth-weight uint                                      Complexity multiplier used to convert Bandwidth into Gas (default 1)\n      --dynamic-fees-compute-weight uint                                        Complexity multiplier used to convert Compute into Gas (default 4)\n      --dynamic-fees-db-read-weight uint                                        Complexity multiplier used to convert DB Reads into Gas (default 1000)\n      --dynamic-fees-db-write-weight uint                                       Complexity multiplier used to convert DB Writes into Gas (default 1000)\n      --dynamic-fees-excess-conversion-constant uint                            Constant to convert excess Gas to the Gas price (default 2164043)\n      --dynamic-fees-max-gas-capacity uint                                      Maximum amount of Gas the chain is allowed to store for future use (default 1000000)\n      --dynamic-fees-max-gas-per-second uint                                    Rate at which Gas is stored for future use (default 100000)\n      --dynamic-fees-min-gas-price uint                                         Minimum Gas price (default 1)\n      --dynamic-fees-target-gas-per-second uint                                 Target rate of Gas usage (default 50000)\n      --fd-limit uint                                                           Attempts to raise the process file descriptor limit to at least this value and error if the value is above the system max (default 32768)\n      --genesis-file string                                                     Specifies a genesis config file path. Ignored when running standard networks or if genesis-file-content is specified\n      --genesis-file-content string                                             Specifies base64 encoded genesis content\n      --health-check-averager-halflife duration                                 Halflife of averager when calculating a running average in a health check (default 10s)\n      --health-check-frequency duration                                         Time between health checks (default 30s)\n      --http-allowed-hosts strings                                              List of acceptable host names in API requests. Provide the wildcard ('*') to accept requests from all hosts. API requests where the Host field is empty or an IP address will always be accepted. An API call whose HTTP Host field isn't acceptable will receive a 403 error code (default [localhost])\n      --http-allowed-origins string                                             Origins to allow on the HTTP port. Defaults to * which allows all origins. Example: https://*.avax.network https://*.avax-test.network (default \"*\")\n      --http-host string                                                        Address of the HTTP server. If the address is empty or a literal unspecified IP address, the server will bind on all available unicast and anycast IP addresses of the local system (default \"127.0.0.1\")\n      --http-idle-timeout duration                                              Maximum duration to wait for the next request when keep-alives are enabled. If http-idle-timeout is zero, the value of http-read-timeout is used. If both are zero, there is no timeout. (default 2m0s)\n      --http-port uint                                                          Port of the HTTP server. If the port is 0 a port number is automatically chosen (default 9650)\n      --http-read-header-timeout duration                                       Maximum duration to read request headers. The connection's read deadline is reset after reading the headers. If http-read-header-timeout is zero, the value of http-read-timeout is used. If both are zero, there is no timeout. (default 30s)\n      --http-read-timeout duration                                              Maximum duration for reading the entire request, including the body. A zero or negative value means there will be no timeout (default 30s)\n      --http-shutdown-timeout duration                                          Maximum duration to wait for existing connections to complete during node shutdown (default 10s)\n      --http-shutdown-wait duration                                             Duration to wait after receiving SIGTERM or SIGINT before initiating shutdown. The /health endpoint will return unhealthy during this duration\n      --http-tls-cert-file string                                               TLS certificate file for the HTTPs server. Ignored if http-tls-cert-file-content is specified\n      --http-tls-cert-file-content string                                       Specifies base64 encoded TLS certificate for the HTTPs server\n      --http-tls-enabled                                                        Upgrade the HTTP server to HTTPs\n      --http-tls-key-file string                                                TLS private key file for the HTTPs server. Ignored if http-tls-key-file-content is specified\n      --http-tls-key-file-content string                                        Specifies base64 encoded TLS private key for the HTTPs server\n      --http-write-timeout duration                                             Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read. A zero or negative value means there will be no timeout. (default 30s)\n      --index-allow-incomplete                                                  If true, allow running the node in such a way that could cause an index to miss transactions. Ignored if index is disabled\n      --index-enabled                                                           If true, index all accepted containers and transactions and expose them via an API\n      --log-dir string                                                          Logging directory for Avalanche (default \"$AVALANCHEGO_DATA_DIR/logs\")\n      --log-disable-display-plugin-logs                                         Disables displaying plugin logs in stdout.\n      --log-display-level string                                                The log display level. If left blank, will inherit the value of log-level. Otherwise, should be one of {verbo, debug, trace, info, warn, error, fatal, off}\n      --log-format string                                                       The structure of log format. Defaults to 'auto' which formats terminal-like logs, when the output is a terminal. Otherwise, should be one of {auto, plain, colors, json} (default \"auto\")\n      --log-level string                                                        The log level. Should be one of {verbo, debug, trace, info, warn, error, fatal, off} (default \"info\")\n      --log-rotater-compress-enabled                                            Enables the compression of rotated log files through gzip.\n      --log-rotater-max-age uint                                                The maximum number of days to retain old log files based on the timestamp encoded in their filename. 0 means retain all old log files.\n      --log-rotater-max-files uint                                              The maximum number of old log files to retain. 0 means retain all old log files. (default 7)\n      --log-rotater-max-size uint                                               The maximum file size in megabytes of the log file before it gets rotated. (default 8)\n      --max-stake-duration duration                                             Maximum staking duration (default 8760h0m0s)\n      --max-validator-stake uint                                                Maximum stake, in nAVAX, that can be placed on a validator on the primary network (default 3000000000000000)\n      --meter-vms-enabled                                                       Enable Meter VMs to track VM performance with more granularity (default true)\n      --min-delegation-fee uint                                                 Minimum delegation fee, in the range [0, 1000000], that can be charged for delegation on the primary network (default 20000)\n      --min-delegator-stake uint                                                Minimum stake, in nAVAX, that can be delegated on the primary network (default 25000000000)\n      --min-stake-duration duration                                             Minimum staking duration (default 24h0m0s)\n      --min-validator-stake uint                                                Minimum stake, in nAVAX, required to validate the primary network (default 2000000000000)\n      --network-allow-private-ips                                               Allows the node to initiate outbound connection attempts to peers with private IPs. If the provided --network-id is one of [mainnet, fuji] the default is false. Oterhwise, the default is true\n      --network-compression-type string                                         Compression type for outbound messages. Must be one of [zstd, none] (default \"zstd\")\n      --network-health-max-outstanding-request-duration duration                Node reports unhealthy if there has been a request outstanding for this duration (default 5m0s)\n      --network-health-max-portion-send-queue-full float                        Network layer returns unhealthy if more than this portion of the pending send queue is full (default 0.9)\n      --network-health-max-send-fail-rate float                                 Network layer reports unhealthy if more than this portion of attempted message sends fail (default 0.9)\n      --network-health-max-time-since-msg-received duration                     Network layer returns unhealthy if haven't received a message for at least this much time (default 1m0s)\n      --network-health-max-time-since-msg-sent duration                         Network layer returns unhealthy if haven't sent a message for at least this much time (default 1m0s)\n      --network-health-min-conn-peers uint                                      Network layer returns unhealthy if connected to less than this many peers (default 1)\n      --network-id string                                                       Network ID this node will connect to (default \"mainnet\")\n      --network-inbound-connection-throttling-cooldown duration                 Upgrade an inbound connection from a given IP at most once per this duration. If 0, don't rate-limit inbound connection upgrades (default 10s)\n      --network-inbound-connection-throttling-max-conns-per-sec float           Max number of inbound connections to accept (from all peers) per second (default 256)\n      --network-initial-reconnect-delay duration                                Initial delay duration must be waited before attempting to reconnect a peer (default 1s)\n      --network-initial-timeout duration                                        Initial timeout value of the adaptive timeout manager (default 5s)\n      --network-max-clock-difference duration                                   Max allowed clock difference value between this node and peers (default 1m0s)\n      --network-max-reconnect-delay duration                                    Maximum delay duration must be waited before attempting to reconnect a peer (default 1m0s)\n      --network-maximum-inbound-timeout duration                                Maximum timeout value of an inbound message. Defines duration within which an incoming message must be fulfilled. Incoming messages containing deadline higher than this value will be overridden with this value. (default 10s)\n      --network-maximum-timeout duration                                        Maximum timeout value of the adaptive timeout manager (default 10s)\n      --network-minimum-timeout duration                                        Minimum timeout value of the adaptive timeout manager (default 2s)\n      --network-no-ingress-connections-grace-period duration                    Time after which nodes are expected to be connected to us if we are a primary network validator, otherwise a health check fails (default 10m0s)\n      --network-outbound-connection-throttling-rps uint                         Make at most this number of outgoing peer connection attempts per second (default 50)\n      --network-outbound-connection-timeout duration                            Timeout when dialing a peer (default 30s)\n      --network-peer-list-bloom-reset-frequency duration                        Frequency to recalculate the bloom filter used to request new peers from other nodes (default 1m0s)\n      --network-peer-list-num-validator-ips uint                                Number of validator IPs to gossip to other nodes (default 15)\n      --network-peer-list-pull-gossip-frequency duration                        Frequency to request peers from other nodes (default 2s)\n      --network-peer-read-buffer-size uint                                      Size, in bytes, of the buffer that we read peer messages into (there is one buffer per peer) (default 8192)\n      --network-peer-write-buffer-size uint                                     Size, in bytes, of the buffer that we write peer messages into (there is one buffer per peer) (default 8192)\n      --network-ping-frequency duration                                         Frequency of pinging other peers (default 22.5s)\n      --network-ping-timeout duration                                           Timeout value for Ping-Pong with a peer (default 30s)\n      --network-read-handshake-timeout duration                                 Timeout value for reading handshake messages (default 15s)\n      --network-require-validator-to-connect                                    If true, this node will only maintain a connection with another node if this node is a validator, the other node is a validator, or the other node is a beacon\n      --network-tcp-proxy-enabled                                               Require all P2P connections to be initiated with a TCP proxy header\n      --network-tcp-proxy-read-timeout duration                                 Maximum duration to wait for a TCP proxy header (default 3s)\n      --network-timeout-coefficient float                                       Multiplied by average network response time to get the network timeout. Must be >= 1 (default 2)\n      --network-timeout-halflife duration                                       Halflife of average network response time. Higher value --> network timeout is less volatile. Can't be 0 (default 5m0s)\n      --network-tls-key-log-file-unsafe string                                  TLS key log file path. Should only be specified for debugging\n      --partial-sync-primary-network                                            Only sync the P-chain on the Primary Network. If the node is a Primary Network validator, it will report unhealthy\n      --plugin-dir string                                                       Path to the plugin directory (default \"$AVALANCHEGO_DATA_DIR/plugins\")\n      --process-context-file string                                             The path to write process context to (including PID, API URI, and staking address). (default \"$AVALANCHEGO_DATA_DIR/process.json\")\n      --profile-continuous-enabled                                              Whether the app should continuously produce performance profiles\n      --profile-continuous-freq duration                                        How frequently to rotate performance profiles (default 15m0s)\n      --profile-continuous-max-files int                                        Maximum number of historical profiles to keep (default 5)\n      --profile-dir string                                                      Path to the profile directory (default \"$AVALANCHEGO_DATA_DIR/profiles\")\n      --proposervm-min-block-delay duration                                     Minimum delay to enforce when building a snowman++ block for the primary network chains and the default minimum delay for subnets (default 1s)\n      --proposervm-use-current-height                                           Have the ProposerVM always report the last accepted P-chain block height\n      --public-ip string                                                        Public IP of this node for P2P communication\n      --public-ip-resolution-frequency duration                                 Frequency at which this node resolves/updates its public IP and renew NAT mappings, if applicable (default 5m0s)\n      --public-ip-resolution-service string                                     Only acceptable values are \"opendns\", \"ifconfigco\" or \"ifconfigme\". When provided, the node will use that service to periodically resolve/update its public IP\n      --router-health-max-drop-rate float                                       Node reports unhealthy if the router drops more than this portion of messages (default 1)\n      --router-health-max-outstanding-requests uint                             Node reports unhealthy if there are more than this many outstanding consensus requests (Get, PullQuery, etc.) over all chains (default 1024)\n      --snow-commit-threshold int                                               Beta value to use for consensus (default 20)\n      --snow-concurrent-repolls int                                             Minimum number of concurrent polls for finalizing consensus (default 4)\n      --snow-confidence-quorum-size int                                         Threshold of nodes required to increase this node's confidence in a network poll. Ignored if snow-quorum-size is provided (default 15)\n      --snow-max-processing int                                                 Maximum number of processing items to be considered healthy (default 256)\n      --snow-max-time-processing duration                                       Maximum amount of time an item should be processing and still be healthy (default 30s)\n      --snow-optimal-processing int                                             Optimal number of processing containers in consensus (default 10)\n      --snow-preference-quorum-size int                                         Threshold of nodes required to update this node's preference in a network poll. Ignored if snow-quorum-size is provided (default 15)\n      --snow-quorum-size int                                                    Threshold of nodes required to update this node's preference and increase its confidence in a network poll (default 15)\n      --snow-sample-size int                                                    Number of nodes to query for each network poll (default 20)\n      --stake-max-consumption-rate uint                                         Maximum consumption rate of the remaining tokens to mint in the staking function (default 120000)\n      --stake-min-consumption-rate uint                                         Minimum consumption rate of the remaining tokens to mint in the staking function (default 100000)\n      --stake-minting-period duration                                           Consumption period of the staking function (default 8760h0m0s)\n      --stake-supply-cap uint                                                   Supply cap of the staking function (default 720000000000000000)\n      --staking-ephemeral-cert-enabled                                          If true, the node uses an ephemeral staking TLS key and certificate, and has an ephemeral node ID\n      --staking-ephemeral-signer-enabled                                        If true, the node uses an ephemeral staking signer key\n      --staking-host string                                                     Address of the consensus server. If the address is empty or a literal unspecified IP address, the server will bind on all available unicast and anycast IP addresses of the local system\n      --staking-port uint                                                       Port of the consensus server. If the port is 0 a port number is automatically chosen (default 9651)\n      --staking-rpc-signer-endpoint string                                      Specifies the RPC endpoint of the staking signer\n      --staking-signer-key-file string                                          Path to the signer private key for staking. Ignored if staking-signer-key-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/signer.key\")\n      --staking-signer-key-file-content string                                  Specifies base64 encoded signer private key for staking\n      --staking-tls-cert-file string                                            Path to the TLS certificate for staking. Ignored if staking-tls-cert-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/staker.crt\")\n      --staking-tls-cert-file-content string                                    Specifies base64 encoded TLS certificate for staking\n      --staking-tls-key-file string                                             Path to the TLS private key for staking. Ignored if staking-tls-key-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/staking/staker.key\")\n      --staking-tls-key-file-content string                                     Specifies base64 encoded TLS private key for staking\n      --state-sync-ids string                                                   Comma separated list of state sync peer ids to connect to. Example: NodeID-JR4dVmy6ffUGAKCBDkyCbeZbyHQBeDsET,NodeID-8CrVPQZ4VSqgL8zTdvL14G8HqAfrBr4z\n      --state-sync-ips string                                                   Comma separated list of state sync peer ips to connect to. Example: 127.0.0.1:9630,127.0.0.1:9631\n      --subnet-config-content string                                            Specifies base64 encoded subnets configurations\n      --subnet-config-dir string                                                Subnet specific configurations parent directory. Ignored if subnet-config-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/subnets\")\n      --sybil-protection-disabled-weight uint                                   Weight to provide to each peer when sybil protection is disabled (default 100)\n      --sybil-protection-enabled                                                Enables sybil protection. If enabled, Network TLS is required (default true)\n      --system-tracker-cpu-halflife duration                                    Halflife to use for the cpu tracker. Larger halflife --> cpu usage metrics change more slowly (default 15s)\n      --system-tracker-disk-halflife duration                                   Halflife to use for the disk tracker. Larger halflife --> disk usage metrics change more slowly (default 1m0s)\n      --system-tracker-disk-required-available-space uint                       Minimum number of available bytes on disk, under which the node will shutdown. (default 10737418240)\n      --system-tracker-disk-warning-threshold-available-space uint              Warning threshold for the number of available bytes on disk, under which the node will be considered unhealthy.  Must be >= [system-tracker-disk-required-available-space] (default 214748364800)\n      --system-tracker-disk-warning-threshold-available-space-percentage uint   Warning threshold for the percentage (between 0 and 50) of available disk space, under which the node will be considered unhealthy. (default 3)\n      --system-tracker-frequency duration                                       Frequency to check the real system usage of tracked processes. More frequent checks --> usage metrics are more accurate, but more expensive to track (default 500ms)\n      --system-tracker-processing-halflife duration                             Halflife to use for the processing requests tracker. Larger halflife --> usage metrics change more slowly (default 15s)\n      --throttler-inbound-at-large-alloc-size uint                              Size, in bytes, of at-large byte allocation in inbound message throttler (default 6291456)\n      --throttler-inbound-bandwidth-max-burst-size uint                         Max inbound bandwidth a node can use at once. Must be at least the max message size. See BandwidthThrottler (default 2097152)\n      --throttler-inbound-bandwidth-refill-rate uint                            Max average inbound bandwidth usage of a peer, in bytes per second. See BandwidthThrottler (default 524288)\n      --throttler-inbound-cpu-max-non-validator-node-usage float                Maximum number of CPUs that a non-validator can utilize. Value should be in range [0, total core count] (default 1.5)\n      --throttler-inbound-cpu-max-non-validator-usage float                     Number of CPUs that if fully utilized, will rate limit all non-validators. Value should be in range [0, total core count] (default 9.600000000000001)\n      --throttler-inbound-cpu-max-recheck-delay duration                        In the CPU-based network throttler, check at least this often whether the node's CPU usage has fallen to an acceptable level (default 5s)\n      --throttler-inbound-cpu-validator-alloc float                             Maximum number of CPUs to allocate for use by validators. Value should be in range [0, total core count] (default 12)\n      --throttler-inbound-disk-max-non-validator-node-usage float               Maximum number of disk reads/writes per second that a non-validator can utilize. Must be >= 0 (default 1.073741824e+12)\n      --throttler-inbound-disk-max-non-validator-usage float                    Number of disk reads/writes per second that, if fully utilized, will rate limit all non-validators. Must be >= 0 (default 1.073741824e+12)\n      --throttler-inbound-disk-max-recheck-delay duration                       In the disk-based network throttler, check at least this often whether the node's disk usage has fallen to an acceptable level (default 5s)\n      --throttler-inbound-disk-validator-alloc float                            Maximum number of disk reads/writes per second to allocate for use by validators. Must be > 0 (default 1.073741824e+12)\n      --throttler-inbound-node-max-at-large-bytes uint                          Max number of bytes a node can take from the inbound message throttler's at-large allocation. Must be at least the max message size (default 2097152)\n      --throttler-inbound-node-max-processing-msgs uint                         Max number of messages currently processing from a given node (default 1024)\n      --throttler-inbound-validator-alloc-size uint                             Size, in bytes, of validator byte allocation in inbound message throttler (default 33554432)\n      --throttler-outbound-at-large-alloc-size uint                             Size, in bytes, of at-large byte allocation in outbound message throttler (default 33554432)\n      --throttler-outbound-node-max-at-large-bytes uint                         Max number of bytes a node can take from the outbound message throttler's at-large allocation. Must be at least the max message size (default 2097152)\n      --throttler-outbound-validator-alloc-size uint                            Size, in bytes, of validator byte allocation in outbound message throttler (default 33554432)\n      --tracing-endpoint string                                                 The endpoint to send trace data to. If unspecified, the default endpoint will be used; depending on the exporter type\n      --tracing-exporter-type string                                            Type of exporter to use for tracing. Options are [disabled, grpc, http] (default \"disabled\")\n      --tracing-headers stringToString                                          The headers to provide the trace indexer (default [])\n      --tracing-insecure                                                        If true, don't use TLS when sending trace data (default true)\n      --tracing-sample-rate float                                               The fraction of traces to sample. If >= 1, always sample. If <= 0, never sample (default 0.1)\n      --track-subnets string                                                    List of subnets for the node to track. A node tracking a subnet will track the uptimes of the subnet validators and attempt to sync all the chains in the subnet. Before validating a subnet, a node should be tracking the subnet to avoid impacting their subnet validation uptime\n      --tx-fee uint                                                             Transaction fee, in nAVAX (default 1000000)\n      --upgrade-file string                                                     Specifies an upgrade config file path. Ignored when running standard networks or if upgrade-file-content is specified\n      --upgrade-file-content string                                             Specifies base64 encoded upgrade content\n      --uptime-metric-freq duration                                             Frequency of renewing this node's average uptime metric (default 30s)\n      --uptime-requirement float                                                Fraction of time a validator must be online to receive rewards (default 0.8)\n      --validator-fees-capacity uint                                            Maximum number of validators (default 20000)\n      --validator-fees-excess-conversion-constant uint                          Constant to convert validator excess price (default 865617)\n      --validator-fees-min-price uint                                           Minimum validator price in nAVAX per second (default 1)\n      --validator-fees-target uint                                              Target number of validators (default 10000)\n      --version                                                                 If true, print version and quit\n      --version-json                                                            If true, print version in JSON format and quit\n      --vm-aliases-file string                                                  Specifies a JSON file that maps vmIDs with custom aliases. Ignored if vm-aliases-file-content is specified (default \"$AVALANCHEGO_DATA_DIR/configs/vms/aliases.json\")\n      --vm-aliases-file-content string                                          Specifies base64 encoded maps vmIDs with custom aliases"
+}

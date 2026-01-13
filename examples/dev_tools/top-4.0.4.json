@@ -1,0 +1,113 @@
+{
+  "name": "top",
+  "version": "4.0.4",
+  "description": "For more details see top(1).",
+  "usage": "top [options]",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--accum-time-toggle",
+      "shortcut": "-S",
+      "description": "reverse last remembered 'S' state"
+    },
+    {
+      "option": "--batch-mode",
+      "shortcut": "-b",
+      "description": "run in non-interactive batch mode"
+    },
+    {
+      "option": "--cmdline-toggle",
+      "shortcut": "-c",
+      "description": "reverse last remembered 'c' state"
+    },
+    {
+      "option": "--delay",
+      "shortcut": "-d",
+      "description": "iterative delay as SECS [.TENTHS]",
+      "value": "SECS [.TENTHS]"
+    },
+    {
+      "option": "--filter-any-user",
+      "shortcut": "-U",
+      "description": "show only processes owned by USER",
+      "value": "USER"
+    },
+    {
+      "option": "--filter-only-euser",
+      "shortcut": "-u",
+      "description": "show only processes owned by USER",
+      "value": "USER"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "display this help text, then exit"
+    },
+    {
+      "option": "--idle-toggle",
+      "shortcut": "-i",
+      "description": "reverse last remembered 'i' state"
+    },
+    {
+      "option": "--iterations",
+      "shortcut": "-n",
+      "description": "exit on maximum iterations NUMBER",
+      "value": "NUMBER"
+    },
+    {
+      "option": "--list-fields",
+      "shortcut": "-O",
+      "description": "output all field names, then exit"
+    },
+    {
+      "option": "--pid",
+      "shortcut": "-p",
+      "description": "monitor only the tasks in PIDLIST",
+      "value": "PIDLIST"
+    },
+    {
+      "option": "--scale-summary-mem",
+      "shortcut": "-E",
+      "description": "set mem as: k,m,g,t,p,e for SCALE",
+      "value": "SCALE"
+    },
+    {
+      "option": "--scale-task-mem",
+      "shortcut": "-e",
+      "description": "set mem with: k,m,g,t,p for SCALE",
+      "value": "SCALE"
+    },
+    {
+      "option": "--secure-mode",
+      "shortcut": "-s",
+      "description": "run with secure mode restrictions"
+    },
+    {
+      "option": "--single-cpu-toggle",
+      "shortcut": "-1",
+      "description": "reverse last remembered '1' state"
+    },
+    {
+      "option": "--sort-override",
+      "shortcut": "-o",
+      "description": "force sorting on this named FIELD",
+      "value": "FIELD"
+    },
+    {
+      "option": "--threads-show",
+      "shortcut": "-H",
+      "description": "show tasks plus all their threads"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "output version information & exit"
+    },
+    {
+      "option": "--width",
+      "shortcut": "-w",
+      "description": "change print width [,use COLUMNS]",
+      "value": "[=COLUMNS]"
+    }
+  ]
+}

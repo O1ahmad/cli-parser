@@ -1,0 +1,1469 @@
+{
+  "name": "nimbus_beacon_node",
+  "version": "25.11.1-205309-stateofus",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node create",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Creates a new ENR."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "description": "The nimbus beacon node command line interface.",
+      "name": "nimbus_beacon_node createTestnetDeposits",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node export",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Export a EIP-3076 slashing protection interchange file."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node exit",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Submits a validator voluntary exit."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Show help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node import",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Imports password-protected keystores interactively."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Show help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node list",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Lists details about all wallets."
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--agent-string",
+              "shortcut": null,
+              "description": "Node agent string which is used as identifier in network",
+              "value": null,
+              "default": "[=nimbus]"
+            },
+            {
+              "option": "--config-file",
+              "shortcut": null,
+              "description": "Loads the configuration from a TOML file.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--data-dir",
+              "shortcut": "-d",
+              "description": "The directory where nimbus will store all blockchain data.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--el",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--jwt-secret",
+              "shortcut": null,
+              "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--light-supernode",
+              "shortcut": null,
+              "description": "Subscribe to the first half of column subnets",
+              "value": null,
+              "default": "[=false]"
+            },
+            {
+              "option": "--log-file",
+              "shortcut": null,
+              "description": "Specifies a path for the written JSON log file (deprecated).",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+              "value": null,
+              "default": "[=INFO]"
+            },
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "The Eth2 network to join",
+              "value": null,
+              "default": "[=mainnet]"
+            },
+            {
+              "option": "--no-el",
+              "shortcut": null,
+              "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+              "value": null,
+              "default": "[=false]"
+            },
+            {
+              "option": "--non-interactive",
+              "shortcut": null,
+              "description": "Do not display interactive prompts. Quit on missing configuration.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--netkey-file",
+              "shortcut": null,
+              "description": "Source of network (secp256k1) private key file (random|<path>)",
+              "value": null,
+              "default": "[=random]"
+            },
+            {
+              "option": "--peerdas-supernode",
+              "shortcut": null,
+              "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+              "value": null,
+              "default": "[=false]"
+            },
+            {
+              "option": "--proven-block-property",
+              "shortcut": null,
+              "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\").",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--seq-number",
+              "shortcut": null,
+              "description": "Record sequence number",
+              "value": null,
+              "default": "[=1]"
+            },
+            {
+              "option": "--secrets-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystore passwords.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--tcp-port",
+              "shortcut": null,
+              "description": "External TCP port.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--udp-port",
+              "shortcut": null,
+              "description": "External UDP port.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--validators-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystores.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--verifying-web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-update-interval",
+              "shortcut": null,
+              "description": "Number of seconds between validator list updates",
+              "value": null,
+              "default": "[=3600]"
+            },
+            {
+              "option": "--web3-url",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "nimbus_beacon_node record create",
+          "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record create\u001b[0m [OPTIONS]...\n\nCreate a new ENR.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file   \u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level     \u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n                       TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")\n                       [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file      \u001b[0m  Specifies a path for the written JSON log file\n                       (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network       \u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir      \u001b[0m  The directory where nimbus will store all blockchain\n                       data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of\n                       validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n                       verification to the verifying Web3Signer (for example\n                       \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of\n                       validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir   \u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir   \u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url      \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el            \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el         \u001b[0m  Don't use an EL. The node will remain optimistically\n                       synced and won't be able to perform validator duties\n                       [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing\n                       configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file   \u001b[0m  Source of network (secp256k1) private key file\n                       (random|<path>) [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private\n                       key file [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string  \u001b[0m  Node agent string which is used as identifier in network\n                       [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a\n                       PeerDAS supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads   \u001b[0m  Number of worker threads (\"0\" = use as many threads as\n                       there are CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret    \u001b[0m  A file containing the hex-encoded 256 bit secret key to\n                       be used for verifying/generating JWT tokens.\u001b[0m\n \u001b[34m\u001b[1m--ip            \u001b[0m  External IP address.\u001b[0m\n \u001b[34m\u001b[1m--tcp-port      \u001b[0m  External TCP port.\u001b[0m\n \u001b[34m\u001b[1m--udp-port      \u001b[0m  External UDP port.\u001b[0m\n \u001b[34m\u001b[1m--seq-number    \u001b[0m  Record sequence number [=1].\u001b[0m\n \u001b[34m\u001b[1m--field         \u001b[0m  Additional record key pairs, provide as <string>:<bytes\n                       in hex>.\u001b[0m",
+          "description": "Create a new ENR."
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--agent-string",
+              "shortcut": null,
+              "description": "Node agent string which is used as identifier in network",
+              "value": null,
+              "default": "nimbus"
+            },
+            {
+              "option": "--config-file",
+              "shortcut": null,
+              "description": "Loads the configuration from a TOML file.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--data-dir",
+              "shortcut": "-d",
+              "description": "The directory where nimbus will store all blockchain data.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--el",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--light-supernode",
+              "shortcut": null,
+              "description": "Subscribe to the first half of column subnets",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--log-file",
+              "shortcut": null,
+              "description": "Specifies a path for the written JSON log file (deprecated).",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+              "value": null,
+              "default": "INFO"
+            },
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "The Eth2 network to join",
+              "value": null,
+              "default": "mainnet"
+            },
+            {
+              "option": "--no-el",
+              "shortcut": null,
+              "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--non-interactive",
+              "shortcut": null,
+              "description": "Do not display interactive prompts. Quit on missing configuration.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--netkey-file",
+              "shortcut": null,
+              "description": "Source of network (secp256k1) private key file (random|<path>)",
+              "value": null,
+              "default": "random"
+            },
+            {
+              "option": "--insecure-netkey-password",
+              "shortcut": null,
+              "description": "Use pre-generated INSECURE password for network private key file",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--num-threads",
+              "shortcut": null,
+              "description": "Number of worker threads (\"0\" = use as many threads as there are CPU cores available)",
+              "value": null,
+              "default": "0"
+            },
+            {
+              "option": "--peerdas-supernode",
+              "shortcut": null,
+              "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--proven-block-property",
+              "shortcut": null,
+              "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--secrets-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystore passwords.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--validators-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystores.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--wallets-dir",
+              "shortcut": null,
+              "description": "A directory containing wallet files.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-update-interval",
+              "shortcut": null,
+              "description": "Number of seconds between validator list updates",
+              "value": null,
+              "default": "3600"
+            },
+            {
+              "option": "--web3-url",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "nimbus_beacon_node record print",
+          "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record print\u001b[0m <enr>\u001b[0m\n\nPrint the content of a given ENR.\n\u001b[0m\n\u001b[34m\u001b[1m <enr>\u001b[0m      \u001b[0m  ENR URI of the record to print.\u001b[0m\n\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file\u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level\u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n             TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\") [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file\u001b[0m  Specifies a path for the written JSON log file (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network\u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir\u001b[0m  The directory where nimbus will store all blockchain data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n             verification to the verifying Web3Signer (for example\n             \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir\u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir\u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url\u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el  \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el\u001b[0m  Don't use an EL. The node will remain optimistically synced and\n             won't be able to perform validator duties [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file\u001b[0m  Source of network (secp256k1) private key file (random|<path>)\n             [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private key file\n             [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string\u001b[0m  Node agent string which is used as identifier in network [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a PeerDAS\n             supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads\u001b[0m  Number of worker threads (\"0\" = use as many threads as there are\n             CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret\u001b[0m  A file containing the hex-encoded 256 bit secret key to be used for\n             verifying/generating JWT tokens.\u001b[0m",
+          "description": "Print the content of a given ENR."
+        }
+      ],
+      "options": [
+        {
+          "option": "--agent-string",
+          "shortcut": null,
+          "description": "Node agent string which is used as identifier in network",
+          "value": null,
+          "default": "nimbus"
+        },
+        {
+          "option": "--config-file",
+          "shortcut": null,
+          "description": "Loads the configuration from a TOML file.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--data-dir",
+          "shortcut": "-d",
+          "description": "The directory where nimbus will store all blockchain data.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--el",
+          "shortcut": null,
+          "description": "One or more execution layer Engine API URLs.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--jwt-secret",
+          "shortcut": null,
+          "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--light-supernode",
+          "shortcut": null,
+          "description": "Subscribe to the first half of column subnets",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--log-file",
+          "shortcut": null,
+          "description": "Specifies a path for the written JSON log file (deprecated).",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+          "value": null,
+          "default": "INFO"
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "The Eth2 network to join",
+          "value": null,
+          "default": "mainnet"
+        },
+        {
+          "option": "--netkey-file",
+          "shortcut": null,
+          "description": "Source of network (secp256k1) private key file (random|<path>)",
+          "value": null,
+          "default": "random"
+        },
+        {
+          "option": "--no-el",
+          "shortcut": null,
+          "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--non-interactive",
+          "shortcut": null,
+          "description": "Do not display interactive prompts. Quit on missing configuration.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--peerdas-supernode",
+          "shortcut": null,
+          "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--proven-block-property",
+          "shortcut": null,
+          "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\").",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--seq-number",
+          "shortcut": null,
+          "description": "Record sequence number",
+          "value": null,
+          "default": "1"
+        },
+        {
+          "option": "--secrets-dir",
+          "shortcut": null,
+          "description": "A directory containing validator keystore passwords.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--tcp-port",
+          "shortcut": null,
+          "description": "External TCP port.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--udp-port",
+          "shortcut": null,
+          "description": "External UDP port.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--validators-dir",
+          "shortcut": null,
+          "description": "A directory containing validator keystores.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verifying-web3-signer-url",
+          "shortcut": null,
+          "description": "Remote Web3Signer URL that will be used as a source of validators.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--web3-signer-url",
+          "shortcut": null,
+          "description": "Remote Web3Signer URL that will be used as a source of validators.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--web3-signer-update-interval",
+          "shortcut": null,
+          "description": "Number of seconds between validator list updates",
+          "value": null,
+          "default": "3600"
+        },
+        {
+          "option": "--web3-url",
+          "shortcut": null,
+          "description": "One or more execution layer Engine API URLs.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node record",
+      "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record\u001b[0m command\n\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file\u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level\u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n             TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\") [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file\u001b[0m  Specifies a path for the written JSON log file (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network\u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir\u001b[0m  The directory where nimbus will store all blockchain data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n             verification to the verifying Web3Signer (for example\n             \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir\u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir\u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url\u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el  \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el\u001b[0m  Don't use an EL. The node will remain optimistically synced and\n             won't be able to perform validator duties [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file\u001b[0m  Source of network (secp256k1) private key file (random|<path>)\n             [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private key file\n             [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string\u001b[0m  Node agent string which is used as identifier in network [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a PeerDAS\n             supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads\u001b[0m  Number of worker threads (\"0\" = use as many threads as there are\n             CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret\u001b[0m  A file containing the hex-encoded 256 bit secret key to be used for\n             verifying/generating JWT tokens.\u001b[0m\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record create\u001b[0m [OPTIONS]...\n\nCreate a new ENR.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--ip  \u001b[0m  External IP address.\u001b[0m\n \u001b[34m\u001b[1m--tcp-port\u001b[0m  External TCP port.\u001b[0m\n \u001b[34m\u001b[1m--udp-port\u001b[0m  External UDP port.\u001b[0m\n \u001b[34m\u001b[1m--seq-number\u001b[0m  Record sequence number [=1].\u001b[0m\n \u001b[34m\u001b[1m--field\u001b[0m  Additional record key pairs, provide as <string>:<bytes in hex>.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node record print\u001b[0m <enr>\u001b[0m\n\nPrint the content of a given ENR.\n\u001b[0m\n\u001b[34m\u001b[1m <enr>\u001b[0m      \u001b[0m  ENR URI of the record to print.\u001b[0m",
+      "description": "Command related to ENR records."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "",
+          "description": "Display help information.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "description": "Nimbus beacon node command line interface.",
+      "name": "nimbus_beacon_node restore",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node test",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Test a web3 provider."
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--agent-string",
+              "shortcut": null,
+              "description": "Node agent string which is used as identifier in network",
+              "value": "<string>",
+              "default": "nimbus"
+            },
+            {
+              "option": "--config-file",
+              "shortcut": null,
+              "description": "Loads the configuration from a TOML file.",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--data-dir",
+              "shortcut": "-d",
+              "description": "The directory where nimbus will store all blockchain data.",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--el",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": "<url>",
+              "default": null
+            },
+            {
+              "option": "--jwt-secret",
+              "shortcut": null,
+              "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+              "value": "<file>",
+              "default": null
+            },
+            {
+              "option": "--light-supernode",
+              "shortcut": null,
+              "description": "Subscribe to the first half of column subnets",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--log-file",
+              "shortcut": null,
+              "description": "Specifies a path for the written JSON log file (deprecated).",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+              "value": "<level>",
+              "default": "INFO"
+            },
+            {
+              "option": "--name",
+              "shortcut": null,
+              "description": "An easy-to-remember name for the wallet of your choice.",
+              "value": "<name>",
+              "default": null
+            },
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "The Eth2 network to join",
+              "value": "<network>",
+              "default": "mainnet"
+            },
+            {
+              "option": "--next-account",
+              "shortcut": null,
+              "description": "Initial value for the 'nextaccount' property of the wallet.",
+              "value": "<value>",
+              "default": null
+            },
+            {
+              "option": "--no-el",
+              "shortcut": null,
+              "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties.",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--non-interactive",
+              "shortcut": null,
+              "description": "Do not display interactive prompts. Quit on missing configuration.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--num-threads",
+              "shortcut": null,
+              "description": "Number of worker threads (\"0\" = use as many threads as there are CPU cores available)",
+              "value": "<number>",
+              "default": "0"
+            },
+            {
+              "option": "--out",
+              "shortcut": null,
+              "description": "Output wallet file.",
+              "value": "<file>",
+              "default": null
+            },
+            {
+              "option": "--peerdas-supernode",
+              "shortcut": null,
+              "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--proven-block-property",
+              "shortcut": null,
+              "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer.",
+              "value": "<property>",
+              "default": null
+            },
+            {
+              "option": "--secrets-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystore passwords.",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--validators-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystores.",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--verifying-web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": "<url>",
+              "default": null
+            },
+            {
+              "option": "--web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": "<url>",
+              "default": null
+            },
+            {
+              "option": "--web3-signer-update-interval",
+              "shortcut": null,
+              "description": "Number of seconds between validator list updates",
+              "value": "<number>",
+              "default": "3600"
+            },
+            {
+              "option": "--web3-url",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": "<url>",
+              "default": null
+            }
+          ],
+          "name": "nimbus_beacon_node wallets create",
+          "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets create\u001b[0m [OPTIONS]...\n\nCreates a new EIP-2386 wallet.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file     \u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level       \u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n                         TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")\n                         [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file        \u001b[0m  Specifies a path for the written JSON log file\n                         (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network         \u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir        \u001b[0m  The directory where nimbus will store all blockchain\n                         data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir  \u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of\n                         validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent\n                         for verification to the verifying Web3Signer (for\n                         example \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url \u001b[0m  Remote Web3Signer URL that will be used as a source of\n                         validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates\n                         [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir     \u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir     \u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url        \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el              \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el           \u001b[0m  Don't use an EL. The node will remain optimistically\n                         synced and won't be able to perform validator duties\n                         [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive \u001b[0m  Do not display interactive prompts. Quit on missing\n                         configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file     \u001b[0m  Source of network (secp256k1) private key file\n                         (random|<path>) [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private\n                         key file [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string    \u001b[0m  Node agent string which is used as identifier in\n                         network [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a\n                         PeerDAS supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode \u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads     \u001b[0m  Number of worker threads (\"0\" = use as many threads as\n                         there are CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret      \u001b[0m  A file containing the hex-encoded 256 bit secret key to\n                         be used for verifying/generating JWT tokens.\u001b[0m\n \u001b[34m\u001b[1m--next-account    \u001b[0m  Initial value for the 'nextaccount' property of the\n                         wallet.\u001b[0m\n \u001b[34m\u001b[1m--name            \u001b[0m  An easy-to-remember name for the wallet of your choice.\u001b[0m\n \u001b[34m\u001b[1m--out             \u001b[0m  Output wallet file.\u001b[0m",
+          "description": "Creates a new EIP-2386 wallet."
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--agent-string",
+              "shortcut": null,
+              "description": "Node agent string which is used as identifier in network",
+              "value": null,
+              "default": "nimbus"
+            },
+            {
+              "option": "--config-file",
+              "shortcut": null,
+              "description": "Loads the configuration from a TOML file.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--data-dir",
+              "shortcut": "-d",
+              "description": "The directory where nimbus will store all blockchain data.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--el",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--insecure-netkey-password",
+              "shortcut": null,
+              "description": "Use pre-generated INSECURE password for network private key file",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--jwt-secret",
+              "shortcut": null,
+              "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--light-supernode",
+              "shortcut": null,
+              "description": "Subscribe to the first half of column subnets",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--log-file",
+              "shortcut": null,
+              "description": "Specifies a path for the written JSON log file (deprecated).",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+              "value": null,
+              "default": "INFO"
+            },
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "The Eth2 network to join",
+              "value": null,
+              "default": "mainnet"
+            },
+            {
+              "option": "--netkey-file",
+              "shortcut": null,
+              "description": "Source of network (secp256k1) private key file (random|<path>)",
+              "value": null,
+              "default": "random"
+            },
+            {
+              "option": "--no-el",
+              "shortcut": null,
+              "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--non-interactive",
+              "shortcut": null,
+              "description": "Do not display interactive prompts. Quit on missing configuration.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--num-threads",
+              "shortcut": null,
+              "description": "Number of worker threads (\"0\" = use as many threads as there are CPU cores available)",
+              "value": null,
+              "default": "0"
+            },
+            {
+              "option": "--peerdas-supernode",
+              "shortcut": null,
+              "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--proven-block-property",
+              "shortcut": null,
+              "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\").",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--secrets-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystore passwords.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--validators-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystores.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--verifying-web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-update-interval",
+              "shortcut": null,
+              "description": "Number of seconds between validator list updates",
+              "value": null,
+              "default": "3600"
+            },
+            {
+              "option": "--web3-url",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "nimbus_beacon_node wallets list",
+          "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets list\u001b[0m\n\nLists details about all wallets.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file\u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level\u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n             TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\") [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file\u001b[0m  Specifies a path for the written JSON log file (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network\u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir\u001b[0m  The directory where nimbus will store all blockchain data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n             verification to the verifying Web3Signer (for example\n             \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir\u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir\u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url\u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el  \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el\u001b[0m  Don't use an EL. The node will remain optimistically synced and\n             won't be able to perform validator duties [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file\u001b[0m  Source of network (secp256k1) private key file (random|<path>)\n             [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private key file\n             [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string\u001b[0m  Node agent string which is used as identifier in network [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a PeerDAS\n             supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads\u001b[0m  Number of worker threads (\"0\" = use as many threads as there are\n             CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret\u001b[0m  A file containing the hex-encoded 256 bit secret key to be used for\n             verifying/generating JWT tokens.\u001b[0m",
+          "description": "Lists details about all wallets."
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--agent-string",
+              "shortcut": null,
+              "description": "Node agent string which is used as identifier in network",
+              "value": null,
+              "default": "nimbus"
+            },
+            {
+              "option": "--config-file",
+              "shortcut": null,
+              "description": "Loads the configuration from a TOML file.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--data-dir",
+              "shortcut": "-d",
+              "description": "The directory where nimbus will store all blockchain data.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--deposits",
+              "shortcut": null,
+              "description": "Expected number of deposits to recover. If not specified, Nimbus will try to guess the number by inspecting the latest beacon state.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--el",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--jwt-secret",
+              "shortcut": null,
+              "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--light-supernode",
+              "shortcut": null,
+              "description": "Subscribe to the first half of column subnets",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--log-file",
+              "shortcut": null,
+              "description": "Specifies a path for the written JSON log file (deprecated).",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--log-level",
+              "shortcut": null,
+              "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+              "value": null,
+              "default": "INFO"
+            },
+            {
+              "option": "--name",
+              "shortcut": null,
+              "description": "An easy-to-remember name for the wallet of your choice.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--network",
+              "shortcut": null,
+              "description": "The Eth2 network to join",
+              "value": null,
+              "default": "mainnet"
+            },
+            {
+              "option": "--no-el",
+              "shortcut": null,
+              "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--non-interactive",
+              "shortcut": null,
+              "description": "Do not display interactive prompts. Quit on missing configuration.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--netkey-file",
+              "shortcut": null,
+              "description": "Source of network (secp256k1) private key file (random|<path>)",
+              "value": null,
+              "default": "random"
+            },
+            {
+              "option": "--peerdas-supernode",
+              "shortcut": null,
+              "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+              "value": null,
+              "default": "false"
+            },
+            {
+              "option": "--proven-block-property",
+              "shortcut": null,
+              "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\").",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--secrets-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystore passwords.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--validators-dir",
+              "shortcut": null,
+              "description": "A directory containing validator keystores.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--verifying-web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-url",
+              "shortcut": null,
+              "description": "Remote Web3Signer URL that will be used as a source of validators.",
+              "value": null,
+              "default": null
+            },
+            {
+              "option": "--web3-signer-update-interval",
+              "shortcut": null,
+              "description": "Number of seconds between validator list updates",
+              "value": null,
+              "default": "3600"
+            },
+            {
+              "option": "--web3-url",
+              "shortcut": null,
+              "description": "One or more execution layer Engine API URLs.",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "nimbus_beacon_node wallets restore",
+          "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets restore\u001b[0m [OPTIONS]...\n\nRestores a wallet from cold storage.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file \u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level   \u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n                     TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")\n                     [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file    \u001b[0m  Specifies a path for the written JSON log file\n                     (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network     \u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir    \u001b[0m  The directory where nimbus will store all blockchain data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of\n                     validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n                     verification to the verifying Web3Signer (for example\n                     \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of\n                     validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir \u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir \u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url    \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el          \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el       \u001b[0m  Don't use an EL. The node will remain optimistically synced\n                     and won't be able to perform validator duties [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing\n                     configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file \u001b[0m  Source of network (secp256k1) private key file\n                     (random|<path>) [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private key\n                     file [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string\u001b[0m  Node agent string which is used as identifier in network\n                     [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a PeerDAS\n                     supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads \u001b[0m  Number of worker threads (\"0\" = use as many threads as\n                     there are CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret  \u001b[0m  A file containing the hex-encoded 256 bit secret key to be\n                     used for verifying/generating JWT tokens.\u001b[0m\n \u001b[34m\u001b[1m--name        \u001b[0m  An easy-to-remember name for the wallet of your choice.\u001b[0m\n \u001b[34m\u001b[1m--out         \u001b[0m  Output wallet file.\u001b[0m\n \u001b[34m\u001b[1m--deposits    \u001b[0m  Expected number of deposits to recover. If not specified,\n                     Nimbus will try to guess the number by inspecting the\n                     latest beacon state.\u001b[0m",
+          "description": "Restores a wallet from cold storage."
+        }
+      ],
+      "options": [
+        {
+          "option": "--agent-string",
+          "shortcut": null,
+          "description": "Node agent string which is used as identifier in network",
+          "value": null,
+          "default": "nimbus"
+        },
+        {
+          "option": "--config-file",
+          "shortcut": null,
+          "description": "Loads the configuration from a TOML file.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--data-dir",
+          "shortcut": "-d",
+          "description": "The directory where nimbus will store all blockchain data.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--deposits",
+          "shortcut": null,
+          "description": "Expected number of deposits to recover. If not specified, Nimbus will try to guess the number by inspecting the latest beacon state.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--el",
+          "shortcut": null,
+          "description": "One or more execution layer Engine API URLs.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--jwt-secret",
+          "shortcut": null,
+          "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--light-supernode",
+          "shortcut": null,
+          "description": "Subscribe to the first half of column subnets",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--log-file",
+          "shortcut": null,
+          "description": "Specifies a path for the written JSON log file (deprecated).",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--log-level",
+          "shortcut": null,
+          "description": "Sets the log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\")",
+          "value": null,
+          "default": "INFO"
+        },
+        {
+          "option": "--name",
+          "shortcut": null,
+          "description": "An easy-to-remember name for the wallet of your choice.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--next-account",
+          "shortcut": null,
+          "description": "Initial value for the 'nextaccount' property of the wallet.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "The Eth2 network to join",
+          "value": null,
+          "default": "mainnet"
+        },
+        {
+          "option": "--netkey-file",
+          "shortcut": null,
+          "description": "Source of network (secp256k1) private key file (random|<path>)",
+          "value": null,
+          "default": "random"
+        },
+        {
+          "option": "--no-el",
+          "shortcut": null,
+          "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--non-interactive",
+          "shortcut": null,
+          "description": "Do not display interactive prompts. Quit on missing configuration.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--num-threads",
+          "shortcut": null,
+          "description": "Number of worker threads (\"0\" = use as many threads as there are CPU cores available)",
+          "value": null,
+          "default": "0"
+        },
+        {
+          "option": "--peerdas-supernode",
+          "shortcut": null,
+          "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--proven-block-property",
+          "shortcut": null,
+          "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\").",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--secrets-dir",
+          "shortcut": null,
+          "description": "A directory containing validator keystore passwords.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--validators-dir",
+          "shortcut": null,
+          "description": "A directory containing validator keystores.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verifying-web3-signer-url",
+          "shortcut": null,
+          "description": "Remote Web3Signer URL that will be used as a source of validators.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--web3-signer-url",
+          "shortcut": null,
+          "description": "Remote Web3Signer URL that will be used as a source of validators.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--web3-signer-update-interval",
+          "shortcut": null,
+          "description": "Number of seconds between validator list updates",
+          "value": null,
+          "default": "3600"
+        },
+        {
+          "option": "--web3-url",
+          "shortcut": null,
+          "description": "One or more execution layer Engine API URLs.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node wallets",
+      "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets\u001b[0m command\n\nThe following options are available:\n\n \u001b[34m\u001b[1m--config-file\u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n \u001b[34m\u001b[1m--log-level\u001b[0m  Sets the log level for process and topics (e.g. \"DEBUG;\n             TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\") [=INFO].\u001b[0m\n \u001b[34m\u001b[1m--log-file\u001b[0m  Specifies a path for the written JSON log file (deprecated).\u001b[0m\n \u001b[34m\u001b[1m--network\u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir\u001b[0m  The directory where nimbus will store all blockchain data.\u001b[0m\n \u001b[34m\u001b[1m--validators-dir\u001b[0m  A directory containing validator keystores.\u001b[0m\n \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--proven-block-property\u001b[0m  The field path of a block property that will be sent for\n             verification to the verifying Web3Signer (for example\n             \".execution_payload.fee_recipient\").\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a source of validators.\u001b[0m\n \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates [=3600].\u001b[0m\n \u001b[34m\u001b[1m--secrets-dir\u001b[0m  A directory containing validator keystore passwords.\u001b[0m\n \u001b[34m\u001b[1m--wallets-dir\u001b[0m  A directory containing wallet files.\u001b[0m\n \u001b[34m\u001b[1m--web3-url\u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--el  \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n \u001b[34m\u001b[1m--no-el\u001b[0m  Don't use an EL. The node will remain optimistically synced and\n             won't be able to perform validator duties [=false].\u001b[0m\n \u001b[34m\u001b[1m--non-interactive\u001b[0m  Do not display interactive prompts. Quit on missing configuration.\u001b[0m\n \u001b[34m\u001b[1m--netkey-file\u001b[0m  Source of network (secp256k1) private key file (random|<path>)\n             [=random].\u001b[0m\n \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network private key file\n             [=false].\u001b[0m\n \u001b[34m\u001b[1m--agent-string\u001b[0m  Node agent string which is used as identifier in network [=nimbus].\u001b[0m\n \u001b[34m\u001b[1m--subscribe-all-subnets\u001b[0m  Subscribe to all subnet topics when gossiping [=false].\u001b[0m\n \u001b[34m\u001b[1m--peerdas-supernode\u001b[0m  Subscribe to all column subnets, thereby becoming a PeerDAS\n             supernode [=false].\u001b[0m\n \u001b[34m\u001b[1m--light-supernode\u001b[0m  Subscribe to the first half of column subnets [=false].\u001b[0m\n \u001b[34m\u001b[1m--num-threads\u001b[0m  Number of worker threads (\"0\" = use as many threads as there are\n             CPU cores available) [=0].\u001b[0m\n \u001b[34m\u001b[1m--jwt-secret\u001b[0m  A file containing the hex-encoded 256 bit secret key to be used for\n             verifying/generating JWT tokens.\u001b[0m\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets create\u001b[0m [OPTIONS]...\n\nCreates a new EIP-2386 wallet.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--next-account\u001b[0m  Initial value for the 'nextaccount' property of the wallet.\u001b[0m\n \u001b[34m\u001b[1m--name\u001b[0m  An easy-to-remember name for the wallet of your choice.\u001b[0m\n \u001b[34m\u001b[1m--out \u001b[0m  Output wallet file.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets restore\u001b[0m [OPTIONS]...\n\nRestores a wallet from cold storage.\n\u001b[0m\nThe following options are available:\n\n \u001b[34m\u001b[1m--name\u001b[0m  An easy-to-remember name for the wallet of your choice.\u001b[0m\n \u001b[34m\u001b[1m--out \u001b[0m  Output wallet file.\u001b[0m\n \u001b[34m\u001b[1m--deposits\u001b[0m  Expected number of deposits to recover. If not specified, Nimbus\n             will try to guess the number by inspecting the latest beacon state.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets list\u001b[0m\n\nLists details about all wallets.\n\u001b[0m",
+      "description": "Command related to wallet management."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": null,
+          "description": "Display help information",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "nimbus_beacon_node import",
+      "raw_help_text": "nimbus_beacon_node does not accept arguments\u001b[0m\nTry \u001b[36mnimbus_beacon_node --help\u001b[0m for more information.",
+      "description": "Imports password-protected keystores interactively."
+    }
+  ],
+  "options": [
+    {
+      "option": "--agent-string",
+      "shortcut": null,
+      "description": "Node agent string which is used as identifier in network.",
+      "value": null,
+      "default": "nimbus"
+    },
+    {
+      "option": "--bootstrap-file",
+      "shortcut": null,
+      "description": "Specifies a line-delimited file of bootstrap Ethereum network addresses.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--bootstrap-node",
+      "shortcut": "-b",
+      "description": "Specifies one or more bootstrap nodes to use when connecting to the network.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--count",
+      "shortcut": null,
+      "description": "Number of deposits to generate.",
+      "value": null,
+      "default": "1"
+    },
+    {
+      "option": "--data-dir",
+      "shortcut": "-d",
+      "description": "The directory where nimbus will store all blockchain data.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--deposit",
+      "shortcut": null,
+      "description": "The name of generated deposits file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--direct-peer",
+      "shortcut": null,
+      "description": "The list of privileged, secure and known peers to connect and maintain the connection to.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--dump",
+      "shortcut": null,
+      "description": "Write SSZ dumps of blocks and states to data dir.",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--external-beacon-api-url",
+      "shortcut": null,
+      "description": "External beacon API to use for syncing (on empty database).",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--finalized-checkpoint-state",
+      "shortcut": null,
+      "description": "SSZ file specifying a recent finalized state.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--graffiti",
+      "shortcut": null,
+      "description": "The graffiti value that will appear in proposed blocks.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--jwt-secret",
+      "shortcut": null,
+      "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-file",
+      "shortcut": null,
+      "description": "Specifies a path for the written JSON log file (deprecated).",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--log-level",
+      "shortcut": null,
+      "description": "Sets the log level for process and topics.",
+      "value": null,
+      "default": "INFO"
+    },
+    {
+      "option": "--network",
+      "shortcut": null,
+      "description": "The Eth2 network to join.",
+      "value": null,
+      "default": "mainnet"
+    },
+    {
+      "option": "--no-el",
+      "shortcut": null,
+      "description": "Don't use an EL. The node will remain optimistically synced and won't be able to perform validator duties.",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--num-threads",
+      "shortcut": null,
+      "description": "Number of worker threads.",
+      "value": null,
+      "default": "0"
+    },
+    {
+      "option": "--out",
+      "shortcut": null,
+      "description": "Output wallet file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--out-deposits-file",
+      "shortcut": null,
+      "description": "The name of generated deposits file.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--rest",
+      "shortcut": null,
+      "description": "Enable the REST server.",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--tcp-port",
+      "shortcut": null,
+      "description": "Listening TCP port for Ethereum LibP2P traffic.",
+      "value": null,
+      "default": "9000"
+    },
+    {
+      "option": "--udp-port",
+      "shortcut": null,
+      "description": "Listening UDP port for node discovery.",
+      "value": null,
+      "default": "9000"
+    },
+    {
+      "option": "--validators-dir",
+      "shortcut": null,
+      "description": "A directory containing validator keystores.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "Nimbus beacon node v25.11.1-205309-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node\u001b[0m [OPTIONS]... command\n\nThe following options are available:\n\n     \u001b[34m\u001b[1m--config-file           \u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n     \u001b[34m\u001b[1m--log-level             \u001b[0m  Sets the log level for process and topics (e.g.\n                               \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none;\n                               DISABLED:none\") [=INFO].\u001b[0m\n     \u001b[34m\u001b[1m--log-file              \u001b[0m  Specifies a path for the written JSON log file\n                               (deprecated).\u001b[0m\n     \u001b[34m\u001b[1m--network               \u001b[0m  The Eth2 network to join [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir              \u001b[0m  The directory where nimbus will store all\n                               blockchain data.\u001b[0m\n     \u001b[34m\u001b[1m--validators-dir        \u001b[0m  A directory containing validator keystores.\u001b[0m\n     \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Remote Web3Signer URL that will be used as a\n                               source of validators.\u001b[0m\n     \u001b[34m\u001b[1m--proven-block-property \u001b[0m  The field path of a block property that will be\n                               sent for verification to the verifying Web3Signer\n                               (for example \".execution_payload.fee_recipient\").\u001b[0m\n     \u001b[34m\u001b[1m--web3-signer-url       \u001b[0m  Remote Web3Signer URL that will be used as a\n                               source of validators.\u001b[0m\n     \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates\n                               [=3600].\u001b[0m\n     \u001b[34m\u001b[1m--secrets-dir           \u001b[0m  A directory containing validator keystore\n                               passwords.\u001b[0m\n     \u001b[34m\u001b[1m--wallets-dir           \u001b[0m  A directory containing wallet files.\u001b[0m\n     \u001b[34m\u001b[1m--web3-url              \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n     \u001b[34m\u001b[1m--el                    \u001b[0m  One or more execution layer Engine API URLs.\u001b[0m\n     \u001b[34m\u001b[1m--no-el                 \u001b[0m  Don't use an EL. The node will remain\n                               optimistically synced and won't be able to\n                               perform validator duties [=false].\u001b[0m\n     \u001b[34m\u001b[1m--non-interactive       \u001b[0m  Do not display interactive prompts. Quit on\n                               missing configuration.\u001b[0m\n     \u001b[34m\u001b[1m--netkey-file           \u001b[0m  Source of network (secp256k1) private key file\n                               (random|<path>) [=random].\u001b[0m\n     \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network\n                               private key file [=false].\u001b[0m\n     \u001b[34m\u001b[1m--agent-string          \u001b[0m  Node agent string which is used as identifier in\n                               network [=nimbus].\u001b[0m\n     \u001b[34m\u001b[1m--subscribe-all-subnets \u001b[0m  Subscribe to all subnet topics when gossiping\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--peerdas-supernode     \u001b[0m  Subscribe to all column subnets, thereby becoming\n                               a PeerDAS supernode [=false].\u001b[0m\n     \u001b[34m\u001b[1m--light-supernode       \u001b[0m  Subscribe to the first half of column subnets\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--num-threads           \u001b[0m  Number of worker threads (\"0\" = use as many\n                               threads as there are CPU cores available) [=0].\u001b[0m\n     \u001b[34m\u001b[1m--jwt-secret            \u001b[0m  A file containing the hex-encoded 256 bit secret\n                               key to be used for verifying/generating JWT\n                               tokens.\u001b[0m\n \u001b[34m\u001b[1m-b, \u001b[0m\u001b[34m\u001b[1m--bootstrap-node        \u001b[0m  Specifies one or more bootstrap nodes to use when\n                               connecting to the network.\u001b[0m\n     \u001b[34m\u001b[1m--bootstrap-file        \u001b[0m  Specifies a line-delimited file of bootstrap\n                               Ethereum network addresses.\u001b[0m\n     \u001b[34m\u001b[1m--listen-address        \u001b[0m  Listening address for the Ethereum LibP2P and\n                               Discovery v5 traffic [=*].\u001b[0m\n     \u001b[34m\u001b[1m--tcp-port              \u001b[0m  Listening TCP port for Ethereum LibP2P traffic\n                               [=9000].\u001b[0m\n     \u001b[34m\u001b[1m--udp-port              \u001b[0m  Listening UDP port for node discovery [=9000].\u001b[0m\n     \u001b[34m\u001b[1m--max-peers             \u001b[0m  The target number of peers to connect to [=160].\u001b[0m\n     \u001b[34m\u001b[1m--hard-max-peers        \u001b[0m  The maximum number of peers to connect to.\n                               Defaults to maxPeers * 1.5.\u001b[0m\n     \u001b[34m\u001b[1m--nat                   \u001b[0m  Specify method to use for determining public\n                               address. Must be one of: any, none, upnp, pmp,\n                               extip:<IP> [=any].\u001b[0m\n     \u001b[34m\u001b[1m--enr-auto-update       \u001b[0m  Discovery can automatically update its ENR with\n                               the IP address and UDP port as seen by other\n                               nodes it communicates with. This option allows to\n                               enable/disable this functionality [=false].\u001b[0m\n     \u001b[34m\u001b[1m--weak-subjectivity-checkpoint\u001b[0m  Weak subjectivity checkpoint in the format\n                               block_root:epoch_number.\u001b[0m\n     \u001b[34m\u001b[1m--external-beacon-api-url\u001b[0m  External beacon API to use for syncing (on empty\n                               database).\u001b[0m\n     \u001b[34m\u001b[1m--sync-light-client     \u001b[0m  Accelerate sync using light client [=true].\u001b[0m\n     \u001b[34m\u001b[1m--trusted-block-root    \u001b[0m  Recent trusted finalized block root to sync from\n                               external beacon API (with\n                               `--external-beacon-api-url`). Uses the light\n                               client sync protocol to obtain the latest\n                               finalized checkpoint (LC is initialized from\n                               trusted block root).\u001b[0m\n     \u001b[34m\u001b[1m--trusted-state-root    \u001b[0m  Recent trusted finalized state root to sync from\n                               external beacon API (with\n                               `--external-beacon-api-url`).\u001b[0m\n     \u001b[34m\u001b[1m--finalized-checkpoint-state\u001b[0m  SSZ file specifying a recent finalized state.\u001b[0m\n     \u001b[34m\u001b[1m--genesis-state         \u001b[0m  SSZ file specifying the genesis state of the\n                               network (for networks without a built-in genesis\n                               state).\u001b[0m\n     \u001b[34m\u001b[1m--genesis-state-url     \u001b[0m  URL for obtaining the genesis state of the\n                               network (for networks without a built-in genesis\n                               state).\u001b[0m\n     \u001b[34m\u001b[1m--node-name             \u001b[0m  A name for this node that will appear in the\n                               logs. If you set this to 'auto', a persistent\n                               automatically generated ID will be selected for\n                               each --data-dir folder.\u001b[0m\n     \u001b[34m\u001b[1m--graffiti              \u001b[0m  The graffiti value that will appear in proposed\n                               blocks. You can use a 0x-prefixed hex encoded\n                               string to specify raw bytes.\u001b[0m\n     \u001b[34m\u001b[1m--metrics               \u001b[0m  Enable the metrics server [=false].\u001b[0m\n     \u001b[34m\u001b[1m--metrics-address       \u001b[0m  Listening address of the metrics server\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--metrics-port          \u001b[0m  Listening HTTP port of the metrics server\n                               [=8008].\u001b[0m\n     \u001b[34m\u001b[1m--status-bar            \u001b[0m  Display a status bar at the bottom of the\n                               terminal screen [=true].\u001b[0m\n     \u001b[34m\u001b[1m--status-bar-contents   \u001b[0m  Textual template for the contents of the status\n                               bar.\u001b[0m\n     \u001b[34m\u001b[1m--rest                  \u001b[0m  Enable the REST server [=false].\u001b[0m\n     \u001b[34m\u001b[1m--rest-port             \u001b[0m  Port for the REST server [=5052].\u001b[0m\n     \u001b[34m\u001b[1m--rest-address          \u001b[0m  Listening address of the REST server\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--rest-allow-origin     \u001b[0m  Limit the access to the REST API to a particular\n                               hostname (for CORS-enabled clients such as\n                               browsers).\u001b[0m\n     \u001b[34m\u001b[1m--rest-statecache-size  \u001b[0m  The maximum number of recently accessed states\n                               that are kept in memory. Speeds up requests\n                               obtaining information for consecutive slots or\n                               epochs. [=3].\u001b[0m\n     \u001b[34m\u001b[1m--rest-statecache-ttl   \u001b[0m  The number of seconds to keep recently accessed\n                               states in memory [=60].\u001b[0m\n     \u001b[34m\u001b[1m--rest-request-timeout  \u001b[0m  The number of seconds to wait until complete REST\n                               request will be received [=infinite].\u001b[0m\n     \u001b[34m\u001b[1m--rest-max-body-size    \u001b[0m  Maximum size of REST request body (kilobytes)\n                               [=16384].\u001b[0m\n     \u001b[34m\u001b[1m--rest-max-headers-size \u001b[0m  Maximum size of REST request headers (kilobytes)\n                               [=128].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager            \u001b[0m  Enable the REST keymanager API [=false].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-port       \u001b[0m  Listening port for the REST keymanager API\n                               [=5052].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-address    \u001b[0m  Listening port for the REST keymanager API\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-allow-origin\u001b[0m  Limit the access to the Keymanager API to a\n                               particular hostname (for CORS-enabled clients\n                               such as browsers).\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-token-file \u001b[0m  A file specifying the authorization token\n                               required for accessing the keymanager API.\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-serve\u001b[0m  Serve data for enabling light clients to stay in\n                               sync with the network [=true].\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-import-mode\u001b[0m  Which classes of light client data to import.\n                               Must be one of: none, only-new, full (slow\n                               startup), on-demand (may miss validator duties)\n                               [=only-new].\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-max-periods\u001b[0m  Maximum number of sync committee periods to\n                               retain light client data.\u001b[0m\n     \u001b[34m\u001b[1m--in-process-validators \u001b[0m  Disable the push model (the beacon node tells a\n                               signing process with the private keys of the\n                               validators what to sign and when) and load the\n                               validators in the beacon node itself [=true].\u001b[0m\n     \u001b[34m\u001b[1m--discv5                \u001b[0m  Enable Discovery v5 [=true].\u001b[0m\n     \u001b[34m\u001b[1m--dump                  \u001b[0m  Write SSZ dumps of blocks and states to data dir\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--direct-peer           \u001b[0m  The list of privileged, secure and known peers to\n                               connect and maintain the connection to. This\n                               requires a not random netkey-file. In the\n                               multiaddress format like:/ip4/<address>/tcp/<por\n                               t>/p2p/<peerId-public-key>, or enr format\n                               (enr:-xx). Peering agreements are established out\n                               of band and must be reciprocal.\u001b[0m\n     \u001b[34m\u001b[1m--doppelganger-detection\u001b[0m  If enabled, the beacon node prudently listens for\n                               2 epochs for attestations from a validator with\n                               the same index (a doppelganger), before sending\n                               an attestation itself. This protects against\n                               slashing (due to double-voting) but means you\n                               will miss two attestations when restarting.\n                               [=true].\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-auto\u001b[0m  Monitor validator activity automatically for\n                               validators active on this beacon node [=true].\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-pubkey\u001b[0m  One or more validators to monitor - works best\n                               when --subscribe-all-subnets is enabled.\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-details\u001b[0m  Publish detailed metrics for each validator\n                               individually - may incur significant overhead\n                               with large numbers of validators [=false].\u001b[0m\n     \u001b[34m\u001b[1m--suggested-fee-recipient\u001b[0m  Suggested fee recipient.\u001b[0m\n     \u001b[34m\u001b[1m--suggested-gas-limit   \u001b[0m  Suggested gas limit [=defaultGasLimit].\u001b[0m\n     \u001b[34m\u001b[1m--payload-builder       \u001b[0m  Enable external payload builder [=false].\u001b[0m\n     \u001b[34m\u001b[1m--payload-builder-url   \u001b[0m  Payload builder URL.\u001b[0m\n     \u001b[34m\u001b[1m--local-block-value-boost\u001b[0m  Increase execution layer block values for builder\n                               bid comparison by a percentage [=10].\u001b[0m\n     \u001b[34m\u001b[1m--history               \u001b[0m  Retention strategy for historical data\n                               (archive/prune) [=HistoryMode.Prune].\u001b[0m\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node deposits\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node deposits createTestnetDeposits\u001b[0m [OPTIONS]...\n\nCreates validator keystores and deposits for testnet usage.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--count                 \u001b[0m  Number of deposits to generate [=1].\u001b[0m\n     \u001b[34m\u001b[1m--wallet                \u001b[0m  An existing wallet ID. If not specified, a new\n                               wallet will be created.\u001b[0m\n     \u001b[34m\u001b[1m--out-validators-dir    \u001b[0m  Output folder for validator keystores\n                               [=validators].\u001b[0m\n     \u001b[34m\u001b[1m--out-secrets-dir       \u001b[0m  Output folder for randomly generated keystore\n                               passphrases [=secrets].\u001b[0m\n     \u001b[34m\u001b[1m--out-deposits-file     \u001b[0m  The name of generated deposits file.\u001b[0m\n     \u001b[34m\u001b[1m--new-wallet-name       \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--new-wallet-file       \u001b[0m  Output wallet file.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node deposits import\u001b[0m [OPTIONS]...\n\nImports password-protected keystores interactively.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--method                \u001b[0m  Specifies which import method will be used\n                               (normal, single-salt) [=ImportMethod.Normal].\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node deposits exit\u001b[0m [OPTIONS]...\n\nSubmits a validator voluntary exit.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--validator             \u001b[0m  One or more validator index, public key or a\n                               keystore path of the exited validator(s).\u001b[0m\n     \u001b[34m\u001b[1m--all                   \u001b[0m  Exit all validators in the specified data\n                               directory or validators directory [=false].\u001b[0m\n     \u001b[34m\u001b[1m--epoch                 \u001b[0m  The desired exit epoch [=immediately].\u001b[0m\n     \u001b[34m\u001b[1m--rest-url              \u001b[0m  URL of the beacon node REST service\n                               [=http://127.0.0.1:5052].\u001b[0m\n     \u001b[34m\u001b[1m--print                 \u001b[0m  Print signed exit message instead of publishing\n                               it [=false].\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets create\u001b[0m [OPTIONS]...\n\nCreates a new EIP-2386 wallet.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--next-account          \u001b[0m  Initial value for the 'nextaccount' property of\n                               the wallet.\u001b[0m\n     \u001b[34m\u001b[1m--name                  \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--out                   \u001b[0m  Output wallet file.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets restore\u001b[0m [OPTIONS]...\n\nRestores a wallet from cold storage.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--name                  \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--out                   \u001b[0m  Output wallet file.\u001b[0m\n     \u001b[34m\u001b[1m--deposits              \u001b[0m  Expected number of deposits to recover. If not\n                               specified, Nimbus will try to guess the number by\n                               inspecting the latest beacon state.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets list\u001b[0m\n\nLists details about all wallets.\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record create\u001b[0m [OPTIONS]...\n\nCreate a new ENR.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--ip                    \u001b[0m  External IP address.\u001b[0m\n     \u001b[34m\u001b[1m--tcp-port              \u001b[0m  External TCP port.\u001b[0m\n     \u001b[34m\u001b[1m--udp-port              \u001b[0m  External UDP port.\u001b[0m\n     \u001b[34m\u001b[1m--seq-number            \u001b[0m  Record sequence number [=1].\u001b[0m\n     \u001b[34m\u001b[1m--field                 \u001b[0m  Additional record key pairs, provide as\n                               <string>:<bytes in hex>.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node record print\u001b[0m <enr>\u001b[0m\n\nPrint the content of a given ENR.\n\u001b[0m\n\u001b[34m\u001b[1m <enr>\u001b[0m                        \u001b[0m  ENR URI of the record to print.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node web3\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node web3 test\u001b[0m <url>\u001b[0m\n\nTest a web3 provider.\n\u001b[0m\n\u001b[34m\u001b[1m <url>\u001b[0m                        \u001b[0m  The web3 provider URL to test.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb import\u001b[0m <importedInterchangeFile>\u001b[0m\n\nImport a EIP-3076 slashing protection interchange file.\n\u001b[0m\n\u001b[34m\u001b[1m <importedInterchangeFile>\u001b[0m    \u001b[0m  EIP-3076 slashing protection interchange file to\n                               import.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb export\u001b[0m [OPTIONS]... <exportedInterchangeFile>\u001b[0m\n\nExport a EIP-3076 slashing protection interchange file.\n\u001b[0m\n\u001b[34m\u001b[1m <exportedInterchangeFile>\u001b[0m    \u001b[0m  EIP-3076 slashing protection interchange file to\n                               export.\u001b[0m\n\nThe following options are available:\n\n \u001b[34m\u001b[1m-v, \u001b[0m\u001b[34m\u001b[1m--validator             \u001b[0m  Limit the export to specific validators\n                               (specified as numeric indices or public keys).\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node trustedNodeSync\u001b[0m [OPTIONS]...\n\nThe following options are available:\n\n     \u001b[34m\u001b[1m--trusted-node-url      \u001b[0m  URL of the REST API to sync from\n                               [=http://127.0.0.1:5052].\u001b[0m\n     \u001b[34m\u001b[1m--state-id              \u001b[0m  State id to sync to - this can be \"finalized\", a\n                               slot number or state hash or \"head\".\u001b[0m\n     \u001b[34m\u001b[1m--trusted-block-root    \u001b[0m  Recent trusted finalized block root to initialize\n                               light client from.\u001b[0m\n     \u001b[34m\u001b[1m--backfill              \u001b[0m  Backfill blocks directly from REST server instead\n                               of fetching via API [=true].\u001b[0m\n     \u001b[34m\u001b[1m--reindex               \u001b[0m  Recreate historical state index at end of\n                               backfill, allowing full history access (requires\n                               full backfill) [=false].\u001b[0m\n     \u001b[34m\u001b[1m--with-deposit-snapshot \u001b[0m  Also try to download a snapshot of the deposit\n                               contract state [=false].\u001b[0m"
+}

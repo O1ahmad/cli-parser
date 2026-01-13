@@ -1,0 +1,275 @@
+{
+  "name": "mongosh",
+  "version": "2.5.9",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--apiDeprecationErrors",
+      "shortcut": null,
+      "description": "Fail deprecated commands for the specified API version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--apiStrict",
+      "shortcut": null,
+      "description": "Use strict API version mode",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--apiVersion [arg]",
+      "shortcut": null,
+      "description": "Specifies the API version to connect with",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--awsAccessKeyId [arg]",
+      "shortcut": null,
+      "description": "AWS Access Key for FLE Amazon KMS",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--awsIamSessionToken [arg]",
+      "shortcut": null,
+      "description": "AWS IAM Temporary Session Token ID",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--awsSecretAccessKey [arg]",
+      "shortcut": null,
+      "description": "AWS Secret Key for FLE Amazon KMS",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--awsSessionToken [arg]",
+      "shortcut": null,
+      "description": "Optional AWS Session Token ID",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--build-info",
+      "shortcut": null,
+      "description": "Show build information",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--db [arg]",
+      "shortcut": null,
+      "description": "The database to connect to",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--eval [arg]",
+      "shortcut": null,
+      "description": "Evaluate javascript",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--file [arg]",
+      "shortcut": "-f",
+      "description": "Load the specified mongosh script",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--gssapiServiceName [arg]",
+      "shortcut": null,
+      "description": "Service name to use when authenticating using GSSAPI/Kerberos",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--host [arg]",
+      "shortcut": null,
+      "description": "Server to connect to",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--json[=canonical|relaxed]",
+      "shortcut": null,
+      "description": "Print result of --eval as Extended JSON, including errors",
+      "value": "[=canonical|relaxed]",
+      "default": null
+    },
+    {
+      "option": "--nodb",
+      "shortcut": null,
+      "description": "Don't connect to mongod on startup - no 'db address' [arg] expected",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--norc",
+      "shortcut": null,
+      "description": "Will not run the '.mongoshrc.js' file on start up",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--oidcDumpTokens[=mode]",
+      "shortcut": null,
+      "description": "Debug OIDC by printing tokens to mongosh's output [redacted|include-secrets]",
+      "value": "[=mode]",
+      "default": null
+    },
+    {
+      "option": "--oidcFlows[=auth-code,device-auth]",
+      "shortcut": null,
+      "description": "Supported OIDC auth flows",
+      "value": "[=auth-code,device-auth]",
+      "default": null
+    },
+    {
+      "option": "--oidcIdTokenAsAccessToken",
+      "shortcut": null,
+      "description": "Use ID tokens in place of access tokens for auth",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--oidcNoNonce",
+      "shortcut": null,
+      "description": "Don't send a nonce argument in the OIDC auth request",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--oidcRedirectUri[=url]",
+      "shortcut": null,
+      "description": "Local auth code flow redirect URL [http://localhost:27097/redirect]",
+      "value": "[=url]",
+      "default": null
+    },
+    {
+      "option": "--password [arg]",
+      "shortcut": "-p",
+      "description": "Password for authentication",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--port [arg]",
+      "shortcut": null,
+      "description": "Port to connect to",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--quiet",
+      "shortcut": null,
+      "description": "Silence output from the shell during the connection process",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--retryWrites[=true|false]",
+      "shortcut": null,
+      "description": "Automatically retry write operations upon transient network errors (Default: true)",
+      "value": "[=true|false]",
+      "default": "true"
+    },
+    {
+      "option": "--shell",
+      "shortcut": null,
+      "description": "Run the shell after executing files",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tls",
+      "shortcut": null,
+      "description": "Use TLS for all connections",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tlsAllowInvalidCertificates",
+      "shortcut": null,
+      "description": "Allow connections to servers with invalid certificates",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tlsAllowInvalidHostnames",
+      "shortcut": null,
+      "description": "Allow connections to servers with non-matching hostnames",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--tlsCAFile [arg]",
+      "shortcut": null,
+      "description": "Certificate Authority file for TLS",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsCertificateKeyFile [arg]",
+      "shortcut": null,
+      "description": "PEM certificate/key file for TLS",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsCertificateKeyFilePassword [arg]",
+      "shortcut": null,
+      "description": "Password for key in PEM file for TLS",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsCertificateSelector [arg]",
+      "shortcut": null,
+      "description": "TLS Certificate in system store (Windows and macOS only)",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsCRLFile [arg]",
+      "shortcut": null,
+      "description": "Specifies the .pem file that contains the Certificate Revocation List",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsDisabledProtocols [arg]",
+      "shortcut": null,
+      "description": "Comma separated list of TLS protocols to disable [TLS1_0,TLS1_1,TLS1_2]",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--tlsFIPSMode",
+      "shortcut": null,
+      "description": "Enable the system TLS library's FIPS mode",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--username [arg]",
+      "shortcut": "-u",
+      "description": "Username for authentication",
+      "value": "[arg]",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "Show version information",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "$ mongosh [options] [db address] [file names (ending in .js or .mongodb)]\n\n  Options:\n\n    -h, --help                                 Show this usage information\n    -f, --file [arg]                           Load the specified mongosh script\n        --host [arg]                           Server to connect to\n        --port [arg]                           Port to connect to\n        --build-info                           Show build information\n        --version                              Show version information\n        --quiet                                Silence output from the shell during the connection process\n        --shell                                Run the shell after executing files\n        --nodb                                 Don't connect to mongod on startup - no 'db address' [arg] expected\n        --norc                                 Will not run the '.mongoshrc.js' file on start up\n        --eval [arg]                           Evaluate javascript\n        --json[=canonical|relaxed]             Print result of --eval as Extended JSON, including errors\n        --retryWrites[=true|false]             Automatically retry write operations upon transient network errors (Default: true)\n\n  Authentication Options:\n\n    -u, --username [arg]                       Username for authentication\n    -p, --password [arg]                       Password for authentication\n        --authenticationDatabase [arg]         User source (defaults to dbname)\n        --authenticationMechanism [arg]        Authentication mechanism\n        --awsIamSessionToken [arg]             AWS IAM Temporary Session Token ID\n        --gssapiServiceName [arg]              Service name to use when authenticating using GSSAPI/Kerberos\n        --sspiHostnameCanonicalization [arg]   Specify the SSPI hostname canonicalization (none or forward, available on Windows)\n        --sspiRealmOverride [arg]              Specify the SSPI server realm (available on Windows)\n\n  TLS Options:\n\n        --tls                                  Use TLS for all connections\n        --tlsCertificateKeyFile [arg]          PEM certificate/key file for TLS\n        --tlsCertificateKeyFilePassword [arg]  Password for key in PEM file for TLS\n        --tlsCAFile [arg]                      Certificate Authority file for TLS\n        --tlsAllowInvalidHostnames             Allow connections to servers with non-matching hostnames\n        --tlsAllowInvalidCertificates          Allow connections to servers with invalid certificates\n        --tlsCertificateSelector [arg]         TLS Certificate in system store (Windows and macOS only)\n        --tlsCRLFile [arg]                     Specifies the .pem file that contains the Certificate Revocation List\n        --tlsDisabledProtocols [arg]           Comma separated list of TLS protocols to disable [TLS1_0,TLS1_1,TLS1_2]\n        --tlsFIPSMode                          Enable the system TLS library's FIPS mode\n\n  API version options:\n\n        --apiVersion [arg]                     Specifies the API version to connect with\n        --apiStrict                            Use strict API version mode\n        --apiDeprecationErrors                 Fail deprecated commands for the specified API version\n\n  FLE Options:\n\n        --awsAccessKeyId [arg]                 AWS Access Key for FLE Amazon KMS\n        --awsSecretAccessKey [arg]             AWS Secret Key for FLE Amazon KMS\n        --awsSessionToken [arg]                Optional AWS Session Token ID\n        --keyVaultNamespace [arg]              database.collection to store encrypted FLE parameters\n        --kmsURL [arg]                         Test parameter to override the URL of the KMS endpoint\n\n  OIDC auth options:\n\n        --oidcFlows[=auth-code,device-auth]    Supported OIDC auth flows\n        --oidcRedirectUri[=url]                Local auth code flow redirect URL [http://localhost:27097/redirect]\n        --oidcTrustedEndpoint                  Treat the cluster/database mongosh as a trusted endpoint\n        --oidcIdTokenAsAccessToken             Use ID tokens in place of access tokens for auth\n        --oidcDumpTokens[=mode]                Debug OIDC by printing tokens to mongosh's output [redacted|include-secrets]\n        --oidcNoNonce                          Don't send a nonce argument in the OIDC auth request\n\n  DB Address Examples:\n\n        foo                                    Foo database on local machine\n        192.168.0.5/foo                        Foo database on 192.168.0.5 machine\n        192.168.0.5:9999/foo                   Foo database on 192.168.0.5 machine on port 9999\n        mongodb://192.168.0.5:9999/foo         Connection string URI can also be used\n\n  File Names:\n\n        A list of files to run. Files must end in .js and will exit after unless --shell is specified.\n\n  Examples:\n\n        Start mongosh using 'ships' database on specified connection string:\n        $ mongosh mongodb://192.168.0.5:9999/ships\n\n  For more information on usage: https://mongodb.com/docs/mongodb-shell.",
+  "aliases": []
+}

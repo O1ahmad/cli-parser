@@ -1,0 +1,617 @@
+{
+  "name": "grandine",
+  "version": "0.4.1-cbca3d5",
+  "description": "Fast PoS and Sharding client supporting Ethereum 2.0 networks",
+  "usage": "grandine [OPTIONS] [COMMAND]",
+  "subcommands": [
+    {
+      "name": "grandine export",
+      "description": "Export blocks and state to ssz files within slot range for debugging",
+      "usage": "grandine export [OPTIONS] --from <SLOT> --to <SLOT>",
+      "options": [
+        {
+          "option": "--from",
+          "shortcut": "-f",
+          "description": "First slot to export (inclusive)",
+          "value": "<SLOT>"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        },
+        {
+          "option": "--output-dir",
+          "shortcut": "-o",
+          "description": "Output directory",
+          "value": "<OUTPUT_DIR>",
+          "default": "current directory"
+        },
+        {
+          "option": "--to",
+          "shortcut": "-t",
+          "description": "Last slot to export (inclusive)",
+          "value": "<SLOT>"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "grandine interchange",
+      "description": "Import/export slashing protection interchange file (example: grandine interchange import file.json)",
+      "usage": "grandine interchange <COMMAND>",
+      "subcommands": [
+        {
+          "name": "grandine interchange export",
+          "description": "Export slashing protection interchange file",
+          "usage": "grandine interchange export <FILE_PATH>",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Print help"
+            }
+          ]
+        },
+        {
+          "name": "grandine interchange import",
+          "description": "Import slashing protection interchange file",
+          "usage": "grandine interchange import <FILE_PATH>",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Print help"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        }
+      ]
+    },
+    {
+      "name": "grandine replay",
+      "description": "Replay blocks within slot range",
+      "usage": "grandine replay [OPTIONS] --from <SLOT> --to <SLOT>",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--from",
+          "shortcut": "-f",
+          "description": "Replay start slot (inclusive)",
+          "value": "<SLOT>"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        },
+        {
+          "option": "--input-dir",
+          "shortcut": "-i",
+          "description": "Input directory",
+          "value": "<INPUT_DIR>",
+          "default": "current directory"
+        },
+        {
+          "option": "--to",
+          "shortcut": "-t",
+          "description": "Replay end slot (inclusive)",
+          "value": "<SLOT>"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "option": "--archival-epoch-interval",
+      "description": "",
+      "value": "<ARCHIVAL_EPOCH_INTERVAL>",
+      "default": "32"
+    },
+    {
+      "option": "--back-sync",
+      "description": "Enable syncing historical data",
+      "default": "disabled"
+    },
+    {
+      "option": "--boot-nodes",
+      "description": "List of ENR boot node addresses",
+      "value": "<BOOT_NODES>"
+    },
+    {
+      "option": "--builder-api-url",
+      "description": "[DEPRECATED] External block builder API URL",
+      "value": "<BUILDER_API_URL>"
+    },
+    {
+      "option": "--builder-disable-checks",
+      "description": "Always use specified external block builder without checking for circuit breaker conditions"
+    },
+    {
+      "option": "--builder-max-skipped-slots",
+      "description": "Max allowed consecutive missing blocks to trigger circuit breaker condition and switch to local execution engine for payload construction",
+      "value": "<BUILDER_MAX_SKIPPED_SLOTS>",
+      "default": "3"
+    },
+    {
+      "option": "--builder-max-skipped-slots-per-epoch",
+      "description": "Max allowed missing blocks in the last rolling epoch to trigger circuit breaker condition and switch to local execution engine for payload construction",
+      "value": "<BUILDER_MAX_SKIPPED_SLOTS_PER_EPOCH>",
+      "default": "5"
+    },
+    {
+      "option": "--builder-url",
+      "description": "External block builder URL",
+      "value": "<BUILDER_URL>"
+    },
+    {
+      "option": "--checkpoint-sync-url",
+      "description": "Beacon node API URL to load recent finalized checkpoint and sync from it",
+      "value": "<CHECKPOINT_SYNC_URL>",
+      "default": "None"
+    },
+    {
+      "option": "--configuration-directory",
+      "description": "Load configuration from directory",
+      "value": "<DIRECTORY>"
+    },
+    {
+      "option": "--configuration-file",
+      "description": "Load configuration from YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--data-dir",
+      "description": "Parent directory for application data files",
+      "value": "<DATA_DIR>",
+      "default": "$HOME/.grandine/{network}"
+    },
+    {
+      "option": "--database-size",
+      "description": "Max size of the Eth2 database",
+      "value": "<DATABASE_SIZE>",
+      "default": "274.9 GB"
+    },
+    {
+      "option": "--deposit-contract-starting-block",
+      "description": "Start tracking deposit contract from BLOCK_NUMBER",
+      "value": "<BLOCK_NUMBER>"
+    },
+    {
+      "option": "--disable-block-verification-pool",
+      "description": "Disable block signature verification pool",
+      "default": "enabled"
+    },
+    {
+      "option": "--disable-enr-auto-update",
+      "description": "Disable enr auto update",
+      "default": "enabled"
+    },
+    {
+      "option": "--disable-peer-scoring",
+      "description": "Disable peer scoring"
+    },
+    {
+      "option": "--disable-quic",
+      "description": "Disable QUIC support as a fallback transport to TCP"
+    },
+    {
+      "option": "--disable-upnp",
+      "description": "Disable NAT traversal via UPnP",
+      "default": "enabled"
+    },
+    {
+      "option": "--discovery-port",
+      "description": "discv5 IPv4 port",
+      "value": "<DISCOVERY_PORT>",
+      "default": "9000"
+    },
+    {
+      "option": "--discovery-port-ipv6",
+      "description": "discv5 IPv6 port",
+      "value": "<DISCOVERY_PORT_IPV6>",
+      "default": "9050"
+    },
+    {
+      "option": "--enable-private-discovery",
+      "description": "Enable discovery of peers with private IP addresses.",
+      "default": "disabled"
+    },
+    {
+      "option": "--enable-validator-api",
+      "description": "Enable validator API"
+    },
+    {
+      "option": "--enr-address",
+      "description": "ENR IPv4 address",
+      "value": "<ENR_ADDRESS>"
+    },
+    {
+      "option": "--enr-address-ipv6",
+      "description": "ENR IPv6 address",
+      "value": "<ENR_ADDRESS_IPV6>"
+    },
+    {
+      "option": "--enr-quic-port",
+      "description": "ENR QUIC IPv4 port",
+      "value": "<ENR_QUIC_PORT>"
+    },
+    {
+      "option": "--enr-quic-port-ipv6",
+      "description": "ENR QUIC IPv6 port",
+      "value": "<ENR_QUIC_PORT_IPV6>"
+    },
+    {
+      "option": "--enr-tcp-port",
+      "description": "ENR TCP IPv4 port",
+      "value": "<ENR_TCP_PORT>"
+    },
+    {
+      "option": "--enr-tcp-port-ipv6",
+      "description": "ENR TCP IPv6 port",
+      "value": "<ENR_TCP_PORT_IPV6>"
+    },
+    {
+      "option": "--enr-udp-port",
+      "description": "ENR UDP IPv4 port",
+      "value": "<ENR_UDP_PORT>"
+    },
+    {
+      "option": "--enr-udp-port-ipv6",
+      "description": "ENR UDP IPv6 port",
+      "value": "<ENR_UDP_PORT_IPV6>"
+    },
+    {
+      "option": "--eth1-database-size",
+      "description": "Max size of the Eth1 database",
+      "value": "<ETH1_DATABASE_SIZE>",
+      "default": "17.2 GB"
+    },
+    {
+      "option": "--eth1-rpc-urls",
+      "description": "List of Eth1 RPC URLs",
+      "value": "<ETH1_RPC_URLS>..."
+    },
+    {
+      "option": "--features",
+      "description": "List of optional runtime features to enable",
+      "value": "<FEATURES>"
+    },
+    {
+      "option": "--force-checkpoint-sync",
+      "description": "Force checkpoint sync. Requires --checkpoint-sync-url",
+      "default": "disabled"
+    },
+    {
+      "option": "--genesis-state-download-url",
+      "description": "Download genesis state from specified URL",
+      "value": "<URL>"
+    },
+    {
+      "option": "--genesis-state-file",
+      "description": "Load genesis state from SSZ_FILE",
+      "value": "<SSZ_FILE>"
+    },
+    {
+      "option": "--graffiti",
+      "description": "",
+      "value": "<GRAFFITI>",
+      "default": "Grandine/0.4.1-cbca3d5"
+    },
+    {
+      "option": "--http-address",
+      "description": "HTTP API address",
+      "value": "<HTTP_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--http-allowed-origins",
+      "description": "List of Access-Control-Allow-Origin header values for the HTTP API server. Defaults to the listening URL of the HTTP API server",
+      "value": "<HTTP_ALLOWED_ORIGINS>"
+    },
+    {
+      "option": "--http-port",
+      "description": "HTTP API port",
+      "value": "<HTTP_PORT>",
+      "default": "5052"
+    },
+    {
+      "option": "--in-memory",
+      "description": "Enable in-memory mode. No data will be stored in data-dir.",
+      "default": "disabled"
+    },
+    {
+      "option": "--keystore-dir",
+      "description": "Path to a directory containing EIP-2335 keystore files",
+      "value": "<KEYSTORE_DIR>"
+    },
+    {
+      "option": "--keystore-password-dir",
+      "description": "Path to a directory containing passwords for keystore files",
+      "value": "<KEYSTORE_PASSWORD_DIR>"
+    },
+    {
+      "option": "--keystore-password-file",
+      "description": "Path to a file containing password for keystore files",
+      "value": "<KEYSTORE_PASSWORD_FILE>"
+    },
+    {
+      "option": "--keystore-storage-password-file",
+      "description": "Path to a file containing password for decrypting imported keystores from API",
+      "value": "<KEYSTORE_STORAGE_PASSWORD_FILE>"
+    },
+    {
+      "option": "--libp2p-nodes",
+      "description": "List of Multiaddr node addresses",
+      "value": "<LIBP2P_NODES>"
+    },
+    {
+      "option": "--libp2p-port",
+      "description": "libp2p IPv4 port",
+      "value": "<LIBP2P_PORT>",
+      "default": "9000"
+    },
+    {
+      "option": "--libp2p-port-ipv6",
+      "description": "libp2p IPv6 port",
+      "value": "<LIBP2P_PORT_IPV6>",
+      "default": "9050"
+    },
+    {
+      "option": "--listen-address",
+      "description": "Listen IPv4 address",
+      "value": "<LISTEN_ADDRESS>",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--listen-address-ipv6",
+      "description": "Listen IPv6 address",
+      "value": "<LISTEN_ADDRESS_IPV6>",
+      "default": "None"
+    },
+    {
+      "option": "--max-empty-slots",
+      "description": "",
+      "value": "<MAX_EMPTY_SLOTS>",
+      "default": "32"
+    },
+    {
+      "option": "--max-events",
+      "description": "Max number of events stored in a single channel for HTTP API /events api call",
+      "value": "<MAX_EVENTS>",
+      "default": "100"
+    },
+    {
+      "option": "--metrics",
+      "description": "Collect Prometheus metrics"
+    },
+    {
+      "option": "--metrics-address",
+      "description": "Metrics address for metrics endpoint",
+      "value": "<METRICS_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--metrics-port",
+      "description": "Listen port for metrics endpoint",
+      "value": "<METRICS_PORT>",
+      "default": "5054"
+    },
+    {
+      "option": "--network",
+      "description": "Name of the Eth2 network to connect to",
+      "value": "<NETWORK>",
+      "default": "mainnet",
+      "tags": [
+        "mainnet",
+        "goerli",
+        "sepolia",
+        "holesky",
+        "custom"
+      ]
+    },
+    {
+      "option": "--network-dir",
+      "description": "Directory to store application network files",
+      "value": "<NETWORK_DIR>",
+      "default": "{data_dir}/network"
+    },
+    {
+      "option": "--prune-storage",
+      "description": "Enable prune mode where only single checkpoint state & block are stored in the DB",
+      "default": "disabled"
+    },
+    {
+      "option": "--quic-port",
+      "description": "QUIC IPv4 port",
+      "value": "<QUIC_PORT>",
+      "default": "9001"
+    },
+    {
+      "option": "--quic-port-ipv6",
+      "description": "QUIC IPv6 port",
+      "value": "<QUIC_PORT_IPV6>",
+      "default": "9051"
+    },
+    {
+      "option": "--remote-metrics-url",
+      "description": "Optional remote metrics URL that Grandine will periodically send metrics to",
+      "value": "<REMOTE_METRICS_URL>"
+    },
+    {
+      "option": "--request-timeout",
+      "description": "Default global request timeout for various services in milliseconds",
+      "value": "<REQUEST_TIMEOUT>",
+      "default": "30000"
+    },
+    {
+      "option": "--slashing-protection-history-limit",
+      "description": "Number of epochs to keep slashing protection data for",
+      "value": "<SLASHING_PROTECTION_HISTORY_LIMIT>",
+      "default": "256"
+    },
+    {
+      "option": "--state-slot",
+      "description": "State slot",
+      "value": "<STATE_SLOT>",
+      "default": "None"
+    },
+    {
+      "option": "--store-directory",
+      "description": "Directory to store application data files",
+      "value": "<STORE_DIRECTORY>",
+      "default": "{data_dir}/beacon"
+    },
+    {
+      "option": "--subscribe-all-subnets",
+      "description": "Subscribe to all subnets"
+    },
+    {
+      "option": "--suggested-fee-recipient",
+      "description": "Suggested value for the feeRecipient field of the new payload",
+      "value": "<EXECUTION_ADDRESS>"
+    },
+    {
+      "option": "--target-peers",
+      "description": "Target number of network peers",
+      "value": "<TARGET_PEERS>",
+      "default": "100"
+    },
+    {
+      "option": "--terminal-block-hash-activation-epoch-override",
+      "description": "Override TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH",
+      "value": "<EPOCH>"
+    },
+    {
+      "option": "--terminal-block-hash-override",
+      "description": "Override TERMINAL_BLOCK_HASH",
+      "value": "<BLOCK_HASH>"
+    },
+    {
+      "option": "--terminal-total-difficulty-override",
+      "description": "Override TERMINAL_TOTAL_DIFFICULTY",
+      "value": "<DIFFICULTY>"
+    },
+    {
+      "option": "--timeout",
+      "description": "HTTP API timeout in milliseconds",
+      "value": "<TIMEOUT>",
+      "default": "10000"
+    },
+    {
+      "option": "--track-liveness",
+      "description": "Enable validator liveness tracking",
+      "default": "disabled"
+    },
+    {
+      "option": "--trusted-peers",
+      "description": "List of trusted peers",
+      "value": "<TRUSTED_PEERS>"
+    },
+    {
+      "option": "--unfinalized-states-in-memory",
+      "description": "Number of unfinalized states to keep in memory",
+      "value": "<UNFINALIZED_STATES_IN_MEMORY>",
+      "default": "128"
+    },
+    {
+      "option": "--use-validator-key-cache",
+      "description": "Use validator key cache for faster startup"
+    },
+    {
+      "option": "--validator-api-address",
+      "description": "Validator API address",
+      "value": "<VALIDATOR_API_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--validator-api-allowed-origins",
+      "description": "List of Access-Control-Allow-Origin header values for the validator API server. Defaults to the listening URL of the validator API server",
+      "value": "<VALIDATOR_API_ALLOWED_ORIGINS>"
+    },
+    {
+      "option": "--validator-api-port",
+      "description": "Listen port for validator API",
+      "value": "<VALIDATOR_API_PORT>",
+      "default": "5055"
+    },
+    {
+      "option": "--validator-api-timeout",
+      "description": "Validator API timeout in milliseconds",
+      "value": "<VALIDATOR_API_TIMEOUT>",
+      "default": "10000"
+    },
+    {
+      "option": "--validator-api-token-file",
+      "description": "Path to a file containing validator API auth token",
+      "value": "<VALIDATOR_API_TOKEN_FILE>"
+    },
+    {
+      "option": "--verify-altair-preset-file",
+      "description": "Verify that Altair variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-bellatrix-preset-file",
+      "description": "Verify that Bellatrix variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-capella-preset-file",
+      "description": "Verify that Capella variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-configuration-file",
+      "description": "Verify that configuration matches YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-deneb-preset-file",
+      "description": "Verify that Deneb variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-phase0-preset-file",
+      "description": "Verify that Phase 0 variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--web3signer-api-urls",
+      "description": "[DEPRECATED] List of Web3Signer API URLs",
+      "value": "<WEB3SIGNER_API_URLS>..."
+    },
+    {
+      "option": "--web3signer-public-keys",
+      "description": "List of public keys to use from Web3Signer",
+      "value": "<WEB3SIGNER_PUBLIC_KEYS>..."
+    },
+    {
+      "option": "--web3signer-refresh-keys-every-epoch",
+      "description": "Refetches keys from Web3Signer once every epoch. This overwrites changes done via Keymanager API"
+    },
+    {
+      "option": "--web3signer-urls",
+      "description": "List of Web3Signer URLs",
+      "value": "<WEB3SIGNER_URLS>..."
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "Print help"
+    },
+    {
+      "option": "-V",
+      "shortcut": "--version",
+      "description": "Print version"
+    }
+  ]
+}

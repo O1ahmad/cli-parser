@@ -1,0 +1,281 @@
+{
+  "name": "ollama",
+  "version": "0.12.6",
+  "description": "Large language model runner",
+  "usage": "ollama [flags] | ollama [command]",
+  "subcommands": [
+    {
+      "name": "ollama cp",
+      "description": "Copy a model",
+      "usage": "ollama cp SOURCE DESTINATION [flags]",
+      "options": [
+        {
+          "description": "help for cp",
+          "option": "--help",
+          "shortcut": "-h"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "ollama create",
+      "description": "A command-line tool for creating models.",
+      "usage": "ollama create MODEL [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--file",
+          "shortcut": "-f",
+          "description": "Name of the Modelfile",
+          "value": "string",
+          "default": "Modelfile"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for create"
+        },
+        {
+          "option": "--quantize",
+          "shortcut": "-q",
+          "description": "Quantize model to this level (e.g. q4_K_M)",
+          "value": "string"
+        }
+      ]
+    },
+    {
+      "name": "ollama list",
+      "description": "A command-line tool to manage models.",
+      "usage": "ollama [command] [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for list"
+        }
+      ]
+    },
+    {
+      "name": "ollama ps",
+      "description": "List running models",
+      "usage": "ollama ps [flags]",
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for ps"
+        }
+      ],
+      "environment_variables": [
+        {
+          "name": "OLLAMA_HOST",
+          "description": "IP Address for the ollama server",
+          "default": "127.0.0.1:11434"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "ollama pull",
+      "description": "Pull a model from a registry",
+      "usage": "ollama pull MODEL [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for pull"
+        },
+        {
+          "option": "--insecure",
+          "description": "Use an insecure registry"
+        }
+      ]
+    },
+    {
+      "name": "ollama push",
+      "description": "Push a model to a registry",
+      "usage": "ollama push MODEL [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for push"
+        },
+        {
+          "option": "--insecure",
+          "description": "Use an insecure registry"
+        }
+      ]
+    },
+    {
+      "name": "ollama run",
+      "description": "Run a model",
+      "usage": "ollama run MODEL [PROMPT] [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--format",
+          "description": "Response format (e.g. json)",
+          "value": "string"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for run"
+        },
+        {
+          "option": "--hidethinking",
+          "description": "Hide thinking output (if provided)"
+        },
+        {
+          "option": "--insecure",
+          "description": "Use an insecure registry"
+        },
+        {
+          "option": "--keepalive",
+          "description": "Duration to keep a model loaded (e.g. 5m)",
+          "value": "string"
+        },
+        {
+          "option": "--nowordwrap",
+          "description": "Don't wrap words to the next line automatically"
+        },
+        {
+          "option": "--think",
+          "description": "Enable thinking mode: true/false or high/medium/low for supported models",
+          "value": "string",
+          "default": "true"
+        },
+        {
+          "option": "--verbose",
+          "description": "Show timings for response"
+        }
+      ]
+    },
+    {
+      "name": "ollama serve",
+      "description": "Manage the ollama server and its operations.",
+      "usage": "ollama serve [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for serve"
+        }
+      ]
+    },
+    {
+      "name": "ollama show",
+      "description": "Show information for a model",
+      "usage": "ollama show MODEL [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for show"
+        },
+        {
+          "option": "--license",
+          "description": "Show license of a model"
+        },
+        {
+          "option": "--modelfile",
+          "description": "Show Modelfile of a model"
+        },
+        {
+          "option": "--parameters",
+          "description": "Show parameters of a model"
+        },
+        {
+          "option": "--system",
+          "description": "Show system message of a model"
+        },
+        {
+          "option": "--template",
+          "description": "Show template of a model"
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Show detailed model information"
+        }
+      ]
+    },
+    {
+      "name": "ollama signin",
+      "description": "Sign in to ollama.com",
+      "usage": "ollama signin [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for signin"
+        }
+      ]
+    },
+    {
+      "name": "ollama signout",
+      "description": "Sign out from ollama.com",
+      "usage": "ollama signout [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for signout"
+        }
+      ]
+    },
+    {
+      "name": "ollama stop",
+      "description": "Stop a running model",
+      "usage": "ollama stop MODEL [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for stop"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "OLLAMA_HOST",
+          "description": "IP Address for the ollama server",
+          "default": "127.0.0.1:11434"
+        }
+      ]
+    },
+    {
+      "name": "ollama rm",
+      "description": "Remove a model",
+      "usage": "ollama rm MODEL [MODEL...] [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for rm"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for ollama"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "Show version information"
+    }
+  ]
+}

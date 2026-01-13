@@ -1,0 +1,134 @@
+{
+  "name": "hadolint",
+  "version": "2.14.0",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--file-path-in-report",
+      "shortcut": null,
+      "description": "The file path referenced in the generated report. This only applies for the 'checkstyle' format and is useful when running Hadolint with Docker to set the correct file path.",
+      "value": "FILEPATHINREPORT",
+      "default": null
+    },
+    {
+      "option": "--no-color",
+      "shortcut": null,
+      "description": "Don't colorize output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-fail",
+      "shortcut": null,
+      "description": "Don't exit with a failure status code when any rule is violated",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--require-label",
+      "shortcut": null,
+      "description": "The option --require-label=label:format makes Hadolint check that the label `label` conforms to format requirement `format`",
+      "value": "LABELSCHEMA (e.g. maintainer:text)",
+      "default": null
+    },
+    {
+      "option": "--trusted-registry",
+      "shortcut": null,
+      "description": "A docker registry to allow to appear in FROM instructions",
+      "value": "REGISTRY (e.g. docker.io)",
+      "default": null
+    },
+    {
+      "option": "--disable-ignore-pragma",
+      "shortcut": null,
+      "description": "Disable inline ignore pragmas `# hadolint ignore=DLxxxx`",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--error",
+      "shortcut": null,
+      "description": "Make the rule `RULECODE` have the level `error`",
+      "value": "RULECODE",
+      "default": null
+    },
+    {
+      "option": "--format",
+      "shortcut": "-f",
+      "description": "The output format for the results [tty | json | checkstyle | codeclimate | gitlab_codeclimate | gnu | codacy | sonarqube | sarif] (default: tty)",
+      "value": "ARG",
+      "default": "tty"
+    },
+    {
+      "option": "--ignore",
+      "shortcut": null,
+      "description": "A rule to ignore. If present, the ignore list in the config file is ignored",
+      "value": "RULECODE",
+      "default": null
+    },
+    {
+      "option": "--info",
+      "shortcut": null,
+      "description": "Make the rule `RULECODE` have the level `info`",
+      "value": "RULECODE",
+      "default": null
+    },
+    {
+      "option": "--strict-labels",
+      "shortcut": null,
+      "description": "Do not permit labels other than specified in `label-schema`",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--style",
+      "shortcut": null,
+      "description": "Make the rule `RULECODE` have the level `style`",
+      "value": "RULECODE",
+      "default": null
+    },
+    {
+      "option": "--warning",
+      "shortcut": null,
+      "description": "Make the rule `RULECODE` have the level `warning`",
+      "value": "RULECODE",
+      "default": null
+    },
+    {
+      "option": "-c",
+      "shortcut": "--config",
+      "description": "Path to the configuration file",
+      "value": "FILENAME",
+      "default": null
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "Show this help text",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-t",
+      "shortcut": "--failure-threshold",
+      "description": "Exit with failure code only when rules with a severity equal to or above THRESHOLD are violated. Accepted values: [error | warning | info | style | ignore | none] (default: info)",
+      "value": "THRESHOLD",
+      "default": "info"
+    },
+    {
+      "option": "-v",
+      "shortcut": "--version",
+      "description": "Show version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-V",
+      "shortcut": "--verbose",
+      "description": "Enables verbose logging of hadolint's output to stderr",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "hadolint - Dockerfile Linter written in Haskell\n\nUsage: hadolint [-v|--version] [-c|--config FILENAME] [DOCKERFILE...] \n                [--file-path-in-report FILEPATHINREPORT] [--no-fail] \n                [--no-color] [-V|--verbose] [-f|--format ARG] [--error RULECODE]\n                [--warning RULECODE] [--info RULECODE] [--style RULECODE] \n                [--ignore RULECODE] \n                [--trusted-registry REGISTRY (e.g. docker.io)] \n                [--require-label LABELSCHEMA (e.g. maintainer:text)] \n                [--strict-labels] [--disable-ignore-pragma] \n                [-t|--failure-threshold THRESHOLD]\n\n  Lint Dockerfile for errors and best practices\n\nAvailable options:\n  -h,--help                Show this help text\n  -v,--version             Show version\n  -c,--config FILENAME     Path to the configuration file\n  --file-path-in-report FILEPATHINREPORT\n                           The file path referenced in the generated report.\n                           This only applies for the 'checkstyle' format and is\n                           useful when running Hadolint with Docker to set the\n                           correct file path.\n  --no-fail                Don't exit with a failure status code when any rule\n                           is violated\n  --no-color               Don't colorize output\n  -V,--verbose             Enables verbose logging of hadolint's output to\n                           stderr\n  -f,--format ARG          The output format for the results [tty | json |\n                           checkstyle | codeclimate | gitlab_codeclimate | gnu |\n                           codacy | sonarqube | sarif] (default: tty)\n  --error RULECODE         Make the rule `RULECODE` have the level `error`\n  --warning RULECODE       Make the rule `RULECODE` have the level `warning`\n  --info RULECODE          Make the rule `RULECODE` have the level `info`\n  --style RULECODE         Make the rule `RULECODE` have the level `style`\n  --ignore RULECODE        A rule to ignore. If present, the ignore list in the\n                           config file is ignored\n  --trusted-registry REGISTRY (e.g. docker.io)\n                           A docker registry to allow to appear in FROM\n                           instructions\n  --require-label LABELSCHEMA (e.g. maintainer:text)\n                           The option --require-label=label:format makes\n                           Hadolint check that the label `label` conforms to\n                           format requirement `format`\n  --strict-labels          Do not permit labels other than specified in\n                           `label-schema`\n  --disable-ignore-pragma  Disable inline ignore pragmas `# hadolint\n                           ignore=DLxxxx`\n  -t,--failure-threshold THRESHOLD\n                           Exit with failure code only when rules with a\n                           severity equal to or above THRESHOLD are violated.\n                           Accepted values: [error | warning | info | style |\n                           ignore | none] (default: info)"
+}

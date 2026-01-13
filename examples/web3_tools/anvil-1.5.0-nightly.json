@@ -1,0 +1,444 @@
+{
+  "name": "anvil",
+  "version": "1.5.0-nightly",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--color",
+          "shortcut": null,
+          "description": "The color of the log messages",
+          "value": "<COLOR>",
+          "default": "auto"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help (see a summary with '-h')",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--json",
+          "shortcut": null,
+          "description": "Format log messages as JSON",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--md",
+          "shortcut": null,
+          "description": "Format log messages as Markdown",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--threads",
+          "shortcut": "-j",
+          "description": "Number of threads to use. Specifying 0 defaults to the number of logical cores",
+          "value": "<THREADS>",
+          "default": "0"
+        },
+        {
+          "option": "--quiet",
+          "shortcut": "-q",
+          "description": "Do not print log messages",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--verbosity",
+          "shortcut": "-v",
+          "description": "Verbosity level of the log messages. Pass multiple times to increase the verbosity",
+          "value": "...",
+          "default": null
+        }
+      ],
+      "name": "anvil completions",
+      "raw_help_text": "Generate shell completions script\n\nUsage: anvil completions [OPTIONS] <SHELL>\n\nArguments:\n  <SHELL>\n          [possible values: bash, zsh, fish, powershell, elvish, nushell]\n\nOptions:\n  -h, --help\n          Print help (see a summary with '-h')\n\n  -j, --threads <THREADS>\n          Number of threads to use. Specifying 0 defaults to the number of logical cores\n          \n          [aliases: --jobs]\n\nDisplay options:\n      --color <COLOR>\n          The color of the log messages\n\n          Possible values:\n          - auto:   Intelligently guess whether to use color output (default)\n          - always: Force color output\n          - never:  Force disable color output\n\n      --json\n          Format log messages as JSON\n\n      --md\n          Format log messages as Markdown\n\n  -q, --quiet\n          Do not print log messages\n\n  -v, --verbosity...\n          Verbosity level of the log messages.\n          \n          Pass multiple times to increase the verbosity (e.g. -v, -vv, -vvv).\n          \n          Depending on the context the verbosity levels have different meanings.\n          \n          For example, the verbosity levels of the EVM are:\n          - 2 (-vv): Print logs for all tests.\n          - 3 (-vvv): Print execution traces for failing tests.\n          - 4 (-vvvv): Print execution traces for all tests, and setup traces for failing tests.\n          - 5 (-vvvvv): Print execution and setup traces for all tests, including storage changes\n          and\n            backtraces with line numbers.",
+      "description": "Generate shell completions script"
+    }
+  ],
+  "options": [
+    {
+      "option": "--accounts",
+      "shortcut": "-a",
+      "description": "Number of dev accounts to generate and configure",
+      "value": "<NUM>",
+      "default": "10"
+    },
+    {
+      "option": "--auto-impersonate",
+      "shortcut": null,
+      "description": "Enables automatic impersonation on startup.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--balance",
+      "shortcut": null,
+      "description": "The balance of every dev account in Ether",
+      "value": "<NUM>",
+      "default": "10000"
+    },
+    {
+      "option": "--block-base-fee-per-gas",
+      "shortcut": null,
+      "description": "The base fee in a block",
+      "value": "<FEE>",
+      "default": null
+    },
+    {
+      "option": "--block-time",
+      "shortcut": "-b",
+      "description": "Block time in seconds for interval mining",
+      "value": "<SECONDS>",
+      "default": null
+    },
+    {
+      "option": "--cache-path",
+      "shortcut": null,
+      "description": "Path to the cache directory where states are stored",
+      "value": "<PATH>",
+      "default": null
+    },
+    {
+      "option": "--chain-id",
+      "shortcut": null,
+      "description": "The chain ID",
+      "value": "<CHAIN_ID>",
+      "default": null
+    },
+    {
+      "option": "--code-size-limit",
+      "shortcut": null,
+      "description": "EIP-170: Contract code size limit in bytes.",
+      "value": "<CODE_SIZE>",
+      "default": null
+    },
+    {
+      "option": "--completions",
+      "shortcut": null,
+      "description": "Generate shell completions script",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--config-out",
+      "shortcut": null,
+      "description": "Writes output of `anvil` as json to user-specified file",
+      "value": "<FILE>",
+      "default": null
+    },
+    {
+      "option": "--derivation-path",
+      "shortcut": null,
+      "description": "Sets the derivation path of the child key to be derived.",
+      "value": "<DERIVATION_PATH>",
+      "default": "m/44'/60'/0'/0/"
+    },
+    {
+      "option": "--disable-block-gas-limit",
+      "shortcut": null,
+      "description": "Disable the `call.gas_limit <= block.gas_limit` constraint",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-code-size-limit",
+      "shortcut": null,
+      "description": "Disable EIP-170: Contract code size limit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-default-create2-deployer",
+      "shortcut": null,
+      "description": "Disable the default create2 deployer",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-min-priority-fee",
+      "shortcut": null,
+      "description": "Disable the enforcement of a minimum suggested priority fee",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--disable-pool-balance-checks",
+      "shortcut": null,
+      "description": "Disable pool balance checks",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--dump-state",
+      "shortcut": null,
+      "description": "Dump the state and block environment of chain on exit to the given file.",
+      "value": "<PATH>",
+      "default": null
+    },
+    {
+      "option": "--enable-trace-printing",
+      "shortcut": null,
+      "description": "Enable printing of traces for executed transactions and `eth_call` to stdout",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--fork-block-number",
+      "shortcut": null,
+      "description": "Fetch state from a specific block number over a remote endpoint.",
+      "value": "<BLOCK>",
+      "default": null
+    },
+    {
+      "option": "--fork-chain-id",
+      "shortcut": null,
+      "description": "Specify chain id to skip fetching it from remote endpoint.",
+      "value": "<CHAIN>",
+      "default": null
+    },
+    {
+      "option": "--fork-header",
+      "shortcut": null,
+      "description": "Headers to use for the rpc client",
+      "value": "<HEADERS>",
+      "default": null
+    },
+    {
+      "option": "--fork-retry-backoff",
+      "shortcut": null,
+      "description": "Initial retry backoff on encountering errors.",
+      "value": "<BACKOFF>",
+      "default": null
+    },
+    {
+      "option": "--fork-transaction-hash",
+      "shortcut": null,
+      "description": "Fetch state from after a specific transaction hash has been applied over a remote endpoint.",
+      "value": "<TRANSACTION>",
+      "default": null
+    },
+    {
+      "option": "--gas-limit",
+      "shortcut": null,
+      "description": "The block gas limit",
+      "value": "<GAS_LIMIT>",
+      "default": null
+    },
+    {
+      "option": "--gas-price",
+      "shortcut": null,
+      "description": "The gas price",
+      "value": "<GAS_PRICE>",
+      "default": null
+    },
+    {
+      "option": "--hardfork",
+      "shortcut": null,
+      "description": "The EVM hardfork to use.",
+      "value": "<HARDFORK>",
+      "default": "latest"
+    },
+    {
+      "option": "--host",
+      "shortcut": null,
+      "description": "The hosts the server will listen on",
+      "value": "<IP_ADDR>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--init",
+      "shortcut": null,
+      "description": "Initialize the genesis block with the given `genesis.json` file",
+      "value": "<PATH>",
+      "default": null
+    },
+    {
+      "option": "--ipc",
+      "shortcut": null,
+      "description": "Launch an ipc server at the given path or default path = `/tmp/anvil.ipc`",
+      "value": "[<PATH>]",
+      "default": null
+    },
+    {
+      "option": "--json",
+      "shortcut": null,
+      "description": "Format log messages as JSON",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--load-state",
+      "shortcut": null,
+      "description": "Initialize the chain from a previously saved state snapshot",
+      "value": "<PATH>",
+      "default": null
+    },
+    {
+      "option": "--max-persisted-states",
+      "shortcut": null,
+      "description": "Max number of states to persist on disk.",
+      "value": "<MAX_PERSISTED_STATES>",
+      "default": null
+    },
+    {
+      "option": "--memory-limit",
+      "shortcut": null,
+      "description": "The memory limit per EVM execution in bytes",
+      "value": "<MEMORY_LIMIT>",
+      "default": null
+    },
+    {
+      "option": "--mixed-mining",
+      "shortcut": null,
+      "description": null,
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--mnemonic",
+      "shortcut": "-m",
+      "description": "BIP39 mnemonic phrase used for generating accounts.",
+      "value": "<MNEMONIC>",
+      "default": null
+    },
+    {
+      "option": "--mnemonic-random",
+      "shortcut": null,
+      "description": "Automatically generates a BIP39 mnemonic phrase, and derives accounts from it.",
+      "value": "[<MNEMONIC_RANDOM>]",
+      "default": "12"
+    },
+    {
+      "option": "--mnemonic-seed-unsafe",
+      "shortcut": null,
+      "description": "Generates a BIP39 mnemonic phrase from a given seed",
+      "value": "<MNEMONIC_SEED>",
+      "default": null
+    },
+    {
+      "option": "--no-cors",
+      "shortcut": null,
+      "description": "Disable CORS",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-mining",
+      "shortcut": null,
+      "description": "Disable auto and interval mining, and mine on demand instead",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--no-rate-limit",
+      "shortcut": null,
+      "description": "Disables rate limiting for this node's provider.",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--no-storage-caching",
+      "shortcut": null,
+      "description": "Explicitly disables the use of RPC caching.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--number",
+      "shortcut": null,
+      "description": "The number of the genesis block",
+      "value": "<NUM>",
+      "default": null
+    },
+    {
+      "option": "--port",
+      "shortcut": "-p",
+      "description": "Port number to listen on",
+      "value": "<NUM>",
+      "default": "8545"
+    },
+    {
+      "option": "--preserve-historical-states",
+      "shortcut": null,
+      "description": "Preserve historical state snapshots when dumping the state.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--print-traces",
+      "shortcut": null,
+      "description": "Enable printing of traces for executed transactions and `eth_call` to stdout",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--prune-history",
+      "shortcut": null,
+      "description": "Don't keep full chain history.",
+      "value": "[<PRUNE_HISTORY>]",
+      "default": null
+    },
+    {
+      "option": "--retries",
+      "shortcut": null,
+      "description": "Number of retry requests for spurious networks",
+      "value": "<retries>",
+      "default": "5"
+    },
+    {
+      "option": "--timeout",
+      "shortcut": null,
+      "description": "Timeout in ms for requests sent to remote JSON-RPC server in forking mode.",
+      "value": "<timeout>",
+      "default": "45000"
+    },
+    {
+      "option": "--timestamp",
+      "shortcut": null,
+      "description": "The timestamp of the genesis block",
+      "value": "<NUM>",
+      "default": null
+    },
+    {
+      "option": "--transaction-block-keeper",
+      "shortcut": null,
+      "description": "Number of blocks with transactions to keep in memory",
+      "value": "<TRANSACTION_BLOCK_KEEPER>",
+      "default": null
+    },
+    {
+      "option": "--threads",
+      "shortcut": "-j",
+      "description": "Number of threads to use.",
+      "value": "<THREADS>",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--verbosity...",
+      "shortcut": "-v",
+      "description": "Verbosity level of the log messages.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--quiet",
+      "shortcut": "-q",
+      "description": "Do not print log messages",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "A fast local Ethereum development node\n\nUsage: anvil [OPTIONS] [COMMAND]\n\nCommands:\n  completions  Generate shell completions script [aliases: com]\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -a, --accounts <NUM>\n          Number of dev accounts to generate and configure\n          \n          [default: 10]\n\n  -b, --block-time <SECONDS>\n          Block time in seconds for interval mining\n          \n          [aliases: --blockTime]\n\n      --balance <NUM>\n          The balance of every dev account in Ether\n          \n          [default: 10000]\n\n      --config-out <FILE>\n          Writes output of `anvil` as json to user-specified file\n\n      --derivation-path <DERIVATION_PATH>\n          Sets the derivation path of the child key to be derived.\n          \n          [default: m/44'/60'/0'/0/]\n\n      --dump-state <PATH>\n          Dump the state and block environment of chain on exit to the given file.\n          \n          If the value is a directory, the state will be written to `<VALUE>/state.json`.\n\n  -h, --help\n          Print help (see a summary with '-h')\n\n      --hardfork <HARDFORK>\n          The EVM hardfork to use.\n          \n          Choose the hardfork by name, e.g. `prague`, `cancun`, `shanghai`, `paris`, `london`,\n          etc... [default: latest]\n\n      --init <PATH>\n          Initialize the genesis block with the given `genesis.json` file\n\n      --ipc [<PATH>]\n          Launch an ipc server at the given path or default path = `/tmp/anvil.ipc`\n          \n          [aliases: --ipcpath]\n\n  -j, --threads <THREADS>\n          Number of threads to use. Specifying 0 defaults to the number of logical cores\n          \n          [aliases: --jobs]\n\n      --load-state <PATH>\n          Initialize the chain from a previously saved state snapshot\n\n  -m, --mnemonic <MNEMONIC>\n          BIP39 mnemonic phrase used for generating accounts. Cannot be used if `mnemonic_random` or\n          `mnemonic_seed` are used\n\n      --max-persisted-states <MAX_PERSISTED_STATES>\n          Max number of states to persist on disk.\n          \n          Note that `prune_history` will overwrite `max_persisted_states` to 0.\n\n      --mixed-mining\n          [aliases: --mixed-mining]\n\n      --mnemonic-random [<MNEMONIC_RANDOM>]\n          Automatically generates a BIP39 mnemonic phrase, and derives accounts from it. Cannot be\n          used with other `mnemonic` options. You can specify the number of words you want in the\n          mnemonic. [default: 12]\n\n      --mnemonic-seed-unsafe <MNEMONIC_SEED>\n          Generates a BIP39 mnemonic phrase from a given seed Cannot be used with other `mnemonic`\n          options.\n          \n          CAREFUL: This is NOT SAFE and should only be used for testing. Never use the private keys\n          generated in production.\n\n      --no-mining\n          Disable auto and interval mining, and mine on demand instead\n          \n          [aliases: --no-mine]\n\n      --number <NUM>\n          The number of the genesis block\n\n      --order <ORDER>\n          How transactions are sorted in the mempool\n          \n          [default: fees]\n\n  -p, --port <NUM>\n          Port number to listen on\n          \n          [default: 8545]\n\n      --preserve-historical-states\n          Preserve historical state snapshots when dumping the state.\n          \n          This will save the in-memory states of the chain at particular block hashes.\n          \n          These historical states will be loaded into the memory when `--load-state` / `--state`,\n          and aids in RPC calls beyond the block at which state was dumped.\n\n      --prune-history [<PRUNE_HISTORY>]\n          Don't keep full chain history. If a number argument is specified, at most this number of\n          states is kept in memory.\n          \n          If enabled, no state will be persisted on disk, so `max_persisted_states` will be 0.\n\n  -s, --state-interval <SECONDS>\n          Interval in seconds at which the state and block environment is to be dumped to disk.\n          \n          See --state and --dump-state\n\n      --slots-in-an-epoch <SLOTS_IN_AN_EPOCH>\n          Slots in an epoch\n          \n          [default: 32]\n\n      --state <PATH>\n          This is an alias for both --load-state and --dump-state.\n          \n          It initializes the chain with the state and block environment stored at the file, if it\n          exists, and dumps the chain's state on exit.\n\n      --timestamp <NUM>\n          The timestamp of the genesis block\n\n      --transaction-block-keeper <TRANSACTION_BLOCK_KEEPER>\n          Number of blocks with transactions to keep in memory\n\n  -V, --version\n          Print version\n\nDisplay options:\n      --color <COLOR>\n          The color of the log messages\n\n          Possible values:\n          - auto:   Intelligently guess whether to use color output (default)\n          - always: Force color output\n          - never:  Force disable color output\n\n      --json\n          Format log messages as JSON\n\n      --md\n          Format log messages as Markdown\n\n  -q, --quiet\n          Do not print log messages\n\n  -v, --verbosity...\n          Verbosity level of the log messages.\n          \n          Pass multiple times to increase the verbosity (e.g. -v, -vv, -vvv).\n          \n          Depending on the context the verbosity levels have different meanings.\n          \n          For example, the verbosity levels of the EVM are:\n          - 2 (-vv): Print logs for all tests.\n          - 3 (-vvv): Print execution traces for failing tests.\n          - 4 (-vvvv): Print execution traces for all tests, and setup traces for failing tests.\n          - 5 (-vvvvv): Print execution and setup traces for all tests, including storage changes\n          and\n            backtraces with line numbers.\n\nServer options:\n      --allow-origin <ALLOW_ORIGIN>\n          The cors `allow_origin` header\n          \n          [default: *]\n\n      --cache-path <PATH>\n          Path to the cache directory where states are stored\n\n      --host <IP_ADDR>\n          The hosts the server will listen on\n          \n          [env: ANVIL_IP_ADDR=]\n          [default: 127.0.0.1]\n\n      --no-cors\n          Disable CORS\n\n      --no-request-size-limit\n          Disable the default request body size limit. At time of writing the default limit is 2MB\n\nFork config:\n      --compute-units-per-second <CUPS>\n          Sets the number of assumed available compute units per second for this provider\n          \n          default value: 330\n          \n          See also --fork-url and\n          <https://docs.alchemy.com/reference/compute-units#what-are-cups-compute-units-per-second>\n\n  -f, --fork-url <URL>\n          Fetch state over a remote endpoint instead of starting from an empty state.\n          \n          If you want to fetch state from a specific block number, add a block number like\n          `http://localhost:8545@1400000` or use the `--fork-block-number` argument.\n          \n          [aliases: --rpc-url]\n\n      --fork-block-number <BLOCK>\n          Fetch state from a specific block number over a remote endpoint.\n          \n          If negative, the given value is subtracted from the `latest` block number.\n          \n          See --fork-url.\n\n      --fork-chain-id <CHAIN>\n          Specify chain id to skip fetching it from remote endpoint. This enables offline-start\n          mode.\n          \n          You still must pass both `--fork-url` and `--fork-block-number`, and already have your\n          required state cached on disk, anything missing locally would be fetched from the remote.\n\n      --fork-header <HEADERS>\n          Headers to use for the rpc client, e.g. \"User-Agent: test-agent\"\n          \n          See --fork-url.\n\n      --fork-retry-backoff <BACKOFF>\n          Initial retry backoff on encountering errors.\n          \n          See --fork-url.\n\n      --fork-transaction-hash <TRANSACTION>\n          Fetch state from after a specific transaction hash has been applied over a remote\n          endpoint.\n          \n          See --fork-url.\n\n      --no-rate-limit\n          Disables rate limiting for this node's provider.\n          \n          default value: false\n          \n          See also --fork-url and\n          <https://docs.alchemy.com/reference/compute-units#what-are-cups-compute-units-per-second>\n          \n          [aliases: --no-rpc-rate-limit]\n\n      --no-storage-caching\n          Explicitly disables the use of RPC caching.\n          \n          All storage slots are read entirely from the endpoint.\n          \n          This flag overrides the project's configuration file.\n          \n          See --fork-url.\n\n      --retries <retries>\n          Number of retry requests for spurious networks (timed out requests)\n          \n          Default value 5\n\n      --timeout <timeout>\n          Timeout in ms for requests sent to remote JSON-RPC server in forking mode.\n          \n          Default value 45000\n\nEnvironment config:\n      --block-base-fee-per-gas <FEE>\n          The base fee in a block\n          \n          [aliases: --base-fee]\n\n      --chain-id <CHAIN_ID>\n          The chain ID\n\n      --code-size-limit <CODE_SIZE>\n          EIP-170: Contract code size limit in bytes. Useful to increase this because of tests. To\n          disable entirely, use `--disable-code-size-limit`. By default, it is 0x6000 (~25kb)\n\n      --disable-block-gas-limit\n          Disable the `call.gas_limit <= block.gas_limit` constraint\n\n      --disable-code-size-limit\n          Disable EIP-170: Contract code size limit\n\n      --disable-min-priority-fee\n          Disable the enforcement of a minimum suggested priority fee\n          \n          [aliases: --no-priority-fee]\n\n      --gas-limit <GAS_LIMIT>\n          The block gas limit\n\n      --gas-price <GAS_PRICE>\n          The gas price\n\nEVM options:\n      --auto-impersonate\n          Enables automatic impersonation on startup. This allows any transaction sender to be\n          simulated as different accounts, which is useful for testing contract behavior\n          \n          [aliases: --auto-unlock]\n\n      --disable-console-log\n          Disable printing of `console.log` invocations to stdout\n          \n          [aliases: --no-console-log]\n\n      --disable-default-create2-deployer\n          Disable the default create2 deployer\n          \n          [aliases: --no-create2]\n\n      --disable-pool-balance-checks\n          Disable pool balance checks\n\n      --memory-limit <MEMORY_LIMIT>\n          The memory limit per EVM execution in bytes\n\n      --print-traces\n          Enable printing of traces for executed transactions and `eth_call` to stdout\n          \n          [aliases: --enable-trace-printing]\n\n      --steps-tracing\n          Enable steps tracing used for debug calls returning geth-style traces\n          \n          [aliases: --tracing]\n\nNetworks:\n      --celo\n          Enable Celo network features\n\n      --optimism\n          Enable Optimism network features\n          \n          [aliases: --optimism]"
+}

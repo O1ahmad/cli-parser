@@ -1,0 +1,183 @@
+{
+  "name": "graph-node",
+  "version": "0.41.1",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--admin-port",
+      "shortcut": "-h",
+      "description": "Port for the JSON-RPC admin server",
+      "value": "<PORT>",
+      "default": "8020"
+    },
+    {
+      "option": "--arweave",
+      "shortcut": null,
+      "description": "HTTP base URL for arweave gateway",
+      "value": "<{HOST:PORT|URL}>",
+      "default": "https://arweave.net"
+    },
+    {
+      "option": "--check-config",
+      "shortcut": null,
+      "description": "Validate the configuration and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--config",
+      "shortcut": null,
+      "description": "The name of the configuration file",
+      "value": "<CONFIG>",
+      "default": "GRAPH_NODE_CONFIG="
+    },
+    {
+      "option": "--debug",
+      "shortcut": null,
+      "description": "Enable debug logging",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--debug-fork",
+      "shortcut": null,
+      "description": "IPFS hash of the subgraph manifest that you want to fork",
+      "value": "<IPFS_HASH>",
+      "default": "GRAPH_DEBUG_FORK="
+    },
+    {
+      "option": "--disable-block-ingestor",
+      "shortcut": null,
+      "description": "Ensures that the block ingestor component does not execute",
+      "value": null,
+      "default": "DISABLE_BLOCK_INGESTOR="
+    },
+    {
+      "option": "--elasticsearch-password",
+      "shortcut": null,
+      "description": "Password to use for Elasticsearch logging",
+      "value": "<PASSWORD>",
+      "default": null
+    },
+    {
+      "option": "--elasticsearch-url",
+      "shortcut": null,
+      "description": "Elasticsearch service to write subgraph logs to",
+      "value": "<URL>",
+      "default": "ELASTICSEARCH_URL="
+    },
+    {
+      "option": "--elasticsearch-user",
+      "shortcut": null,
+      "description": "User to use for Elasticsearch logging",
+      "value": "<USER>",
+      "default": "ELASTICSEARCH_USER="
+    },
+    {
+      "option": "--expensive-queries-filename",
+      "shortcut": null,
+      "description": "A file with a list of expensive queries, one query per line.",
+      "value": "<FILE>",
+      "default": "/etc/graph-node/expensive-queries.txt"
+    },
+    {
+      "option": "--fork-base",
+      "shortcut": null,
+      "description": "Base URL for forking subgraphs",
+      "value": "<URL>",
+      "default": "GRAPH_FORK_BASE="
+    },
+    {
+      "option": "--graphman-port",
+      "shortcut": null,
+      "description": "Port for the graphman GraphQL server",
+      "value": "<GRAPHMAN_PORT>",
+      "default": "8050"
+    },
+    {
+      "option": "--http-port",
+      "shortcut": null,
+      "description": "Port for the GraphQL HTTP server",
+      "value": "<PORT>",
+      "default": "8000"
+    },
+    {
+      "option": "--index-node-port",
+      "shortcut": null,
+      "description": "Port for the index node server",
+      "value": "<PORT>",
+      "default": "8030"
+    },
+    {
+      "option": "--ipfs",
+      "shortcut": null,
+      "description": "HTTP addresses of IPFS servers (RPC, Gateway)",
+      "value": "<HOST:PORT>",
+      "default": "IPFS="
+    },
+    {
+      "option": "--node-id",
+      "shortcut": null,
+      "description": "A unique identifier for this node. Should have the same value between consecutive node restarts",
+      "value": "<NODE_ID>",
+      "default": "default"
+    },
+    {
+      "option": "--postgres-host-weights",
+      "shortcut": null,
+      "description": "Comma-separated list of relative weights for selecting the main database and secondary databases.",
+      "value": "<WEIGHT,>",
+      "default": "GRAPH_POSTGRES_HOST_WEIGHTS="
+    },
+    {
+      "option": "--postgres-secondary-hosts",
+      "shortcut": null,
+      "description": "Comma-separated list of host names/IP's for read-only Postgres replicas",
+      "value": "<URL,>",
+      "default": "GRAPH_POSTGRES_SECONDARY_HOSTS="
+    },
+    {
+      "option": "--postgres-url",
+      "shortcut": null,
+      "description": "Location of the Postgres database used for storing entities",
+      "value": "<URL>",
+      "default": "POSTGRES_URL="
+    },
+    {
+      "option": "--start-block",
+      "shortcut": null,
+      "description": "Block hash and number that the subgraph passed will start indexing at",
+      "value": "<BLOCK_HASH:BLOCK_NUMBER>",
+      "default": "GRAPH_START_BLOCK="
+    },
+    {
+      "option": "--subgraph",
+      "shortcut": null,
+      "description": "Name and IPFS hash of the subgraph manifest",
+      "value": "<[NAME:]IPFS_HASH>",
+      "default": "SUBGRAPH="
+    },
+    {
+      "option": "--unsafe-config",
+      "shortcut": null,
+      "description": "Allows setting configurations that may result in incorrect Proofs of Indexing.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Print help",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "Scalable queries for a decentralized future\n\nUsage: graph-node [OPTIONS]\n\nOptions:\n      --config <CONFIG>\n          the name of the configuration file [env: GRAPH_NODE_CONFIG=]\n      --check-config\n          validate the configuration and exit\n      --subgraph <[NAME:]IPFS_HASH>\n          name and IPFS hash of the subgraph manifest [env: SUBGRAPH=]\n      --start-block <BLOCK_HASH:BLOCK_NUMBER>\n          block hash and number that the subgraph passed will start indexing at [env:\n          GRAPH_START_BLOCK=]\n      --postgres-url <URL>\n          Location of the Postgres database used for storing entities [env: POSTGRES_URL=]\n      --postgres-secondary-hosts <URL,>\n          Comma-separated list of host names/IP's for read-only Postgres replicas, which will share\n          the load with the primary server [env: GRAPH_POSTGRES_SECONDARY_HOSTS=]\n      --postgres-host-weights <WEIGHT,>\n          Comma-separated list of relative weights for selecting the main database and secondary\n          databases. The list is in the order MAIN,REPLICA1,REPLICA2,...A host will receive\n          approximately WEIGHT/SUM(WEIGHTS) fraction of total queries. Defaults to weight 1 for each\n          host [env: GRAPH_POSTGRES_HOST_WEIGHTS=]\n      --ethereum-rpc <NETWORK_NAME:[CAPABILITIES]:URL>\n          Ethereum network name (e.g. 'mainnet'), optional comma-seperated capabilities (eg\n          'full,archive'), and an Ethereum RPC URL, separated by a ':' [env: ETHEREUM_RPC=]\n      --ethereum-ws <NETWORK_NAME:[CAPABILITIES]:URL>\n          Ethereum network name (e.g. 'mainnet'), optional comma-seperated capabilities (eg\n          'full,archive`, and an Ethereum WebSocket URL, separated by a ':' [env: ETHEREUM_WS=]\n      --ethereum-ipc <NETWORK_NAME:[CAPABILITIES]:FILE>\n          Ethereum network name (e.g. 'mainnet'), optional comma-seperated capabilities (eg\n          'full,archive'), and an Ethereum IPC pipe, separated by a ':' [env: ETHEREUM_IPC=]\n      --ipfs <HOST:PORT>\n          HTTP addresses of IPFS servers (RPC, Gateway) [env: IPFS=]\n      --arweave <{HOST:PORT|URL}>\n          HTTP base URL for arweave gateway [env: GRAPH_NODE_ARWEAVE_URL=] [default:\n          https://arweave.net]\n      --http-port <PORT>\n          Port for the GraphQL HTTP server [env: GRAPH_GRAPHQL_HTTP_PORT=] [default: 8000]\n      --index-node-port <PORT>\n          Port for the index node server [default: 8030]\n      --admin-port <PORT>\n          Port for the JSON-RPC admin server [default: 8020]\n      --metrics-port <PORT>\n          Port for the Prometheus metrics server [default: 8040]\n      --node-id <NODE_ID>\n          a unique identifier for this node. Should have the same value between consecutive node\n          restarts [env: GRAPH_NODE_ID=] [default: default]\n      --expensive-queries-filename <FILE>\n          a file with a list of expensive queries, one query per line. Attempts to run these queries\n          will return a QueryExecutionError::TooExpensive to clients [env:\n          GRAPH_NODE_EXPENSIVE_QUERIES_FILE=] [default: /etc/graph-node/expensive-queries.txt]\n      --debug\n          Enable debug logging\n      --elasticsearch-url <URL>\n          Elasticsearch service to write subgraph logs to [env: ELASTICSEARCH_URL=]\n      --elasticsearch-user <USER>\n          User to use for Elasticsearch logging [env: ELASTICSEARCH_USER=]\n      --elasticsearch-password <PASSWORD>\n          Password to use for Elasticsearch logging [env: ELASTICSEARCH_PASSWORD]\n      --disable-block-ingestor\n          Ensures that the block ingestor component does not execute [env: DISABLE_BLOCK_INGESTOR=]\n      --store-connection-pool-size <STORE_CONNECTION_POOL_SIZE>\n          Limits the number of connections in the store's connection pool [env:\n          STORE_CONNECTION_POOL_SIZE=] [default: 10]\n      --unsafe-config\n          Allows setting configurations that may result in incorrect Proofs of Indexing.\n      --debug-fork <IPFS_HASH>\n          IPFS hash of the subgraph manifest that you want to fork [env: GRAPH_DEBUG_FORK=]\n      --fork-base <URL>\n          Base URL for forking subgraphs [env: GRAPH_FORK_BASE=]\n      --graphman-port <GRAPHMAN_PORT>\n          Port for the graphman GraphQL server [default: 8050]\n  -h, --help\n          Print help\n  -V, --version\n          Print version"
+}

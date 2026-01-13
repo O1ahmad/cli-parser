@@ -1,0 +1,1196 @@
+{
+  "name": "terraform",
+  "version": "1.10.5",
+  "description": "The available commands for execution are listed below. The primary workflow commands are given first, followed by less common or more advanced commands.",
+  "usage": "Usage: terraform [global options] <subcommand> [args]",
+  "subcommands": [
+    {
+      "description": "Creates or updates infrastructure according to Terraform configuration files in the current directory.",
+      "name": "terraform apply",
+      "options": [
+        {
+          "default": "-state-out path with .backup extension",
+          "description": "Path to backup the existing state file before modifying.",
+          "option": "-backup=path"
+        },
+        {
+          "description": "Skip interactive approval of plan before applying.",
+          "option": "-auto-approve"
+        },
+        {
+          "description": "If Terraform produces any warnings that are not accompanied by errors, show them in a more compact form that includes only the summary messages.",
+          "option": "-compact-warnings"
+        },
+        {
+          "description": "Destroy Terraform-managed infrastructure. The command \"terraform destroy\" is a convenience alias for this option.",
+          "option": "-destroy"
+        },
+        {
+          "default": "false",
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock=false"
+        },
+        {
+          "default": "0s",
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout=0s"
+        },
+        {
+          "default": "true",
+          "description": "Ask for input for variables if not directly set.",
+          "option": "-input=true"
+        },
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "-no-color"
+        },
+        {
+          "default": "10",
+          "description": "Limit the number of parallel resource operations.",
+          "option": "-parallelism=n"
+        },
+        {
+          "default": "terraform.tfstate",
+          "description": "Path to read and save state (unless state-out is specified).",
+          "option": "-state=path"
+        },
+        {
+          "description": "Path to write state to that is different than \"-state\". This can be used to preserve the old state.",
+          "option": "-state-out=path"
+        },
+        {
+          "description": "Set a value for one of the input variables in the root module of the configuration. Use this option more than once to set more than one variable.",
+          "option": "-var 'foo=bar'"
+        },
+        {
+          "description": "Load variable values from the given file, in addition to the default files terraform.tfvars and *.auto.tfvars. Use this option more than once to include more than one variables file.",
+          "option": "-var-file=filename"
+        }
+      ],
+      "usage": "terraform [global options] apply [options] [PLAN]",
+      "subcommands": []
+    },
+    {
+      "description": "Starts an interactive console for experimenting with Terraform interpolations.",
+      "name": "terraform console",
+      "usage": "terraform [global options] console [options]",
+      "options": [
+        {
+          "description": "Create a new plan (as if running \"terraform plan\") and then evaluate expressions against its planned state, instead of evaluating against the current state. You can use this to inspect the effects of configuration changes that haven't been applied yet.",
+          "option": "-plan"
+        },
+        {
+          "description": "Legacy option for the local backend only. See the local backend's documentation for more information.",
+          "option": "-state",
+          "value": "path"
+        },
+        {
+          "description": "Set a variable in the Terraform configuration. This flag can be set multiple times.",
+          "option": "-var",
+          "value": "'foo=bar'"
+        },
+        {
+          "description": "Set variables in the Terraform configuration from a file. If \"terraform.tfvars\" or any \".auto.tfvars\" files are present, they will be automatically loaded.",
+          "option": "-var-file",
+          "value": "foo"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform destroy",
+      "description": "Terraform CLI for managing infrastructure.",
+      "usage": "terraform [global options] destroy [options]",
+      "subcommands": [],
+      "options": []
+    },
+    {
+      "name": "terraform fmt",
+      "description": "Rewrites all Terraform configuration files to a canonical format. All configuration files (.tf), variables files (.tfvars), and testing files (.tftest.hcl) are updated. JSON files (.tf.json, .tfvars.json, or .tftest.json) are not modified. By default, fmt scans the current directory for configuration files. If you provide a directory for the target argument, then fmt will scan that directory instead. If you provide a file, then fmt will process just that file. If you provide a single dash (\"-\"), then fmt will read from standard input (STDIN). The content must be in the Terraform language native syntax; JSON is not supported.",
+      "usage": "terraform [global options] fmt [options] [target...]",
+      "options": [
+        {
+          "option": "-check",
+          "description": "Check if the input is formatted. Exit status will be 0 if all input is properly formatted and non-zero otherwise."
+        },
+        {
+          "option": "-diff",
+          "description": "Display diffs of formatting changes"
+        },
+        {
+          "option": "-list",
+          "description": "Don't list files whose formatting differs (always disabled if using STDIN)",
+          "value": "false"
+        },
+        {
+          "option": "-no-color",
+          "description": "If specified, output won't contain any color."
+        },
+        {
+          "option": "-recursive",
+          "description": "Also process files in subdirectories. By default, only the given directory (or current directory) is processed."
+        },
+        {
+          "option": "-write",
+          "description": "Don't write to source files (always disabled if using STDIN or -check)",
+          "value": "false"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform force-unlock",
+      "description": "Manually unlock the state for the defined configuration.",
+      "usage": "terraform [global options] force-unlock LOCK_ID",
+      "options": [
+        {
+          "description": "Don't ask for input for unlock confirmation.",
+          "option": "-force"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "description": "Downloads and installs modules needed for the configuration in the current working directory. This recursively downloads all modules needed, such as modules imported by modules imported by the root and so on. If a module is already downloaded, it will not be redownloaded or checked for updates unless the -update flag is specified. Module installation also happens automatically by default as part of the \"terraform init\" command, so you should rarely need to run this command separately.",
+      "name": "terraform get",
+      "usage": "Usage: terraform [global options] get [options]",
+      "options": [
+        {
+          "description": "Disable text coloring in the output.",
+          "option": "-no-color"
+        },
+        {
+          "default": "tests",
+          "description": "Set the Terraform test directory, defaults to \"tests\".",
+          "option": "-test-directory=path",
+          "value": "path"
+        },
+        {
+          "description": "Check already-downloaded modules for available updates and install the newest versions available.",
+          "option": "-update"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform graph",
+      "description": "Produces a representation of the dependency graph between different objects in the current configuration and state.",
+      "usage": "Usage: terraform [global options] graph [options]",
+      "options": [
+        {
+          "option": "-draw-cycles",
+          "description": "Highlight any cycles in the graph with colored edges. This helps when diagnosing cycle errors. This option is supported only when illustrating a real evaluation graph, selected using the -type=TYPE option."
+        },
+        {
+          "option": "-module-depth=n",
+          "description": "(deprecated) In prior versions of Terraform, specified the depth of modules to show in the output."
+        },
+        {
+          "option": "-plan=tfplan",
+          "description": "Render graph using the specified plan file instead of the configuration in the current directory. Implies -type=apply."
+        },
+        {
+          "option": "-type=TYPE",
+          "description": "Type of operation graph to output. Can be: plan, plan-refresh-only, plan-destroy, or apply. By default Terraform just summarizes the relationships between the resources in your configuration, without any particular operation in mind. Full operation graphs are more detailed but therefore often harder to read."
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "description": "Import existing infrastructure into your Terraform state.",
+      "name": "terraform import",
+      "usage": "terraform [global options] import [options] ADDR ID",
+      "options": [
+        {
+          "description": "Path to a directory of Terraform configuration files to use to configure the provider. Defaults to pwd. If no config files are present, they must be provided via the input prompts or env vars.",
+          "option": "-config",
+          "value": "path"
+        },
+        {
+          "description": "Disable interactive input prompts.",
+          "option": "-input",
+          "value": "false"
+        },
+        {
+          "description": "A rare option used for the remote backend only. See the remote backend documentation for more information.",
+          "option": "-ignore-remote-version"
+        },
+        {
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock",
+          "value": "false"
+        },
+        {
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout",
+          "value": "0s"
+        },
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "-no-color"
+        },
+        {
+          "description": "Set a variable in the Terraform configuration. This flag can be set multiple times. This is only useful with the \"-config\" flag.",
+          "option": "-var",
+          "value": "'foo=bar'"
+        },
+        {
+          "description": "Set variables in the Terraform configuration from a file. If \"terraform.tfvars\" or any \".auto.tfvars\" files are present, they will be automatically loaded.",
+          "option": "-var-file",
+          "value": "foo"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "description": "Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.",
+      "name": "terraform init",
+      "subcommands": [],
+      "options": [
+        {
+          "description": "Disable backend or HCP Terraform initialization for this configuration and use what was previously initialized instead.",
+          "option": "-backend",
+          "shortcut": "-cloud",
+          "value": "false"
+        },
+        {
+          "description": "Configuration to be merged with what is in the configuration file's 'backend' block. This can be either a path to an HCL file with key/value assignments or a 'key=value' format, and can be specified multiple times.",
+          "option": "-backend-config",
+          "value": "path"
+        },
+        {
+          "description": "Suppress prompts about copying state data when initializing a new state backend.",
+          "option": "-force-copy"
+        },
+        {
+          "description": "Copy the contents of the given module into the target directory before initialization.",
+          "option": "-from-module",
+          "value": "SOURCE"
+        },
+        {
+          "description": "Disable downloading modules for this configuration.",
+          "option": "-get",
+          "value": "false"
+        },
+        {
+          "description": "A rare option used for HCP Terraform and the remote backend only. Set this to ignore checking that the local and remote Terraform versions use compatible state representations.",
+          "option": "-ignore-remote-version"
+        },
+        {
+          "description": "Disable interactive prompts.",
+          "option": "-input",
+          "value": "false"
+        },
+        {
+          "description": "If specified, machine readable output will be printed in JSON format.",
+          "option": "-json"
+        },
+        {
+          "description": "Don't hold a state lock during backend migration. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock",
+          "value": "false"
+        },
+        {
+          "description": "Set a dependency lockfile mode. Currently only \"readonly\" is valid.",
+          "option": "-lockfile",
+          "value": "MODE"
+        },
+        {
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout",
+          "value": "0s"
+        },
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "-no-color"
+        },
+        {
+          "description": "Directory containing plugin binaries. This overrides all default search paths for plugins, and prevents the automatic installation of plugins.",
+          "option": "-plugin-dir"
+        },
+        {
+          "description": "Reconfigure a backend, ignoring any saved configuration.",
+          "option": "-reconfigure"
+        },
+        {
+          "description": "Reconfigure a backend, and attempt to migrate any existing state.",
+          "option": "-migrate-state"
+        },
+        {
+          "description": "Set the Terraform test directory, defaults to \"tests\".",
+          "option": "-test-directory",
+          "value": "path"
+        },
+        {
+          "description": "Install the latest module and provider versions allowed within configured constraints, overriding the default behavior of selecting exactly the version recorded in the dependency lockfile.",
+          "option": "-upgrade"
+        }
+      ],
+      "usage": "Usage: terraform [global options] init [options]"
+    },
+    {
+      "name": "terraform login",
+      "description": "Retrieves an authentication token for the given hostname, if it supports automatic login, and saves it in a credentials file in your home directory.",
+      "usage": "Usage: terraform [global options] login [hostname]",
+      "subcommands": []
+    },
+    {
+      "name": "terraform logout",
+      "description": "Removes locally-stored credentials for specified hostname.",
+      "usage": "terraform [global options] logout [hostname]",
+      "subcommands": [],
+      "options": []
+    },
+    {
+      "name": "terraform metadata",
+      "description": "This command has subcommands for metadata related purposes.",
+      "usage": "terraform [global options] metadata <subcommand> [options] [args]",
+      "subcommands": [
+        {
+          "description": "Prints out a json representation of the available function signatures.",
+          "subcommands": [],
+          "options": [],
+          "usage": "terraform [global options] metadata functions -json",
+          "name": "terraform metadata functions"
+        }
+      ]
+    },
+    {
+      "name": "terraform modules",
+      "description": "Prints out a list of all declared Terraform modules and their resolved versions in a Terraform working directory.",
+      "usage": "terraform [global options] modules -json",
+      "subcommands": [],
+      "options": []
+    },
+    {
+      "name": "terraform output",
+      "description": "Reads an output variable from a Terraform state file and prints the value.",
+      "usage": "terraform [global options] output [options] [NAME]",
+      "options": [
+        {
+          "option": "--json",
+          "description": "If specified, machine readable output will be printed in JSON format."
+        },
+        {
+          "option": "--no-color",
+          "description": "If specified, output won't contain any color."
+        },
+        {
+          "option": "--raw",
+          "description": "For value types that can be automatically converted to a string, will print the raw string directly, rather than a human-oriented representation of the value."
+        },
+        {
+          "option": "--state",
+          "description": "Path to the state file to read. Ignored when remote state is used.",
+          "value": "path",
+          "default": "terraform.tfstate"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "description": "Generates a speculative execution plan, showing what actions Terraform would take to apply the current configuration. This command will not actually perform the planned actions. You can optionally save the plan to a file, which you can then pass to the \"apply\" command to perform exactly the actions described in the plan.",
+      "name": "terraform plan",
+      "usage": "Usage: terraform [global options] plan [options]",
+      "options": [
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "--no-color"
+        },
+        {
+          "description": "Return detailed exit codes when the command exits. This will change the meaning of exit codes to: 0 - Succeeded, diff is empty (no changes) 1 - Errored 2 - Succeeded, there is a diff",
+          "option": "--detailed-exitcode"
+        },
+        {
+          "description": "Select the \"destroy\" planning mode, which creates a plan to destroy all objects currently managed by this Terraform configuration instead of the usual behavior.",
+          "option": "-destroy"
+        },
+        {
+          "description": "Select the \"refresh only\" planning mode, which checks whether remote objects still match the outcome of the most recent Terraform apply but does not propose any actions to undo any changes made outside of Terraform.",
+          "option": "-refresh-only"
+        },
+        {
+          "description": "Skip checking for external changes to remote objects while creating the plan. This can potentially make planning faster, but at the expense of possibly planning against a stale record of the remote system state.",
+          "option": "-refresh=false"
+        },
+        {
+          "description": "Force replacement of a particular resource instance using its resource address. If the plan would've normally produced an update or no-op action for this instance, Terraform will plan to replace it instead. You can use this option multiple times to replace more than one object.",
+          "option": "-replace=resource",
+          "value": "resource"
+        },
+        {
+          "description": "Limit the planning operation to only the given module, resource, or resource instance and all of its dependencies. You can use this option multiple times to include more than one object. This is for exceptional use only.",
+          "option": "-target=resource",
+          "value": "resource"
+        },
+        {
+          "description": "Set a value for one of the input variables in the root module of the configuration. Use this option more than once to set more than one variable.",
+          "option": "-var 'foo=bar'",
+          "value": "'foo=bar'"
+        },
+        {
+          "description": "Load variable values from the given file, in addition to the default files terraform.tfvars and *.auto.tfvars. Use this option more than once to include more than one variables file.",
+          "option": "-var-file=filename",
+          "value": "filename"
+        },
+        {
+          "description": "If Terraform produces any warnings that are not accompanied by errors, shows them in a more compact form that includes only the summary messages.",
+          "option": "-compact-warnings"
+        },
+        {
+          "description": "(Experimental) If import blocks are present in configuration, instructs Terraform to generate HCL for any imported resources not already present. The configuration is written to a new file at PATH, which must not already exist. Terraform may still attempt to write configuration if the plan errors.",
+          "option": "-generate-config-out=path",
+          "value": "path"
+        },
+        {
+          "description": "Ask for input for variables if not directly set.",
+          "option": "-input=true"
+        },
+        {
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock=false"
+        },
+        {
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout=0s",
+          "value": "0s"
+        },
+        {
+          "description": "Write a plan file to the given path. This can be used as input to the \"apply\" command.",
+          "option": "-out=path",
+          "value": "path"
+        },
+        {
+          "description": "Limit the number of concurrent operations. Defaults to 10.",
+          "option": "-parallelism=n",
+          "value": "n"
+        },
+        {
+          "description": "A legacy option used for the local backend only. See the local backend's documentation for more information.",
+          "option": "-state=statefile",
+          "value": "statefile"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform providers",
+      "description": "Prints out a tree of modules in the referenced configuration annotated with their provider requirements. This provides an overview of all of the provider requirements across all referenced modules, as an aid to understanding why particular provider plugins are needed and why particular versions are selected.",
+      "usage": "terraform [global options] providers [options] [DIR]",
+      "options": [
+        {
+          "option": "-test-directory=path",
+          "description": "Set the Terraform test directory, defaults to \"tests\".",
+          "value": "path",
+          "default": "tests"
+        }
+      ],
+      "subcommands": [
+        {
+          "name": "terraform providers lock",
+          "description": "The CLI for automating infrastructure workflows.",
+          "usage": "terraform [global options] providers lock [options] [providers...]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "-enable-plugin-cache",
+              "description": "Enable the usage of the globally configured plugin cache. This will speed up the locking process, but the providers won't be loaded from an authoritative source."
+            },
+            {
+              "option": "-fs-mirror=dir",
+              "description": "Consult the given filesystem mirror directory instead of the origin registry for each of the given providers. Necessary to generate lock file entries for a provider available only via a mirror, not published in an upstream registry."
+            },
+            {
+              "option": "-net-mirror=url",
+              "description": "Consult the given network mirror (base URL) instead of the origin registry for each of the given providers. Necessary to generate lock file entries for a provider available only via a mirror, not published in an upstream registry."
+            },
+            {
+              "option": "-platform=os_arch",
+              "description": "Choose a target platform to request package checksums for. By default, Terraform requests checksums suitable for the current platform. Use multiple times to include checksums for multiple target systems. Target names consist of an OS and a CPU architecture, e.g., 'linux_amd64'."
+            }
+          ]
+        },
+        {
+          "name": "terraform providers mirror",
+          "description": "Populates a local directory with copies of the provider plugins needed for the current configuration, so that the directory can be used either directly as a filesystem mirror or as the basis for a network mirror and thus obtain those providers without access to their origin registries in future. The mirror directory will contain JSON index files that can be published along with the mirrored packages on a static HTTP file server to produce a network mirror. Those index files will be ignored if the directory is used instead as a local filesystem mirror.",
+          "usage": "terraform [global options] providers mirror [options] <target-dir>",
+          "options": [
+            {
+              "option": "-lock-file",
+              "description": "Ignore the provider lock file when fetching providers. By default the mirror command will use the version info in the lock file if the configuration directory has been previously initialized.",
+              "value": "false"
+            },
+            {
+              "option": "-platform",
+              "description": "Choose which target platform to build a mirror for. By default Terraform will obtain plugin packages suitable for the platform where you run this command. Use this flag multiple times to include packages for multiple target systems. Target names consist of an operating system and a CPU architecture. For example, \"linux_amd64\" selects the Linux operating system running on an AMD64 or x86_64 CPU. Each provider is available only for a limited set of target platforms.",
+              "value": "os_arch"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Prints out a json representation of the schemas for all providers used in the current configuration.",
+          "name": "terraform providers schema",
+          "usage": "terraform [global options] providers schema -json",
+          "subcommands": [
+            {
+              "name": "terraform providers schema providers",
+              "description": "Terraform CLI for managing infrastructure as code.",
+              "usage": "terraform [global options] providers schema -json",
+              "subcommands": [
+                {
+                  "name": "terraform providers schema providers schema",
+                  "description": "Prints out a json representation of the schemas for all providers used in the current configuration.",
+                  "usage": "terraform [global options] providers schema -json",
+                  "options": [],
+                  "subcommands": []
+                }
+              ],
+              "options": []
+            }
+          ],
+          "options": [
+            {
+              "option": "-json",
+              "description": "Output the schema in JSON format"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "terraform refresh",
+      "description": "Update the state file of your infrastructure with metadata that matches the physical resources they are tracking. This will not modify your infrastructure, but it can modify your state file to update metadata. This metadata might cause new changes to occur when you generate a plan or call apply next.",
+      "usage": "terraform [global options] refresh [options]",
+      "options": [
+        {
+          "description": "If Terraform produces any warnings that are not accompanied by errors, show them in a more compact form that includes only the summary messages.",
+          "option": "-compact-warnings"
+        },
+        {
+          "description": "Ask for input for variables if not directly set.",
+          "option": "-input",
+          "value": "true"
+        },
+        {
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock",
+          "value": "false"
+        },
+        {
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout",
+          "value": "0s"
+        },
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "-no-color"
+        },
+        {
+          "default": "10",
+          "description": "Limit the number of concurrent operations.",
+          "option": "-parallelism",
+          "value": "n"
+        },
+        {
+          "description": "Resource to target. Operation will be limited to this resource and its dependencies. This flag can be used multiple times.",
+          "option": "-target",
+          "value": "resource"
+        },
+        {
+          "description": "Set a variable in the Terraform configuration. This flag can be set multiple times.",
+          "option": "-var",
+          "value": "'foo=bar'"
+        },
+        {
+          "description": "Set variables in the Terraform configuration from a file. If \"terraform.tfvars\" or any \".auto.tfvars\" files are present, they will be automatically loaded.",
+          "option": "-var-file",
+          "value": "foo"
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform show",
+      "description": "Reads and outputs a Terraform state or plan file in a human-readable form. If no path is specified, the current state will be shown.",
+      "usage": "terraform [global options] show [options] [path]",
+      "options": [
+        {
+          "option": "-json",
+          "description": "If specified, output the Terraform plan or state in a machine-readable form."
+        },
+        {
+          "option": "-no-color",
+          "description": "If specified, output won't contain any color."
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "name": "terraform state",
+      "description": "This command has subcommands for advanced state management. These subcommands can be used to slice and dice the Terraform state. This is sometimes necessary in advanced cases. For your safety, all state management commands that modify the state create a timestamped backup of the state prior to making modifications. The structure and output of the commands is specifically tailored to work well with the common Unix utilities such as grep, awk, etc. We recommend using those tools to perform more advanced state tasks.",
+      "usage": "Usage: terraform [global options] state <subcommand> [options] [args]",
+      "subcommands": [
+        {
+          "description": "Manage state and perform other Terraform operations.",
+          "name": "terraform state list",
+          "usage": "terraform [global options] <subcommand> [options] [args...]",
+          "subcommands": [
+            {
+              "description": "List resources in the Terraform state.",
+              "name": "terraform state list state list",
+              "subcommands": [],
+              "options": [
+                {
+                  "default": "state of the currently-selected workspace",
+                  "description": "Path to a Terraform state file to use to look up Terraform-managed resources.",
+                  "option": "-state",
+                  "value": "statefile"
+                },
+                {
+                  "description": "Filters the results to include only instances whose resource types have an attribute named \"id\" whose value equals the given id string.",
+                  "option": "-id",
+                  "value": "ID"
+                }
+              ],
+              "usage": "terraform [global options] state list [options] [address...]"
+            }
+          ],
+          "options": [
+            {
+              "option": "-id",
+              "description": "Filters the results to include only instances whose resource types have an attribute named \"id\" whose value equals the given id string.",
+              "value": "ID"
+            },
+            {
+              "option": "-state",
+              "description": "Path to a Terraform state file to use to look up Terraform-managed resources. By default, Terraform will consult the state of the currently-selected workspace.",
+              "value": "statefile"
+            }
+          ]
+        },
+        {
+          "description": "This command will move an item matched by the address given to the destination address. This command can also move to a destination address in a completely different state file. This can be used for simple resource renaming, moving items to and from a module, moving entire modules, and more. And because this command can also move data to a completely new state, it can also be used for refactoring one configuration into multiple separately managed Terraform configurations. This command will output a backup copy of the state prior to saving any changes. The backup cannot be disabled. Due to the destructive nature of this command, backups are required. If you're moving an item to a different state file, a backup will be created for each state file.",
+          "name": "terraform state mv",
+          "options": [
+            {
+              "description": "If set, prints out what would've been moved but doesn't actually move anything.",
+              "option": "-dry-run"
+            },
+            {
+              "default": "false",
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+              "option": "-lock"
+            },
+            {
+              "default": "0s",
+              "description": "Duration to retry a state lock.",
+              "option": "-lock-timeout",
+              "value": "duration"
+            },
+            {
+              "description": "A rare option used for the remote backend only. See the remote backend documentation for more information.",
+              "option": "-ignore-remote-version"
+            }
+          ],
+          "usage": "terraform [global options] state mv [options] SOURCE DESTINATION",
+          "subcommands": []
+        },
+        {
+          "name": "terraform state pull",
+          "description": "Pull the state from its location, upgrade the local copy, and output it to stdout.",
+          "usage": "Usage: terraform [global options] state pull [options]",
+          "subcommands": [
+            {
+              "description": "Pull the state from its location, upgrade the local copy, and output it to stdout.",
+              "name": "terraform state pull state",
+              "subcommands": [
+                {
+                  "name": "terraform state pull state state pull",
+                  "description": "Pull the state from its location, upgrade the local copy, and output it to stdout.",
+                  "usage": "Usage: terraform [global options] state pull [options]",
+                  "options": [],
+                  "subcommands": []
+                }
+              ],
+              "usage": "Usage: terraform [global options] state pull [options]"
+            }
+          ],
+          "options": []
+        },
+        {
+          "name": "terraform state push",
+          "description": "Update remote state from a local state file at PATH.",
+          "usage": "Usage: terraform [global options] state push [options] PATH",
+          "subcommands": [
+            {
+              "name": "terraform state push state",
+              "description": "Update remote state from a local state file at PATH.",
+              "usage": "terraform [global options] state push [options] PATH",
+              "options": [
+                {
+                  "description": "Write the state even if lineages don't match or the remote serial is higher.",
+                  "option": "-force"
+                },
+                {
+                  "default": "false",
+                  "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+                  "option": "-lock",
+                  "value": "false"
+                },
+                {
+                  "default": "0s",
+                  "description": "Duration to retry a state lock.",
+                  "option": "-lock-timeout",
+                  "value": "0s"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "-force",
+              "description": "Write the state even if lineages don't match or the remote serial is higher."
+            },
+            {
+              "option": "-lock=false",
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace."
+            },
+            {
+              "option": "-lock-timeout=0s",
+              "description": "Duration to retry a state lock."
+            }
+          ]
+        },
+        {
+          "description": "Replace provider for resources in the Terraform state.",
+          "name": "terraform state replace-provider",
+          "usage": "Usage: terraform [global options] state replace-provider [options] FROM_PROVIDER_FQN TO_PROVIDER_FQN",
+          "options": [
+            {
+              "description": "Skip interactive approval.",
+              "option": "-auto-approve"
+            },
+            {
+              "default": "false",
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+              "option": "-lock"
+            },
+            {
+              "default": "0s",
+              "description": "Duration to retry a state lock.",
+              "option": "-lock-timeout"
+            },
+            {
+              "description": "A rare option used for the remote backend only. See the remote backend documentation for more information.",
+              "option": "-ignore-remote-version"
+            },
+            {
+              "description": "Legacy options supported for the local backend only. For more information, see the local backend's documentation.",
+              "option": "-state, state-out, and -backup"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Remove one or more items from the Terraform state, causing Terraform to 'forget' those items without first destroying them in the remote system.",
+          "name": "terraform state rm",
+          "usage": "Usage: terraform [global options] state rm [options] ADDRESS...",
+          "options": [
+            {
+              "description": "Path where Terraform should write the backup state.",
+              "option": "-backup",
+              "value": "PATH"
+            },
+            {
+              "description": "If set, prints out what would've been removed but doesn't actually remove anything.",
+              "option": "-dry-run"
+            },
+            {
+              "default": "false",
+              "description": "Continue even if remote and local Terraform versions are incompatible. This may result in an unusable workspace, and should be used with extreme caution.",
+              "option": "-ignore-remote-version"
+            },
+            {
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+              "default": "false",
+              "option": "-lock"
+            },
+            {
+              "description": "Duration to retry a state lock.",
+              "option": "-lock-timeout",
+              "value": "0s"
+            },
+            {
+              "description": "Path to the state file to update. Defaults to the current workspace state.",
+              "option": "-state",
+              "value": "PATH"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Shows the attributes of a resource in the Terraform state.",
+          "name": "terraform state show",
+          "subcommands": [
+            {
+              "description": "Shows the attributes of a resource in the Terraform state.",
+              "name": "terraform state show state",
+              "subcommands": [
+                {
+                  "description": "This command shows the attributes of a single resource in the Terraform state. The address argument must be used to specify a single resource.",
+                  "name": "terraform state show state show",
+                  "options": [
+                    {
+                      "default": "terraform.tfstate",
+                      "description": "Path to a Terraform state file to use to look up Terraform-managed resources. By default it will use the state \"terraform.tfstate\" if it exists.",
+                      "option": "-state",
+                      "value": "statefile"
+                    }
+                  ],
+                  "subcommands": [
+                    {
+                      "description": "Shows the attributes of a resource in the Terraform state.",
+                      "name": "terraform state show state show state",
+                      "subcommands": [],
+                      "usage": "terraform [global options] state show [options] ADDRESS"
+                    }
+                  ],
+                  "usage": "Usage: terraform [global options] state show [options] ADDRESS"
+                }
+              ],
+              "options": [
+                {
+                  "default": "terraform.tfstate",
+                  "description": "Path to a Terraform state file to use to look up Terraform-managed resources.",
+                  "option": "-state",
+                  "value": "statefile"
+                }
+              ],
+              "usage": "terraform [global options] state show [options] ADDRESS"
+            }
+          ],
+          "usage": "terraform [global options] state show [options] ADDRESS",
+          "options": [
+            {
+              "default": "terraform.tfstate",
+              "description": "Path to a Terraform state file to use to look up Terraform-managed resources.",
+              "option": "-state",
+              "value": "statefile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Terraform uses the term \"tainted\" to describe a resource instance which may not be fully functional, either because its creation partially failed or because you've manually marked it as such using this command. This will not modify your infrastructure directly, but subsequent Terraform plans will include actions to destroy the remote object and create a new object to replace it.",
+      "name": "terraform taint",
+      "options": [
+        {
+          "description": "If specified, the command will succeed (exit code 0) even if the resource is missing.",
+          "option": "-allow-missing"
+        },
+        {
+          "default": "false",
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "option": "-lock"
+        },
+        {
+          "default": "0s",
+          "description": "Duration to retry a state lock.",
+          "option": "-lock-timeout"
+        },
+        {
+          "description": "A rare option used for the remote backend only. See the remote backend documentation for more information.",
+          "option": "-ignore-remote-version"
+        }
+      ],
+      "usage": "terraform [global options] taint [options] <address>",
+      "subcommands": []
+    },
+    {
+      "description": "Executes automated integration tests against the current Terraform configuration.",
+      "name": "terraform test",
+      "usage": "Usage: terraform [global options] test [options]",
+      "options": [
+        {
+          "option": "-cloud-run=source",
+          "description": "If specified, Terraform will execute this test run remotely using HCP Terraform or Terraform Enterprise. You must specify the source of a module registered in a private module registry as the argument to this flag. This allows Terraform to associate the cloud run with the correct HCP Terraform or Terraform Enterprise module and organization.",
+          "value": "source"
+        },
+        {
+          "option": "-filter=testfile",
+          "description": "If specified, Terraform will only execute the test files specified by this flag. You can use this option multiple times to execute more than one test file.",
+          "value": "testfile"
+        },
+        {
+          "option": "-json",
+          "description": "If specified, machine readable output will be printed in JSON format"
+        },
+        {
+          "option": "-no-color",
+          "description": "If specified, output won't contain any color."
+        },
+        {
+          "option": "-test-directory=path",
+          "description": "Set the Terraform test directory, defaults to \"tests\".",
+          "value": "path",
+          "default": "\"tests\""
+        },
+        {
+          "option": "-var 'foo=bar'",
+          "description": "Set a value for one of the input variables in the root module of the configuration. Use this option more than once to set more than one variable.",
+          "value": "'foo=bar'"
+        },
+        {
+          "option": "-var-file=filename",
+          "description": "Load variable values from the given file, in addition to the default files terraform.tfvars and *.auto.tfvars. Use this option more than once to include more than one variables file.",
+          "value": "filename"
+        },
+        {
+          "option": "-verbose",
+          "description": "Print the plan or state for each test run block as it executes."
+        }
+      ],
+      "subcommands": []
+    },
+    {
+      "description": "Validate the configuration files in a directory, referring only to the configuration and not accessing any remote services such as remote state, provider APIs, etc.",
+      "name": "terraform validate",
+      "subcommands": [],
+      "options": [
+        {
+          "description": "Produce output in a machine-readable JSON format, suitable for use in text editor integrations and other automated systems. Always disables color.",
+          "option": "-json"
+        },
+        {
+          "description": "If specified, output won't contain any color.",
+          "option": "-no-color"
+        },
+        {
+          "description": "If specified, Terraform will not validate test files.",
+          "option": "-no-tests"
+        },
+        {
+          "default": "tests",
+          "description": "Set the Terraform test directory, defaults to \"tests\".",
+          "option": "-test-directory",
+          "value": "path"
+        }
+      ],
+      "usage": "terraform [global options] validate [options]"
+    },
+    {
+      "name": "terraform version",
+      "description": "Displays the version of Terraform and all installed plugins",
+      "usage": "terraform [global options] version [options]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-json",
+          "description": "Output the version information as a JSON object."
+        }
+      ]
+    },
+    {
+      "name": "terraform workspace",
+      "description": "new, list, show, select and delete Terraform workspaces.",
+      "usage": "terraform [global options] workspace",
+      "subcommands": [
+        {
+          "name": "terraform workspace delete",
+          "description": "Delete a Terraform workspace",
+          "usage": "terraform [global options] workspace delete [OPTIONS] NAME",
+          "options": [
+            {
+              "option": "-force",
+              "description": "Remove a workspace even if it is managing resources. Terraform can no longer track or manage the workspace's infrastructure."
+            },
+            {
+              "option": "-lock=false",
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+              "default": "false"
+            },
+            {
+              "option": "-lock-timeout=0s",
+              "description": "Duration to retry a state lock.",
+              "default": "0s"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "List Terraform workspaces.",
+          "subcommands": [],
+          "options": [],
+          "usage": "terraform [global options] workspace list",
+          "name": "terraform workspace list"
+        },
+        {
+          "description": "Create a new Terraform workspace.",
+          "name": "terraform workspace new",
+          "subcommands": [
+            {
+              "description": "Create a new Terraform workspace.",
+              "name": "terraform workspace new workspace",
+              "subcommands": [
+                {
+                  "description": "Create a new Terraform workspace.",
+                  "name": "terraform workspace new workspace new",
+                  "options": [
+                    {
+                      "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+                      "option": "--lock",
+                      "shortcut": "-lock",
+                      "value": "false"
+                    },
+                    {
+                      "description": "Duration to retry a state lock.",
+                      "option": "--lock-timeout",
+                      "shortcut": "-lock-timeout",
+                      "value": "0s"
+                    },
+                    {
+                      "description": "Copy an existing state file into the new workspace.",
+                      "option": "--state",
+                      "shortcut": "-state",
+                      "value": "path"
+                    }
+                  ],
+                  "usage": "Usage: terraform [global options] workspace new [OPTIONS] NAME",
+                  "subcommands": []
+                }
+              ],
+              "usage": "terraform [global options] workspace new [OPTIONS] NAME",
+              "options": [
+                {
+                  "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+                  "option": "-lock",
+                  "shortcut": null,
+                  "value": "false"
+                },
+                {
+                  "description": "Duration to retry a state lock.",
+                  "option": "-lock-timeout",
+                  "shortcut": null,
+                  "value": "0s"
+                },
+                {
+                  "description": "Copy an existing state file into the new workspace.",
+                  "option": "-state",
+                  "shortcut": null,
+                  "value": "path"
+                }
+              ]
+            }
+          ],
+          "usage": "terraform [global options] workspace new [OPTIONS] NAME",
+          "options": [
+            {
+              "default": "false",
+              "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+              "option": "-lock"
+            },
+            {
+              "default": "0s",
+              "description": "Duration to retry a state lock.",
+              "option": "-lock-timeout"
+            },
+            {
+              "description": "Copy an existing state file into the new workspace.",
+              "option": "-state",
+              "value": "path"
+            }
+          ]
+        },
+        {
+          "description": "Select a different Terraform workspace.",
+          "name": "terraform workspace select",
+          "subcommands": [
+            {
+              "description": "Select a different Terraform workspace.",
+              "name": "terraform workspace select workspace",
+              "usage": "terraform [global options] workspace select NAME",
+              "options": [
+                {
+                  "default": "false",
+                  "description": "Create the Terraform workspace if it doesn't exist.",
+                  "option": "--or-create",
+                  "shortcut": "-or-create",
+                  "value": "<boolean>"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "default": "false",
+              "description": "Create the Terraform workspace if it doesn't exist.",
+              "option": "--or-create",
+              "shortcut": "-or-create",
+              "value": "false"
+            }
+          ],
+          "usage": "terraform [global options] workspace select NAME"
+        },
+        {
+          "name": "terraform workspace show",
+          "description": "Show the name of the current workspace.",
+          "usage": "terraform [global options] workspace show",
+          "subcommands": [
+            {
+              "description": "Show the name of the current workspace.",
+              "name": "terraform workspace show workspace",
+              "usage": "terraform [global options] workspace show",
+              "subcommands": [],
+              "options": []
+            }
+          ],
+          "options": []
+        }
+      ]
+    },
+    {
+      "name": "terraform untaint",
+      "description": "Terraform uses the term \"tainted\" to describe a resource instance which may not be fully functional, either because its creation partially failed or because you've manually marked it as such using the \"terraform taint\" command.",
+      "usage": "Usage: terraform [global options] untaint [options] name",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-allow-missing",
+          "description": "If specified, the command will succeed (exit code 0) even if the resource is missing."
+        },
+        {
+          "option": "-ignore-remote-version",
+          "description": "A rare option used for the remote backend only. See the remote backend documentation for more information."
+        },
+        {
+          "option": "-lock",
+          "description": "Don't hold a state lock during the operation. This is dangerous if others might concurrently run commands against the same workspace.",
+          "value": "false"
+        },
+        {
+          "option": "-lock-timeout",
+          "description": "Duration to retry a state lock.",
+          "value": "0s"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "description": "Switch to a different working directory before executing the given subcommand.",
+      "option": "-chdir=DIR"
+    },
+    {
+      "description": "Show this help output, or the help for a specified subcommand.",
+      "option": "-help"
+    },
+    {
+      "description": "An alias for the \"version\" subcommand.",
+      "option": "-version"
+    }
+  ]
+}

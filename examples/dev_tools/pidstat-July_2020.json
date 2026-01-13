@@ -1,0 +1,104 @@
+{
+  "name": "pidstat",
+  "version": "July 2020",
+  "usage": [
+    "pidstat [ -d ] [ -H ] [ -h ] [ -I ] [ -l ] [ -R ] [ -r ] [ -s ] [ -t ] [ -U [ username ] ] [ -u ] [ -V ] [ -v ] [ -w ] [ -C comm ] [ -G process_name ] [ --dec={ 0 | 1 | 2 } ] [ --human ] [ -p { pid[,...] | SELF | ALL } ] [ -T { TASK | CHILD | ALL } ] [ interval [ count ] ] [ -e program args ]"
+  ],
+  "options": [
+    {
+      "option": "--dec",
+      "description": "Specify the number of decimal places to use (0 to 2, default is 2).",
+      "value": "{ 0 | 1 | 2 }",
+      "default": "2"
+    },
+    {
+      "option": "--human",
+      "description": "Print sizes in human-readable format (e.g., 1.0k, 1.2M, etc.)."
+    },
+    {
+      "option": "-C",
+      "description": "Display only tasks whose command name includes the string `comm`. This can be a regular expression.",
+      "value": "comm"
+    },
+    {
+      "option": "-G",
+      "description": "Display only processes whose command name includes the string `process_name`. This can be a regular expression.",
+      "value": "process_name"
+    },
+    {
+      "option": "-d",
+      "description": "Report I/O statistics (kernels 2.6.20 and later only).",
+      "section": "I/O Statistics"
+    },
+    {
+      "option": "-e",
+      "description": "Execute program with given arguments and monitor it with `pidstat`. Stops when the program terminates.",
+      "value": "program args"
+    },
+    {
+      "option": "-H",
+      "description": "Display timestamp in seconds since the epoch."
+    },
+    {
+      "option": "-h",
+      "description": "Display all activities horizontally on a single line, with no average statistics at the end of the report."
+    },
+    {
+      "option": "-I",
+      "description": "In an SMP environment, divide task CPU usage by the total number of processors.",
+      "section": "CPU Utilization"
+    },
+    {
+      "option": "-l",
+      "description": "Display the process command name and all its arguments."
+    },
+    {
+      "option": "-p",
+      "description": "Select tasks for which statistics are reported. Accepts `pid[,...]`, `SELF`, or `ALL`.",
+      "value": "{ pid[,...] | SELF | ALL }",
+      "default": "ALL"
+    },
+    {
+      "option": "-r",
+      "description": "Report page faults and memory utilization.",
+      "section": "Memory Statistics"
+    },
+    {
+      "option": "-R",
+      "description": "Report realtime priority and scheduling policy information.",
+      "section": "Realtime Priority"
+    },
+    {
+      "option": "-s",
+      "description": "Report stack utilization.",
+      "section": "Stack Utilization"
+    },
+    {
+      "option": "-T",
+      "description": "Specify what to monitor: TASK (individual tasks), CHILD (tasks and their children), or ALL.",
+      "value": "{ TASK | CHILD | ALL }",
+      "default": "TASK"
+    },
+    {
+      "option": "-t",
+      "description": "Display statistics for threads associated with selected tasks."
+    },
+    {
+      "option": "-u",
+      "description": "Report CPU utilization.",
+      "section": "CPU Utilization"
+    },
+    {
+      "option": "-V",
+      "description": "Print version number then exit."
+    },
+    {
+      "option": "-v",
+      "description": "Report values of some kernel tables."
+    },
+    {
+      "option": "-w",
+      "description": "Report task switching activity (kernels 2.6.23 and later only)."
+    }
+  ]
+}

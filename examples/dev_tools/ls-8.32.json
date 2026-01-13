@@ -1,0 +1,344 @@
+{
+  "name": "ls",
+  "version": "8.32",
+  "description": "List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.",
+  "usage": "ls [OPTION]... [FILE]...",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--all",
+      "shortcut": "-a",
+      "description": "do not ignore entries starting with ."
+    },
+    {
+      "option": "--almost-all",
+      "shortcut": "-A",
+      "description": "do not list implied . and .."
+    },
+    {
+      "option": "--author",
+      "description": "with -l, print the author of each file"
+    },
+    {
+      "option": "--block-size",
+      "description": "with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below",
+      "value": "SIZE"
+    },
+    {
+      "option": "--classify",
+      "shortcut": "-F",
+      "description": "append indicator (one of */=>@|) to entries"
+    },
+    {
+      "option": "--color",
+      "description": "colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below",
+      "value": "[=WHEN]"
+    },
+    {
+      "option": "--context",
+      "shortcut": "-Z",
+      "description": "print any security context of each file"
+    },
+    {
+      "option": "--dired",
+      "shortcut": "-D",
+      "description": "generate output designed for Emacs' dired mode"
+    },
+    {
+      "option": "--directory",
+      "shortcut": "-d",
+      "description": "list directories themselves, not their contents"
+    },
+    {
+      "option": "--dereference",
+      "shortcut": "-L",
+      "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
+    },
+    {
+      "option": "--dereference-command-line",
+      "shortcut": "-H",
+      "description": "follow symbolic links listed on the command line"
+    },
+    {
+      "option": "--dereference-command-line-symlink-to-dir",
+      "description": "follow each command line symbolic link that points to a directory"
+    },
+    {
+      "option": "--escape",
+      "shortcut": "-b",
+      "description": "print C-style escapes for nongraphic characters"
+    },
+    {
+      "option": "--file-type",
+      "description": "likewise, except do not append '*'"
+    },
+    {
+      "option": "--format",
+      "description": "across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C",
+      "value": "WORD"
+    },
+    {
+      "option": "--full-time",
+      "description": "like -l --time-style=full-iso"
+    },
+    {
+      "option": "--group-directories-first",
+      "description": "group directories before files; can be augmented with a --sort option, but any use of --sort=none (-U) disables grouping"
+    },
+    {
+      "option": "--hide",
+      "description": "do not list implied entries matching shell PATTERN (overridden by -a or -A)",
+      "value": "PATTERN"
+    },
+    {
+      "option": "--hide-control-chars",
+      "shortcut": "-q",
+      "description": "print ? instead of nongraphic characters"
+    },
+    {
+      "option": "--human-readable",
+      "shortcut": "-h",
+      "description": "with -l and -s, print sizes like 1K 234M 2G etc."
+    },
+    {
+      "option": "--hyperlink",
+      "description": "hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'",
+      "value": "[=WHEN]"
+    },
+    {
+      "option": "--ignore",
+      "shortcut": "-I",
+      "description": "do not list implied entries matching shell PATTERN",
+      "value": "PATTERN"
+    },
+    {
+      "option": "--ignore-backups",
+      "shortcut": "-B",
+      "description": "do not list implied entries ending with ~"
+    },
+    {
+      "option": "--indicator-style",
+      "description": "append indicator with style WORD to entry names: none (default), slash (-p), file-type (--file-type), classify (-F)",
+      "value": "WORD"
+    },
+    {
+      "option": "--inode",
+      "shortcut": "-i",
+      "description": "print the index number of each file"
+    },
+    {
+      "option": "--kibibytes",
+      "shortcut": "-k",
+      "description": "default to 1024-byte blocks for disk usage; used only with -s and per directory totals"
+    },
+    {
+      "option": "--literal",
+      "shortcut": "-N",
+      "description": "print entry names without quoting"
+    },
+    {
+      "option": "--no-group",
+      "shortcut": "-G",
+      "description": "in a long listing, don't print group names"
+    },
+    {
+      "option": "--numeric-uid-gid",
+      "shortcut": "-n",
+      "description": "like -l, but list numeric user and group IDs"
+    },
+    {
+      "option": "--quote-name",
+      "shortcut": "-Q",
+      "description": "enclose entry names in double quotes"
+    },
+    {
+      "option": "--quoting-style",
+      "description": "use quoting style WORD for entry names: literal, locale, shell, shell-always, shell-escape, shell-escape-always, c, escape (overrides QUOTING_STYLE environment variable)",
+      "value": "WORD"
+    },
+    {
+      "option": "--recursive",
+      "shortcut": "-R",
+      "description": "list subdirectories recursively"
+    },
+    {
+      "option": "--reverse",
+      "shortcut": "-r",
+      "description": "reverse order while sorting"
+    },
+    {
+      "option": "--show-control-chars",
+      "description": "show nongraphic characters as-is (the default, unless program is 'ls' and output is a terminal)"
+    },
+    {
+      "option": "--si",
+      "description": "likewise, but use powers of 1000 not 1024"
+    },
+    {
+      "option": "--size",
+      "shortcut": "-s",
+      "description": "print the allocated size of each file, in blocks"
+    },
+    {
+      "option": "--sort",
+      "description": "sort by WORD instead of name: none (-U), size (-S), time (-t), version (-v), extension (-X)",
+      "value": "WORD"
+    },
+    {
+      "option": "--tabsize",
+      "shortcut": "-T",
+      "description": "assume tab stops at each COLS instead of 8",
+      "value": "COLS"
+    },
+    {
+      "option": "--time",
+      "description": "change the default of using modification times; access time (-u): atime, access, use; change time (-c): ctime, status; birth time: birth, creation; with -l, WORD determines which time to show; with --sort=time, sort by WORD (newest first)",
+      "value": "WORD"
+    },
+    {
+      "option": "--time-style",
+      "description": "time/date format with -l; see TIME_STYLE below",
+      "value": "TIME_STYLE"
+    },
+    {
+      "option": "--width",
+      "shortcut": "-w",
+      "description": "set output width to COLS. 0 means no limit",
+      "value": "COLS"
+    },
+    {
+      "option": "--help",
+      "description": "display this help and exit"
+    },
+    {
+      "option": "--version",
+      "description": "output version information and exit"
+    },
+    {
+      "option": "-1",
+      "description": "list one file per line. Avoid '\\n' with -q or -b"
+    },
+    {
+      "option": "-C",
+      "description": "list entries by columns"
+    },
+    {
+      "option": "-H",
+      "description": "follow symbolic links listed on the command line"
+    },
+    {
+      "option": "-L",
+      "description": "when showing file information for a symbolic link, show information for the file the link references rather than for the link itself"
+    },
+    {
+      "option": "-N",
+      "description": "print entry names without quoting"
+    },
+    {
+      "option": "-Q",
+      "description": "enclose entry names in double quotes"
+    },
+    {
+      "option": "-R",
+      "description": "list subdirectories recursively"
+    },
+    {
+      "option": "-T",
+      "description": "assume tab stops at each COLS instead of 8",
+      "value": "COLS"
+    },
+    {
+      "option": "-a",
+      "description": "do not ignore entries starting with ."
+    },
+    {
+      "option": "-b",
+      "description": "print C-style escapes for nongraphic characters"
+    },
+    {
+      "option": "-c",
+      "description": "with -lt: sort by, and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first"
+    },
+    {
+      "option": "-d",
+      "description": "list directories themselves, not their contents"
+    },
+    {
+      "option": "-f",
+      "description": "do not sort, enable -aU, disable -ls --color"
+    },
+    {
+      "option": "-g",
+      "description": "like -l, but do not list owner"
+    },
+    {
+      "option": "-h",
+      "description": "with -l and -s, print sizes like 1K 234M 2G etc."
+    },
+    {
+      "option": "-i",
+      "description": "print the index number of each file"
+    },
+    {
+      "option": "-k",
+      "description": "default to 1024-byte blocks for disk usage; used only with -s and per directory totals"
+    },
+    {
+      "option": "-l",
+      "description": "use a long listing format"
+    },
+    {
+      "option": "-m",
+      "description": "fill width with a comma separated list of entries"
+    },
+    {
+      "option": "-n",
+      "description": "like -l, but list numeric user and group IDs"
+    },
+    {
+      "option": "-o",
+      "description": "like -l, but do not list group information"
+    },
+    {
+      "option": "-p",
+      "description": "append / indicator to directories"
+    },
+    {
+      "option": "-q",
+      "description": "print ? instead of nongraphic characters"
+    },
+    {
+      "option": "-r",
+      "description": "reverse order while sorting"
+    },
+    {
+      "option": "-s",
+      "description": "print the allocated size of each file, in blocks"
+    },
+    {
+      "option": "-t",
+      "description": "sort by time, newest first; see --time"
+    },
+    {
+      "option": "-u",
+      "description": "with -lt: sort by, and show, access time; with -l: show access time and sort by name; otherwise: sort by access time, newest first"
+    },
+    {
+      "option": "-v",
+      "description": "natural sort of (version) numbers within text"
+    },
+    {
+      "option": "-w",
+      "description": "set output width to COLS. 0 means no limit",
+      "value": "COLS"
+    },
+    {
+      "option": "-x",
+      "description": "list entries by lines instead of by columns"
+    },
+    {
+      "option": "-1",
+      "description": "list one file per line. Avoid '\\n' with -q or -b"
+    }
+  ]
+}

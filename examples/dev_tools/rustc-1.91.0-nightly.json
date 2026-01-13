@@ -1,0 +1,163 @@
+{
+  "name": "rustc",
+  "version": "1.91.0-nightly",
+  "description": "The Rust compiler.",
+  "usage": "Usage: rustc [OPTIONS] INPUT",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--allow",
+      "shortcut": "-A",
+      "description": "Set lint allowed",
+      "value": "<LINT>"
+    },
+    {
+      "option": "--cap-lints",
+      "description": "Set the most restrictive lint level. More restrictive lints are capped at this level",
+      "value": "<LEVEL>"
+    },
+    {
+      "option": "--cfg",
+      "description": "Configure the compilation environment. SPEC supports the syntax `<NAME>[=\"<VALUE>\"]`.",
+      "value": "<SPEC>"
+    },
+    {
+      "option": "--check-cfg",
+      "description": "Provide list of expected cfgs for checking",
+      "value": "<SPEC>"
+    },
+    {
+      "option": "--codegen",
+      "shortcut": "-C",
+      "description": "Set a codegen option",
+      "value": "<OPT>[=<VALUE>]"
+    },
+    {
+      "option": "--crate-name",
+      "description": "Specify the name of the crate being built",
+      "value": "<NAME>"
+    },
+    {
+      "option": "--crate-type",
+      "description": "Comma separated list of types of crates for the compiler to emit",
+      "value": "<bin|lib|rlib|dylib|cdylib|staticlib|proc-macro>"
+    },
+    {
+      "option": "--deny",
+      "shortcut": "-D",
+      "description": "Set lint denied",
+      "value": "<LINT>"
+    },
+    {
+      "option": "--edition",
+      "description": "Specify which edition of the compiler to use when compiling code.",
+      "value": "<2015|2018|2021|2024|future>",
+      "default": "2015"
+    },
+    {
+      "option": "--emit",
+      "description": "Comma separated list of types of output for the compiler to emit.",
+      "value": "<TYPE>[=<FILE>]"
+    },
+    {
+      "option": "--explain",
+      "description": "Provide a detailed explanation of an error message",
+      "value": "<OPT>"
+    },
+    {
+      "option": "--force-warn",
+      "description": "Set lint force-warn",
+      "value": "<LINT>"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Display this message"
+    },
+    {
+      "option": "--out-dir",
+      "description": "Write output to compiler-chosen filename in DIR",
+      "value": "<DIR>"
+    },
+    {
+      "option": "--print",
+      "description": "Compiler information to print on stdout (or to a file)",
+      "value": "<INFO>[=<FILE>]"
+    },
+    {
+      "option": "--target",
+      "description": "Target triple for which the code is compiled",
+      "value": "<TARGET>"
+    },
+    {
+      "option": "--test",
+      "description": "Build a test harness"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version info and exit"
+    },
+    {
+      "option": "--verbose",
+      "shortcut": "-v",
+      "description": "Use verbose output"
+    },
+    {
+      "option": "--warn",
+      "shortcut": "-W",
+      "description": "Set lint warnings",
+      "value": "<LINT>"
+    },
+    {
+      "option": "-C help",
+      "description": "Print codegen options",
+      "tags": [
+        "Additional help"
+      ]
+    },
+    {
+      "option": "-F",
+      "shortcut": "--forbid",
+      "description": "Set lint forbidden",
+      "value": "<LINT>"
+    },
+    {
+      "option": "-L",
+      "description": "Add a directory to the library search path. The optional KIND can be one of <dependency|crate|native|framework|all> (default: all).",
+      "value": "[<KIND>=]<PATH>"
+    },
+    {
+      "option": "-O",
+      "description": "Equivalent to -C opt-level=3"
+    },
+    {
+      "option": "-W help",
+      "description": "Print 'lint' options and default settings",
+      "tags": [
+        "Additional help"
+      ]
+    },
+    {
+      "option": "-Z help",
+      "description": "Print unstable compiler options",
+      "tags": [
+        "Additional help"
+      ]
+    },
+    {
+      "option": "-g",
+      "description": "Equivalent to -C debuginfo=2"
+    },
+    {
+      "option": "-l",
+      "description": "Link the generated crate(s) to the specified native library NAME. The optional KIND can be one of <static|framework|dylib> (default: dylib). Optional comma separated MODIFIERS <bundle|verbatim|whole-archive|as-needed> may be specified each with a prefix of either '+' to enable or '-' to disable.",
+      "value": "[<KIND>[:<MODIFIERS>]=]<NAME>[:<RENAME>]"
+    },
+    {
+      "option": "-o",
+      "description": "Write output to FILENAME",
+      "value": "<FILENAME>"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "minio",
+  "version": "RELEASE.2025-09-07T16-13-09Z",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--address",
+          "shortcut": null,
+          "description": "bind to a specific ADDRESS:PORT, ADDRESS can be an IP or hostname (default: \":9000\")",
+          "value": "value",
+          "default": ":9000"
+        },
+        {
+          "option": "--anonymous",
+          "shortcut": null,
+          "description": "hide sensitive information from logging",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--certs-dir",
+          "shortcut": "-S",
+          "description": "path to certs directory (default: \"/root/.minio/certs\")",
+          "value": "value",
+          "default": "/root/.minio/certs"
+        },
+        {
+          "option": "--config",
+          "shortcut": null,
+          "description": "specify server configuration via YAML configuration [$MINIO_CONFIG]",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--console-address",
+          "shortcut": null,
+          "description": "bind to a specific ADDRESS:PORT for embedded Console UI, ADDRESS can be an IP or hostname",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--ftp",
+          "shortcut": null,
+          "description": "enable and configure an FTP(Secure) server",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--json",
+          "shortcut": null,
+          "description": "output logs in JSON format",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--quiet",
+          "shortcut": null,
+          "description": "disable startup and info messages",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--sftp",
+          "shortcut": null,
+          "description": "enable and configure an SFTP server",
+          "value": "value",
+          "default": null
+        }
+      ],
+      "name": "minio server",
+      "raw_help_text": "NAME:\n  minio server - start object storage server\n\nUSAGE:\n  minio server [FLAGS] DIR1 [DIR2..]\n  minio server [FLAGS] DIR{1...64}\n  minio server [FLAGS] DIR{1...64} DIR{65...128}\n\nDIR:\n  DIR points to a directory on a filesystem. When you want to combine\n  multiple drives into a single large system, pass one directory per\n  filesystem separated by space. You may also use a '...' convention\n  to abbreviate the directory arguments. Remote directories in a\n  distributed setup are encoded as HTTP(s) URIs.\n\nFLAGS:\n  --config value               specify server configuration via YAML configuration [$MINIO_CONFIG]\n  --address value              bind to a specific ADDRESS:PORT, ADDRESS can be an IP or hostname (default: \":9000\") [$MINIO_ADDRESS]\n  --console-address value      bind to a specific ADDRESS:PORT for embedded Console UI, ADDRESS can be an IP or hostname [$MINIO_CONSOLE_ADDRESS]\n  --ftp value                  enable and configure an FTP(Secure) server\n  --sftp value                 enable and configure an SFTP server\n  --certs-dir value, -S value  path to certs directory (default: \"/root/.minio/certs\")\n  --quiet                      disable startup and info messages\n  --anonymous                  hide sensitive information from logging\n  --json                       output logs in JSON format\n  --help, -h                   show help\n  \nEXAMPLES:\n  1. Start MinIO server on \"/home/shared\" directory.\n     $ minio server /home/shared\n\n  2. Start single node server with 64 local drives \"/mnt/data1\" to \"/mnt/data64\".\n     $ minio server /mnt/data{1...64}\n\n  3. Start distributed MinIO server on an 32 node setup with 32 drives each, run following command on all the nodes\n     $ minio server http://node{1...32}.example.com/mnt/export{1...32}\n\n  4. Start distributed MinIO server in an expanded setup, run the following command on all the nodes\n     $ minio server http://node{1...16}.example.com/mnt/export{1...32} \\\n            http://node{17...64}.example.com/mnt/export{1...64}\n\n  5. Start distributed MinIO server, with FTP and SFTP servers on all interfaces via port 8021, 8022 respectively\n     $ minio server http://node{1...4}.example.com/mnt/export{1...4} \\\n           --ftp=\"address=:8021\" --ftp=\"passive-port-range=30000-40000\" \\\n           --sftp=\"address=:8022\" --sftp=\"ssh-private-key=${HOME}/.ssh/id_rsa\"",
+      "description": "start object storage server"
+    }
+  ],
+  "options": [
+    {
+      "option": "--certs-dir",
+      "shortcut": "-S",
+      "description": "path to certs directory",
+      "value": "value",
+      "default": "/root/.minio/certs"
+    },
+    {
+      "option": "--quiet",
+      "shortcut": null,
+      "description": "disable startup and info messages",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--anonymous",
+      "shortcut": null,
+      "description": "hide sensitive information from logging",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--json",
+      "shortcut": null,
+      "description": "output logs in JSON format",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "NAME:\n  minio - High Performance Object Storage\n\nDESCRIPTION:\n  Build high performance data infrastructure for machine learning, analytics and application data workloads with MinIO\n\nUSAGE:\n  minio [FLAGS] COMMAND [ARGS...]\n\nCOMMANDS:\n  server  start object storage server\n  \nFLAGS:\n  --certs-dir value, -S value  path to certs directory (default: \"/root/.minio/certs\")\n  --quiet                      disable startup and info messages\n  --anonymous                  hide sensitive information from logging\n  --json                       output logs in JSON format\n  --help, -h                   show help\n  --version, -v                print the version\n  \nVERSION:\n  RELEASE.2025-09-07T16-13-09Z"
+}

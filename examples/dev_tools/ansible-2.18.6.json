@@ -1,0 +1,190 @@
+{
+  "name": "ansible",
+  "version": "2.18.6",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--become-password-file",
+      "shortcut": "--become-pass-file",
+      "description": "Become password file",
+      "value": "BECOME_PASSWORD_FILE",
+      "default": null
+    },
+    {
+      "option": "--connection-password-file",
+      "shortcut": "--conn-pass-file",
+      "description": "Connection password file",
+      "value": "CONNECTION_PASSWORD_FILE",
+      "default": null
+    },
+    {
+      "option": "--list-hosts",
+      "shortcut": null,
+      "description": "outputs a list of matching hosts; does not execute anything else",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--playbook-dir",
+      "shortcut": null,
+      "description": "Since this tool does not use playbooks, use this as a substitute playbook directory. This sets the relative path for many features including roles/ group_vars/ etc.",
+      "value": "BASEDIR",
+      "default": null
+    },
+    {
+      "option": "--task-timeout",
+      "shortcut": null,
+      "description": "set task timeout limit in seconds, must be positive integer.",
+      "value": "TASK_TIMEOUT",
+      "default": null
+    },
+    {
+      "option": "--vault-id",
+      "shortcut": null,
+      "description": "the vault identity to use. This argument may be specified multiple times.",
+      "value": "VAULT_IDS",
+      "default": null
+    },
+    {
+      "option": "--vault-password-file",
+      "shortcut": "--vault-pass-file",
+      "description": "vault password file",
+      "value": "VAULT_PASSWORD_FILES",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "show program's version number, config file location, configured module search path, module location, executable location and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-B",
+      "shortcut": "--background",
+      "description": "run asynchronously, failing after X seconds",
+      "value": "SECONDS",
+      "default": "N/A"
+    },
+    {
+      "option": "-C",
+      "shortcut": null,
+      "description": "don't make any changes; instead, try to predict some of the changes that may occur",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-D",
+      "shortcut": null,
+      "description": "when changing (small) files and templates, show the differences in those files; works great with --check",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-J",
+      "shortcut": "--ask-vault-password",
+      "description": "ask for vault password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-K",
+      "shortcut": "--ask-become-pass",
+      "description": "ask for privilege escalation password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-M",
+      "shortcut": "--module-path",
+      "description": "prepend colon-separated path(s) to module library",
+      "value": "MODULE_PATH",
+      "default": "{{ ANSIBLE_HOME ~ \"/plugins/modules:/usr/share/ansible/plugins/modules\" }}"
+    },
+    {
+      "option": "-P",
+      "shortcut": "--poll",
+      "description": "set the poll interval if using -B",
+      "value": "POLL_INTERVAL",
+      "default": "15"
+    },
+    {
+      "option": "-a",
+      "shortcut": "--args",
+      "description": "The action's options in space separated k=v format: -a 'opt1=val1 opt2=val2' or a json string: -a '{\"opt1\": \"val1\", \"opt2\": \"val2\"}'",
+      "value": "MODULE_ARGS",
+      "default": null
+    },
+    {
+      "option": "-e",
+      "shortcut": "--extra-vars",
+      "description": "set additional variables as key=value or YAML/JSON, if filename prepend with @. This argument may be specified multiple times.",
+      "value": "EXTRA_VARS",
+      "default": null
+    },
+    {
+      "option": "-f",
+      "shortcut": "--forks",
+      "description": "specify number of parallel processes to use",
+      "value": "FORKS",
+      "default": "5"
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "show this help message and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-i",
+      "shortcut": "--inventory",
+      "description": "specify inventory host path or comma separated host list. --inventory-file is deprecated. This argument may be specified multiple times.",
+      "value": "INVENTORY",
+      "default": null
+    },
+    {
+      "option": "-k",
+      "shortcut": "--ask-pass",
+      "description": "ask for connection password",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-l",
+      "shortcut": "--limit",
+      "description": "further limit selected hosts to an additional pattern",
+      "value": "SUBSET",
+      "default": null
+    },
+    {
+      "option": "-m",
+      "shortcut": "--module-name",
+      "description": "Name of the action to execute",
+      "value": "MODULE_NAME",
+      "default": "command"
+    },
+    {
+      "option": "-o",
+      "shortcut": "--one-line",
+      "description": "condense output",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-t",
+      "shortcut": "--tree",
+      "description": "log output to this directory",
+      "value": "TREE",
+      "default": null
+    },
+    {
+      "option": "-v",
+      "shortcut": "--verbose",
+      "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]\n               [--become-user BECOME_USER]\n               [-K | --become-password-file BECOME_PASSWORD_FILE]\n               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL]\n               [-B SECONDS] [-o] [-t TREE] [--private-key PRIVATE_KEY_FILE]\n               [-u REMOTE_USER] [-c CONNECTION] [-T TIMEOUT]\n               [--ssh-common-args SSH_COMMON_ARGS]\n               [--sftp-extra-args SFTP_EXTRA_ARGS]\n               [--scp-extra-args SCP_EXTRA_ARGS]\n               [--ssh-extra-args SSH_EXTRA_ARGS]\n               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C]\n               [-D] [-e EXTRA_VARS] [--vault-id VAULT_IDS]\n               [-J | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]\n               [-M MODULE_PATH] [--playbook-dir BASEDIR]\n               [--task-timeout TASK_TIMEOUT] [-a MODULE_ARGS] [-m MODULE_NAME]\n               pattern\n\nDefine and run a single task 'playbook' against a set of hosts\n\npositional arguments:\n  pattern               host pattern\n\noptions:\n  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE\n                        Become password file\n  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE\n                        Connection password file\n  --list-hosts          outputs a list of matching hosts; does not execute\n                        anything else\n  --playbook-dir BASEDIR\n                        Since this tool does not use playbooks, use this as a\n                        substitute playbook directory. This sets the relative\n                        path for many features including roles/ group_vars/\n                        etc.\n  --task-timeout TASK_TIMEOUT\n                        set task timeout limit in seconds, must be positive\n                        integer.\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  --version             show program's version number, config file location,\n                        configured module search path, module location,\n                        executable location and exit\n  -B SECONDS, --background SECONDS\n                        run asynchronously, failing after X seconds\n                        (default=N/A)\n  -C, --check           don't make any changes; instead, try to predict some\n                        of the changes that may occur\n  -D, --diff            when changing (small) files and templates, show the\n                        differences in those files; works great with --check\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  -K, --ask-become-pass\n                        ask for privilege escalation password\n  -M MODULE_PATH, --module-path MODULE_PATH\n                        prepend colon-separated path(s) to module library\n                        (default={{ ANSIBLE_HOME ~\n                        \"/plugins/modules:/usr/share/ansible/plugins/modules\"\n                        }}). This argument may be specified multiple times.\n  -P POLL_INTERVAL, --poll POLL_INTERVAL\n                        set the poll interval if using -B (default=15)\n  -a MODULE_ARGS, --args MODULE_ARGS\n                        The action's options in space separated k=v format: -a\n                        'opt1=val1 opt2=val2' or a json string: -a '{\"opt1\":\n                        \"val1\", \"opt2\": \"val2\"}'\n  -e EXTRA_VARS, --extra-vars EXTRA_VARS\n                        set additional variables as key=value or YAML/JSON, if\n                        filename prepend with @. This argument may be\n                        specified multiple times.\n  -f FORKS, --forks FORKS\n                        specify number of parallel processes to use\n                        (default=5)\n  -h, --help            show this help message and exit\n  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY\n                        specify inventory host path or comma separated host\n                        list. --inventory-file is deprecated. This argument\n                        may be specified multiple times.\n  -k, --ask-pass        ask for connection password\n  -l SUBSET, --limit SUBSET\n                        further limit selected hosts to an additional pattern\n  -m MODULE_NAME, --module-name MODULE_NAME\n                        Name of the action to execute (default=command)\n  -o, --one-line        condense output\n  -t TREE, --tree TREE  log output to this directory\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n\nPrivilege Escalation Options:\n  control how and which user you become as on target hosts\n\n  --become-method BECOME_METHOD\n                        privilege escalation method to use (default=sudo), use\n                        `ansible-doc -t become -l` to list valid choices.\n  --become-user BECOME_USER\n                        run operations as this user (default=root)\n  -b, --become          run operations with become (does not imply password\n                        prompting)\n\nConnection Options:\n  control as whom and how to connect to hosts\n\n  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE\n                        use this file to authenticate the connection\n  --scp-extra-args SCP_EXTRA_ARGS\n                        specify extra arguments to pass to scp only (e.g. -l)\n  --sftp-extra-args SFTP_EXTRA_ARGS\n                        specify extra arguments to pass to sftp only (e.g. -f,\n                        -l)\n  --ssh-common-args SSH_COMMON_ARGS\n                        specify common arguments to pass to sftp/scp/ssh (e.g.\n                        ProxyCommand)\n  --ssh-extra-args SSH_EXTRA_ARGS\n                        specify extra arguments to pass to ssh only (e.g. -R)\n  -T TIMEOUT, --timeout TIMEOUT\n                        override the connection timeout in seconds (default\n                        depends on connection)\n  -c CONNECTION, --connection CONNECTION\n                        connection type to use (default=ssh)\n  -u REMOTE_USER, --user REMOTE_USER\n                        connect as this user (default=None)\n\nSome actions do not make sense in Ad-Hoc (include, meta, etc)"
+}

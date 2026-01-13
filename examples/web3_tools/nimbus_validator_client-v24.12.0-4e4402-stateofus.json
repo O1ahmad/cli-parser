@@ -1,0 +1,159 @@
+{
+  "name": "nimbus_validator_client",
+  "version": "v24.12.0-4e4402-stateofus",
+  "description": "Nimbus validator client v24.12.0-4e4402-stateofus",
+  "usage": "nimbus_validator_client [OPTIONS]...",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--beacon-node",
+      "description": "URL addresses to one or more beacon node HTTP REST APIs",
+      "tags": [
+        "$defaultBeaconNodeUri"
+      ]
+    },
+    {
+      "option": "--block-monitor-type",
+      "description": "Enable block monitoring which are seen by beacon node (BETA)",
+      "default": "BlockMonitoringType.Event"
+    },
+    {
+      "option": "--builder-boost-factor",
+      "description": "Percentage multiplier to apply to the builder's payload value when choosing between a builder payload header and payload from the paired execution node.",
+      "default": "100"
+    },
+    {
+      "option": "--config-file",
+      "description": "Loads the configuration from a TOML file."
+    },
+    {
+      "option": "--data-dir",
+      "shortcut": "-d",
+      "description": "The directory where nimbus will store all blockchain data."
+    },
+    {
+      "option": "--debug-stop-at-epoch",
+      "description": "A positive epoch selects the epoch at which to stop",
+      "default": "0"
+    },
+    {
+      "option": "--distributed",
+      "description": "Enable usage of Obol middleware (BETA)",
+      "default": "false"
+    },
+    {
+      "option": "--doppelganger-detection",
+      "description": "If enabled, the validator client prudently listens for 2 epochs for attestations from a validator with the same index (a doppelganger), before sending an attestation itself. This protects against slashing (due to double-voting) but means you will miss two attestations when restarting.",
+      "default": "true"
+    },
+    {
+      "option": "--graffiti",
+      "description": "The graffiti value that will appear in proposed blocks. You can use a 0x-prefixed hex encoded string to specify raw bytes."
+    },
+    {
+      "option": "--keymanager",
+      "description": "Enable the REST keymanager API",
+      "default": "false"
+    },
+    {
+      "option": "--keymanager-address",
+      "description": "Listening port for the REST keymanager API",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--keymanager-allow-origin",
+      "description": "Limit the access to the Keymanager API to a particular hostname (for CORS-enabled clients such as browsers)."
+    },
+    {
+      "option": "--keymanager-port",
+      "description": "Listening port for the REST keymanager API",
+      "default": "5052"
+    },
+    {
+      "option": "--keymanager-token-file",
+      "description": "A file specifying the authorizition token required for accessing the keymanager API."
+    },
+    {
+      "option": "--log-file",
+      "description": "Specifies a path for the written JSON log file (deprecated)."
+    },
+    {
+      "option": "--log-level",
+      "description": "Sets the log level",
+      "default": "INFO"
+    },
+    {
+      "option": "--metrics",
+      "description": "Enable the metrics server (BETA)",
+      "default": "false"
+    },
+    {
+      "option": "--metrics-address",
+      "description": "Listening address of the metrics server (BETA)",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--metrics-port",
+      "description": "Listening HTTP port of the metrics server (BETA)",
+      "default": "8108"
+    },
+    {
+      "option": "--non-interactive",
+      "description": "Do not display interactive prompts. Quit on missing configuration."
+    },
+    {
+      "option": "--payload-builder",
+      "description": "Enable usage of beacon node with external payload builder (BETA)",
+      "default": "false"
+    },
+    {
+      "option": "--proven-block-property",
+      "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\")."
+    },
+    {
+      "option": "--rest-max-body-size",
+      "description": "Maximum size of REST request body (kilobytes)",
+      "default": "16384"
+    },
+    {
+      "option": "--rest-max-headers-size",
+      "description": "Maximum size of REST request headers (kilobytes)",
+      "default": "64"
+    },
+    {
+      "option": "--rest-request-timeout",
+      "description": "The number of seconds to wait until complete REST request will be received",
+      "default": "infinite"
+    },
+    {
+      "option": "--secrets-dir",
+      "description": "A directory containing validator keystore passwords."
+    },
+    {
+      "option": "--suggested-fee-recipient",
+      "description": "Suggested fee recipient."
+    },
+    {
+      "option": "--suggested-gas-limit",
+      "description": "Suggested gas limit",
+      "default": "defaultGasLimit"
+    },
+    {
+      "option": "--validators-dir",
+      "description": "A directory containing validator keystores."
+    },
+    {
+      "option": "--verifying-web3-signer-url",
+      "description": "Remote Web3Signer URL that will be used as a source of validators."
+    },
+    {
+      "option": "--web3-signer-update-interval",
+      "description": "Number of seconds between validator list updates",
+      "default": "3600"
+    },
+    {
+      "option": "--web3-signer-url",
+      "description": "Remote Web3Signer URL that will be used as a source of validators."
+    }
+  ]
+}

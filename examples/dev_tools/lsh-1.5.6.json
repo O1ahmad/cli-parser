@@ -1,0 +1,6102 @@
+{
+  "name": "lsh",
+  "version": "1.5.6",
+  "description": "Command line interface for managing resources",
+  "usage": "lsh [command]",
+  "subcommands": [
+    {
+      "description": "Commands to manage API keys for authentication",
+      "name": "lsh api_keys",
+      "usage": "lsh api_keys [command]",
+      "subcommands": [
+        {
+          "name": "lsh api_keys create",
+          "description": "Create a new API Key that is tied to the current user account. The created API key is only listed ONCE upon creation. It can however be regenerated or deleted.",
+          "usage": "lsh api_keys create [flags]",
+          "subcommands": [
+            {
+              "description": "Create a new API Key that is tied to the current user account. The created API key is only listed once upon creation. It can however be regenerated or deleted.",
+              "name": "lsh api_keys create api_keys",
+              "usage": "lsh api_keys create [flags]",
+              "options": [
+                {
+                  "description": "For example: /",
+                  "option": "--base-path",
+                  "default": "/"
+                },
+                {
+                  "description": "config file path",
+                  "option": "--config"
+                },
+                {
+                  "description": "output debug logs",
+                  "option": "--debug"
+                },
+                {
+                  "description": "do not send the request to server",
+                  "option": "--dry-run"
+                },
+                {
+                  "description": "help for create",
+                  "option": "--help",
+                  "shortcut": "-h"
+                },
+                {
+                  "description": "hostname of the service",
+                  "option": "--hostname",
+                  "default": "api.latitude.sh"
+                },
+                {
+                  "description": "format output as JSON",
+                  "option": "--json"
+                },
+                {
+                  "description": "[Required] Name of the API Key",
+                  "option": "--name",
+                  "value": "string"
+                },
+                {
+                  "description": "skip interactive mode",
+                  "option": "--no-input"
+                },
+                {
+                  "description": "For example: json",
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "default": "table"
+                },
+                {
+                  "description": "Choose from: [https]",
+                  "option": "--scheme",
+                  "default": "https"
+                },
+                {
+                  "description": "",
+                  "option": "--Authorization"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for create"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--name",
+              "description": "[Required] Name of the API Key",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lsh api_keys destroy",
+          "description": "Delete an existing API Key. Once deleted, the API Key can no longer be used to access the API.",
+          "usage": "lsh api_keys destroy [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "-h",
+              "shortcut": "--help",
+              "description": "help for destroy"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "-o",
+              "shortcut": "--output",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh api_keys list",
+          "description": "Returns a list of all API keys from the team members.",
+          "usage": "lsh api_keys list [flags]",
+          "subcommands": [
+            {
+              "name": "lsh api_keys list api_keys",
+              "description": "Returns a list of all API keys from the team members.",
+              "usage": "lsh api_keys list [flags]",
+              "subcommands": [
+                {
+                  "description": "Returns a list of all API keys from the team members.",
+                  "name": "lsh api_keys list api_keys list",
+                  "usage": "lsh api_keys list [flags]",
+                  "subcommands": [],
+                  "options": [
+                    {
+                      "description": "help for list",
+                      "option": "--help",
+                      "shortcut": "-h"
+                    },
+                    {
+                      "description": "Authorization token",
+                      "option": "--Authorization",
+                      "value": "string"
+                    },
+                    {
+                      "default": "/",
+                      "description": "Base path for the API, for example: /",
+                      "option": "--base-path",
+                      "value": "string"
+                    },
+                    {
+                      "description": "Config file path",
+                      "option": "--config",
+                      "value": "string"
+                    },
+                    {
+                      "description": "Output debug logs",
+                      "option": "--debug",
+                      "tags": [
+                        "Global"
+                      ]
+                    },
+                    {
+                      "description": "Do not send the request to server",
+                      "option": "--dry-run",
+                      "tags": [
+                        "Global"
+                      ]
+                    },
+                    {
+                      "default": "api.latitude.sh",
+                      "description": "Hostname of the service",
+                      "option": "--hostname",
+                      "value": "string"
+                    },
+                    {
+                      "description": "Format output as JSON",
+                      "option": "--json",
+                      "tags": [
+                        "Global"
+                      ]
+                    },
+                    {
+                      "description": "Skip interactive mode",
+                      "option": "--no-input",
+                      "tags": [
+                        "Global"
+                      ]
+                    },
+                    {
+                      "default": "table",
+                      "description": "Output format, for example: json",
+                      "option": "--output",
+                      "shortcut": "-o",
+                      "value": "string"
+                    },
+                    {
+                      "default": "https",
+                      "description": "Scheme for the API, choose from: [https]",
+                      "option": "--scheme",
+                      "value": "string"
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization string"
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "default": "/"
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path"
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs"
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for list"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "default": "api.latitude.sh"
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode"
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "default": "table"
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "default": "https"
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for authentication",
+              "value": "string"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for list",
+              "tags": [
+                "flag"
+              ]
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "description": "Regenerate an existing API Key that is tied to the current user. This overrides the previous key.",
+          "name": "lsh api_keys update",
+          "usage": "lsh api_keys update [flags]",
+          "options": [
+            {
+              "description": "For example: /",
+              "option": "--base-path",
+              "value": "string",
+              "default": "\"/\""
+            },
+            {
+              "description": "config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "description": "help for update",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "hostname of the service",
+              "option": "--hostname",
+              "value": "string",
+              "default": "\"api.latitude.sh\""
+            },
+            {
+              "description": "[Required] ID",
+              "option": "--id",
+              "value": "string"
+            },
+            {
+              "description": "format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "description": "[Required] Name of the API Key",
+              "option": "--name",
+              "value": "string"
+            },
+            {
+              "description": "For example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string",
+              "default": "\"table\""
+            },
+            {
+              "description": "Choose from: [https]",
+              "option": "--scheme",
+              "value": "string",
+              "default": "\"https\""
+            },
+            {
+              "description": "Authorization token",
+              "option": "--Authorization",
+              "value": "string"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization token",
+          "value": "string"
+        },
+        {
+          "option": "--base-path",
+          "description": "Base path for the API requests",
+          "value": "string",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "description": "Config file path",
+          "value": "string"
+        },
+        {
+          "option": "--debug",
+          "description": "Output debug logs"
+        },
+        {
+          "option": "--dry-run",
+          "description": "Do not send the request to server"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Help for api_keys"
+        },
+        {
+          "option": "--hostname",
+          "description": "Hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "Format output as JSON"
+        },
+        {
+          "option": "--no-input",
+          "description": "Skip interactive mode"
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "Output format",
+          "value": "string",
+          "default": "table"
+        },
+        {
+          "option": "--scheme",
+          "description": "Scheme for API requests",
+          "value": "string",
+          "default": "https"
+        }
+      ]
+    },
+    {
+      "name": "lsh completion",
+      "description": "Command line tool for managing yourprogram with various shell completions.",
+      "usage": "lsh completion [bash|zsh|fish|powershell]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization token for the service.",
+          "value": "string"
+        },
+        {
+          "option": "--base-path",
+          "description": "Base path for the API.",
+          "value": "string",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "description": "Path to the configuration file.",
+          "value": "string"
+        },
+        {
+          "option": "--debug",
+          "description": "Enable output of debug logs."
+        },
+        {
+          "option": "--dry-run",
+          "description": "Do not send the request to the server."
+        },
+        {
+          "option": "--hostname",
+          "description": "Hostname of the service.",
+          "value": "string",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "Format the output as JSON."
+        },
+        {
+          "option": "--no-input",
+          "description": "Skip interactive mode."
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose the scheme for the service URL.",
+          "value": "string",
+          "default": "https"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Help for completion."
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "Specify the output format.",
+          "value": "string",
+          "default": "table"
+        }
+      ]
+    },
+    {
+      "description": "login will create a configuration file and save your API authentication token in it, allowing it to be used when interacting with the API. The configuration will be stored in your home directory and also copied to root's directory so sudo commands work seamlessly.",
+      "name": "lsh login",
+      "usage": "lsh login [api-token] [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "description": "help for login",
+          "option": "--help",
+          "shortcut": "-h"
+        },
+        {
+          "description": "Authorization",
+          "option": "--Authorization",
+          "value": "string"
+        },
+        {
+          "default": "/",
+          "description": "For example: /",
+          "option": "--base-path",
+          "value": "string"
+        },
+        {
+          "description": "config file path",
+          "option": "--config",
+          "value": "string"
+        },
+        {
+          "description": "output debug logs",
+          "option": "--debug"
+        },
+        {
+          "description": "do not send the request to server",
+          "option": "--dry-run"
+        },
+        {
+          "default": "api.latitude.sh",
+          "description": "hostname of the service",
+          "option": "--hostname",
+          "value": "string"
+        },
+        {
+          "description": "format output as JSON",
+          "option": "--json"
+        },
+        {
+          "description": "skip interactive mode",
+          "option": "--no-input"
+        },
+        {
+          "default": "table",
+          "description": "For example: json",
+          "option": "--output",
+          "shortcut": "-o",
+          "value": "string"
+        },
+        {
+          "default": "https",
+          "description": "Choose from: [https]",
+          "option": "--scheme",
+          "value": "string"
+        }
+      ]
+    },
+    {
+      "name": "lsh plans",
+      "description": "Commands to view available server plans and their specifications",
+      "usage": "lsh plans [command]",
+      "subcommands": [
+        {
+          "name": "lsh plans get",
+          "description": "Retrieve information of a plan",
+          "usage": "lsh plans get [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for get"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "Required.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "List available plans in grouped format",
+          "name": "lsh plans list",
+          "usage": "lsh plans list [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--disk_eql",
+              "description": "Filter plans with disk size in Gigabytes equals the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_gte",
+              "description": "Filter plans with disk size in Gigabytes greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_lte",
+              "description": "Filter plans with disk size in Gigabytes less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--gpu",
+              "description": "Filter by the existence of an associated GPU"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for list"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--in_stock",
+              "description": "The stock available at the site to filter by"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--location",
+              "description": "The location of the site to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--name",
+              "description": "The plan name to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--ram_eql",
+              "description": "Filter plans with RAM size (in GB) equals the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_gte",
+              "description": "Filter plans with RAM size (in GB) greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_lte",
+              "description": "Filter plans with RAM size (in GB) less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--slug",
+              "description": "The plan slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--stock_level",
+              "description": "Enum: [\"Unavailable\",\"Low\",\"Medium\",\"High\",\"Unique\"]. The stock level at the site to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--token",
+              "description": "API token (defaults to LATITUDESH_AUTH_TOKEN)",
+              "value": "string"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "List bandwidth package plans",
+          "name": "lsh plans list-bandwidth",
+          "options": [
+            {
+              "description": "help for list-bandwidth",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "The plan ID to filter by",
+              "option": "--id",
+              "value": "string"
+            },
+            {
+              "description": "Authorization",
+              "option": "--Authorization",
+              "value": "string"
+            },
+            {
+              "default": "/",
+              "description": "For example: /",
+              "option": "--base-path",
+              "value": "string"
+            },
+            {
+              "description": "config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "default": "api.latitude.sh",
+              "description": "hostname of the service",
+              "option": "--hostname",
+              "value": "string"
+            },
+            {
+              "description": "format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "default": "table",
+              "description": "For example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string"
+            },
+            {
+              "default": "https",
+              "description": "Choose from: [https]",
+              "option": "--scheme",
+              "value": "string"
+            }
+          ],
+          "subcommands": [],
+          "usage": "lsh plans list-bandwidth [flags]"
+        },
+        {
+          "name": "lsh plans stock",
+          "description": "Show detailed plan availability by location with optional filters",
+          "usage": "lsh plans stock [flags]",
+          "options": [
+            {
+              "option": "--available",
+              "description": "Only include locations marked as available"
+            },
+            {
+              "option": "--disk_eql",
+              "description": "Filter plans with disk size in Gigabytes equals the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_gte",
+              "description": "Filter plans with disk size in Gigabytes greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_lte",
+              "description": "Filter plans with disk size in Gigabytes less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--format",
+              "description": "Output format: table|csv|json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--gpu",
+              "description": "Filter by the existence of an associated GPU"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for stock"
+            },
+            {
+              "option": "--in_stock",
+              "description": "The stock available at the site to filter by"
+            },
+            {
+              "option": "--location",
+              "description": "The location of the site to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--name",
+              "description": "The plan name to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--ram_eql",
+              "description": "Filter plans with RAM size (in GB) equals the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_gte",
+              "description": "Filter plans with RAM size (in GB) greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_lte",
+              "description": "Filter plans with RAM size (in GB) less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--region",
+              "description": "Filter by region name (e.g. 'Japan')",
+              "value": "string"
+            },
+            {
+              "option": "--site",
+              "description": "The location of the site to filter by (alias for --location)",
+              "value": "string"
+            },
+            {
+              "option": "--slug",
+              "description": "The plan slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--stock_level",
+              "description": "Enum: [\"Unavailable\",\"Low\",\"Medium\",\"High\",\"Unique\"]. The stock level at the site to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--token",
+              "description": "API token",
+              "value": "string",
+              "default": "LATITUDESH_AUTH_TOKEN"
+            },
+            {
+              "option": "--Authorization",
+              "description": "",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "",
+          "value": "string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--base-path",
+          "description": "For example: /",
+          "value": "string",
+          "default": "/",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--config",
+          "description": "config file path",
+          "value": "string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for plans"
+        },
+        {
+          "option": "--hostname",
+          "description": "hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "value": "string",
+          "default": "https",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "For example: json",
+          "value": "string",
+          "default": "table",
+          "tags": [
+            "global"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lsh projects",
+      "description": "Commands to create, list, update and delete projects",
+      "usage": "lsh projects [command]",
+      "subcommands": [
+        {
+          "name": "lsh projects create",
+          "description": "Create a project",
+          "usage": "lsh projects create [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--description",
+              "description": "The project description",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--environment",
+              "description": "Enum: [\"Development\",\"Staging\",\"Production\"]",
+              "value": "string"
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "help for create"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--name",
+              "description": "[Required] The project name. Must be unique.",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--provisioning_type",
+              "description": "[Required] Enum: [\"reserved\",\"on_demand\"]. The provisioning type of the project.",
+              "value": "string",
+              "default": "on_demand"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Deletes a project from the current team.",
+          "name": "lsh projects destroy",
+          "usage": "lsh projects destroy [flags]",
+          "options": [
+            {
+              "description": "help for destroy",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "[Required] The project ID or Slug",
+              "option": "--id_or_slug",
+              "value": "string"
+            },
+            {
+              "description": "Authorization string",
+              "option": "--Authorization",
+              "value": "string"
+            },
+            {
+              "default": "/",
+              "description": "For example: /",
+              "option": "--base-path",
+              "value": "string"
+            },
+            {
+              "description": "config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "default": "api.latitude.sh",
+              "description": "hostname of the service",
+              "option": "--hostname",
+              "value": "string"
+            },
+            {
+              "description": "format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "default": "table",
+              "description": "For example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string"
+            },
+            {
+              "default": "https",
+              "description": "Choose from: [https]",
+              "option": "--scheme",
+              "value": "string"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh projects get",
+          "description": "CLI tool for interacting with projects in the current team.",
+          "usage": "lsh projects get [flags]",
+          "subcommands": [
+            {
+              "name": "lsh projects get projects",
+              "description": "Returns a project from the current team.",
+              "usage": "lsh projects get [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization string"
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "value": "string",
+                  "default": "/"
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "value": "string"
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs"
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server"
+                },
+                {
+                  "option": "--extra_fields[projects]",
+                  "description": "The last_renewal_date and `next_renewal_date` are provided as extra attributes that show previous and future billing cycle dates. To request it, just set `extra_fields[projects]=last_renewal_date,next_renewal_date` in the query string."
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh"
+                },
+                {
+                  "option": "--id_or_slug",
+                  "description": "Required. The project ID or Slug",
+                  "value": "string"
+                },
+                {
+                  "shortcut": "-h",
+                  "option": "--help",
+                  "description": "help for get"
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode"
+                },
+                {
+                  "shortcut": "-o",
+                  "option": "--output",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table"
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https"
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for the API."
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API.",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path.",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs."
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server."
+            },
+            {
+              "option": "--extra_fields[projects]",
+              "description": "The last_renewal_date and next_renewal_date are provided as extra attributes that show previous and future billing cycle dates. To request it, just set extra_fields[projects]=last_renewal_date,next_renewal_date in the query string.",
+              "value": "last_renewal_date"
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "Help for get."
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service.",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id_or_slug",
+              "description": "Required. The project ID or Slug.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON."
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode."
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "Output format.",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https].",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "name": "lsh projects list",
+          "description": "Returns a list of all projects for the current team.",
+          "usage": "lsh projects list [flags]",
+          "subcommands": [
+            {
+              "name": "lsh projects list projects",
+              "description": "Returns a list of all projects for the current team.",
+              "usage": "lsh projects list [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization credentials for access",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "default": "/",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--billing_type",
+                  "description": "The billing type to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--description",
+                  "description": "The project description to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--environment",
+                  "description": "The environment to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--extra_fields[projects]",
+                  "description": "The last_renewal_date and `next_renewal_date` are provided as extra attributes that show previous and future billing cycle dates. To request it, just set `extra_fields[projects]=last_renewal_date,next_renewal_date` in the query string.",
+                  "value": "last_renewal_date"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--name",
+                  "description": "The project name to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "Global"
+                  ]
+                },
+                {
+                  "option": "--slug",
+                  "description": "The project slug to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--tags",
+                  "description": "The Tags to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for list"
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for the request."
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API.",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--billing_type",
+              "description": "The billing type to filter by.",
+              "value": "string"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path.",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs."
+            },
+            {
+              "option": "--description",
+              "description": "The project description to filter by.",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server."
+            },
+            {
+              "option": "--environment",
+              "description": "The environment to filter by.",
+              "value": "string"
+            },
+            {
+              "option": "--extra_fields[projects] last_renewal_date",
+              "description": "The last_renewal_date and next_renewal_date are provided as extra attributes that show previous and future billing cycle dates."
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "Help for list."
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service.",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON."
+            },
+            {
+              "option": "--name",
+              "description": "The project name to filter by.",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode."
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "Format output.",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose the scheme.",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--slug",
+              "description": "The project slug to filter by.",
+              "value": "string"
+            },
+            {
+              "option": "--tags",
+              "description": "The Tags to filter by.",
+              "value": "string"
+            }
+          ]
+        },
+        {
+          "name": "lsh projects update",
+          "description": "Update a project",
+          "usage": "lsh projects update [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token"
+            },
+            {
+              "option": "--bandwidth_alert",
+              "description": "Enable Bandwidth Alert"
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--description",
+              "description": "The project description",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--environment",
+              "description": "The project environment",
+              "value": "string",
+              "tags": [
+                "Development",
+                "Staging",
+                "Production"
+              ]
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "help for update"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id_or_slug",
+              "description": "[Required] The project ID or Slug",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--name",
+              "description": "The project name. Must be unique.",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "Format output",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose scheme",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "https"
+              ]
+            },
+            {
+              "option": "--tags",
+              "description": "Tags",
+              "value": "strings"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--base-path",
+          "description": "For example: /",
+          "value": "string",
+          "default": "/",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--config",
+          "description": "config file path",
+          "value": "string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for projects"
+        },
+        {
+          "option": "--hostname",
+          "description": "hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "For example: json",
+          "value": "string",
+          "default": "table",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "value": "string",
+          "default": "https",
+          "tags": [
+            "global"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lsh servers",
+      "description": "Commands to create, list, update and delete servers",
+      "usage": "lsh servers [command]",
+      "subcommands": [
+        {
+          "name": "lsh servers create",
+          "description": "Deploy a bare metal server",
+          "usage": "lsh servers create [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for API requests. For example: /",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--billing",
+              "description": "The server billing type. Accepts 'hourly', 'monthly' or 'yearly'.",
+              "value": "string"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for create"
+            },
+            {
+              "option": "--hostname",
+              "description": "[Required] The server hostname",
+              "value": "string"
+            },
+            {
+              "option": "--ipxe_url",
+              "description": "URL where iPXE script is stored on, necessary for custom image deployments. This attribute is required when iPXE is selected as operating system.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--operating_system",
+              "description": "[Required] Enum: [\"ipxe\",\"windows_server_2019_std_v1\",\"ubuntu_22_04_x64_lts\",\"debian_11\",\"rockylinux_8\",\"debian_10\",\"rhel8\",\"centos_7_4_x64\",\"centos_8_x64\",\"ubuntu_20_04_x64_lts\",\"debian_12\",\"ubuntu22_ml_in_a_box\",\"windows2022\"]. The operating system for the new server",
+              "value": "string"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format. For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--plan",
+              "description": "[Required] Enum: [\"c2-large-x86\",\"c2-medium-x86\",\"c2-small-x86\",\"c3-large-x86\",\"c3-medium-x86\",\"c3-small-x86\",\"c3-xlarge-x86\",\"g3-large-x86\",\"g3-medium-x86\",\"g3-small-x86\",\"g3-xlarge-x86\",\"m3-large-x86\",\"s2-small-x86\",\"s3-large-x86\"]. The plan to choose server from",
+              "value": "string"
+            },
+            {
+              "option": "--project",
+              "description": "[Required] The project (ID or Slug) to deploy the server",
+              "value": "string"
+            },
+            {
+              "option": "--raid",
+              "description": "RAID mode for the server. Enum: [\"raid-0\",\"raid-1\"]",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose scheme for requests. Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--site",
+              "description": "[Required] Enum: [\"ASH\",\"BGT\",\"BUE\",\"CHI\",\"DAL\",\"FRA\",\"LAX\",\"LON\",\"MEX\",\"MEX2\",\"MIA\",\"MIA2\",\"NYC\",\"SAN\",\"SAN2\",\"SAO\",\"SAO2\",\"SYD\",\"TYO\",\"TYO2\"]. The site to deploy the server",
+              "value": "string"
+            },
+            {
+              "option": "--ssh_keys",
+              "description": "The SSH Keys to set on the server",
+              "value": "strings"
+            },
+            {
+              "option": "--user_data",
+              "description": "User data to set on the server",
+              "value": "int"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh servers destroy",
+          "description": "Delete a server",
+          "usage": "lsh servers destroy [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for destroy"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] Server ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh servers get",
+          "description": "Get information on a server",
+          "usage": "lsh servers get [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--extra_fields[servers]",
+              "description": "The credentials are provided as extra attributes that is lazy loaded. To request it, just set `extra_fields[servers]=credentials` in the query string."
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "help for get"
+            },
+            {
+              "option": "--id",
+              "description": "Required. The Server ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Returns a list of all servers belonging to the team.",
+          "name": "lsh servers list",
+          "usage": "lsh servers list [flags]",
+          "subcommands": [
+            {
+              "name": "lsh servers list servers",
+              "description": "Returns a list of all servers belonging to the team.",
+              "usage": "lsh servers list [flags]",
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--created_at_gte",
+                  "description": "The created at greater than equal date to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--created_at_lte",
+                  "description": "The created at less than equal date to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--disk_eql",
+                  "description": "Filter servers with disk size in Gigabytes equal to the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--disk_gte",
+                  "description": "Filter servers with disk size in Gigabytes greater than or equal to the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--disk_lte",
+                  "description": "Filter servers with disk size in Gigabytes less than or equal to the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--extra_fields[servers]",
+                  "description": "The credentials are provided as extra attributes that is lazy loaded. To request it, just set `extra_fields[servers]=credentials` in the query string.",
+                  "value": "credentials"
+                },
+                {
+                  "option": "--gpu",
+                  "description": "Filter by the existence of an associated GPU"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for list"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "The hostname of server to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--label",
+                  "description": "The label of server to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--operating_system",
+                  "description": "The operating system name or slug of the server to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--plan",
+                  "description": "The platform/plan name of the server to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--project",
+                  "description": "The project ID or Slug to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--ram_eql",
+                  "description": "Filter servers with RAM size (in GB) equals the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--ram_gte",
+                  "description": "Filter servers with RAM size (in GB) greater than or equal to the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--ram_lte",
+                  "description": "Filter servers with RAM size (in GB) less than or equal to the provided value.",
+                  "value": "int"
+                },
+                {
+                  "option": "--region",
+                  "description": "The region Slug to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--status",
+                  "description": "The status of server to filter by",
+                  "value": "string"
+                },
+                {
+                  "option": "--tags",
+                  "description": "The Tags to filter by",
+                  "value": "string"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for the API"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--created_at_gte",
+              "description": "The created at greater than equal date to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--created_at_lte",
+              "description": "The created at less than equal date to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--disk_eql",
+              "description": "Filter servers with disk size in Gigabytes equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_gte",
+              "description": "Filter servers with disk size in Gigabytes greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--disk_lte",
+              "description": "Filter servers with disk size in Gigabytes less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--extra_fields[servers]",
+              "description": "The credentials are provided as extra attributes that is lazy loaded. To request it, just set `extra_fields[servers]=credentials` in the query string.",
+              "tags": [
+                "credentials"
+              ]
+            },
+            {
+              "option": "--gpu",
+              "description": "Filter by the existence of an associated GPU"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for list"
+            },
+            {
+              "option": "--hostname",
+              "description": "The hostname of server to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--label",
+              "description": "The label of server to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "option": "--operating_system",
+              "description": "The operating system name or slug of the server to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--plan",
+              "description": "The platform/plan name of the server to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--project",
+              "description": "The project ID or Slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--ram_eql",
+              "description": "Filter servers with RAM size (in GB) equals the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_gte",
+              "description": "Filter servers with RAM size (in GB) greater than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--ram_lte",
+              "description": "Filter servers with RAM size (in GB) less than or equal the provided value.",
+              "value": "int"
+            },
+            {
+              "option": "--region",
+              "description": "The region Slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--status",
+              "description": "The status of server to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--tags",
+              "description": "The Tags to filter by",
+              "value": "string"
+            }
+          ]
+        },
+        {
+          "name": "lsh servers reinstall",
+          "description": "Submit a reinstall request to a server.",
+          "usage": "lsh servers reinstall [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Global flag for authorization"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server"
+            },
+            {
+              "option": "--hostname",
+              "description": "The server hostname",
+              "value": "string"
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The Server Id (Required).",
+              "value": "string"
+            },
+            {
+              "option": "--ipxe_url",
+              "description": "URL where iPXE script is stored on, necessary for custom image deployments. This attribute is required when iPXE is selected as operating system.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON"
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "Help for reinstall"
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "For example: json",
+              "default": "table",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode"
+            },
+            {
+              "option": "--operating_system",
+              "description": "Enum: [\"ipxe\",\"windows_server_2019_std_v1\",\"ubuntu_22_04_x64_lts\",\"debian_11\",\"rockylinux_8\",\"debian_10\",\"rhel8\",\"centos_7_4_x64\",\"centos_8_x64\",\"ubuntu_20_04_x64_lts\",\"debian_12\",\"ubuntu22_ml_in_a_box\",\"windows2022\"]. The operating system for the new server",
+              "value": "string"
+            },
+            {
+              "option": "--raid",
+              "description": "Enum: [\"raid-0\",\"raid-1\"]. RAID mode for the server",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "default": "https",
+              "value": "string"
+            },
+            {
+              "option": "--ssh_keys",
+              "description": "The SSH Keys to set on the server",
+              "value": "strings"
+            },
+            {
+              "option": "--user_data",
+              "description": "User data to set on the server",
+              "value": "int"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh servers schedule-deletion",
+          "description": "Schedules the server to be removed at the end of the billing cycle.",
+          "usage": "lsh servers schedule-deletion [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for schedule-deletion"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] Server ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lsh servers unschedule-deletion",
+          "description": "Unschedules the server removal at the end of the billing cycle.",
+          "usage": "lsh servers unschedule-deletion [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "",
+              "value": "string"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id",
+              "description": "[Required] Server ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for unschedule-deletion"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh servers update",
+          "description": "Update server information.",
+          "usage": "lsh servers update [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--billing",
+              "description": "Billing",
+              "value": "string"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for update"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname",
+              "value": "string"
+            },
+            {
+              "option": "--id",
+              "description": "[Required] Server ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--tags",
+              "description": "Tags",
+              "value": "strings"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "",
+          "value": "string"
+        },
+        {
+          "option": "--base-path",
+          "description": "For example: /",
+          "value": "string",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "description": "config file path",
+          "value": "string"
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs"
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for servers"
+        },
+        {
+          "option": "--hostname",
+          "description": "hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON"
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode"
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "For example: json",
+          "value": "string",
+          "default": "table"
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "value": "string",
+          "default": "https"
+        }
+      ]
+    },
+    {
+      "description": "Commands to manage SSH keys for server access",
+      "name": "lsh ssh_keys",
+      "usage": "lsh ssh_keys [command]",
+      "subcommands": [
+        {
+          "description": "Allow you create SSH Keys in a project. These keys can be used to access servers after deploy and reinstall actions.",
+          "name": "lsh ssh_keys create",
+          "usage": "lsh ssh_keys create [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for accessing the API.",
+              "value": "string"
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API. For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path.",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs."
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server."
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for create."
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service.",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON."
+            },
+            {
+              "option": "--name",
+              "description": "[Required] Name of the SSH Key.",
+              "value": "string",
+              "tags": [
+                "required"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode."
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format. For example: json.",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--project",
+              "description": "[Required] Project ID or Slug.",
+              "value": "string",
+              "tags": [
+                "required"
+              ]
+            },
+            {
+              "option": "--public_key",
+              "description": "[Required] SSH Public Key.",
+              "value": "string",
+              "tags": [
+                "required"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https].",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "name": "lsh ssh_keys destroy",
+          "description": "Allow you remove SSH Keys in a project. Remove a SSH Key from the project won't revoke the SSH Keys access for previously deploy and reinstall actions.",
+          "usage": "lsh ssh_keys destroy [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for destroy"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] ID from the SSH Key you want to update",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--project",
+              "description": "[Required] Project ID or Slug",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "Returns a SSH Key in the project. These keys can be used to access servers after deploy and reinstall actions.",
+          "name": "lsh ssh_keys get",
+          "usage": "lsh ssh_keys get [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "description": "help for get",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "Required.",
+              "option": "--id",
+              "value": "string"
+            },
+            {
+              "default": "/",
+              "description": "For example: /",
+              "option": "--base-path",
+              "value": "string"
+            },
+            {
+              "description": "config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "default": "api.latitude.sh",
+              "description": "hostname of the service",
+              "option": "--hostname",
+              "value": "string"
+            },
+            {
+              "description": "format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "default": "table",
+              "description": "For example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string"
+            },
+            {
+              "default": "https",
+              "description": "Choose from: [https]",
+              "option": "--scheme",
+              "value": "string"
+            },
+            {
+              "description": "Project Id or Slug (Required).",
+              "option": "--project",
+              "value": "string"
+            },
+            {
+              "description": "Authorization token",
+              "option": "--Authorization",
+              "value": "string"
+            }
+          ]
+        },
+        {
+          "description": "List all SSH Keys in the project. These keys can be used to access servers after deploy and reinstall actions.",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API requests",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for list"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--project",
+              "description": "Project Id or Slug (Required)",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--tags",
+              "description": "The Tags to filter by",
+              "value": "string"
+            }
+          ],
+          "name": "lsh ssh_keys list"
+        },
+        {
+          "name": "lsh ssh_keys update",
+          "description": "Allow you update SSH Key in a project. These keys can be used to access servers after deploy and reinstall actions.",
+          "usage": "lsh ssh_keys update [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for update"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] ID from the SSH Key you want to update",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--name",
+              "description": "[Required] Name of the SSH Key",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--project",
+              "description": "[Required] Project ID or Slug",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "Global"
+              ]
+            },
+            {
+              "option": "--tags",
+              "description": "Tags",
+              "value": "strings"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "value": "string",
+          "description": ""
+        },
+        {
+          "option": "--base-path",
+          "value": "string",
+          "description": "For example: /",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "value": "string",
+          "description": "config file path"
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs"
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for ssh_keys"
+        },
+        {
+          "option": "--hostname",
+          "value": "string",
+          "description": "hostname of the service",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON"
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode"
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "value": "string",
+          "description": "For example: json",
+          "default": "table"
+        },
+        {
+          "option": "--scheme",
+          "value": "string",
+          "description": "Choose from: [https]",
+          "default": "https"
+        }
+      ]
+    },
+    {
+      "name": "lsh tags",
+      "description": "Manage tags in the system",
+      "usage": "lsh tags [command]",
+      "subcommands": [
+        {
+          "name": "lsh tags create",
+          "description": "Create a Tag in the team.",
+          "usage": "lsh tags create [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token"
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for requests",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--color",
+              "description": "Color of the Tag (hex code)",
+              "value": "string"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs"
+            },
+            {
+              "option": "--description",
+              "description": "Description of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON"
+            },
+            {
+              "option": "--name",
+              "description": "Name of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for create"
+            }
+          ]
+        },
+        {
+          "name": "lsh tags destroy",
+          "description": "Delete a Tag in the team.",
+          "usage": "lsh tags destroy [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The Tag ID",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for destroy"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "description": "List all Tags in the team.",
+          "name": "lsh tags list",
+          "usage": "lsh tags list [flags]",
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API. For example: /",
+              "default": "/",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for list"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "default": "api.latitude.sh",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format. For example: json",
+              "default": "table",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Scheme to use. Choose from: [https]",
+              "default": "https",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh tags update",
+          "description": "Update a Tag in the team.",
+          "usage": "lsh tags update [flags]",
+          "subcommands": [
+            {
+              "name": "lsh tags update tags",
+              "description": "Update a Tag in the team.",
+              "usage": "lsh tags update [flags]",
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "Base path for the API",
+                  "value": "string",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--color",
+                  "description": "Color of the Tag",
+                  "value": "string"
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "value": "string",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--description",
+                  "description": "Description of the Tag",
+                  "value": "string"
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--id",
+                  "description": "[Required] ID of the Tag",
+                  "value": "string"
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--name",
+                  "description": "Name of the Tag",
+                  "value": "string"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--slug",
+                  "description": "Slug of the Tag",
+                  "value": "string"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for update"
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for requests, for example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--color",
+              "description": "Color of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--description",
+              "description": "Description of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for update"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] ID of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--name",
+              "description": "Name of the Tag",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format, for example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose scheme from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--slug",
+              "description": "Slug of the Tag",
+              "value": "string"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization token",
+          "value": "string"
+        },
+        {
+          "option": "--base-path",
+          "description": "For example: /",
+          "value": "string",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "description": "config file path",
+          "value": "string"
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs"
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for tags"
+        },
+        {
+          "option": "--hostname",
+          "description": "hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON"
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode"
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "For example: json",
+          "value": "string",
+          "default": "table"
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "value": "string",
+          "default": "https"
+        }
+      ]
+    },
+    {
+      "name": "lsh update",
+      "description": "update will verify if a new version is out and update the cli to it.",
+      "usage": "lsh update [flags]",
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--base-path",
+          "description": "For example: /",
+          "default": "/",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--config",
+          "description": "config file path",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--debug",
+          "description": "output debug logs",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--dry-run",
+          "description": "do not send the request to server",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "help for update"
+        },
+        {
+          "option": "--hostname",
+          "description": "hostname of the service",
+          "default": "api.latitude.sh",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--json",
+          "description": "format output as JSON",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--no-input",
+          "description": "skip interactive mode",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "For example: json",
+          "default": "table",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "default": "https",
+          "tags": [
+            "global"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lsh virtual_networks",
+      "description": "Commands to create, list, update and manage virtual networks",
+      "usage": "lsh virtual_networks [command]",
+      "subcommands": [
+        {
+          "name": "lsh virtual_networks assignments",
+          "description": "Virtual Network Assignments.",
+          "usage": "lsh virtual_networks assignments [command]",
+          "subcommands": [
+            {
+              "name": "lsh virtual_networks assignments create",
+              "description": "Assign a server to a virtual network",
+              "usage": "lsh virtual_networks assignments create [flags]",
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "value": "string",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "value": "string",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for create"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--server_id",
+                  "description": "[Required] Server ID",
+                  "value": "string"
+                },
+                {
+                  "option": "--virtual_network_id",
+                  "description": "[Required] Virtual Network ID",
+                  "value": "string"
+                }
+              ],
+              "subcommands": []
+            },
+            {
+              "description": "Unassign a server from a virtual network",
+              "name": "lsh virtual_networks assignments destroy",
+              "usage": "lsh virtual_networks assignments destroy [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "value": "string",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "value": "string",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "help for destroy"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--id",
+                  "description": "[Required] Virtual Network Assignment ID.",
+                  "value": "string"
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                }
+              ]
+            },
+            {
+              "description": "Returns a list of all servers assigned to virtual networks.",
+              "name": "lsh virtual_networks assignments list",
+              "usage": "lsh virtual_networks assignments list [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "description": "For example: /",
+                  "option": "--base-path",
+                  "default": "/"
+                },
+                {
+                  "description": "config file path",
+                  "option": "--config"
+                },
+                {
+                  "description": "output debug logs",
+                  "option": "--debug"
+                },
+                {
+                  "description": "do not send the request to server",
+                  "option": "--dry-run"
+                },
+                {
+                  "description": "help for list",
+                  "option": "--help",
+                  "shortcut": "-h"
+                },
+                {
+                  "description": "hostname of the service",
+                  "option": "--hostname",
+                  "default": "api.latitude.sh"
+                },
+                {
+                  "description": "format output as JSON",
+                  "option": "--json"
+                },
+                {
+                  "description": "skip interactive mode",
+                  "option": "--no-input"
+                },
+                {
+                  "description": "For example: json",
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "default": "table"
+                },
+                {
+                  "description": "Choose from: [https]",
+                  "option": "--scheme",
+                  "default": "https"
+                },
+                {
+                  "description": "The server ID to filter by",
+                  "option": "--server",
+                  "value": "string"
+                },
+                {
+                  "description": "The vlan ID to filter by",
+                  "option": "--vid",
+                  "value": "string"
+                },
+                {
+                  "description": "The virtual network ID to filter by",
+                  "option": "--virtual_network_id",
+                  "value": "string"
+                },
+                {
+                  "description": "Authorization token",
+                  "option": "--Authorization",
+                  "value": "string"
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "",
+              "value": "string"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for assignments"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            }
+          ]
+        },
+        {
+          "name": "lsh virtual_networks create",
+          "description": "Creates a virtual network",
+          "usage": "lsh virtual_networks create [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--description",
+              "description": "[Required] Description",
+              "value": "string"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for create"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--project",
+              "description": "[Required] Project ID or Slug",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--site",
+              "description": "Site ID or slug",
+              "value": "string"
+            }
+          ]
+        },
+        {
+          "name": "lsh virtual_networks destroy",
+          "description": "Delete a virtual network",
+          "usage": "lsh virtual_networks destroy [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token"
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for destroy"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The virtual network ID",
+              "value": "string",
+              "tags": [
+                "Required"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "name": "lsh virtual_networks get",
+          "description": "Retrieve a virtual network",
+          "usage": "lsh virtual_networks get [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization string"
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for example: /",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs"
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for get"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id",
+              "description": "Required.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode"
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format for example: json",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "name": "lsh virtual_networks list",
+          "description": "List virtual networks",
+          "usage": "lsh virtual_networks list [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for list"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--location",
+              "description": "The location slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "default": "table",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--project",
+              "description": "The project id or slug to filter by",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--tags",
+              "description": "The Tags to filter by",
+              "value": "string"
+            }
+          ]
+        },
+        {
+          "description": "Update a virtual network",
+          "name": "lsh virtual_networks update",
+          "usage": "lsh virtual_networks update [flags]",
+          "options": [
+            {
+              "description": "[Required] Description",
+              "option": "--description",
+              "value": "string"
+            },
+            {
+              "description": "help for update",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "[Required] Virtual Network ID",
+              "option": "--id",
+              "value": "string"
+            },
+            {
+              "description": "Tags",
+              "option": "--tags",
+              "value": "strings"
+            },
+            {
+              "description": "Authorization",
+              "option": "--Authorization",
+              "value": "string"
+            },
+            {
+              "default": "/",
+              "description": "For example: /",
+              "option": "--base-path",
+              "value": "string"
+            },
+            {
+              "description": "config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "default": "api.latitude.sh",
+              "description": "hostname of the service",
+              "option": "--hostname",
+              "value": "string"
+            },
+            {
+              "description": "format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "default": "table",
+              "description": "For example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string"
+            },
+            {
+              "default": "https",
+              "description": "Choose from: [https]",
+              "option": "--scheme",
+              "value": "string"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization token",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--base-path",
+          "description": "Base path for the service",
+          "value": "string",
+          "default": "\"/\"",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--config",
+          "description": "Config file path",
+          "value": "string",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--debug",
+          "description": "Output debug logs",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--dry-run",
+          "description": "Do not send the request to server",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Help for virtual_networks"
+        },
+        {
+          "option": "--hostname",
+          "description": "Hostname of the service",
+          "value": "string",
+          "default": "\"api.latitude.sh\"",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--json",
+          "description": "Format output as JSON",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--no-input",
+          "description": "Skip interactive mode",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "Output format",
+          "value": "string",
+          "default": "\"table\"",
+          "tags": [
+            "global"
+          ]
+        },
+        {
+          "option": "--scheme",
+          "description": "Choose from: [https]",
+          "value": "string",
+          "default": "\"https\"",
+          "tags": [
+            "global"
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Commands to manage volume operations such as listing, mounting, creating, and deleting volumes",
+      "name": "lsh volume",
+      "usage": "lsh volume [command]",
+      "subcommands": [
+        {
+          "name": "lsh volume create",
+          "description": "Create a new volume storage with specified size and location",
+          "usage": "lsh volume create [flags]",
+          "subcommands": [
+            {
+              "name": "lsh volume create volume",
+              "description": "Create a new volume storage with specified size and location",
+              "usage": "lsh volume create [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "For example: /",
+                  "value": "string",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--config",
+                  "description": "config file path",
+                  "value": "string",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--description",
+                  "description": "Optional description for the volume storage",
+                  "value": "string"
+                },
+                {
+                  "shortcut": "-h",
+                  "option": "--help",
+                  "description": "help for create"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--json",
+                  "description": "format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--location",
+                  "description": "[Required] The location/site for the volume storage",
+                  "value": "string"
+                },
+                {
+                  "option": "--no-input",
+                  "description": "skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "shortcut": "-o",
+                  "option": "--output",
+                  "description": "For example: json",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--plan",
+                  "description": "[Required] The storage plan to use",
+                  "value": "string"
+                },
+                {
+                  "option": "--project",
+                  "description": "[Required] The project to create the volume storage in",
+                  "value": "string"
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the API",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--description",
+              "description": "Optional description for the volume storage",
+              "value": "string"
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "Help for create"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--location",
+              "description": "[Required] The location/site for the volume storage",
+              "value": "string"
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "Output format",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--plan",
+              "description": "[Required] The storage plan to use",
+              "value": "string"
+            },
+            {
+              "option": "--project",
+              "description": "[Required] The project to create the volume storage in",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lsh volume delete",
+          "description": "Delete a volume storage by ID. Warning: This action cannot be undone!",
+          "usage": "lsh volume delete [flags]",
+          "subcommands": [
+            {
+              "name": "lsh volume delete volume",
+              "description": "Delete a volume storage by ID. Warning: This action cannot be undone!",
+              "usage": "lsh volume delete [flags]",
+              "subcommands": [],
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token for the command",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--base-path",
+                  "description": "Base path for the API requests",
+                  "value": "string",
+                  "default": "/",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--config",
+                  "description": "Config file path",
+                  "value": "string",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--debug",
+                  "description": "Output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "Do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "Help for delete"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "Hostname of the service",
+                  "value": "string",
+                  "default": "api.latitude.sh",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--id",
+                  "description": "[Required] The ID of the volume storage to delete",
+                  "value": "string"
+                },
+                {
+                  "option": "--json",
+                  "description": "Format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--no-input",
+                  "description": "Skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "Output format (e.g., json)",
+                  "value": "string",
+                  "default": "table",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose the scheme (e.g., https)",
+                  "value": "string",
+                  "default": "https",
+                  "tags": [
+                    "global"
+                  ]
+                }
+              ]
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for the request."
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the request.",
+              "value": "string",
+              "default": "/"
+            },
+            {
+              "option": "--config",
+              "description": "Config file path.",
+              "value": "string"
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs."
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server."
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Help for delete."
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service.",
+              "value": "string",
+              "default": "api.latitude.sh"
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The ID of the volume storage to delete.",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON."
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode."
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "Output format.",
+              "value": "string",
+              "default": "table"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https].",
+              "value": "string",
+              "default": "https"
+            }
+          ]
+        },
+        {
+          "name": "lsh volume get",
+          "description": "Get detailed information about a specific volume storage including connector details needed for mounting",
+          "usage": "lsh volume get [flags]",
+          "subcommands": [
+            {
+              "name": "lsh volume get volume",
+              "description": "Get detailed information about a specific volume storage including connector details needed for mounting",
+              "usage": "lsh volume get [flags]",
+              "options": [
+                {
+                  "option": "--Authorization",
+                  "description": "Authorization token",
+                  "value": "<string>"
+                },
+                {
+                  "option": "--base-path",
+                  "description": "Base path for requests. For example: /",
+                  "value": "<string>",
+                  "default": "/"
+                },
+                {
+                  "option": "--config",
+                  "description": "Config file path",
+                  "value": "<string>"
+                },
+                {
+                  "option": "--debug",
+                  "description": "Output debug logs",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--dry-run",
+                  "description": "Do not send the request to server",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "Help for get"
+                },
+                {
+                  "option": "--hostname",
+                  "description": "Hostname of the service",
+                  "value": "<string>",
+                  "default": "api.latitude.sh"
+                },
+                {
+                  "option": "--id",
+                  "description": "[Required] The ID of the volume storage to retrieve",
+                  "value": "<string>"
+                },
+                {
+                  "option": "--json",
+                  "description": "Format output as JSON",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--no-input",
+                  "description": "Skip interactive mode",
+                  "tags": [
+                    "global"
+                  ]
+                },
+                {
+                  "option": "--output",
+                  "shortcut": "-o",
+                  "description": "Format of the output. For example: json",
+                  "value": "<string>",
+                  "default": "table"
+                },
+                {
+                  "option": "--scheme",
+                  "description": "Choose from: [https]",
+                  "value": "<string>",
+                  "default": "https"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "For example: /",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "help for get"
+            },
+            {
+              "option": "--hostname",
+              "description": "hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The ID of the volume storage to retrieve",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--output",
+              "shortcut": "-o",
+              "description": "For example: json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose from: [https]",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "List all volume storages for your team, optionally filtered by project",
+          "name": "lsh volume list",
+          "usage": "lsh volume list [flags]",
+          "options": [
+            {
+              "description": "help for list",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "Filter volume storages by project ID or slug",
+              "option": "--project",
+              "value": "string"
+            },
+            {
+              "description": "Authorization token",
+              "option": "--Authorization",
+              "value": "string"
+            },
+            {
+              "default": "/",
+              "description": "Base path, for example: /",
+              "option": "--base-path",
+              "value": "string"
+            },
+            {
+              "description": "Config file path",
+              "option": "--config",
+              "value": "string"
+            },
+            {
+              "description": "Output debug logs",
+              "option": "--debug"
+            },
+            {
+              "description": "Do not send the request to server",
+              "option": "--dry-run"
+            },
+            {
+              "default": "api.latitude.sh",
+              "description": "Hostname of the service",
+              "option": "--hostname",
+              "value": "string"
+            },
+            {
+              "description": "Format output as JSON",
+              "option": "--json"
+            },
+            {
+              "description": "Skip interactive mode",
+              "option": "--no-input"
+            },
+            {
+              "default": "table",
+              "description": "Output format, for example: json",
+              "option": "--output",
+              "shortcut": "-o",
+              "value": "string"
+            },
+            {
+              "default": "https",
+              "description": "Scheme, choose from: [https]",
+              "option": "--scheme",
+              "value": "string"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "lsh volume mount",
+          "description": "Mount a volume storage to a server. This command will: 1. Auto-fetch volume storage details (including connector_id) 2. Auto-detect the server's NQN from /etc/nvme/hostnqn (or generate a new one if the file doesn't exist) 3. Send the client NQN to the API to authorize access 4. Execute all NVMe-oF connection steps automatically",
+          "usage": "lsh volume mount [flags]",
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--Authorization",
+              "description": "Authorization token for the server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--base-path",
+              "description": "Base path for the service",
+              "value": "string",
+              "default": "/",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--config",
+              "description": "Config file path",
+              "value": "string",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--debug",
+              "description": "Output debug logs",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--dry-run",
+              "description": "Do not send the request to server",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--gateway-ip",
+              "description": "Override the gateway IP address",
+              "value": "string",
+              "default": "67.213.118.147"
+            },
+            {
+              "option": "--gateway-port",
+              "description": "Override the gateway port",
+              "value": "string",
+              "default": "4420"
+            },
+            {
+              "shortcut": "-h",
+              "option": "--help",
+              "description": "Help for mount"
+            },
+            {
+              "option": "--hostname",
+              "description": "Hostname of the service",
+              "value": "string",
+              "default": "api.latitude.sh",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--id",
+              "description": "[Required] The ID of the volume storage to mount",
+              "value": "string"
+            },
+            {
+              "option": "--json",
+              "description": "Format output as JSON",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--no-input",
+              "description": "Skip interactive mode",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "shortcut": "-o",
+              "option": "--output",
+              "description": "Format output, e.g., json",
+              "value": "string",
+              "default": "table",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--nqn",
+              "description": "NVMe Qualified Name of the server",
+              "value": "string"
+            },
+            {
+              "option": "--scheme",
+              "description": "Choose scheme, e.g., https",
+              "value": "string",
+              "default": "https",
+              "tags": [
+                "global"
+              ]
+            },
+            {
+              "option": "--subsystem-nqn",
+              "description": "Override the subsystem NQN",
+              "value": "string"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "option": "--Authorization",
+          "description": "Authorization token",
+          "value": "string"
+        },
+        {
+          "option": "--base-path",
+          "description": "Base path for the operation",
+          "value": "string",
+          "default": "/"
+        },
+        {
+          "option": "--config",
+          "description": "Config file path",
+          "value": "string"
+        },
+        {
+          "option": "--debug",
+          "description": "Output debug logs",
+          "tags": [
+            "boolean"
+          ]
+        },
+        {
+          "option": "--dry-run",
+          "description": "Do not send the request to server",
+          "tags": [
+            "boolean"
+          ]
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Help for volume"
+        },
+        {
+          "option": "--hostname",
+          "description": "Hostname of the service",
+          "value": "string",
+          "default": "api.latitude.sh"
+        },
+        {
+          "option": "--json",
+          "description": "Format output as JSON",
+          "tags": [
+            "boolean"
+          ]
+        },
+        {
+          "option": "--no-input",
+          "description": "Skip interactive mode",
+          "tags": [
+            "boolean"
+          ]
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "Output format",
+          "value": "string",
+          "default": "table"
+        },
+        {
+          "option": "--scheme",
+          "description": "Scheme for the operation",
+          "value": "string",
+          "default": "https"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "option": "--Authorization",
+      "description": "Authorization token",
+      "value": "string"
+    },
+    {
+      "option": "--base-path",
+      "description": "For example: /",
+      "value": "string",
+      "default": "/"
+    },
+    {
+      "option": "--config",
+      "description": "config file path",
+      "value": "string"
+    },
+    {
+      "option": "--debug",
+      "description": "output debug logs",
+      "tags": [
+        "flag"
+      ]
+    },
+    {
+      "option": "--dry-run",
+      "description": "do not send the request to server",
+      "tags": [
+        "flag"
+      ]
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "help for lsh",
+      "tags": [
+        "flag"
+      ]
+    },
+    {
+      "option": "--hostname",
+      "description": "hostname of the service",
+      "value": "string",
+      "default": "api.latitude.sh"
+    },
+    {
+      "option": "--json",
+      "description": "format output as JSON",
+      "tags": [
+        "flag"
+      ]
+    },
+    {
+      "option": "--no-input",
+      "description": "skip interactive mode",
+      "tags": [
+        "flag"
+      ]
+    },
+    {
+      "option": "--output",
+      "shortcut": "-o",
+      "description": "For example: json",
+      "value": "string",
+      "default": "table"
+    },
+    {
+      "option": "--scheme",
+      "description": "Choose from: [https]",
+      "value": "string",
+      "default": "https"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "version for lsh",
+      "tags": [
+        "flag"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "name": "packer",
+  "version": "1.14.3",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--color",
+          "shortcut": "-color",
+          "description": "Disable color output.",
+          "value": "false",
+          "default": "color"
+        },
+        {
+          "option": "--debug",
+          "shortcut": "-debug",
+          "description": "Debug mode enabled for builds."
+        },
+        {
+          "option": "--except",
+          "shortcut": "-except",
+          "description": "Run all builds and post-processors other than these.",
+          "value": "foo,bar,baz"
+        },
+        {
+          "option": "--only",
+          "shortcut": "-only",
+          "description": "Build only the specified builds.",
+          "value": "foo,bar,baz"
+        },
+        {
+          "option": "--force",
+          "shortcut": "-force",
+          "description": "Force a build to continue if artifacts exist, deletes existing artifacts."
+        },
+        {
+          "option": "--machine-readable",
+          "shortcut": "-machine-readable",
+          "description": "Produce machine-readable output."
+        },
+        {
+          "option": "--on-error",
+          "shortcut": "-on-error",
+          "description": "If the build fails do: clean up, abort, ask, or run-cleanup-provisioner.",
+          "value": "[cleanup|abort|ask|run-cleanup-provisioner]",
+          "default": "cleanup"
+        },
+        {
+          "option": "--parallel-builds",
+          "shortcut": "-parallel-builds",
+          "description": "Number of builds to run in parallel. 1 disables parallelization. 0 means no limit.",
+          "value": "1",
+          "default": "0"
+        },
+        {
+          "option": "--timestamp-ui",
+          "shortcut": "-timestamp-ui",
+          "description": "Enable prefixing of each ui output with an RFC3339 timestamp."
+        },
+        {
+          "option": "--var",
+          "shortcut": "-var",
+          "description": "Variable for templates, can be used multiple times.",
+          "value": "'key=value'"
+        },
+        {
+          "option": "--var-file",
+          "shortcut": "-var-file",
+          "description": "JSON or HCL2 file containing user variables, can be used multiple times.",
+          "value": "path"
+        },
+        {
+          "option": "--warn-on-undeclared-var",
+          "shortcut": "-warn-on-undeclared-var",
+          "description": "Display warnings for user variable files containing undeclared variables."
+        },
+        {
+          "option": "--ignore-prerelease-plugins",
+          "shortcut": "-ignore-prerelease-plugins",
+          "description": "Disable the loading of prerelease plugin binaries (x.y.z-dev)."
+        },
+        {
+          "option": "--use-sequential-evaluation",
+          "shortcut": "-use-sequential-evaluation",
+          "description": "Fallback to using a sequential approach for local/datasource evaluation."
+        }
+      ],
+      "name": "packer build",
+      "raw_help_text": "Usage: packer build [options] TEMPLATE\n\n  Will execute multiple builds in parallel as defined in the template.\n  The various artifacts created by the template will be outputted.\n\nOptions:\n\n  -color=false                  Disable color output. (Default: color)\n  -debug                        Debug mode enabled for builds.\n  -except=foo,bar,baz           Run all builds and post-processors other than these.\n  -only=foo,bar,baz             Build only the specified builds.\n  -force                        Force a build to continue if artifacts exist, deletes existing artifacts.\n  -machine-readable             Produce machine-readable output.\n  -on-error=[cleanup|abort|ask|run-cleanup-provisioner] If the build fails do: clean up (default), abort, ask, or run-cleanup-provisioner.\n  -parallel-builds=1            Number of builds to run in parallel. 1 disables parallelization. 0 means no limit (Default: 0)\n  -timestamp-ui                 Enable prefixing of each ui output with an RFC3339 timestamp.\n  -var 'key=value'              Variable for templates, can be used multiple times.\n  -var-file=path                JSON or HCL2 file containing user variables, can be used multiple times.\n  -warn-on-undeclared-var       Display warnings for user variable files containing undeclared variables.\n  -ignore-prerelease-plugins    Disable the loading of prerelease plugin binaries (x.y.z-dev).\n  -use-sequential-evaluation    Fallback to using a sequential approach for local/datasource evaluation.",
+      "description": "build image(s) from template"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-var",
+          "shortcut": null,
+          "description": "Variable for templates, can be used multiple times.",
+          "value": "key=value",
+          "default": null
+        },
+        {
+          "option": "-var-file",
+          "shortcut": null,
+          "description": "JSON or HCL2 file containing user variables.",
+          "value": "path",
+          "default": null
+        },
+        {
+          "option": "-config-type",
+          "shortcut": null,
+          "description": "Set to 'hcl2' to run in HCL2 mode when no file is passed. Defaults to json.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-use-sequential-evaluation",
+          "shortcut": null,
+          "description": "Fallback to using a sequential approach for local/datasource evaluation.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "packer console",
+      "raw_help_text": "Usage: packer console [options] [TEMPLATE]\n\n  Creates a console for testing variable interpolation.\n  If a template is provided, this command will load the template and any\n  variables defined therein into its context to be referenced during\n  interpolation.\n\nOptions:\n  -var 'key=value'              Variable for templates, can be used multiple times.\n  -var-file=path                JSON or HCL2 file containing user variables.\n  -config-type                  Set to 'hcl2' to run in HCL2 mode when no file is passed. Defaults to json.\n  -use-sequential-evaluation    Fallback to using a sequential approach for local/datasource evaluation.",
+      "description": "creates a console for testing variable interpolation"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--validate",
+          "shortcut": "-v",
+          "description": "If true (default), validates the fixed template.",
+          "value": "true",
+          "default": "true"
+        }
+      ],
+      "name": "packer fix",
+      "raw_help_text": "Usage: packer fix [options] TEMPLATE\n\n  Reads the JSON template and attempts to fix known backwards\n  incompatibilities. The fixed template will be outputted to standard out.\n\n  If the template cannot be fixed due to an error, the command will exit\n  with a non-zero exit status. Error messages will appear on standard error.\n\nFixes that are run (in order):\n\n  iso-md5                    Replaces \"iso_md5\" in builders with \"iso_checksum\"\n  createtime                 Replaces \".CreateTime\" in builder configs with \"{{timestamp}}\"\n  virtualbox-gaattach        Updates VirtualBox builders using \"guest_additions_attach\" to use \"guest_additions_mode\"\n  pp-vagrant-override        Fixes provider-specific overrides for Vagrant post-processor\n  virtualbox-rename          Updates \"virtualbox\" builders to \"virtualbox-iso\"\n  vmware-rename              Updates \"vmware\" builders to \"vmware-iso\"\n  parallels-headless         Removes unused \"headless\" from Parallels builders\n  parallels-deprecations     Removes deprecated \"parallels_tools_host_path\" from Parallels builders and changes \"guest_os_distribution\" to \"guest_os_type\".\n  sshkeypath                 Updates builders using \"ssh_key_path\" to use \"ssh_private_key_file\"\n  sshdisableagent            Updates builders using \"ssh_disable_agent\" to use \"ssh_disable_agent_forwarding\"\n  scaleway-access-key        Updates builders using \"access_key\" to use \"organization_id\"\n  manifest-filename          Updates \"manifest\" post-processor so any \"filename\" field is renamed to \"output\".\n  amazon-shutdown_behavior   Changes \"shutdown_behaviour\" to \"shutdown_behavior\" in Amazon builders.\n  amazon-enhanced-networking Replaces \"enhanced_networking\" in builders with \"ena_support\"\n  amazon-private-ip          Replaces `\"ssh_private_ip\": true` in amazon builders with `\"ssh_interface\": \"private_ip\"`\n  amazon-temp-sec-cidrs      Replaces \"temporary_security_group_source_cidr\" (string) with \"temporary_security_group_source_cidrs\" (list of strings)\n  docker-email               Removes \"login_email\" from the Docker builder.\n  docker-tag-tags            Updates \"docker\" post-processor so any \"tag\" field is renamed to \"tags\".\n  powershell-escapes         Removes PowerShell escapes from user env vars and elevated username and password strings\n  vmware-compaction          Adds \"skip_compaction = true\" to \"vmware-iso\" builders with incompatible disk_type_id\n  hyperv-deprecations        Removes the deprecated \"vhd_temp_path\" setting from Hyper-V ISO builder templates\n  hyperv-vmxc-typo           Fixes a typo replacing \"clone_from_vmxc_path\" with \"clone_from_vmcx_path\" in Hyper-V VMCX builder templates\n  hyperv-cpu-and-ram         Replaces \"cpu\" with \"cpus\" and \"ram_size\" with \"memory\"in Hyper-V VMCX builder templates\n  clean-image-name           Replaces /clean_(image|ami)_name/ in builder configs with \"clean_resource_name\"\n  spot-price-auto-product    Removes the deprecated \"spot_price_auto_product\" setting from Amazon builder templates\n  qemu-disk-size             Updates \"disk_size\" from int to string in QEMU builders.\n  galaxy-command             Replaces \"galaxycommand\" in ansible-local provisioner configs with \"galaxy_command\"\n  comm-config                Remove ssh prefixes from communicator port forwarding configuration (host_port_min, host_port_max, skip_nat_mapping)\n  ssh-wait-timeout           Replaces \"ssh_wait_timeout\" with \"ssh_timeout\"\n  vsphere-iso-net-disk       Removes deprecated network and disk fields from \"vsphere-iso\" builder\n  iso-checksum-type-and-url  Puts content of potential \"iso_checksum_url\" and \"iso_checksum_url\" in \"iso_checksum\"\n  qemu-host-port             Updates ssh_host_port_min and ssh_host_port_max to host_port_min and host_port_max\n  azure-exclude_from_latest  Changes \"exlude_from_latest\" to \"exclude_from_latest\" in Azure builders.\n  proxmox-type               Updates the builder type proxmox to proxmox-iso\n\nOptions:\n\n  -validate=true      If true (default), validates the fixed template.",
+      "description": "fixes templates from old versions of packer"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-check",
+          "shortcut": null,
+          "description": "Check if the input is formatted. Exit status will be 0 if all input is properly formatted and non-zero otherwise.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-diff",
+          "shortcut": null,
+          "description": "Display diffs of formatting change",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-write=false",
+          "shortcut": null,
+          "description": "Don't write to source files (always disabled if using -check)",
+          "value": "false",
+          "default": null
+        },
+        {
+          "option": "-recursive",
+          "shortcut": null,
+          "description": "Also process files in subdirectories. By default, only the given directory (or current directory) is processed.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "packer fmt",
+      "raw_help_text": "Usage: packer fmt [options] [TEMPLATE]\n\n  Rewrites all Packer configuration files to a canonical format. Both\n  configuration files (.pkr.hcl) and variable files (.pkrvars.hcl) are updated.\n  JSON files (.json) are not modified.\n\n  If TEMPLATE is \".\" the current directory will be used.\n  If TEMPLATE is \"-\" then content will be read from STDIN.\n\n  The given content must be in Packer's HCL2 configuration language; JSON is\n  not supported.\n\nOptions:\n  -check        Check if the input is formatted. Exit status will be 0 if all\n                 input is properly formatted and non-zero otherwise.\n\n  -diff         Display diffs of formatting change\n\n  -write=false  Don't write to source files\n                (always disabled if using -check)\n\n  -recursive     Also process files in subdirectories. By default, only the\n                 given directory (or current directory) is processed.",
+      "description": "Rewrites HCL2 config files to canonical format"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--output-file=path",
+          "shortcut": "-output-file",
+          "description": "Set output file name. By default this will be the TEMPLATE name with '.pkr.hcl' appended to it.",
+          "value": "path",
+          "default": "TEMPLATE name with '.pkr.hcl' suffix"
+        },
+        {
+          "option": "--with-annotations",
+          "shortcut": "-with-annotations",
+          "description": "Add helper annotation comments to the file to help new HCL2 users understand the template format.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "packer hcl2_upgrade",
+      "raw_help_text": "Usage: packer hcl2_upgrade [options] TEMPLATE\n\n  Will transform your JSON template into an HCL2 configuration.\n\nOptions:\n\n  -output-file=path    Set output file name. By default this will be the\n                       TEMPLATE name with \".pkr.hcl\" appended to it. To be a\n                       valid Packer HCL template, it must have the suffix\n                       \".pkr.hcl\"\n  -with-annotations    Add helper annotation comments to the file to help new\n                       HCL2 users understand the template format.",
+      "description": "transform a JSON template into an HCL2 configuration"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-upgrade",
+          "shortcut": null,
+          "description": "On top of installing missing plugins, update installed plugins to the latest available version, if there is a new higher one. Note that this still takes into consideration the version constraint of the config.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-force",
+          "shortcut": null,
+          "description": "Forces reinstallation of plugins, even if already installed.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "packer init",
+      "raw_help_text": "Usage: packer init [options] TEMPLATE\n\n  Install all the missing plugins required in a Packer config. Note that Packer\n  does not have a state.\n\n  This is the first command that should be executed when working with a new\n  or existing template.\n\n  This command is always safe to run multiple times. Though subsequent runs may\n  give errors, this command will never delete anything.\n\nOptions:\n  -upgrade                     On top of installing missing plugins, update\n                               installed plugins to the latest available\n                               version, if there is a new higher one. Note that\n                               this still takes into consideration the version\n                               constraint of the config.\n  -force                       Forces reinstallation of plugins, even if already\n                               installed.",
+      "description": "Install missing plugins or upgrade plugins"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-machine-readable",
+          "shortcut": null,
+          "description": "Machine-readable output",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-use-sequential-evaluation",
+          "shortcut": null,
+          "description": "Fallback to using a sequential approach for local/datasource evaluation.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "packer inspect",
+      "raw_help_text": "Usage: packer inspect TEMPLATE\n\n  Inspects a template, parsing and outputting the components a template\n  defines. This does not validate the contents of a template (other than\n  basic syntax by necessity).\n\nOptions:\n\n  -machine-readable             Machine-readable output\n  -use-sequential-evaluation    Fallback to using a sequential approach for local/datasource evaluation.",
+      "description": "see components of a template"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--path",
+              "shortcut": "-path",
+              "description": "Install the plugin from a locally-sourced plugin binary.",
+              "value": "<path>",
+              "default": null
+            },
+            {
+              "option": "--force",
+              "shortcut": "-force",
+              "description": "Forces reinstallation of plugins, even if already installed.",
+              "value": null,
+              "default": null
+            }
+          ],
+          "name": "packer plugins install",
+          "raw_help_text": "Usage: packer plugins install [OPTIONS...] <plugin> [<version constraint>]\n\n  This command will install the most recent compatible Packer plugin matching\n  version constraint.\n  When the version constraint is omitted, the most recent version will be\n  installed.\n\n  Ex: packer plugins install github.com/hashicorp/happycloud v1.2.3\n      packer plugins install --path ./packer-plugin-happycloud \"github.com/hashicorp/happycloud\"\n\nOptions:\n  -path <path>                  Install the plugin from a locally-sourced plugin binary.\n                                This installs the plugin where a normal invocation would, but will\n                                not try to download it from a remote location, and instead\n                                install the binary in the Packer plugins path. This option cannot\n                                be specified with a version constraint.\n  -force                        Forces reinstallation of plugins, even if already installed.",
+          "description": "Install latest Packer plugin [matching version constraint]"
+        },
+        {
+          "subcommands": [],
+          "options": [],
+          "name": "packer plugins installed",
+          "raw_help_text": "Usage: packer plugins installed\n\n  This command lists all installed plugin binaries that match with the current\n  OS and architecture. Packer's API version will be ignored.",
+          "description": "List all installed Packer plugin binaries"
+        },
+        {
+          "subcommands": [],
+          "options": [],
+          "name": "packer plugins remove",
+          "raw_help_text": "Usage: packer plugins remove <plugin> [<version constraint>]\n\n  This command will remove one or more installed Packer plugins.\n\n  To remove a plugin matching a version constraint for the current OS and architecture.\n\n      packer plugins remove github.com/hashicorp/happycloud v1.2.3\n\n  To remove all versions of a plugin for the current OS and architecture omit the version constraint.\n\n      packer plugins remove github.com/hashicorp/happycloud\n\n  To remove a single plugin binary from the Packer plugin directory specify the absolute path to an installed binary. This syntax does not allow for version matching.\n\n      packer plugins remove ~/.config/plugins/github.com/hashicorp/happycloud/packer-plugin-happycloud_v1.0.0_x5.0_linux_amd64",
+          "description": "Remove Packer plugins [matching a version]"
+        },
+        {
+          "subcommands": [],
+          "options": [],
+          "name": "packer plugins required",
+          "raw_help_text": "Usage: packer plugins required <path>\n\n  This command will list every Packer plugin required by a Packer config, in\n  packer.required_plugins blocks. All binaries matching the required version\n  constrain and the current OS and Architecture will be listed. The most recent\n  version (and the first of the list) will be the one picked by Packer during a\n  build.\n\n  Ex: packer plugins required require.pkr.hcl\n  Ex: packer plugins required path/to/folder/",
+          "description": "List plugins required by a config"
+        }
+      ],
+      "options": [],
+      "name": "packer plugins",
+      "raw_help_text": "Usage: packer plugins <subcommand> [options] [args]\n  This command groups subcommands for interacting with Packer plugins.\n\nRelated but not under the \"plugins\" command :\n\n- \"packer init <path>\" will install all plugins required by a config.\n\nSubcommands:\n    install      Install latest Packer plugin [matching version constraint]\n    installed    List all installed Packer plugin binaries\n    remove       Remove Packer plugins [matching a version]\n    required     List plugins required by a config",
+      "description": "Interact with Packer plugins and catalog"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "-except=foo,bar,baz",
+          "description": "Validate all builds other than these.",
+          "value": "foo,bar,baz"
+        },
+        {
+          "option": "-evaluate-datasources",
+          "description": "Evaluate data sources during validation (HCL2 only, may incur costs); Defaults to false.",
+          "value": null
+        },
+        {
+          "option": "-ignore-prerelease-plugins",
+          "description": "Disable the loading of prerelease plugin binaries (x.y.z-dev).",
+          "value": null
+        },
+        {
+          "option": "-machine-readable",
+          "description": "Produce machine-readable output.",
+          "value": null
+        },
+        {
+          "option": "-no-warn-undeclared-var",
+          "description": "Disable warnings for user variable files containing undeclared variables.",
+          "value": null
+        },
+        {
+          "option": "-syntax-only",
+          "description": "Only check syntax. Do not verify config of the template.",
+          "value": null
+        },
+        {
+          "option": "-use-sequential-evaluation",
+          "description": "Fallback to using a sequential approach for local/datasource evaluation.",
+          "value": null
+        },
+        {
+          "option": "-var 'key=value'",
+          "description": "Variable for templates, can be used multiple times.",
+          "value": "'key=value'"
+        },
+        {
+          "option": "-var-file=path",
+          "description": "JSON or HCL2 file containing user variables, can be used multiple times.",
+          "value": "path"
+        },
+        {
+          "option": "-only=foo,bar,baz",
+          "description": "Validate only these builds.",
+          "value": "foo,bar,baz"
+        }
+      ],
+      "name": "packer validate",
+      "raw_help_text": "Usage: packer validate [options] TEMPLATE\n\n  Checks the template is valid by parsing the template and also\n  checking the configuration with the various builders, provisioners, etc.\n\n  If it is not valid, the errors will be shown and the command will exit\n  with a non-zero exit status. If it is valid, it will exit with a zero\n  exit status.\n\nOptions:\n\n  -syntax-only                  Only check syntax. Do not verify config of the template.\n  -except=foo,bar,baz           Validate all builds other than these.\n  -only=foo,bar,baz             Validate only these builds.\n  -machine-readable             Produce machine-readable output.\n  -var 'key=value'              Variable for templates, can be used multiple times.\n  -var-file=path                JSON or HCL2 file containing user variables, can be used multiple times.\n  -no-warn-undeclared-var       Disable warnings for user variable files containing undeclared variables.\n  -evaluate-datasources         Evaluate data sources during validation (HCL2 only, may incur costs); Defaults to false. \n  -ignore-prerelease-plugins    Disable the loading of prerelease plugin binaries (x.y.z-dev).\n  -use-sequential-evaluation    Fallback to using a sequential approach for local/datasource evaluation.",
+      "description": "check that a template is valid"
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "name": "packer version",
+      "raw_help_text": "Prints the Packer version, and checks for new release.",
+      "description": "Prints the Packer version"
+    }
+  ],
+  "options": [
+    {
+      "option": "--help",
+      "shortcut": null,
+      "description": "Display help information",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "Show the version number",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "Usage: packer [--version] [--help] <command> [<args>]\n\nAvailable commands are:\n    build           build image(s) from template\n    console         creates a console for testing variable interpolation\n    fix             fixes templates from old versions of packer\n    fmt             Rewrites HCL2 config files to canonical format\n    hcl2_upgrade    transform a JSON template into an HCL2 configuration\n    init            Install missing plugins or upgrade plugins\n    inspect         see components of a template\n    plugins         Interact with Packer plugins and catalog\n    validate        check that a template is valid\n    version         Prints the Packer version"
+}

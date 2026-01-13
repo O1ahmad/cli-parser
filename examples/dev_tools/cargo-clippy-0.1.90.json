@@ -1,0 +1,73 @@
+{
+  "name": "cargo clippy",
+  "version": "0.1.90",
+  "description": "Checks a package to catch common mistakes and improve your Rust code.",
+  "usage": "cargo clippy [OPTIONS] [--] [<ARGS>...]",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--allow",
+      "shortcut": "-A",
+      "description": "Set lint allowed",
+      "value": "[LINT]"
+    },
+    {
+      "option": "--deny",
+      "shortcut": "-D",
+      "description": "Set lint denied",
+      "value": "[LINT]"
+    },
+    {
+      "option": "--explain",
+      "description": "Print the documentation for a given lint",
+      "value": "[LINT]"
+    },
+    {
+      "option": "--fix",
+      "description": "Automatically apply lint suggestions. This flag implies --no-deps and --all-targets"
+    },
+    {
+      "option": "--forbid",
+      "shortcut": "-F",
+      "description": "Set lint forbidden",
+      "value": "[LINT]"
+    },
+    {
+      "option": "--frozen",
+      "description": "Require Cargo.lock and cache are up to date"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Print this message"
+    },
+    {
+      "option": "--locked",
+      "description": "Require Cargo.lock is up to date"
+    },
+    {
+      "option": "--manifest-path",
+      "description": "Path to Cargo.toml",
+      "value": "<PATH>"
+    },
+    {
+      "option": "--no-deps",
+      "description": "Run Clippy only on the given crate, without linting the dependencies"
+    },
+    {
+      "option": "--offline",
+      "description": "Run without accessing the network"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version info and exit"
+    },
+    {
+      "option": "--warn",
+      "shortcut": "-W",
+      "description": "Set lint warnings",
+      "value": "[LINT]"
+    }
+  ]
+}

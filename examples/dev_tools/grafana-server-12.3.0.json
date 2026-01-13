@@ -1,0 +1,227 @@
+{
+  "name": "grafana-server",
+  "version": "12.3.0",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config",
+          "shortcut": null,
+          "description": "Path to config file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--homepath",
+          "shortcut": null,
+          "description": "Path to Grafana install/home path, defaults to working directory",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--pidfile",
+          "shortcut": null,
+          "description": "Path to Grafana pid file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--packaging",
+          "shortcut": null,
+          "description": "describes the way Grafana was installed (default: \"unknown\")",
+          "value": "value",
+          "default": "\"unknown\""
+        },
+        {
+          "option": "--configOverrides",
+          "shortcut": null,
+          "description": "Configuration options to override defaults as a string. e.g. cfg:default.paths.log=/dev/null",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "print the version",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vv",
+          "shortcut": null,
+          "description": "prints current version, all dependencies and exits (default: false)",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--profile",
+          "shortcut": null,
+          "description": "Turn on pprof profiling (default: false)",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--profile-addr",
+          "shortcut": null,
+          "description": "Define custom address for profiling (default: \"localhost\")",
+          "value": "value",
+          "default": "\"localhost\""
+        },
+        {
+          "option": "--profile-port",
+          "shortcut": null,
+          "description": "Define custom port for profiling (default: 6060)",
+          "value": "value",
+          "default": "6060"
+        },
+        {
+          "option": "--profile-block-rate",
+          "shortcut": null,
+          "description": "Controls the fraction of goroutine blocking events that are reported in the blocking profile. The profiler aims to sample an average of one blocking event per rate nanoseconds spent blocked. To turn off profiling entirely, use 0 (default: 1)",
+          "value": "value",
+          "default": "1"
+        },
+        {
+          "option": "--profile-mutex-rate",
+          "shortcut": null,
+          "description": "Controls the fraction of mutex contention events that are reported in the mutex profile. On average 1/rate events are reported. To turn off mutex profiling entirely, use 0 (default: 0)",
+          "value": "value",
+          "default": "0"
+        },
+        {
+          "option": "--tracing",
+          "shortcut": null,
+          "description": "Turn on tracing (default: false)",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--tracing-file",
+          "shortcut": null,
+          "description": "Define tracing output file (default: \"trace.out\")",
+          "value": "value",
+          "default": "\"trace.out\""
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "grafana-server target",
+      "raw_help_text": "Deprecation warning: The standalone 'grafana-server' program is deprecated and will be removed in the future. Please update all uses of 'grafana-server' to 'grafana server'\nNAME:\n   grafana server target - target specific grafana services\n\nUSAGE:\n   grafana server target [command options]\n\nOPTIONS:\n   --config value              Path to config file\n   --homepath value            Path to Grafana install/home path, defaults to working directory\n   --pidfile value             Path to Grafana pid file\n   --packaging value           describes the way Grafana was installed (default: \"unknown\")\n   --configOverrides value     Configuration options to override defaults as a string. e.g. cfg:default.paths.log=/dev/null\n   --version, -v               print the version\n   --vv                        prints current version, all dependencies and exits (default: false)\n   --profile                   Turn on pprof profiling (default: false)\n   --profile-addr value        Define custom address for profiling (default: \"localhost\")\n   --profile-port value        Define custom port for profiling (default: 6060)\n   --profile-block-rate value  Controls the fraction of goroutine blocking events that are reported in the blocking profile. The profiler aims to sample an average of one blocking event per rate nanoseconds spent blocked. To turn off profiling entirely, use 0 (default: 1)\n   --profile-mutex-rate value  Controls the fraction of mutex contention events that are reported in the mutex profile. On average 1/rate events are reported. To turn off mutex profiling entirely, use 0 (default: 0)\n   --tracing                   Turn on tracing (default: false)\n   --tracing-file value        Define tracing output file (default: \"trace.out\")\n   --help, -h                  show help",
+      "description": "target specific grafana services"
+    }
+  ],
+  "options": [
+    {
+      "option": "--config",
+      "shortcut": null,
+      "description": "Path to config file",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--homepath",
+      "shortcut": null,
+      "description": "Path to Grafana install/home path, defaults to working directory",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--pidfile",
+      "shortcut": null,
+      "description": "Path to Grafana pid file",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--packaging",
+      "shortcut": null,
+      "description": "describes the way Grafana was installed (default: \"unknown\")",
+      "value": "value",
+      "default": "\"unknown\""
+    },
+    {
+      "option": "--configOverrides",
+      "shortcut": null,
+      "description": "Configuration options to override defaults as a string. e.g. cfg:default.paths.log=/dev/null",
+      "value": "value",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--vv",
+      "shortcut": null,
+      "description": "prints current version, all dependencies and exits (default: false)",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--profile",
+      "shortcut": null,
+      "description": "Turn on pprof profiling (default: false)",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--profile-addr",
+      "shortcut": null,
+      "description": "Define custom address for profiling (default: \"localhost\")",
+      "value": "value",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--profile-port",
+      "shortcut": null,
+      "description": "Define custom port for profiling (default: 6060)",
+      "value": "value",
+      "default": "6060"
+    },
+    {
+      "option": "--profile-block-rate",
+      "shortcut": null,
+      "description": "Controls the fraction of goroutine blocking events that are reported in the blocking profile. The profiler aims to sample an average of one blocking event per rate nanoseconds spent blocked. To turn off profiling entirely, use 0 (default: 1)",
+      "value": "value",
+      "default": "1"
+    },
+    {
+      "option": "--profile-mutex-rate",
+      "shortcut": null,
+      "description": "Controls the fraction of mutex contention events that are reported in the mutex profile. On average 1/rate events are reported. To turn off mutex profiling entirely, use 0 (default: 0)",
+      "value": "value",
+      "default": "0"
+    },
+    {
+      "option": "--tracing",
+      "shortcut": null,
+      "description": "Turn on tracing (default: false)",
+      "value": null,
+      "default": "false"
+    },
+    {
+      "option": "--tracing-file",
+      "shortcut": null,
+      "description": "Define tracing output file (default: \"trace.out\")",
+      "value": "value",
+      "default": "\"trace.out\""
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "Deprecation warning: The standalone 'grafana-server' program is deprecated and will be removed in the future. Please update all uses of 'grafana-server' to 'grafana server'\nNAME:\n   grafana server - run the grafana server\n\nUSAGE:\n   grafana server [command options]\n\nCOMMANDS:\n   target   target specific grafana services\n   help, h  Shows a list of commands or help for one command\n\nOPTIONS:\n   --config value              Path to config file\n   --homepath value            Path to Grafana install/home path, defaults to working directory\n   --pidfile value             Path to Grafana pid file\n   --packaging value           describes the way Grafana was installed (default: \"unknown\")\n   --configOverrides value     Configuration options to override defaults as a string. e.g. cfg:default.paths.log=/dev/null\n   --version, -v               print the version\n   --vv                        prints current version, all dependencies and exits (default: false)\n   --profile                   Turn on pprof profiling (default: false)\n   --profile-addr value        Define custom address for profiling (default: \"localhost\")\n   --profile-port value        Define custom port for profiling (default: 6060)\n   --profile-block-rate value  Controls the fraction of goroutine blocking events that are reported in the blocking profile. The profiler aims to sample an average of one blocking event per rate nanoseconds spent blocked. To turn off profiling entirely, use 0 (default: 1)\n   --profile-mutex-rate value  Controls the fraction of mutex contention events that are reported in the mutex profile. On average 1/rate events are reported. To turn off mutex profiling entirely, use 0 (default: 0)\n   --tracing                   Turn on tracing (default: false)\n   --tracing-file value        Define tracing output file (default: \"trace.out\")\n   --help, -h                  show help"
+}

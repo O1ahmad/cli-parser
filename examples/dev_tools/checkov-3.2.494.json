@@ -1,0 +1,406 @@
+{
+  "name": "checkov",
+  "version": "3.2.494",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--add-check",
+          "description": "Generate a new check via CLI prompt."
+        },
+        {
+          "option": "--bc-api-key",
+          "description": "Bridgecrew API key or Prisma Cloud Access Key (see --prisma-api-url).",
+          "value": "BC_API_KEY"
+        },
+        {
+          "option": "--branch",
+          "shortcut": "-b",
+          "description": "Selected branch of the persisted repository. Only has effect when using the --bc-api-key flag.",
+          "value": "BRANCH"
+        },
+        {
+          "option": "--config-file",
+          "description": "path to the Checkov configuration YAML file."
+        },
+        {
+          "option": "--create-baseline",
+          "description": "Alongside outputting the findings, save all results to .checkov.baseline file so future runs will not re-flag the same noise. Works only with `--directory` flag."
+        },
+        {
+          "option": "--create-config",
+          "description": "takes the current command line args and writes them out to a config file at the given path."
+        },
+        {
+          "option": "--custom-tool-name",
+          "description": "Add a tool name if you want your output to be tagged with a specific tool name,this is useful when integrating with other tools such as uploading SARIF files to github code scanning."
+        },
+        {
+          "option": "--deep-analysis",
+          "description": "Combine the TF Plan and TF graphs to make connections not available in either."
+        },
+        {
+          "option": "--docker-image",
+          "description": "Scan docker images by name or ID. Only works with --bc-api-key flag."
+        },
+        {
+          "option": "--dockerfile-path",
+          "description": "Path to the Dockerfile of the scanned docker image."
+        },
+        {
+          "option": "--download-external-modules",
+          "description": "download external terraform modules from public git repositories and terraform registry."
+        },
+        {
+          "option": "--enable-secret-scan-all-files",
+          "description": "enable secret scan for all files."
+        },
+        {
+          "option": "--evaluate-variables",
+          "description": "evaluate the values of variables and locals."
+        },
+        {
+          "option": "--external-checks-dir",
+          "description": "Directory for custom checks to be loaded. Can be repeated."
+        },
+        {
+          "option": "--external-checks-git",
+          "description": "GitHub url of external checks to be added."
+        },
+        {
+          "option": "--external-modules-download-path",
+          "description": "set the path for the download external terraform modules."
+        },
+        {
+          "option": "--hard-fail-on",
+          "description": "Exits with a non-zero exit code for specified checks."
+        },
+        {
+          "option": "--include-all-checkov-policies",
+          "description": "When running with an API key, Checkov will omit any policies that do not exist in Prisma Cloud platform."
+        },
+        {
+          "option": "--list",
+          "shortcut": "-l",
+          "description": "List checks."
+        },
+        {
+          "option": "--mask",
+          "description": "List of <resource_type>:<variable> OR <variable> only."
+        },
+        {
+          "option": "--no-cert-verify",
+          "description": "Skip SSL certificate verification. Use this to bypass errors related to SSL certificates."
+        },
+        {
+          "option": "--no-fail-on-crash",
+          "description": "Return exit code 0 instead of 2."
+        },
+        {
+          "option": "--output",
+          "shortcut": "-o",
+          "description": "Report output format. Add multiple outputs by using the flag multiple times.",
+          "value": "{cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}"
+        },
+        {
+          "option": "--output-baseline-as-skipped",
+          "description": "output checks that are skipped due to baseline file presence."
+        },
+        {
+          "option": "--output-bc-ids",
+          "description": "Print Bridgecrew platform IDs (BC...) instead of Checkov IDs (CKV...)."
+        },
+        {
+          "option": "--output-file-path",
+          "description": "Name of the output folder to save the chosen output formats."
+        },
+        {
+          "option": "--policy-metadata-filter",
+          "description": "comma separated key:value string to filter policies based on Prisma Cloud policy metadata."
+        },
+        {
+          "option": "--policy-metadata-filter-exception",
+          "description": "comma separated key:value string to exclude filtered policies based on Prisma Cloud policy metadata."
+        },
+        {
+          "option": "--quiet",
+          "description": "in case of CLI output, display only failed checks."
+        },
+        {
+          "option": "--run-all-external-checks",
+          "description": "Run all external checks (loaded via --external-checks options)."
+        },
+        {
+          "option": "--secrets-history-timeout",
+          "description": "maximum time to stop the scan."
+        },
+        {
+          "option": "--scan-secrets-history",
+          "description": "will scan the history of commits for secrets."
+        },
+        {
+          "option": "--show-config",
+          "description": "prints all args and config settings and where they came from."
+        },
+        {
+          "option": "--skip-check",
+          "description": "Checks to skip; any other checks will not be run."
+        },
+        {
+          "option": "--skip-cve-package",
+          "description": "filter scan to run on all packages but a specific package identifier (denylist)."
+        },
+        {
+          "option": "--skip-download",
+          "description": "Do not download any data from Prisma Cloud."
+        },
+        {
+          "option": "--skip-framework",
+          "description": "Filter scan to skip specific infrastructure as code frameworks."
+        },
+        {
+          "option": "--skip-path",
+          "description": "Path (file or directory) to skip, using regular expression logic."
+        },
+        {
+          "option": "--soft-fail",
+          "shortcut": "-s",
+          "description": "Runs checks but always returns a 0 exit code."
+        },
+        {
+          "option": "--soft-fail-on",
+          "description": "Exits with a 0 exit code if only the specified items fail."
+        },
+        {
+          "option": "--summary-position",
+          "description": "Chose whether the summary will be appended on top or on bottom, default is on top.",
+          "value": "{top,bottom}"
+        },
+        {
+          "option": "--use-enforcement-rules",
+          "description": "Use the Enforcement rules configured in the platform for hard / soft fail logic."
+        },
+        {
+          "option": "--var-file",
+          "description": "Variable files to load in addition to the default files."
+        },
+        {
+          "option": "--zip",
+          "description": "Not specified in the output."
+        }
+      ],
+      "aliases": [],
+      "name": "checkov list",
+      "raw_help_text": "usage: checkov [-h] [-v] [--support] [-d DIRECTORY] [--add-check]\n               [-f FILE [FILE ...]] [--skip-path SKIP_PATH]\n               [--external-checks-dir EXTERNAL_CHECKS_DIR]\n               [--external-checks-git EXTERNAL_CHECKS_GIT] [-l]\n               [-o {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}]\n               [--output-file-path OUTPUT_FILE_PATH] [--output-bc-ids]\n               [--include-all-checkov-policies] [--quiet] [--compact]\n               [--framework FRAMEWORK [FRAMEWORK ...]]\n               [--skip-framework SKIP_FRAMEWORK [SKIP_FRAMEWORK ...]]\n               [-c CHECK] [--skip-check SKIP_CHECK]\n               [--run-all-external-checks] [-s] [--soft-fail-on SOFT_FAIL_ON]\n               [--hard-fail-on HARD_FAIL_ON] [--bc-api-key BC_API_KEY]\n               [--prisma-api-url PRISMA_API_URL] [--skip-results-upload]\n               [--docker-image DOCKER_IMAGE]\n               [--dockerfile-path DOCKERFILE_PATH] [--repo-id REPO_ID]\n               [-b BRANCH] [--skip-download] [--use-enforcement-rules]\n               [--download-external-modules DOWNLOAD_EXTERNAL_MODULES]\n               [--var-file VAR_FILE]\n               [--external-modules-download-path EXTERNAL_MODULES_DOWNLOAD_PATH]\n               [--evaluate-variables EVALUATE_VARIABLES] [-ca CA_CERTIFICATE]\n               [--no-cert-verify]\n               [--repo-root-for-plan-enrichment REPO_ROOT_FOR_PLAN_ENRICHMENT]\n               [--config-file CONFIG_FILE] [--create-config CREATE_CONFIG]\n               [--show-config] [--create-baseline] [--baseline BASELINE]\n               [--output-baseline-as-skipped]\n               [--skip-cve-package SKIP_CVE_PACKAGE]\n               [--policy-metadata-filter POLICY_METADATA_FILTER]\n               [--policy-metadata-filter-exception POLICY_METADATA_FILTER_EXCEPTION]\n               [--secrets-scan-file-type SECRETS_SCAN_FILE_TYPE]\n               [--enable-secret-scan-all-files]\n               [--block-list-secret-scan BLOCK_LIST_SECRET_SCAN]\n               [--summary-position {top,bottom}]\n               [--skip-resources-without-violations] [--deep-analysis]\n               [--no-fail-on-crash] [--mask MASK] [--scan-secrets-history]\n               [--secrets-history-timeout SECRETS_HISTORY_TIMEOUT]\n               [--custom-tool-name CUSTOM_TOOL_NAME]\n\nInfrastructure as code static analysis\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --version         version\n  --support             Enable debug logs and upload the logs to the server.\n                        Requires a Bridgecrew or Prisma Cloud API key.\n  -d DIRECTORY, --directory DIRECTORY\n                        IaC root directory (can not be used together with\n                        --file).\n  --add-check           Generate a new check via CLI prompt\n  -f FILE [FILE ...], --file FILE [FILE ...]\n                        File to scan (can not be used together with\n                        --directory). With this option, Checkov will attempt\n                        to filter the runners based on the file type. For\n                        example, if you specify a \".tf\" file, only the\n                        terraform and secrets frameworks will be included. You\n                        can further limit this (e.g., skip secrets) by using\n                        the --skip-framework argument.\n  --skip-path SKIP_PATH\n                        Path (file or directory) to skip, using regular\n                        expression logic, relative to current working\n                        directory. Word boundaries are not implicit; i.e.,\n                        specifying \"dir1\" will skip any directory or\n                        subdirectory named \"dir1\". Ignored with -f. Can be\n                        specified multiple times.\n  --external-checks-dir EXTERNAL_CHECKS_DIR\n                        Directory for custom checks to be loaded. Can be\n                        repeated. Note that this will run Python code from the\n                        specified directory, so only use this option with\n                        trusted directories.\n  --external-checks-git EXTERNAL_CHECKS_GIT\n                        GitHub url of external checks to be added. You can\n                        specify a subdirectory after a double-slash //.It is\n                        ossible to use ?ref=tags/tagName or\n                        ?ref=heads/branchName or ?ref=commit_id and cannot be\n                        used together with --external-checks-dir. Note that\n                        this will run Python code from the specified\n                        directory, so only use this option with trusted\n                        repositories.\n  -l, --list            List checks\n  -o {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}, --output {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}\n                        Report output format. Add multiple outputs by using\n                        the flag multiple times (-o sarif -o cli)\n  --output-file-path OUTPUT_FILE_PATH\n                        Name of the output folder to save the chosen output\n                        formats. Advanced usage: By using -o cli -o junitxml\n                        --output-file-path console,results.xml the CLI output\n                        will be printed to the console and the JunitXML output\n                        to the file results.xml.\n  --output-bc-ids       Print Bridgecrew platform IDs (BC...) instead of\n                        Checkov IDs (CKV...), if the check exists in the\n                        platform\n  --include-all-checkov-policies\n                        When running with an API key, Checkov will omit any\n                        policies that do not exist in Prisma Cloud platform,\n                        except for local custom policies loaded with the\n                        --external-check flags. Use this key to include\n                        policies that only exist in Checkov in the scan. Note\n                        that this will make the local CLI results different\n                        from the results you see in the platform. Has no\n                        effect if you are not using an API key. Use the\n                        --check option to explicitly include checks by ID even\n                        if they are not in the platform, without using this\n                        flag.\n  --quiet               in case of CLI output, display only failed checks.\n                        Also disables progress bars\n  --compact             in case of CLI output, do not display code blocks\n  --framework FRAMEWORK [FRAMEWORK ...]\n                        Filter scan to run only on specific infrastructure as\n                        code frameworks. Defaults to all frameworks. If you\n                        explicitly include 'all' as a value, then all other\n                        values are ignored. Enter as a comma-separated list or\n                        repeat the flag multiple times. For example,\n                        --framework terraform,sca_package or --framework\n                        terraform --framework sca_package. Possible values:\n                        all, ansible, argo_workflows, arm, azure_pipelines,\n                        bicep, bitbucket_pipelines, cdk, circleci_pipelines,\n                        cloudformation, dockerfile, github_configuration,\n                        github_actions, gitlab_configuration, gitlab_ci,\n                        bitbucket_configuration, helm, json, yaml, kubernetes,\n                        kustomize, openapi, sca_package, sca_image, secrets,\n                        serverless, terraform, terraform_json, terraform_plan,\n                        sast, sast_python, sast_java, sast_javascript,\n                        sast_typescript, sast_golang, 3d_policy [env var:\n                        CKV_FRAMEWORK]\n  --skip-framework SKIP_FRAMEWORK [SKIP_FRAMEWORK ...]\n                        Filter scan to skip specific infrastructure as code\n                        frameworks. This will be included automatically for\n                        some frameworks if system dependencies are missing.\n                        Enter as a comma-separated list or repeat the flag\n                        multiple times. For example, --skip-framework\n                        terraform,sca_package or --skip-framework terraform\n                        --skip-framework sca_package. Cannot include values\n                        that are also included in --framework. Possible\n                        values: ansible, argo_workflows, arm, azure_pipelines,\n                        bicep, bitbucket_pipelines, cdk, circleci_pipelines,\n                        cloudformation, dockerfile, github_configuration,\n                        github_actions, gitlab_configuration, gitlab_ci,\n                        bitbucket_configuration, helm, json, yaml, kubernetes,\n                        kustomize, openapi, sca_package, sca_image, secrets,\n                        serverless, terraform, terraform_json, terraform_plan,\n                        sast, sast_python, sast_java, sast_javascript,\n                        sast_typescript, sast_golang, 3d_policy\n  -c CHECK, --check CHECK\n                        Checks to run; any other checks will be skipped. Enter\n                        one or more items separated by commas. Each item may\n                        be either a Checkov check ID (CKV_AWS_123), a BC check\n                        ID (BC_AWS_GENERAL_123), or a severity (LOW, MEDIUM,\n                        HIGH, CRITICAL). If you use a severity, then all\n                        checks equal to or above the lowest severity in the\n                        list will be included. This option can be combined\n                        with --skip-check. If it is, then the logic is to\n                        first take all checks that match this list, and then\n                        remove all checks that match the skip list. For\n                        example, if you use --check CKV_123 and --skip-check\n                        LOW, then CKV_123 will not run if it is a LOW\n                        severity. Similarly, if you use --check CKV_789\n                        --skip-check MEDIUM, then CKV_789 will run if it is a\n                        HIGH severity. If you use a check ID here along with\n                        an API key, and the check is not part of the BC / PC\n                        platform, then the check will still be run (see\n                        --include-all-checkov-policies for more info). [env\n                        var: CKV_CHECK]\n  --skip-check SKIP_CHECK\n                        Checks to skip; any other checks will not be run.\n                        Enter one or more items separated by commas. Each item\n                        may be either a Checkov check ID (CKV_AWS_123), a BC\n                        check ID (BC_AWS_GENERAL_123), or a severity (LOW,\n                        MEDIUM, HIGH, CRITICAL). If you use a severity, then\n                        all checks equal to or below the highest severity in\n                        the list will be skipped. This option can be combined\n                        with --check. If it is, priority is given to checks\n                        explicitly listed by ID or wildcard over checks listed\n                        by severity. For example, if you use --skip-check\n                        CKV_123 and --check HIGH, then CKV_123 will be skipped\n                        even if it is a HIGH severity. In the case of a tie\n                        (e.g., --check MEDIUM and --skip-check HIGH for a\n                        medium severity check), then the check will be\n                        skipped. [env var: CKV_SKIP_CHECK]\n  --run-all-external-checks\n                        Run all external checks (loaded via --external-checks\n                        options) even if the checks are not present in the\n                        --check list. This allows you to always ensure that\n                        new checks present in the external source are used. If\n                        an external check is included in --skip-check, it will\n                        still be skipped.\n  -s, --soft-fail       Runs checks but always returns a 0 exit code. Using\n                        either --soft-fail-on and / or --hard-fail-on\n                        overrides this option, except for the case when a\n                        result does not match either of the soft fail or hard\n                        fail criteria, in which case this flag determines the\n                        result.\n  --soft-fail-on SOFT_FAIL_ON\n                        Exits with a 0 exit code if only the specified items\n                        fail. Enter one or more items separated by commas.\n                        Each item may be either a Checkov check ID\n                        (CKV_AWS_123), a BC check ID (BC_AWS_GENERAL_123), or\n                        a severity (LOW, MEDIUM, HIGH, CRITICAL). If you use a\n                        severity, then any severity equal to or less than the\n                        highest severity in the list will result in a soft\n                        fail. This option may be used with --hard-fail-on,\n                        using the same priority logic described in --check and\n                        --skip-check options above, with --hard-fail-on taking\n                        precedence in a tie. If a given result does not meet\n                        the --soft-fail-on nor the --hard-fail-on criteria,\n                        then the default is to hard fail\n  --hard-fail-on HARD_FAIL_ON\n                        Exits with a non-zero exit code for specified checks.\n                        Enter one or more items separated by commas. Each item\n                        may be either a Checkov check ID (CKV_AWS_123), a BC\n                        check ID (BC_AWS_GENERAL_123), or a severity (LOW,\n                        MEDIUM, HIGH, CRITICAL). If you use a severity, then\n                        any severity equal to or greater than the lowest\n                        severity in the list will result in a hard fail. This\n                        option can be used with --soft-fail-on, using the same\n                        priority logic described in --check and --skip-check\n                        options above, with --hard-fail-on taking precedence\n                        in a tie.\n  --bc-api-key BC_API_KEY\n                        Bridgecrew API key or Prisma Cloud Access Key (see\n                        --prisma-api-url) [env var: BC_API_KEY]\n  --prisma-api-url PRISMA_API_URL\n                        The Prisma Cloud API URL (see:\n                        https://prisma.pan.dev/api/cloud/api-urls). Requires\n                        --bc-api-key to be a Prisma Cloud Access Key in the\n                        following format: <access_key_id>::<secret_key> [env\n                        var: PRISMA_API_URL]\n  --skip-results-upload\n                        Do not upload scan results to the platform to view in\n                        the console. Results are only available locally. If\n                        you use the --support flag, logs will still get\n                        uploaded.\n  --docker-image DOCKER_IMAGE, --image DOCKER_IMAGE\n                        Scan docker images by name or ID. Only works with\n                        --bc-api-key flag\n  --dockerfile-path DOCKERFILE_PATH\n                        Path to the Dockerfile of the scanned docker image\n  --repo-id REPO_ID     Identity string of the repository, with form\n                        <repo_owner>/<repo_name>. Required when using the\n                        platform integration (API key).\n  -b BRANCH, --branch BRANCH\n                        Selected branch of the persisted repository. Only has\n                        effect when using the --bc-api-key flag\n  --skip-download       Do not download any data from Prisma Cloud. This will\n                        omit doc links, severities, etc., as well as custom\n                        policies and suppressions if using an API token. Note:\n                        it will prevent BC platform IDs from being available\n                        in Checkov.\n  --use-enforcement-rules\n                        Use the Enforcement rules configured in the platform\n                        for hard / soft fail logic. With this option, the\n                        enforcement rule matching this repo, or the default\n                        rule if there is no match, will determine this\n                        behavior: any check with a severity below the selected\n                        rule's soft-fail threshold will be skipped; any check\n                        with a severity equal to or greater than the rule's\n                        hard-fail threshold will be part of the hard-fail\n                        list, and any check in between will be part of the\n                        soft-fail list. For example, if the given enforcement\n                        rule has a hard-fail value of HIGH and a soft-fail\n                        value of MEDIUM,this is the equivalent of using the\n                        flags `--skip-check LOW --hard-fail-on HIGH`. You can\n                        use --check, --skip-check, --soft-fail, --soft-fail-\n                        on, or --hard-fail-on to override portions of an\n                        enforcement rule. Note, however, that the logic of\n                        applying the --check list and then the --skip-check\n                        list (as described above under --check) still applies\n                        here. Requires a BC or PC platform API key.\n  --download-external-modules DOWNLOAD_EXTERNAL_MODULES\n                        download external terraform modules from public git\n                        repositories and terraform registry [env var:\n                        DOWNLOAD_EXTERNAL_MODULES]\n  --var-file VAR_FILE   Variable files to load in addition to the default\n                        files (see https://www.terraform.io/docs/language/valu\n                        es/variables.html#variable-definitions-tfvars-\n                        files).Currently only supported for source Terraform\n                        (.tf file), and Helm chart scans.Requires using\n                        --directory, not --file. [env var: CKV_VAR_FILE]\n  --external-modules-download-path EXTERNAL_MODULES_DOWNLOAD_PATH\n                        set the path for the download external terraform\n                        modules [env var: EXTERNAL_MODULES_DIR]\n  --evaluate-variables EVALUATE_VARIABLES\n                        evaluate the values of variables and locals [env var:\n                        CKV_EVAL_VARS]\n  -ca CA_CERTIFICATE, --ca-certificate CA_CERTIFICATE\n                        Custom CA certificate (bundle) file [env var:\n                        BC_CA_BUNDLE]\n  --no-cert-verify      Skip SSL certificate verification. Use this to bypass\n                        errors related to SSL certificates. Warning: this\n                        should only be used for testing purposes. Skipping\n                        certificate verification is dangerous as invalid and\n                        falsified certificates cannot be detected.\n  --repo-root-for-plan-enrichment REPO_ROOT_FOR_PLAN_ENRICHMENT\n                        Directory containing the hcl code used to generate a\n                        given plan file. Use with -f.\n  --config-file CONFIG_FILE\n                        path to the Checkov configuration YAML file\n  --create-config CREATE_CONFIG\n                        takes the current command line args and writes them\n                        out to a config file at the given path\n  --show-config         prints all args and config settings and where they\n                        came from (eg. commandline, config file, environment\n                        variable or default)\n  --create-baseline     Alongside outputting the findings, save all results to\n                        .checkov.baseline file so future runs will not re-flag\n                        the same noise. Works only with `--directory` flag\n  --baseline BASELINE   Use a .checkov.baseline file to compare current\n                        results with a known baseline. Report will include\n                        only failed checks that are new with respect to the\n                        provided baseline\n  --output-baseline-as-skipped\n                        output checks that are skipped due to baseline file\n                        presence\n  --skip-cve-package SKIP_CVE_PACKAGE\n                        filter scan to run on all packages but a specific\n                        package identifier (denylist), You can specify this\n                        argument multiple times to skip multiple packages\n  --policy-metadata-filter POLICY_METADATA_FILTER\n                        comma separated key:value string to filter policies\n                        based on Prisma Cloud policy metadata. When used with\n                        --policy-metadata-filter-exception, the exceptions\n                        override any policies selected asa result of the\n                        --policy-metadata-filter flag.See https://prisma.pan.d\n                        ev/api/cloud/cspm/policy#operation/get-policy-filters-\n                        and-options for information on allowed filters.\n                        Example:\n                        policy.label=label1,policy.label=label2,cloud.type=aws\n                        [env var: CKV_POLICY_METADATA_FILTER]\n  --policy-metadata-filter-exception POLICY_METADATA_FILTER_EXCEPTION\n                        comma separated key:value string to exclude filtered\n                        policies based on Prisma Cloud policy metadata. When\n                        used with --policy-metadata-filter, the exceptions\n                        override any policies selected asa result of the\n                        --policy-metadata-filter flag.See https://prisma.pan.d\n                        ev/api/cloud/cspm/policy#operation/get-policy-filters-\n                        and-options for information on allowed filters.\n                        Example:\n                        policy.label=label1,policy.label=label2,cloud.type=aws\n                        [env var: CKV_POLICY_METADATA_FILTER_EXCEPTION]\n  --secrets-scan-file-type SECRETS_SCAN_FILE_TYPE\n                        not in use [env var: CKV_SECRETS_SCAN_FILE_TYPE]\n  --enable-secret-scan-all-files\n                        enable secret scan for all files [env var:\n                        CKV_SECRETS_SCAN_ENABLE_ALL]\n  --block-list-secret-scan BLOCK_LIST_SECRET_SCAN\n                        List of files to filter out from the secret scanner\n                        [env var: CKV_SECRETS_SCAN_BLOCK_LIST]\n  --summary-position {top,bottom}\n                        Chose whether the summary will be appended on top\n                        (before the checks results) or on bottom (after check\n                        results), default is on top.\n  --skip-resources-without-violations\n                        exclude extra resources (resources without violations)\n                        from report output [env var:\n                        CKV_SKIP_RESOURCES_WITHOUT_VIOLATIONS]\n  --deep-analysis       Combine the TF Plan and TF graphs to make connections\n                        not available in either\n  --no-fail-on-crash    Return exit code 0 instead of 2 [env var:\n                        CKV_NO_FAIL_ON_CRASH]\n  --mask MASK           List of <resource_type>:<variable> OR <variable> only.\n                        Each entry in the list will be used formasking the\n                        desired attribute for resource (or for all resources,\n                        if no resource given).Notice: one entry can contain\n                        several variables, separated with a comma. For\n                        example:<resource_type>:<variable1>,<variable2> OR\n                        <variable1>,<variable2>\n  --scan-secrets-history\n                        will scan the history of commits for secrets\n  --secrets-history-timeout SECRETS_HISTORY_TIMEOUT\n                        maximum time to stop the scan\n  --custom-tool-name CUSTOM_TOOL_NAME\n                        Add a tool name if you want your output to be tagged\n                        with a specific tool name,this is useful when\n                        integrating with other tools such as uploading SARIF\n                        files to github code scanning\n\nArgs that start with '--' can also be set in a config file (/.checkov.yaml or\n/.checkov.yml or /root/.checkov.yaml or /root/.checkov.yml or specified via\n--config-file). The config file uses YAML syntax and must represent a YAML\n'mapping' (for details, see http://learn.getgrav.org/advanced/yaml). In\ngeneral, command-line values override environment variables which override\nconfig file values which override defaults.",
+      "description": "List checks"
+    }
+  ],
+  "options": [
+    {
+      "option": "--add-check",
+      "description": "Generate a new check via CLI prompt"
+    },
+    {
+      "option": "--bc-api-key",
+      "description": "Bridgecrew API key or Prisma Cloud Access Key (see --prisma-api-url)",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--branch",
+      "shortcut": "-b",
+      "description": "Selected branch of the persisted repository. Only has effect when using the --bc-api-key flag",
+      "value": "BRANCH",
+      "default": null
+    },
+    {
+      "option": "--compact",
+      "description": "in case of CLI output, do not display code blocks"
+    },
+    {
+      "option": "--config-file",
+      "description": "path to the Checkov configuration YAML file"
+    },
+    {
+      "option": "--create-baseline",
+      "description": "Alongside outputting the findings, save all results to .checkov.baseline file so future runs will not re-flag the same noise. Works only with `--directory` flag"
+    },
+    {
+      "option": "--create-config",
+      "description": "takes the current command line args and writes them out to a config file at the given path"
+    },
+    {
+      "option": "--deep-analysis",
+      "description": "Combine the TF Plan and TF graphs to make connections not available in either"
+    },
+    {
+      "option": "--docker-image",
+      "shortcut": "--image",
+      "description": "Scan docker images by name or ID. Only works with --bc-api-key flag",
+      "value": "DOCKER_IMAGE",
+      "default": null
+    },
+    {
+      "option": "--dockerfile-path",
+      "description": "Path to the Dockerfile of the scanned docker image"
+    },
+    {
+      "option": "--download-external-modules",
+      "description": "download external terraform modules from public git repositories and terraform registry"
+    },
+    {
+      "option": "--evaluate-variables",
+      "description": "evaluate the values of variables and locals"
+    },
+    {
+      "option": "--external-checks-dir",
+      "description": "Directory for custom checks to be loaded. Can be repeated. Note that this will run Python code from the specified directory, so only use this option with trusted directories."
+    },
+    {
+      "option": "--external-checks-git",
+      "description": "GitHub url of external checks to be added. You can specify a subdirectory after a double-slash //.It is ossible to use ?ref=tags/tagName or ?ref=heads/branchName or ?ref=commit_id and cannot be used together with --external-checks-dir."
+    },
+    {
+      "option": "--external-modules-download-path",
+      "description": "set the path for the download external terraform modules"
+    },
+    {
+      "option": "--framework",
+      "description": "Filter scan to run only on specific infrastructure as code frameworks. Defaults to all frameworks. If you explicitly include 'all' as a value, then all other values are ignored."
+    },
+    {
+      "option": "--hard-fail-on",
+      "description": "Exits with a non-zero exit code for specified checks."
+    },
+    {
+      "option": "--include-all-checkov-policies",
+      "description": "When running with an API key, Checkov will omit any policies that do not exist in Prisma Cloud platform, except for local custom policies loaded with the --external-check flags."
+    },
+    {
+      "option": "--list",
+      "description": "List checks"
+    },
+    {
+      "option": "--no-cert-verify",
+      "description": "Skip SSL certificate verification. Use this to bypass errors related to SSL certificates. Warning: this should only be used for testing purposes."
+    },
+    {
+      "option": "--output",
+      "shortcut": "-o",
+      "description": "Report output format. Add multiple outputs by using the flag multiple times (-o sarif -o cli)",
+      "value": "{cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}",
+      "default": null
+    },
+    {
+      "option": "--output-baseline-as-skipped",
+      "description": "output checks that are skipped due to baseline file presence"
+    },
+    {
+      "option": "--output-file-path",
+      "description": "Name of the output folder to save the chosen output formats."
+    },
+    {
+      "option": "--output-bc-ids",
+      "description": "Print Bridgecrew platform IDs (BC...) instead of Checkov IDs (CKV...), if the check exists in the platform"
+    },
+    {
+      "option": "--policy-metadata-filter",
+      "description": "comma separated key:value string to filter policies based on Prisma Cloud policy metadata."
+    },
+    {
+      "option": "--policy-metadata-filter-exception",
+      "description": "comma separated key:value string to exclude filtered policies based on Prisma Cloud policy metadata."
+    },
+    {
+      "option": "--quiet",
+      "description": "in case of CLI output, display only failed checks. Also disables progress bars"
+    },
+    {
+      "option": "--repo-id",
+      "description": "Identity string of the repository, with form <repo_owner>/<repo_name>. Required when using the platform integration (API key)."
+    },
+    {
+      "option": "--repo-root-for-plan-enrichment",
+      "description": "Directory containing the hcl code used to generate a given plan file. Use with -f."
+    },
+    {
+      "option": "--run-all-external-checks",
+      "description": "Run all external checks (loaded via --external-checks options) even if the checks are not present in the --check list."
+    },
+    {
+      "option": "--secrets-history-timeout",
+      "description": "maximum time to stop the scan"
+    },
+    {
+      "option": "--skip-check",
+      "description": "Checks to skip; any other checks will not be run."
+    },
+    {
+      "option": "--skip-download",
+      "description": "Do not download any data from Prisma Cloud."
+    },
+    {
+      "option": "--skip-framework",
+      "description": "Filter scan to skip specific infrastructure as code frameworks."
+    },
+    {
+      "option": "--skip-path",
+      "description": "Path (file or directory) to skip, using regular expression logic, relative to current working directory."
+    },
+    {
+      "option": "--soft-fail",
+      "description": "Runs checks but always returns a 0 exit code."
+    },
+    {
+      "option": "--soft-fail-on",
+      "description": "Exits with a 0 exit code if only the specified items fail."
+    },
+    {
+      "option": "--summary-position",
+      "description": "Chose whether the summary will be appended on top (before the checks results) or on bottom (after check results), default is on top."
+    },
+    {
+      "option": "--use-enforcement-rules",
+      "description": "Use the Enforcement rules configured in the platform for hard / soft fail logic."
+    },
+    {
+      "option": "--var-file",
+      "description": "Variable files to load in addition to the default files."
+    },
+    {
+      "option": "--skip-resources-without-violations",
+      "description": "exclude extra resources (resources without violations) from report output"
+    },
+    {
+      "option": "--mask",
+      "description": "List of <resource_type>:<variable> OR <variable> only."
+    },
+    {
+      "option": "--scan-secrets-history",
+      "description": "will scan the history of commits for secrets"
+    },
+    {
+      "option": "--custom-tool-name",
+      "description": "Add a tool name if you want your output to be tagged with a specific tool name."
+    },
+    {
+      "option": "--no-fail-on-crash",
+      "description": "Return exit code 0 instead of 2"
+    },
+    {
+      "option": "--skip-cve-package",
+      "description": "filter scan to run on all packages but a specific package identifier (denylist)"
+    },
+    {
+      "option": "--support",
+      "description": "Enable debug logs and upload the logs to the server. Requires a Bridgecrew or Prisma Cloud API key."
+    },
+    {
+      "option": "--show-config",
+      "description": "prints all args and config settings and where they came from."
+    }
+  ],
+  "raw_help_text": "usage: checkov [-h] [-v] [--support] [-d DIRECTORY] [--add-check]\n               [-f FILE [FILE ...]] [--skip-path SKIP_PATH]\n               [--external-checks-dir EXTERNAL_CHECKS_DIR]\n               [--external-checks-git EXTERNAL_CHECKS_GIT] [-l]\n               [-o {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}]\n               [--output-file-path OUTPUT_FILE_PATH] [--output-bc-ids]\n               [--include-all-checkov-policies] [--quiet] [--compact]\n               [--framework FRAMEWORK [FRAMEWORK ...]]\n               [--skip-framework SKIP_FRAMEWORK [SKIP_FRAMEWORK ...]]\n               [-c CHECK] [--skip-check SKIP_CHECK]\n               [--run-all-external-checks] [-s] [--soft-fail-on SOFT_FAIL_ON]\n               [--hard-fail-on HARD_FAIL_ON] [--bc-api-key BC_API_KEY]\n               [--prisma-api-url PRISMA_API_URL] [--skip-results-upload]\n               [--docker-image DOCKER_IMAGE]\n               [--dockerfile-path DOCKERFILE_PATH] [--repo-id REPO_ID]\n               [-b BRANCH] [--skip-download] [--use-enforcement-rules]\n               [--download-external-modules DOWNLOAD_EXTERNAL_MODULES]\n               [--var-file VAR_FILE]\n               [--external-modules-download-path EXTERNAL_MODULES_DOWNLOAD_PATH]\n               [--evaluate-variables EVALUATE_VARIABLES] [-ca CA_CERTIFICATE]\n               [--no-cert-verify]\n               [--repo-root-for-plan-enrichment REPO_ROOT_FOR_PLAN_ENRICHMENT]\n               [--config-file CONFIG_FILE] [--create-config CREATE_CONFIG]\n               [--show-config] [--create-baseline] [--baseline BASELINE]\n               [--output-baseline-as-skipped]\n               [--skip-cve-package SKIP_CVE_PACKAGE]\n               [--policy-metadata-filter POLICY_METADATA_FILTER]\n               [--policy-metadata-filter-exception POLICY_METADATA_FILTER_EXCEPTION]\n               [--secrets-scan-file-type SECRETS_SCAN_FILE_TYPE]\n               [--enable-secret-scan-all-files]\n               [--block-list-secret-scan BLOCK_LIST_SECRET_SCAN]\n               [--summary-position {top,bottom}]\n               [--skip-resources-without-violations] [--deep-analysis]\n               [--no-fail-on-crash] [--mask MASK] [--scan-secrets-history]\n               [--secrets-history-timeout SECRETS_HISTORY_TIMEOUT]\n               [--custom-tool-name CUSTOM_TOOL_NAME]\n\nInfrastructure as code static analysis\n\noptions:\n  -h, --help            show this help message and exit\n  -v, --version         version\n  --support             Enable debug logs and upload the logs to the server.\n                        Requires a Bridgecrew or Prisma Cloud API key.\n  -d DIRECTORY, --directory DIRECTORY\n                        IaC root directory (can not be used together with\n                        --file).\n  --add-check           Generate a new check via CLI prompt\n  -f FILE [FILE ...], --file FILE [FILE ...]\n                        File to scan (can not be used together with\n                        --directory). With this option, Checkov will attempt\n                        to filter the runners based on the file type. For\n                        example, if you specify a \".tf\" file, only the\n                        terraform and secrets frameworks will be included. You\n                        can further limit this (e.g., skip secrets) by using\n                        the --skip-framework argument.\n  --skip-path SKIP_PATH\n                        Path (file or directory) to skip, using regular\n                        expression logic, relative to current working\n                        directory. Word boundaries are not implicit; i.e.,\n                        specifying \"dir1\" will skip any directory or\n                        subdirectory named \"dir1\". Ignored with -f. Can be\n                        specified multiple times.\n  --external-checks-dir EXTERNAL_CHECKS_DIR\n                        Directory for custom checks to be loaded. Can be\n                        repeated. Note that this will run Python code from the\n                        specified directory, so only use this option with\n                        trusted directories.\n  --external-checks-git EXTERNAL_CHECKS_GIT\n                        GitHub url of external checks to be added. You can\n                        specify a subdirectory after a double-slash //.It is\n                        ossible to use ?ref=tags/tagName or\n                        ?ref=heads/branchName or ?ref=commit_id and cannot be\n                        used together with --external-checks-dir. Note that\n                        this will run Python code from the specified\n                        directory, so only use this option with trusted\n                        repositories.\n  -l, --list            List checks\n  -o {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}, --output {cli,csv,cyclonedx,cyclonedx_json,json,junitxml,github_failed_only,gitlab_sast,sarif,spdx}\n                        Report output format. Add multiple outputs by using\n                        the flag multiple times (-o sarif -o cli)\n  --output-file-path OUTPUT_FILE_PATH\n                        Name of the output folder to save the chosen output\n                        formats. Advanced usage: By using -o cli -o junitxml\n                        --output-file-path console,results.xml the CLI output\n                        will be printed to the console and the JunitXML output\n                        to the file results.xml.\n  --output-bc-ids       Print Bridgecrew platform IDs (BC...) instead of\n                        Checkov IDs (CKV...), if the check exists in the\n                        platform\n  --include-all-checkov-policies\n                        When running with an API key, Checkov will omit any\n                        policies that do not exist in Prisma Cloud platform,\n                        except for local custom policies loaded with the\n                        --external-check flags. Use this key to include\n                        policies that only exist in Checkov in the scan. Note\n                        that this will make the local CLI results different\n                        from the results you see in the platform. Has no\n                        effect if you are not using an API key. Use the\n                        --check option to explicitly include checks by ID even\n                        if they are not in the platform, without using this\n                        flag.\n  --quiet               in case of CLI output, display only failed checks.\n                        Also disables progress bars\n  --compact             in case of CLI output, do not display code blocks\n  --framework FRAMEWORK [FRAMEWORK ...]\n                        Filter scan to run only on specific infrastructure as\n                        code frameworks. Defaults to all frameworks. If you\n                        explicitly include 'all' as a value, then all other\n                        values are ignored. Enter as a comma-separated list or\n                        repeat the flag multiple times. For example,\n                        --framework terraform,sca_package or --framework\n                        terraform --framework sca_package. Possible values:\n                        all, ansible, argo_workflows, arm, azure_pipelines,\n                        bicep, bitbucket_pipelines, cdk, circleci_pipelines,\n                        cloudformation, dockerfile, github_configuration,\n                        github_actions, gitlab_configuration, gitlab_ci,\n                        bitbucket_configuration, helm, json, yaml, kubernetes,\n                        kustomize, openapi, sca_package, sca_image, secrets,\n                        serverless, terraform, terraform_json, terraform_plan,\n                        sast, sast_python, sast_java, sast_javascript,\n                        sast_typescript, sast_golang, 3d_policy [env var:\n                        CKV_FRAMEWORK]\n  --skip-framework SKIP_FRAMEWORK [SKIP_FRAMEWORK ...]\n                        Filter scan to skip specific infrastructure as code\n                        frameworks. This will be included automatically for\n                        some frameworks if system dependencies are missing.\n                        Enter as a comma-separated list or repeat the flag\n                        multiple times. For example, --skip-framework\n                        terraform,sca_package or --skip-framework terraform\n                        --skip-framework sca_package. Cannot include values\n                        that are also included in --framework. Possible\n                        values: ansible, argo_workflows, arm, azure_pipelines,\n                        bicep, bitbucket_pipelines, cdk, circleci_pipelines,\n                        cloudformation, dockerfile, github_configuration,\n                        github_actions, gitlab_configuration, gitlab_ci,\n                        bitbucket_configuration, helm, json, yaml, kubernetes,\n                        kustomize, openapi, sca_package, sca_image, secrets,\n                        serverless, terraform, terraform_json, terraform_plan,\n                        sast, sast_python, sast_java, sast_javascript,\n                        sast_typescript, sast_golang, 3d_policy\n  -c CHECK, --check CHECK\n                        Checks to run; any other checks will be skipped. Enter\n                        one or more items separated by commas. Each item may\n                        be either a Checkov check ID (CKV_AWS_123), a BC check\n                        ID (BC_AWS_GENERAL_123), or a severity (LOW, MEDIUM,\n                        HIGH, CRITICAL). If you use a severity, then all\n                        checks equal to or above the lowest severity in the\n                        list will be included. This option can be combined\n                        with --skip-check. If it is, then the logic is to\n                        first take all checks that match this list, and then\n                        remove all checks that match the skip list. For\n                        example, if you use --check CKV_123 and --skip-check\n                        LOW, then CKV_123 will not run if it is a LOW\n                        severity. Similarly, if you use --check CKV_789\n                        --skip-check MEDIUM, then CKV_789 will run if it is a\n                        HIGH severity. If you use a check ID here along with\n                        an API key, and the check is not part of the BC / PC\n                        platform, then the check will still be run (see\n                        --include-all-checkov-policies for more info). [env\n                        var: CKV_CHECK]\n  --skip-check SKIP_CHECK\n                        Checks to skip; any other checks will not be run.\n                        Enter one or more items separated by commas. Each item\n                        may be either a Checkov check ID (CKV_AWS_123), a BC\n                        check ID (BC_AWS_GENERAL_123), or a severity (LOW,\n                        MEDIUM, HIGH, CRITICAL). If you use a severity, then\n                        all checks equal to or below the highest severity in\n                        the list will be skipped. This option can be combined\n                        with --check. If it is, priority is given to checks\n                        explicitly listed by ID or wildcard over checks listed\n                        by severity. For example, if you use --skip-check\n                        CKV_123 and --check HIGH, then CKV_123 will be skipped\n                        even if it is a HIGH severity. In the case of a tie\n                        (e.g., --check MEDIUM and --skip-check HIGH for a\n                        medium severity check), then the check will be\n                        skipped. [env var: CKV_SKIP_CHECK]\n  --run-all-external-checks\n                        Run all external checks (loaded via --external-checks\n                        options) even if the checks are not present in the\n                        --check list. This allows you to always ensure that\n                        new checks present in the external source are used. If\n                        an external check is included in --skip-check, it will\n                        still be skipped.\n  -s, --soft-fail       Runs checks but always returns a 0 exit code. Using\n                        either --soft-fail-on and / or --hard-fail-on\n                        overrides this option, except for the case when a\n                        result does not match either of the soft fail or hard\n                        fail criteria, in which case this flag determines the\n                        result.\n  --soft-fail-on SOFT_FAIL_ON\n                        Exits with a 0 exit code if only the specified items\n                        fail. Enter one or more items separated by commas.\n                        Each item may be either a Checkov check ID\n                        (CKV_AWS_123), a BC check ID (BC_AWS_GENERAL_123), or\n                        a severity (LOW, MEDIUM, HIGH, CRITICAL). If you use a\n                        severity, then any severity equal to or less than the\n                        highest severity in the list will result in a soft\n                        fail. This option may be used with --hard-fail-on,\n                        using the same priority logic described in --check and\n                        --skip-check options above, with --hard-fail-on taking\n                        precedence in a tie. If a given result does not meet\n                        the --soft-fail-on nor the --hard-fail-on criteria,\n                        then the default is to hard fail\n  --hard-fail-on HARD_FAIL_ON\n                        Exits with a non-zero exit code for specified checks.\n                        Enter one or more items separated by commas. Each item\n                        may be either a Checkov check ID (CKV_AWS_123), a BC\n                        check ID (BC_AWS_GENERAL_123), or a severity (LOW,\n                        MEDIUM, HIGH, CRITICAL). If you use a severity, then\n                        any severity equal to or greater than the lowest\n                        severity in the list will result in a hard fail. This\n                        option can be used with --soft-fail-on, using the same\n                        priority logic described in --check and --skip-check\n                        options above, with --hard-fail-on taking precedence\n                        in a tie.\n  --bc-api-key BC_API_KEY\n                        Bridgecrew API key or Prisma Cloud Access Key (see\n                        --prisma-api-url) [env var: BC_API_KEY]\n  --prisma-api-url PRISMA_API_URL\n                        The Prisma Cloud API URL (see:\n                        https://prisma.pan.dev/api/cloud/api-urls). Requires\n                        --bc-api-key to be a Prisma Cloud Access Key in the\n                        following format: <access_key_id>::<secret_key> [env\n                        var: PRISMA_API_URL]\n  --skip-results-upload\n                        Do not upload scan results to the platform to view in\n                        the console. Results are only available locally. If\n                        you use the --support flag, logs will still get\n                        uploaded.\n  --docker-image DOCKER_IMAGE, --image DOCKER_IMAGE\n                        Scan docker images by name or ID. Only works with\n                        --bc-api-key flag\n  --dockerfile-path DOCKERFILE_PATH\n                        Path to the Dockerfile of the scanned docker image\n  --repo-id REPO_ID     Identity string of the repository, with form\n                        <repo_owner>/<repo_name>. Required when using the\n                        platform integration (API key).\n  -b BRANCH, --branch BRANCH\n                        Selected branch of the persisted repository. Only has\n                        effect when using the --bc-api-key flag\n  --skip-download       Do not download any data from Prisma Cloud. This will\n                        omit doc links, severities, etc., as well as custom\n                        policies and suppressions if using an API token. Note:\n                        it will prevent BC platform IDs from being available\n                        in Checkov.\n  --use-enforcement-rules\n                        Use the Enforcement rules configured in the platform\n                        for hard / soft fail logic. With this option, the\n                        enforcement rule matching this repo, or the default\n                        rule if there is no match, will determine this\n                        behavior: any check with a severity below the selected\n                        rule's soft-fail threshold will be skipped; any check\n                        with a severity equal to or greater than the rule's\n                        hard-fail threshold will be part of the hard-fail\n                        list, and any check in between will be part of the\n                        soft-fail list. For example, if the given enforcement\n                        rule has a hard-fail value of HIGH and a soft-fail\n                        value of MEDIUM,this is the equivalent of using the\n                        flags `--skip-check LOW --hard-fail-on HIGH`. You can\n                        use --check, --skip-check, --soft-fail, --soft-fail-\n                        on, or --hard-fail-on to override portions of an\n                        enforcement rule. Note, however, that the logic of\n                        applying the --check list and then the --skip-check\n                        list (as described above under --check) still applies\n                        here. Requires a BC or PC platform API key.\n  --download-external-modules DOWNLOAD_EXTERNAL_MODULES\n                        download external terraform modules from public git\n                        repositories and terraform registry [env var:\n                        DOWNLOAD_EXTERNAL_MODULES]\n  --var-file VAR_FILE   Variable files to load in addition to the default\n                        files (see https://www.terraform.io/docs/language/valu\n                        es/variables.html#variable-definitions-tfvars-\n                        files).Currently only supported for source Terraform\n                        (.tf file), and Helm chart scans.Requires using\n                        --directory, not --file. [env var: CKV_VAR_FILE]\n  --external-modules-download-path EXTERNAL_MODULES_DOWNLOAD_PATH\n                        set the path for the download external terraform\n                        modules [env var: EXTERNAL_MODULES_DIR]\n  --evaluate-variables EVALUATE_VARIABLES\n                        evaluate the values of variables and locals [env var:\n                        CKV_EVAL_VARS]\n  -ca CA_CERTIFICATE, --ca-certificate CA_CERTIFICATE\n                        Custom CA certificate (bundle) file [env var:\n                        BC_CA_BUNDLE]\n  --no-cert-verify      Skip SSL certificate verification. Use this to bypass\n                        errors related to SSL certificates. Warning: this\n                        should only be used for testing purposes. Skipping\n                        certificate verification is dangerous as invalid and\n                        falsified certificates cannot be detected.\n  --repo-root-for-plan-enrichment REPO_ROOT_FOR_PLAN_ENRICHMENT\n                        Directory containing the hcl code used to generate a\n                        given plan file. Use with -f.\n  --config-file CONFIG_FILE\n                        path to the Checkov configuration YAML file\n  --create-config CREATE_CONFIG\n                        takes the current command line args and writes them\n                        out to a config file at the given path\n  --show-config         prints all args and config settings and where they\n                        came from (eg. commandline, config file, environment\n                        variable or default)\n  --create-baseline     Alongside outputting the findings, save all results to\n                        .checkov.baseline file so future runs will not re-flag\n                        the same noise. Works only with `--directory` flag\n  --baseline BASELINE   Use a .checkov.baseline file to compare current\n                        results with a known baseline. Report will include\n                        only failed checks that are new with respect to the\n                        provided baseline\n  --output-baseline-as-skipped\n                        output checks that are skipped due to baseline file\n                        presence\n  --skip-cve-package SKIP_CVE_PACKAGE\n                        filter scan to run on all packages but a specific\n                        package identifier (denylist), You can specify this\n                        argument multiple times to skip multiple packages\n  --policy-metadata-filter POLICY_METADATA_FILTER\n                        comma separated key:value string to filter policies\n                        based on Prisma Cloud policy metadata. When used with\n                        --policy-metadata-filter-exception, the exceptions\n                        override any policies selected asa result of the\n                        --policy-metadata-filter flag.See https://prisma.pan.d\n                        ev/api/cloud/cspm/policy#operation/get-policy-filters-\n                        and-options for information on allowed filters.\n                        Example:\n                        policy.label=label1,policy.label=label2,cloud.type=aws\n                        [env var: CKV_POLICY_METADATA_FILTER]\n  --policy-metadata-filter-exception POLICY_METADATA_FILTER_EXCEPTION\n                        comma separated key:value string to exclude filtered\n                        policies based on Prisma Cloud policy metadata. When\n                        used with --policy-metadata-filter, the exceptions\n                        override any policies selected asa result of the\n                        --policy-metadata-filter flag.See https://prisma.pan.d\n                        ev/api/cloud/cspm/policy#operation/get-policy-filters-\n                        and-options for information on allowed filters.\n                        Example:\n                        policy.label=label1,policy.label=label2,cloud.type=aws\n                        [env var: CKV_POLICY_METADATA_FILTER_EXCEPTION]\n  --secrets-scan-file-type SECRETS_SCAN_FILE_TYPE\n                        not in use [env var: CKV_SECRETS_SCAN_FILE_TYPE]\n  --enable-secret-scan-all-files\n                        enable secret scan for all files [env var:\n                        CKV_SECRETS_SCAN_ENABLE_ALL]\n  --block-list-secret-scan BLOCK_LIST_SECRET_SCAN\n                        List of files to filter out from the secret scanner\n                        [env var: CKV_SECRETS_SCAN_BLOCK_LIST]\n  --summary-position {top,bottom}\n                        Chose whether the summary will be appended on top\n                        (before the checks results) or on bottom (after check\n                        results), default is on top.\n  --skip-resources-without-violations\n                        exclude extra resources (resources without violations)\n                        from report output [env var:\n                        CKV_SKIP_RESOURCES_WITHOUT_VIOLATIONS]\n  --deep-analysis       Combine the TF Plan and TF graphs to make connections\n                        not available in either\n  --no-fail-on-crash    Return exit code 0 instead of 2 [env var:\n                        CKV_NO_FAIL_ON_CRASH]\n  --mask MASK           List of <resource_type>:<variable> OR <variable> only.\n                        Each entry in the list will be used formasking the\n                        desired attribute for resource (or for all resources,\n                        if no resource given).Notice: one entry can contain\n                        several variables, separated with a comma. For\n                        example:<resource_type>:<variable1>,<variable2> OR\n                        <variable1>,<variable2>\n  --scan-secrets-history\n                        will scan the history of commits for secrets\n  --secrets-history-timeout SECRETS_HISTORY_TIMEOUT\n                        maximum time to stop the scan\n  --custom-tool-name CUSTOM_TOOL_NAME\n                        Add a tool name if you want your output to be tagged\n                        with a specific tool name,this is useful when\n                        integrating with other tools such as uploading SARIF\n                        files to github code scanning\n\nArgs that start with '--' can also be set in a config file (/.checkov.yaml or\n/.checkov.yml or /root/.checkov.yaml or /root/.checkov.yml or specified via\n--config-file). The config file uses YAML syntax and must represent a YAML\n'mapping' (for details, see http://learn.getgrav.org/advanced/yaml). In\ngeneral, command-line values override environment variables which override\nconfig file values which override defaults.",
+  "aliases": []
+}

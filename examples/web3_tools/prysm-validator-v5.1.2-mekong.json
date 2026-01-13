@@ -1,0 +1,1259 @@
+{
+  "name": "prysm-validator",
+  "version": "v5.1.2-mekong",
+  "description": "Launches an Ethereum validator client that interacts with a beacon chain, starts proposer and attester services, p2p connections, and more.",
+  "usage": "validator [options] command [command options] [arguments...]",
+  "subcommands": [
+    {
+      "name": "prysm-validator accounts",
+      "description": "Defines commands for interacting with Ethereum validator accounts.",
+      "usage": "validator accounts command [command options] [arguments...]",
+      "subcommands": [
+        {
+          "name": "prysm-validator accounts backup",
+          "description": "backup accounts into EIP-2335 compliant keystore.json files zipped into a backup.zip file at a desired output directory. Accounts to backup can also be specified programmatically via a --backup-for-public-keys flag which specifies a comma-separated list of hex string public keys",
+          "usage": "validator accounts backup [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": "false"
+            },
+            {
+              "option": "--backup-dir",
+              "description": "Path to a directory where accounts will be backed up into a zip file.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators"
+            },
+            {
+              "option": "--backup-password-file",
+              "description": "Path to a plain-text, .txt file containing the desired password for your backed up accounts.",
+              "value": "value"
+            },
+            {
+              "option": "--backup-public-keys",
+              "description": "Comma separated list of public key hex strings to specify which validator accounts to backup.",
+              "value": "value"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": "false"
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": "true"
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": "false"
+            },
+            {
+              "option": "--wallet-dir",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "description": "Path to a plain-text, .txt file containing your wallet password.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator accounts delete",
+          "description": "deletes the selected accounts from a users wallet.",
+          "usage": "validator accounts delete [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": "false"
+            },
+            {
+              "option": "--delete-public-keys",
+              "description": "Comma separated list of public key hex strings to specify which validator accounts to delete.",
+              "value": "value"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": "false"
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": "true"
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": "false"
+            },
+            {
+              "option": "--wallet-dir",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "value": "value",
+              "default": "\"/home/ahmad/.eth2validators/prysm-wallet-v2\""
+            },
+            {
+              "option": "--wallet-password-file",
+              "description": "Path to a plain-text, .txt file containing your wallet password.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator accounts import",
+          "description": "imports Ethereum validator accounts stored in EIP-2335 keystore.json files from an external directory",
+          "usage": "validator accounts import [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": false
+            },
+            {
+              "option": "--account-password-file",
+              "description": "Path to a plain-text, .txt file containing a password for a validator account.",
+              "value": "value"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": false
+            },
+            {
+              "option": "--import-private-key-file",
+              "description": "Path to a plain-text, .txt file containing a hex string representation of a private key to import.",
+              "value": "value"
+            },
+            {
+              "option": "--keys-dir",
+              "description": "Path to a directory where keystores to be imported are stored.",
+              "value": "value"
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": true
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": false
+            },
+            {
+              "option": "--wallet-dir",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "description": "Path to a plain-text, .txt file containing your wallet password.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator accounts list",
+          "description": "Lists all validator accounts in a user's wallet directory",
+          "usage": "validator accounts list [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": "false"
+            },
+            {
+              "option": "--beacon-rpc-provider",
+              "description": "Beacon node RPC provider endpoint.",
+              "value": "value",
+              "default": "127.0.0.1:4000"
+            },
+            {
+              "option": "--grpc-headers",
+              "description": "Comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value",
+              "value": "value"
+            },
+            {
+              "option": "--grpc-max-msg-size",
+              "description": "Integer to define max receive message call size (in bytes). If serving a public gRPC server, set this to a more reasonable size to avoid resource exhaustion from large messages. Validators with as many as 10000 keys can be run with a max message size of less than 50Mb. The default here is set to a very high value for local users.",
+              "value": "value",
+              "default": "2147483647"
+            },
+            {
+              "option": "--grpc-retries",
+              "description": "Number of attempts to retry gRPC requests.",
+              "value": "value",
+              "default": "5"
+            },
+            {
+              "option": "--grpc-retry-delay",
+              "description": "Amount of time between gRPC retry requests.",
+              "value": "value",
+              "default": "1s"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": "false"
+            },
+            {
+              "option": "--list-validator-indices",
+              "description": "Lists validator indices.",
+              "default": "false"
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": "true"
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": "false"
+            },
+            {
+              "option": "--show-private-keys",
+              "description": "Displays the private keys for validator accounts.",
+              "default": "false"
+            },
+            {
+              "option": "--tls-cert",
+              "description": "Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.",
+              "value": "value"
+            },
+            {
+              "option": "--wallet-dir",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "description": "Path to a plain-text, .txt file containing your wallet password.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator accounts voluntary-exit",
+          "description": "Performs a voluntary exit on selected accounts",
+          "usage": "validator accounts voluntary-exit [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": false
+            },
+            {
+              "option": "--account-password-file",
+              "value": "value",
+              "description": "Path to a plain-text, .txt file containing a password for a validator account."
+            },
+            {
+              "option": "--beacon-rpc-provider",
+              "value": "value",
+              "description": "Beacon node RPC provider endpoint.",
+              "default": "127.0.0.1:4000"
+            },
+            {
+              "option": "--exit-all",
+              "description": "Exits all validators. This will still require the staker to confirm a userprompt for the action.",
+              "default": false
+            },
+            {
+              "option": "--exit-json-output-dir",
+              "value": "value",
+              "description": "Output directory to write voluntary exits as individual unencrypted JSON files. If this flag is provided, voluntary exits will be written to the provided directory and will not be broadcasted."
+            },
+            {
+              "option": "--force-exit",
+              "description": "Exits without displaying the confirmation prompt.",
+              "default": false
+            },
+            {
+              "option": "--grpc-headers",
+              "value": "value",
+              "description": "Comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value"
+            },
+            {
+              "option": "--grpc-max-msg-size",
+              "value": "value",
+              "description": "Integer to define max receive message call size (in bytes). If serving a public gRPC server, set this to a more reasonable size to avoid resource exhaustion from large messages. Validators with as many as 10000 keys can be run with a max message size of less than 50Mb. The default here is set to a very high value for local users.",
+              "default": 2147483647
+            },
+            {
+              "option": "--grpc-retries",
+              "value": "value",
+              "description": "Number of attempts to retry gRPC requests.",
+              "default": 5
+            },
+            {
+              "option": "--grpc-retry-delay",
+              "value": "value",
+              "description": "Amount of time between gRPC retry requests.",
+              "default": "1s"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": false
+            },
+            {
+              "option": "--interop-num-validators",
+              "value": "value",
+              "description": "Number of validators to deterministically generate. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7.",
+              "default": 0
+            },
+            {
+              "option": "--interop-start-index",
+              "value": "value",
+              "description": "Start index to deterministically generate validator keys when used in combination with --interop-num-validators. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7.",
+              "default": 0
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": true
+            },
+            {
+              "option": "--public-keys",
+              "value": "value",
+              "description": "Comma separated list of public key hex strings to specify on which validator accounts to perform a voluntary exit."
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": false
+            },
+            {
+              "option": "--tls-cert",
+              "value": "value",
+              "description": "Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely."
+            },
+            {
+              "option": "--validators-external-signer-public-keys",
+              "shortcut": "--remote-signer-keys",
+              "value": "value",
+              "description": "Comma separated list of public keys OR an external url endpoint for the validator to retrieve public keys from for usage with web3signer."
+            },
+            {
+              "option": "--validators-external-signer-url",
+              "shortcut": "--remote-signer-url",
+              "value": "value",
+              "description": "URL for consensys' web3signer software to use with the Prysm validator client."
+            },
+            {
+              "option": "--wallet-dir",
+              "value": "value",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "value": "value",
+              "description": "Path to a plain-text, .txt file containing your wallet password."
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help"
+        }
+      ]
+    },
+    {
+      "name": "prysm-validator db",
+      "description": "Defines commands for interacting with the Prysm validator database.",
+      "usage": "validator db command [command options] [arguments...]",
+      "subcommands": [
+        {
+          "name": "prysm-validator db convert-complete-to-minimal",
+          "description": "Convert a complete EIP-3076 slashing protection to a minimal one",
+          "usage": "validator db convert-complete-to-minimal [command options] [arguments...]",
+          "options": [
+            {
+              "description": "show help",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "Source data directory",
+              "option": "--source-data-dir",
+              "value": "value"
+            },
+            {
+              "description": "Target data directory",
+              "option": "--target-data-dir",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator db migrate",
+          "description": "Defines commands for running validator database migrations",
+          "usage": "validator db migrate command [command options] [arguments...]",
+          "subcommands": [
+            {
+              "name": "prysm-validator db migrate down",
+              "description": "Runs down migrations for the validator database",
+              "usage": "validator db migrate down [command options] [arguments...]",
+              "options": [
+                {
+                  "option": "--datadir",
+                  "description": "Data directory for the databases.",
+                  "value": "value",
+                  "default": "/home/ahmad/.eth2"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "show help"
+                }
+              ],
+              "subcommands": []
+            },
+            {
+              "name": "prysm-validator db migrate up",
+              "description": "Runs up migrations for the validator database",
+              "usage": "validator db migrate up [command options] [arguments...]",
+              "options": [
+                {
+                  "option": "--datadir",
+                  "description": "Data directory for the databases.",
+                  "value": "value",
+                  "default": "/home/ahmad/.eth2"
+                },
+                {
+                  "option": "--help",
+                  "shortcut": "-h",
+                  "description": "show help"
+                }
+              ],
+              "subcommands": []
+            }
+          ],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            }
+          ]
+        },
+        {
+          "name": "prysm-validator db restore",
+          "description": "restores a database from a backup file",
+          "usage": "validator db restore [command options] [arguments...]",
+          "options": [
+            {
+              "description": "show help",
+              "option": "--help",
+              "shortcut": "-h"
+            },
+            {
+              "description": "Filepath to the backed-up database file which will be used to restore the database",
+              "option": "--restore-source-file",
+              "value": "value"
+            },
+            {
+              "default": "/home/ahmad/.eth2",
+              "description": "Target directory of the restored database",
+              "option": "--restore-target-dir",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help"
+        }
+      ]
+    },
+    {
+      "name": "prysm-validator slashing-protection-history",
+      "description": "Defines commands for interacting your validator's slashing protection history.",
+      "usage": "validator slashing-protection-history command [command options] [arguments...]",
+      "subcommands": [
+        {
+          "name": "prysm-validator slashing-protection-history export",
+          "description": "exports your validator slashing protection history into an EIP-3076 compliant JSON",
+          "usage": "validator slashing-protection-history export [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": false
+            },
+            {
+              "option": "--datadir",
+              "description": "Data directory for the databases.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2"
+            },
+            {
+              "option": "--enable-minimal-slashing-protection",
+              "description": "(Experimental): Enables the minimal slashing protection. See EIP-3076 for more details.",
+              "default": false
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": false
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": true
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": false
+            },
+            {
+              "option": "--slashing-protection-export-dir",
+              "description": "Allows users to specify the output directory to export their slashing protection EIP-3076 standard JSON File.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator slashing-protection-history import",
+          "description": "imports a selected EIP-3076 compliant slashing protection JSON to the validator database",
+          "usage": "validator slashing-protection-history import [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": false
+            },
+            {
+              "option": "--datadir",
+              "description": "Data directory for the databases.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2"
+            },
+            {
+              "option": "--enable-minimal-slashing-protection",
+              "description": "(Experimental): Enables the minimal slashing protection. See EIP-3076 for more details.",
+              "default": false
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": false
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": true
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": false
+            },
+            {
+              "option": "--slashing-protection-json-file",
+              "description": "Path to an EIP-3076 compliant JSON file containing a user's slashing protection history.",
+              "value": "value"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help"
+        }
+      ]
+    },
+    {
+      "name": "prysm-validator wallet",
+      "description": "Defines commands for interacting with Ethereum validator wallets.",
+      "usage": "validator wallet command [command options] [arguments...]",
+      "subcommands": [
+        {
+          "name": "prysm-validator wallet create",
+          "description": "creates a new wallet with a desired type of keymanager: either on-disk (imported), derived, or using remote credentials",
+          "usage": "validator wallet create [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": "false"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": "false"
+            },
+            {
+              "option": "--keymanager-kind",
+              "value": "value",
+              "description": "Kind of keymanager, either imported, derived, or remote, specified during wallet creation."
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": "true"
+            },
+            {
+              "option": "--mnemonic-25th-word-file",
+              "value": ".txt",
+              "description": "(Advanced) Path to a plain-text, .txt file containing a 25th word passphrase for your mnemonic for HD wallets."
+            },
+            {
+              "option": "--remote-signer-ca-crt-path",
+              "value": "value",
+              "description": "/path/to/ca.crt for establishing a secure, TLS gRPC connection to a remote signer server."
+            },
+            {
+              "option": "--remote-signer-crt-path",
+              "value": "value",
+              "description": "/path/to/client.crt for establishing a secure, TLS gRPC connection to a remote signer server."
+            },
+            {
+              "option": "--remote-signer-key-path",
+              "value": "value",
+              "description": "/path/to/client.key for establishing a secure, TLS gRPC connection to a remote signer server."
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": "false"
+            },
+            {
+              "option": "--skip-mnemonic-25th-word-check",
+              "value": "value",
+              "description": "Allows for skipping the check for a mnemonic 25th word passphrase for HD wallets."
+            },
+            {
+              "option": "--wallet-dir",
+              "value": "value",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "value": "value",
+              "description": "Path to a plain-text, .txt file containing your wallet password."
+            }
+          ],
+          "subcommands": []
+        },
+        {
+          "name": "prysm-validator wallet recover",
+          "description": "uses a derived wallet seed recovery phase to recreate an existing HD wallet",
+          "usage": "validator wallet recover [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": false
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--holesky",
+              "description": "Runs Prysm configured for the Holesky test network.",
+              "default": false
+            },
+            {
+              "option": "--mainnet",
+              "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+              "default": true
+            },
+            {
+              "option": "--mnemonic-25th-word-file",
+              "value": ".txt",
+              "description": "(Advanced) Path to a plain-text, .txt file containing a 25th word passphrase for your mnemonic for HD wallets."
+            },
+            {
+              "option": "--mnemonic-file",
+              "value": "value",
+              "description": "File to retrieve mnemonic for non-interactively passing a mnemonic phrase into wallet recover."
+            },
+            {
+              "option": "--num-accounts",
+              "value": "value",
+              "description": "Number of accounts to generate for derived wallets.",
+              "default": 1
+            },
+            {
+              "option": "--sepolia",
+              "description": "Runs Prysm configured for the Sepolia test network.",
+              "default": false
+            },
+            {
+              "option": "--skip-mnemonic-25th-word-check",
+              "value": "value",
+              "description": "Allows for skipping the check for a mnemonic 25th word passphrase for HD wallets."
+            },
+            {
+              "option": "--wallet-dir",
+              "value": "value",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            },
+            {
+              "option": "--wallet-password-file",
+              "value": "value",
+              "description": "Path to a plain-text, .txt file containing your wallet password."
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help"
+        }
+      ]
+    },
+    {
+      "name": "prysm-validator web",
+      "description": "Defines commands for interacting with the Prysm web interface.",
+      "usage": "validator web command [command options] [arguments...]",
+      "subcommands": [
+        {
+          "name": "prysm-validator web generate-auth-token",
+          "description": "Generate an authentication token for the Prysm web interface",
+          "usage": "validator web generate-auth-token [command options] [arguments...]",
+          "options": [
+            {
+              "option": "--accept-terms-of-use",
+              "description": "Accepts Terms and Conditions (for non-interactive environments).",
+              "default": "false"
+            },
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "show help"
+            },
+            {
+              "option": "--http-host",
+              "shortcut": "--grpc-gateway-host",
+              "description": "Host on which the HTTP server runs on.",
+              "value": "value",
+              "default": "127.0.0.1"
+            },
+            {
+              "option": "--http-port",
+              "shortcut": "--grpc-gateway-port",
+              "description": "Port on which the HTTP server runs on.",
+              "value": "value",
+              "default": "7500"
+            },
+            {
+              "option": "--keymanager-token-file",
+              "shortcut": "--validator-api-bearer-file",
+              "description": "Path to auth token file used for validator apis.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2/auth-token"
+            },
+            {
+              "option": "--wallet-dir",
+              "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+              "value": "value",
+              "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+            }
+          ],
+          "subcommands": []
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "option": "--accept-terms-of-use",
+      "description": "Accepts Terms and Conditions (for non-interactive environments).",
+      "default": false
+    },
+    {
+      "option": "--api-timeout",
+      "description": "Specifies the timeout value for API requests in seconds.",
+      "value": "value",
+      "default": "10s"
+    },
+    {
+      "option": "--attest-timely",
+      "description": "Fixes validator can attest timely after current block processes. See #8185 for more details.",
+      "default": false
+    },
+    {
+      "option": "--beacon-rest-api-provider",
+      "description": "Beacon node REST API provider endpoint.",
+      "value": "value",
+      "default": "http://127.0.0.1:3500"
+    },
+    {
+      "option": "--beacon-rpc-provider",
+      "description": "Beacon node RPC provider endpoint.",
+      "value": "value",
+      "default": "127.0.0.1:4000"
+    },
+    {
+      "option": "--blockprofilerate",
+      "description": "Turns on block profiling with the given rate.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--chain-config-file",
+      "description": "Path to a YAML file with chain config values.",
+      "value": "value"
+    },
+    {
+      "option": "--clear-db",
+      "description": "Prompt for clearing any previously stored data at the data directory.",
+      "default": false
+    },
+    {
+      "option": "--config-file",
+      "description": "Filepath to a yaml file with flag values.",
+      "value": "value"
+    },
+    {
+      "option": "--cpuprofile",
+      "description": "Writes CPU profile to the given file.",
+      "value": "value"
+    },
+    {
+      "option": "--datadir",
+      "description": "Data directory for the databases.",
+      "value": "value",
+      "default": "/home/ahmad/.eth2"
+    },
+    {
+      "option": "--db-backup-output-dir",
+      "description": "Output directory for db backups.",
+      "value": "value"
+    },
+    {
+      "option": "--disable-account-metrics",
+      "description": "Disables prometheus metrics for validator accounts. Operators with high volumes of validating keys may wish to disable granular prometheus metrics as it increases the data cardinality.",
+      "default": false
+    },
+    {
+      "option": "--disable-monitoring",
+      "description": "Disables monitoring service.",
+      "default": false
+    },
+    {
+      "option": "--disable-rewards-penalties-logging",
+      "description": "Disables reward/penalty logging during cluster deployment.",
+      "default": false
+    },
+    {
+      "option": "--distributed",
+      "description": "To enable the use of prysm validator client in Distributed Validator Cluster",
+      "default": false
+    },
+    {
+      "option": "--dynamic-key-reload-debounce-interval",
+      "description": "(Advanced): Specifies the time duration the validator waits to reload new keys if they have changed on disk. Can be any type of duration such as 1.5s, 1000ms, 1m.",
+      "value": "value",
+      "default": "1s"
+    },
+    {
+      "option": "--e2e-config",
+      "description": "Enables the E2E testing config, only for use within end-to-end testing.",
+      "default": false
+    },
+    {
+      "option": "--enable-beacon-rest-api",
+      "description": "(Experimental): Enables of the beacon REST API when querying a beacon node.",
+      "default": false
+    },
+    {
+      "option": "--enable-builder",
+      "shortcut": "--enable-validator-registration",
+      "description": "Enables builder validator registration APIs for the validator client to update settings such as fee recipient and gas limit. This flag is not required if using proposer settings config file.",
+      "default": false
+    },
+    {
+      "option": "--enable-db-backup-webhook",
+      "description": "Serves HTTP handler to initiate database backups. The handler is served on the monitoring port at path /db/backup.",
+      "default": false
+    },
+    {
+      "option": "--enable-doppelganger",
+      "description": "Enables the validator to perform a doppelganger check. This is not a foolproof method to find duplicate instances in the network. Your validator will still be vulnerable if it is being run in unsafe configurations.",
+      "default": false
+    },
+    {
+      "option": "--enable-minimal-slashing-protection",
+      "description": "(Experimental): Enables the minimal slashing protection. See EIP-3076 for more details.",
+      "default": false
+    },
+    {
+      "option": "--enable-slashing-protection-history-pruning",
+      "description": "Enables the pruning of the validator client's slashing protection database.",
+      "default": false
+    },
+    {
+      "option": "--enable-tracing",
+      "description": "Enables request tracing.",
+      "default": false
+    },
+    {
+      "option": "--force-clear-db",
+      "description": "Clears any previously stored data at the data directory.",
+      "default": false
+    },
+    {
+      "option": "--graffiti",
+      "description": "String to include in proposed blocks.",
+      "value": "value"
+    },
+    {
+      "option": "--graffiti-file",
+      "description": "Path to a YAML file with graffiti values.",
+      "value": "value"
+    },
+    {
+      "option": "--grpc-headers",
+      "description": "Comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value",
+      "value": "value"
+    },
+    {
+      "option": "--grpc-max-msg-size",
+      "description": "Integer to define max receive message call size (in bytes). If serving a public gRPC server, set this to a more reasonable size to avoid resource exhaustion from large messages. Validators with as many as 10000 keys can be run with a max message size of less than 50Mb. The default here is set to a very high value for local users.",
+      "value": "value",
+      "default": 2147483647
+    },
+    {
+      "option": "--grpc-retries",
+      "description": "Number of attempts to retry gRPC requests.",
+      "value": "value",
+      "default": 5
+    },
+    {
+      "option": "--grpc-retry-delay",
+      "description": "Amount of time between gRPC retry requests.",
+      "value": "value",
+      "default": "1s"
+    },
+    {
+      "option": "--holesky",
+      "description": "Runs Prysm configured for the Holesky test network.",
+      "default": false
+    },
+    {
+      "option": "--http-cors-domain",
+      "shortcut": "--grpc-gateway-corsdomain",
+      "description": "Comma separated list of domains from which to accept cross origin requests (browser enforced).",
+      "value": "value",
+      "default": "http://localhost:7500,http://127.0.0.1:7500,http://0.0.0.0:7500,http://localhost:4242,http://127.0.0.1:4242,http://localhost:4200,http://0.0.0.0:4242,http://127.0.0.1:4200,http://0.0.0.0:4200,http://localhost:3000,http://0.0.0.0:3000,http://127.0.0.1:3000"
+    },
+    {
+      "option": "--http-host",
+      "shortcut": "--grpc-gateway-host",
+      "description": "Host on which the HTTP server runs on.",
+      "value": "value",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--http-port",
+      "shortcut": "--grpc-gateway-port",
+      "description": "Port on which the HTTP server runs on.",
+      "value": "value",
+      "default": 7500
+    },
+    {
+      "option": "--interop-num-validators",
+      "description": "Number of validators to deterministically generate. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--interop-start-index",
+      "description": "Start index to deterministically generate validator keys when used in combination with --interop-num-validators. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--keymanager-token-file",
+      "shortcut": "--validator-api-bearer-file",
+      "description": "Path to auth token file used for validator apis.",
+      "value": "value",
+      "default": "/home/ahmad/.eth2validators/prysm-wallet-v2/auth-token"
+    },
+    {
+      "option": "--log-file",
+      "description": "Specifies log file name, relative or absolute.",
+      "value": "value"
+    },
+    {
+      "option": "--log-format",
+      "description": "Specifies log formatting. Supports: text, json, fluentd, journald.",
+      "value": "value",
+      "default": "text"
+    },
+    {
+      "option": "--mainnet",
+      "description": "Runs on Ethereum main network. This is the default and can be omitted.",
+      "default": true
+    },
+    {
+      "option": "--memprofilerate",
+      "description": "Turns on memory profiling with the given rate.",
+      "value": "value",
+      "default": 524288
+    },
+    {
+      "option": "--mekong",
+      "description": "Runs Prysm configured for the Mekong test network.",
+      "default": false
+    },
+    {
+      "option": "--minimal-config",
+      "description": "Uses minimal config with parameters as defined in the spec.",
+      "default": false
+    },
+    {
+      "option": "--monitoring-host",
+      "description": "Host used for listening and responding metrics for prometheus.",
+      "value": "value",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--monitoring-port",
+      "description": "Port used to listening and respond metrics for Prometheus.",
+      "value": "value",
+      "default": 8081
+    },
+    {
+      "option": "--mutexprofilefraction",
+      "description": "Turns on mutex profiling with the given rate.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--pprof",
+      "description": "Enables the pprof HTTP server.",
+      "default": false
+    },
+    {
+      "option": "--pprofaddr",
+      "description": "pprof HTTP server listening interface.",
+      "value": "value",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--pprofport",
+      "description": "pprof HTTP server listening port.",
+      "value": "value",
+      "default": 6060
+    },
+    {
+      "option": "--proposer-settings-file",
+      "description": "Sets path to a YAML or JSON file containing validator settings used when proposing blocks such as fee recipient and gas limit. File format found in docs.",
+      "value": "value"
+    },
+    {
+      "option": "--proposer-settings-url",
+      "description": "Sets URL to a REST endpoint containing validator settings used when proposing blocks such as fee recipient and gas limit. File format found in docs.",
+      "value": "value"
+    },
+    {
+      "option": "--rpc",
+      "description": "Enables the RPC server for the validator client (without Web UI).",
+      "default": false
+    },
+    {
+      "option": "--rpc-host",
+      "description": "Host on which the RPC server should listen.",
+      "value": "value",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--rpc-port",
+      "description": "RPC port exposed by a validator client.",
+      "value": "value",
+      "default": 7000
+    },
+    {
+      "option": "--sepolia",
+      "description": "Runs Prysm configured for the Sepolia test network.",
+      "default": false
+    },
+    {
+      "option": "--slasher-rpc-provider",
+      "description": "Slasher node RPC provider endpoint.",
+      "value": "value",
+      "default": "127.0.0.1:4002"
+    },
+    {
+      "option": "--slasher-tls-cert",
+      "description": "Certificate for secure slasher gRPC. Pass this and the tls-key flag in order to use gRPC securely.",
+      "value": "value"
+    },
+    {
+      "option": "--suggested-fee-recipient",
+      "description": "Sets ALL validators' mapping to a suggested eth address to receive gas fees when proposing a block. Note that this is only a suggestion when integrating with a Builder API, which may choose to specify a different fee recipient as payment for the blocks it builds.For additional setting overrides use the --proposer-settings-file or --proposer-settings-url flags.",
+      "value": "value",
+      "default": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "option": "--suggested-gas-limit",
+      "description": "Sets gas limit for the builder to use for constructing a payload for all the validators.",
+      "value": "value",
+      "default": "30000000"
+    },
+    {
+      "option": "--tls-cert",
+      "description": "Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.",
+      "value": "value"
+    },
+    {
+      "option": "--trace",
+      "description": "Writes execution trace to the given file.",
+      "value": "value"
+    },
+    {
+      "option": "--trace-sample-fraction",
+      "description": "Indicates what fraction of p2p messages are sampled for tracing.",
+      "value": "value",
+      "default": 0.2
+    },
+    {
+      "option": "--tracing-endpoint",
+      "description": "Tracing endpoint defines where beacon chain traces are exposed to Jaeger.",
+      "value": "value",
+      "default": "http://127.0.0.1:14268/api/traces"
+    },
+    {
+      "option": "--tracing-process-name",
+      "description": "Name to apply to tracing tag process_name.",
+      "value": "process_name"
+    },
+    {
+      "option": "--validators-external-signer-key-file",
+      "shortcut": "--remote-signer-keys-file",
+      "description": "A file path used to load remote public validator keys and persist them through restarts.",
+      "value": "value"
+    },
+    {
+      "option": "--validators-external-signer-public-keys",
+      "shortcut": "--remote-signer-keys",
+      "description": "Comma separated list of public keys OR an external url endpoint for the validator to retrieve public keys from for usage with web3signer.",
+      "value": "value"
+    },
+    {
+      "option": "--validators-external-signer-url",
+      "shortcut": "--remote-signer-url",
+      "description": "URL for consensys' web3signer software to use with the Prysm validator client.",
+      "value": "value"
+    },
+    {
+      "option": "--validators-registration-batch-size",
+      "description": "Sets the maximum size for one batch of validator registrations. Use a non-positive value to disable batching.",
+      "value": "value",
+      "default": 0
+    },
+    {
+      "option": "--verbosity",
+      "description": "Logging verbosity. (trace, debug, info, warn, error, fatal, panic)",
+      "value": "value",
+      "default": "info"
+    },
+    {
+      "option": "--wallet-dir",
+      "description": "Path to a wallet directory on-disk for Prysm validator accounts.",
+      "value": "value",
+      "default": "/home/ahmad/.eth2validators/prysm-wallet-v2"
+    },
+    {
+      "option": "--wallet-password-file",
+      "description": "Path to a plain-text, .txt file containing your wallet password.",
+      "value": "value"
+    },
+    {
+      "option": "--web",
+      "description": "(Work in progress): Enables the web portal for the validator client.",
+      "default": false
+    },
+    {
+      "option": "--write-wallet-password-on-web-onboarding",
+      "description": "(Danger): Writes the wallet password to the wallet directory on completing Prysm web onboarding. We recommend against this flag unless you are an advanced user.",
+      "default": false
+    }
+  ]
+}

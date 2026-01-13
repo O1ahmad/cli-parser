@@ -1,0 +1,457 @@
+{
+  "name": "ansible-vault",
+  "version": "2.18.6",
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--encrypt-vault-id",
+          "shortcut": null,
+          "description": "the vault id used to encrypt (required if more than one vault-id is provided)",
+          "value": "ENCRYPT_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--skip-tty-check",
+          "shortcut": null,
+          "description": "allows editor to be opened when no tty attached",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "-J",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "--ask-vault-password",
+          "shortcut": "-J",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--ask-vault-pass",
+          "shortcut": "-J",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-pass-file",
+          "shortcut": null,
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault create",
+      "raw_help_text": "usage: ansible-vault create [-h] [--encrypt-vault-id ENCRYPT_VAULT_ID]\n                            [--vault-id VAULT_IDS]\n                            [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                            [-v] [--skip-tty-check]\n                            [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --encrypt-vault-id ENCRYPT_VAULT_ID\n                        the vault id used to encrypt (required if more than\n                        one vault-id is provided)\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  --skip-tty-check      allows editor to be opened when no tty attached",
+      "description": "Create new vault encrypted file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--output",
+          "shortcut": null,
+          "description": "output file name for encrypt or decrypt; use - for stdout",
+          "value": "OUTPUT_FILE",
+          "default": null
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "-J",
+          "shortcut": "--ask-vault-password",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "--vault-pass-file",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "-v",
+          "shortcut": "--verbose",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault decrypt",
+      "raw_help_text": "usage: ansible-vault decrypt [-h] [--output OUTPUT_FILE]\n                             [--vault-id VAULT_IDS]\n                             [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                             [-v]\n                             [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT_FILE  output file name for encrypt or decrypt; use - for\n                        stdout\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.",
+      "description": "Decrypt vault encrypted file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--encrypt-vault-id",
+          "shortcut": null,
+          "description": "the vault id used to encrypt (required if more than one vault-id is provided)",
+          "value": "ENCRYPT_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "-J",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "--ask-vault-password",
+          "shortcut": "-J",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-pass-file",
+          "shortcut": null,
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "-h",
+          "shortcut": null,
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-v",
+          "shortcut": null,
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault edit",
+      "raw_help_text": "usage: ansible-vault edit [-h] [--encrypt-vault-id ENCRYPT_VAULT_ID]\n                          [--vault-id VAULT_IDS]\n                          [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                          [-v]\n                          [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --encrypt-vault-id ENCRYPT_VAULT_ID\n                        the vault id used to encrypt (required if more than\n                        one vault-id is provided)\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.",
+      "description": "Edit vault encrypted file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--encrypt-vault-id",
+          "shortcut": null,
+          "description": "the vault id used to encrypt (required if more than one vault-id is provided)",
+          "value": "ENCRYPT_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--output",
+          "shortcut": null,
+          "description": "output file name for encrypt or decrypt; use - for stdout",
+          "value": "OUTPUT_FILE",
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "-J",
+          "shortcut": "--ask-vault-password",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "--vault-pass-file",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "-v",
+          "shortcut": "--verbose",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault encrypt",
+      "raw_help_text": "usage: ansible-vault encrypt [-h] [--vault-id VAULT_IDS]\n                             [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                             [-v] [--output OUTPUT_FILE]\n                             [--encrypt-vault-id ENCRYPT_VAULT_ID]\n                             [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  --output OUTPUT_FILE  output file name for encrypt or decrypt; use - for\n                        stdout\n  --encrypt-vault-id ENCRYPT_VAULT_ID\n                        the vault id used to encrypt (required if more than\n                        one vault-id is provided)",
+      "description": "Encrypt YAML file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "-J",
+          "shortcut": "--ask-vault-password",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "--vault-pass-file",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "-h",
+          "shortcut": "--help",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-v",
+          "shortcut": "--verbose",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--output",
+          "shortcut": null,
+          "description": "output file name for encrypt or decrypt; use - for stdout",
+          "value": "OUTPUT_FILE",
+          "default": null
+        },
+        {
+          "option": "--encrypt-vault-id",
+          "shortcut": null,
+          "description": "the vault id used to encrypt (required if more than one vault-id is provided)",
+          "value": "ENCRYPT_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "-p",
+          "shortcut": "--prompt",
+          "description": "Prompt for the string to encrypt",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--show-input",
+          "shortcut": null,
+          "description": "Do not hide input when prompted for the string to encrypt",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-n",
+          "shortcut": "--name",
+          "description": "Specify the variable name. This argument may be specified multiple times.",
+          "value": "ENCRYPT_STRING_NAMES",
+          "default": null
+        },
+        {
+          "option": "--stdin-name",
+          "shortcut": null,
+          "description": "Specify the variable name for stdin",
+          "value": "ENCRYPT_STRING_STDIN_NAME",
+          "default": null
+        }
+      ],
+      "name": "ansible-vault encrypt_string",
+      "raw_help_text": "usage: ansible-vault encrypt_string [-h] [--vault-id VAULT_IDS]\n                                    [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                                    [-v] [--output OUTPUT_FILE]\n                                    [--encrypt-vault-id ENCRYPT_VAULT_ID] [-p]\n                                    [--show-input] [-n ENCRYPT_STRING_NAMES]\n                                    [--stdin-name ENCRYPT_STRING_STDIN_NAME]\n                                    [string_to_encrypt ...]\n\npositional arguments:\n  string_to_encrypt     String to encrypt\n\noptions:\n  -h, --help            show this help message and exit\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  --output OUTPUT_FILE  output file name for encrypt or decrypt; use - for\n                        stdout\n  --encrypt-vault-id ENCRYPT_VAULT_ID\n                        the vault id used to encrypt (required if more than\n                        one vault-id is provided)\n  -p, --prompt          Prompt for the string to encrypt\n  --show-input          Do not hide input when prompted for the string to\n                        encrypt\n  -n ENCRYPT_STRING_NAMES, --name ENCRYPT_STRING_NAMES\n                        Specify the variable name. This argument may be\n                        specified multiple times.\n  --stdin-name ENCRYPT_STRING_STDIN_NAME\n                        Specify the variable name for stdin",
+      "description": "Encrypt a string"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--encrypt-vault-id",
+          "shortcut": null,
+          "description": "the vault id used to encrypt (required if more than one vault-id is provided)",
+          "value": "ENCRYPT_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "--new-vault-id",
+          "shortcut": null,
+          "description": "the new vault identity to use for rekey",
+          "value": "NEW_VAULT_ID",
+          "default": null
+        },
+        {
+          "option": "--new-vault-password-file",
+          "shortcut": null,
+          "description": "new vault password file for rekey",
+          "value": "NEW_VAULT_PASSWORD_FILE",
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "--vault-pass-file",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "-h",
+          "shortcut": null,
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-J",
+          "shortcut": null,
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-v",
+          "shortcut": null,
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault rekey",
+      "raw_help_text": "usage: ansible-vault rekey [-h] [--vault-id VAULT_IDS]\n                           [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                           [-v] [--encrypt-vault-id ENCRYPT_VAULT_ID]\n                           [--new-vault-password-file NEW_VAULT_PASSWORD_FILE | --new-vault-id NEW_VAULT_ID]\n                           [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n  --encrypt-vault-id ENCRYPT_VAULT_ID\n                        the vault id used to encrypt (required if more than\n                        one vault-id is provided)\n  --new-vault-password-file NEW_VAULT_PASSWORD_FILE\n                        new vault password file for rekey\n  --new-vault-id NEW_VAULT_ID\n                        the new vault identity to use for rekey",
+      "description": "Re-key a vault encrypted file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show this help message and exit",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-id",
+          "shortcut": null,
+          "description": "the vault identity to use. This argument may be specified multiple times.",
+          "value": "VAULT_IDS",
+          "default": null
+        },
+        {
+          "option": "--ask-vault-password",
+          "shortcut": "-J",
+          "description": "ask for vault password",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--vault-password-file",
+          "shortcut": "--vault-pass-file",
+          "description": "vault password file",
+          "value": "VAULT_PASSWORD_FILES",
+          "default": null
+        },
+        {
+          "option": "--verbose",
+          "shortcut": "-v",
+          "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "name": "ansible-vault view",
+      "raw_help_text": "usage: ansible-vault view [-h] [--vault-id VAULT_IDS]\n                          [-J | --vault-password-file VAULT_PASSWORD_FILES]\n                          [-v]\n                          [file_name ...]\n\npositional arguments:\n  file_name             Filename\n\noptions:\n  -h, --help            show this help message and exit\n  --vault-id VAULT_IDS  the vault identity to use. This argument may be\n                        specified multiple times.\n  -J, --ask-vault-password, --ask-vault-pass\n                        ask for vault password\n  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES\n                        vault password file\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.",
+      "description": "View vault encrypted file"
+    }
+  ],
+  "options": [
+    {
+      "option": "--version",
+      "shortcut": null,
+      "description": "show program's version number, config file location, configured module search path, module location, executable location and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "show this help message and exit",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "-v",
+      "shortcut": null,
+      "description": "Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, connection debugging might require -vvvv. This argument may be specified multiple times.",
+      "value": null,
+      "default": null
+    }
+  ],
+  "raw_help_text": "usage: ansible-vault [-h] [--version] [-v]\n                     {create,decrypt,edit,view,encrypt,encrypt_string,rekey}\n                     ...\n\nencryption/decryption utility for Ansible data files\n\npositional arguments:\n  {create,decrypt,edit,view,encrypt,encrypt_string,rekey}\n    create              Create new vault encrypted file\n    decrypt             Decrypt vault encrypted file\n    edit                Edit vault encrypted file\n    view                View vault encrypted file\n    encrypt             Encrypt YAML file\n    encrypt_string      Encrypt a string\n    rekey               Re-key a vault encrypted file\n\noptions:\n  --version             show program's version number, config file location,\n                        configured module search path, module location,\n                        executable location and exit\n  -h, --help            show this help message and exit\n  -v, --verbose         Causes Ansible to print more debug messages. Adding\n                        multiple -v will increase the verbosity, the builtin\n                        plugins currently evaluate up to -vvvvvv. A reasonable\n                        level to start is -vvv, connection debugging might\n                        require -vvvv. This argument may be specified multiple\n                        times.\n\nSee 'ansible-vault <command> --help' for more information on a specific\ncommand."
+}

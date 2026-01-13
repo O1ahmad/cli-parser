@@ -1,0 +1,350 @@
+{
+  "name": "nats-server",
+  "version": "v2.10.24",
+  "description": "NATS Server",
+  "usage": "Usage: nats-server [options]",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--addr",
+      "shortcut": "-a",
+      "description": "Bind to host address",
+      "value": "<host>",
+      "default": "0.0.0.0",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--auth",
+      "description": "Authorization token required for connections",
+      "value": "<token>",
+      "tags": [
+        "Authorization Options"
+      ]
+    },
+    {
+      "option": "--client_advertise",
+      "description": "Client URL to advertise to other servers",
+      "value": "<string>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--cluster",
+      "description": "Cluster URL for solicited routes",
+      "value": "<cluster-url>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--cluster_advertise",
+      "description": "Cluster URL to advertise to other servers",
+      "value": "<string>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--cluster_listen",
+      "description": "Cluster url from which members can solicit routes",
+      "value": "<url>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--cluster_name",
+      "description": "Cluster Name, if not set one will be dynamically generated",
+      "value": "<string>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--config",
+      "shortcut": "-c",
+      "description": "Configuration file",
+      "value": "<file>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--connect_retries",
+      "description": "For implicit routes, number of connect retries",
+      "value": "<number>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--debug",
+      "shortcut": "-D",
+      "description": "Enable debugging output",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Show this message",
+      "tags": [
+        "Common Options"
+      ]
+    },
+    {
+      "option": "--help_tls",
+      "description": "TLS help",
+      "tags": [
+        "Common Options"
+      ]
+    },
+    {
+      "option": "--http_port",
+      "shortcut": "-m",
+      "description": "Use port for http monitoring",
+      "value": "<port>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--https_port",
+      "shortcut": "-ms",
+      "description": "Use port for https monitoring",
+      "value": "<port>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--jetstream",
+      "shortcut": "-js",
+      "description": "Enable JetStream functionality",
+      "tags": [
+        "JetStream Options"
+      ]
+    },
+    {
+      "option": "--log",
+      "shortcut": "-l",
+      "description": "File to redirect log output",
+      "value": "<file>",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--log_size_limit",
+      "description": "Logfile size limit",
+      "value": "<limit>",
+      "default": "auto",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--logtime",
+      "shortcut": "-T",
+      "description": "Timestamp log entries",
+      "default": "true",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--max_traced_msg_len",
+      "description": "Maximum printable length for traced messages",
+      "value": "<len>",
+      "default": "unlimited",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--name",
+      "shortcut": "-n",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--no_advertise",
+      "description": "Do not advertise known cluster information to clients",
+      "value": "<bool>",
+      "tags": [
+        "Cluster Options"
+      ]
+    },
+    {
+      "option": "--pass",
+      "description": "Password required for connections",
+      "value": "<password>",
+      "tags": [
+        "Authorization Options"
+      ]
+    },
+    {
+      "option": "--pid",
+      "shortcut": "-P",
+      "description": "File to store PID",
+      "value": "<file>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--port",
+      "shortcut": "-p",
+      "description": "Use port for clients",
+      "value": "<port>",
+      "default": "4222",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--ports_file_dir",
+      "description": "Creates a ports file in the specified directory",
+      "value": "<dir>",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--profile",
+      "description": "Profiling HTTP port",
+      "value": "<port>",
+      "tags": [
+        "Profiling Options"
+      ]
+    },
+    {
+      "option": "--remote_syslog",
+      "shortcut": "-r",
+      "description": "Syslog server addr",
+      "value": "<addr>",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--server_name",
+      "description": "Server name",
+      "value": "<server_name>",
+      "default": "auto",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--signal",
+      "shortcut": "-sl",
+      "description": "Send signal to nats-server process (ldm, stop, quit, term, reopen, reload)",
+      "value": "<signal>[=<pid>]",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--store_dir",
+      "shortcut": "-sd",
+      "description": "Set the storage directory",
+      "value": "<dir>",
+      "tags": [
+        "JetStream Options"
+      ]
+    },
+    {
+      "option": "--syslog",
+      "shortcut": "-s",
+      "description": "Log to syslog or windows event log",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--test",
+      "shortcut": "-t",
+      "description": "Test configuration and exit",
+      "tags": [
+        "Server Options"
+      ]
+    },
+    {
+      "option": "--tls",
+      "description": "Enable TLS, do not verify clients",
+      "default": "false",
+      "tags": [
+        "TLS Options"
+      ]
+    },
+    {
+      "option": "--tlscacert",
+      "description": "Client certificate CA for verification",
+      "value": "<file>",
+      "tags": [
+        "TLS Options"
+      ]
+    },
+    {
+      "option": "--tlscert",
+      "description": "Server certificate file",
+      "value": "<file>",
+      "tags": [
+        "TLS Options"
+      ]
+    },
+    {
+      "option": "--tlskey",
+      "description": "Private key for server certificate",
+      "value": "<file>",
+      "tags": [
+        "TLS Options"
+      ]
+    },
+    {
+      "option": "--tlsverify",
+      "description": "Enable TLS, verify client certificates",
+      "tags": [
+        "TLS Options"
+      ]
+    },
+    {
+      "option": "--trace",
+      "shortcut": "-V",
+      "description": "Trace the raw protocol",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--user",
+      "description": "User required for connections",
+      "value": "<user>",
+      "tags": [
+        "Authorization Options"
+      ]
+    },
+    {
+      "option": "--verbose_trace",
+      "shortcut": "-VV",
+      "description": "Verbose trace (traces system account as well)",
+      "tags": [
+        "Logging Options"
+      ]
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "Show version",
+      "tags": [
+        "Common Options"
+      ]
+    }
+  ]
+}

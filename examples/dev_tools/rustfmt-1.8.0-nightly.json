@@ -1,0 +1,95 @@
+{
+  "name": "rustfmt",
+  "version": "1.8.0-nightly",
+  "description": "Format Rust code",
+  "usage": "rustfmt [options] <file>...",
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--backup",
+      "description": "Backup any modified files."
+    },
+    {
+      "option": "--check",
+      "description": "Run in 'check' mode. Exits with 0 if input is formatted correctly. Exits with 1 and prints a diff if formatting is required."
+    },
+    {
+      "option": "--color",
+      "description": "Use colored output (if supported)",
+      "value": "[always|never|auto]"
+    },
+    {
+      "option": "--config",
+      "description": "Set options from command line. These settings take priority over .rustfmt.toml",
+      "value": "[key1=val1,key2=val2...]"
+    },
+    {
+      "option": "--config-path",
+      "description": "Recursively searches the given path for the rustfmt.toml config file. If not found reverts to the input file path",
+      "value": "[Path for the configuration file]"
+    },
+    {
+      "option": "--edition",
+      "description": "Rust edition to use",
+      "value": "[2015|2018|2021|2024]"
+    },
+    {
+      "option": "--emit",
+      "description": "What data to emit and how",
+      "value": "[files|stdout|coverage|checkstyle|json]"
+    },
+    {
+      "option": "--error-on-unformatted",
+      "description": "Error if unable to get comments or string literals within max_width, or they are left with trailing whitespaces (unstable)."
+    },
+    {
+      "shortcut": "-l",
+      "option": "--files-with-diff",
+      "description": "Prints the names of mismatched files that were formatted. Prints the names of files that would be formatted when used with `--check` mode."
+    },
+    {
+      "shortcut": "-h",
+      "option": "--help",
+      "description": "Show this message or help about a specific topic: `config` or `file-lines`",
+      "value": "[=TOPIC]"
+    },
+    {
+      "option": "--file-lines",
+      "description": "Format specified line ranges. Run with `--help=file-lines` for more detail (unstable).",
+      "value": "JSON"
+    },
+    {
+      "shortcut": "-q",
+      "option": "--quiet",
+      "description": "Print less output"
+    },
+    {
+      "option": "--print-config",
+      "description": "Dumps a default or minimal config to PATH. A minimal config is the subset of the current config file used for formatting the current program. `current` writes to stdout current config as if formatting the file at PATH.",
+      "value": "[default|minimal|current] PATH"
+    },
+    {
+      "option": "--skip-children",
+      "description": "Don't reformat child modules (unstable)."
+    },
+    {
+      "option": "--style-edition",
+      "description": "The edition of the Style Guide.",
+      "value": "[2015|2018|2021|2024]"
+    },
+    {
+      "option": "--unstable-features",
+      "description": "Enables unstable features. Only available on nightly channel."
+    },
+    {
+      "shortcut": "-v",
+      "option": "--verbose",
+      "description": "Print verbose output"
+    },
+    {
+      "shortcut": "-V",
+      "option": "--version",
+      "description": "Show version information"
+    }
+  ]
+}

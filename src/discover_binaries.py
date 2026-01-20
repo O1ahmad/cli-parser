@@ -34,11 +34,11 @@ from command_executor import CommandExecutor
 
 class BinaryDiscoveryTool:
     """Discover binaries for tools without binary names"""
-    
+
     def __init__(self, config_file: str, dry_run: bool = False):
         """
         Initialize the discovery tool
-        
+
         Args:
             config_file: Path to cli_tools.json config file
             dry_run: If True, don't update config file
@@ -47,7 +47,7 @@ class BinaryDiscoveryTool:
         self.dry_run = dry_run
         self.config = None
         self.tools = []
-        
+
         self.stats = {
             'total': 0,
             'success': 0,
@@ -56,46 +56,46 @@ class BinaryDiscoveryTool:
             'skipped': 0,
             'start_time': datetime.now()
         }
-    
+
     def log(self, message: str, level: str = "INFO"):
         """Log message with timestamp"""
         timestamp = datetime.now().strftime("%H:%M:%S")
         print(f"[{timestamp}] {level}: {message}")
-    
+
     def load_config(self) -> bool:
         """Load configuration file"""
         try:
             with open(self.config_file, 'r') as f:
                 self.config = json.load(f)
-            
+
             self.tools = self.config.get('cli_tools', [])
             self.log(f"Loaded {len(self.tools)} tools from config")
             return True
-            
+
         except Exception as e:
             self.log(f"Failed to load config: {e}", "ERROR")
             return False
-    
+
     def save_config(self):
         """Save updated configuration file"""
         if self.dry_run:
             self.log("Dry-run mode: skipping config save", "INFO")
             return
-        
+
         try:
             # Create backup of original file (before modifications)
             backup_path = self.config_file.with_suffix('.json.backup')
             shutil.copy(self.config_file, backup_path)
             self.log(f"Created backup: {backup_path}")
-            
+
             # Save updated config
             with open(self.config_file, 'w') as f:
                 json.dump(self.config, f, indent=2)
             self.log(f"Updated config saved: {self.config_file}")
-            
+
         except Exception as e:
             self.log(f"Failed to save config: {e}", "ERROR")
-    
+
     def check_docker_available(self) -> bool:
         """Check if Docker is available"""
         try:
@@ -107,19 +107,19 @@ class BinaryDiscoveryTool:
             return result.returncode == 0
         except Exception:
             return False
-    
+
     def pull_image(self, image: str) -> bool:
         """
         Pull Docker image if not available locally
-        
+
         Args:
             image: Full image name (e.g., "alpine:latest")
-            
+
         Returns:
             True if image is available
         """
         self.log(f"  Checking image availability: {image}")
-        
+
         # Check if image exists locally
         try:
             result = subprocess.run(
@@ -132,7 +132,7 @@ class BinaryDiscoveryTool:
                 return True
         except Exception:
             pass
-        
+
         # Try to pull image
         self.log(f"  → Pulling image (this may take a while)...")
         try:
@@ -154,14 +154,14 @@ class BinaryDiscoveryTool:
         except Exception as e:
             self.log(f"  → Error pulling image: {e}", "WARN")
             return False
-    
+
     def discover_for_tool(self, tool: Dict) -> Optional[Dict]:
         """
         Discover binaries for a single tool
-        
+
         Args:
             tool: Tool dictionary from config
-            
+
         Returns:
             Discovery result dict or None if failed
         """
@@ -169,21 +169,21 @@ class BinaryDiscoveryTool:
         self.log(f"\n{'='*80}")
         self.log(f"Processing: {tool_name}")
         self.log(f"{'='*80}")
-        
+
         # Check if tool has image_repo
         image_repo = tool.get('image_repo', {})
         if not image_repo or not image_repo.get('image'):
             self.log(f"  No image_repo defined, skipping", "WARN")
             return None
-        
+
         # Get image and tag (handle empty list with `or` fallback)
         image_base = image_repo['image']
         image_tags = tool.get('image_tags', ['latest']) or ['latest']
         image_tag = 'latest' if 'latest' in image_tags else image_tags[0]
         docker_image = f"{image_base}:{image_tag}"
-        
+
         self.log(f"  Image: {docker_image}")
-        
+
         # Check image availability
         if not self.pull_image(docker_image):
             return {
@@ -191,23 +191,23 @@ class BinaryDiscoveryTool:
                 'reason': 'image_unavailable',
                 'image': docker_image
             }
-        
+
         # Discover binaries
         matches = BinaryFinder.discover_binaries_for_tool(docker_image, tool_name)
-        
+
         if not matches:
             return {
                 'status': 'failed',
                 'reason': 'no_binaries_found',
                 'image': docker_image
             }
-        
+
         # Test each match to find working binaries
         working_binaries = []
         consecutive_failures = 0
         max_consecutive_failures = 3  # Stop after 3 consecutive failures
         min_confidence = 0.40  # Minimum confidence to consider (lowered to catch more valid binaries)
-        
+
         for binary_path, match_type, confidence in matches[:10]:  # Test top 10 matches
             # Skip low confidence matches
             if confidence < min_confidence:
@@ -218,10 +218,10 @@ class BinaryDiscoveryTool:
                 continue
             binary_name = os.path.basename(binary_path)
             self.log(f"  Testing: {binary_name} (confidence: {confidence:.2f}, type: {match_type})")
-            
+
             # Test help command
             test_results = CommandExecutor.test_help_variations(binary_path, docker_image)
-            
+
             if test_results['working_commands']:
                 self.log(f"    ✓ Working help commands: {', '.join(test_results['working_commands'])}")
                 working_binaries.append({
@@ -236,12 +236,12 @@ class BinaryDiscoveryTool:
             else:
                 self.log(f"    ✗ No working help commands found")
                 consecutive_failures += 1
-                
+
                 # Stop early if too many consecutive failures
                 if consecutive_failures >= max_consecutive_failures:
                     self.log(f"    → Stopping after {consecutive_failures} consecutive failures")
                     break
-        
+
         if not working_binaries:
             return {
                 'status': 'partial',
@@ -249,17 +249,17 @@ class BinaryDiscoveryTool:
                 'image': docker_image,
                 'binaries_tested': len(matches[:10])
             }
-        
+
         # Select primary binary (highest confidence with working help)
         primary = working_binaries[0]
         alternates = [b['name'] for b in working_binaries[1:] if b['name'] != primary['name']]
-        
+
         self.log(f"\n  ✓ Discovery successful!")
         self.log(f"    Primary binary: {primary['name']}")
         self.log(f"    Help command: {primary['help_command']}")
         if alternates:
             self.log(f"    Alternate binaries: {', '.join(alternates[:5])}")
-        
+
         return {
             'status': 'success',
             'binary': primary['name'],
@@ -275,11 +275,11 @@ class BinaryDiscoveryTool:
                 'verified': True
             }
         }
-    
+
     def update_tool_config(self, tool: Dict, discovery_result: Dict):
         """
         Update tool configuration with discovery results
-        
+
         Args:
             tool: Original tool dict
             discovery_result: Discovery result dict
@@ -287,19 +287,19 @@ class BinaryDiscoveryTool:
         if discovery_result['status'] == 'success':
             tool['binary'] = discovery_result['binary']
             tool['alternate_binaries'] = discovery_result['alternate_binaries']
-            
+
             # Add discovery metadata to notes
             if 'notes' not in tool:
                 tool['notes'] = ''
-            
+
             note = f"Binary discovered automatically on {datetime.now().strftime('%Y-%m-%d')} " \
                    f"(method: {discovery_result['match_type']}, confidence: {discovery_result['confidence']:.2f})"
-            
+
             if tool['notes']:
                 tool['notes'] += f" | {note}"
             else:
                 tool['notes'] = note
-    
+
     def process_tools(
         self,
         only_tools: Optional[List[str]] = None,
@@ -308,7 +308,7 @@ class BinaryDiscoveryTool:
     ):
         """
         Process tools and discover binaries
-        
+
         Args:
             only_tools: If set, only process these specific tools
             category: If set, only process tools in this category
@@ -321,65 +321,66 @@ class BinaryDiscoveryTool:
         self.log(f"Dry-run: {self.dry_run}")
         self.log(f"Timeout: 2 minutes per container scan")
         self.log("="*80)
-        
+
         # Check Docker
         if not self.check_docker_available():
             self.log("Docker not available! Please install Docker.", "ERROR")
             return
-        
+
         self.log("✓ Docker is available")
-        
+
         # Load config
         if not self.load_config():
             return
-        
+
         # Filter tools
         filtered_tools = []
         for tool in self.tools:
             # Skip if has binary already
             if tool.get('binary'):
                 continue
-            
+
             # Filter by category
             if category and tool.get('category') != category:
                 continue
-            
+
             # Filter by name
             if only_tools and tool.get('name') not in only_tools:
                 continue
-            
-            # Must have image_repo
-            if not tool.get('image_repo', {}).get('image'):
+
+            # Must have image_repo (handle None values explicitly)
+            image_repo = tool.get('image_repo')
+            if not image_repo or not image_repo.get('image'):
                 continue
-            
+
             filtered_tools.append(tool)
-        
+
         if not filtered_tools:
             self.log("No tools to process after filtering", "WARN")
             return
-        
+
         # Apply limit
         if limit:
             filtered_tools = filtered_tools[:limit]
-        
+
         self.log(f"\nProcessing {len(filtered_tools)} tools")
         self.log("="*80)
-        
+
         # Process each tool
         results = []
         for i, tool in enumerate(filtered_tools, 1):
             self.stats['total'] += 1
-            
+
             self.log(f"\n[{i}/{len(filtered_tools)}]")
-            
+
             result = self.discover_for_tool(tool)
-            
+
             if result:
                 results.append({
                     'tool': tool['name'],
                     **result
                 })
-                
+
                 if result['status'] == 'success':
                     self.stats['success'] += 1
                     self.update_tool_config(tool, result)
@@ -394,18 +395,18 @@ class BinaryDiscoveryTool:
                     'status': 'skipped',
                     'reason': 'no_image_repo'
                 })
-        
+
         # Save config if changes were made
         if self.stats['success'] > 0:
             self.save_config()
-        
+
         # Print summary
         self.print_summary(results)
-    
+
     def print_summary(self, results: List[Dict]):
         """Print processing summary"""
         duration = (datetime.now() - self.stats['start_time']).total_seconds()
-        
+
         self.log("\n" + "="*80)
         self.log("DISCOVERY SUMMARY")
         self.log("="*80)
@@ -415,7 +416,7 @@ class BinaryDiscoveryTool:
         self.log(f"⚠ Partial: {self.stats['partial']} (binary found but help doesn't work)")
         self.log(f"✗ Failed: {self.stats['failed']}")
         self.log(f"⊙ Skipped: {self.stats['skipped']}")
-        
+
         # Show successful discoveries
         successful = [r for r in results if r.get('status') == 'success']
         if successful:
@@ -424,7 +425,7 @@ class BinaryDiscoveryTool:
             self.log("="*80)
             for r in successful:
                 self.log(f"  • {r['tool']:40s} → {r['binary']:20s} (confidence: {r.get('confidence', 0):.2f})")
-        
+
         # Show failures
         failed = [r for r in results if r.get('status') in ['failed', 'partial']]
         if failed:
@@ -434,7 +435,7 @@ class BinaryDiscoveryTool:
             for r in failed:
                 reason = r.get('reason', 'unknown')
                 self.log(f"  • {r['tool']:40s} → {reason}")
-        
+
         success_rate = (self.stats['success'] / self.stats['total'] * 100) if self.stats['total'] > 0 else 0
         self.log("\n" + "="*80)
         self.log(f"Success Rate: {success_rate:.1f}%")
@@ -450,37 +451,37 @@ def main():
 Examples:
   # Dry run to see what would be discovered
   python discover_binaries.py data/configs/cli_tools.json --dry-run
-  
+
   # Discover and update config
   python discover_binaries.py data/configs/cli_tools.json --update
-  
+
   # Process specific category
   python discover_binaries.py data/configs/cli_tools.json --category "Apache" --update
-  
+
   # Process specific tools
   python discover_binaries.py data/configs/cli_tools.json --only "act" "Airflow" --update
-  
+
   # Limit to first 10 tools
   python discover_binaries.py data/configs/cli_tools.json --limit 10 --update
         """
     )
-    
+
     parser.add_argument('config', help='Path to cli_tools.json config file')
     parser.add_argument('--update', action='store_true', help='Update config file with discoveries')
     parser.add_argument('--dry-run', action='store_true', help='Dry run (no config updates)')
     parser.add_argument('--category', help='Only process tools in this category')
     parser.add_argument('--only', nargs='+', help='Only process these specific tools')
     parser.add_argument('--limit', type=int, help='Limit number of tools to process')
-    
+
     args = parser.parse_args()
-    
+
     # Determine dry-run mode
     dry_run = args.dry_run or not args.update
-    
+
     if not args.update and not args.dry_run:
         print("Note: Running in dry-run mode. Use --update to save changes to config.")
         print()
-    
+
     # Create and run discovery tool
     discovery = BinaryDiscoveryTool(args.config, dry_run=dry_run)
     discovery.process_tools(
@@ -492,5 +493,3 @@ Examples:
 
 if __name__ == '__main__':
     main()
-
-

@@ -24,7 +24,7 @@ run_script:
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
-	rm -rf build dist *.egg-info result.json
+	rm -rf build dist *.egg-info
 
 help:
 	@echo "Makefile targets:"

@@ -17,6 +17,7 @@ Features:
 """
 import argparse
 import json
+import shutil
 import sys
 import os
 from pathlib import Path
@@ -82,10 +83,9 @@ class BinaryDiscoveryTool:
             return
         
         try:
-            # Create backup
+            # Create backup of original file (before modifications)
             backup_path = self.config_file.with_suffix('.json.backup')
-            with open(backup_path, 'w') as f:
-                json.dump(self.config, f, indent=2)
+            shutil.copy(self.config_file, backup_path)
             self.log(f"Created backup: {backup_path}")
             
             # Save updated config
@@ -176,9 +176,9 @@ class BinaryDiscoveryTool:
             self.log(f"  No image_repo defined, skipping", "WARN")
             return None
         
-        # Get image and tag
+        # Get image and tag (handle empty list with `or` fallback)
         image_base = image_repo['image']
-        image_tags = tool.get('image_tags', ['latest'])
+        image_tags = tool.get('image_tags', ['latest']) or ['latest']
         image_tag = 'latest' if 'latest' in image_tags else image_tags[0]
         docker_image = f"{image_base}:{image_tag}"
         

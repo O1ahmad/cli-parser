@@ -120,7 +120,8 @@ class ToolsProcessor:
         if 'image_tag' in tool:
             docker_tag = tool['image_tag']
         else:
-            image_tags = tool.get('image_tags', ['latest'])
+            # Handle empty list with `or` fallback to prevent IndexError
+            image_tags = tool.get('image_tags', ['latest']) or ['latest']
             docker_tag = 'latest' if 'latest' in image_tags else image_tags[0]
         
         docker_image = f"{image_name}:{docker_tag}"

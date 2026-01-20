@@ -198,15 +198,14 @@ class BinaryFinder:
         """
         import subprocess
         
-        binary_name = os.path.basename(binary_path)
-        
         # Try quick help variations (2 second timeout each)
         help_variations = ['--help', '-h', 'help']
         
         for help_arg in help_variations:
             try:
+                # Use --entrypoint to explicitly specify the binary we want to test
                 result = subprocess.run(
-                    ['docker', 'run', '--rm', docker_image, help_arg],
+                    ['docker', 'run', '--rm', '--entrypoint', binary_path, docker_image, help_arg],
                     capture_output=True,
                     text=True,
                     timeout=2
@@ -250,6 +249,7 @@ class BinaryFinder:
         
         for exe_path in executables:
             exe_name = os.path.basename(exe_path)
+            exe_name_lower = exe_name.lower()
             
             # Skip system binaries and scripts
             if exe_name in skip_binaries:
@@ -257,14 +257,14 @@ class BinaryFinder:
             if any(exe_name.endswith(ext) for ext in skip_extensions):
                 continue
             
-            # Check if any candidate word is in the executable name
+            # Check if any candidate word is in the executable name (case-insensitive)
             for word in candidates:
-                if word in exe_name:
+                if word in exe_name_lower:
                     # Simple confidence based on match quality
-                    if exe_name == word:
+                    if exe_name_lower == word:
                         confidence = 1.0
                         match_type = 'exact'
-                    elif exe_name.startswith(word):
+                    elif exe_name_lower.startswith(word):
                         confidence = 0.9
                         match_type = 'starts_with'
                     else:

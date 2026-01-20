@@ -60,14 +60,9 @@ class CommandExecutor:
             timeout = CommandExecutor.COMMAND_TIMEOUT
         
         if docker_image:
-            # Run in Docker container
-            # For containers, we need to check if the binary is the entrypoint
-            # If it is, don't repeat it; if not, pass it explicitly
-            import os
-            binary_name = os.path.basename(binary_path)
-            
-            # Try without specifying binary (assumes it's in entrypoint)
-            cmd = ['docker', 'run', '--rm', docker_image] + args
+            # Run in Docker container with explicit entrypoint
+            # Use --entrypoint to specify the binary, ensuring we test the right executable
+            cmd = ['docker', 'run', '--rm', '--entrypoint', binary_path, docker_image] + args
         else:
             # Run on host
             cmd = [binary_path] + args

@@ -1,0 +1,813 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--database",
+          "shortcut": "-d",
+          "description": "Type of the database",
+          "value": "<DATABASE>"
+        },
+        {
+          "option": "--path",
+          "shortcut": "-p",
+          "description": "Path to a custom directory where database files are stored",
+          "value": "<PATH>"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        }
+      ],
+      "aliases": [],
+      "name": "grandine db-info",
+      "raw_help_text": "Show information about database records (example: grandine db-info --database sync)\n\nUsage: grandine db-info [OPTIONS] --database <DATABASE>\n\nOptions:\n  -d, --database <DATABASE>  Type of the database\n  -p, --path <PATH>          Path to a custom directory where database files are stored (example: grandine --network holesky db-info -d sync -p ~/.grandine/holesky/beacon/sync)\n  -h, --help                 Print help",
+      "description": "Show information about database records (example: grandine db-info --database sync)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--path",
+          "shortcut": "-p",
+          "description": "Path to a custom directory where `beacon_fork_choice` database files are stored",
+          "value": "<PATH>",
+          "default": ""
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help",
+          "value": "",
+          "default": ""
+        }
+      ],
+      "aliases": [],
+      "name": "grandine db-stats",
+      "raw_help_text": "Show `beacon_fork_choice` database element sizes (example: grandine db-stats)\n\nUsage: grandine db-stats [OPTIONS]\n\nOptions:\n  -p, --path <PATH>  Path to a custom directory where `beacon_fork_choice` database files are stored (example: grandine --network holesky db-stats -p ~/.grandine/holesky/beacon/beacon_fork_choice)\n  -h, --help         Print help",
+      "description": "Show `beacon_fork_choice` database element sizes (example: grandine db-stats)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--from",
+          "shortcut": "-f",
+          "description": "First slot to export (inclusive)",
+          "value": "<SLOT>"
+        },
+        {
+          "option": "--to",
+          "shortcut": "-t",
+          "description": "Last slot to export (inclusive)",
+          "value": "<SLOT>"
+        },
+        {
+          "option": "--output-dir",
+          "shortcut": "-o",
+          "description": "Output directory (defaults to current directory)",
+          "value": "<OUTPUT_DIR>"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        }
+      ],
+      "aliases": [],
+      "name": "grandine export",
+      "raw_help_text": "Export blocks and state to ssz files within slot range for debugging (example: grandine export --from 0 --to 5)\n\nUsage: grandine export [OPTIONS] --from <SLOT> --to <SLOT>\n\nOptions:\n  -f, --from <SLOT>              First slot to export (inclusive)\n  -t, --to <SLOT>                Last slot to export (inclusive)\n  -o, --output-dir <OUTPUT_DIR>  Output directory (defaults to current directory)\n  -h, --help                     Print help",
+      "description": "Export blocks and state to ssz files within slot range for debugging (example: grandine export --from 0 --to 5)"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--from",
+          "shortcut": "-f",
+          "description": "Replay start slot (inclusive)",
+          "value": "<SLOT>",
+          "default": null
+        },
+        {
+          "option": "--to",
+          "shortcut": "-t",
+          "description": "Replay end slot (inclusive)",
+          "value": "<SLOT>",
+          "default": null
+        },
+        {
+          "option": "--input-dir",
+          "shortcut": "-i",
+          "description": "Input directory (defaults to current directory)",
+          "value": "<INPUT_DIR>",
+          "default": "current directory"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "grandine replay",
+      "raw_help_text": "Replay blocks within slot range (example: grandine replay --from 0 --to 5)\n\nUsage: grandine replay [OPTIONS] --from <SLOT> --to <SLOT>\n\nOptions:\n  -f, --from <SLOT>            Replay start slot (inclusive)\n  -t, --to <SLOT>              Replay end slot (inclusive)\n  -i, --input-dir <INPUT_DIR>  Input directory (defaults to current directory)\n  -h, --help                   Print help",
+      "description": "Replay blocks within slot range (example: grandine replay --from 0 --to 5)"
+    },
+    {
+      "subcommands": [
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Print help"
+            }
+          ],
+          "aliases": [],
+          "name": "grandine interchange import",
+          "raw_help_text": "Import slashing protection interchange file (example: grandine interchange import file.json)\n\nUsage: grandine interchange import <FILE_PATH>\n\nArguments:\n  <FILE_PATH>  \n\nOptions:\n  -h, --help  Print help",
+          "description": "Import slashing protection interchange file (example: grandine interchange import file.json)"
+        },
+        {
+          "subcommands": [],
+          "options": [
+            {
+              "option": "--help",
+              "shortcut": "-h",
+              "description": "Print help",
+              "value": null,
+              "default": null
+            }
+          ],
+          "aliases": [],
+          "name": "grandine interchange export",
+          "raw_help_text": "Export slashing protection interchange file (example: grandine interchange export file.json)\n\nUsage: grandine interchange export <FILE_PATH>\n\nArguments:\n  <FILE_PATH>  \n\nOptions:\n  -h, --help  Print help",
+          "description": "Export slashing protection interchange file (example: grandine interchange export file.json)"
+        }
+      ],
+      "options": [
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Print help"
+        }
+      ],
+      "aliases": [],
+      "name": "grandine interchange",
+      "raw_help_text": "Import/export slashing protection interchange file (example: grandine interchange import file.json)\n\nUsage: grandine interchange <COMMAND>\n\nCommands:\n  import  Import slashing protection interchange file (example: grandine interchange import file.json)\n  export  Export slashing protection interchange file (example: grandine interchange export file.json)\n  help    Print this message or the help of the given subcommand(s)\n\nOptions:\n  -h, --help  Print help",
+      "description": "Import/export slashing protection interchange file (example: grandine interchange import file.json)"
+    }
+  ],
+  "options": [
+    {
+      "option": "--network",
+      "description": "Name of the Eth2 network to connect to",
+      "value": "<NETWORK>",
+      "default": "mainnet"
+    },
+    {
+      "option": "--configuration-file",
+      "description": "Load configuration from YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--configuration-directory",
+      "description": "Load configuration from directory",
+      "value": "<DIRECTORY>"
+    },
+    {
+      "option": "--verify-phase0-preset-file",
+      "description": "Verify that Phase 0 variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-altair-preset-file",
+      "description": "Verify that Altair variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-bellatrix-preset-file",
+      "description": "Verify that Bellatrix variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-capella-preset-file",
+      "description": "Verify that Capella variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-deneb-preset-file",
+      "description": "Verify that Deneb variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-electra-preset-file",
+      "description": "Verify that Electra variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-fulu-preset-file",
+      "description": "Verify that Fulu variables in preset match YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--verify-configuration-file",
+      "description": "Verify that configuration matches YAML_FILE",
+      "value": "<YAML_FILE>"
+    },
+    {
+      "option": "--terminal-total-difficulty-override",
+      "description": "Override TERMINAL_TOTAL_DIFFICULTY",
+      "value": "<DIFFICULTY>"
+    },
+    {
+      "option": "--terminal-block-hash-override",
+      "description": "Override TERMINAL_BLOCK_HASH",
+      "value": "<BLOCK_HASH>"
+    },
+    {
+      "option": "--terminal-block-hash-activation-epoch-override",
+      "description": "Override TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH",
+      "value": "<EPOCH>"
+    },
+    {
+      "option": "--deposit-contract-starting-block",
+      "description": "Start tracking deposit contract from BLOCK_NUMBER",
+      "value": "<BLOCK_NUMBER>"
+    },
+    {
+      "option": "--genesis-state-file",
+      "description": "Load genesis state from SSZ_FILE",
+      "value": "<SSZ_FILE>"
+    },
+    {
+      "option": "--genesis-state-download-url",
+      "description": "Download genesis state from specified URL",
+      "value": "<URL>"
+    },
+    {
+      "option": "--max-empty-slots",
+      "description": "",
+      "value": "<MAX_EMPTY_SLOTS>",
+      "default": "32"
+    },
+    {
+      "option": "--max-events",
+      "description": "Max number of events stored in a single channel for HTTP API /events api call",
+      "value": "<MAX_EVENTS>",
+      "default": "100"
+    },
+    {
+      "option": "--checkpoint-sync-url",
+      "description": "Beacon node API URL to load recent finalized checkpoint and sync from it",
+      "value": "<CHECKPOINT_SYNC_URL>",
+      "default": "None"
+    },
+    {
+      "option": "--force-checkpoint-sync",
+      "description": "Force checkpoint sync. Requires --checkpoint-sync-url",
+      "default": "disabled"
+    },
+    {
+      "option": "--eth1-rpc-urls",
+      "description": "List of Eth1 RPC URLs",
+      "value": "<ETH1_RPC_URLS>..."
+    },
+    {
+      "option": "--data-dir",
+      "description": "Parent directory for application data files",
+      "value": "<DATA_DIR>",
+      "default": "$HOME/.grandine/{network}"
+    },
+    {
+      "option": "--store-directory",
+      "description": "Directory to store application data files",
+      "value": "<STORE_DIRECTORY>",
+      "default": "{data_dir}/beacon"
+    },
+    {
+      "option": "--network-dir",
+      "description": "Directory to store application network files",
+      "value": "<NETWORK_DIR>",
+      "default": "{data_dir}/network"
+    },
+    {
+      "option": "--archival-epoch-interval",
+      "description": "",
+      "value": "<ARCHIVAL_EPOCH_INTERVAL>",
+      "default": "32"
+    },
+    {
+      "option": "--archive-storage",
+      "description": "Enable archival storage mode, where all blocks, states (every --archival-epoch-interval epochs) and blobs are stored in the database",
+      "default": "disabled"
+    },
+    {
+      "option": "--prune-storage",
+      "description": "Enable prune storage mode, where only a single checkpoint state and block are stored in the database",
+      "default": "disabled"
+    },
+    {
+      "option": "--unfinalized-states-in-memory",
+      "description": "Number of unfinalized states to keep in memory",
+      "value": "<UNFINALIZED_STATES_IN_MEMORY>",
+      "default": "128"
+    },
+    {
+      "option": "--database-size",
+      "description": "Max size of the Eth2 database",
+      "value": "<DATABASE_SIZE>",
+      "default": "\"1.0 TiB\""
+    },
+    {
+      "option": "--eth1-database-size",
+      "description": "Max size of the Eth1 database",
+      "value": "<ETH1_DATABASE_SIZE>",
+      "default": "\"16.0 GiB\""
+    },
+    {
+      "option": "--request-timeout",
+      "description": "Default global request timeout for various services in milliseconds",
+      "value": "<REQUEST_TIMEOUT>",
+      "default": "30000"
+    },
+    {
+      "option": "--max-epochs-to-retain-states-in-cache",
+      "description": "Max amount of epochs to retain beacon states in state cache",
+      "value": "<MAX_EPOCHS_TO_RETAIN_STATES_IN_CACHE>",
+      "default": "8"
+    },
+    {
+      "option": "--state-cache-lock-timeout",
+      "description": "Default state cache lock timeout in milliseconds",
+      "value": "<STATE_CACHE_LOCK_TIMEOUT>",
+      "default": "1500"
+    },
+    {
+      "option": "--state-slot",
+      "description": "State slot",
+      "default": "None"
+    },
+    {
+      "option": "--subscribe-all-data-column-subnets",
+      "description": "Subscribe to all data column subnets"
+    },
+    {
+      "option": "--subscribe-all-subnets",
+      "description": "Subscribe to all subnets"
+    },
+    {
+      "option": "--suggested-fee-recipient",
+      "description": "Suggested value for the feeRecipient field of the new payload",
+      "value": "<EXECUTION_ADDRESS>"
+    },
+    {
+      "option": "--jwt-id",
+      "description": "Optional CL unique identifier to send to EL in the JWT token claim",
+      "value": "<JWT_ID>",
+      "default": "None"
+    },
+    {
+      "option": "--jwt-secret",
+      "description": "Path to a file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens",
+      "value": "<JWT_SECRET>"
+    },
+    {
+      "option": "--jwt-version",
+      "description": "Optional CL node type/version to send to EL in the JWT token claim",
+      "value": "<JWT_VERSION>",
+      "default": "None"
+    },
+    {
+      "option": "--back_sync",
+      "description": "[DEPRECATED] Enable syncing historical data",
+      "default": "disabled"
+    },
+    {
+      "option": "--back-sync",
+      "description": "Enable syncing historical data. When used with --archive-storage, it will back-sync to genesis and reconstruct historical states. When used without --archive-storage, it will back-sync blocks to the MIN_EPOCHS_FOR_BLOCK_REQUESTS epoch.",
+      "default": "disabled"
+    },
+    {
+      "option": "--metrics",
+      "description": "Collect Prometheus metrics"
+    },
+    {
+      "option": "--metrics-address",
+      "description": "Metrics address for metrics endpoint",
+      "value": "<METRICS_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--metrics-port",
+      "description": "Listen port for metrics endpoint",
+      "value": "<METRICS_PORT>",
+      "default": "5054"
+    },
+    {
+      "option": "--metrics-update-interval",
+      "description": "Update system metrics every n seconds",
+      "value": "<METRICS_UPDATE_INTERVAL>",
+      "default": "5"
+    },
+    {
+      "option": "--remote-metrics-url",
+      "description": "Optional remote metrics (beaconcha.in metrics) URL that Grandine will periodically send metrics to",
+      "value": "<REMOTE_METRICS_URL>"
+    },
+    {
+      "option": "--telemetry-level",
+      "description": "The default tracing level controlling how detailed telemetry output will be",
+      "value": "<TELEMETRY_LEVEL>",
+      "default": "INFO"
+    },
+    {
+      "option": "--telemetry-metrics-url",
+      "description": "Optional OTLP metrics gRPC URL that Grandine will submit tracing and span data to",
+      "value": "<TELEMETRY_METRICS_URL>"
+    },
+    {
+      "option": "--telemetry-service-name",
+      "description": "Optional OTLP service name",
+      "value": "<TELEMETRY_SERVICE_NAME>",
+      "default": "Grandine"
+    },
+    {
+      "option": "--track-liveness",
+      "description": "Enable validator liveness tracking",
+      "default": "disabled"
+    },
+    {
+      "option": "--detect-doppelgangers",
+      "description": "Enable doppelganger protection (liveness tracking must be enabled for this feature)",
+      "default": "disabled"
+    },
+    {
+      "option": "--in-memory",
+      "description": "Enable in-memory mode. No data will be stored in data-dir.",
+      "default": "disabled"
+    },
+    {
+      "option": "--kzg-backend",
+      "description": "",
+      "value": "<KZG_BACKEND>",
+      "default": "blst"
+    },
+    {
+      "option": "--blacklisted-blocks",
+      "description": "A list beacon block roots that beacon node rejects unconditionally",
+      "value": "<BLACKLISTED_BLOCKS>"
+    },
+    {
+      "option": "--disable-engine-getblobs",
+      "description": "Disable `engine_getBlobs` integration, use purely gossip and p2p requests. Use for testing purpose"
+    },
+    {
+      "option": "--sync-without-reconstruction",
+      "description": "Disable reconstruction while syncing the chain",
+      "default": "disabled"
+    },
+    {
+      "option": "--disable-http-api",
+      "description": "Run Grandine without HTTP API server"
+    },
+    {
+      "option": "--http-address",
+      "description": "HTTP API address",
+      "value": "<HTTP_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--http-port",
+      "description": "HTTP API port",
+      "value": "<HTTP_PORT>",
+      "default": "5052"
+    },
+    {
+      "option": "--http-allowed-origins",
+      "description": "List of Access-Control-Allow-Origin header values for the HTTP API server. Defaults to the listening URL of the HTTP API server"
+    },
+    {
+      "option": "--timeout",
+      "description": "HTTP API timeout in milliseconds",
+      "value": "<TIMEOUT>",
+      "default": "1000000"
+    },
+    {
+      "option": "--listen-address",
+      "description": "Listen IPv4 address",
+      "value": "<LISTEN_ADDRESS>",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--listen-address-ipv6",
+      "description": "Listen IPv6 address",
+      "value": "<LISTEN_ADDRESS_IPV6>",
+      "default": "None"
+    },
+    {
+      "option": "--libp2p-port",
+      "description": "libp2p IPv4 port",
+      "value": "<LIBP2P_PORT>",
+      "default": "9000"
+    },
+    {
+      "option": "--libp2p-port-ipv6",
+      "description": "libp2p IPv6 port",
+      "value": "<LIBP2P_PORT_IPV6>",
+      "default": "9050"
+    },
+    {
+      "option": "--disable-quic",
+      "description": "Disable QUIC support as a fallback transport to TCP"
+    },
+    {
+      "option": "--disable-peer-scoring",
+      "description": "Disable peer scoring"
+    },
+    {
+      "option": "--disable-rate-limiting",
+      "description": "Disable rate limiting both inbound and outbound"
+    },
+    {
+      "option": "--disable-upnp",
+      "description": "Disable NAT traversal via UPnP",
+      "default": "enabled"
+    },
+    {
+      "option": "--disable-enr-auto-update",
+      "description": "Disable enr auto update",
+      "default": "enabled"
+    },
+    {
+      "option": "--discovery-port",
+      "description": "discv5 IPv4 port",
+      "value": "<DISCOVERY_PORT>",
+      "default": "9000"
+    },
+    {
+      "option": "--discovery-port-ipv6",
+      "description": "discv5 IPv6 port",
+      "value": "<DISCOVERY_PORT_IPV6>",
+      "default": "9050"
+    },
+    {
+      "option": "--quic-port",
+      "description": "QUIC IPv4 port",
+      "value": "<QUIC_PORT>",
+      "default": "9001"
+    },
+    {
+      "option": "--quic-port-ipv6",
+      "description": "QUIC IPv6 port",
+      "value": "<QUIC_PORT_IPV6>",
+      "default": "9051"
+    },
+    {
+      "option": "--enable-private-discovery",
+      "description": "Enable discovery of peers with private IP addresses.",
+      "default": "disabled"
+    },
+    {
+      "option": "--enr-address",
+      "description": "ENR IPv4 address",
+      "value": "<ENR_ADDRESS>"
+    },
+    {
+      "option": "--enr-address-ipv6",
+      "description": "ENR IPv6 address",
+      "value": "<ENR_ADDRESS_IPV6>"
+    },
+    {
+      "option": "--enr-tcp-port",
+      "description": "ENR TCP IPv4 port",
+      "value": "<ENR_TCP_PORT>"
+    },
+    {
+      "option": "--enr-tcp-port-ipv6",
+      "description": "ENR TCP IPv6 port",
+      "value": "<ENR_TCP_PORT_IPV6>"
+    },
+    {
+      "option": "--enr-udp-port",
+      "description": "ENR UDP IPv4 port",
+      "value": "<ENR_UDP_PORT>"
+    },
+    {
+      "option": "--enr-udp-port-ipv6",
+      "description": "ENR UDP IPv6 port",
+      "value": "<ENR_UDP_PORT_IPV6>"
+    },
+    {
+      "option": "--enr-quic-port",
+      "description": "ENR QUIC IPv4 port",
+      "value": "<ENR_QUIC_PORT>"
+    },
+    {
+      "option": "--enr-quic-port-ipv6",
+      "description": "ENR QUIC IPv6 port",
+      "value": "<ENR_QUIC_PORT_IPV6>"
+    },
+    {
+      "option": "--boot-nodes",
+      "description": "List of ENR boot node addresses",
+      "value": "<BOOT_NODES>"
+    },
+    {
+      "option": "--libp2p-nodes",
+      "description": "List of Multiaddr node addresses",
+      "value": "<LIBP2P_NODES>"
+    },
+    {
+      "option": "--libp2p-private-key-file",
+      "description": "Load p2p private key from KEY_FILE",
+      "value": "<KEY_FILE>"
+    },
+    {
+      "option": "--target-peers",
+      "description": "Target number of network peers",
+      "value": "<TARGET_PEERS>",
+      "default": "200"
+    },
+    {
+      "option": "--target-subnet-peers",
+      "description": "Target number of subnet peers",
+      "value": "<TARGET_SUBNET_PEERS>",
+      "default": "3"
+    },
+    {
+      "option": "--trusted-peers",
+      "description": "List of trusted peers",
+      "value": "<TRUSTED_PEERS>"
+    },
+    {
+      "option": "--keystore-dir",
+      "description": "Path to a directory containing EIP-2335 keystore files",
+      "value": "<KEYSTORE_DIR>"
+    },
+    {
+      "option": "--keystore-password-dir",
+      "description": "Path to a directory containing passwords for keystore files",
+      "value": "<KEYSTORE_PASSWORD_DIR>"
+    },
+    {
+      "option": "--keystore-password-file",
+      "description": "Path to a file containing password for keystore files",
+      "value": "<KEYSTORE_PASSWORD_FILE>"
+    },
+    {
+      "option": "--keystore-storage-password-file",
+      "description": "Path to a file containing password for decrypting imported keystores from API",
+      "value": "<KEYSTORE_STORAGE_PASSWORD_FILE>"
+    },
+    {
+      "option": "--builder-format",
+      "description": "Data format for communication with the builder API",
+      "value": "<BUILDER_API_FORMAT>",
+      "default": "Ssz"
+    },
+    {
+      "option": "--builder-api-url",
+      "description": "[DEPRECATED] External block builder API URL",
+      "value": "<BUILDER_API_URL>"
+    },
+    {
+      "option": "--builder-url",
+      "description": "External block builder URL",
+      "value": "<BUILDER_URL>"
+    },
+    {
+      "option": "--builder-disable-checks",
+      "description": "Always use specified external block builder without checking for circuit breaker conditions"
+    },
+    {
+      "option": "--builder-max-skipped-slots",
+      "description": "Max allowed consecutive missing blocks to trigger circuit breaker condition and switch to local execution engine for payload construction",
+      "value": "<BUILDER_MAX_SKIPPED_SLOTS>",
+      "default": "3"
+    },
+    {
+      "option": "--builder-max-skipped-slots-per-epoch",
+      "description": "Max allowed missing blocks in the last rolling epoch to trigger circuit breaker condition and switch to local execution engine for payload construction",
+      "value": "<BUILDER_MAX_SKIPPED_SLOTS_PER_EPOCH>",
+      "default": "8"
+    },
+    {
+      "option": "--default-builder-boost-factor",
+      "description": "Percentage multiplier to apply to the builder's payload value when choosing between a builder payload header and payload from the paired execution node",
+      "value": "<DEFAULT_BUILDER_BOOST_FACTOR>",
+      "default": "100"
+    },
+    {
+      "option": "--default-gas-limit",
+      "description": "Default execution gas limit for all validators",
+      "value": "<DEFAULT_GAS_LIMIT>",
+      "default": "60000000"
+    },
+    {
+      "option": "--web3signer-public-keys",
+      "description": "List of public keys to use from Web3Signer",
+      "value": "<WEB3SIGNER_PUBLIC_KEYS>..."
+    },
+    {
+      "option": "--web3signer-refresh-keys-every-epoch",
+      "description": "Refetches keys from Web3Signer once every epoch. This overwrites changes done via Keymanager API"
+    },
+    {
+      "option": "--web3signer-api-urls",
+      "description": "[DEPRECATED] List of Web3Signer API URLs",
+      "value": "<WEB3SIGNER_API_URLS>..."
+    },
+    {
+      "option": "--web3signer-urls",
+      "description": "List of Web3Signer URLs",
+      "value": "<WEB3SIGNER_URLS>..."
+    },
+    {
+      "option": "--use-validator-key-cache",
+      "description": "Use validator key cache for faster startup"
+    },
+    {
+      "option": "--slashing-protection-history-limit",
+      "description": "Number of epochs to keep slashing protection data for",
+      "value": "<SLASHING_PROTECTION_HISTORY_LIMIT>",
+      "default": "256"
+    },
+    {
+      "option": "--report-validator-performance",
+      "description": "Print reports about validator performance"
+    },
+    {
+      "option": "--withhold-data-columns-publishing",
+      "description": ""
+    },
+    {
+      "option": "--no-custody-groups-backfill",
+      "description": ""
+    },
+    {
+      "option": "--enable-validator-api",
+      "description": "Enable validator API"
+    },
+    {
+      "option": "--validator-api-address",
+      "description": "Validator API address",
+      "value": "<VALIDATOR_API_ADDRESS>",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--validator-api-port",
+      "description": "Listen port for validator API",
+      "value": "<VALIDATOR_API_PORT>",
+      "default": "5055"
+    },
+    {
+      "option": "--validator-api-allowed-origins",
+      "description": "List of Access-Control-Allow-Origin header values for the validator API server. Defaults to the listening URL of the validator API server"
+    },
+    {
+      "option": "--validator-api-timeout",
+      "description": "Validator API timeout in milliseconds",
+      "value": "<VALIDATOR_API_TIMEOUT>",
+      "default": "10000"
+    },
+    {
+      "option": "--validator-api-token-file",
+      "description": "Path to a file containing validator API auth token",
+      "value": "<VALIDATOR_API_TOKEN_FILE>"
+    },
+    {
+      "option": "--graffiti",
+      "description": "Default block graffiti. Blockprint graffiti will be appended when sufficient space is available. See `--disable-blockprint-graffiti` to disable this behavior",
+      "value": "<GRAFFITI>"
+    },
+    {
+      "option": "--disable-blockprint-graffiti",
+      "description": "Disable appending blockprint graffiti. If specified, no blockprint graffiti will be appended"
+    },
+    {
+      "option": "--features",
+      "description": "List of optional runtime features to enable"
+    },
+    {
+      "option": "-h",
+      "shortcut": "--help",
+      "description": "Print help"
+    },
+    {
+      "option": "-V",
+      "shortcut": "--version",
+      "description": "Print version"
+    }
+  ],
+  "aliases": [],
+  "name": "grandine",
+  "raw_help_text": "Grandine Team <info@grandine.io>\nHigh performance Ethereum consensus layer client\n\nUsage: grandine [OPTIONS] [COMMAND]\n\nCommands:\n  db-info      Show information about database records (example: grandine db-info --database sync)\n  db-stats     Show `beacon_fork_choice` database element sizes (example: grandine db-stats)\n  export       Export blocks and state to ssz files within slot range for debugging (example: grandine export --from 0 --to 5)\n  replay       Replay blocks within slot range (example: grandine replay --from 0 --to 5)\n  interchange  Import/export slashing protection interchange file (example: grandine interchange import file.json)\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n      --network <NETWORK>\n          Name of the Eth2 network to connect to [default: mainnet] [possible values: mainnet, sepolia, holesky, hoodi, custom]\n      --configuration-file <YAML_FILE>\n          Load configuration from YAML_FILE\n      --configuration-directory <DIRECTORY>\n          Load configuration from directory\n      --verify-phase0-preset-file <YAML_FILE>\n          Verify that Phase 0 variables in preset match YAML_FILE\n      --verify-altair-preset-file <YAML_FILE>\n          Verify that Altair variables in preset match YAML_FILE\n      --verify-bellatrix-preset-file <YAML_FILE>\n          Verify that Bellatrix variables in preset match YAML_FILE\n      --verify-capella-preset-file <YAML_FILE>\n          Verify that Capella variables in preset match YAML_FILE\n      --verify-deneb-preset-file <YAML_FILE>\n          Verify that Deneb variables in preset match YAML_FILE\n      --verify-electra-preset-file <YAML_FILE>\n          Verify that Electra variables in preset match YAML_FILE\n      --verify-fulu-preset-file <YAML_FILE>\n          Verify that Fulu variables in preset match YAML_FILE\n      --verify-configuration-file <YAML_FILE>\n          Verify that configuration matches YAML_FILE\n      --terminal-total-difficulty-override <DIFFICULTY>\n          Override TERMINAL_TOTAL_DIFFICULTY\n      --terminal-block-hash-override <BLOCK_HASH>\n          Override TERMINAL_BLOCK_HASH\n      --terminal-block-hash-activation-epoch-override <EPOCH>\n          Override TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH\n      --deposit-contract-starting-block <BLOCK_NUMBER>\n          Start tracking deposit contract from BLOCK_NUMBER\n      --genesis-state-file <SSZ_FILE>\n          Load genesis state from SSZ_FILE\n      --genesis-state-download-url <URL>\n          Download genesis state from specified URL\n      --max-empty-slots <MAX_EMPTY_SLOTS>\n          [default: 32]\n      --max-events <MAX_EVENTS>\n          Max number of events stored in a single channel for HTTP API /events api call [default: 100]\n      --checkpoint-sync-url <CHECKPOINT_SYNC_URL>\n          Beacon node API URL to load recent finalized checkpoint and sync from it [default: None]\n      --force-checkpoint-sync\n          Force checkpoint sync. Requires --checkpoint-sync-url [default: disabled]\n      --eth1-rpc-urls <ETH1_RPC_URLS>...\n          List of Eth1 RPC URLs\n      --data-dir <DATA_DIR>\n          Parent directory for application data files [default: $HOME/.grandine/{network}]\n      --store-directory <STORE_DIRECTORY>\n          Directory to store application data files [default: {data_dir}/beacon]\n      --network-dir <NETWORK_DIR>\n          Directory to store application network files [default: {data_dir}/network]\n      --archival-epoch-interval <ARCHIVAL_EPOCH_INTERVAL>\n          [default: 32]\n      --archive-storage\n          Enable archival storage mode, where all blocks, states (every --archival-epoch-interval epochs) and blobs are stored in the database [default: disabled]\n      --prune-storage\n          Enable prune storage mode, where only a single checkpoint state and block are stored in the database [default: disabled]\n      --unfinalized-states-in-memory <UNFINALIZED_STATES_IN_MEMORY>\n          Number of unfinalized states to keep in memory [default: 128]\n      --database-size <DATABASE_SIZE>\n          Max size of the Eth2 database [default: \"1.0 TiB\"]\n      --eth1-database-size <ETH1_DATABASE_SIZE>\n          Max size of the Eth1 database [default: \"16.0 GiB\"]\n      --request-timeout <REQUEST_TIMEOUT>\n          Default global request timeout for various services in milliseconds [default: 30000]\n      --max-epochs-to-retain-states-in-cache <MAX_EPOCHS_TO_RETAIN_STATES_IN_CACHE>\n          Max amount of epochs to retain beacon states in state cache [default: 8]\n      --state-cache-lock-timeout <STATE_CACHE_LOCK_TIMEOUT>\n          Default state cache lock timeout in milliseconds [default: 1500]\n      --state-slot <STATE_SLOT>\n          State slot [default: None]\n      --subscribe-all-data-column-subnets\n          Subscribe to all data column subnets\n      --subscribe-all-subnets\n          Subscribe to all subnets\n      --suggested-fee-recipient <EXECUTION_ADDRESS>\n          Suggested value for the feeRecipient field of the new payload\n      --jwt-id <JWT_ID>\n          Optional CL unique identifier to send to EL in the JWT token claim [default: None]\n      --jwt-secret <JWT_SECRET>\n          Path to a file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens\n      --jwt-version <JWT_VERSION>\n          Optional CL node type/version to send to EL in the JWT token claim [default: None]\n      --back_sync\n          [DEPRECATED] Enable syncing historical data [default: disabled]\n      --back-sync\n          Enable syncing historical data. When used with --archive-storage, it will back-sync to genesis and reconstruct historical states. When used without --archive-storage, it will back-sync blocks to the MIN_EPOCHS_FOR_BLOCK_REQUESTS epoch. [default: disabled]\n      --metrics\n          Collect Prometheus metrics\n      --metrics-address <METRICS_ADDRESS>\n          Metrics address for metrics endpoint [default: 127.0.0.1]\n      --metrics-port <METRICS_PORT>\n          Listen port for metrics endpoint [default: 5054]\n      --metrics-update-interval <METRICS_UPDATE_INTERVAL>\n          Update system metrics every n seconds [default: 5]\n      --remote-metrics-url <REMOTE_METRICS_URL>\n          Optional remote metrics (beaconcha.in metrics) URL that Grandine will periodically send metrics to\n      --telemetry-level <TELEMETRY_LEVEL>\n          The default tracing level controlling how detailed telemetry output will be [default: INFO]\n      --telemetry-metrics-url <TELEMETRY_METRICS_URL>\n          Optional OTLP metrics gRPC URL that Grandine will submit tracing and span data to\n      --telemetry-service-name <TELEMETRY_SERVICE_NAME>\n          Optional OTLP service name [default: Grandine]\n      --track-liveness\n          Enable validator liveness tracking [default: disabled]\n      --detect-doppelgangers\n          Enable doppelganger protection (liveness tracking must be enabled for this feature) [default: disabled]\n      --in-memory\n          Enable in-memory mode. No data will be stored in data-dir. [default: disabled]\n      --kzg-backend <KZG_BACKEND>\n          [default: blst]\n      --blacklisted-blocks <BLACKLISTED_BLOCKS>\n          A list beacon block roots that beacon node rejects unconditionally\n      --disable-engine-getblobs\n          Disable `engine_getBlobs` integration, use purely gossip and p2p requests. Use for testing purpose\n      --sync-without-reconstruction\n          Disable reconstruction while syncing the chain [default: disabled]\n      --disable-http-api\n          Run Grandine without HTTP API server\n      --http-address <HTTP_ADDRESS>\n          HTTP API address [default: 127.0.0.1]\n      --http-port <HTTP_PORT>\n          HTTP API port [default: 5052]\n      --http-allowed-origins <HTTP_ALLOWED_ORIGINS>\n          List of Access-Control-Allow-Origin header values for the HTTP API server. Defaults to the listening URL of the HTTP API server\n      --timeout <TIMEOUT>\n          HTTP API timeout in milliseconds [default: 1000000]\n      --listen-address <LISTEN_ADDRESS>\n          Listen IPv4 address [default: 0.0.0.0]\n      --listen-address-ipv6 <LISTEN_ADDRESS_IPV6>\n          Listen IPv6 address [default: None]\n      --libp2p-port <LIBP2P_PORT>\n          libp2p IPv4 port [default: 9000]\n      --libp2p-port-ipv6 <LIBP2P_PORT_IPV6>\n          libp2p IPv6 port [default: 9050]\n      --disable-quic\n          Disable QUIC support as a fallback transport to TCP\n      --disable-peer-scoring\n          Disable peer scoring\n      --disable-rate-limiting\n          Disable rate limiting both inbound and outbound\n      --disable-upnp\n          Disable NAT traversal via UPnP [default: enabled]\n      --disable-enr-auto-update\n          Disable enr auto update [default: enabled]\n      --discovery-port <DISCOVERY_PORT>\n          discv5 IPv4 port [default: 9000]\n      --discovery-port-ipv6 <DISCOVERY_PORT_IPV6>\n          discv5 IPv6 port [default: 9050]\n      --quic-port <QUIC_PORT>\n          QUIC IPv4 port [default: 9001]\n      --quic-port-ipv6 <QUIC_PORT_IPV6>\n          QUIC IPv6 port [default: 9051]\n      --enable-private-discovery\n          Enable discovery of peers with private IP addresses. [default: disabled]\n      --enr-address <ENR_ADDRESS>\n          ENR IPv4 address\n      --enr-address-ipv6 <ENR_ADDRESS_IPV6>\n          ENR IPv6 address\n      --enr-tcp-port <ENR_TCP_PORT>\n          ENR TCP IPv4 port\n      --enr-tcp-port-ipv6 <ENR_TCP_PORT_IPV6>\n          ENR TCP IPv6 port\n      --enr-udp-port <ENR_UDP_PORT>\n          ENR UDP IPv4 port\n      --enr-udp-port-ipv6 <ENR_UDP_PORT_IPV6>\n          ENR UDP IPv6 port\n      --enr-quic-port <ENR_QUIC_PORT>\n          ENR QUIC IPv4 port\n      --enr-quic-port-ipv6 <ENR_QUIC_PORT_IPV6>\n          ENR QUIC IPv6 port\n      --boot-nodes <BOOT_NODES>\n          List of ENR boot node addresses\n      --libp2p-nodes <LIBP2P_NODES>\n          List of Multiaddr node addresses\n      --libp2p-private-key-file <KEY_FILE>\n          Load p2p private key from KEY_FILE\n      --target-peers <TARGET_PEERS>\n          Target number of network peers [default: 200]\n      --target-subnet-peers <TARGET_SUBNET_PEERS>\n          Target number of subnet peers [default: 3]\n      --trusted-peers <TRUSTED_PEERS>\n          List of trusted peers\n      --keystore-dir <KEYSTORE_DIR>\n          Path to a directory containing EIP-2335 keystore files\n      --keystore-password-dir <KEYSTORE_PASSWORD_DIR>\n          Path to a directory containing passwords for keystore files\n      --keystore-password-file <KEYSTORE_PASSWORD_FILE>\n          Path to a file containing password for keystore files\n      --keystore-storage-password-file <KEYSTORE_STORAGE_PASSWORD_FILE>\n          Path to a file containing password for decrypting imported keystores from API\n      --builder-format <BUILDER_API_FORMAT>\n          Data format for communication with the builder API [default: Ssz]\n      --builder-api-url <BUILDER_API_URL>\n          [DEPRECATED] External block builder API URL\n      --builder-url <BUILDER_URL>\n          External block builder URL\n      --builder-disable-checks\n          Always use specified external block builder without checking for circuit breaker conditions\n      --builder-max-skipped-slots <BUILDER_MAX_SKIPPED_SLOTS>\n          Max allowed consecutive missing blocks to trigger circuit breaker condition and switch to local execution engine for payload construction [default: 3]\n      --builder-max-skipped-slots-per-epoch <BUILDER_MAX_SKIPPED_SLOTS_PER_EPOCH>\n          Max allowed missing blocks in the last rolling epoch to trigger circuit breaker condition and switch to local execution engine for payload construction [default: 8]\n      --default-builder-boost-factor <DEFAULT_BUILDER_BOOST_FACTOR>\n          Percentage multiplier to apply to the builder's payload value when choosing between a builder payload header and payload from the paired execution node [default: 100]\n      --default-gas-limit <DEFAULT_GAS_LIMIT>\n          Default execution gas limit for all validators [default: 60000000]\n      --web3signer-public-keys <WEB3SIGNER_PUBLIC_KEYS>...\n          List of public keys to use from Web3Signer\n      --web3signer-refresh-keys-every-epoch\n          Refetches keys from Web3Signer once every epoch. This overwrites changes done via Keymanager API\n      --web3signer-api-urls <WEB3SIGNER_API_URLS>...\n          [DEPRECATED] List of Web3Signer API URLs\n      --web3signer-urls <WEB3SIGNER_URLS>...\n          List of Web3Signer URLs\n      --use-validator-key-cache\n          Use validator key cache for faster startup\n      --slashing-protection-history-limit <SLASHING_PROTECTION_HISTORY_LIMIT>\n          Number of epochs to keep slashing protection data for [default: 256]\n      --report-validator-performance\n          Print reports about validator performance\n      --withhold-data-columns-publishing\n          \n      --no-custody-groups-backfill\n          \n      --enable-validator-api\n          Enable validator API\n      --validator-api-address <VALIDATOR_API_ADDRESS>\n          Validator API address [default: 127.0.0.1]\n      --validator-api-port <VALIDATOR_API_PORT>\n          Listen port for validator API [default: 5055]\n      --validator-api-allowed-origins <VALIDATOR_API_ALLOWED_ORIGINS>\n          List of Access-Control-Allow-Origin header values for the validator API server. Defaults to the listening URL of the validator API server\n      --validator-api-timeout <VALIDATOR_API_TIMEOUT>\n          Validator API timeout in milliseconds [default: 10000]\n      --validator-api-token-file <VALIDATOR_API_TOKEN_FILE>\n          Path to a file containing validator API auth token\n      --graffiti <GRAFFITI>\n          Default block graffiti. Blockprint graffiti will be appended when sufficient space is available. See `--disable-blockprint-graffiti` to disable this behavior\n      --disable-blockprint-graffiti\n          Disable appending blockprint graffiti. If specified, no blockprint graffiti will be appended\n      --features <FEATURES>\n          List of optional runtime features to enable\n  -h, --help\n          Print help\n  -V, --version\n          Print version",
+  "version": "2.0.1"
+}

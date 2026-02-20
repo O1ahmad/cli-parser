@@ -1,0 +1,1348 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--datadir",
+          "shortcut": null,
+          "description": "Data directory for the databases",
+          "value": "value",
+          "default": "/home/ahmad/.local/share/erigon"
+        },
+        {
+          "option": "--chain",
+          "shortcut": null,
+          "description": "name of the network to join",
+          "value": "value",
+          "default": "\"mainnet\""
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "erigon init",
+      "raw_help_text": "NAME:\n   erigon init - Bootstrap and initialize a new genesis block\n\nUSAGE:\n   erigon init [command options] <genesisPath>\n\nDESCRIPTION:\n   \n   The init command initializes a new genesis block and definition for the network.\n   This is a destructive action and changes the network in which you will be\n   participating.\n\n   It expects the genesis file as argument.\n\nOPTIONS:\n   --datadir value  Data directory for the databases (default: /home/ahmad/.local/share/erigon)\n   --chain value    name of the network to join (default: \"mainnet\")\n   --help, -h       show help",
+      "description": "Bootstrap and initialize a new genesis block"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--datadir",
+          "shortcut": null,
+          "description": "Data directory for the databases",
+          "value": "value",
+          "default": "/home/ahmad/.local/share/erigon"
+        },
+        {
+          "option": "--chain",
+          "shortcut": null,
+          "description": "name of the network to join",
+          "value": "value",
+          "default": "\"mainnet\""
+        },
+        {
+          "option": "--networkid",
+          "shortcut": null,
+          "description": "Explicitly set network id (integer)(For testnets: use --chain <testnet_name> instead)",
+          "value": "value",
+          "default": "1"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "erigon import",
+      "raw_help_text": "NAME:\n   erigon import - Import a blockchain file\n\nUSAGE:\n   erigon import [command options] <filename> (<filename 2> ... <filename N>) \n\nDESCRIPTION:\n   \n   The import command imports blocks from an RLP-encoded form. The form can be one file\n   with several RLP-encoded blocks, or several files can be used.\n\n   If only one file is used, import error will result in failure. If several files are used,\n   processing will proceed even if an individual RLP-file import failure occurs.\n\nOPTIONS:\n   --datadir value    Data directory for the databases (default: /home/ahmad/.local/share/erigon)\n   --chain value      name of the network to join (default: \"mainnet\")\n   --networkid value  Explicitly set network id (integer)(For testnets: use --chain <testnet_name> instead) (default: 1)\n   --help, -h         show help",
+      "description": "Import a blockchain file"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--debug.addrs",
+          "shortcut": null,
+          "description": "Comma separated list of URLs to the debug endpoints that are being diagnosed",
+          "value": "value",
+          "default": "localhost:6062"
+        },
+        {
+          "option": "--diagnostics.addr",
+          "shortcut": null,
+          "description": "Address of the diagnostics system provided by the support team, include unique session PIN",
+          "value": "value",
+          "default": "localhost:8080"
+        },
+        {
+          "option": "--diagnostics.sessions",
+          "shortcut": null,
+          "description": "Comma separated list of session PINs to connect to",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--pprof",
+          "shortcut": null,
+          "description": "Enable the pprof HTTP server",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--pprof.addr",
+          "shortcut": null,
+          "description": "pprof HTTP server listening interface",
+          "value": "value",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--pprof.port",
+          "shortcut": null,
+          "description": "pprof HTTP server listening port",
+          "value": "value",
+          "default": "6060"
+        },
+        {
+          "option": "--pprof.cpuprofile",
+          "shortcut": null,
+          "description": "Write CPU profile to the given file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--trace",
+          "shortcut": null,
+          "description": "Write execution trace to the given file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--vmtrace",
+          "shortcut": null,
+          "description": "Set the provider tracer",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--vmtrace.jsonconfig",
+          "shortcut": null,
+          "description": "Set the config of the tracer",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "erigon support",
+      "raw_help_text": "NAME:\n   erigon support - Connect Erigon instance to a diagnostics system for support\n\nUSAGE:\n   erigon support [command options] --diagnostics.addr <URL for the diagnostics system> --ids <diagnostic session ids allowed to connect> --metrics.urls <http://erigon_host:metrics_port>\n\nDESCRIPTION:\n   The support command connects a running Erigon instances to a diagnostics system specified by the URL.\n\nOPTIONS:\n   --debug.addrs value [ --debug.addrs value ]                    Comma separated list of URLs to the debug endpoints that are being diagnosed (default: \"localhost:6062\")\n   --diagnostics.addr value                                       Address of the diagnostics system provided by the support team, include unique session PIN (default: \"localhost:8080\")\n   --diagnostics.sessions value [ --diagnostics.sessions value ]  Comma separated list of session PINs to connect to\n   --pprof                                                        Enable the pprof HTTP server (default: false)\n   --pprof.addr value                                             pprof HTTP server listening interface (default: \"127.0.0.1\")\n   --pprof.port value                                             pprof HTTP server listening port (default: 6060)\n   --pprof.cpuprofile value                                       Write CPU profile to the given file\n   --trace value                                                  Write execution trace to the given file\n   --vmtrace value                                                Set the provider tracer\n   --vmtrace.jsonconfig value                                     Set the config of the tracer\n   --help, -h                                                     show help",
+      "description": "Connect Erigon instance to a diagnostics system for support"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--chain",
+          "shortcut": null,
+          "description": "chain name: gnosis, chiado, etc.",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--el-url",
+          "shortcut": null,
+          "description": "execution layer url",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--validator-info-file",
+          "shortcut": null,
+          "description": "path to validator info json file",
+          "value": "value",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "show help",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "erigon shutter-validator-reg-check",
+      "raw_help_text": "NAME:\n   erigon shutter-validator-reg-check - check if the provided validators are registered with shutter\n\nUSAGE:\n   erigon shutter-validator-reg-check [command options]\n\nOPTIONS:\n   --chain value                chain name: gnosis, chiado, etc.\n   --el-url value               execution layer url\n   --validator-info-file value  path to validator info json file\n   --help, -h                   show help",
+      "description": "check if the provided validators are registered with shutter"
+    }
+  ],
+  "options": [
+    {
+      "option": "--datadir",
+      "description": "Data directory for the databases",
+      "default": "/home/ahmad/.local/share/erigon"
+    },
+    {
+      "option": "--ethash.dagdir",
+      "description": "Directory to store the ethash mining DAGs",
+      "default": "/home/ahmad/.local/share/erigon-ethash"
+    },
+    {
+      "option": "--externalcl",
+      "description": "Enables the external consensus layer",
+      "default": "false"
+    },
+    {
+      "option": "--txpool.disable",
+      "description": "External pool and block producer, see ./cmd/txpool/readme.md for more info. Disabling internal txpool and block producer.",
+      "default": "false"
+    },
+    {
+      "option": "--txpool.pricelimit",
+      "description": "Minimum gas price (fee cap) limit to enforce for acceptance into the pool",
+      "default": "1"
+    },
+    {
+      "option": "--txpool.pricebump",
+      "description": "Price bump percentage to replace an already existing transaction",
+      "default": "10"
+    },
+    {
+      "option": "--txpool.blobpricebump",
+      "description": "Price bump percentage to replace existing (type-3) blob transaction",
+      "default": "100"
+    },
+    {
+      "option": "--txpool.accountslots",
+      "description": "Minimum number of executable transaction slots guaranteed per account",
+      "default": "16"
+    },
+    {
+      "option": "--txpool.blobslots",
+      "description": "Max allowed total number of blobs (within type-3 txs) per account",
+      "default": "540"
+    },
+    {
+      "option": "--txpool.totalblobpoollimit",
+      "description": "Total limit of number of all blobs in txs within the txpool",
+      "default": "5400"
+    },
+    {
+      "option": "--txpool.globalslots",
+      "description": "Maximum number of executable transaction slots for all accounts",
+      "default": "10000"
+    },
+    {
+      "option": "--txpool.globalbasefeeslots",
+      "description": "Maximum number of non-executable transactions where only not enough baseFee",
+      "default": "30000"
+    },
+    {
+      "option": "--txpool.globalqueue",
+      "description": "Maximum number of non-executable transaction slots for all accounts",
+      "default": "30000"
+    },
+    {
+      "option": "--txpool.trace.senders",
+      "description": "Comma separated list of addresses, whose transactions will traced in transaction pool with debug printing"
+    },
+    {
+      "option": "--txpool.commit.every",
+      "description": "How often transactions should be committed to the storage",
+      "default": "15s"
+    },
+    {
+      "option": "--prune.distance",
+      "description": "Keep state history for the latest N blocks (default: everything)",
+      "default": "0"
+    },
+    {
+      "option": "--prune.distance.blocks",
+      "description": "Keep block history for the latest N blocks (default: everything)",
+      "default": "0"
+    },
+    {
+      "option": "--prune.mode",
+      "description": "Choose a pruning preset to run onto. Available values: \"full\", \"archive\", \"minimal\", \"blocks\".",
+      "default": "\"full\""
+    },
+    {
+      "option": "--prune.include-commitment-history",
+      "description": "Enables blazing fast eth_getProof for executed block",
+      "default": "false"
+    },
+    {
+      "option": "--fcu.timeout",
+      "description": "FCU timeout before it switches to being process async (use 0 to disable)",
+      "default": "1s"
+    },
+    {
+      "option": "--fcu.background.prune",
+      "description": "Enables background pruning post fcu",
+      "default": "true"
+    },
+    {
+      "option": "--batchSize",
+      "description": "Batch size for the execution stage",
+      "default": "\"512M\""
+    },
+    {
+      "option": "--bodies.cache",
+      "description": "Limit on the cache for block bodies",
+      "default": "\"268435456\""
+    },
+    {
+      "option": "--database.verbosity",
+      "description": "Enabling internal db logs. Very high verbosity levels may require recompile db. Default: 2, means warning.",
+      "default": "2"
+    },
+    {
+      "option": "--private.api.addr",
+      "description": "Erigon's components (txpool, rpcdaemon, sentry, downloader, ...) can be deployed as independent Processes on same/another server. Then components will connect to erigon by this internal grpc API. example: 127.0.0.1:9090, empty string means not to start the listener. do not expose to public network. serves remote database interface",
+      "default": "\"127.0.0.1:9090\""
+    },
+    {
+      "option": "--private.api.ratelimit",
+      "description": "Amount of requests server handle simultaneously - requests over this limit will wait. Increase it - if clients see 'request timeout' while server load is low - it means your 'hot data' is small or have much RAM.",
+      "default": "31872"
+    },
+    {
+      "option": "--etl.bufferSize",
+      "description": "Buffer size for ETL operations.",
+      "default": "\"256MB\""
+    },
+    {
+      "option": "--tls",
+      "description": "Enable TLS handshake",
+      "default": "false"
+    },
+    {
+      "option": "--tls.cert",
+      "description": "Specify certificate"
+    },
+    {
+      "option": "--tls.key",
+      "description": "Specify key file"
+    },
+    {
+      "option": "--tls.cacert",
+      "description": "Specify certificate authority"
+    },
+    {
+      "option": "--state.stream.disable",
+      "description": "Disable streaming of state changes from core to RPC daemon",
+      "default": "false"
+    },
+    {
+      "option": "--sync.loop.throttle",
+      "description": "Sets the minimum time between sync loop starts (e.g. 1h30m, default is none)"
+    },
+    {
+      "option": "--bad.block",
+      "description": "Marks block with given hex string as bad and forces initial reorg before normal staged sync"
+    },
+    {
+      "option": "--http",
+      "description": "JSON-RPC server (enabled by default). Use --http=false to disable it",
+      "default": "true"
+    },
+    {
+      "option": "--http.enabled",
+      "description": "JSON-RPC HTTP server (enabled by default). Use --http.enabled=false to disable it",
+      "default": "true"
+    },
+    {
+      "option": "--graphql",
+      "description": "Enable the graphql endpoint",
+      "default": "false"
+    },
+    {
+      "option": "--http.addr",
+      "description": "HTTP-RPC server listening interface",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--http.port",
+      "description": "HTTP-RPC server listening port",
+      "default": "8545"
+    },
+    {
+      "option": "--authrpc.addr",
+      "description": "HTTP-RPC server listening interface for the Engine API",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--authrpc.port",
+      "description": "HTTP-RPC server listening port for the Engine API",
+      "default": "8551"
+    },
+    {
+      "option": "--authrpc.jwtsecret",
+      "description": "Path to the token that ensures safe connection between CL and EL"
+    },
+    {
+      "option": "--http.compression",
+      "description": "Enable compression over HTTP-RPC. Use --http.compression=false to disable it",
+      "default": "true"
+    },
+    {
+      "option": "--http.corsdomain",
+      "description": "Comma separated list of domains from which to accept cross origin requests (browser enforced)"
+    },
+    {
+      "option": "--http.vhosts",
+      "description": "Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts 'any' or '*' as wildcard.",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--authrpc.vhosts",
+      "description": "Comma separated list of virtual hostnames from which to accept Engine API requests (server enforced). Accepts 'any' or '*' as wildcard.",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--http.api",
+      "description": "API's offered over the HTTP-RPC interface",
+      "default": "\"eth,erigon,engine\""
+    },
+    {
+      "option": "--ws.port",
+      "description": "WS-RPC server listening port",
+      "default": "8546"
+    },
+    {
+      "option": "--ws",
+      "description": "Enable the WS-RPC server",
+      "default": "false"
+    },
+    {
+      "option": "--ws.compression",
+      "description": "Enable compression over WebSocket (enabled by default in case WS-RPC is enabled). Use --ws.enabled=false to disable it",
+      "default": "true"
+    },
+    {
+      "option": "--http.trace",
+      "description": "Print all HTTP requests to logs with INFO level",
+      "default": "false"
+    },
+    {
+      "option": "--http.dbg.single",
+      "description": "Allow pass HTTP header 'dbg: true' to print more detailed logs - how this request was executed",
+      "default": "false"
+    },
+    {
+      "option": "--state.cache",
+      "description": "Amount of data to store in StateCache (enabled if no --datadir set). Set 0 to disable StateCache. Defaults to 0MB",
+      "default": "\"0MB\""
+    },
+    {
+      "option": "--rpc.batch.concurrency",
+      "description": "Does limit amount of goroutines to process 1 batch request. Means 1 batch request can't overload server. 1 batch still can have unlimited amount of request",
+      "default": "2"
+    },
+    {
+      "option": "--rpc.streaming.disable",
+      "description": "Erigon has enabled json streaming for some heavy endpoints (like trace_*). It's a trade-off: greatly reduce amount of RAM (in some cases from 30GB to 30mb), but it produce invalid json format if error happened in the middle of streaming (because json is not streaming-friendly format)",
+      "default": "false"
+    },
+    {
+      "option": "--db.read.concurrency",
+      "description": "Does limit amount of parallel db reads. Default: equal to GOMAXPROCS (or number of CPU)",
+      "default": "768"
+    },
+    {
+      "option": "--rpc.accessList",
+      "description": "Specify granular (method-by-method) API allowlist"
+    },
+    {
+      "option": "--trace.compat",
+      "description": "Bug for bug compatibility with OE for trace_ routines",
+      "default": "false"
+    },
+    {
+      "option": "--rpc.gascap",
+      "description": "Sets a cap on gas that can be used in eth_call/estimateGas",
+      "default": "50000000"
+    },
+    {
+      "option": "--rpc.batch.limit",
+      "description": "Maximum number of requests in a batch",
+      "default": "100"
+    },
+    {
+      "option": "--rpc.returndata.limit",
+      "description": "Maximum number of bytes returned from eth_call or similar invocations",
+      "default": "100000"
+    },
+    {
+      "option": "--rpc.allow-unprotected-txs",
+      "description": "Allow for unprotected (non-EIP155 signed) transactions to be submitted via RPC",
+      "default": "false"
+    },
+    {
+      "option": "--rpc.txfeecap",
+      "description": "Sets a cap on transaction fee (in ether) that can be sent via the RPC APIs (0 = no cap)",
+      "default": "1"
+    },
+    {
+      "option": "--txpool.api.addr",
+      "description": "TxPool api network address, for example: 127.0.0.1:9090",
+      "default": "use value of --private.api.addr"
+    },
+    {
+      "option": "--trace.maxtraces",
+      "description": "Sets a limit on traces that can be returned in trace_filter",
+      "default": "200"
+    },
+    {
+      "option": "--experimental.always-generate-changesets",
+      "description": "Allows to override changesets generation logic",
+      "default": "false"
+    },
+    {
+      "option": "--http.timeouts.read",
+      "description": "Maximum duration for reading the entire request, including the body.",
+      "default": "30s"
+    },
+    {
+      "option": "--http.timeouts.write",
+      "description": "Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read.",
+      "default": "30m0s"
+    },
+    {
+      "option": "--http.timeouts.idle",
+      "description": "Maximum amount of time to wait for the next request when keep-alive connections are enabled. If http.timeouts.idle is zero, the value of http.timeouts.read is used.",
+      "default": "2m0s"
+    },
+    {
+      "option": "--authrpc.timeouts.read",
+      "description": "Maximum duration for reading the entire request, including the body.",
+      "default": "30s"
+    },
+    {
+      "option": "--authrpc.timeouts.write",
+      "description": "Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read.",
+      "default": "30m0s"
+    },
+    {
+      "option": "--authrpc.timeouts.idle",
+      "description": "Maximum amount of time to wait for the next request when keep-alive connections are enabled. If authrpc.timeouts.idle is zero, the value of authrpc.timeouts.read is used.",
+      "default": "2m0s"
+    },
+    {
+      "option": "--rpc.evmtimeout",
+      "description": "Maximum amount of time to wait for the answer from EVM call.",
+      "default": "5m0s"
+    },
+    {
+      "option": "--rpc.overlay.getlogstimeout",
+      "description": "Maximum amount of time to wait for the answer from the overlay_getLogs call.",
+      "default": "5m0s"
+    },
+    {
+      "option": "--rpc.overlay.replayblocktimeout",
+      "description": "Maximum amount of time to wait for the answer to replay a single block when called from an overlay_getLogs call.",
+      "default": "10s"
+    },
+    {
+      "option": "--rpc.subscription.filters.maxlogs",
+      "description": "Maximum number of logs to store per subscription.",
+      "default": "0"
+    },
+    {
+      "option": "--rpc.subscription.filters.maxheaders",
+      "description": "Maximum number of block headers to store per subscription.",
+      "default": "0"
+    },
+    {
+      "option": "--rpc.subscription.filters.maxtxs",
+      "description": "Maximum number of transactions to store per subscription.",
+      "default": "0"
+    },
+    {
+      "option": "--rpc.subscription.filters.maxaddresses",
+      "description": "Maximum number of addresses per subscription to filter logs by.",
+      "default": "0"
+    },
+    {
+      "option": "--rpc.subscription.filters.maxtopics",
+      "description": "Maximum number of topics per subscription to filter logs by.",
+      "default": "0"
+    },
+    {
+      "option": "--snap.keepblocks",
+      "description": "Keep ancient blocks in db (useful for debug)",
+      "default": "false"
+    },
+    {
+      "option": "--snap.stop",
+      "description": "Workaround to stop producing new snapshots, if you meet some snapshots-related critical bug. It will stop move historical data from DB to new immutable snapshots. DB will grow and may slightly slow-down - and removing this flag in future will not fix this effect (db size will not greatly reduce).",
+      "default": "false"
+    },
+    {
+      "option": "--snap.state.stop",
+      "description": "Workaround to stop producing new state files, if you meet some state-related critical bug. It will stop aggregate DB history in a state files. DB will grow and may slightly slow-down - and removing this flag in future will not fix this effect (db size will not greatly reduce).",
+      "default": "false"
+    },
+    {
+      "option": "--snap.skip-state-snapshot-download",
+      "description": "Skip state download and start from genesis block",
+      "default": "false"
+    },
+    {
+      "option": "--snap.download.to.block",
+      "description": "Download snapshots up to the given block number (exclusive). Disabled by default. Useful for testing and shadow forks.",
+      "default": "0"
+    },
+    {
+      "option": "--db.pagesize",
+      "description": "DB is splitted to 'pages' of fixed size. Can't change DB creation. Must be power of 2 and '256b <= pagesize <= 64kb'. Default: equal to OperationSystem's pageSize. Bigger pageSize causing: 1. More writes to disk during commit 2. Smaller b-tree high 3. Less fragmentation 4. Less overhead on 'free-pages list' maintainance (a bit faster Put/Commit) 5. If expecting DB-size > 8Tb then set pageSize >= 8Kb",
+      "default": "\"16KB\""
+    },
+    {
+      "option": "--db.size.limit",
+      "description": "Runtime limit of chaindata db size (can change at any time)",
+      "default": "\"1TB\""
+    },
+    {
+      "option": "--db.writemap",
+      "description": "Enable WRITE_MAP feature for fast database writes and fast commit times",
+      "default": "true"
+    },
+    {
+      "option": "--torrent.port",
+      "description": "Port to listen and serve BitTorrent protocol",
+      "default": "42069"
+    },
+    {
+      "option": "--torrent.maxpeers",
+      "description": "Unused parameter (reserved for future use)",
+      "default": "100"
+    },
+    {
+      "option": "--torrent.conns.perfile",
+      "description": "Number of connections per file",
+      "default": "10"
+    },
+    {
+      "option": "--torrent.trackers.disable",
+      "description": "Disable conventional BitTorrent trackers",
+      "default": "false"
+    },
+    {
+      "option": "--torrent.upload.rate",
+      "description": "Bytes per second, example: 32mb. Set Inf for no limit.",
+      "default": "\"16mb\""
+    },
+    {
+      "option": "--torrent.download.rate",
+      "description": "Bytes per second, example: 32mb. Set Inf for no limit. Shared with webseeds unless that rate is set separately.",
+      "default": "\"512mb\""
+    },
+    {
+      "option": "--torrent.webseed.download.rate",
+      "description": "Bytes per second for webseeds, example: 32mb. Set Inf for no limit. If not set, rate limit is shared with torrent.download.rate"
+    },
+    {
+      "option": "--torrent.verbosity",
+      "description": "0=silent, 1=error, 2=warn, 3=info, 4=debug, 5=detail (must set --verbosity to equal or higher level)",
+      "default": "1"
+    },
+    {
+      "option": "--port",
+      "description": "Network listening port",
+      "default": "30303"
+    },
+    {
+      "option": "--p2p.protocol",
+      "description": "Version of eth p2p protocol",
+      "default": "68, 69"
+    },
+    {
+      "option": "--p2p.allowed-ports",
+      "description": "Allowed ports to pick for different eth p2p protocol versions as follows <porta>,<portb>,..,<porti>",
+      "default": "30303, 30304, 30305, 30306, 30307"
+    },
+    {
+      "option": "--nat",
+      "description": "NAT port mapping mechanism (any|none|upnp|pmp|stun|extip:<IP>)",
+      "default": "\"\" or \"none\""
+    },
+    {
+      "option": "--nodiscover",
+      "description": "Disables the peer discovery mechanism (manual peer addition)",
+      "default": "false"
+    },
+    {
+      "option": "--discovery.v4",
+      "description": "Enables the V4 discovery mechanism",
+      "default": "true"
+    },
+    {
+      "option": "--discovery.v5",
+      "description": "Enables the V5 discovery mechanism",
+      "default": "true"
+    },
+    {
+      "option": "--netrestrict",
+      "description": "Restricts network communication to the given IP networks (CIDR masks)"
+    },
+    {
+      "option": "--nodekey",
+      "description": "P2P node key file"
+    },
+    {
+      "option": "--nodekeyhex",
+      "description": "P2P node key as hex (for testing)"
+    },
+    {
+      "option": "--discovery.dns",
+      "description": "Sets DNS discovery entry points (use \"\" to disable DNS)"
+    },
+    {
+      "option": "--bootnodes",
+      "description": "Comma separated enode URLs for P2P discovery bootstrap"
+    },
+    {
+      "option": "--staticpeers",
+      "description": "Comma separated enode URLs to connect to"
+    },
+    {
+      "option": "--trustedpeers",
+      "description": "Comma separated enode URLs which are always allowed to connect, even above the peer limit"
+    },
+    {
+      "option": "--maxpeers",
+      "description": "Maximum number of network peers per protocol version (network disabled if set to 0)",
+      "default": "32"
+    },
+    {
+      "option": "--maxpendpeers",
+      "description": "Maximum number of TCP connections pending to become connected peers (per protocol version)",
+      "default": "1000"
+    },
+    {
+      "option": "--chain",
+      "description": "name of the network to join",
+      "default": "\"mainnet\""
+    },
+    {
+      "option": "--dev.period",
+      "description": "Block period to use in developer mode (0 = mine only if transaction pending)",
+      "default": "0"
+    },
+    {
+      "option": "--vmdebug",
+      "description": "Record information useful for VM and contract debugging",
+      "default": "false"
+    },
+    {
+      "option": "--networkid",
+      "description": "Explicitly set network id (integer)(For testnets: use --chain <testnet_name> instead)",
+      "default": "1"
+    },
+    {
+      "option": "--persist.receipts",
+      "description": "Download historical Receipts. If disabled: using state-history to re-exec transactions and generate Receipts - all RPC: eth_getLogs, eth_getBlockReceipts will work (just higher latency)",
+      "default": "false"
+    },
+    {
+      "option": "--fakepow",
+      "description": "Disables proof-of-work verification",
+      "default": "false"
+    },
+    {
+      "option": "--gpo.blocks",
+      "description": "Number of recent blocks to check for gas prices",
+      "default": "20"
+    },
+    {
+      "option": "--gpo.percentile",
+      "description": "Suggested gas price is the given percentile of a set of recent transaction gas prices",
+      "default": "60"
+    },
+    {
+      "option": "--allow-insecure-unlock",
+      "description": "Allow insecure account unlocking when account-related RPCs are exposed by http",
+      "default": "false"
+    },
+    {
+      "option": "--identity",
+      "description": "Custom node name"
+    },
+    {
+      "option": "--clique.checkpoint",
+      "description": "Number of blocks after which to save the vote snapshot to the database",
+      "default": "10"
+    },
+    {
+      "option": "--clique.snapshots",
+      "description": "Number of recent vote snapshots to keep in memory",
+      "default": "1024"
+    },
+    {
+      "option": "--clique.signatures",
+      "description": "Number of recent block signatures to keep in memory",
+      "default": "16384"
+    },
+    {
+      "option": "--clique.datadir",
+      "description": "Path to clique db folder"
+    },
+    {
+      "option": "--proposer.disable",
+      "description": "Disables PoS proposer",
+      "default": "false"
+    },
+    {
+      "option": "--miner.gaslimit",
+      "description": "Target gas limit for mined blocks",
+      "default": "0"
+    },
+    {
+      "option": "--miner.etherbase",
+      "description": "Public address for block mining rewards",
+      "default": "\"0\""
+    },
+    {
+      "option": "--miner.extradata",
+      "description": "Block extra data set by the miner",
+      "default": "client version"
+    },
+    {
+      "option": "--sentry.api.addr",
+      "description": "Comma separated sentry addresses '<host>:<port>,<host>:<port>'"
+    },
+    {
+      "option": "--sentry.log-peer-info",
+      "description": "Log detailed peer info when a peer connects or disconnects. Enable to integrate with observer.",
+      "default": "false"
+    },
+    {
+      "option": "--downloader.api.addr",
+      "description": "downloader address '<host>:<port>'"
+    },
+    {
+      "option": "--downloader.disable.ipv4",
+      "description": "Turns off ipv4 for the downloader",
+      "default": "false"
+    },
+    {
+      "option": "--downloader.disable.ipv6",
+      "description": "Turns off ipv6 for the downloader",
+      "default": "false"
+    },
+    {
+      "option": "--no-downloader",
+      "description": "Disables downloader component",
+      "default": "false"
+    },
+    {
+      "option": "--downloader.verify",
+      "description": "Verify snapshots on startup. It will not report problems found, but re-download broken pieces.",
+      "default": "false"
+    },
+    {
+      "option": "--healthcheck",
+      "description": "Enable grpc health check",
+      "default": "false"
+    },
+    {
+      "option": "--bor.heimdall",
+      "description": "URL of Heimdall service",
+      "default": "\"http://localhost:1317\""
+    },
+    {
+      "option": "--webseed",
+      "description": "Comma-separated URL's, holding metadata about network-support infrastructure (like S3 buckets with snapshots, bootnodes, etc...)"
+    },
+    {
+      "option": "--bor.withoutheimdall",
+      "description": "Run without Heimdall service (for testing purposes)",
+      "default": "false"
+    },
+    {
+      "option": "--bor.period",
+      "description": "Override the bor block period (for testing purposes)",
+      "default": "false"
+    },
+    {
+      "option": "--bor.minblocksize",
+      "description": "Ignore the bor block period and wait for 'blocksize' transactions (for testing purposes)",
+      "default": "false"
+    },
+    {
+      "option": "--aa",
+      "description": "Enable AA transactions",
+      "default": "false"
+    },
+    {
+      "option": "--ethstats",
+      "description": "Reporting URL of a ethstats service (nodename:secret@host:port)"
+    },
+    {
+      "option": "--override.osaka",
+      "description": "Manually specify the Osaka fork time, overriding the bundled setting",
+      "default": "0"
+    },
+    {
+      "option": "--override.balancer",
+      "description": "Manually specify the Balancer fork time, overriding the bundled setting",
+      "default": "0"
+    },
+    {
+      "option": "--keep.stored.chain.config",
+      "description": "Avoid overriding chain config already stored in the DB",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.discovery.addr",
+      "description": "Address for Caplin DISCV5 protocol",
+      "default": "\"0.0.0.0\""
+    },
+    {
+      "option": "--caplin.discovery.port",
+      "description": "Port for Caplin DISCV5 protocol",
+      "default": "4000"
+    },
+    {
+      "option": "--caplin.discovery.tcpport",
+      "description": "TCP Port for Caplin DISCV5 protocol",
+      "default": "4001"
+    },
+    {
+      "option": "--caplin.checkpoint-sync-url",
+      "description": "checkpoint sync endpoint"
+    },
+    {
+      "option": "--caplin.subscribe-all-topics",
+      "description": "Subscribe to all gossip topics",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.max-peer-count",
+      "description": "Max number of peers to connect",
+      "default": "128"
+    },
+    {
+      "option": "--caplin.enable-upnp",
+      "description": "Enable NAT porting for Caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.max-inbound-traffic-per-peer",
+      "description": "Max inbound traffic per second per peer",
+      "default": "\"1MB\""
+    },
+    {
+      "option": "--caplin.max-outbound-traffic-per-peer",
+      "description": "Max outbound traffic per second per peer",
+      "default": "\"1MB\""
+    },
+    {
+      "option": "--caplin.adaptable-maximum-traffic-requirements",
+      "description": "Make the node adaptable to the maximum traffic requirement based on how many validators are being ran",
+      "default": "true"
+    },
+    {
+      "option": "--sentinel.addr",
+      "description": "Address for sentinel",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--sentinel.port",
+      "description": "Port for sentinel",
+      "default": "7777"
+    },
+    {
+      "option": "--sentinel.bootnodes",
+      "description": "Comma separated enode URLs for P2P discovery bootstrap"
+    },
+    {
+      "option": "--sentinel.staticpeers",
+      "description": "connect to comma-separated Consensus static peers"
+    },
+    {
+      "option": "--ots.search.max.pagesize",
+      "description": "Max allowed page size for search methods",
+      "default": "25"
+    },
+    {
+      "option": "--silkworm.exec",
+      "description": "Enable Silkworm block execution",
+      "default": "false"
+    },
+    {
+      "option": "--silkworm.rpc",
+      "description": "Enable embedded Silkworm RPC service",
+      "default": "false"
+    },
+    {
+      "option": "--silkworm.sentry",
+      "description": "Enable embedded Silkworm Sentry service",
+      "default": "false"
+    },
+    {
+      "option": "--silkworm.verbosity",
+      "description": "Set the log level for Silkworm console logs",
+      "default": "\"info\""
+    },
+    {
+      "option": "--silkworm.contexts",
+      "description": "Number of I/O contexts used in embedded Silkworm RPC and Sentry services (zero means use default in Silkworm)",
+      "default": "0"
+    },
+    {
+      "option": "--silkworm.rpc.log",
+      "description": "Enable interface log for embedded Silkworm RPC service",
+      "default": "false"
+    },
+    {
+      "option": "--silkworm.rpc.log.maxsize",
+      "description": "Max interface log file size in MB for embedded Silkworm RPC service",
+      "default": "1"
+    },
+    {
+      "option": "--silkworm.rpc.log.maxfiles",
+      "description": "Max interface log files for embedded Silkworm RPC service",
+      "default": "100"
+    },
+    {
+      "option": "--silkworm.rpc.log.response",
+      "description": "Dump responses in interface logs for embedded Silkworm RPC service",
+      "default": "false"
+    },
+    {
+      "option": "--silkworm.rpc.workers",
+      "description": "Number of worker threads used in embedded Silkworm RPC service (zero means use default in Silkworm)",
+      "default": "0"
+    },
+    {
+      "option": "--silkworm.rpc.compatibility",
+      "description": "Preserve JSON-RPC compatibility using embedded Silkworm RPC service",
+      "default": "true"
+    },
+    {
+      "option": "--beacon.api",
+      "description": "Enable beacon API (available endpoints: beacon, builder, config, debug, events, node, validator, lighthouse)"
+    },
+    {
+      "option": "--beacon.api.addr",
+      "description": "sets the host to listen for beacon api requests",
+      "default": "\"localhost\""
+    },
+    {
+      "option": "--beacon.api.cors.allow-methods",
+      "description": "set the cors' allow methods",
+      "default": "\"GET\", \"POST\", \"PUT\", \"DELETE\", \"OPTIONS\""
+    },
+    {
+      "option": "--beacon.api.cors.allow-origins",
+      "description": "set the cors' allow origins"
+    },
+    {
+      "option": "--beacon.api.cors.allow-credentials",
+      "description": "set the cors' allow credentials",
+      "default": "false"
+    },
+    {
+      "option": "--beacon.api.port",
+      "description": "sets the port to listen for beacon api requests",
+      "default": "5555"
+    },
+    {
+      "option": "--beacon.api.read.timeout",
+      "description": "Sets the seconds for a read time out in the beacon api",
+      "default": "5"
+    },
+    {
+      "option": "--beacon.api.write.timeout",
+      "description": "Sets the seconds for a write time out in the beacon api",
+      "default": "31536000"
+    },
+    {
+      "option": "--beacon.api.protocol",
+      "description": "Protocol for beacon API",
+      "default": "\"tcp\""
+    },
+    {
+      "option": "--beacon.api.ide.timeout",
+      "description": "Sets the seconds for a write time out in the beacon api",
+      "default": "25"
+    },
+    {
+      "option": "--caplin.blocks-archive",
+      "description": "sets whether backfilling is enabled for caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.blobs-archive",
+      "description": "sets whether backfilling is enabled for caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.states-archive",
+      "description": "enables archival node for historical states in caplin (it will enable block archival as well)",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.blobs-immediate-backfill",
+      "description": "sets whether caplin should immediatelly backfill blobs (4096 epochs)",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.blobs-no-pruning",
+      "description": "disable blob pruning in caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.checkpoint-sync.disable",
+      "description": "disable checkpoint sync in caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.snapgen",
+      "description": "enables snapshot generation in caplin",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.mev-relay-url",
+      "description": "MEV relay endpoint. Caplin runs in builder mode if this is set"
+    },
+    {
+      "option": "--caplin.validator-monitor",
+      "description": "Enable caplin validator monitoring metrics",
+      "default": "false"
+    },
+    {
+      "option": "--caplin.custom-config",
+      "description": "set the custom config for caplin"
+    },
+    {
+      "option": "--caplin.custom-genesis",
+      "description": "set the custom genesis for caplin"
+    },
+    {
+      "option": "--caplin.use-engine-api",
+      "description": "Use engine API for internal Caplin. useful for testing and if CL network is degraded",
+      "default": "false"
+    },
+    {
+      "option": "--trusted-setup-file",
+      "description": "Absolute path to trusted_setup.json file"
+    },
+    {
+      "option": "--rpc.slow",
+      "description": "Print in logs RPC requests slower than given threshold: 100ms, 1s, 1m. Exluded methods: eth_getBlock,eth_getBlockByNumber,eth_getBlockByHash,eth_blockNumber,erigon_blockNumber,erigon_getHeaderByNumber,erigon_getHeaderByHash,erigon_getBlockByTimestamp,eth_call",
+      "default": "0s"
+    },
+    {
+      "option": "--txpool.gossip.disable",
+      "description": "Disabling p2p gossip of txs. Any txs received by p2p - will be dropped. Some networks like 'Optimism execution engine'/'Optimistic Rollup' - using it to protect against MEV attacks",
+      "default": "false"
+    },
+    {
+      "option": "--sync.loop.block.limit",
+      "description": "Sets the maximum number of blocks to process per loop iteration",
+      "default": "5000"
+    },
+    {
+      "option": "--sync.loop.break.after",
+      "description": "Sets the last stage of the sync loop to run"
+    },
+    {
+      "option": "--sync.parallel-state-flushing",
+      "description": "Enables parallel state flushing",
+      "default": "true"
+    },
+    {
+      "option": "--chaos.monkey",
+      "description": "Enable 'chaos monkey' to generate spontaneous network/consensus/etc failures. Use ONLY for testing",
+      "default": "false"
+    },
+    {
+      "option": "--shutter",
+      "description": "Enable the Shutter encrypted transactions mempool",
+      "default": "false"
+    },
+    {
+      "option": "--shutter.p2p.bootstrap.nodes",
+      "description": "Use to override the default p2p bootstrap nodes",
+      "default": "using the values in the embedded config"
+    },
+    {
+      "option": "--shutter.p2p.listen.port",
+      "description": "Use to override the default p2p listen port",
+      "default": "0"
+    },
+    {
+      "option": "--polygon.pos.ssf",
+      "description": "Enabling Polygon PoS Single Slot Finality",
+      "default": "false"
+    },
+    {
+      "option": "--polygon.pos.ssf.block",
+      "description": "Enabling Polygon PoS Single Slot Finality since block",
+      "default": "0"
+    },
+    {
+      "option": "--polygon.wit-protocol",
+      "description": "Enable WIT protocol for stateless witness data exchange (auto-enabled for Bor chains)",
+      "default": "false"
+    },
+    {
+      "option": "--gdbme",
+      "description": "restart erigon under gdb for debug purposes",
+      "default": "false"
+    },
+    {
+      "option": "--experimental.concurrent-commitment",
+      "description": "EXPERIMENTAL: enables concurrent trie for commitment",
+      "default": "false"
+    },
+    {
+      "option": "--erigondb.override.stepsize",
+      "description": "Override the number of transactions per step; may lead to a corrupted database if used incorrectly",
+      "default": "1562500"
+    },
+    {
+      "option": "--erigondb.override.stepsinfrozenfile",
+      "description": "Override the number of steps in frozen snapshot files; may lead to a corrupted database if used incorrectly",
+      "default": "64"
+    },
+    {
+      "option": "--pprof",
+      "description": "Enable the pprof HTTP server",
+      "default": "false"
+    },
+    {
+      "option": "--pprof.addr",
+      "description": "pprof HTTP server listening interface",
+      "default": "\"127.0.0.1\""
+    },
+    {
+      "option": "--pprof.port",
+      "description": "pprof HTTP server listening port",
+      "default": "6060"
+    },
+    {
+      "option": "--pprof.cpuprofile",
+      "description": "Write CPU profile to the given file"
+    },
+    {
+      "option": "--trace",
+      "description": "Write execution trace to the given file"
+    },
+    {
+      "option": "--vmtrace",
+      "description": "Set the provider tracer"
+    },
+    {
+      "option": "--vmtrace.jsonconfig",
+      "description": "Set the config of the tracer"
+    },
+    {
+      "option": "--metrics",
+      "description": "Enable metrics collection and reporting",
+      "default": "false"
+    },
+    {
+      "option": "--metrics.addr",
+      "description": "Enable stand-alone metrics HTTP server listening interface",
+      "default": "\"127.0.0.1\""
+    },
+    {
+      "option": "--metrics.port",
+      "description": "Metrics HTTP server listening port",
+      "default": "6061"
+    },
+    {
+      "option": "--log.json",
+      "description": "Format console logs with JSON",
+      "default": "false"
+    },
+    {
+      "option": "--log.console.json",
+      "description": "Format console logs with JSON",
+      "default": "false"
+    },
+    {
+      "option": "--log.dir.json",
+      "description": "Format file logs with JSON",
+      "default": "false"
+    },
+    {
+      "option": "--verbosity",
+      "description": "Set the log level for console logs",
+      "default": "\"info\""
+    },
+    {
+      "option": "--log.console.verbosity",
+      "description": "Set the log level for console logs",
+      "default": "\"info\""
+    },
+    {
+      "option": "--log.dir.disable",
+      "description": "disable disk logging",
+      "default": "false"
+    },
+    {
+      "option": "--log.dir.path",
+      "description": "Path to store user and error logs to disk"
+    },
+    {
+      "option": "--log.dir.prefix",
+      "description": "The file name prefix for logs stored to disk"
+    },
+    {
+      "option": "--log.dir.verbosity",
+      "description": "Set the log verbosity for logs stored to disk",
+      "default": "\"info\""
+    },
+    {
+      "option": "--log.delays",
+      "description": "Enable block delay logging",
+      "default": "false"
+    },
+    {
+      "option": "--config",
+      "description": "Sets erigon flags from YAML/TOML file"
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "show help"
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "print the version"
+    }
+  ],
+  "aliases": [
+    "snapshots",
+    "seg",
+    "snapshot",
+    "segments",
+    "segment",
+    "help",
+    "h"
+  ],
+  "name": "erigon",
+  "raw_help_text": "NAME:\n   erigon - erigon\n\nUSAGE:\n   erigon [command] [flags]\n\nVERSION:\n   3.3.7-9a898cf7\n\nCOMMANDS:\n   init                                         Bootstrap and initialize a new genesis block\n   import                                       Import a blockchain file\n   snapshots, seg, snapshot, segments, segment  Managing historical data segments (partitions)\n   support                                      Connect Erigon instance to a diagnostics system for support\n   shutter-validator-reg-check                  check if the provided validators are registered with shutter\n   help, h                                      Shows a list of commands or help for one command\n\nGLOBAL OPTIONS:\n   --datadir value                                                                                                         Data directory for the databases (default: /home/ahmad/.local/share/erigon)\n   --ethash.dagdir value                                                                                                   Directory to store the ethash mining DAGs (default: /home/ahmad/.local/share/erigon-ethash)\n   --externalcl                                                                                                            Enables the external consensus layer (default: false)\n   --txpool.disable                                                                                                        External pool and block producer, see ./cmd/txpool/readme.md for more info. Disabling internal txpool and block producer. (default: false)\n   --txpool.pricelimit value                                                                                               Minimum gas price (fee cap) limit to enforce for acceptance into the pool (default: 1)\n   --txpool.pricebump value                                                                                                Price bump percentage to replace an already existing transaction (default: 10)\n   --txpool.blobpricebump value                                                                                            Price bump percentage to replace existing (type-3) blob transaction (default: 100)\n   --txpool.accountslots value                                                                                             Minimum number of executable transaction slots guaranteed per account (default: 16)\n   --txpool.blobslots value                                                                                                Max allowed total number of blobs (within type-3 txs) per account (default: 540)\n   --txpool.totalblobpoollimit value                                                                                       Total limit of number of all blobs in txs within the txpool (default: 5400)\n   --txpool.globalslots value                                                                                              Maximum number of executable transaction slots for all accounts (default: 10000)\n   --txpool.globalbasefeeslots value                                                                                       Maximum number of non-executable transactions where only not enough baseFee (default: 30000)\n   --txpool.globalqueue value                                                                                              Maximum number of non-executable transaction slots for all accounts (default: 30000)\n   --txpool.trace.senders value                                                                                            Comma separated list of addresses, whose transactions will traced in transaction pool with debug printing\n   --txpool.commit.every value                                                                                             How often transactions should be committed to the storage (default: 15s)\n   --prune.distance value                                                                                                  Keep state history for the latest N blocks (default: everything) (default: 0)\n   --prune.distance.blocks value                                                                                           Keep block history for the latest N blocks (default: everything) (default: 0)\n   --prune.mode value                                                                                                      Choose a pruning preset to run onto. Available values: \"full\", \"archive\", \"minimal\", \"blocks\".\n                                                                                                                                 full: Keep only necessary blocks and latest state,\n                                                                                                                                 blocks: Keep all blocks but not the state history,\n                                                                                                                                 archive: Keep the entire state history and all blocks,\n                                                                                                                                 minimal: Keep only latest state (default: \"full\")\n   --prune.include-commitment-history, --experimental.commitment-history, --prune.experimental.include-commitment-history  Enables blazing fast eth_getProof for executed block (default: false)\n   --fcu.timeout value                                                                                                     FCU timeout before it switches to being process async (use 0 to disable) (default: 1s)\n   --fcu.background.prune                                                                                                  Enables background pruning post fcu (default: true)\n   --batchSize value                                                                                                       Batch size for the execution stage (default: \"512M\")\n   --bodies.cache value                                                                                                    Limit on the cache for block bodies (default: \"268435456\")\n   --database.verbosity value                                                                                              Enabling internal db logs. Very high verbosity levels may require recompile db. Default: 2, means warning. (default: 2)\n   --private.api.addr value                                                                                                Erigon's components (txpool, rpcdaemon, sentry, downloader, ...) can be deployed as independent Processes on same/another server. Then components will connect to erigon by this internal grpc API. example: 127.0.0.1:9090, empty string means not to start the listener. do not expose to public network. serves remote database interface (default: \"127.0.0.1:9090\")\n   --private.api.ratelimit value                                                                                           Amount of requests server handle simultaneously - requests over this limit will wait. Increase it - if clients see 'request timeout' while server load is low - it means your 'hot data' is small or have much RAM.  (default: 31872)\n   --etl.bufferSize value                                                                                                  Buffer size for ETL operations. (default: \"256MB\")\n   --tls                                                                                                                   Enable TLS handshake (default: false)\n   --tls.cert value                                                                                                        Specify certificate\n   --tls.key value                                                                                                         Specify key file\n   --tls.cacert value                                                                                                      Specify certificate authority\n   --state.stream.disable                                                                                                  Disable streaming of state changes from core to RPC daemon (default: false)\n   --sync.loop.throttle value                                                                                              Sets the minimum time between sync loop starts (e.g. 1h30m, default is none)\n   --bad.block value                                                                                                       Marks block with given hex string as bad and forces initial reorg before normal staged sync\n   --http                                                                                                                  JSON-RPC server (enabled by default). Use --http=false to disable it (default: true)\n   --http.enabled                                                                                                          JSON-RPC HTTP server (enabled by default). Use --http.enabled=false to disable it (default: true)\n   --graphql                                                                                                               Enable the graphql endpoint (default: false)\n   --http.addr value                                                                                                       HTTP-RPC server listening interface (default: \"localhost\")\n   --http.port value                                                                                                       HTTP-RPC server listening port (default: 8545)\n   --authrpc.addr value                                                                                                    HTTP-RPC server listening interface for the Engine API (default: \"localhost\")\n   --authrpc.port value                                                                                                    HTTP-RPC server listening port for the Engine API (default: 8551)\n   --authrpc.jwtsecret value                                                                                               Path to the token that ensures safe connection between CL and EL\n   --http.compression                                                                                                      Enable compression over HTTP-RPC. Use --http.compression=false to disable it (default: true)\n   --http.corsdomain value                                                                                                 Comma separated list of domains from which to accept cross origin requests (browser enforced)\n   --http.vhosts value                                                                                                     Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts 'any' or '*' as wildcard. (default: \"localhost\")\n   --authrpc.vhosts value                                                                                                  Comma separated list of virtual hostnames from which to accept Engine API requests (server enforced). Accepts 'any' or '*' as wildcard. (default: \"localhost\")\n   --http.api value                                                                                                        API's offered over the HTTP-RPC interface (default: \"eth,erigon,engine\")\n   --ws.port value                                                                                                         WS-RPC server listening port (default: 8546)\n   --ws                                                                                                                    Enable the WS-RPC server (default: false)\n   --ws.compression                                                                                                        Enable compression over WebSocket (enabled by default in case WS-RPC is enabled). Use --ws.enabled=false to disable it (default: true)\n   --http.trace                                                                                                            Print all HTTP requests to logs with INFO level (default: false)\n   --http.dbg.single, --rpc.dbg.single                                                                                     Allow pass HTTP header 'dbg: true' to printt more detailed logs - how this request was executed (default: false)\n   --state.cache value                                                                                                     Amount of data to store in StateCache (enabled if no --datadir set). Set 0 to disable StateCache. Defaults to 0MB (default: \"0MB\")\n   --rpc.batch.concurrency value                                                                                           Does limit amount of goroutines to process 1 batch request. Means 1 bach request can't overload server. 1 batch still can have unlimited amount of request (default: 2)\n   --rpc.streaming.disable                                                                                                 Erigon has enabled json streaming for some heavy endpoints (like trace_*). It's a trade-off: greatly reduce amount of RAM (in some cases from 30GB to 30mb), but it produce invalid json format if error happened in the middle of streaming (because json is not streaming-friendly format) (default: false)\n   --db.read.concurrency value                                                                                             Does limit amount of parallel db reads. Default: equal to GOMAXPROCS (or number of CPU) (default: 768)\n   --rpc.accessList value                                                                                                  Specify granular (method-by-method) API allowlist\n   --trace.compat                                                                                                          Bug for bug compatibility with OE for trace_ routines (default: false)\n   --rpc.gascap value                                                                                                      Sets a cap on gas that can be used in eth_call/estimateGas (default: 50000000)\n   --rpc.batch.limit value                                                                                                 Maximum number of requests in a batch (default: 100)\n   --rpc.returndata.limit value                                                                                            Maximum number of bytes returned from eth_call or similar invocations (default: 100000)\n   --rpc.allow-unprotected-txs                                                                                             Allow for unprotected (non-EIP155 signed) transactions to be submitted via RPC (default: false)\n   --rpc.txfeecap value                                                                                                    Sets a cap on transaction fee (in ether) that can be sent via the RPC APIs (0 = no cap) (default: 1)\n   --txpool.api.addr value                                                                                                 TxPool api network address, for example: 127.0.0.1:9090 (default: use value of --private.api.addr)\n   --trace.maxtraces value                                                                                                 Sets a limit on traces that can be returned in trace_filter (default: 200)\n   --experimental.always-generate-changesets                                                                               Allows to override changesets generation logic (default: false)\n   --http.timeouts.read value                                                                                              Maximum duration for reading the entire request, including the body. (default: 30s)\n   --http.timeouts.write value                                                                                             Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read. (default: 30m0s)\n   --http.timeouts.idle value                                                                                              Maximum amount of time to wait for the next request when keep-alive connections are enabled. If http.timeouts.idle is zero, the value of http.timeouts.read is used. (default: 2m0s)\n   --authrpc.timeouts.read value                                                                                           Maximum duration for reading the entire request, including the body. (default: 30s)\n   --authrpc.timeouts.write value                                                                                          Maximum duration before timing out writes of the response. It is reset whenever a new request's header is read. (default: 30m0s)\n   --authrpc.timeouts.idle value                                                                                           Maximum amount of time to wait for the next request when keep-alive connections are enabled. If authrpc.timeouts.idle is zero, the value of authrpc.timeouts.read is used. (default: 2m0s)\n   --rpc.evmtimeout value                                                                                                  Maximum amount of time to wait for the answer from EVM call. (default: 5m0s)\n   --rpc.overlay.getlogstimeout value                                                                                      Maximum amount of time to wait for the answer from the overlay_getLogs call. (default: 5m0s)\n   --rpc.overlay.replayblocktimeout value                                                                                  Maximum amount of time to wait for the answer to replay a single block when called from an overlay_getLogs call. (default: 10s)\n   --rpc.subscription.filters.maxlogs value                                                                                Maximum number of logs to store per subscription. (default: 0)\n   --rpc.subscription.filters.maxheaders value                                                                             Maximum number of block headers to store per subscription. (default: 0)\n   --rpc.subscription.filters.maxtxs value                                                                                 Maximum number of transactions to store per subscription. (default: 0)\n   --rpc.subscription.filters.maxaddresses value                                                                           Maximum number of addresses per subscription to filter logs by. (default: 0)\n   --rpc.subscription.filters.maxtopics value                                                                              Maximum number of topics per subscription to filter logs by. (default: 0)\n   --snap.keepblocks                                                                                                       Keep ancient blocks in db (useful for debug) (default: false)\n   --snap.stop                                                                                                             Workaround to stop producing new snapshots, if you meet some snapshots-related critical bug. It will stop move historical data from DB to new immutable snapshots. DB will grow and may slightly slow-down - and removing this flag in future will not fix this effect (db size will not greatly reduce). (default: false)\n   --snap.state.stop                                                                                                       Workaround to stop producing new state files, if you meet some state-related critical bug. It will stop aggregate DB history in a state files. DB will grow and may slightly slow-down - and removing this flag in future will not fix this effect (db size will not greatly reduce). (default: false)\n   --snap.skip-state-snapshot-download                                                                                     Skip state download and start from genesis block (default: false)\n   --snap.download.to.block value, --shadow.fork.block value                                                               Download snapshots up to the given block number (exclusive). Disabled by default. Useful for testing and shadow forks. (default: 0)\n   --db.pagesize value                                                                                                     DB is splitted to 'pages' of fixed size. Can't change DB creation. Must be power of 2 and '256b <= pagesize <= 64kb'. Default: equal to OperationSystem's pageSize. Bigger pageSize causing: 1. More writes to disk during commit 2. Smaller b-tree high 3. Less fragmentation 4. Less overhead on 'free-pages list' maintainance (a bit faster Put/Commit) 5. If expecting DB-size > 8Tb then set pageSize >= 8Kb (default: \"16KB\")\n   --db.size.limit value                                                                                                   Runtime limit of chaindata db size (can change at any time) (default: \"1TB\")\n   --db.writemap                                                                                                           Enable WRITE_MAP feature for fast database writes and fast commit times (default: true)\n   --torrent.port value                                                                                                    Port to listen and serve BitTorrent protocol (default: 42069)\n   --torrent.maxpeers value                                                                                                Unused parameter (reserved for future use) (default: 100)\n   --torrent.conns.perfile value                                                                                           Number of connections per file (default: 10)\n   --torrent.trackers.disable                                                                                              Disable conventional BitTorrent trackers (default: false)\n   --torrent.upload.rate value                                                                                             Bytes per second, example: 32mb. Set Inf for no limit. (default: \"16mb\")\n   --torrent.download.rate value                                                                                           Bytes per second, example: 32mb. Set Inf for no limit. Shared with webseeds unless that rate is set separately. (default: \"512mb\")\n   --torrent.webseed.download.rate value                                                                                   Bytes per second for webseeds, example: 32mb. Set Inf for no limit. If not set, rate limit is shared with torrent.download.rate\n   --torrent.verbosity value                                                                                               0=silent, 1=error, 2=warn, 3=info, 4=debug, 5=detail (must set --verbosity to equal or higher level) (default: 1)\n   --port value                                                                                                            Network listening port (default: 30303)\n   --p2p.protocol value [ --p2p.protocol value ]                                                                           Version of eth p2p protocol (default: 68, 69)\n   --p2p.allowed-ports value [ --p2p.allowed-ports value ]                                                                 Allowed ports to pick for different eth p2p protocol versions as follows <porta>,<portb>,..,<porti> (default: 30303, 30304, 30305, 30306, 30307)\n   --nat value                                                                                                             NAT port mapping mechanism (any|none|upnp|pmp|stun|extip:<IP>)\n                                                                                                                                \"\" or \"none\"         Default - do not nat\n                                                                                                                                \"extip:77.12.33.4\"   Will assume the local machine is reachable on the given IP\n                                                                                                                                \"any\"                Uses the first auto-detected mechanism\n                                                                                                                                \"upnp\"               Uses the Universal Plug and Play protocol\n                                                                                                                                \"pmp\"                Uses NAT-PMP with an auto-detected gateway address\n                                                                                                                                \"pmp:192.168.0.1\"    Uses NAT-PMP with the given gateway address\n                                                                                                                                \"stun\"               Uses STUN to detect an external IP using a default server\n                                                                                                                                \"stun:<server>\"      Uses STUN to detect an external IP using the given server (host:port)\n   --nodiscover                                                                                                            Disables the peer discovery mechanism (manual peer addition) (default: false)\n   --discovery.v4, --discv4                                                                                                Enables the V4 discovery mechanism (default: true)\n   --discovery.v5, --discv5, --v5disc                                                                                      Enables the V5 discovery mechanism (default: true)\n   --netrestrict value                                                                                                     Restricts network communication to the given IP networks (CIDR masks)\n   --nodekey value                                                                                                         P2P node key file\n   --nodekeyhex value                                                                                                      P2P node key as hex (for testing)\n   --discovery.dns value                                                                                                   Sets DNS discovery entry points (use \"\" to disable DNS)\n   --bootnodes value                                                                                                       Comma separated enode URLs for P2P discovery bootstrap\n   --staticpeers value                                                                                                     Comma separated enode URLs to connect to\n   --trustedpeers value                                                                                                    Comma separated enode URLs which are always allowed to connect, even above the peer limit\n   --maxpeers value                                                                                                        Maximum number of network peers per protocol version (network disabled if set to 0) (default: 32)\n   --maxpendpeers value                                                                                                    Maximum number of TCP connections pending to become connected peers (per protocol version) (default: 1000)\n   --chain value                                                                                                           name of the network to join (default: \"mainnet\")\n   --dev.period value                                                                                                      Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)\n   --vmdebug                                                                                                               Record information useful for VM and contract debugging (default: false)\n   --networkid value                                                                                                       Explicitly set network id (integer)(For testnets: use --chain <testnet_name> instead) (default: 1)\n   --persist.receipts, --experiment.persist.receipts.v2                                                                    Download historical Receipts. If disabled: using state-history to re-exec transactions and generate Receipts - all RPC: eth_getLogs, eth_getBlockReceipts will work (just higher latency) (default: false)\n   --fakepow                                                                                                               Disables proof-of-work verification (default: false)\n   --gpo.blocks value                                                                                                      Number of recent blocks to check for gas prices (default: 20)\n   --gpo.percentile value                                                                                                  Suggested gas price is the given percentile of a set of recent transaction gas prices (default: 60)\n   --allow-insecure-unlock                                                                                                 Allow insecure account unlocking when account-related RPCs are exposed by http (default: false)\n   --identity value                                                                                                        Custom node name\n   --clique.checkpoint value                                                                                               Number of blocks after which to save the vote snapshot to the database (default: 10)\n   --clique.snapshots value                                                                                                Number of recent vote snapshots to keep in memory (default: 1024)\n   --clique.signatures value                                                                                               Number of recent block signatures to keep in memory (default: 16384)\n   --clique.datadir value                                                                                                  Path to clique db folder\n   --proposer.disable                                                                                                      Disables PoS proposer (default: false)\n   --miner.gaslimit value                                                                                                  Target gas limit for mined blocks (default: 0)\n   --miner.etherbase value                                                                                                 Public address for block mining rewards (default: \"0\")\n   --miner.extradata value                                                                                                 Block extra data set by the miner (default = client version)\n   --sentry.api.addr value                                                                                                 Comma separated sentry addresses '<host>:<port>,<host>:<port>'\n   --sentry.log-peer-info                                                                                                  Log detailed peer info when a peer connects or disconnects. Enable to integrate with observer. (default: false)\n   --downloader.api.addr value                                                                                             downloader address '<host>:<port>'\n   --downloader.disable.ipv4                                                                                               Turns off ipv4 for the downloader (default: false)\n   --downloader.disable.ipv6                                                                                               Turns off ipv6 for the downloader (default: false)\n   --no-downloader                                                                                                         Disables downloader component (default: false)\n   --downloader.verify                                                                                                     Verify snapshots on startup. It will not report problems found, but re-download broken pieces. (default: false)\n   --healthcheck                                                                                                           Enable grpc health check (default: false)\n   --bor.heimdall value                                                                                                    URL of Heimdall service (default: \"http://localhost:1317\")\n   --webseed value                                                                                                         Comma-separated URL's, holding metadata about network-support infrastructure (like S3 buckets with snapshots, bootnodes, etc...)\n   --bor.withoutheimdall                                                                                                   Run without Heimdall service (for testing purposes) (default: false)\n   --bor.period                                                                                                            Override the bor block period (for testing purposes) (default: false)\n   --bor.minblocksize                                                                                                      Ignore the bor block period and wait for 'blocksize' transactions (for testing purposes) (default: false)\n   --aa                                                                                                                    Enable AA transactions (default: false)\n   --ethstats value                                                                                                        Reporting URL of a ethstats service (nodename:secret@host:port)\n   --override.osaka value                                                                                                  Manually specify the Osaka fork time, overriding the bundled setting (default: 0)\n   --override.balancer value                                                                                               Manually specify the Balancer fork time, overriding the bundled setting (default: 0)\n   --keep.stored.chain.config                                                                                              Avoid overriding chain config already stored in the DB (default: false)\n   --caplin.discovery.addr value                                                                                           Address for Caplin DISCV5 protocol (default: \"0.0.0.0\")\n   --caplin.discovery.port value                                                                                           Port for Caplin DISCV5 protocol (default: 4000)\n   --caplin.discovery.tcpport value                                                                                        TCP Port for Caplin DISCV5 protocol (default: 4001)\n   --caplin.checkpoint-sync-url value [ --caplin.checkpoint-sync-url value ]                                               checkpoint sync endpoint\n   --caplin.subscribe-all-topics                                                                                           Subscribe to all gossip topics (default: false)\n   --caplin.max-peer-count value                                                                                           Max number of peers to connect (default: 128)\n   --caplin.enable-upnp                                                                                                    Enable NAT porting for Caplin (default: false)\n   --caplin.max-inbound-traffic-per-peer value                                                                             Max inbound traffic per second per peer (default: \"1MB\")\n   --caplin.max-outbound-traffic-per-peer value                                                                            Max outbound traffic per second per peer (default: \"1MB\")\n   --caplin.adaptable-maximum-traffic-requirements                                                                         Make the node adaptable to the maximum traffic requirement based on how many validators are being ran (default: true)\n   --sentinel.addr value                                                                                                   Address for sentinel (default: \"localhost\")\n   --sentinel.port value                                                                                                   Port for sentinel (default: 7777)\n   --sentinel.bootnodes value [ --sentinel.bootnodes value ]                                                               Comma separated enode URLs for P2P discovery bootstrap\n   --sentinel.staticpeers value [ --sentinel.staticpeers value ]                                                           connect to comma-separated Consensus static peers\n   --ots.search.max.pagesize value                                                                                         Max allowed page size for search methods (default: 25)\n   --silkworm.exec                                                                                                         Enable Silkworm block execution (default: false)\n   --silkworm.rpc                                                                                                          Enable embedded Silkworm RPC service (default: false)\n   --silkworm.sentry                                                                                                       Enable embedded Silkworm Sentry service (default: false)\n   --silkworm.verbosity value                                                                                              Set the log level for Silkworm console logs (default: \"info\")\n   --silkworm.contexts value                                                                                               Number of I/O contexts used in embedded Silkworm RPC and Sentry services (zero means use default in Silkworm) (default: 0)\n   --silkworm.rpc.log                                                                                                      Enable interface log for embedded Silkworm RPC service (default: false)\n   --silkworm.rpc.log.maxsize value                                                                                        Max interface log file size in MB for embedded Silkworm RPC service (default: 1)\n   --silkworm.rpc.log.maxfiles value                                                                                       Max interface log files for embedded Silkworm RPC service (default: 100)\n   --silkworm.rpc.log.response                                                                                             Dump responses in interface logs for embedded Silkworm RPC service (default: false)\n   --silkworm.rpc.workers value                                                                                            Number of worker threads used in embedded Silkworm RPC service (zero means use default in Silkworm) (default: 0)\n   --silkworm.rpc.compatibility                                                                                            Preserve JSON-RPC compatibility using embedded Silkworm RPC service (default: true)\n   --beacon.api value [ --beacon.api value ]                                                                               Enable beacon API (available endpoints: beacon, builder, config, debug, events, node, validator, lighthouse)\n   --beacon.api.addr value                                                                                                 sets the host to listen for beacon api requests (default: \"localhost\")\n   --beacon.api.cors.allow-methods value [ --beacon.api.cors.allow-methods value ]                                         set the cors' allow methods (default: \"GET\", \"POST\", \"PUT\", \"DELETE\", \"OPTIONS\")\n   --beacon.api.cors.allow-origins value [ --beacon.api.cors.allow-origins value ]                                         set the cors' allow origins\n   --beacon.api.cors.allow-credentials                                                                                     set the cors' allow credentials (default: false)\n   --beacon.api.port value                                                                                                 sets the port to listen for beacon api requests (default: 5555)\n   --beacon.api.read.timeout value                                                                                         Sets the seconds for a read time out in the beacon api (default: 5)\n   --beacon.api.write.timeout value                                                                                        Sets the seconds for a write time out in the beacon api (default: 31536000)\n   --beacon.api.protocol value                                                                                             Protocol for beacon API (default: \"tcp\")\n   --beacon.api.ide.timeout value                                                                                          Sets the seconds for a write time out in the beacon api (default: 25)\n   --caplin.blocks-archive                                                                                                 sets whether backfilling is enabled for caplin (default: false)\n   --caplin.blobs-archive                                                                                                  sets whether backfilling is enabled for caplin (default: false)\n   --caplin.states-archive                                                                                                 enables archival node for historical states in caplin (it will enable block archival as well) (default: false)\n   --caplin.blobs-immediate-backfill                                                                                       sets whether caplin should immediatelly backfill blobs (4096 epochs) (default: false)\n   --caplin.blobs-no-pruning                                                                                               disable blob pruning in caplin (default: false)\n   --caplin.checkpoint-sync.disable                                                                                        disable checkpoint sync in caplin (default: false)\n   --caplin.snapgen                                                                                                        enables snapshot generation in caplin (default: false)\n   --caplin.mev-relay-url value                                                                                            MEV relay endpoint. Caplin runs in builder mode if this is set\n   --caplin.validator-monitor                                                                                              Enable caplin validator monitoring metrics (default: false)\n   --caplin.custom-config value                                                                                            set the custom config for caplin\n   --caplin.custom-genesis value                                                                                           set the custom genesis for caplin\n   --caplin.use-engine-api                                                                                                 Use engine API for internal Caplin. useful for testing and if CL network is degraded (default: false)\n   --trusted-setup-file value                                                                                              Absolute path to trusted_setup.json file\n   --rpc.slow value                                                                                                        Print in logs RPC requests slower than given threshold: 100ms, 1s, 1m. Exluded methods: eth_getBlock,eth_getBlockByNumber,eth_getBlockByHash,eth_blockNumber,erigon_blockNumber,erigon_getHeaderByNumber,erigon_getHeaderByHash,erigon_getBlockByTimestamp,eth_call (default: 0s)\n   --txpool.gossip.disable                                                                                                 Disabling p2p gossip of txs. Any txs received by p2p - will be dropped. Some networks like 'Optimism execution engine'/'Optimistic Rollup' - using it to protect against MEV attacks (default: false)\n   --sync.loop.block.limit value                                                                                           Sets the maximum number of blocks to process per loop iteration (default: 5000)\n   --sync.loop.break.after value                                                                                           Sets the last stage of the sync loop to run\n   --sync.parallel-state-flushing                                                                                          Enables parallel state flushing (default: true)\n   --chaos.monkey                                                                                                          Enable 'chaos monkey' to generate spontaneous network/consensus/etc failures. Use ONLY for testing (default: false)\n   --shutter                                                                                                               Enable the Shutter encrypted transactions mempool (defaults to false) (default: false)\n   --shutter.p2p.bootstrap.nodes value [ --shutter.p2p.bootstrap.nodes value ]                                             Use to override the default p2p bootstrap nodes (defaults to using the values in the embedded config)\n   --shutter.p2p.listen.port value                                                                                         Use to override the default p2p listen port (defaults to 23102) (default: 0)\n   --polygon.pos.ssf                                                                                                       Enabling Polygon PoS Single Slot Finality (default: false)\n   --polygon.pos.ssf.block value                                                                                           Enabling Polygon PoS Single Slot Finality since block (default: 0)\n   --polygon.wit-protocol                                                                                                  Enable WIT protocol for stateless witness data exchange (auto-enabled for Bor chains) (default: false)\n   --gdbme                                                                                                                 restart erigon under gdb for debug purposes (default: false)\n   --experimental.concurrent-commitment                                                                                    EXPERIMENTAL: enables concurrent trie for commitment (default: false)\n   --erigondb.override.stepsize value                                                                                      Override the number of transactions per step; may lead to a corrupted database if used incorrectly (default: 1562500)\n   --erigondb.override.stepsinfrozenfile value                                                                             Override the number of steps in frozen snapshot files; may lead to a corrupted database if used incorrectly (default: 64)\n   --pprof                                                                                                                 Enable the pprof HTTP server (default: false)\n   --pprof.addr value                                                                                                      pprof HTTP server listening interface (default: \"127.0.0.1\")\n   --pprof.port value                                                                                                      pprof HTTP server listening port (default: 6060)\n   --pprof.cpuprofile value                                                                                                Write CPU profile to the given file\n   --trace value                                                                                                           Write execution trace to the given file\n   --vmtrace value                                                                                                         Set the provider tracer\n   --vmtrace.jsonconfig value                                                                                              Set the config of the tracer\n   --metrics                                                                                                               Enable metrics collection and reporting (default: false)\n   --metrics.addr value                                                                                                    Enable stand-alone metrics HTTP server listening interface (default: \"127.0.0.1\")\n   --metrics.port value                                                                                                    Metrics HTTP server listening port (default: 6061)\n   --log.json                                                                                                              Format console logs with JSON (default: false)\n   --log.console.json                                                                                                      Format console logs with JSON (default: false)\n   --log.dir.json                                                                                                          Format file logs with JSON (default: false)\n   --verbosity value                                                                                                       Set the log level for console logs (default: \"info\")\n   --log.console.verbosity value                                                                                           Set the log level for console logs (default: \"info\")\n   --log.dir.disable                                                                                                       disable disk logging (default: false)\n   --log.dir.path value                                                                                                    Path to store user and error logs to disk\n   --log.dir.prefix value                                                                                                  The file name prefix for logs stored to disk\n   --log.dir.verbosity value                                                                                               Set the log verbosity for logs stored to disk (default: \"info\")\n   --log.delays                                                                                                            Enable block delay logging (default: false)\n   --config value                                                                                                          Sets erigon flags from YAML/TOML file\n   --help, -h                                                                                                              show help\n   --version, -v                                                                                                           print the version",
+  "version": "3.3.7-9a898cf7"
+}

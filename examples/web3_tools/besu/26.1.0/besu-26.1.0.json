@@ -1,0 +1,870 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu blocks",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides blocks related actions."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu txparse",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "Parse input transactions and return the sender, or an error."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu public-key",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides node public key related actions."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu password",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides password related actions."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu rlp",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides RLP data related actions."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu operator",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "Operator related actions such as generating configuration and caches."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu validate-config",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides basic Besu config validation (syntax only)."
+    },
+    {
+      "subcommands": [],
+      "options": [],
+      "aliases": [],
+      "name": "besu storage",
+      "raw_help_text": "Unmatched argument at index 0: 'help'\nDid you mean: besu rlp?\n\nTo display full help:\nbesu [COMMAND] --help",
+      "description": "This command provides storage related actions."
+    }
+  ],
+  "options": [
+    {
+      "option": "--auto-log-bloom-caching-enabled",
+      "description": "Enable automatic log bloom caching",
+      "default": "true"
+    },
+    {
+      "option": "--bonsai-historical-block-limit",
+      "description": "Limit of historical layers that can be loaded with BONSAI",
+      "default": "512"
+    },
+    {
+      "option": "--bonsai-limit-trie-logs-enabled",
+      "description": "Limit the number of trie logs that are retained.",
+      "default": "true"
+    },
+    {
+      "option": "--bonsai-parallel-state-root-computation-enabled",
+      "description": "Enables parallel computation of state root hash to optimize performance.",
+      "default": "true"
+    },
+    {
+      "option": "--bonsai-parallel-tx-processing-enabled",
+      "description": "Enables parallelization of transactions to optimize processing speed.",
+      "default": "true"
+    },
+    {
+      "option": "--bonsai-trie-logs-pruning-window-size",
+      "description": "The max number of blocks to load and prune trie logs for at startup.",
+      "default": "5000"
+    },
+    {
+      "option": "--cache-last-block-headers",
+      "description": "Specifies the number of last block headers to cache",
+      "default": "0"
+    },
+    {
+      "option": "--cache-last-block-headers-preload-enabled",
+      "description": "Enable preloading of the block header cache",
+      "default": "false"
+    },
+    {
+      "option": "--cache-last-blocks",
+      "description": "Specifies the number of last blocks to cache",
+      "default": "0"
+    },
+    {
+      "option": "--cache-precompiles",
+      "description": "Specifies whether to cache precompile results",
+      "default": "false"
+    },
+    {
+      "option": "--color-enabled",
+      "description": "Force color output to be enabled/disabled",
+      "default": "colorized only if printing to console"
+    },
+    {
+      "option": "--config-file",
+      "description": "TOML config file",
+      "default": "none"
+    },
+    {
+      "option": "--data-path",
+      "description": "The path to Besu data directory",
+      "default": "/opt/besu"
+    },
+    {
+      "option": "--data-storage-format",
+      "description": "Format to store trie data in.",
+      "default": "BONSAI."
+    },
+    {
+      "option": "--era1-data-uri",
+      "description": "The URI to attempt to load ERA1 files from.",
+      "default": "https://mainnet.era1.nimbus.team/"
+    },
+    {
+      "option": "--era1-import-prepipeline-concurrency",
+      "description": "How many parallel pipelines to use in the ERA1 import prepipeline",
+      "default": "1"
+    },
+    {
+      "option": "--era1-import-prepipeline-enabled",
+      "description": "Enable the ERA1 import prepipeline for FULL sync.",
+      "default": "false"
+    },
+    {
+      "option": "--ethstats",
+      "description": "Reporting URL of a ethstats server."
+    },
+    {
+      "option": "--ethstats-cacert-file",
+      "description": "Specifies the path to the root CA certificate file that has signed ethstats server certificate."
+    },
+    {
+      "option": "--ethstats-contact",
+      "description": "Contact address to send to ethstats server"
+    },
+    {
+      "option": "--ethstats-report-interval",
+      "description": "Interval in seconds between ethstats reports."
+    },
+    {
+      "option": "--genesis-file",
+      "description": "Genesis file for your custom network."
+    },
+    {
+      "option": "--genesis-state-hash-cache-enabled",
+      "description": "Use genesis state hash from data on startup if specified",
+      "default": "false"
+    },
+    {
+      "option": "-h, --help",
+      "description": "Show this help message and exit."
+    },
+    {
+      "option": "--history-expiry-prune",
+      "description": "Convenience option to enable online history pruning and configure BlobDB garbage collection settings.",
+      "default": "false"
+    },
+    {
+      "option": "--host-allowlist",
+      "description": "Comma separated list of hostnames to allow for RPC access",
+      "default": "localhost,127.0.0.1"
+    },
+    {
+      "option": "--identity",
+      "description": "Identification for this node in the Client ID"
+    },
+    {
+      "option": "--key-value-storage",
+      "description": "Identity for the key-value storage to be used."
+    },
+    {
+      "option": "--kzg-trusted-setup",
+      "description": "Path to file containing the KZG trusted setup."
+    },
+    {
+      "option": "-l, --logging",
+      "description": "Logging verbosity levels: OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL"
+    },
+    {
+      "option": "--nat-method",
+      "description": "Specify the NAT circumvention method to be used.",
+      "default": "AUTO"
+    },
+    {
+      "option": "--network",
+      "description": "Synchronize against the indicated network.",
+      "default": "MAINNET"
+    },
+    {
+      "option": "--network-id",
+      "description": "P2P network identifier."
+    },
+    {
+      "option": "--node-private-key-file",
+      "description": "The node's private key file."
+    },
+    {
+      "option": "--pid-path",
+      "description": "Path to PID file."
+    },
+    {
+      "option": "--plugin-continue-on-error",
+      "description": "Allow Besu startup even if any plugins fail to initialize correctly.",
+      "default": "false"
+    },
+    {
+      "option": "--plugins",
+      "description": "Comma-separated list of plugin names to load."
+    },
+    {
+      "option": "--plugins-verification-mode",
+      "description": "How to verify plugins during startup phase.",
+      "default": "NONE"
+    },
+    {
+      "option": "--print-paths-and-exit",
+      "description": "Print the configured paths and exit without starting the node."
+    },
+    {
+      "option": "--profile",
+      "description": "Overwrite default settings."
+    },
+    {
+      "option": "--receipt-compaction-enabled",
+      "description": "Enables compact storing of receipts.",
+      "default": "true"
+    },
+    {
+      "option": "--reorg-logging-threshold",
+      "description": "How deep a chain reorganization must be in order for it to be logged.",
+      "default": "6"
+    },
+    {
+      "option": "--required-block",
+      "description": "Block number and hash peers are required to have."
+    },
+    {
+      "option": "--revert-reason-enabled",
+      "description": "Enable passing the revert reason back through TransactionReceipts.",
+      "default": "false"
+    },
+    {
+      "option": "--security-module",
+      "description": "Identity for the Security Module to be used."
+    },
+    {
+      "option": "--snapsync-server-enabled",
+      "description": "Enable snap sync server capability.",
+      "default": "false"
+    },
+    {
+      "option": "--snapsync-synchronizer-pre-checkpoint-headers-only-enabled",
+      "description": "Enable snap sync downloader to save only headers.",
+      "default": "true"
+    },
+    {
+      "option": "--snapsync-synchronizer-transaction-indexing-enabled",
+      "description": "Enable transaction indexing during SNAP/CHECKPOINT sync.",
+      "default": "false"
+    },
+    {
+      "option": "--static-nodes-file",
+      "description": "Specifies the static node file containing the static nodes for this node to connect to."
+    },
+    {
+      "option": "--sync-min-peers",
+      "description": "Minimum number of peers required before starting sync.",
+      "default": "5"
+    },
+    {
+      "option": "--sync-mode",
+      "description": "Synchronization mode, possible values are FULL, FAST, SNAP, CHECKPOINT."
+    },
+    {
+      "option": "-V, --version",
+      "description": "Print version information and exit."
+    },
+    {
+      "option": "--version-compatibility-protection",
+      "description": "Perform compatibility checks between the version of Besu being started and the version of Besu that last started with this data directory."
+    },
+    {
+      "option": "--tx-pool-enable-balance-check",
+      "description": "If enabled a pending transaction can stay in the prioritized layer, only if its sender has enough balance.",
+      "default": "false"
+    },
+    {
+      "option": "--tx-pool-layer-max-capacity",
+      "description": "Max amount of memory space, in bytes, that any layer within the transaction pool could occupy.",
+      "default": "25000000"
+    },
+    {
+      "option": "--tx-pool-max-future-by-sender",
+      "description": "Max number of future pending transactions allowed for a single sender.",
+      "default": "200"
+    },
+    {
+      "option": "--tx-pool-max-prioritized",
+      "description": "Max number of pending transactions that are prioritized and thus kept sorted.",
+      "default": "4000"
+    },
+    {
+      "option": "--tx-pool-max-prioritized-by-type",
+      "description": "Max number of pending transactions, of a specific type, that are prioritized and thus kept sorted.",
+      "default": "{BLOB=72}"
+    },
+    {
+      "option": "--tx-pool-min-score",
+      "description": "Remove a pending transaction from the txpool if its score is lower than this value.",
+      "default": "-128"
+    },
+    {
+      "option": "--tx-pool-limit-by-account-percentage",
+      "description": "Maximum portion of the transaction pool which a single account may occupy with future transactions.",
+      "default": "0.001"
+    },
+    {
+      "option": "--tx-pool-max-size",
+      "description": "Maximum number of pending transactions that will be kept in the transaction pool.",
+      "default": "4096"
+    },
+    {
+      "option": "--tx-pool-retention-hours",
+      "description": "Maximum retention period of pending transactions in hours.",
+      "default": "13"
+    },
+    {
+      "option": "--rpc-tx-feecap",
+      "description": "Maximum transaction fees accepted for transaction submitted through RPC."
+    },
+    {
+      "option": "--strict-tx-replay-protection-enabled",
+      "description": "Require transactions submitted via JSON-RPC to use replay protection in accordance with EIP-155.",
+      "default": "false"
+    },
+    {
+      "option": "--tx-pool",
+      "description": "The Transaction Pool implementation to use.",
+      "default": "LAYERED"
+    },
+    {
+      "option": "--tx-pool-blob-price-bump",
+      "description": "Blob price bump percentage to replace an already existing transaction blob tx.",
+      "default": "100"
+    },
+    {
+      "option": "--tx-pool-enable-save-restore",
+      "description": "Set to true to enable saving the txpool content to file on shutdown and reloading it on startup.",
+      "default": "false"
+    },
+    {
+      "option": "--tx-pool-min-gas-price",
+      "description": "Transactions with gas price lower than this minimum will not be accepted into the txpool."
+    },
+    {
+      "option": "--tx-pool-no-local-priority",
+      "description": "Set to true if senders of transactions sent via RPC should not have priority.",
+      "default": "false"
+    },
+    {
+      "option": "--tx-pool-price-bump",
+      "description": "Price bump percentage to replace an already existing transaction.",
+      "default": "10"
+    },
+    {
+      "option": "--tx-pool-priority-senders",
+      "description": "Pending transactions sent exclusively by these addresses, from any source, are prioritized."
+    },
+    {
+      "option": "--tx-pool-save-file",
+      "description": "If saving the txpool content is enabled, define a custom path for the save file.",
+      "default": "txpool.dump in the data-dir"
+    },
+    {
+      "option": "--block-txs-selection-max-time",
+      "description": "Specifies the maximum time, in milliseconds, that could be spent selecting transactions to be included in the block."
+    },
+    {
+      "option": "--min-block-occupancy-ratio",
+      "description": "Minimum occupancy ratio for a mined block.",
+      "default": "0.8"
+    },
+    {
+      "option": "--min-gas-price",
+      "description": "Minimum price offered by a transaction for it to be included in a mined block."
+    },
+    {
+      "option": "--min-priority-fee",
+      "description": "Minimum priority fee per gas offered by a transaction for it to be included in a block."
+    },
+    {
+      "option": "--miner-extra-data",
+      "description": "A hex string representing the (32) bytes to be included in the extra data field of a mined block."
+    },
+    {
+      "option": "--plugin-block-txs-selection-max-time",
+      "description": "Specifies the maximum time that plugins could spent selecting transactions to be included in the block."
+    },
+    {
+      "option": "--poa-block-txs-selection-max-time",
+      "description": "Specifies the maximum time that could be spent selecting transactions to be included in the block."
+    },
+    {
+      "option": "--target-gas-limit",
+      "description": "Sets target gas limit per block."
+    },
+    {
+      "option": "--banned-node-id",
+      "description": "A list of node IDs to ban from the P2P network."
+    },
+    {
+      "option": "--bootnodes",
+      "description": "Comma separated enode URLs for P2P discovery bootstrap."
+    },
+    {
+      "option": "--discovery-dns-url",
+      "description": "Specifies the URL to use for DNS discovery."
+    },
+    {
+      "option": "--discovery-enabled",
+      "description": "Enable P2P discovery.",
+      "default": "true"
+    },
+    {
+      "option": "--max-peers",
+      "description": "Maximum P2P connections that can be established.",
+      "default": "25"
+    },
+    {
+      "option": "--net-restrict",
+      "description": "Comma-separated list of allowed IP subnets."
+    },
+    {
+      "option": "--p2p-enabled",
+      "description": "Enable P2P functionality.",
+      "default": "true"
+    },
+    {
+      "option": "--p2p-host",
+      "description": "IP address this node advertises to its peers.",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--p2p-interface",
+      "description": "The network interface address on which this node listens for P2P communication.",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--p2p-port",
+      "description": "Port on which to listen for P2P communication.",
+      "default": "30303"
+    },
+    {
+      "option": "--poa-discovery-retry-bootnodes",
+      "description": "Always use of bootnodes for discovery in PoA networks.",
+      "default": "true"
+    },
+    {
+      "option": "--random-peer-priority-enabled",
+      "description": "Allow for incoming connections to be prioritized randomly.",
+      "default": "false"
+    },
+    {
+      "option": "--remote-connections-limit-enabled",
+      "description": "Whether to limit the number of P2P connections initiated remotely.",
+      "default": "true"
+    },
+    {
+      "option": "--remote-connections-max-percentage",
+      "description": "The maximum percentage of P2P connections that can be initiated remotely."
+    },
+    {
+      "option": "--graphql-http-cors-origins",
+      "description": "Comma separated origin domain URLs for CORS validation."
+    },
+    {
+      "option": "--graphql-http-enabled",
+      "description": "Set to start the GraphQL HTTP service.",
+      "default": "false"
+    },
+    {
+      "option": "--graphql-http-host",
+      "description": "Host for GraphQL HTTP to listen on.",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--graphql-http-port",
+      "description": "Port for GraphQL HTTP to listen on.",
+      "default": "8547"
+    },
+    {
+      "option": "--graphql-mtls-enabled",
+      "description": "Enable mTLS for GraphQL HTTP service."
+    },
+    {
+      "option": "--graphql-tls-enabled",
+      "description": "Enable TLS for GraphQL HTTP service."
+    },
+    {
+      "option": "--graphql-tls-keystore-file",
+      "description": "Path to the TLS keystore file for GraphQL HTTP service."
+    },
+    {
+      "option": "--graphql-tls-keystore-password-file",
+      "description": "Path to the file containing the password for the TLS keystore."
+    },
+    {
+      "option": "--graphql-tls-truststore-file",
+      "description": "Path to the TLS truststore file for GraphQL HTTP service."
+    },
+    {
+      "option": "--graphql-tls-truststore-password-file",
+      "description": "Path to the file containing the password for the TLS truststore."
+    },
+    {
+      "option": "--engine-host-allowlist",
+      "description": "Comma separated list of hostnames to allow for ENGINE API access."
+    },
+    {
+      "option": "--engine-jwt-disabled",
+      "description": "Disable authentication for Engine APIs.",
+      "default": "false"
+    },
+    {
+      "option": "--engine-jwt-secret",
+      "description": "Path to file containing shared secret key for JWT signature verification."
+    },
+    {
+      "option": "--engine-rpc-enabled",
+      "description": "enable the engine api."
+    },
+    {
+      "option": "--engine-rpc-port",
+      "description": "Port to provide consensus client APIS on.",
+      "default": "8551"
+    },
+    {
+      "option": "--json-pretty-print-enabled",
+      "description": "Enable JSON pretty print format.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-api",
+      "description": "Comma separated list of APIs to enable on JSON-RPC HTTP service.",
+      "default": "[ETH, NET, WEB3]"
+    },
+    {
+      "option": "--rpc-http-api-method-no-auth",
+      "description": "Comma separated list of API methods to exclude from RPC authentication services."
+    },
+    {
+      "option": "--rpc-http-authentication-credentials-file",
+      "description": "Storage file for JSON-RPC HTTP authentication credentials."
+    },
+    {
+      "option": "--rpc-http-authentication-enabled",
+      "description": "Require authentication for the JSON-RPC HTTP service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-authentication-jwt-algorithm",
+      "description": "Encryption algorithm used for HTTP JWT public key."
+    },
+    {
+      "option": "--rpc-http-authentication-jwt-public-key-file",
+      "description": "JWT public key file for JSON-RPC HTTP authentication."
+    },
+    {
+      "option": "--rpc-http-cors-origins",
+      "description": "Comma separated origin domain URLs for CORS validation."
+    },
+    {
+      "option": "--rpc-http-enabled",
+      "description": "Set to start the JSON-RPC HTTP service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-host",
+      "description": "Host for JSON-RPC HTTP to listen on.",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--rpc-http-max-active-connections",
+      "description": "Maximum number of HTTP connections allowed for JSON-RPC."
+    },
+    {
+      "option": "--rpc-http-max-batch-size",
+      "description": "Specifies the maximum number of requests in a single RPC batch request via RPC."
+    },
+    {
+      "option": "--rpc-http-max-request-content-length",
+      "description": "Specifies the maximum request content length."
+    },
+    {
+      "option": "--rpc-http-port",
+      "description": "Port for JSON-RPC HTTP to listen on.",
+      "default": "8545"
+    },
+    {
+      "option": "--rpc-http-tls-ca-clients-enabled",
+      "description": "Enable to accept clients certificate signed by a valid CA for client authentication.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-tls-cipher-suite",
+      "description": "Comma separated list of TLS cipher suites to support."
+    },
+    {
+      "option": "--rpc-http-tls-client-auth-enabled",
+      "description": "Enable TLS client authentication for the JSON-RPC HTTP service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-tls-enabled",
+      "description": "Enable TLS for the JSON-RPC HTTP service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-http-tls-keystore-file",
+      "description": "Keystore containing key/certificate for the JSON-RPC HTTP service."
+    },
+    {
+      "option": "--rpc-http-tls-keystore-password-file",
+      "description": "File containing password to unlock keystore for the JSON-RPC HTTP service."
+    },
+    {
+      "option": "--rpc-http-tls-known-clients-file",
+      "description": "Path to file containing clients certificate common name and fingerprint for client authentication."
+    },
+    {
+      "option": "--rpc-http-tls-protocol",
+      "description": "Comma separated list of TLS protocols to support."
+    },
+    {
+      "option": "--rpc-http-tls-truststore-file",
+      "description": "Path to the truststore file for the JSON-RPC HTTP service."
+    },
+    {
+      "option": "--rpc-http-tls-truststore-password-file",
+      "description": "Path to the file containing the password for the truststore."
+    },
+    {
+      "option": "--rpc-ws-api",
+      "description": "Comma separated list of APIs to enable on JSON-RPC WebSocket service.",
+      "default": "[ETH, NET, WEB3]"
+    },
+    {
+      "option": "--rpc-ws-api-method-no-auth",
+      "description": "Comma separated list of RPC methods to exclude from RPC authentication services."
+    },
+    {
+      "option": "--rpc-ws-authentication-credentials-file",
+      "description": "Storage file for JSON-RPC WebSocket authentication credentials."
+    },
+    {
+      "option": "--rpc-ws-authentication-enabled",
+      "description": "Require authentication for the JSON-RPC WebSocket service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-ws-authentication-jwt-algorithm",
+      "description": "Encryption algorithm used for Websockets JWT public key."
+    },
+    {
+      "option": "--rpc-ws-authentication-jwt-public-key-file",
+      "description": "JWT public key file for JSON-RPC WebSocket authentication."
+    },
+    {
+      "option": "--rpc-ws-enabled",
+      "description": "Set to start the JSON-RPC WebSocket service.",
+      "default": "false"
+    },
+    {
+      "option": "--rpc-ws-host",
+      "description": "Host for JSON-RPC WebSocket service to listen on.",
+      "default": "0.0.0.0"
+    },
+    {
+      "option": "--rpc-ws-max-active-connections",
+      "description": "Maximum number of WebSocket connections allowed for JSON-RPC."
+    },
+    {
+      "option": "--rpc-ws-max-frame-size",
+      "description": "Maximum size in bytes for JSON-RPC WebSocket frames."
+    },
+    {
+      "option": "--rpc-ws-port",
+      "description": "Port for JSON-RPC WebSocket service to listen on.",
+      "default": "8546"
+    },
+    {
+      "option": "--rpc-ws-ssl-cert-file",
+      "description": "Path to the PEM cert file for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-client-auth-enabled",
+      "description": "Enable client authentication for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-enabled",
+      "description": "Enable SSL/TLS for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-key-file",
+      "description": "Path to the PEM key file for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-keystore-file",
+      "description": "Path to the keystore file for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-keystore-password",
+      "description": "Password for the WebSocket RPC keystore file."
+    },
+    {
+      "option": "--rpc-ws-ssl-keystore-password-file",
+      "description": "File containing the password for WebSocket keystore."
+    },
+    {
+      "option": "--rpc-ws-ssl-keystore-type",
+      "description": "Type of the WebSocket RPC keystore."
+    },
+    {
+      "option": "--rpc-ws-ssl-trustcert-file",
+      "description": "Path to the PEM trustcert file for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-truststore-file",
+      "description": "Path to the truststore file for the WebSocket RPC service."
+    },
+    {
+      "option": "--rpc-ws-ssl-truststore-password",
+      "description": "Password for the WebSocket RPC truststore file."
+    },
+    {
+      "option": "--rpc-ws-ssl-truststore-password-file",
+      "description": "File containing the password for WebSocket truststore."
+    },
+    {
+      "option": "--metrics-category",
+      "description": "Comma separated list of categories to track metrics for.",
+      "default": "[transaction_pool, rpc, peers, network, permissioning, bonsai_cache, synchronizer, process, executors, ethereum, blockchain, jvm, pruner, block_processing]"
+    },
+    {
+      "option": "--metrics-enabled",
+      "description": "Set to start the metrics exporter.",
+      "default": "false"
+    },
+    {
+      "option": "--metrics-host",
+      "description": "Host for the metrics exporter to listen on.",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--metrics-port",
+      "description": "Port for the metrics exporter to listen on.",
+      "default": "9545"
+    },
+    {
+      "option": "--metrics-protocol",
+      "description": "Metrics protocol, one of PROMETHEUS, OPENTELEMETRY or NONE.",
+      "default": "PROMETHEUS"
+    },
+    {
+      "option": "--metrics-push-enabled",
+      "description": "Enable the metrics push gateway integration.",
+      "default": "false"
+    },
+    {
+      "option": "--metrics-push-host",
+      "description": "Host of the Prometheus Push Gateway for push mode.",
+      "default": "127.0.0.1"
+    },
+    {
+      "option": "--metrics-push-interval",
+      "description": "Interval in seconds to push metrics when in push mode.",
+      "default": "15"
+    },
+    {
+      "option": "--metrics-push-port",
+      "description": "Port of the Prometheus Push Gateway for push mode.",
+      "default": "9001"
+    },
+    {
+      "option": "--metrics-push-prometheus-job",
+      "description": "Job name to use when in push mode.",
+      "default": "besu-client"
+    },
+    {
+      "option": "--permissions-accounts-config-file",
+      "description": "Account permissioning config TOML file."
+    },
+    {
+      "option": "--permissions-accounts-config-file-enabled",
+      "description": "Enable account level permissions.",
+      "default": "false"
+    },
+    {
+      "option": "--permissions-nodes-config-file",
+      "description": "Node permissioning config TOML file."
+    },
+    {
+      "option": "--permissions-nodes-config-file-enabled",
+      "description": "Enable node level permissions.",
+      "default": "false"
+    },
+    {
+      "option": "--api-gas-price-blocks",
+      "description": "Number of blocks to consider for eth_gasPrice."
+    },
+    {
+      "option": "--api-gas-price-max",
+      "description": "Maximum gas price for eth_gasPrice."
+    },
+    {
+      "option": "--api-gas-price-percentile",
+      "description": "Percentile value to measure for eth_gasPrice."
+    },
+    {
+      "option": "--estimate-gas-tolerance-ratio",
+      "description": "Decimal ratio for eth_estimateGas tolerance."
+    },
+    {
+      "option": "--rpc-gas-cap",
+      "description": "Specifies the gasLimit cap for transaction simulation RPC methods."
+    },
+    {
+      "option": "--rpc-max-logs-range",
+      "description": "Specifies the maximum number of blocks to retrieve logs from via RPC."
+    },
+    {
+      "option": "--rpc-max-trace-filter-range",
+      "description": "Specifies the maximum number of blocks for the trace_filter method."
+    }
+  ],
+  "aliases": [],
+  "name": "besu",
+  "raw_help_text": "Usage:\n\nbesu [OPTIONS] [COMMAND]\n\nDescription:\n\nThis command runs the Besu Ethereum client full node.\n\nOptions:\n      --auto-log-bloom-caching-enabled=<autoLogBloomCachingEnabled>\n                             Enable automatic log bloom caching (default: true)\n      --bonsai-historical-block-limit=<LONG>\n                             Limit of historical layers that can be loaded with\n                               BONSAI (default: 512). When using\n                               --bonsai-limit-trie-logs-enabled it will also be\n                               used as the number of layers of trie logs to\n                               retain.\n      --bonsai-limit-trie-logs-enabled\n                             Limit the number of trie logs that are retained.\n                               (default: true)\n      --bonsai-parallel-state-root-computation-enabled=<isParallelStateRootCompu\n        tationEnabled>\n                             Enables parallel computation of state root hash to\n                               optimize performance. Will be ignored if\n                               --data-storage-format is not bonsai (default:\n                               true)\n      --bonsai-parallel-tx-processing-enabled=<isParallelTxProcessingEnabled>\n                             Enables parallelization of transactions to\n                               optimize processing speed by concurrently\n                               loading and executing necessary data in advance.\n                               Will be ignored if --data-storage-format is not\n                               bonsai (default: true)\n      --bonsai-trie-logs-pruning-window-size=<trieLogPruningWindowSize>\n                             The max number of blocks to load and prune trie\n                               logs for at startup. (default: 5000)\n      --cache-last-block-headers=<numberOfBlockHeadersToCache>\n                             Specifies the number of last block headers to\n                               cache  (default: 0)\n      --cache-last-block-headers-preload-enabled\n                             Enable preloading of the block header cache\n                               (default: false)\n      --cache-last-blocks=<numberOfBlocksToCache>\n                             Specifies the number of last blocks to cache\n                               (default: 0)\n      --cache-precompiles    Specifies whether to cache precompile results\n                               (default: false)\n      --color-enabled        Force color output to be enabled/disabled\n                               (default: colorized only if printing to console)\n      --config-file=<FILE>   TOML config file (default: none)\n      --data-path=<PATH>     The path to Besu data directory (default:\n                               /opt/besu)\n      --data-storage-format=<dataStorageFormat>\n                             Format to store trie data in.  Either FOREST or\n                               BONSAI (default: BONSAI).\n      --era1-data-uri=<URI>  The URI to attempt to load ERA1 files from. For\n                               local files, a simple path may be used (e.g.\n                               /home/user/era1). (default: https://mainnet.era1.\n                               nimbus.team/)\n      --era1-import-prepipeline-concurrency=<INTEGER>\n                             How many parallel pipelines to use in the ERA1\n                               import prepipeline (default: 1)\n      --era1-import-prepipeline-enabled[=<Boolean>]\n                             Enable the ERA1 import prepipeline for FULL sync.\n                               ERA1 files will be imported from the URI\n                               specified by --era1-data-uri (currently only\n                               local files and http is supported). If a sync\n                               mode other than FULL is selected, this will have\n                               no affect. (default: false)\n      --ethstats=<[ws://|wss://]nodename:secret@host:[port]>\n                             Reporting URL of a ethstats server. Scheme and\n                               port can be omitted.\n      --ethstats-cacert-file=<FILE>\n                             Specifies the path to the root CA (Certificate\n                               Authority) certificate file that has signed\n                               ethstats server certificate. This option is\n                               optional.\n      --ethstats-contact=<ethstatsContact>\n                             Contact address to send to ethstats server\n      --ethstats-report-interval=<SECONDS>\n                             Interval in seconds between ethstats reports.\n      --genesis-file=<FILE>  Genesis file for your custom network. Setting this\n                               option requires --network-id to be set. (Cannot\n                               be used with --network)\n      --genesis-state-hash-cache-enabled\n                             Use genesis state hash from data on startup if\n                               specified (default: false)\n  -h, --help                 Show this help message and exit.\n      --history-expiry-prune Convenience option to enable online history\n                               pruning and configure BlobDB garbage collection\n                               settings (default: false).\n                               \"--Xhistory-expiry-prune\" is deprecated and will\n                               be removed in a future release. Use\n                               \"--history-expiry-prune\" instead.\n      --host-allowlist=<hostname>[,<hostname>...]... or * or all\n                             Comma separated list of hostnames to allow for RPC\n                               access, or * to accept any host (default:\n                               localhost,127.0.0.1)\n      --identity=<String>    Identification for this node in the Client ID\n      --key-value-storage=<keyValueStorageName>\n                             Identity for the key-value storage to be used.\n      --kzg-trusted-setup=<FILE>\n                             Path to file containing the KZG trusted setup,\n                               mandatory for custom networks that support data\n                               blobs, optional for overriding named networks\n                               default.\n  -l, --logging=<LOG VERBOSITY LEVEL>\n                             Logging verbosity levels: OFF, ERROR, WARN, INFO,\n                               DEBUG, TRACE, ALL\n      --nat-method=<natMethod>\n                             Specify the NAT circumvention method to be used,\n                               possible values are UPNP, UPNPP2PONLY, DOCKER,\n                               AUTO, NONE. NONE disables NAT functionality.\n                               (default: AUTO)\n      --network=<NETWORK>    Synchronize against the indicated network,\n                               possible values are . (default: MAINNET)\n      --network-id=<BIG INTEGER>\n                             P2P network identifier. (default: the selected\n                               network chain ID or custom genesis chain ID)\n      --node-private-key-file=<PATH>\n                             The node's private key file (default: a file named\n                               \"key\" in the Besu data directory)\n      --pid-path=<PATH>      Path to PID file (optional)\n      --plugin-continue-on-error\n                             Allow Besu startup even if any plugins fail to\n                               initialize correctly (default: false)\n      --plugins=<plugins>[,<plugins>...]\n                             Comma-separated list of plugin names to load\n      --plugins-verification-mode=<pluginsVerificationMode>\n                             How to verify plugins during startup phase\n                               (default: NONE)\n      --print-paths-and-exit[=<username>]\n                             Print the configured paths and exit without\n                               starting the node.\n      --profile=<PROFILE>    Overwrite default settings. Possible values are\n                               dev, enterprise, minimalist_staker, performance,\n                               performance_rpc, private, staker. (default: none)\n      --receipt-compaction-enabled\n                             Enables compact storing of receipts (default: true)\n      --reorg-logging-threshold=<reorgLoggingThreshold>\n                             How deep a chain reorganization must be in order\n                               for it to be logged (default: 6)\n      --required-block, --required-blocks[=BLOCK=HASH[,BLOCK=HASH...]...]\n                             Block number and hash peers are required to have.\n      --revert-reason-enabled\n                             Enable passing the revert reason back through\n                               TransactionReceipts (default: false)\n      --security-module=<NAME>\n                             Identity for the Security Module to be used.\n      --snapsync-server-enabled[=<Boolean>]\n                             Enable snap sync server capability. (default:\n                               false)\n      --snapsync-synchronizer-pre-checkpoint-headers-only-enabled[=<Boolean>]\n                             Enable snap sync downloader to save only headers\n                               (not block bodies) for blocks before the\n                               checkpoint. (default: true)\n                               \"--Xsnapsync-synchronizer-pre-merge-headers-only-\n                               enabled\" is deprecated and will be removed in a\n                               future release. Use\n                               \"--snapsync-synchronizer-pre-checkpoint-headers-o\n                               nly-enabled\" instead.\n      --snapsync-synchronizer-transaction-indexing-enabled[=<Boolean>]\n                             Enable transaction indexing during SNAP/CHECKPOINT\n                               sync. Disabling will improve initial syncing\n                               time and disk usage. However, to support RPCs\n                               that use transaction hash for historical\n                               queries, you'll need to enable this. (default:\n                               false)\n      --static-nodes-file=<FILE>\n                             Specifies the static node file containing the\n                               static nodes for this node to connect to\n      --sync-min-peers, --fast-sync-min-peers=<INTEGER>\n                             Minimum number of peers required before starting\n                               sync. Has effect only on non-PoS networks.\n                               (default: 5)\n      --sync-mode=<MODE>     Synchronization mode, possible values are FULL,\n                               FAST, SNAP, CHECKPOINT (default: SNAP if a\n                               --network is supplied. FULL otherwise.)\n  -V, --version              Print version information and exit.\n      --version-compatibility-protection\n                             Perform compatibility checks between the version\n                               of Besu being started and the version of Besu\n                               that last started with this data directory.\n                               (default: null)\nTx Pool Layered Implementation Options\n      --tx-pool-enable-balance-check[=<Boolean>]\n                             If enabled a pending transaction can stay in the\n                               prioritized layer, only if its sender has enough\n                               balance (default: false)\n      --tx-pool-layer-max-capacity=<LONG>\n                             Max amount of memory space, in bytes, that any\n                               layer within the transaction pool could occupy\n                               (default: 25000000)\n      --tx-pool-max-future-by-sender=<INTEGER>\n                             Max number of future pending transactions allowed\n                               for a single sender (default: 200)\n      --tx-pool-max-prioritized=<INTEGER>\n                             Max number of pending transactions that are\n                               prioritized and thus kept sorted (default: 4000)\n      --tx-pool-max-prioritized-by-type=MAP<TYPE,INTEGER>[,MAP<TYPE,INTEGER>...]\n                             Max number of pending transactions, of a specific\n                               type, that are prioritized and thus kept sorted\n                               (default: {BLOB=72})\n      --tx-pool-min-score=<Byte>\n                             Remove a pending transaction from the txpool if\n                               its score is lower than this value.Accepts\n                               values between -128 and 127 (default: -128)\nTx Pool Sequenced Implementation Options\n      --tx-pool-limit-by-account-percentage=<DOUBLE>\n                             Maximum portion of the transaction pool which a\n                               single account may occupy with future\n                               transactions (default: 0.001)\n      --tx-pool-max-size=<INTEGER>\n                             Maximum number of pending transactions that will\n                               be kept in the transaction pool (default: 4096)\n      --tx-pool-retention-hours=<INTEGER>\n                             Maximum retention period of pending transactions\n                               in hours (default: 13)\nTx Pool Common Options\n      --rpc-tx-feecap=<txFeeCap>\n                             Maximum transaction fees (in Wei) accepted for\n                               transaction submitted through RPC (default:\n                               0x00000000000000000000000000000000000000000000000\n                               00de0b6b3a7640000)\n      --strict-tx-replay-protection-enabled[=<Boolean>]\n                             Require transactions submitted via JSON-RPC to use\n                               replay protection in accordance with EIP-155\n                               (default: false)\n      --tx-pool[=<Enum>]     The Transaction Pool implementation to use\n                               (default: LAYERED)\n      --tx-pool-blob-price-bump=<Percentage>\n                             Blob price bump percentage to replace an already\n                               existing transaction blob tx (default: 100)\n      --tx-pool-enable-save-restore[=<Boolean>]\n                             Set to true to enable saving the txpool content to\n                               file on shutdown and reloading it on startup\n                               (default: false)\n      --tx-pool-min-gas-price=<Wei>\n                             Transactions with gas price (in Wei) lower than\n                               this minimum will not be accepted into the txpool\n                               (not to be confused with min-gas-price, that is\n                               applied on block creation) (default:\n                               0x00000000000000000000000000000000000000000000000\n                               000000000000003e8)\n      --tx-pool-no-local-priority[=<Boolean>]\n                             Set to true if senders of transactions sent via\n                               RPC should not have priority (default: false)\n      --tx-pool-price-bump=<Percentage>\n                             Price bump percentage to replace an already\n                               existing transaction  (default: 10)\n      --tx-pool-priority-senders=Comma separated list of addresses[,Comma\n        separated list of addresses...]...\n                             Pending transactions sent exclusively by these\n                               addresses, from any source, are prioritized and\n                               only evicted after all others. If not specified,\n                               then only the senders submitting transactions\n                               via RPC have priority (default: [])\n      --tx-pool-save-file=<STRING>\n                             If saving the txpool content is enabled, define a\n                               custom path for the save file (default: txpool.\n                               dump in the data-dir)\nBlock Builder Options\n      --block-txs-selection-max-time=<nonPoaBlockTxsSelectionMaxTime>\n                             Deprecated. PoW consensus is deprecated. See\n                               CHANGELOG for alternative options. Specifies the\n                               maximum time, in milliseconds, that could be\n                               spent selecting transactions to be included in\n                               the block. Not compatible with PoA networks, see\n                               poa-block-txs-selection-max-time. (default:\n                               +5000)\n      --min-block-occupancy-ratio=<minBlockOccupancyRatio>\n                             Minimum occupancy ratio for a mined block\n                               (default: 0.8)\n      --min-gas-price=<minTransactionGasPrice>\n                             Minimum price (in Wei) offered by a transaction\n                               for it to be included in a mined block (default:\n                               0x00000000000000000000000000000000000000000000000\n                               000000000000003e8)\n      --min-priority-fee=<minPriorityFeePerGas>\n                             Minimum priority fee per gas (in Wei) offered by a\n                               transaction for it to be included in a block\n                               (default:\n                               0x00000000000000000000000000000000000000000000000\n                               00000000000000000)\n      --miner-extra-data=<extraData>\n                             A hex string representing the (32) bytes to be\n                               included in the extra data field of a mined\n                               block (default: 0x626573752032362e312e30)\n      --plugin-block-txs-selection-max-time=<pluginBlockTxsSelectionMaxTime>\n                             Specifies the maximum time that plugins could\n                               spent selecting transactions to be included in\n                               the block, as a percentage of the max block\n                               selection time. (default: +50)\n      --poa-block-txs-selection-max-time=<poaBlockTxsSelectionMaxTime>\n                             Specifies the maximum time that could be spent\n                               selecting transactions to be included in the\n                               block, as a percentage of the fixed block time\n                               of the PoA network. To be only used on PoA\n                               networks, for other networks see\n                               block-txs-selection-max-time. (default: +75)\n      --target-gas-limit=<targetGasLimit>\n                             Sets target gas limit per block. If set, each\n                               block's gas limit will approach this setting\n                               over time.\nP2P Discovery Options\n      --banned-node-id, --banned-node-ids=<NODEID>[,<NODEID>...]...\n                             A list of node IDs to ban from the P2P network.\n      --bootnodes[=<enode://id@host:port>[,<enode://id@host:port>...]...]\n                             Comma separated enode URLs for P2P discovery\n                               bootstrap. Default is a predefined list.\n      --discovery-dns-url=<discoveryDnsUrl>\n                             Specifies the URL to use for DNS discovery\n      --discovery-enabled=<peerDiscoveryEnabled>\n                             Enable P2P discovery (default: true)\n      --max-peers, --p2p-peer-upper-bound=<INTEGER>\n                             Maximum P2P connections that can be established\n                               (default: 25)\n      --net-restrict=<allowedSubnets>[,<allowedSubnets>...]...\n                             Comma-separated list of allowed IP subnets (e.g.,\n                               '192.168.1.0/24,10.0.0.0/8').\n      --p2p-enabled=<p2pEnabled>\n                             Enable P2P functionality (default: true)\n      --p2p-host=<HOST>      IP address this node advertises to its peers\n                               (default: 127.0.0.1)\n      --p2p-interface=<HOST> The network interface address on which this node\n                               listens for P2P communication (default: 0.0.0.0)\n      --p2p-port=<PORT>      Port on which to listen for P2P communication\n                               (default: 30303)\n      --poa-discovery-retry-bootnodes=<poaDiscoveryRetryBootnodes>\n                             Always use of bootnodes for discovery in PoA\n                               networks. Disabling this reverts  to the same\n                               behaviour as non-PoA networks, where neighbours\n                               are only discovered from bootnodes on first\n                               startup.(default: true)\n      --random-peer-priority-enabled\n                             Allow for incoming connections to be prioritized\n                               randomly. This will prevent (typically small,\n                               stable) networks from forming impenetrable peer\n                               cliques. (default: false)\n      --remote-connections-limit-enabled\n                             Whether to limit the number of P2P connections\n                               initiated remotely. (default: true)\n      --remote-connections-max-percentage=<DOUBLE>\n                             The maximum percentage of P2P connections that can\n                               be initiated remotely. Must be between 0 and 100\n                               inclusive. (default: 60)\nGraphQL Options\n      --graphql-http-cors-origins=<graphQLHttpCorsAllowedOrigins>\n                             Comma separated origin domain URLs for CORS\n                               validation (default: none)\n      --graphql-http-enabled Set to start the GraphQL HTTP service (default:\n                               false)\n      --graphql-http-host=<HOST>\n                             Host for GraphQL HTTP to listen on (default:\n                               0.0.0.0)\n      --graphql-http-port=<PORT>\n                             Port for GraphQL HTTP to listen on (default: 8547)\n      --graphql-mtls-enabled Enable mTLS for GraphQL HTTP service\n      --graphql-tls-enabled  Enable TLS for GraphQL HTTP service\n      --graphql-tls-keystore-file=<graphqlTlsKeystoreFile>\n                             Path to the TLS keystore file for GraphQL HTTP\n                               service\n      --graphql-tls-keystore-password-file=<graphqlTlsKeystorePasswordFile>\n                             Path to the file containing the password for the\n                               TLS keystore\n      --graphql-tls-truststore-file=<graphqlTlsTruststoreFile>\n                             Path to the TLS truststore file for GraphQL HTTP\n                               service\n      --graphql-tls-truststore-password-file=<graphqlTlsTruststorePasswordFile>\n                             Path to the file containing the password for the\n                               TLS truststore\nEngine JSON-RPC Options\n      --engine-host-allowlist=<hostname>[,<hostname>...]... or * or all\n                             Comma separated list of hostnames to allow for\n                               ENGINE API access (applies to both HTTP and\n                               websockets), or * to accept any host (default:\n                               localhost,127.0.0.1)\n      --engine-jwt-disabled  Disable authentication for Engine APIs (default:\n                               false)\n      --engine-jwt-secret=<FILE>\n                             Path to file containing shared secret key for JWT\n                               signature verification\n      --engine-rpc-enabled   enable the engine api, even in the absence of\n                               merge-specific configurations.\n      --engine-rpc-port, --engine-rpc-http-port=<PORT>\n                             Port to provide consensus client APIS on (default:\n                               8551)\nJSON-RPC HTTP Options\n      --json-pretty-print-enabled\n                             Enable JSON pretty print format (default: false)\n      --rpc-http-api, --rpc-http-apis=<api name>[ {0,1}, {0,1}<api name>...]...\n                             Comma separated list of APIs to enable on JSON-RPC\n                               HTTP service (default: [ETH, NET, WEB3])\n      --rpc-http-api-method-no-auth, --rpc-http-api-methods-no-auth=<api name>[\n        {0,1}, {0,1}<api name>...]...\n                             Comma separated list of API methods to exclude\n                               from RPC authentication services, RPC HTTP\n                               authentication must be enabled\n      --rpc-http-authentication-credentials-file=<FILE>\n                             Storage file for JSON-RPC HTTP authentication\n                               credentials (default: null)\n      --rpc-http-authentication-enabled\n                             Require authentication for the JSON-RPC HTTP\n                               service (default: false)\n      --rpc-http-authentication-jwt-algorithm=<rpcHttpAuthenticationAlgorithm>\n                             Encryption algorithm used for HTTP JWT public key.\n                               Possible values are RS256, RS384, RS512, ES256,\n                               ES384, HS256, ES512 (default: RS256)\n      --rpc-http-authentication-jwt-public-key-file=<FILE>\n                             JWT public key file for JSON-RPC HTTP\n                               authentication\n      --rpc-http-cors-origins=<rpcHttpCorsAllowedOrigins>\n                             Comma separated origin domain URLs for CORS\n                               validation (default: none)\n      --rpc-http-enabled     Set to start the JSON-RPC HTTP service (default:\n                               false)\n      --rpc-http-host=<HOST> Host for JSON-RPC HTTP to listen on (default:\n                               0.0.0.0)\n      --rpc-http-max-active-connections=<rpcHttpMaxConnections>\n                             Maximum number of HTTP connections allowed for\n                               JSON-RPC (default: 80). Once this limit is\n                               reached, incoming connections will be rejected.\n      --rpc-http-max-batch-size=<INTEGER>\n                             Specifies the maximum number of requests in a\n                               single RPC batch request via RPC. -1 specifies\n                               no limit  (default: 1024)\n      --rpc-http-max-request-content-length=<LONG>\n                             Specifies the maximum request content length.\n                               (default: 134217728)\n      --rpc-http-port=<PORT> Port for JSON-RPC HTTP to listen on (default: 8545)\n      --rpc-http-tls-ca-clients-enabled\n                             Enable to accept clients certificate signed by a\n                               valid CA for client authentication (default:\n                               false)\n      --rpc-http-tls-cipher-suite,\n        --rpc-http-tls-cipher-suites=<rpcHttpTlsCipherSuites>[,\n        <rpcHttpTlsCipherSuites>...]...\n                             Comma separated list of TLS cipher suites to\n                               support\n      --rpc-http-tls-client-auth-enabled\n                             Enable TLS client authentication for the JSON-RPC\n                               HTTP service (default: false)\n      --rpc-http-tls-enabled Enable TLS for the JSON-RPC HTTP service (default:\n                               false)\n      --rpc-http-tls-keystore-file=<FILE>\n                             Keystore (PKCS#12) containing key/certificate for\n                               the JSON-RPC HTTP service. Required if TLS is\n                               enabled.\n      --rpc-http-tls-keystore-password-file=<FILE>\n                             File containing password to unlock keystore for\n                               the JSON-RPC HTTP service. Required if TLS is\n                               enabled.\n      --rpc-http-tls-known-clients-file=<FILE>\n                             Path to file containing clients certificate common\n                               name and fingerprint for client authentication\n      --rpc-http-tls-protocol, --rpc-http-tls-protocols=<rpcHttpTlsProtocols>[,\n        <rpcHttpTlsProtocols>...]...\n                             Comma separated list of TLS protocols to support\n                               (default: [TLSv1.3, TLSv1.2])\n      --rpc-http-tls-truststore-file=<FILE>\n                             Path to the truststore file for the JSON-RPC HTTP\n                               service.\n      --rpc-http-tls-truststore-password-file=<FILE>\n                             Path to the file containing the password for the\n                               truststore.\nJSON-RPC Websocket Options\n      --rpc-ws-api, --rpc-ws-apis=<api name>[ {0,1}, {0,1}<api name>...]...\n                             Comma separated list of APIs to enable on JSON-RPC\n                               WebSocket service (default: [ETH, NET, WEB3])\n      --rpc-ws-api-method-no-auth, --rpc-ws-api-methods-no-auth=<api name>[\n        {0,1}, {0,1}<api name>...]...\n                             Comma separated list of RPC methods to exclude\n                               from RPC authentication services, RPC WebSocket\n                               authentication must be enabled\n      --rpc-ws-authentication-credentials-file=<FILE>\n                             Storage file for JSON-RPC WebSocket authentication\n                               credentials (default: null)\n      --rpc-ws-authentication-enabled\n                             Require authentication for the JSON-RPC WebSocket\n                               service (default: false)\n      --rpc-ws-authentication-jwt-algorithm=<rpcWebsocketsAuthenticationAlgorith\n        m>\n                             Encryption algorithm used for Websockets JWT\n                               public key. Possible values are RS256, RS384,\n                               RS512, ES256, ES384, HS256, ES512 (default:\n                               RS256)\n      --rpc-ws-authentication-jwt-public-key-file=<FILE>\n                             JWT public key file for JSON-RPC WebSocket\n                               authentication\n      --rpc-ws-enabled       Set to start the JSON-RPC WebSocket service\n                               (default: false)\n      --rpc-ws-host=<HOST>   Host for JSON-RPC WebSocket service to listen on\n                               (default: 0.0.0.0)\n      --rpc-ws-max-active-connections=<rpcWsMaxConnections>\n                             Maximum number of WebSocket connections allowed\n                               for JSON-RPC (default: 80). Once this limit is\n                               reached, incoming connections will be rejected.\n      --rpc-ws-max-frame-size=<rpcWsMaxFrameSize>\n                             Maximum size in bytes for JSON-RPC WebSocket\n                               frames (default: 1048576). If this limit is\n                               exceeded, the websocket will be disconnected.\n      --rpc-ws-port=<PORT>   Port for JSON-RPC WebSocket service to listen on\n                               (default: 8546)\n      --rpc-ws-ssl-cert-file=<FILE>\n                             Path to the PEM cert file for the WebSocket RPC\n                               service\n      --rpc-ws-ssl-client-auth-enabled\n                             Enable client authentication for the WebSocket RPC\n                               service\n      --rpc-ws-ssl-enabled   Enable SSL/TLS for the WebSocket RPC service\n      --rpc-ws-ssl-key-file=<FILE>\n                             Path to the PEM key file for the WebSocket RPC\n                               service\n      --rpc-ws-ssl-keystore-file=<FILE>\n                             Path to the keystore file for the WebSocket RPC\n                               service\n      --rpc-ws-ssl-keystore-password=<PASSWORD>\n                             Password for the WebSocket RPC keystore file\n      --rpc-ws-ssl-keystore-password-file=<FILE>\n                             File containing the password for WebSocket\n                               keystore.\n      --rpc-ws-ssl-keystore-type=<TYPE>\n                             Type of the WebSocket RPC keystore (JKS, PKCS12,\n                               PEM)\n      --rpc-ws-ssl-trustcert-file=<FILE>\n                             Path to the PEM trustcert file for the WebSocket\n                               RPC service\n      --rpc-ws-ssl-truststore-file=<FILE>\n                             Path to the truststore file for the WebSocket RPC\n                               service\n      --rpc-ws-ssl-truststore-password=<PASSWORD>\n                             Password for the WebSocket RPC truststore file\n      --rpc-ws-ssl-truststore-password-file=<FILE>\n                             File containing the password for WebSocket\n                               truststore.\n      --rpc-ws-ssl-truststore-type=<TYPE>\n                             Type of the truststore (JKS, PKCS12, PEM)\nIn-Process RPC Options\nMetrics Options\n      --metrics-category, --metrics-categories=<category name>[,<category\n        name>...]...\n                             Comma separated list of categories to track\n                               metrics for (default: [transaction_pool, rpc,\n                               peers, network, permissioning, bonsai_cache,\n                               synchronizer, process, executors, ethereum,\n                               blockchain, jvm, pruner, block_processing])\n      --metrics-enabled      Set to start the metrics exporter (default: false)\n      --metrics-host=<HOST>  Host for the metrics exporter to listen on\n                               (default: 127.0.0.1)\n      --metrics-port=<PORT>  Port for the metrics exporter to listen on\n                               (default: 9545)\n      --metrics-protocol=<metricsProtocol>\n                             Metrics protocol, one of PROMETHEUS, OPENTELEMETRY\n                               or NONE. (default: PROMETHEUS)\n      --metrics-push-enabled Enable the metrics push gateway integration\n                               (default: false)\n      --metrics-push-host=<HOST>\n                             Host of the Prometheus Push Gateway for push mode\n                               (default: 127.0.0.1)\n      --metrics-push-interval=<INTEGER>\n                             Interval in seconds to push metrics when in push\n                               mode (default: 15)\n      --metrics-push-port=<PORT>\n                             Port of the Prometheus Push Gateway for push mode\n                               (default: 9001)\n      --metrics-push-prometheus-job=<metricsPrometheusJob>\n                             Job name to use when in push mode (default:\n                               besu-client)\nPermissions Options\n      --permissions-accounts-config-file=<accountPermissionsConfigFile>\n                             Account permissioning config TOML file (default: a\n                               file named \"permissions_config.toml\" in the Besu\n                               data folder)\n      --permissions-accounts-config-file-enabled\n                             Enable account level permissions (default: false)\n      --permissions-nodes-config-file=<nodePermissionsConfigFile>\n                             Node permissioning config TOML file (default: a\n                               file named \"permissions_config.toml\" in the Besu\n                               data folder)\n      --permissions-nodes-config-file-enabled\n                             Enable node level permissions (default: false)\nAPI Configuration Options\n      --api-gas-price-blocks=<apiGasPriceBlocks>\n                             Number of blocks to consider for eth_gasPrice\n                               (default: 100)\n      --api-gas-price-max=<apiGasPriceMax>\n                             Maximum gas price for eth_gasPrice (default:\n                               500000000000)\n      --api-gas-price-percentile=<apiGasPricePercentile>\n                             Percentile value to measure for eth_gasPrice\n                               (default: 50.0)\n      --estimate-gas-tolerance-ratio=<estimateGasToleranceRatio>\n                             Decimal ratio for eth_estimateGas tolerance\n                               (default: 0.015)\n      --rpc-gas-cap=<rpcGasCap>\n                             Specifies the gasLimit cap for transaction\n                               simulation RPC methods. Must be >=0. 0 specifies\n                               no limit  (default: 100000000)\n      --rpc-max-logs-range=<rpcMaxLogsRange>\n                             Specifies the maximum number of blocks to retrieve\n                               logs from via RPC. Must be >=0. 0 specifies no\n                               limit  (default: 5000)\n      --rpc-max-trace-filter-range=<maxTraceFilterRange>\n                             Specifies the maximum number of blocks for the\n                               trace_filter method. Must be >=0. 0 specifies no\n                               limit  (default: 1000)\nBlock Access List Options\nCommands:\n  blocks           This command provides blocks related actions.\n  txparse          Parse input transactions and return the sender, or an error.\n  public-key       This command provides node public key related actions.\n  password         This command provides password related actions.\n  rlp              This command provides RLP data related actions.\n  operator         Operator related actions such as generating configuration\n                     and caches.\n  validate-config  This command provides basic Besu config validation (syntax\n                     only).\n  storage          This command provides storage related actions.\n\nBesu is licensed under the Apache License 2.0\n\n\nTo get started quickly, just choose a network to sync and a profile to run with\nsuggested defaults:\n\nfor Mainnet --network=mainnet --profile=[minimalist_staker|staker]\n\nMore info and other profiles at https://besu.hyperledger.org",
+  "version": "26.1.0"
+}

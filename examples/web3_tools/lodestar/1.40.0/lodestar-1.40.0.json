@@ -1,0 +1,2029 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--checkpointSyncUrl",
+          "shortcut": null,
+          "description": "Server url hosting Beacon Node APIs to fetch weak subjectivity state. Fetch latest finalized by default, else set --wssCheckpoint",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--checkpointState",
+          "shortcut": null,
+          "description": "File path or url to finalized checkpoint state to start syncing from",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--wssCheckpoint",
+          "shortcut": null,
+          "description": "Start beacon node off a state at the provided weak subjectivity checkpoint, to be supplied in <blockRoot>:<epoch> format. For example, 0x1234:100 will sync and start off from the weak subjectivity state at checkpoint of epoch 100 with block root 0x1234.",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--forceCheckpointSync",
+          "shortcut": null,
+          "description": "Force syncing from checkpoint state even if db state is within weak subjectivity period. This helps to avoid long sync times after node has been offline for a while.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--ignoreWeakSubjectivityCheck",
+          "shortcut": null,
+          "description": "Ignore the checkpoint sync state failing the weak subjectivity check. This is relevant in testnets where the weak subjectivity period is too small for even few epochs of non finalization causing last finalized to be out of range. This flag is not recommended for mainnet use.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--rest",
+          "shortcut": null,
+          "description": "Enable/disable HTTP API",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--rest.namespace",
+          "shortcut": null,
+          "description": "Pick namespaces to expose for HTTP API. Set to 'all' (or '*') to enable all namespaces",
+          "value": "array",
+          "default": "[\"beacon\",\"config\",\"debug\",\"events\",\"node\",\"validator\",\"lightclient\"]"
+        },
+        {
+          "option": "--rest.cors",
+          "shortcut": null,
+          "description": "Configures the Access-Control-Allow-Origin CORS header for HTTP API. Use 'all' to allow all origins",
+          "value": "string",
+          "default": "*"
+        },
+        {
+          "option": "--rest.address",
+          "shortcut": null,
+          "description": "Set host for HTTP API",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--rest.port",
+          "shortcut": null,
+          "description": "Set port for HTTP API",
+          "value": "number",
+          "default": "9596"
+        },
+        {
+          "option": "--rest.swaggerUI",
+          "shortcut": null,
+          "description": "Enable Swagger UI for API exploration at http://{address}:{port}/documentation",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--suggestedFeeRecipient",
+          "shortcut": null,
+          "description": "Specify fee recipient default for collecting the EL block fees and rewards (a hex string representing 20 bytes address: ^0x[a-fA-F0-9]{40}$) in case validator fails to update for a validator index before calling `produceBlock`.",
+          "value": "string",
+          "default": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "option": "--emitPayloadAttributes",
+          "shortcut": null,
+          "description": "Flag to SSE emit execution `payloadAttributes` before every slot",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--serveHistoricalState",
+          "shortcut": null,
+          "description": "Enable regenerating finalized state to serve historical data. Fetching this data is expensive and may affect validator performance.",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--chain.archiveStateEpochFrequency",
+          "shortcut": null,
+          "description": "Minimum number of epochs between archived states",
+          "value": "number",
+          "default": "1024"
+        },
+        {
+          "option": "--chain.archiveDataEpochs",
+          "shortcut": null,
+          "description": "Number of epochs to retain finalized blobs/columns (minimum of MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPOCHS_FOR_DATA_COLUMN_SIDECARS_REQUESTS)",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--chain.archiveBlobEpochs",
+          "shortcut": null,
+          "description": "Number of epochs to retain finalized blobs/columns (minimum of MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPOCHS_FOR_DATA_COLUMN_SIDECARS_REQUESTS)",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--chain.pruneHistory",
+          "shortcut": null,
+          "description": "Prune historical blocks and state",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--execution.urls",
+          "shortcut": null,
+          "description": "Urls to execution client engine API",
+          "value": "array",
+          "default": "http://localhost:8551"
+        },
+        {
+          "option": "--execution.timeout",
+          "shortcut": null,
+          "description": "Timeout in milliseconds for execution engine API HTTP client",
+          "value": "number",
+          "default": "12000"
+        },
+        {
+          "option": "--execution.retries",
+          "shortcut": null,
+          "description": "Number of retries when calling execution engine API",
+          "value": "number",
+          "default": "2"
+        },
+        {
+          "option": "--execution.retryAttempts",
+          "shortcut": null,
+          "description": "Number of retries when calling execution engine API",
+          "value": "number",
+          "default": "2"
+        },
+        {
+          "option": "--execution.retryDelay",
+          "shortcut": null,
+          "description": "Delay time in milliseconds between retries when retrying calls to the execution engine API",
+          "value": "number",
+          "default": "2000"
+        },
+        {
+          "option": "--execution.engineMock",
+          "shortcut": null,
+          "description": "Set the execution engine to mock mode (development only)",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--jwtSecret",
+          "shortcut": null,
+          "description": "File path to a shared hex-encoded jwt secret which will be used to generate and bundle HS256 encoded jwt tokens for authentication with the EL client's rpc server hosting engine apis. Secret to be exactly same as the one used by the corresponding EL client.",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--jwtId",
+          "shortcut": null,
+          "description": "An optional identifier to be set in the id field of the claims included in jwt tokens used for authentication with EL client's rpc server hosting engine apis",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--builder",
+          "shortcut": null,
+          "description": "Enable external builder",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--builder.url",
+          "shortcut": null,
+          "description": "Url hosting the builder API",
+          "value": "string",
+          "default": "http://localhost:8661"
+        },
+        {
+          "option": "--builder.urls",
+          "shortcut": null,
+          "description": "Url hosting the builder API",
+          "value": "string",
+          "default": "http://localhost:8661"
+        },
+        {
+          "option": "--builder.timeout",
+          "shortcut": null,
+          "description": "Timeout in milliseconds for builder API HTTP client",
+          "value": "number",
+          "default": "12000"
+        },
+        {
+          "option": "--builder.faultInspectionWindow",
+          "shortcut": null,
+          "description": "Window to inspect missed slots for enabling/disabling builder circuit breaker",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--builder.allowedFaults",
+          "shortcut": null,
+          "description": "Number of missed slots allowed in the `faultInspectionWindow` for builder circuit breaker",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--metrics",
+          "shortcut": null,
+          "description": "Enable the Prometheus metrics HTTP server",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--metrics.port",
+          "shortcut": null,
+          "description": "Listen TCP port for the Prometheus metrics HTTP server",
+          "value": "number",
+          "default": "8008"
+        },
+        {
+          "option": "--metrics.address",
+          "shortcut": null,
+          "description": "Listen address for the Prometheus metrics HTTP server",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--monitoring.endpoint",
+          "shortcut": null,
+          "description": "Enables monitoring service for sending clients stats to the specified endpoint of a remote service (e.g. beaconcha.in)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--monitoring.interval",
+          "shortcut": null,
+          "description": "Interval in milliseconds between sending client stats to the remote service",
+          "value": "number",
+          "default": "60000"
+        },
+        {
+          "option": "--discv5",
+          "shortcut": null,
+          "description": "Enable discv5",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--listenAddress",
+          "shortcut": null,
+          "description": "The IPv4 address to listen for p2p UDP and TCP connections",
+          "value": "string",
+          "default": "0.0.0.0"
+        },
+        {
+          "option": "--port",
+          "shortcut": null,
+          "description": "The TCP/UDP port to listen on. The UDP port can be modified by the --discoveryPort flag.",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort",
+          "shortcut": null,
+          "description": "The UDP port that discovery will listen on. Defaults to `port`",
+          "value": "number",
+          "default": "`port`"
+        },
+        {
+          "option": "--listenAddress6",
+          "shortcut": null,
+          "description": "The IPv6 address to listen for p2p UDP and TCP connections",
+          "value": "string",
+          "default": "::"
+        },
+        {
+          "option": "--port6",
+          "shortcut": null,
+          "description": "The TCP/UDP port to listen on. The UDP port can be modified by the --discoveryPort6 flag.",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort6",
+          "shortcut": null,
+          "description": "The UDP port that discovery will listen on. Defaults to `port6`",
+          "value": "number",
+          "default": "`port6`"
+        },
+        {
+          "option": "--bootnodes",
+          "shortcut": null,
+          "description": "Bootnodes for discv5 discovery",
+          "value": "array",
+          "default": "[]"
+        },
+        {
+          "option": "--targetPeers",
+          "shortcut": null,
+          "description": "The target connected peers. Above this number peers will be disconnected",
+          "value": "number",
+          "default": "200"
+        },
+        {
+          "option": "--subscribeAllSubnets",
+          "shortcut": null,
+          "description": "Subscribe to all subnets regardless of validator count",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--disablePeerScoring",
+          "shortcut": null,
+          "description": "Disable peer scoring, used for testing on devnets",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--mdns",
+          "shortcut": null,
+          "description": "Enable mdns local peer discovery",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--directPeers",
+          "shortcut": null,
+          "description": "Direct peers for GossipSub mesh. These peers maintain permanent connections without GRAFT/PRUNE. Supports multiaddr with peer ID (e.g., `/ip4/192.168.1.1/tcp/9000/p2p/16Uiu2HAmKLhW7...`) or ENR (e.g., `enr:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrdvJjX04jRzjzCBOo...`). Both peers must configure each other as direct peers for the feature to work properly.",
+          "value": "array",
+          "default": "[]"
+        },
+        {
+          "option": "--enr.ip",
+          "shortcut": null,
+          "description": "Override ENR IP entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.tcp",
+          "shortcut": null,
+          "description": "Override ENR TCP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.udp",
+          "shortcut": null,
+          "description": "Override ENR UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.ip6",
+          "shortcut": null,
+          "description": "Override ENR IPv6 entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.tcp6",
+          "shortcut": null,
+          "description": "Override ENR (IPv6-specific) TCP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.udp6",
+          "shortcut": null,
+          "description": "Override ENR (IPv6-specific) UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--nat",
+          "shortcut": null,
+          "description": "Allow configuration of non-local addresses",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--dataDir",
+          "shortcut": null,
+          "description": "Lodestar root data directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "Name of the Ethereum Consensus chain network to join",
+          "value": "string",
+          "default": "mainnet"
+        },
+        {
+          "option": "--paramsFile",
+          "shortcut": null,
+          "description": "Network configuration file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--rcConfig",
+          "shortcut": null,
+          "description": "RC file to supplement command line args, accepted formats: .yml, .yaml, .json",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--supernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody all data column sidecar subnets",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--semiSupernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--genesisStateFile",
+          "shortcut": null,
+          "description": "Path or URL to download a genesis state file in ssz-encoded format",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--persistNetworkIdentity",
+          "shortcut": null,
+          "description": "Whether to reuse the same peer-id across restarts. Validator custody requires custody group count to persist relative to a given ENR. Setting to false will reset ENR and validator custody requirements on restarts.",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--private",
+          "shortcut": null,
+          "description": "Do not send implementation details over p2p identify protocol, and in builder and execution engine requests",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--validatorMonitorLogs",
+          "shortcut": null,
+          "description": "Log validator monitor events as info.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--disableLightClientServer",
+          "shortcut": null,
+          "description": "Disable light client server.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--logLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to terminal",
+          "value": "string",
+          "default": "info"
+        },
+        {
+          "option": "--logFile",
+          "shortcut": null,
+          "description": "Path to output all logs to a persistent log file, use 'none' to disable",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--logFileLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to file",
+          "value": "string",
+          "default": "debug"
+        },
+        {
+          "option": "--logFileDailyRotate",
+          "shortcut": null,
+          "description": "Daily rotate log files, set to an integer to limit the file count, set to 0 (zero) to disable rotation",
+          "value": "number",
+          "default": "5"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show help",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "Show version number",
+          "value": "boolean",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "lodestar beacon",
+      "raw_help_text": "beacon\n\nRun a beacon chain node\n\nweak subjectivity\n      --checkpointSyncUrl            Server url hosting Beacon Node APIs to fetc\n                                     h weak subjectivity state. Fetch latest fin\n                                     alized by default, else set --wssCheckpoint\n                                                                        [string]\n      --checkpointState              File path or url to finalized checkpoint st\n                                     ate to start syncing from          [string]\n      --wssCheckpoint                Start beacon node off a state at the provid\n                                     ed weak subjectivity checkpoint, to be supp\n                                     lied in <blockRoot>:<epoch> format. For exa\n                                     mple, 0x1234:100 will sync and start off fr\n                                     om the weak subjectivity state at checkpoin\n                                     t of epoch 100 with block root 0x1234.\n                                                                        [string]\n      --forceCheckpointSync          Force syncing from checkpoint state even if\n                                      db state is within weak subjectivity perio\n                                     d. This helps to avoid long sync times afte\n                                     r node has been offline for a while.\n                                                                       [boolean]\n      --ignoreWeakSubjectivityCheck  Ignore the checkpoint sync state failing th\n                                     e weak subjectivity check. This is relevant\n                                      in testnets where the weak subjectivity pe\n                                     riod is too small for even few epochs of no\n                                     n finalization causing last finalized to be\n                                      out of range. This flag is not recommended\n                                      for mainnet use.                 [boolean]\n\napi\n      --rest            Enable/disable HTTP API        [boolean] [default: true]\n      --rest.namespace  Pick namespaces to expose for HTTP API. Set to 'all' (or\n                         '*') to enable all namespaces\n  [array] [choices: \"beacon\", \"config\", \"debug\", \"events\", \"lightclient\", \"lodes\n  tar\", \"node\", \"proof\", \"validator\", \"*\", \"all\"] [default: [\"beacon\",\"config\",\"\n                              debug\",\"events\",\"node\",\"validator\",\"lightclient\"]]\n      --rest.cors       Configures the Access-Control-Allow-Origin CORS header f\n                        or HTTP API. Use 'all' to allow all origins\n                                                           [string] [default: *]\n      --rest.address    Set host for HTTP API      [string] [default: 127.0.0.1]\n      --rest.port       Set port for HTTP API           [number] [default: 9596]\n      --rest.swaggerUI  Enable Swagger UI for API exploration at http://{address\n                        }:{port}/documentation        [boolean] [default: false]\n\nchain\n      --suggestedFeeRecipient               Specify fee recipient default for co\n                                            llecting the EL block fees and rewar\n                                            ds (a hex string representing 20 byt\n                                            es address: ^0x[a-fA-F0-9]{40}$) in\n                                            case validator fails to update for a\n                                             validator index before calling `pro\n                                            duceBlock`.\n                [string] [default: \"0x0000000000000000000000000000000000000000\"]\n      --emitPayloadAttributes               Flag to SSE emit execution `payloadA\n                                            ttributes` before every slot\n                                                      [boolean] [default: false]\n      --serveHistoricalState                Enable regenerating finalized state\n                                            to serve historical data. Fetching t\n                                            his data is expensive and may affect\n                                             validator performance.\n                                                      [boolean] [default: false]\n      --chain.archiveStateEpochFrequency    Minimum number of epochs between arc\n                                            hived states[number] [default: 1024]\n      --chain.archiveDataEpochs, --chain.a  Number of epochs to retain finalized\n      rchiveBlobEpochs                       blobs/columns (minimum of MIN_EPOCH\n                                            S_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPO\n                                            CHS_FOR_DATA_COLUMN_SIDECARS_REQUEST\n                                            S)                          [number]\n      --chain.pruneHistory                  Prune historical blocks and state\n                                                      [boolean] [default: false]\n\nexecution\n      --execution.urls                      Urls to execution client engine API\n                                      [array] [default: \"http://localhost:8551\"]\n      --execution.timeout                   Timeout in milliseconds for executio\n                                            n engine API HTTP client\n                                                       [number] [default: 12000]\n      --execution.retries, --execution.ret  Number of retries when calling execu\n      ryAttempts                            tion engine API[number] [default: 2]\n      --execution.retryDelay                Delay time in milliseconds between r\n                                            etries when retrying calls to the ex\n                                            ecution engine API\n                                                        [number] [default: 2000]\n      --execution.engineMock                Set the execution engine to mock mod\n                                            e (development only)       [boolean]\n      --jwtSecret                           File path to a shared hex-encoded jw\n                                            t secret which will be used to gener\n                                            ate and bundle HS256 encoded jwt tok\n                                            ens for authentication with the EL c\n                                            lient's rpc server hosting engine ap\n                                            is. Secret to be exactly same as the\n                                             one used by the corresponding EL cl\n                                            ient.                       [string]\n      --jwtId                               An optional identifier to be set in\n                                            the id field of the claims included\n                                            in jwt tokens used for authenticatio\n                                            n with EL client's rpc server hostin\n                                            g engine apis               [string]\n\nbuilder\n      --builder                        Enable external builder\n                                                      [boolean] [default: false]\n      --builder.url, --builder.urls    Url hosting the builder API\n                                       [string] [default: http://localhost:8661]\n      --builder.timeout                Timeout in milliseconds for builder API H\n                                       TTP client      [number] [default: 12000]\n      --builder.faultInspectionWindow  Window to inspect missed slots for enabli\n                                       ng/disabling builder circuit breaker\n                                                                        [number]\n      --builder.allowedFaults          Number of missed slots allowed in the `fa\n                                       ultInspectionWindow` for builder circuit\n                                                                        [number]\n\nmetrics\n      --metrics          Enable the Prometheus metrics HTTP server\n                                                      [boolean] [default: false]\n      --metrics.port     Listen TCP port for the Prometheus metrics HTTP server\n                                                        [number] [default: 8008]\n      --metrics.address  Listen address for the Prometheus metrics HTTP server\n                                                   [string] [default: 127.0.0.1]\n\nmonitoring\n      --monitoring.endpoint  Enables monitoring service for sending clients stat\n                             s to the specified endpoint of a remote service (e.\n                             g. beaconcha.in)                           [string]\n      --monitoring.interval  Interval in milliseconds between sending client sta\n                             ts to the remote service  [number] [default: 60000]\n\nnetwork\n      --discv5               Enable discv5             [boolean] [default: true]\n      --listenAddress        The IPv4 address to listen for p2p UDP and TCP conn\n                             ections                 [string] [default: 0.0.0.0]\n      --port                 The TCP/UDP port to listen on. The UDP port can be\n                             modified by the --discoveryPort flag.\n                                                        [number] [default: 9000]\n      --discoveryPort        The UDP port that discovery will listen on. Default\n                             s to `port`              [number] [default: `port`]\n      --listenAddress6       The IPv6 address to listen for p2p UDP and TCP conn\n                             ections                      [string] [default: ::]\n      --port6                The TCP/UDP port to listen on. The UDP port can be\n                             modified by the --discoveryPort6 flag.\n                                                        [number] [default: 9000]\n      --discoveryPort6       The UDP port that discovery will listen on. Default\n                             s to `port6`            [number] [default: `port6`]\n      --bootnodes            Bootnodes for discv5 discovery[array] [default: []]\n      --targetPeers          The target connected peers. Above this number peers\n                              will be disconnected       [number] [default: 200]\n      --subscribeAllSubnets  Subscribe to all subnets regardless of validator co\n                             unt                      [boolean] [default: false]\n      --disablePeerScoring   Disable peer scoring, used for testing on devnets\n                                                      [boolean] [default: false]\n      --mdns                 Enable mdns local peer discovery\n                                                      [boolean] [default: false]\n      --directPeers          Direct peers for GossipSub mesh. These peers mainta\n                             in permanent connections without GRAFT/PRUNE. Suppo\n                             rts multiaddr with peer ID (e.g., `/ip4/192.168.1.1\n                             /tcp/9000/p2p/16Uiu2HAmKLhW7...`) or ENR (e.g., `en\n                             r:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrd\n                             vJjX04jRzjzCBOo...`). Both peers must configure eac\n                             h other as direct peers for the feature to work pro\n                             perly.                        [array] [default: []]\n\nenr\n      --enr.ip    Override ENR IP entry                                 [string]\n      --enr.tcp   Override ENR TCP entry                                [number]\n      --enr.udp   Override ENR UDP entry                                [number]\n      --enr.ip6   Override ENR IPv6 entry                               [string]\n      --enr.tcp6  Override ENR (IPv6-specific) TCP entry                [number]\n      --enr.udp6  Override ENR (IPv6-specific) UDP entry                [number]\n      --nat       Allow configuration of non-local addresses           [boolean]\n\nOptions:\n      --dataDir                   Lodestar root data directory          [string]\n      --network                   Name of the Ethereum Consensus chain network t\n                                  o join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n                                                   y\", \"dev\"] [default: mainnet]\n      --paramsFile                Network configuration file            [string]\n      --rcConfig                  RC file to supplement command line args, accep\n                                  ted formats: .yml, .yaml, .json       [string]\n      --supernode                 Subscribe to and custody all data column sidec\n                                  ar subnets                           [boolean]\n      --semiSupernode             Subscribe to and custody half of the data colu\n                                  mn sidecar subnets to support blob reconstruct\n                                  ion, enabling more efficient data availability\n                                   with lower bandwidth and storage requirements\n                                   compared to a supernode.            [boolean]\n      --genesisStateFile          Path or URL to download a genesis state file i\n                                  n ssz-encoded format                  [string]\n      --persistNetworkIdentity    Whether to reuse the same peer-id across resta\n                                  rts. Validator custody requires custody group\n                                  count to persist relative to a given ENR. Sett\n                                  ing to false will reset ENR and validator cust\n                                  ody requirements on restarts.\n                                                       [boolean] [default: true]\n      --private                   Do not send implementation details over p2p id\n                                  entify protocol, and in builder and execution\n                                  engine requests                      [boolean]\n      --validatorMonitorLogs      Log validator monitor events as info.[boolean]\n      --disableLightClientServer  Disable light client server.         [boolean]\n      --logLevel                  Logging verbosity level for emitting logs to t\n                                  erminal\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                    ult: \"info\"]\n      --logFile                   Path to output all logs to a persistent log fi\n                                  le, use 'none' to disable             [string]\n      --logFileLevel              Logging verbosity level for emitting logs to f\n                                  ile\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                   ult: \"debug\"]\n      --logFileDailyRotate        Daily rotate log files, set to an integer to l\n                                  imit the file count, set to 0 (zero) to disabl\n                                  e rotation               [number] [default: 5]\n  -h, --help                      Show help                            [boolean]\n  -v, --version                   Show version number                  [boolean]\n\nExamples:\n   beacon --network hoodi  Run a beacon chain node and connect to the hoodi test\n                           net",
+      "description": "Run a beacon chain node"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--keymanager",
+          "shortcut": null,
+          "description": "Enable key manager API server",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--keymanager.auth",
+          "shortcut": null,
+          "description": "Enable token bearer authentication f",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--keymanager.tokenFile",
+          "shortcut": "--tokenFile",
+          "description": "Path to file containing bearer token used for key manager API authentica",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--keymanager.port",
+          "shortcut": null,
+          "description": "Set port for key manager API",
+          "value": "number",
+          "default": "5062"
+        },
+        {
+          "option": "--keymanager.address",
+          "shortcut": null,
+          "description": "Set host for key manager API",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--keymanager.cors",
+          "shortcut": null,
+          "description": "Configures the Access-Control-Allow-Origin CORS header for key manager API. Use 'all' to allow all origins",
+          "value": "string",
+          "default": "*"
+        },
+        {
+          "option": "--builder",
+          "shortcut": null,
+          "description": "An alias for `--builder.selection default` for the builder flow, ignored if `--builder.selection` is explicitly provided",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--builder.selection",
+          "shortcut": null,
+          "description": "Builder block selection strategy `default`, `maxprofit`, `builderalways`, `builderonly`, `executionalways`, or `executiononly`",
+          "value": "string",
+          "default": "executiononly"
+        },
+        {
+          "option": "--builder.boostFactor",
+          "shortcut": null,
+          "description": "Percentage multiplier the block producing beacon node must apply to boost (>100) or dampen (<100) builder block value for selection against execution block. The multiplier is ignored if `--builder.selection` is set to anything other than `maxprofit`",
+          "value": "string",
+          "default": "100"
+        },
+        {
+          "option": "--http.requestWireFormat",
+          "shortcut": null,
+          "description": "Wire format to use in HTTP requests to beacon n ode. Can be one of `json` or `ssz`",
+          "value": "string",
+          "default": "json"
+        },
+        {
+          "option": "--http.responseWireFormat",
+          "shortcut": null,
+          "description": "Preferred wire format for HTTP responses from b eacon node. Can be one of `json` or `ssz`",
+          "value": "string",
+          "default": "ssz"
+        },
+        {
+          "option": "--externalSigner.url",
+          "shortcut": null,
+          "description": "URL to connect to an external signing serv er",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--externalSigner.pubkeys",
+          "shortcut": null,
+          "description": "List of validator public keys used by an e xternal signer. May also provide a single string of comma-separated public keys",
+          "value": "array",
+          "default": null
+        },
+        {
+          "option": "--externalSigner.fetch",
+          "shortcut": null,
+          "description": "Fetch the list of public keys to validate from an external signer. Cannot be used in combination with `--externalSigner.pubkeys`",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--externalSigner.fetchInterval",
+          "shortcut": null,
+          "description": "Interval in milliseconds between fetching the list of public keys from external signer, once per epoch by default",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--metrics",
+          "shortcut": null,
+          "description": "Enable the Prometheus metrics HTTP server",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--metrics.port",
+          "shortcut": null,
+          "description": "Listen TCP port for the Prometheus metrics HTTP server",
+          "value": "number",
+          "default": "5064"
+        },
+        {
+          "option": "--metrics.address",
+          "shortcut": null,
+          "description": "Listen address for the Prometheus metrics HTTP server",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--monitoring.endpoint",
+          "shortcut": null,
+          "description": "Enables monitoring service for sending clients stat s to the specified endpoint of a remote service (e.g. beaconcha.in)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--monitoring.interval",
+          "shortcut": null,
+          "description": "Interval in milliseconds between sending client sta ts to the remote service",
+          "value": "number",
+          "default": "60000"
+        },
+        {
+          "option": "--dataDir",
+          "shortcut": null,
+          "description": "Lodestar root data directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "Name of the Ethereum Consensus chain network to join",
+          "value": "string",
+          "default": "mainnet"
+        },
+        {
+          "option": "--paramsFile",
+          "shortcut": null,
+          "description": "Network configuration file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--rcConfig",
+          "shortcut": null,
+          "description": "RC file to supplement command line a rgs, accepted formats: .yml, .yaml, .json",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--supernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody all data co lumn sidecar subnets",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--semiSupernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--logLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to terminal",
+          "value": "string",
+          "default": "info"
+        },
+        {
+          "option": "--logFile",
+          "shortcut": null,
+          "description": "Path to output all logs to a persistent log file, use 'none' to disable",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--logFileLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to file",
+          "value": "string",
+          "default": "debug"
+        },
+        {
+          "option": "--logFileDailyRotate",
+          "shortcut": null,
+          "description": "Daily rotate log files, set to an integer to limit the file count, set to 0 (zero) to disable rotation",
+          "value": "number",
+          "default": "5"
+        },
+        {
+          "option": "--beaconNodes",
+          "shortcut": "--server",
+          "description": "Addresses to connect to BeaconNode",
+          "value": "array",
+          "default": "[\"http://127.0.0.1:9596\"]"
+        },
+        {
+          "option": "--force",
+          "shortcut": null,
+          "description": "Open validators even if there's a lockfile. Use with caution",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--graffiti",
+          "shortcut": null,
+          "description": "Specify your custom graffiti to be included in blocks (plain UTF8 text, 32 characters max)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--proposerSettingsFile",
+          "shortcut": null,
+          "description": "A yaml file to specify detailed default and per validator public key customized proposer configs. PS: This feature and its format is in alpha and subject to change",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--suggestedFeeRecipient",
+          "shortcut": null,
+          "description": "Specify fee recipient default for collecting the EL block fees and rewards (a hex string representing 20 bytes address: ^0x[a-fA-F0-9]{40}$). It would be possible (WIP) to override this per validator key using config or key manager API. Only used post merge.",
+          "value": "string",
+          "default": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "option": "--strictFeeRecipientCheck",
+          "shortcut": null,
+          "description": "Enable strict checking of the validator's `feeRecipient` with the one returned by engine",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--defaultGasLimit",
+          "shortcut": null,
+          "description": "Suggested gas limit to the engine/builder for building execution payloads. Only used post merge.",
+          "value": "number",
+          "default": "60000000"
+        },
+        {
+          "option": "--broadcastValidation",
+          "shortcut": null,
+          "description": "Validations to be run by beacon node for the signed block prior to publishing",
+          "value": "string",
+          "default": "gossip"
+        },
+        {
+          "option": "--blindedLocal",
+          "shortcut": null,
+          "description": "Request fetching local block in blinded format for produceBlockV3",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--importKeystores",
+          "shortcut": "--keystore",
+          "description": "Path(s) to a directory or single file path to validator keystores, i.e. Launchpad validators",
+          "value": "array",
+          "default": "./keystores/*.json"
+        },
+        {
+          "option": "--importKeystoresPassword",
+          "shortcut": "--passphr",
+          "description": "Path to a file with password to decrypt all keystores from `importKeystores` option",
+          "value": "string",
+          "default": "./password.txt"
+        },
+        {
+          "option": "--doppelgangerProtection",
+          "shortcut": "--doppelgangerProtectionEnabled",
+          "description": "Enables Doppelganger protection",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--distributed",
+          "shortcut": null,
+          "description": "Enables specific features required to run as part of a distributed validator cluster",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show help",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "Show version number",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "lodestar validator",
+      "raw_help_text": "validator\n\nRun one or multiple validator clients\n\nCommands:\n  validator slashing-protection <command>   Import or export slashing protection\n                                             data to or from another client.\n  validator import                          Imports one or more EIP-2335 keystor\n                                            es into a Lodestar validator client\n                                            directory, requesting passwords inte\n                                            ractively. The directory flag provid\n                                            es a convenient method for importing\n                                             a directory of keys generated by th\n                                            e eth2-deposit-cli Ethereum Foundati\n                                            on utility.\n  validator list                            Lists the public keys of all validat\n                                            ors\n  validator voluntary-exit                  Performs a voluntary exit for a give\n                                            n set of validators as identified vi\n                                            a `pubkeys`. If no `pubkeys` are pro\n                                            vided, it will exit all validators t\n                                            hat have been imported.\n  validator bls-to-execution-change         Performs BLS To Execution Change for\n                                             a given validator (as identified vi\n                                            a `publicKey`.  If no `publicKey` is\n                                             provided, a prompt will ask the use\n                                            r which validator they would like to\n                                             choose for BLS To Execution Change.\n\nkeymanager\n      --keymanager                          Enable key manager API server\n                                                      [boolean] [default: false]\n      --keymanager.auth, --keymanager.auth  Enable token bearer authentication f\n      Enabled                               or key manager API server\n                                                       [boolean] [default: true]\n      --keymanager.tokenFile, --tokenFile   Path to file containing bearer token\n                                             used for key manager API authentica\n                                            tion                        [string]\n      --keymanager.port                     Set port for key manager API\n                                                        [number] [default: 5062]\n      --keymanager.address                  Set host for key manager API\n                                                   [string] [default: 127.0.0.1]\n      --keymanager.cors                     Configures the Access-Control-Allow-\n                                            Origin CORS header for key manager A\n                                            PI. Use 'all' to allow all origins\n                                                           [string] [default: *]\n\nbuilder\n      --builder              An alias for `--builder.selection default` for the\n                             builder flow, ignored if `--builder.selection` is e\n                             xplicitly provided                        [boolean]\n      --builder.selection    Builder block selection strategy `default`, `maxpro\n                             fit`, `builderalways`, `builderonly`, `executionalw\n                             ays`, or `executiononly`\n                                               [string] [default: executiononly]\n      --builder.boostFactor  Percentage multiplier the block producing beacon no\n                             de must apply to boost (>100) or dampen (<100) buil\n                             der block value for selection against execution blo\n                             ck. The multiplier is ignored if `--builder.selecti\n                             on` is set to anything other than `maxprofit`\n                                                         [string] [default: 100]\n\nhttp\n      --http.requestWireFormat   Wire format to use in HTTP requests to beacon n\n                                 ode. Can be one of `json` or `ssz`\n                                                        [string] [default: json]\n      --http.responseWireFormat  Preferred wire format for HTTP responses from b\n                                 eacon node. Can be one of `json` or `ssz`\n                                                         [string] [default: ssz]\n\nexternalSigner\n      --externalSigner.url            URL to connect to an external signing serv\n                                      er                                [string]\n      --externalSigner.pubkeys        List of validator public keys used by an e\n                                      xternal signer. May also provide a single\n                                      string of comma-separated public keys\n                                                                         [array]\n      --externalSigner.fetch          Fetch the list of public keys to validate\n                                      from an external signer. Cannot be used in\n                                       combination with `--externalSigner.pubkey\n                                      s`                               [boolean]\n      --externalSigner.fetchInterval  Interval in milliseconds between fetching\n                                      the list of public keys from external sign\n                                      er, once per epoch by default     [number]\n\nmetrics\n      --metrics          Enable the Prometheus metrics HTTP server\n                                                      [boolean] [default: false]\n      --metrics.port     Listen TCP port for the Prometheus metrics HTTP server\n                                                        [number] [default: 5064]\n      --metrics.address  Listen address for the Prometheus metrics HTTP server\n                                                   [string] [default: 127.0.0.1]\n\nmonitoring\n      --monitoring.endpoint  Enables monitoring service for sending clients stat\n                             s to the specified endpoint of a remote service (e.\n                             g. beaconcha.in)                           [string]\n      --monitoring.interval  Interval in milliseconds between sending client sta\n                             ts to the remote service  [number] [default: 60000]\n\nOptions:\n      --dataDir                             Lodestar root data directory[string]\n      --network                             Name of the Ethereum Consensus chain\n                                             network to join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n                                                   y\", \"dev\"] [default: mainnet]\n      --paramsFile                          Network configuration file  [string]\n      --rcConfig                            RC file to supplement command line a\n                                            rgs, accepted formats: .yml, .yaml,\n                                            .json                       [string]\n      --supernode                           Subscribe to and custody all data co\n                                            lumn sidecar subnets       [boolean]\n      --semiSupernode                       Subscribe to and custody half of the\n                                             data column sidecar subnets to supp\n                                            ort blob reconstruction, enabling mo\n                                            re efficient data availability with\n                                            lower bandwidth and storage requirem\n                                            ents compared to a supernode.\n                                                                       [boolean]\n      --logLevel                            Logging verbosity level for emitting\n                                             logs to terminal\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                    ult: \"info\"]\n      --logFile                             Path to output all logs to a persist\n                                            ent log file, use 'none' to disable\n                                                                        [string]\n      --logFileLevel                        Logging verbosity level for emitting\n                                             logs to file\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                   ult: \"debug\"]\n      --logFileDailyRotate                  Daily rotate log files, set to an in\n                                            teger to limit the file count, set t\n                                            o 0 (zero) to disable rotation\n                                                           [number] [default: 5]\n      --beaconNodes, --server               Addresses to connect to BeaconNode\n                                    [array] [default: [\"http://127.0.0.1:9596\"]]\n      --force                               Open validators even if there's a lo\n                                            ckfile. Use with caution   [boolean]\n      --graffiti                            Specify your custom graffiti to be i\n                                            ncluded in blocks (plain UTF8 text,\n                                            32 characters max)          [string]\n      --proposerSettingsFile                A yaml file to specify detailed defa\n                                            ult and per validator public key cus\n                                            tomized proposer configs. PS: This f\n                                            eature and its format is in alpha an\n                                            d subject to change         [string]\n      --suggestedFeeRecipient               Specify fee recipient default for co\n                                            llecting the EL block fees and rewar\n                                            ds (a hex string representing 20 byt\n                                            es address: ^0x[a-fA-F0-9]{40}$). It\n                                             would be possible (WIP) to override\n                                             this per validator key using config\n                                             or key manager API. Only used post\n                                            merge.\n                  [string] [default: 0x0000000000000000000000000000000000000000]\n      --strictFeeRecipientCheck             Enable strict checking of the valida\n                                            tor's `feeRecipient` with the one re\n                                            turned by engine           [boolean]\n      --defaultGasLimit                     Suggested gas limit to the engine/bu\n                                            ilder for building execution payload\n                                            s. Only used post merge.\n                                                    [number] [default: 60000000]\n      --broadcastValidation                 Validations to be run by beacon node\n                                             for the signed block prior to publi\n                                            shing     [string] [default: gossip]\n      --blindedLocal                        Request fetching local block in blin\n                                            ded format for produceBlockV3\n                                                      [boolean] [default: false]\n      --importKeystores, --keystore         Path(s) to a directory or single fil\n                                            e path to validator keystores, i.e.\n                                            Launchpad validators\n                                           [array] [default: ./keystores/*.json]\n      --importKeystoresPassword, --passphr  Path to a file with password to decr\n      aseFile                               ypt all keystores from `importKeysto\n                                            res` option\n                                              [string] [default: ./password.txt]\n      --doppelgangerProtection, --doppelga  Enables Doppelganger protection\n      ngerProtectionEnabled                           [boolean] [default: false]\n      --distributed                         Enables specific features required t\n                                            o run as part of a distributed valid\n                                            ator cluster               [boolean]\n  -h, --help                                Show help                  [boolean]\n  -v, --version                             Show version number        [boolean]\n\nExamples:\n   validator --network hoodi  Run one validator client with all the keystores av\n                              ailable in the directory .hoodi/keystores",
+      "description": "Run one or multiple validator clients"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--dataDir",
+          "shortcut": null,
+          "description": "Lodestar root data directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "Name of the Ethereum Consensus chain network to join",
+          "value": "string",
+          "default": "mainnet"
+        },
+        {
+          "option": "--paramsFile",
+          "shortcut": null,
+          "description": "Network configuration file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--rcConfig",
+          "shortcut": null,
+          "description": "RC file to supplement command line args, accepted formats: .yml, .yaml, .json",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--supernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody all data column sidecar subnets",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--semiSupernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--logLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to terminal",
+          "value": "string",
+          "default": "info"
+        },
+        {
+          "option": "--logFile",
+          "shortcut": null,
+          "description": "Path to output all logs to a persistent log file, use 'none' to disable",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--logFileLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to file",
+          "value": "string",
+          "default": "debug"
+        },
+        {
+          "option": "--logFileDailyRotate",
+          "shortcut": null,
+          "description": "Daily rotate log files, set to an integer to limit the file count, set to 0 (zero) to disable rotation",
+          "value": "number",
+          "default": "5"
+        },
+        {
+          "option": "--beaconApiUrl",
+          "shortcut": null,
+          "description": "Url to a beacon node that support lightclient API",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--checkpointRoot",
+          "shortcut": null,
+          "description": "Checkpoint root hex string to sync the lightclient from, start with 0x",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show help",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "Show version number",
+          "value": "boolean",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "lodestar lightclient",
+      "raw_help_text": "lightclient\n\nRun lightclient\n\nOptions:\n      --dataDir             Lodestar root data directory                [string]\n      --network             Name of the Ethereum Consensus chain network to join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n                                                   y\", \"dev\"] [default: mainnet]\n      --paramsFile          Network configuration file                  [string]\n      --rcConfig            RC file to supplement command line args, accepted fo\n                            rmats: .yml, .yaml, .json                   [string]\n      --supernode           Subscribe to and custody all data column sidecar sub\n                            nets                                       [boolean]\n      --semiSupernode       Subscribe to and custody half of the data column sid\n                            ecar subnets to support blob reconstruction, enablin\n                            g more efficient data availability with lower bandwi\n                            dth and storage requirements compared to a supernode\n                            .                                          [boolean]\n      --logLevel            Logging verbosity level for emitting logs to termina\n                            l\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                    ult: \"info\"]\n      --logFile             Path to output all logs to a persistent log file, us\n                            e 'none' to disable                         [string]\n      --logFileLevel        Logging verbosity level for emitting logs to file\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                   ult: \"debug\"]\n      --logFileDailyRotate  Daily rotate log files, set to an integer to limit t\n                            he file count, set to 0 (zero) to disable rotation\n                                                           [number] [default: 5]\n      --beaconApiUrl        Url to a beacon node that support lightclient API\n                                                             [string] [required]\n      --checkpointRoot      Checkpoint root hex string to sync the lightclient f\n                            rom, start with 0x               [string] [required]\n  -h, --help                Show help                                  [boolean]\n  -v, --version             Show version number                        [boolean]\n\nExamples:\n   lightclient --network hoodi  Run lightclient with hoodi network",
+      "description": "Run lightclient"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--checkpointSyncUrl",
+          "shortcut": null,
+          "description": "Server url hosting Beacon Node APIs to fetch weak subjectivity state. Fetch latest finalized by default, else set --wssCheckpoint",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--checkpointState",
+          "shortcut": null,
+          "description": "File path or url to finalized checkpoint state to start syncing from",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--wssCheckpoint",
+          "shortcut": null,
+          "description": "Start beacon node off a state at the provided weak subjectivity checkpoint, to be supplied in <blockRoot>:<epoch> format. For example, 0x1234:100 will sync and start off from the weak subjectivity state at checkpoint of epoch 100 with block root 0x1234.",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--forceCheckpointSync",
+          "shortcut": null,
+          "description": "Force syncing from checkpoint state even if db state is within weak subjectivity period. This helps to avoid long sync times after node has been offline for a while.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--ignoreWeakSubjectivityCheck",
+          "shortcut": null,
+          "description": "Ignore the checkpoint sync state failing the weak subjectivity check. This is relevant in testnets where the weak subjectivity period is too small for even few epochs of non finalization causing last finalized to be out of range. This flag is not recommended for mainnet use.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--rest",
+          "shortcut": null,
+          "description": "Enable/disable HTTP API",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--rest.namespace",
+          "shortcut": null,
+          "description": "Pick namespaces to expose for HTTP API. Set to 'all' (or '*') to enable all namespaces",
+          "value": "array",
+          "default": "[\"beacon\",\"config\",\"debug\",\"events\",\"node\",\"validator\",\"lightclient\"]"
+        },
+        {
+          "option": "--rest.cors",
+          "shortcut": null,
+          "description": "Configures the Access-Control-Allow-Origin CORS header for HTTP API. Use 'all' to allow all origins",
+          "value": "string",
+          "default": "*"
+        },
+        {
+          "option": "--rest.address",
+          "shortcut": null,
+          "description": "Set host for HTTP API",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--rest.port",
+          "shortcut": null,
+          "description": "Set port for HTTP API",
+          "value": "number",
+          "default": "9596"
+        },
+        {
+          "option": "--rest.swaggerUI",
+          "shortcut": null,
+          "description": "Enable Swagger UI for API exploration at http://{address}:{port}/documentation",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--emitPayloadAttributes",
+          "shortcut": null,
+          "description": "Flag to SSE emit execution `payloadAttributes` before every slot",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--serveHistoricalState",
+          "shortcut": null,
+          "description": "Enable regenerating finalized state to serve historical data. Fetching this data is expensive and may affect validator performance.",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--chain.archiveStateEpochFrequency",
+          "shortcut": null,
+          "description": "Minimum number of epochs between archived states",
+          "value": "number",
+          "default": "1024"
+        },
+        {
+          "option": "--chain.archiveDataEpochs",
+          "shortcut": null,
+          "description": "Number of epochs to retain finalized blobs/columns (minimum of MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPOCHS_FOR_DATA_COLUMN_SIDECARS_REQUESTS)",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--chain.archiveBlobEpochs",
+          "shortcut": null,
+          "description": "Number of epochs to retain finalized blobs/columns (minimum of MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPOCHS_FOR_DATA_COLUMN_SIDECARS_REQUESTS)",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--chain.pruneHistory",
+          "shortcut": null,
+          "description": "Prune historical blocks and state",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--execution.urls",
+          "shortcut": null,
+          "description": "Urls to execution client engine API",
+          "value": "array",
+          "default": "http://localhost:8551"
+        },
+        {
+          "option": "--execution.timeout",
+          "shortcut": null,
+          "description": "Timeout in milliseconds for execution engine API HTTP client",
+          "value": "number",
+          "default": "12000"
+        },
+        {
+          "option": "--execution.retries",
+          "shortcut": null,
+          "description": "Number of retries when calling execution engine API",
+          "value": "number",
+          "default": "2"
+        },
+        {
+          "option": "--execution.retryAttempts",
+          "shortcut": null,
+          "description": "Number of retries when calling execution engine API",
+          "value": "number",
+          "default": "2"
+        },
+        {
+          "option": "--execution.retryDelay",
+          "shortcut": null,
+          "description": "Delay time in milliseconds between retries when retrying calls to the execution engine API",
+          "value": "number",
+          "default": "2000"
+        },
+        {
+          "option": "--execution.engineMock",
+          "shortcut": null,
+          "description": "Set the execution engine to mock mode (development only)",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--jwtSecret",
+          "shortcut": null,
+          "description": "File path to a shared hex-encoded jwt secret which will be used to generate and bundle HS256 encoded jwt tokens for authentication with the EL client's rpc server hosting engine apis. Secret to be exactly same as the one used by the corresponding EL client.",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--jwtId",
+          "shortcut": null,
+          "description": "An optional identifier to be set in the id field of the claims included in jwt tokens used for authentication with EL client's rpc server hosting engine apis",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--builder",
+          "shortcut": null,
+          "description": "An alias for `--builder.selection default` for the builder flow, ignored if `--builder.selection` is explicitly provided",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--builder.url",
+          "shortcut": null,
+          "description": "Url hosting the builder API",
+          "value": "string",
+          "default": "http://localhost:8661"
+        },
+        {
+          "option": "--builder.urls",
+          "shortcut": null,
+          "description": "Url hosting the builder API",
+          "value": "string",
+          "default": "http://localhost:8661"
+        },
+        {
+          "option": "--builder.timeout",
+          "shortcut": null,
+          "description": "Timeout in milliseconds for builder API HTTP client",
+          "value": "number",
+          "default": "12000"
+        },
+        {
+          "option": "--builder.faultInspectionWindow",
+          "shortcut": null,
+          "description": "Window to inspect missed slots for enabling/disabling builder circuit breaker",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--builder.allowedFaults",
+          "shortcut": null,
+          "description": "Number of missed slots allowed in the `faultInspectionWindow` for builder circuit breaker",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--builder.selection",
+          "shortcut": null,
+          "description": "Builder block selection strategy `default`, `maxprofit`, `builderalways`, `builderonly`, `executionalways`, or `executiononly`",
+          "value": "string",
+          "default": "executiononly"
+        },
+        {
+          "option": "--builder.boostFactor",
+          "shortcut": null,
+          "description": "Percentage multiplier the block producing beacon node must apply to boost (>100) or dampen (<100) builder block value for selection against execution block. The multiplier is ignored if `--builder.selection` is set to anything other than `maxprofit`",
+          "value": "string",
+          "default": "100"
+        },
+        {
+          "option": "--metrics",
+          "shortcut": null,
+          "description": "Enable the Prometheus metrics HTTP server",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--metrics.port",
+          "shortcut": null,
+          "description": "Listen TCP port for the Prometheus metrics HTTP server",
+          "value": "number",
+          "default": "5064"
+        },
+        {
+          "option": "--metrics.address",
+          "shortcut": null,
+          "description": "Listen address for the Prometheus metrics HTTP server",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--monitoring.endpoint",
+          "shortcut": null,
+          "description": "Enables monitoring service for sending clients stats to the specified endpoint of a remote service (e.g. beaconcha.in)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--monitoring.interval",
+          "shortcut": null,
+          "description": "Interval in milliseconds between sending client stats to the remote service",
+          "value": "number",
+          "default": "60000"
+        },
+        {
+          "option": "--discv5",
+          "shortcut": null,
+          "description": "Enable discv5",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--listenAddress",
+          "shortcut": null,
+          "description": "The IPv4 address to listen for p2p UDP and TCP connections",
+          "value": "string",
+          "default": "0.0.0.0"
+        },
+        {
+          "option": "--port",
+          "shortcut": null,
+          "description": "The TCP/UDP port to listen on. The UDP port can be modified by the --discoveryPort flag.",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort",
+          "shortcut": null,
+          "description": "The UDP port that discovery will listen on. Defaults to `port`",
+          "value": "number",
+          "default": "`port`"
+        },
+        {
+          "option": "--listenAddress6",
+          "shortcut": null,
+          "description": "The IPv6 address to listen for p2p UDP and TCP connections",
+          "value": "string",
+          "default": "::"
+        },
+        {
+          "option": "--port6",
+          "shortcut": null,
+          "description": "The TCP/UDP port to listen on. The UDP port can be modified by the --discoveryPort6 flag.",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort6",
+          "shortcut": null,
+          "description": "The UDP port that discovery will listen on. Defaults to `port6`",
+          "value": "number",
+          "default": "`port6`"
+        },
+        {
+          "option": "--bootnodes",
+          "shortcut": null,
+          "description": "Bootnodes for discv5 discovery",
+          "value": "array",
+          "default": "[]"
+        },
+        {
+          "option": "--targetPeers",
+          "shortcut": null,
+          "description": "The target connected peers. Above this number peers will be disconnected",
+          "value": "number",
+          "default": "200"
+        },
+        {
+          "option": "--subscribeAllSubnets",
+          "shortcut": null,
+          "description": "Subscribe to all subnets regardless of validator count",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--disablePeerScoring",
+          "shortcut": null,
+          "description": "Disable peer scoring, used for testing on devnets",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--mdns",
+          "shortcut": null,
+          "description": "Enable mdns local peer discovery",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--directPeers",
+          "shortcut": null,
+          "description": "Direct peers for GossipSub mesh. These peers maintain permanent connections without GRAFT/PRUNE. Supports multiaddr with peer ID (e.g., `/ip4/192.168.1.1/tcp/9000/p2p/16Uiu2HAmKLhW7...`) or ENR (e.g., `enr:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrdvJjX04jRzjzCBOo...`). Both peers must configure each other as direct peers for the feature to work properly.",
+          "value": "array",
+          "default": "[]"
+        },
+        {
+          "option": "--enr.ip",
+          "shortcut": null,
+          "description": "Override ENR IP entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.tcp",
+          "shortcut": null,
+          "description": "Override ENR TCP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.udp",
+          "shortcut": null,
+          "description": "Override ENR UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.ip6",
+          "shortcut": null,
+          "description": "Override ENR IPv6 entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.tcp6",
+          "shortcut": null,
+          "description": "Override ENR (IPv6-specific) TCP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.udp6",
+          "shortcut": null,
+          "description": "Override ENR (IPv6-specific) UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--nat",
+          "shortcut": null,
+          "description": "Allow configuration of non-local addresses",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--keymanager",
+          "shortcut": null,
+          "description": "Enable key manager API server",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--keymanager.auth",
+          "shortcut": null,
+          "description": "Enable token bearer authentication for key manager API server",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--keymanager.authEnabled",
+          "shortcut": null,
+          "description": "Enable token bearer authentication for key manager API server",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--keymanager.tokenFile",
+          "shortcut": null,
+          "description": "Path to file containing bearer token used for key manager API authentication",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--tokenFile",
+          "shortcut": null,
+          "description": "Path to file containing bearer token used for key manager API authentication",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--keymanager.port",
+          "shortcut": null,
+          "description": "Set port for key manager API",
+          "value": "number",
+          "default": "5062"
+        },
+        {
+          "option": "--keymanager.address",
+          "shortcut": null,
+          "description": "Set host for key manager API",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--keymanager.cors",
+          "shortcut": null,
+          "description": "Configures the Access-Control-Allow-Origin CORS header for key manager API. Use 'all' to allow all origins",
+          "value": "string",
+          "default": "*"
+        },
+        {
+          "option": "--http.requestWireFormat",
+          "shortcut": null,
+          "description": "Wire format to use in HTTP requests to beacon node. Can be one of `json` or `ssz`",
+          "value": "string",
+          "default": "json"
+        },
+        {
+          "option": "--http.responseWireFormat",
+          "shortcut": null,
+          "description": "Preferred wire format for HTTP responses from beacon node. Can be one of `json` or `ssz`",
+          "value": "string",
+          "default": "ssz"
+        },
+        {
+          "option": "--externalSigner.url",
+          "shortcut": null,
+          "description": "URL to connect to an external signing server",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--externalSigner.pubkeys",
+          "shortcut": null,
+          "description": "List of validator public keys used by an external signer. May also provide a single string of comma-separated public keys",
+          "value": "array",
+          "default": null
+        },
+        {
+          "option": "--externalSigner.fetch",
+          "shortcut": null,
+          "description": "Fetch the list of public keys to validate from an external signer. Cannot be used in combination with `--externalSigner.pubkeys`",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--externalSigner.fetchInterval",
+          "shortcut": null,
+          "description": "Interval in milliseconds between fetching the list of public keys from external signer, once per epoch by default",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--genesisEth1Hash",
+          "shortcut": null,
+          "description": "If present it will create genesis with this eth1 hash.",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--genesisValidators",
+          "shortcut": "-c",
+          "description": "If present it will create genesis with interop validators and start chain.",
+          "value": "number",
+          "default": "8"
+        },
+        {
+          "option": "--startValidators",
+          "shortcut": null,
+          "description": "Start interop validators in inclusive range(s) with notation '0..7'",
+          "value": "array",
+          "default": null
+        },
+        {
+          "option": "--genesisTime",
+          "shortcut": null,
+          "description": "genesis_time to initialize interop genesis state",
+          "value": "number",
+          "default": "now"
+        },
+        {
+          "option": "--reset",
+          "shortcut": "-r",
+          "description": "To delete chain and validator directories",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--dumpTestnetFiles",
+          "shortcut": null,
+          "description": "Dump testnet files and exit",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--dataDir",
+          "shortcut": null,
+          "description": "Lodestar root data directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "Name of the Ethereum Consensus chain network to join",
+          "value": "string",
+          "default": "mainnet"
+        },
+        {
+          "option": "--paramsFile",
+          "shortcut": null,
+          "description": "Network configuration file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--rcConfig",
+          "shortcut": null,
+          "description": "RC file to supplement command line args, accepted formats: .yml, .yaml, .json",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--supernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody all data column sidecar subnets",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--semiSupernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--genesisStateFile",
+          "shortcut": null,
+          "description": "Path or URL to download a genesis state file in ssz-encoded format",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--persistNetworkIdentity",
+          "shortcut": null,
+          "description": "Whether to reuse the same peer-id across restarts. Validator custody requires custody group count to persist relative to a given ENR. Setting to false will reset ENR and validator custody requirements on restarts.",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--private",
+          "shortcut": null,
+          "description": "Do not send implementation details over p2p identify protocol, and in builder and execution engine requests",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--validatorMonitorLogs",
+          "shortcut": null,
+          "description": "Log validator monitor events as info.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--disableLightClientServer",
+          "shortcut": null,
+          "description": "Disable light client server.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--logLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to terminal",
+          "value": "string",
+          "default": "info"
+        },
+        {
+          "option": "--logFile",
+          "shortcut": null,
+          "description": "Path to output all logs to a persistent log file, use 'none' to disable",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--logFileLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to file",
+          "value": "string",
+          "default": "debug"
+        },
+        {
+          "option": "--logFileDailyRotate",
+          "shortcut": null,
+          "description": "Daily rotate log files, set to an integer to limit the file count, set to 0 (zero) to disable rotation",
+          "value": "number",
+          "default": "5"
+        },
+        {
+          "option": "--suggestedFeeRecipient",
+          "shortcut": null,
+          "description": "Specify fee recipient default for collecting the EL block fees and rewards (a hex string representing 20 bytes address: ^0x[a-fA-F0-9]{40}$). It would be possible (WIP) to override this per validator key using config or key manager API. Only used post merge.",
+          "value": "string",
+          "default": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "option": "--beaconNodes",
+          "shortcut": null,
+          "description": "Addresses to connect to BeaconNode",
+          "value": "array",
+          "default": "[\"http://127.0.0.1:9596\"]"
+        },
+        {
+          "option": "--server",
+          "shortcut": null,
+          "description": "Addresses to connect to BeaconNode",
+          "value": "array",
+          "default": "[\"http://127.0.0.1:9596\"]"
+        },
+        {
+          "option": "--force",
+          "shortcut": null,
+          "description": "Open validators even if there's a lockfile. Use with caution",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--graffiti",
+          "shortcut": null,
+          "description": "Specify your custom graffiti to be included in blocks (plain UTF8 text, 32 characters max)",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--proposerSettingsFile",
+          "shortcut": null,
+          "description": "A yaml file to specify detailed default and per validator public key customized proposer configs. PS: This feature and its format is in alpha and subject to change",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--strictFeeRecipientCheck",
+          "shortcut": null,
+          "description": "Enable strict checking of the validator's `feeRecipient` with the one returned by engine",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--defaultGasLimit",
+          "shortcut": null,
+          "description": "Suggested gas limit to the engine/builder for building execution payloads. Only used post merge.",
+          "value": "number",
+          "default": "60000000"
+        },
+        {
+          "option": "--broadcastValidation",
+          "shortcut": null,
+          "description": "Validations to be run by beacon node for the signed block prior to publishing",
+          "value": "string",
+          "default": "gossip"
+        },
+        {
+          "option": "--blindedLocal",
+          "shortcut": null,
+          "description": "Request fetching local block in blinded format for produceBlockV3",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--importKeystores",
+          "shortcut": null,
+          "description": "Path(s) to a directory or single file path to validator keystores, i.e. Launchpad validators",
+          "value": "array",
+          "default": "./keystores/*.json"
+        },
+        {
+          "option": "--keystore",
+          "shortcut": null,
+          "description": "Path(s) to a directory or single file path to validator keystores, i.e. Launchpad validators",
+          "value": "array",
+          "default": "./keystores/*.json"
+        },
+        {
+          "option": "--importKeystoresPassword",
+          "shortcut": null,
+          "description": "Path to a file with password to decrypt all keystores from `importKeystores` option",
+          "value": "string",
+          "default": "./password.txt"
+        },
+        {
+          "option": "--passphraseFile",
+          "shortcut": null,
+          "description": "Path to a file with password to decrypt all keystores from `importKeystores` option",
+          "value": "string",
+          "default": "./password.txt"
+        },
+        {
+          "option": "--doppelgangerProtection",
+          "shortcut": null,
+          "description": "Enables Doppelganger protection",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--doppelgangerProtectionEnabled",
+          "shortcut": null,
+          "description": "Enables Doppelganger protection",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--distributed",
+          "shortcut": null,
+          "description": "Enables specific features required to run as part of a distributed validator cluster",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show help",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "Show version number",
+          "value": "boolean",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "lodestar dev",
+      "raw_help_text": "dev\n\nQuickly bootstrap a beacon node and multiple validators. Use for development and\n testing\n\nweak subjectivity\n      --checkpointSyncUrl            Server url hosting Beacon Node APIs to fetc\n                                     h weak subjectivity state. Fetch latest fin\n                                     alized by default, else set --wssCheckpoint\n                                                                        [string]\n      --checkpointState              File path or url to finalized checkpoint st\n                                     ate to start syncing from          [string]\n      --wssCheckpoint                Start beacon node off a state at the provid\n                                     ed weak subjectivity checkpoint, to be supp\n                                     lied in <blockRoot>:<epoch> format. For exa\n                                     mple, 0x1234:100 will sync and start off fr\n                                     om the weak subjectivity state at checkpoin\n                                     t of epoch 100 with block root 0x1234.\n                                                                        [string]\n      --forceCheckpointSync          Force syncing from checkpoint state even if\n                                      db state is within weak subjectivity perio\n                                     d. This helps to avoid long sync times afte\n                                     r node has been offline for a while.\n                                                                       [boolean]\n      --ignoreWeakSubjectivityCheck  Ignore the checkpoint sync state failing th\n                                     e weak subjectivity check. This is relevant\n                                      in testnets where the weak subjectivity pe\n                                     riod is too small for even few epochs of no\n                                     n finalization causing last finalized to be\n                                      out of range. This flag is not recommended\n                                      for mainnet use.                 [boolean]\n\napi\n      --rest            Enable/disable HTTP API        [boolean] [default: true]\n      --rest.namespace  Pick namespaces to expose for HTTP API. Set to 'all' (or\n                         '*') to enable all namespaces\n  [array] [choices: \"beacon\", \"config\", \"debug\", \"events\", \"lightclient\", \"lodes\n  tar\", \"node\", \"proof\", \"validator\", \"*\", \"all\"] [default: [\"beacon\",\"config\",\"\n                              debug\",\"events\",\"node\",\"validator\",\"lightclient\"]]\n      --rest.cors       Configures the Access-Control-Allow-Origin CORS header f\n                        or HTTP API. Use 'all' to allow all origins\n                                                           [string] [default: *]\n      --rest.address    Set host for HTTP API      [string] [default: 127.0.0.1]\n      --rest.port       Set port for HTTP API           [number] [default: 9596]\n      --rest.swaggerUI  Enable Swagger UI for API exploration at http://{address\n                        }:{port}/documentation         [boolean] [default: true]\n\nchain\n      --emitPayloadAttributes               Flag to SSE emit execution `payloadA\n                                            ttributes` before every slot\n                                                      [boolean] [default: false]\n      --serveHistoricalState                Enable regenerating finalized state\n                                            to serve historical data. Fetching t\n                                            his data is expensive and may affect\n                                             validator performance.\n                                                      [boolean] [default: false]\n      --chain.archiveStateEpochFrequency    Minimum number of epochs between arc\n                                            hived states[number] [default: 1024]\n      --chain.archiveDataEpochs, --chain.a  Number of epochs to retain finalized\n      rchiveBlobEpochs                       blobs/columns (minimum of MIN_EPOCH\n                                            S_FOR_BLOB_SIDECARS_REQUESTS/MIN_EPO\n                                            CHS_FOR_DATA_COLUMN_SIDECARS_REQUEST\n                                            S)                          [number]\n      --chain.pruneHistory                  Prune historical blocks and state\n                                                      [boolean] [default: false]\n\nexecution\n      --execution.urls                      Urls to execution client engine API\n                                      [array] [default: \"http://localhost:8551\"]\n      --execution.timeout                   Timeout in milliseconds for executio\n                                            n engine API HTTP client\n                                                       [number] [default: 12000]\n      --execution.retries, --execution.ret  Number of retries when calling execu\n      ryAttempts                            tion engine API[number] [default: 2]\n      --execution.retryDelay                Delay time in milliseconds between r\n                                            etries when retrying calls to the ex\n                                            ecution engine API\n                                                        [number] [default: 2000]\n      --execution.engineMock                Set the execution engine to mock mod\n                                            e (development only)\n                                                       [boolean] [default: true]\n      --jwtSecret                           File path to a shared hex-encoded jw\n                                            t secret which will be used to gener\n                                            ate and bundle HS256 encoded jwt tok\n                                            ens for authentication with the EL c\n                                            lient's rpc server hosting engine ap\n                                            is. Secret to be exactly same as the\n                                             one used by the corresponding EL cl\n                                            ient.                       [string]\n      --jwtId                               An optional identifier to be set in\n                                            the id field of the claims included\n                                            in jwt tokens used for authenticatio\n                                            n with EL client's rpc server hostin\n                                            g engine apis               [string]\n\nbuilder\n      --builder                        An alias for `--builder.selection default\n                                       ` for the builder flow, ignored if `--bui\n                                       lder.selection` is explicitly provided\n                                                                       [boolean]\n      --builder.url, --builder.urls    Url hosting the builder API\n                                       [string] [default: http://localhost:8661]\n      --builder.timeout                Timeout in milliseconds for builder API H\n                                       TTP client      [number] [default: 12000]\n      --builder.faultInspectionWindow  Window to inspect missed slots for enabli\n                                       ng/disabling builder circuit breaker\n                                                                        [number]\n      --builder.allowedFaults          Number of missed slots allowed in the `fa\n                                       ultInspectionWindow` for builder circuit\n                                                                        [number]\n      --builder.selection              Builder block selection strategy `default\n                                       `, `maxprofit`, `builderalways`, `builder\n                                       only`, `executionalways`, or `executionon\n                                       ly`     [string] [default: executiononly]\n      --builder.boostFactor            Percentage multiplier the block producing\n                                        beacon node must apply to boost (>100) o\n                                       r dampen (<100) builder block value for s\n                                       election against execution block. The mul\n                                       tiplier is ignored if `--builder.selectio\n                                       n` is set to anything other than `maxprof\n                                       it`               [string] [default: 100]\n\nmetrics\n      --metrics          Enable the Prometheus metrics HTTP server\n                                                      [boolean] [default: false]\n      --metrics.port     Listen TCP port for the Prometheus metrics HTTP server\n                                                        [number] [default: 5064]\n      --metrics.address  Listen address for the Prometheus metrics HTTP server\n                                                   [string] [default: 127.0.0.1]\n\nmonitoring\n      --monitoring.endpoint  Enables monitoring service for sending clients stat\n                             s to the specified endpoint of a remote service (e.\n                             g. beaconcha.in)                           [string]\n      --monitoring.interval  Interval in milliseconds between sending client sta\n                             ts to the remote service  [number] [default: 60000]\n\nnetwork\n      --discv5               Enable discv5             [boolean] [default: true]\n      --listenAddress        The IPv4 address to listen for p2p UDP and TCP conn\n                             ections                 [string] [default: 0.0.0.0]\n      --port                 The TCP/UDP port to listen on. The UDP port can be\n                             modified by the --discoveryPort flag.\n                                                        [number] [default: 9000]\n      --discoveryPort        The UDP port that discovery will listen on. Default\n                             s to `port`              [number] [default: `port`]\n      --listenAddress6       The IPv6 address to listen for p2p UDP and TCP conn\n                             ections                      [string] [default: ::]\n      --port6                The TCP/UDP port to listen on. The UDP port can be\n                             modified by the --discoveryPort6 flag.\n                                                        [number] [default: 9000]\n      --discoveryPort6       The UDP port that discovery will listen on. Default\n                             s to `port6`            [number] [default: `port6`]\n      --bootnodes            Bootnodes for discv5 discovery[array] [default: []]\n      --targetPeers          The target connected peers. Above this number peers\n                              will be disconnected       [number] [default: 200]\n      --subscribeAllSubnets  Subscribe to all subnets regardless of validator co\n                             unt                      [boolean] [default: false]\n      --disablePeerScoring   Disable peer scoring, used for testing on devnets\n                                                      [boolean] [default: false]\n      --mdns                 Enable mdns local peer discovery\n                                                      [boolean] [default: false]\n      --directPeers          Direct peers for GossipSub mesh. These peers mainta\n                             in permanent connections without GRAFT/PRUNE. Suppo\n                             rts multiaddr with peer ID (e.g., `/ip4/192.168.1.1\n                             /tcp/9000/p2p/16Uiu2HAmKLhW7...`) or ENR (e.g., `en\n                             r:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrd\n                             vJjX04jRzjzCBOo...`). Both peers must configure eac\n                             h other as direct peers for the feature to work pro\n                             perly.                        [array] [default: []]\n\nenr\n      --enr.ip    Override ENR IP entry                                 [string]\n      --enr.tcp   Override ENR TCP entry                                [number]\n      --enr.udp   Override ENR UDP entry                                [number]\n      --enr.ip6   Override ENR IPv6 entry                               [string]\n      --enr.tcp6  Override ENR (IPv6-specific) TCP entry                [number]\n      --enr.udp6  Override ENR (IPv6-specific) UDP entry                [number]\n      --nat       Allow configuration of non-local addresses           [boolean]\n\nkeymanager\n      --keymanager                          Enable key manager API server\n                                                      [boolean] [default: false]\n      --keymanager.auth, --keymanager.auth  Enable token bearer authentication f\n      Enabled                               or key manager API server\n                                                       [boolean] [default: true]\n      --keymanager.tokenFile, --tokenFile   Path to file containing bearer token\n                                             used for key manager API authentica\n                                            tion                        [string]\n      --keymanager.port                     Set port for key manager API\n                                                        [number] [default: 5062]\n      --keymanager.address                  Set host for key manager API\n                                                   [string] [default: 127.0.0.1]\n      --keymanager.cors                     Configures the Access-Control-Allow-\n                                            Origin CORS header for key manager A\n                                            PI. Use 'all' to allow all origins\n                                                           [string] [default: *]\n\nhttp\n      --http.requestWireFormat   Wire format to use in HTTP requests to beacon n\n                                 ode. Can be one of `json` or `ssz`\n                                                        [string] [default: json]\n      --http.responseWireFormat  Preferred wire format for HTTP responses from b\n                                 eacon node. Can be one of `json` or `ssz`\n                                                         [string] [default: ssz]\n\nexternalSigner\n      --externalSigner.url            URL to connect to an external signing serv\n                                      er                                [string]\n      --externalSigner.pubkeys        List of validator public keys used by an e\n                                      xternal signer. May also provide a single\n                                      string of comma-separated public keys\n                                                                         [array]\n      --externalSigner.fetch          Fetch the list of public keys to validate\n                                      from an external signer. Cannot be used in\n                                       combination with `--externalSigner.pubkey\n                                      s`                               [boolean]\n      --externalSigner.fetchInterval  Interval in milliseconds between fetching\n                                      the list of public keys from external sign\n                                      er, once per epoch by default     [number]\n\ndev\n      --genesisEth1Hash    If present it will create genesis with this eth1 hash\n                           .                                            [string]\n  -c, --genesisValidators  If present it will create genesis with interop valida\n                           tors and start chain.           [number] [default: 8]\n      --startValidators    Start interop validators in inclusive range(s) with n\n                           otation '0..7'                                [array]\n      --genesisTime        genesis_time to initialize interop genesis state\n                                                         [number] [default: now]\n  -r, --reset              To delete chain and validator directories   [boolean]\n      --dumpTestnetFiles   Dump testnet files and exit                  [string]\n\nOptions:\n      --dataDir                             Lodestar root data directory[string]\n      --network                             Name of the Ethereum Consensus chain\n                                             network to join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n  y\", \"dev\", \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemery\", \"dev\n                                                           \"] [default: mainnet]\n      --paramsFile                          Network configuration file  [string]\n      --rcConfig                            RC file to supplement command line a\n                                            rgs, accepted formats: .yml, .yaml,\n                                            .json                       [string]\n      --supernode                           Subscribe to and custody all data co\n                                            lumn sidecar subnets       [boolean]\n      --semiSupernode                       Subscribe to and custody half of the\n                                             data column sidecar subnets to supp\n                                            ort blob reconstruction, enabling mo\n                                            re efficient data availability with\n                                            lower bandwidth and storage requirem\n                                            ents compared to a supernode.\n                                                                       [boolean]\n      --genesisStateFile                    Path or URL to download a genesis st\n                                            ate file in ssz-encoded format\n                                                                        [string]\n      --persistNetworkIdentity              Whether to reuse the same peer-id ac\n                                            ross restarts. Validator custody req\n                                            uires custody group count to persist\n                                             relative to a given ENR. Setting to\n                                             false will reset ENR and validator\n                                            custody requirements on restarts.\n                                                       [boolean] [default: true]\n      --private                             Do not send implementation details o\n                                            ver p2p identify protocol, and in bu\n                                            ilder and execution engine requests\n                                                                       [boolean]\n      --validatorMonitorLogs                Log validator monitor events as info\n                                            .                          [boolean]\n      --disableLightClientServer            Disable light client server.\n                                                                       [boolean]\n      --logLevel                            Logging verbosity level for emitting\n                                             logs to terminal\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                    ult: \"info\"]\n      --logFile                             Path to output all logs to a persist\n                                            ent log file, use 'none' to disable\n                                                                        [string]\n      --logFileLevel                        Logging verbosity level for emitting\n                                             logs to file\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                   ult: \"debug\"]\n      --logFileDailyRotate                  Daily rotate log files, set to an in\n                                            teger to limit the file count, set t\n                                            o 0 (zero) to disable rotation\n                                                           [number] [default: 5]\n      --suggestedFeeRecipient               Specify fee recipient default for co\n                                            llecting the EL block fees and rewar\n                                            ds (a hex string representing 20 byt\n                                            es address: ^0x[a-fA-F0-9]{40}$). It\n                                             would be possible (WIP) to override\n                                             this per validator key using config\n                                             or key manager API. Only used post\n                                            merge.\n                  [string] [default: 0x0000000000000000000000000000000000000000]\n      --beaconNodes, --server               Addresses to connect to BeaconNode\n                                    [array] [default: [\"http://127.0.0.1:9596\"]]\n      --force                               Open validators even if there's a lo\n                                            ckfile. Use with caution   [boolean]\n      --graffiti                            Specify your custom graffiti to be i\n                                            ncluded in blocks (plain UTF8 text,\n                                            32 characters max)          [string]\n      --proposerSettingsFile                A yaml file to specify detailed defa\n                                            ult and per validator public key cus\n                                            tomized proposer configs. PS: This f\n                                            eature and its format is in alpha an\n                                            d subject to change         [string]\n      --strictFeeRecipientCheck             Enable strict checking of the valida\n                                            tor's `feeRecipient` with the one re\n                                            turned by engine           [boolean]\n      --defaultGasLimit                     Suggested gas limit to the engine/bu\n                                            ilder for building execution payload\n                                            s. Only used post merge.\n                                                    [number] [default: 60000000]\n      --broadcastValidation                 Validations to be run by beacon node\n                                             for the signed block prior to publi\n                                            shing     [string] [default: gossip]\n      --blindedLocal                        Request fetching local block in blin\n                                            ded format for produceBlockV3\n                                                      [boolean] [default: false]\n      --importKeystores, --keystore         Path(s) to a directory or single fil\n                                            e path to validator keystores, i.e.\n                                            Launchpad validators\n                                           [array] [default: ./keystores/*.json]\n      --importKeystoresPassword, --passphr  Path to a file with password to decr\n      aseFile                               ypt all keystores from `importKeysto\n                                            res` option\n                                              [string] [default: ./password.txt]\n      --doppelgangerProtection, --doppelga  Enables Doppelganger protection\n      ngerProtectionEnabled                           [boolean] [default: false]\n      --distributed                         Enables specific features required t\n                                            o run as part of a distributed valid\n                                            ator cluster               [boolean]\n  -h, --help                                Show help                  [boolean]\n  -v, --version                             Show version number        [boolean]\n\nExamples:\n   dev --genesisValidators 8 --reset  Start a single beacon node with 8 interop\n                                      validators",
+      "description": "Quickly bootstrap a beacon node and multiple validators. Use for development and testing"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--listenAddress",
+          "shortcut": null,
+          "description": "The IPv4 address to listen for discv5 connections",
+          "value": "string",
+          "default": "0.0.0.0"
+        },
+        {
+          "option": "--port",
+          "shortcut": null,
+          "description": "The UDP port to listen on",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort",
+          "shortcut": null,
+          "description": "The UDP port to listen on",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--listenAddress6",
+          "shortcut": null,
+          "description": "The IPv6 address to listen for discv5 connections",
+          "value": "string",
+          "default": "::"
+        },
+        {
+          "option": "--port6",
+          "shortcut": null,
+          "description": "The UDP port to listen on",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--discoveryPort6",
+          "shortcut": null,
+          "description": "The UDP port to listen on",
+          "value": "number",
+          "default": "9000"
+        },
+        {
+          "option": "--bootnodes",
+          "shortcut": null,
+          "description": "Additional bootnodes for discv5 discovery",
+          "value": "array",
+          "default": "[]"
+        },
+        {
+          "option": "--bootnodesFile",
+          "shortcut": null,
+          "description": "Additional bootnodes for discv5 discovery file path",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--persistNetworkIdentity",
+          "shortcut": null,
+          "description": "Whether to reuse the same peer-id across restarts",
+          "value": "boolean",
+          "default": "true"
+        },
+        {
+          "option": "--enr.ip",
+          "shortcut": null,
+          "description": "Override ENR IP entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.udp",
+          "shortcut": null,
+          "description": "Override ENR UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--enr.ip6",
+          "shortcut": null,
+          "description": "Override ENR IPv6 entry",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--enr.udp6",
+          "shortcut": null,
+          "description": "Override ENR (IPv6-specific) UDP entry",
+          "value": "number",
+          "default": null
+        },
+        {
+          "option": "--nat",
+          "shortcut": null,
+          "description": "Allow ENR configuration of non-local addresses",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--metrics",
+          "shortcut": null,
+          "description": "Enable the Prometheus metrics HTTP server",
+          "value": "boolean",
+          "default": "false"
+        },
+        {
+          "option": "--metrics.port",
+          "shortcut": null,
+          "description": "Listen TCP port for the Prometheus metrics HTTP server",
+          "value": "number",
+          "default": "8008"
+        },
+        {
+          "option": "--metrics.address",
+          "shortcut": null,
+          "description": "Listen address for the Prometheus metrics HTTP server",
+          "value": "string",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--dataDir",
+          "shortcut": null,
+          "description": "Lodestar root data directory",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--network",
+          "shortcut": null,
+          "description": "Name of the Ethereum Consensus chain network to join",
+          "value": "string",
+          "default": "mainnet"
+        },
+        {
+          "option": "--paramsFile",
+          "shortcut": null,
+          "description": "Network configuration file",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--rcConfig",
+          "shortcut": null,
+          "description": "RC file to supplement command line args, accepted formats: .yml, .yaml, .json",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--supernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody all data column sidecar subnets",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--semiSupernode",
+          "shortcut": null,
+          "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--logLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to terminal",
+          "value": "string",
+          "default": "info"
+        },
+        {
+          "option": "--logFile",
+          "shortcut": null,
+          "description": "Path to output all logs to a persistent log file, use 'none' to disable",
+          "value": "string",
+          "default": null
+        },
+        {
+          "option": "--logFileLevel",
+          "shortcut": null,
+          "description": "Logging verbosity level for emitting logs to file",
+          "value": "string",
+          "default": "debug"
+        },
+        {
+          "option": "--logFileDailyRotate",
+          "shortcut": null,
+          "description": "Daily rotate log files, set to an integer to limit the file count, set to 0 (zero) to disable rotation",
+          "value": "number",
+          "default": "5"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show help",
+          "value": "boolean",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-v",
+          "description": "Show version number",
+          "value": "boolean",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "lodestar bootnode",
+      "raw_help_text": "bootnode\n\nRun a discv5 bootnode. This will NOT perform any beacon node functions, rather,\nit will run a discv5 service that allows nodes on the network to discover one an\nother.\n\nnetwork\n      --listenAddress            The IPv4 address to listen for discv5 connectio\n                                 ns                  [string] [default: 0.0.0.0]\n      --port, --discoveryPort    The UDP port to listen on\n                                                        [number] [default: 9000]\n      --listenAddress6           The IPv6 address to listen for discv5 connectio\n                                 ns                       [string] [default: ::]\n      --port6, --discoveryPort6  The UDP port to listen on\n                                                        [number] [default: 9000]\n      --bootnodes                Additional bootnodes for discv5 discovery\n                                                           [array] [default: []]\n      --bootnodesFile            Additional bootnodes for discv5 discovery file\n                                 path                                   [string]\n      --persistNetworkIdentity   Whether to reuse the same peer-id across restar\n                                 ts                    [boolean] [default: true]\n\nenr\n      --enr.ip    Override ENR IP entry                                 [string]\n      --enr.udp   Override ENR UDP entry                                [number]\n      --enr.ip6   Override ENR IPv6 entry                               [string]\n      --enr.udp6  Override ENR (IPv6-specific) UDP entry                [number]\n      --nat       Allow ENR configuration of non-local addresses       [boolean]\n\nmetrics\n      --metrics          Enable the Prometheus metrics HTTP server\n                                                      [boolean] [default: false]\n      --metrics.port     Listen TCP port for the Prometheus metrics HTTP server\n                                                        [number] [default: 8008]\n      --metrics.address  Listen address for the Prometheus metrics HTTP server\n                                                   [string] [default: 127.0.0.1]\n\nOptions:\n      --dataDir             Lodestar root data directory                [string]\n      --network             Name of the Ethereum Consensus chain network to join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n                                                   y\", \"dev\"] [default: mainnet]\n      --paramsFile          Network configuration file                  [string]\n      --rcConfig            RC file to supplement command line args, accepted fo\n                            rmats: .yml, .yaml, .json                   [string]\n      --supernode           Subscribe to and custody all data column sidecar sub\n                            nets                                       [boolean]\n      --semiSupernode       Subscribe to and custody half of the data column sid\n                            ecar subnets to support blob reconstruction, enablin\n                            g more efficient data availability with lower bandwi\n                            dth and storage requirements compared to a supernode\n                            .                                          [boolean]\n      --logLevel            Logging verbosity level for emitting logs to termina\n                            l\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                    ult: \"info\"]\n      --logFile             Path to output all logs to a persistent log file, us\n                            e 'none' to disable                         [string]\n      --logFileLevel        Logging verbosity level for emitting logs to file\n  [string] [choices: \"error\", \"warn\", \"info\", \"verbose\", \"debug\", \"trace\"] [defa\n                                                                   ult: \"debug\"]\n      --logFileDailyRotate  Daily rotate log files, set to an integer to limit t\n                            he file count, set to 0 (zero) to disable rotation\n                                                           [number] [default: 5]\n  -h, --help                Show help                                  [boolean]\n  -v, --version             Show version number                        [boolean]",
+      "description": "Run a discv5 bootnode. This will NOT perform any beacon node functions, rather, it will run a discv5 service that allows nodes on the network to discover one another."
+    }
+  ],
+  "options": [
+    {
+      "option": "--dataDir",
+      "shortcut": null,
+      "description": "Lodestar root data directory",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--network",
+      "shortcut": null,
+      "description": "Name of the Ethereum Consensus chain network to join",
+      "value": "string",
+      "default": "mainnet"
+    },
+    {
+      "option": "--paramsFile",
+      "shortcut": null,
+      "description": "Network configuration file",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--rcConfig",
+      "shortcut": null,
+      "description": "RC file to supplement command line args, accepted formats: .yml, .yaml, .json",
+      "value": "string",
+      "default": null
+    },
+    {
+      "option": "--supernode",
+      "shortcut": null,
+      "description": "Subscribe to and custody all data column sidecar subnets",
+      "value": "boolean",
+      "default": null
+    },
+    {
+      "option": "--semiSupernode",
+      "shortcut": null,
+      "description": "Subscribe to and custody half of the data column sidecar subnets to support blob reconstruction, enabling more efficient data availability with lower bandwidth and storage requirements compared to a supernode.",
+      "value": "boolean",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Show help",
+      "value": "boolean",
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-v",
+      "description": "Show version number",
+      "value": "boolean",
+      "default": null
+    }
+  ],
+  "aliases": [],
+  "name": "lodestar",
+  "raw_help_text": "\ud83c\udf1f Lodestar: TypeScript Implementation of the Ethereum Consensus Beacon Chain.\n\n * Version: v1.40.0/206f3bb\n  * by ChainSafe Systems, 2018-2026\n\nCommands:\n  beacon       Run a beacon chain node\n  validator    Run one or multiple validator clients\n  lightclient  Run lightclient\n  dev          Quickly bootstrap a beacon node and multiple validators. Use for\n               development and testing\n  bootnode     Run a discv5 bootnode. This will NOT perform any beacon node func\n               tions, rather, it will run a discv5 service that allows nodes on\n               the network to discover one another.\n\nOptions:\n      --dataDir        Lodestar root data directory                     [string]\n      --network        Name of the Ethereum Consensus chain network to join\n  [string] [choices: \"mainnet\", \"gnosis\", \"sepolia\", \"hoodi\", \"chiado\", \"ephemer\n                                                   y\", \"dev\"] [default: mainnet]\n      --paramsFile     Network configuration file                       [string]\n      --rcConfig       RC file to supplement command line args, accepted formats\n                       : .yml, .yaml, .json                             [string]\n      --supernode      Subscribe to and custody all data column sidecar subnets\n                                                                       [boolean]\n      --semiSupernode  Subscribe to and custody half of the data column sidecar\n                       subnets to support blob reconstruction, enabling more eff\n                       icient data availability with lower bandwidth and storage\n                        requirements compared to a supernode.          [boolean]\n  -h, --help           Show help                                       [boolean]\n  -v, --version        Show version number                             [boolean]\n\n\ud83d\udcd6 For more information, check the CLI reference:\n  * https://chainsafe.github.io/lodestar/reference/cli\n\n\u270d\ufe0f Give feedback and report issues on GitHub:\n  * https://github.com/ChainSafe/lodestar",
+  "version": "v1.40.0/206f3bb"
+}

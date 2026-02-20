@@ -1,0 +1,335 @@
+{
+  "subcommands": [],
+  "options": [
+    {
+      "option": "--help",
+      "description": "Show this help message and exit."
+    },
+    {
+      "option": "--version",
+      "description": "Show program's version and exit."
+    },
+    {
+      "option": "--config-file",
+      "description": "Loads the configuration from a TOML file."
+    },
+    {
+      "option": "--log-level",
+      "description": "Log level for process and topics (e.g. \"DEBUG; TRACE:discv5,libp2p; REQUIRED:none; DISABLED:none\") [=INFO]."
+    },
+    {
+      "option": "--log-format",
+      "description": "Choice of log format (auto, colors, nocolors, json) [=auto]."
+    },
+    {
+      "option": "--network",
+      "description": "Consensus network to join (mainnet, hoodi, sepolia, custom/path) [=mainnet]."
+    },
+    {
+      "option": "--data-dir",
+      "shortcut": "-d",
+      "description": "Directory for blockchain data including history, state and keys."
+    },
+    {
+      "option": "--era-dir",
+      "description": "Directory for era archive [=<data-dir>/era]."
+    },
+    {
+      "option": "--validators-dir",
+      "description": "Directory for validator keystores."
+    },
+    {
+      "option": "--secrets-dir",
+      "description": "Directory for validator keystore passwords."
+    },
+    {
+      "option": "--web3-signer-url",
+      "description": "Remote Web3Signer URL that will be used as a source of validators."
+    },
+    {
+      "option": "--verifying-web3-signer-url",
+      "description": "Verifying Web3Signer URL that will be used as a source of validators."
+    },
+    {
+      "option": "--proven-block-property",
+      "description": "The field path of a block property that will be sent for verification to the verifying Web3Signer (for example \".execution_payload.fee_recipient\")."
+    },
+    {
+      "option": "--web3-signer-update-interval",
+      "description": "Number of seconds between validator list updates [=3600]."
+    },
+    {
+      "option": "--wallets-dir",
+      "description": "A directory containing wallet files."
+    },
+    {
+      "option": "--el",
+      "description": "Execution layer engine API URL."
+    },
+    {
+      "option": "--no-el",
+      "description": "Run the consensus client without default and configured execution clients (validators will not work)."
+    },
+    {
+      "option": "--non-interactive",
+      "description": "Do not display interactive prompts. Quit on missing configuration."
+    },
+    {
+      "option": "--netkey-file",
+      "description": "Source of network (secp256k1) private key file (random|<path>) [=random]."
+    },
+    {
+      "option": "--insecure-netkey-password",
+      "description": "Use pre-generated INSECURE password for network private key file [=false]."
+    },
+    {
+      "option": "--agent-string",
+      "description": "Node agent string which is used as identifier in network [=nimbus]."
+    },
+    {
+      "option": "--subscribe-all-subnets",
+      "description": "Subscribe to all subnet topics when gossiping [=false]."
+    },
+    {
+      "option": "--peerdas-supernode",
+      "description": "Subscribe to all column subnets, thereby becoming a PeerDAS supernode [=false]."
+    },
+    {
+      "option": "--light-supernode",
+      "description": "Subscribe to the first half of column subnets [=false]."
+    },
+    {
+      "option": "--num-threads",
+      "description": "Number of worker threads (\"0\" = use as many threads as there are CPU cores available) [=0]."
+    },
+    {
+      "option": "--jwt-secret",
+      "description": "A file containing the hex-encoded 256 bit secret key to be used for verifying/generating JWT tokens."
+    },
+    {
+      "option": "--bootstrap-node",
+      "shortcut": "-b",
+      "description": "Specifies one or more bootstrap nodes to use when connecting to the network."
+    },
+    {
+      "option": "--bootstrap-file",
+      "description": "Specifies a line-delimited file of bootstrap Ethereum network addresses."
+    },
+    {
+      "option": "--listen-address",
+      "description": "Listening address for the Ethereum LibP2P and Discovery v5 traffic [=*]."
+    },
+    {
+      "option": "--tcp-port",
+      "description": "Listening TCP port for Ethereum LibP2P traffic [=9000]."
+    },
+    {
+      "option": "--udp-port",
+      "description": "Listening UDP port for node discovery [=9000]."
+    },
+    {
+      "option": "--max-peers",
+      "description": "The target number of peers to connect to [=160]."
+    },
+    {
+      "option": "--hard-max-peers",
+      "description": "The maximum number of peers to connect to. Defaults to maxPeers * 1.5."
+    },
+    {
+      "option": "--nat",
+      "description": "Specify method to use for determining public address. Must be one of: any, none, upnp, pmp, extip:<IP> [=any]."
+    },
+    {
+      "option": "--enr-auto-update",
+      "description": "Discovery can automatically update its ENR with the IP address and UDP port as seen by other nodes it communicates with. This option allows to enable/disable this functionality [=false]."
+    },
+    {
+      "option": "--weak-subjectivity-checkpoint",
+      "description": "Weak subjectivity checkpoint in the format block_root:epoch_number."
+    },
+    {
+      "option": "--external-beacon-api-url",
+      "description": "External beacon API to use for syncing (on empty database)."
+    },
+    {
+      "option": "--sync-light-client",
+      "description": "Accelerate sync using light client [=true]."
+    },
+    {
+      "option": "--trusted-block-root",
+      "description": "Recent trusted finalized block root to sync from external beacon API (with `--external-beacon-api-url`). Uses the light client sync protocol to obtain the latest finalized checkpoint (LC is initialized from trusted block root)."
+    },
+    {
+      "option": "--trusted-state-root",
+      "description": "Recent trusted finalized state root to sync from external beacon API (with `--external-beacon-api-url`)."
+    },
+    {
+      "option": "--finalized-checkpoint-state",
+      "description": "SSZ file specifying a recent finalized state."
+    },
+    {
+      "option": "--genesis-state",
+      "description": "SSZ file specifying the genesis state of the network (for networks without a built-in genesis state)."
+    },
+    {
+      "option": "--genesis-state-url",
+      "description": "URL for obtaining the genesis state of the network (for networks without a built-in genesis state)."
+    },
+    {
+      "option": "--node-name",
+      "description": "A name for this node that will appear in the logs. If you set this to 'auto', a persistent automatically generated ID will be selected for each --data-dir folder."
+    },
+    {
+      "option": "--graffiti",
+      "description": "The graffiti value that will appear in proposed blocks. You can use a 0x-prefixed hex encoded string to specify raw bytes."
+    },
+    {
+      "option": "--metrics",
+      "description": "Enable the metrics server [=false]."
+    },
+    {
+      "option": "--metrics-address",
+      "description": "Listening address of the metrics server [=127.0.0.1]."
+    },
+    {
+      "option": "--metrics-port",
+      "description": "Listening HTTP port of the metrics server [=8008]."
+    },
+    {
+      "option": "--status-bar",
+      "description": "Display a status bar at the bottom of the terminal screen [=true]."
+    },
+    {
+      "option": "--status-bar-contents",
+      "description": "Textual template for the contents of the status bar."
+    },
+    {
+      "option": "--rest",
+      "description": "Enable the REST Beacon API server [=false]."
+    },
+    {
+      "option": "--rest-port",
+      "description": "Port for the REST Beacon API [=5052]."
+    },
+    {
+      "option": "--rest-address",
+      "description": "Listening address of the REST Beacon API [=127.0.0.1]."
+    },
+    {
+      "option": "--rest-allow-origin",
+      "description": "Limit the access to the REST API to a particular hostname (for CORS-enabled clients such as browsers)."
+    },
+    {
+      "option": "--rest-statecache-size",
+      "description": "The maximum number of recently accessed states that are kept in memory. Speeds up requests obtaining information for consecutive slots or epochs. [=3]."
+    },
+    {
+      "option": "--rest-statecache-ttl",
+      "description": "The number of seconds to keep recently accessed states in memory [=60]."
+    },
+    {
+      "option": "--rest-request-timeout",
+      "description": "The number of seconds to wait until complete REST request will be received [=infinite]."
+    },
+    {
+      "option": "--rest-max-body-size",
+      "description": "Maximum size of REST request body (kilobytes) [=16384]."
+    },
+    {
+      "option": "--rest-max-headers-size",
+      "description": "Maximum size of REST request headers (kilobytes) [=128]."
+    },
+    {
+      "option": "--keymanager",
+      "description": "Enable the REST keymanager API [=false]."
+    },
+    {
+      "option": "--keymanager-port",
+      "description": "Listening port for the REST keymanager API [=5052]."
+    },
+    {
+      "option": "--keymanager-address",
+      "description": "Listening port for the REST keymanager API [=127.0.0.1]."
+    },
+    {
+      "option": "--keymanager-allow-origin",
+      "description": "Limit the access to the Keymanager API to a particular hostname (for CORS-enabled clients such as browsers)."
+    },
+    {
+      "option": "--keymanager-token-file",
+      "description": "A file specifying the authorization token required for accessing the keymanager API."
+    },
+    {
+      "option": "--light-client-data-serve",
+      "description": "Serve data for enabling light clients to stay in sync with the network [=true]."
+    },
+    {
+      "option": "--light-client-data-import-mode",
+      "description": "Which classes of light client data to import. Must be one of: none, only-new, full (slow startup), on-demand (may miss validator duties) [=only-new]."
+    },
+    {
+      "option": "--light-client-data-max-periods",
+      "description": "Maximum number of sync committee periods to retain light client data."
+    },
+    {
+      "option": "--discv5",
+      "description": "Enable Discovery v5 [=true]."
+    },
+    {
+      "option": "--dump",
+      "description": "Write SSZ dumps of blocks and states to data dir [=false]."
+    },
+    {
+      "option": "--direct-peer",
+      "description": "The list of privileged, secure and known peers to connect and maintain the connection to. This requires a not random netkey-file. In the multiaddress format like:/ip4/<address>/tcp/<port>/p2p/<peerId-public-key>, or enr format (enr:-xx). Peering agreements are established out of band and must be reciprocal."
+    },
+    {
+      "option": "--doppelganger-detection",
+      "description": "If enabled, the beacon node prudently listens for 2 epochs for attestations from a validator with the same index (a doppelganger), before sending an attestation itself. This protects against slashing (due to double-voting) but means you will miss two attestations when restarting. [=true]."
+    },
+    {
+      "option": "--validator-monitor-auto",
+      "description": "Monitor validator activity automatically for validators active on this beacon node [=true]."
+    },
+    {
+      "option": "--validator-monitor-pubkey",
+      "description": "One or more validators to monitor - works best when --subscribe-all-subnets is enabled."
+    },
+    {
+      "option": "--validator-monitor-details",
+      "description": "Publish detailed metrics for each validator individually - may incur significant overhead with large numbers of validators [=false]."
+    },
+    {
+      "option": "--suggested-fee-recipient",
+      "description": "Suggested fee recipient."
+    },
+    {
+      "option": "--suggested-gas-limit",
+      "description": "Suggested gas limit [=defaultGasLimit]."
+    },
+    {
+      "option": "--payload-builder",
+      "description": "Enable external payload builder [=false]."
+    },
+    {
+      "option": "--payload-builder-url",
+      "description": "Payload builder URL."
+    },
+    {
+      "option": "--local-block-value-boost",
+      "description": "Increase execution layer block values for builder bid comparison by a percentage [=10]."
+    },
+    {
+      "option": "--history",
+      "description": "Retention strategy for historical data (archive/prune) [=HistoryMode.Prune]."
+    },
+    {
+      "option": "--reindex",
+      "description": "Reindex historical states for archive access."
+    }
+  ],
+  "aliases": [],
+  "name": "nimbus_beacon_node",
+  "raw_help_text": "Nimbus beacon node v26.2.0-fa7a87-stateofus\n\n\u001b[0m\u001b[33mUsage: \n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node\u001b[0m [OPTIONS]... command\n\nThe following options are available:\n\n     \u001b[34m\u001b[1m--help                  \u001b[0m  Show this help message and exit.\u001b[0m\n     \u001b[34m\u001b[1m--version               \u001b[0m  Show program's version and exit.\u001b[0m\n     \u001b[34m\u001b[1m--config-file           \u001b[0m  Loads the configuration from a TOML file.\u001b[0m\n     \u001b[34m\u001b[1m--log-level             \u001b[0m  Log level for process and topics (e.g. \"DEBUG;\n                               TRACE:discv5,libp2p; REQUIRED:none;\n                               DISABLED:none\") [=INFO].\u001b[0m\n     \u001b[34m\u001b[1m--log-format            \u001b[0m  Choice of log format (auto, colors, nocolors,\n                               json) [=auto].\u001b[0m\n     \u001b[34m\u001b[1m--network               \u001b[0m  Consensus network to join (mainnet, hoodi,\n                               sepolia, custom/path) [=mainnet].\u001b[0m\n \u001b[34m\u001b[1m-d, \u001b[0m\u001b[34m\u001b[1m--data-dir              \u001b[0m  Directory for blockchain data including history,\n                               state and keys.\u001b[0m\n     \u001b[34m\u001b[1m--era-dir               \u001b[0m  Directory for era archive [=<data-dir>/era].\u001b[0m\n     \u001b[34m\u001b[1m--validators-dir        \u001b[0m  Directory for validator keystores.\u001b[0m\n     \u001b[34m\u001b[1m--secrets-dir           \u001b[0m  Directory for validator keystore passwords.\u001b[0m\n     \u001b[34m\u001b[1m--web3-signer-url       \u001b[0m  Remote Web3Signer URL that will be used as a\n                               source of validators.\u001b[0m\n     \u001b[34m\u001b[1m--verifying-web3-signer-url\u001b[0m  Verifying Web3Signer URL that will be used as a\n                               source of validators.\u001b[0m\n     \u001b[34m\u001b[1m--proven-block-property \u001b[0m  The field path of a block property that will be\n                               sent for verification to the verifying Web3Signer\n                               (for example \".execution_payload.fee_recipient\").\u001b[0m\n     \u001b[34m\u001b[1m--web3-signer-update-interval\u001b[0m  Number of seconds between validator list updates\n                               [=3600].\u001b[0m\n     \u001b[34m\u001b[1m--wallets-dir           \u001b[0m  A directory containing wallet files.\u001b[0m\n     \u001b[34m\u001b[1m--el                    \u001b[0m  Execution layer engine API URL.\u001b[0m\n                             \u001b[0m  Repeat --el=<url> to add multiple ELs, see\n                               https://nimbus.guide/eth1.html.\u001b[0m\n     \u001b[34m\u001b[1m--no-el                 \u001b[0m  Run the consensus client without default and\n                               configured execution clients (validators will not\n                               work).\u001b[0m\n     \u001b[34m\u001b[1m--non-interactive       \u001b[0m  Do not display interactive prompts. Quit on\n                               missing configuration.\u001b[0m\n     \u001b[34m\u001b[1m--netkey-file           \u001b[0m  Source of network (secp256k1) private key file\n                               (random|<path>) [=random].\u001b[0m\n     \u001b[34m\u001b[1m--insecure-netkey-password\u001b[0m  Use pre-generated INSECURE password for network\n                               private key file [=false].\u001b[0m\n     \u001b[34m\u001b[1m--agent-string          \u001b[0m  Node agent string which is used as identifier in\n                               network [=nimbus].\u001b[0m\n     \u001b[34m\u001b[1m--subscribe-all-subnets \u001b[0m  Subscribe to all subnet topics when gossiping\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--peerdas-supernode     \u001b[0m  Subscribe to all column subnets, thereby becoming\n                               a PeerDAS supernode [=false].\u001b[0m\n     \u001b[34m\u001b[1m--light-supernode       \u001b[0m  Subscribe to the first half of column subnets\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--num-threads           \u001b[0m  Number of worker threads (\"0\" = use as many\n                               threads as there are CPU cores available) [=0].\u001b[0m\n     \u001b[34m\u001b[1m--jwt-secret            \u001b[0m  A file containing the hex-encoded 256 bit secret\n                               key to be used for verifying/generating JWT\n                               tokens.\u001b[0m\n \u001b[34m\u001b[1m-b, \u001b[0m\u001b[34m\u001b[1m--bootstrap-node        \u001b[0m  Specifies one or more bootstrap nodes to use when\n                               connecting to the network.\u001b[0m\n     \u001b[34m\u001b[1m--bootstrap-file        \u001b[0m  Specifies a line-delimited file of bootstrap\n                               Ethereum network addresses.\u001b[0m\n     \u001b[34m\u001b[1m--listen-address        \u001b[0m  Listening address for the Ethereum LibP2P and\n                               Discovery v5 traffic [=*].\u001b[0m\n     \u001b[34m\u001b[1m--tcp-port              \u001b[0m  Listening TCP port for Ethereum LibP2P traffic\n                               [=9000].\u001b[0m\n     \u001b[34m\u001b[1m--udp-port              \u001b[0m  Listening UDP port for node discovery [=9000].\u001b[0m\n     \u001b[34m\u001b[1m--max-peers             \u001b[0m  The target number of peers to connect to [=160].\u001b[0m\n     \u001b[34m\u001b[1m--hard-max-peers        \u001b[0m  The maximum number of peers to connect to.\n                               Defaults to maxPeers * 1.5.\u001b[0m\n     \u001b[34m\u001b[1m--nat                   \u001b[0m  Specify method to use for determining public\n                               address. Must be one of: any, none, upnp, pmp,\n                               extip:<IP> [=any].\u001b[0m\n     \u001b[34m\u001b[1m--enr-auto-update       \u001b[0m  Discovery can automatically update its ENR with\n                               the IP address and UDP port as seen by other\n                               nodes it communicates with. This option allows to\n                               enable/disable this functionality [=false].\u001b[0m\n     \u001b[34m\u001b[1m--weak-subjectivity-checkpoint\u001b[0m  Weak subjectivity checkpoint in the format\n                               block_root:epoch_number.\u001b[0m\n     \u001b[34m\u001b[1m--external-beacon-api-url\u001b[0m  External beacon API to use for syncing (on empty\n                               database).\u001b[0m\n     \u001b[34m\u001b[1m--sync-light-client     \u001b[0m  Accelerate sync using light client [=true].\u001b[0m\n     \u001b[34m\u001b[1m--trusted-block-root    \u001b[0m  Recent trusted finalized block root to sync from\n                               external beacon API (with\n                               `--external-beacon-api-url`). Uses the light\n                               client sync protocol to obtain the latest\n                               finalized checkpoint (LC is initialized from\n                               trusted block root).\u001b[0m\n     \u001b[34m\u001b[1m--trusted-state-root    \u001b[0m  Recent trusted finalized state root to sync from\n                               external beacon API (with\n                               `--external-beacon-api-url`).\u001b[0m\n     \u001b[34m\u001b[1m--finalized-checkpoint-state\u001b[0m  SSZ file specifying a recent finalized state.\u001b[0m\n     \u001b[34m\u001b[1m--genesis-state         \u001b[0m  SSZ file specifying the genesis state of the\n                               network (for networks without a built-in genesis\n                               state).\u001b[0m\n     \u001b[34m\u001b[1m--genesis-state-url     \u001b[0m  URL for obtaining the genesis state of the\n                               network (for networks without a built-in genesis\n                               state).\u001b[0m\n     \u001b[34m\u001b[1m--node-name             \u001b[0m  A name for this node that will appear in the\n                               logs. If you set this to 'auto', a persistent\n                               automatically generated ID will be selected for\n                               each --data-dir folder.\u001b[0m\n     \u001b[34m\u001b[1m--graffiti              \u001b[0m  The graffiti value that will appear in proposed\n                               blocks. You can use a 0x-prefixed hex encoded\n                               string to specify raw bytes.\u001b[0m\n     \u001b[34m\u001b[1m--metrics               \u001b[0m  Enable the metrics server [=false].\u001b[0m\n     \u001b[34m\u001b[1m--metrics-address       \u001b[0m  Listening address of the metrics server\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--metrics-port          \u001b[0m  Listening HTTP port of the metrics server\n                               [=8008].\u001b[0m\n     \u001b[34m\u001b[1m--status-bar            \u001b[0m  Display a status bar at the bottom of the\n                               terminal screen [=true].\u001b[0m\n     \u001b[34m\u001b[1m--status-bar-contents   \u001b[0m  Textual template for the contents of the status\n                               bar.\u001b[0m\n     \u001b[34m\u001b[1m--rest                  \u001b[0m  Enable the REST Beacon API server [=false].\u001b[0m\n     \u001b[34m\u001b[1m--rest-port             \u001b[0m  Port for the REST Beacon API [=5052].\u001b[0m\n     \u001b[34m\u001b[1m--rest-address          \u001b[0m  Listening address of the REST Beacon API\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--rest-allow-origin     \u001b[0m  Limit the access to the REST API to a particular\n                               hostname (for CORS-enabled clients such as\n                               browsers).\u001b[0m\n     \u001b[34m\u001b[1m--rest-statecache-size  \u001b[0m  The maximum number of recently accessed states\n                               that are kept in memory. Speeds up requests\n                               obtaining information for consecutive slots or\n                               epochs. [=3].\u001b[0m\n     \u001b[34m\u001b[1m--rest-statecache-ttl   \u001b[0m  The number of seconds to keep recently accessed\n                               states in memory [=60].\u001b[0m\n     \u001b[34m\u001b[1m--rest-request-timeout  \u001b[0m  The number of seconds to wait until complete REST\n                               request will be received [=infinite].\u001b[0m\n     \u001b[34m\u001b[1m--rest-max-body-size    \u001b[0m  Maximum size of REST request body (kilobytes)\n                               [=16384].\u001b[0m\n     \u001b[34m\u001b[1m--rest-max-headers-size \u001b[0m  Maximum size of REST request headers (kilobytes)\n                               [=128].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager            \u001b[0m  Enable the REST keymanager API [=false].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-port       \u001b[0m  Listening port for the REST keymanager API\n                               [=5052].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-address    \u001b[0m  Listening port for the REST keymanager API\n                               [=127.0.0.1].\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-allow-origin\u001b[0m  Limit the access to the Keymanager API to a\n                               particular hostname (for CORS-enabled clients\n                               such as browsers).\u001b[0m\n     \u001b[34m\u001b[1m--keymanager-token-file \u001b[0m  A file specifying the authorization token\n                               required for accessing the keymanager API.\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-serve\u001b[0m  Serve data for enabling light clients to stay in\n                               sync with the network [=true].\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-import-mode\u001b[0m  Which classes of light client data to import.\n                               Must be one of: none, only-new, full (slow\n                               startup), on-demand (may miss validator duties)\n                               [=only-new].\u001b[0m\n     \u001b[34m\u001b[1m--light-client-data-max-periods\u001b[0m  Maximum number of sync committee periods to\n                               retain light client data.\u001b[0m\n     \u001b[34m\u001b[1m--discv5                \u001b[0m  Enable Discovery v5 [=true].\u001b[0m\n     \u001b[34m\u001b[1m--dump                  \u001b[0m  Write SSZ dumps of blocks and states to data dir\n                               [=false].\u001b[0m\n     \u001b[34m\u001b[1m--direct-peer           \u001b[0m  The list of privileged, secure and known peers to\n                               connect and maintain the connection to. This\n                               requires a not random netkey-file. In the\n                               multiaddress format like:/ip4/<address>/tcp/<por\n                               t>/p2p/<peerId-public-key>, or enr format\n                               (enr:-xx). Peering agreements are established out\n                               of band and must be reciprocal.\u001b[0m\n     \u001b[34m\u001b[1m--doppelganger-detection\u001b[0m  If enabled, the beacon node prudently listens for\n                               2 epochs for attestations from a validator with\n                               the same index (a doppelganger), before sending\n                               an attestation itself. This protects against\n                               slashing (due to double-voting) but means you\n                               will miss two attestations when restarting.\n                               [=true].\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-auto\u001b[0m  Monitor validator activity automatically for\n                               validators active on this beacon node [=true].\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-pubkey\u001b[0m  One or more validators to monitor - works best\n                               when --subscribe-all-subnets is enabled.\u001b[0m\n     \u001b[34m\u001b[1m--validator-monitor-details\u001b[0m  Publish detailed metrics for each validator\n                               individually - may incur significant overhead\n                               with large numbers of validators [=false].\u001b[0m\n     \u001b[34m\u001b[1m--suggested-fee-recipient\u001b[0m  Suggested fee recipient.\u001b[0m\n     \u001b[34m\u001b[1m--suggested-gas-limit   \u001b[0m  Suggested gas limit [=defaultGasLimit].\u001b[0m\n     \u001b[34m\u001b[1m--payload-builder       \u001b[0m  Enable external payload builder [=false].\u001b[0m\n     \u001b[34m\u001b[1m--payload-builder-url   \u001b[0m  Payload builder URL.\u001b[0m\n     \u001b[34m\u001b[1m--local-block-value-boost\u001b[0m  Increase execution layer block values for builder\n                               bid comparison by a percentage [=10].\u001b[0m\n     \u001b[34m\u001b[1m--history               \u001b[0m  Retention strategy for historical data\n                               (archive/prune) [=HistoryMode.Prune].\u001b[0m\n     \u001b[34m\u001b[1m--reindex               \u001b[0m  Reindex historical states for archive access.\u001b[0m\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node deposits\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node deposits createTestnetDeposits\u001b[0m [OPTIONS]...\n\nCreates validator keystores and deposits for testnet usage.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--count                 \u001b[0m  Number of deposits to generate [=1].\u001b[0m\n     \u001b[34m\u001b[1m--wallet                \u001b[0m  An existing wallet ID. If not specified, a new\n                               wallet will be created.\u001b[0m\n     \u001b[34m\u001b[1m--out-validators-dir    \u001b[0m  Output folder for validator keystores\n                               [=validators].\u001b[0m\n     \u001b[34m\u001b[1m--out-secrets-dir       \u001b[0m  Output folder for randomly generated keystore\n                               passphrases [=secrets].\u001b[0m\n     \u001b[34m\u001b[1m--out-deposits-file     \u001b[0m  The name of generated deposits file.\u001b[0m\n     \u001b[34m\u001b[1m--new-wallet-name       \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--new-wallet-file       \u001b[0m  Output wallet file.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node deposits import\u001b[0m [OPTIONS]... <importedDepositsDir>\u001b[0m\n\nImports password-protected keystores interactively.\n\u001b[0m\n     \u001b[34m\u001b[1m<importedDepositsDir>\u001b[0m   \u001b[0m  A directory with keystores to import.\u001b[0m\n\nThe following options are available:\n\n     \u001b[34m\u001b[1m--method                \u001b[0m  Specifies which import method will be used\n                               (normal, single-salt) [=ImportMethod.Normal].\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node deposits exit\u001b[0m [OPTIONS]...\n\nSubmits a validator voluntary exit.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--validator             \u001b[0m  One or more validator index, public key or a\n                               keystore path of the exited validator(s).\u001b[0m\n     \u001b[34m\u001b[1m--all                   \u001b[0m  Exit all validators in the specified data\n                               directory or validators directory [=false].\u001b[0m\n     \u001b[34m\u001b[1m--epoch                 \u001b[0m  The desired exit epoch [=immediately].\u001b[0m\n     \u001b[34m\u001b[1m--rest-url              \u001b[0m  URL of the beacon node REST service\n                               [=http://127.0.0.1:5052].\u001b[0m\n     \u001b[34m\u001b[1m--print                 \u001b[0m  Print signed exit message instead of publishing\n                               it [=false].\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node wallets create\u001b[0m [OPTIONS]...\n\nCreates a new EIP-2386 wallet.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--next-account          \u001b[0m  Initial value for the 'nextaccount' property of\n                               the wallet.\u001b[0m\n     \u001b[34m\u001b[1m--name                  \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--out                   \u001b[0m  Output wallet file.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets restore\u001b[0m [OPTIONS]...\n\nRestores a wallet from cold storage.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--name                  \u001b[0m  An easy-to-remember name for the wallet of your\n                               choice.\u001b[0m\n     \u001b[34m\u001b[1m--out                   \u001b[0m  Output wallet file.\u001b[0m\n     \u001b[34m\u001b[1m--deposits              \u001b[0m  Expected number of deposits to recover. If not\n                               specified, Nimbus will try to guess the number by\n                               inspecting the latest beacon state.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node wallets list\u001b[0m\n\nLists details about all wallets.\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node record create\u001b[0m [OPTIONS]...\n\nCreate a new ENR.\n\u001b[0m\nThe following options are available:\n\n     \u001b[34m\u001b[1m--ip                    \u001b[0m  External IP address.\u001b[0m\n     \u001b[34m\u001b[1m--tcp-port              \u001b[0m  External TCP port.\u001b[0m\n     \u001b[34m\u001b[1m--udp-port              \u001b[0m  External UDP port.\u001b[0m\n     \u001b[34m\u001b[1m--seq-number            \u001b[0m  Record sequence number [=1].\u001b[0m\n     \u001b[34m\u001b[1m--field                 \u001b[0m  Additional record key pairs, provide as\n                               <string>:<bytes in hex>.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node record print\u001b[0m <enr>\u001b[0m\n\nPrint the content of a given ENR.\n\u001b[0m\n     \u001b[34m\u001b[1m<enr>\u001b[0m                   \u001b[0m  ENR URI of the record to print.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node web3\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node web3 test\u001b[0m <url>\u001b[0m\n\nTest a web3 provider.\n\u001b[0m\n     \u001b[34m\u001b[1m<url>\u001b[0m                   \u001b[0m  The web3 provider URL to test.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb\u001b[0m command\n\u001b[33m\nAvailable sub-commands:\n\u001b[0m\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb import\u001b[0m <importedInterchangeFile>\u001b[0m\n\nImport a EIP-3076 slashing protection interchange file.\n\u001b[0m\n     \u001b[34m\u001b[1m<importedInterchangeFile>\u001b[0m\u001b[0m  EIP-3076 slashing protection interchange file to\n                               import.\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node slashingdb export\u001b[0m [OPTIONS]... <exportedInterchangeFile>\u001b[0m\n\nExport a EIP-3076 slashing protection interchange file.\n\u001b[0m\n     \u001b[34m\u001b[1m<exportedInterchangeFile>\u001b[0m\u001b[0m  EIP-3076 slashing protection interchange file to\n                               export.\u001b[0m\n\nThe following options are available:\n\n \u001b[34m\u001b[1m-v, \u001b[0m\u001b[34m\u001b[1m--validator             \u001b[0m  Limit the export to specific validators\n                               (specified as numeric indices or public keys).\u001b[0m\n\u001b[1m\n\u001b[36mnimbus_beacon_node trustedNodeSync\u001b[0m [OPTIONS]...\n\nThe following options are available:\n\n     \u001b[34m\u001b[1m--trusted-node-url      \u001b[0m  URL of the REST API to sync from\n                               [=http://127.0.0.1:5052].\u001b[0m\n     \u001b[34m\u001b[1m--state-id              \u001b[0m  State id to sync to - this can be \"finalized\", a\n                               slot number or state hash or \"head\".\u001b[0m\n     \u001b[34m\u001b[1m--trusted-block-root    \u001b[0m  Recent trusted finalized block root to initialize\n                               light client from.\u001b[0m\n     \u001b[34m\u001b[1m--backfill              \u001b[0m  Backfill blocks directly from REST server instead\n                               of fetching via API [=true].\u001b[0m\n     \u001b[34m\u001b[1m--reindex               \u001b[0m  Recreate historical state index at end of\n                               backfill, allowing full history access starting\n                               from the given state id [=false].\u001b[0m\n     \u001b[34m\u001b[1m--with-deposit-snapshot \u001b[0m  Also try to download a snapshot of the deposit\n                               contract state [=false].\u001b[0m",
+  "version": "26.2.0-fa7a87-stateofus"
+}

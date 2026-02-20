@@ -1,0 +1,1888 @@
+{
+  "subcommands": [
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "<FILENAME>",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku admin",
+      "raw_help_text": "teku admin [OPTIONS] [COMMAND]\n\nDescription:\n\nHolds advanced tools for node admins\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  weak-subjectivity  Commands related to weak subjectivity configuration\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Holds advanced tools for node admins"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "FILENAME",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku transition",
+      "raw_help_text": "teku transition [OPTIONS] [COMMAND]\n\nDescription:\n\nManually run state transitions\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  blocks  Process blocks on the pre-state to get a post-state\n  slots   Process empty slots on the pre-state to get a post-state\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Manually run state transitions"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "FILENAME",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku peer",
+      "raw_help_text": "teku peer [OPTIONS] [COMMAND]\n\nDescription:\n\nCommands for LibP2P PeerID\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  generate  Generate a list of peer ids\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Commands for LibP2P PeerID"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "FILENAME",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku genesis",
+      "raw_help_text": "teku genesis [OPTIONS] [COMMAND]\n\nDescription:\n\nCommands for generating genesis state\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  mock  Generate a mock genesis state\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Commands for generating genesis state"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "FILENAME",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku slashing-protection",
+      "raw_help_text": "teku slashing-protection [OPTIONS] [COMMAND]\n\nDescription:\n\nManage local slashing protection data used by the validator client.\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  import  Import slashing protection database. Supports minimal or complete\n            interchange format.\n  export  Export slashing protection database in minimal format.\n  repair  Repair slashing protection data files used by teku.\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Manage local slashing protection data used by the validator client."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "<FILENAME>",
+          "default": "none"
+        },
+        {
+          "option": "--data-beacon-path",
+          "description": "Path to beacon node data",
+          "value": "<FILENAME>",
+          "default": "<data-base-path>/beacon"
+        },
+        {
+          "option": "--data-path",
+          "shortcut": "--data-base-path",
+          "description": "The path to the teku database.",
+          "value": "<string>"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null
+        },
+        {
+          "option": "--network",
+          "shortcut": "-n",
+          "description": "Represents which network to use.",
+          "value": "<NETWORK>",
+          "default": "mainnet"
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku migrate-database",
+      "raw_help_text": "teku migrate-database [OPTIONS]\n\nDescription:\n\nMigrate the database to a specified version.\n\nOptions:\n  -c, --config-file=<FILENAME>\n                            Path/filename of the yaml config file (default:\n                              none)\n      --data-beacon-path=<FILENAME>\n                            Path to beacon node data\n                              Default: <data-base-path>/beacon\n      --data-path, --data-base-path=<string>\n                            The path to the teku database.\n  -h, --help                Show this help message and exit.\n  -n, --network=<NETWORK>   Represents which network to use. (default: mainnet)\n  -V, --version             Print version information and exit.\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Migrate the database to a specified version."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "FILENAME",
+          "default": "none"
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku debug-tools",
+      "raw_help_text": "teku debug-tools [OPTIONS] [COMMAND]\n\nDescription:\n\nUtilities for debugging issues\n\nOptions:\n  -c, --config-file=<FILENAME>\n                  Path/filename of the yaml config file (default: none)\n  -h, --help      Show this help message and exit.\n  -V, --version   Print version information and exit.\nCommands:\n  db                        Debugging tools for inspecting the contents of the\n                              database\n  pretty-print, pp          Print SSZ objects as formatted JSON\n  key-check, kc             Check attributes of a validator key, and where it\n                              is running from.\n  rocksdb                   Print RocksDB information\n  generate-autocomplete     Generate a bash/zsh autocomplete file\n  generate-swagger-docs     Generate swagger-docs for rest APIs.\n  get-peer-id               Gets the peerID from private key file.\n  get-validator-assignment  Gets the committee assignment for a validator at a\n                              specific epoch.\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Utilities for debugging issues"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--beacon-node-api-endpoint",
+          "shortcut": null,
+          "description": "Beacon Node REST API endpoint(s). If more than one endpoint is defined, the first node will be used as a primary and others as failovers.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--beacon-node-ssz-blocks-enabled",
+          "shortcut": null,
+          "description": "Use SSZ encoding for API block requests",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--config-file",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "<FILENAME>",
+          "default": "none"
+        },
+        {
+          "option": "--confirmation-enabled",
+          "shortcut": null,
+          "description": "Request confirmation before submitting voluntary exits.",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--data-path",
+          "shortcut": null,
+          "description": "Path to the base directory for storage",
+          "value": "<FILENAME>",
+          "default": "/opt/teku/.local/share/teku"
+        },
+        {
+          "option": "--data-validator-path",
+          "shortcut": null,
+          "description": "Path to validator client data",
+          "value": "<FILENAME>",
+          "default": "<data-base-path>/validator"
+        },
+        {
+          "option": "--epoch",
+          "shortcut": null,
+          "description": "Earliest epoch that the voluntary exit can be processed. Defaults to current epoch.",
+          "value": "<EPOCH>",
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--include-keymanager-keys",
+          "shortcut": null,
+          "description": "Include validator keys managed via keymanager APIs.",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--network",
+          "shortcut": "-n",
+          "description": "Represents which network to use.",
+          "value": "<NETWORK>",
+          "default": null
+        },
+        {
+          "option": "--save-exits-path",
+          "shortcut": null,
+          "description": "Save the generated exit messages to the specified path, don't validate exit epoch, and skip publishing them.",
+          "value": "<FOLDER>",
+          "default": null
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--validator-keys",
+          "shortcut": null,
+          "description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt. <KEY_FILE>:<PASS_FILE> will expect that the file <KEY_FILE> exists, and the file containing the password for it is <PASS_FILE>. The path separator is operating system dependent, and should be ';' in windows rather than ':'.",
+          "value": "<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...",
+          "default": "[]"
+        },
+        {
+          "option": "--validator-public-keys",
+          "shortcut": null,
+          "description": "Optionally restrict the exit command to a specified list of public keys. When the parameter is not used, all keys will be exited.",
+          "value": "<STRINGS>[,<STRINGS>...]",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-keystore",
+          "shortcut": null,
+          "description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-keystore-password-file",
+          "shortcut": null,
+          "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-public-keys",
+          "shortcut": null,
+          "description": "The list of external signer public keys, or a URL to load the keys from",
+          "value": "<STRINGS>[,<STRINGS>...]",
+          "default": "[]"
+        },
+        {
+          "option": "--validators-external-signer-timeout",
+          "shortcut": null,
+          "description": "Timeout (in milliseconds) for the external signing service",
+          "value": "<INTEGER>",
+          "default": "5000"
+        },
+        {
+          "option": "--validators-external-signer-truststore",
+          "shortcut": null,
+          "description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-truststore-password-file",
+          "shortcut": null,
+          "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-url",
+          "shortcut": null,
+          "description": "URL for the external signing service",
+          "value": "<NETWORK>",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku voluntary-exit",
+      "raw_help_text": "teku voluntary-exit [OPTIONS]\n\nDescription:\n\nCreate and sign a voluntary exit for a specified validator.\n\nOptions:\n      --beacon-node-api-endpoint, --beacon-node-api-endpoints=<ENDPOINT>[,\n        <ENDPOINT>...]...\n                            Beacon Node REST API endpoint(s). If more than one\n                              endpoint is defined, the first node will be used\n                              as a primary and others as failovers.\n      --beacon-node-ssz-blocks-enabled[=<BOOLEAN>]\n                            Use SSZ encoding for API block requests\n                              Default: true\n  -c, --config-file=<FILENAME>\n                            Path/filename of the yaml config file (default:\n                              none)\n      --confirmation-enabled=<BOOLEAN>\n                            Request confirmation before submitting voluntary\n                              exits.\n                              Default: true\n      --data-path, --data-base-path=<FILENAME>\n                            Path to the base directory for storage\n                              Default: /opt/teku/.local/share/teku\n      --data-validator-path=<FILENAME>\n                            Path to validator client data\n                              Default: <data-base-path>/validator\n      --epoch=<EPOCH>       Earliest epoch that the voluntary exit can be\n                              processed. Defaults to current epoch.\n  -h, --help                Show this help message and exit.\n      --include-keymanager-keys[=<BOOLEAN>]\n                            Include validator keys managed via keymanager APIs.\n                              Default: false\n  -n, --network=<NETWORK>   Represents which network to use.\n      --save-exits-path=<FOLDER>\n                            Save the generated exit messages to the specified\n                              path, don't validate exit epoch, and skip\n                              publishing them.\n  -V, --version             Print version information and exit.\n      --validator-keys=<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:\n        <PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...\n                            <KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json,\n                              and expect to find <PASS_DIR>/**.txt.\n                            <KEY_FILE>:<PASS_FILE> will expect that the file\n                              <KEY_FILE> exists, and the file containing the\n                              password for it is <PASS_FILE>.\n                            The path separator is operating system dependent,\n                              and should be ';' in windows rather than ':'.\n                              Default: []\n      --validator-public-keys[=<STRINGS>[,<STRINGS>...]]\n                            Optionally restrict the exit command to a specified\n                              list of public keys. When the parameter is not\n                              used, all keys will be exited.\n      --validators-external-signer-keystore=<FILE>\n                            Keystore (PKCS12/JKS) to use for TLS mutual\n                              authentication with external signer\n      --validators-external-signer-keystore-password-file=<FILE>\n                            Password file to decrypt keystore (PKCS12/JKS) that\n                              will be used for TLS mutual authentication with\n                              external signer\n      --validators-external-signer-public-keys[=<STRINGS>[,<STRINGS>...]...]\n                            The list of external signer public keys, or a URL\n                              to load the keys from\n                              Default: []\n      --validators-external-signer-timeout=<INTEGER>\n                            Timeout (in milliseconds) for the external signing\n                              service\n                              Default: 5000\n      --validators-external-signer-truststore=<FILE>\n                            Keystore (PKCS12/JKS) to trust external signer's\n                              self-signed certificate\n      --validators-external-signer-truststore-password-file=<FILE>\n                            Password file to decrypt keystore (PKCS12/JKS) that\n                              will be used to trust external signer's\n                              self-signed certificate\n      --validators-external-signer-url=<NETWORK>\n                            URL for the external signing service\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Create and sign a voluntary exit for a specified validator."
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--beacon-node-api-endpoint",
+          "shortcut": null,
+          "description": "Beacon Node REST API endpoint(s). If more than one endpoint is defined, the first node will be used as a primary and others as failovers.",
+          "value": "<ENDPOINT>[,<ENDPOINT>...]",
+          "default": null
+        },
+        {
+          "option": "--beacon-node-ssz-blocks-enabled",
+          "shortcut": null,
+          "description": "Use SSZ encoding for API block requests",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "-c, --config-file",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": "<FILENAME>",
+          "default": "none"
+        },
+        {
+          "option": "--data-path, --data-base-path",
+          "shortcut": null,
+          "description": "Path to the base directory for storage",
+          "value": "<FILENAME>",
+          "default": "/opt/teku/.local/share/teku"
+        },
+        {
+          "option": "--data-validator-path",
+          "shortcut": null,
+          "description": "Path to validator client data",
+          "value": "<FILENAME>",
+          "default": "<data-base-path>/validator"
+        },
+        {
+          "option": "--doppelganger-detection-enabled",
+          "shortcut": null,
+          "description": "Enable validators doppelganger detection",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--exit-when-no-validator-keys-enabled",
+          "shortcut": null,
+          "description": "Enable terminating the process if no validator keys are found during startup",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "-h, --help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "-l, --logging",
+          "shortcut": "-l",
+          "description": "Logging verbosity levels: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL.",
+          "value": "<LOG VERBOSITY LEVEL>",
+          "default": "INFO"
+        },
+        {
+          "option": "--log-color-enabled",
+          "shortcut": null,
+          "description": "Whether Status and Event log messages include a console color display code",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--log-destination",
+          "shortcut": null,
+          "description": "Whether a logger is added for the console, the log file, or both (Valid values: BOTH, CONSOLE, DEFAULT_BOTH, FILE, CUSTOM)",
+          "value": "<LOG_DESTINATION>",
+          "default": "DEFAULT_BOTH"
+        },
+        {
+          "option": "--log-file",
+          "shortcut": null,
+          "description": "Path containing the location (relative or absolute) and the log filename. If not set will default to <data-path>/logs/teku.log",
+          "value": "<FILENAME>",
+          "default": null
+        },
+        {
+          "option": "--log-file-name-pattern",
+          "shortcut": null,
+          "description": "Pattern for the filename to apply to rolled over log files. If not set will default to <data-path>/logs/teku_%d{yyyy-MM-dd}.log",
+          "value": "<REGEX>",
+          "default": null
+        },
+        {
+          "option": "--log-include-events-enabled",
+          "shortcut": null,
+          "description": "Whether frequent update events are logged (e.g. every slot and epoch event)",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--log-include-validator-duties-enabled",
+          "shortcut": null,
+          "description": "Whether events are logged when validators perform duties",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--metrics-block-production-performance-tracking-enabled",
+          "shortcut": null,
+          "description": "Whether block production timing metrics are tracked and reported",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--metrics-block-timing-tracking-enabled",
+          "shortcut": null,
+          "description": "Whether block timing metrics are tracked and reported",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--metrics-categories",
+          "shortcut": null,
+          "description": "Metric categories to enable",
+          "value": "<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]",
+          "default": "[JVM, PROCESS, BEACON, NETWORK, DISCOVERY, VALIDATOR_DUTY, EVENTBUS, EXECUTOR, LIBP2P, VALIDATOR_PERFORMANCE, STORAGE, VALIDATOR, STORAGE_HOT_DB, STORAGE_FINALIZED_DB]"
+        },
+        {
+          "option": "--metrics-enabled",
+          "shortcut": null,
+          "description": "Enables metrics collection via Prometheus",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--metrics-host-allowlist",
+          "shortcut": null,
+          "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+          "value": "<hostname>",
+          "default": "[127.0.0.1, localhost]"
+        },
+        {
+          "option": "--metrics-interface",
+          "shortcut": null,
+          "description": "Metrics network interface to expose metrics for Prometheus",
+          "value": "<NETWORK>",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--metrics-port",
+          "shortcut": null,
+          "description": "Metrics port to expose metrics for Prometheus",
+          "value": "<INTEGER>",
+          "default": "8008"
+        },
+        {
+          "option": "--metrics-publish-endpoint",
+          "shortcut": null,
+          "description": "Publish metrics for node monitoring to an external service",
+          "value": "<URL>",
+          "default": null
+        },
+        {
+          "option": "--metrics-publish-interval",
+          "shortcut": null,
+          "description": "Interval between metric publications to the external service (measured in seconds)",
+          "value": "<INTEGER>",
+          "default": "60"
+        },
+        {
+          "option": "-n, --network",
+          "shortcut": "-n",
+          "description": "Represents which network to use. Use `auto` to fetch network configuration from the beacon node endpoint directly.",
+          "value": "<NETWORK>",
+          "default": "auto"
+        },
+        {
+          "option": "--shut-down-when-validator-slashed-enabled",
+          "shortcut": null,
+          "description": "If enabled and an owned validator key is detected as slashed, the node will terminate. In this case, the service should not be restarted.",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "-V, --version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--validator-api-bearer-file",
+          "shortcut": null,
+          "description": "Use the specified file as the bearer token for the validator Rest API",
+          "value": "<FILENAME>",
+          "default": null
+        },
+        {
+          "option": "--validator-api-cors-origins",
+          "shortcut": null,
+          "description": "Comma separated list of origins to allow, or * to allow any origin",
+          "value": "<origin>",
+          "default": "[]"
+        },
+        {
+          "option": "--validator-api-docs-enabled",
+          "shortcut": null,
+          "description": "Enable swagger-docs and swagger-ui endpoints",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--validator-api-enabled",
+          "shortcut": null,
+          "description": "Enables Validator Rest API",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--validator-api-host-allowlist",
+          "shortcut": null,
+          "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+          "value": "<hostname>",
+          "default": "[127.0.0.1, localhost]"
+        },
+        {
+          "option": "--validator-api-interface",
+          "shortcut": null,
+          "description": "Interface of Validator Rest API",
+          "value": "<NETWORK>",
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--validator-api-keystore-file",
+          "shortcut": null,
+          "description": "Keystore used for ssl for the validator api.",
+          "value": "<keystoreFile>",
+          "default": null
+        },
+        {
+          "option": "--validator-api-keystore-password-file",
+          "shortcut": null,
+          "description": "Password used to decrypt the keystore for the validator api.",
+          "value": "<keystorePasswordFile>",
+          "default": null
+        },
+        {
+          "option": "--validator-api-port",
+          "shortcut": null,
+          "description": "Port number of Rest API",
+          "value": "<INTEGER>",
+          "default": "5052"
+        },
+        {
+          "option": "--validator-is-local-slashing-protection-synchronized-enabled",
+          "shortcut": null,
+          "description": "Restrict local signing to a single operation at a time.",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--validator-keys",
+          "shortcut": null,
+          "description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt. <KEY_FILE>:<PASS_FILE> will expect that the file <KEY_FILE> exists, and the file containing the password for it is <PASS_FILE>. The path separator is operating system dependent, and should be ';' in windows rather than ':'.",
+          "value": "<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]",
+          "default": "[]"
+        },
+        {
+          "option": "--validators-builder-registration-default-enabled",
+          "shortcut": null,
+          "description": "Enable validators registration to builder infrastructure.",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--validators-builder-registration-default-gas-limit",
+          "shortcut": null,
+          "description": "Change the default gas limit used for the validators registration.",
+          "value": "<uint64>",
+          "default": "60000000"
+        },
+        {
+          "option": "--validators-early-attestations-enabled",
+          "shortcut": null,
+          "description": "Generate attestations as soon as a block is known, rather than delaying until the attestation is due",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--validators-external-signer-keystore",
+          "shortcut": null,
+          "description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-keystore-password-file",
+          "shortcut": null,
+          "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-public-keys",
+          "shortcut": null,
+          "description": "The list of external signer public keys, or a URL to load the keys from",
+          "value": "<STRINGS>",
+          "default": "[]"
+        },
+        {
+          "option": "--validators-external-signer-slashing-protection-enabled",
+          "shortcut": null,
+          "description": "Enable internal slashing protection for external signers",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--validators-external-signer-timeout",
+          "shortcut": null,
+          "description": "Timeout (in milliseconds) for the external signing service",
+          "value": "<INTEGER>",
+          "default": "5000"
+        },
+        {
+          "option": "--validators-external-signer-truststore",
+          "shortcut": null,
+          "description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-truststore-password-file",
+          "shortcut": null,
+          "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+          "value": "<FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-external-signer-url",
+          "shortcut": null,
+          "description": "URL for the external signing service",
+          "value": "<NETWORK>",
+          "default": null
+        },
+        {
+          "option": "--validators-graffiti",
+          "shortcut": null,
+          "description": "Graffiti value to include during block creation. Value gets converted to bytes and padded to Bytes32.",
+          "value": "<GRAFFITI STRING>",
+          "default": null
+        },
+        {
+          "option": "--validators-graffiti-client-append-format",
+          "shortcut": null,
+          "description": "Appends CL and EL clients information with a space to user's graffiti when producing a block on the Beacon Node. (Valid values: AUTO, CLIENT_CODES, DISABLED)",
+          "value": "<STRING>",
+          "default": "AUTO"
+        },
+        {
+          "option": "--validators-graffiti-file",
+          "shortcut": null,
+          "description": "File to load graffiti value to include during block creation. Value gets converted to bytes and padded to Bytes32. Takes precedence over --validators-graffiti. If the file can not be read, the --validators-graffiti value is used as a fallback.",
+          "value": "<GRAFFITI FILE>",
+          "default": null
+        },
+        {
+          "option": "--validators-keystore-locking-enabled",
+          "shortcut": null,
+          "description": "Enable locking validator keystore files",
+          "value": "<BOOLEAN>",
+          "default": "true"
+        },
+        {
+          "option": "--validators-performance-tracking-mode",
+          "shortcut": null,
+          "description": "Set strategy for handling performance tracking. Valid values: LOGGING, METRICS, ALL, NONE",
+          "value": "<TRACKING_MODE>",
+          "default": "ALL"
+        },
+        {
+          "option": "--validators-proposer-config",
+          "shortcut": null,
+          "description": "remote URL or local file path to load proposer configuration from",
+          "value": "<STRING>",
+          "default": null
+        },
+        {
+          "option": "--validators-proposer-config-refresh-enabled",
+          "shortcut": null,
+          "description": "Enable the proposer configuration reload on every proposer preparation (once per epoch)",
+          "value": "<BOOLEAN>",
+          "default": "false"
+        },
+        {
+          "option": "--validators-proposer-default-fee-recipient",
+          "shortcut": null,
+          "description": "Default fee recipient sent to the execution engine, which could use it as fee recipient when producing a new execution block.",
+          "value": "<ADDRESS>",
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku validator-client",
+      "raw_help_text": "teku validator-client [OPTIONS]\n\nDescription:\n\nRun a Validator Client that connects to a remote Beacon Node\n\nOptions:\n      --beacon-node-api-endpoint, --beacon-node-api-endpoints=<ENDPOINT>[,\n        <ENDPOINT>...]...\n                            Beacon Node REST API endpoint(s). If more than one\n                              endpoint is defined, the first node will be used\n                              as a primary and others as failovers.\n      --beacon-node-ssz-blocks-enabled[=<BOOLEAN>]\n                            Use SSZ encoding for API block requests\n                              Default: true\n  -c, --config-file=<FILENAME>\n                            Path/filename of the yaml config file (default:\n                              none)\n      --data-path, --data-base-path=<FILENAME>\n                            Path to the base directory for storage\n                              Default: /opt/teku/.local/share/teku\n      --data-validator-path=<FILENAME>\n                            Path to validator client data\n                              Default: <data-base-path>/validator\n      --doppelganger-detection-enabled[=<BOOLEAN>]\n                            Enable validators doppelganger detection\n                              Default: false\n      --exit-when-no-validator-keys-enabled[=<BOOLEAN>]\n                            Enable terminating the process if no validator keys\n                              are found during startup\n                              Default: false\n  -h, --help                Show this help message and exit.\n  -l, --logging=<LOG VERBOSITY LEVEL>\n                            Logging verbosity levels: OFF, FATAL, ERROR, WARN,\n                              INFO, DEBUG, TRACE, ALL (default: INFO).\n      --log-color-enabled[=<BOOLEAN>]\n                            Whether Status and Event log messages include a\n                              console color display code\n                              Default: true\n      --log-destination=<LOG_DESTINATION>\n                            Whether a logger is added for the console, the log\n                              file, or both (Valid values: BOTH, CONSOLE,\n                              DEFAULT_BOTH, FILE, CUSTOM)\n                              Default: DEFAULT_BOTH\n      --log-file=<FILENAME> Path containing the location (relative or absolute)\n                              and the log filename. If not set will default to\n                              <data-path>/logs/teku.log\n      --log-file-name-pattern=<REGEX>\n                            Pattern for the filename to apply to rolled over\n                              log files. If not set will default to\n                              <data-path>/logs/teku_%d{yyyy-MM-dd}.log\n      --log-include-events-enabled[=<BOOLEAN>]\n                            Whether frequent update events are logged (e.g.\n                              every slot and epoch event)\n                              Default: true\n      --log-include-validator-duties-enabled[=<BOOLEAN>]\n                            Whether events are logged when validators perform\n                              duties\n                              Default: true\n      --metrics-block-production-performance-tracking-enabled[=<BOOLEAN>]\n                            Whether block production timing metrics are tracked\n                              and reported\n                              Default: false\n      --metrics-block-timing-tracking-enabled[=<BOOLEAN>]\n                            Whether block timing metrics are tracked and\n                              reported\n                              Default: true\n      --metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]\n                            Metric categories to enable\n                              Default: [JVM, PROCESS, BEACON, NETWORK,\n                              DISCOVERY, VALIDATOR_DUTY, EVENTBUS, EXECUTOR,\n                              LIBP2P, VALIDATOR_PERFORMANCE, STORAGE,\n                              VALIDATOR, STORAGE_HOT_DB, STORAGE_FINALIZED_DB]\n      --metrics-enabled[=<BOOLEAN>]\n                            Enables metrics collection via Prometheus\n                              Default: false\n      --metrics-host-allowlist[=<hostname>[,<hostname>...]...]\n                            Comma-separated list of hostnames to allow, or * to\n                              allow any host\n                              Default: [127.0.0.1, localhost]\n      --metrics-interface=<NETWORK>\n                            Metrics network interface to expose metrics for\n                              Prometheus\n                              Default: 127.0.0.1\n      --metrics-port=<INTEGER>\n                            Metrics port to expose metrics for Prometheus\n                              Default: 8008\n      --metrics-publish-endpoint=<URL>\n                            Publish metrics for node monitoring to an external\n                              service\n      --metrics-publish-interval=<INTEGER>\n                            Interval between metric publications to the\n                              external service (measured in seconds)\n                              Default: 60\n  -n, --network=<NETWORK>   Represents which network to use. Use `auto` to\n                              fetch network configuration from the beacon node\n                              endpoint directly.\n                              Default: auto\n      --shut-down-when-validator-slashed-enabled[=<BOOLEAN>]\n                            If enabled and an owned validator key is detected\n                              as slashed, the node will terminate. In this\n                              case, the service should not be restarted.\n                              Default: false\n  -V, --version             Print version information and exit.\n      --validator-api-bearer-file=<FILENAME>\n                            Use the specified file as the bearer token for the\n                              validator Rest API\n      --validator-api-cors-origins[=<origin>[,<origin>...]...]\n                            Comma separated list of origins to allow, or * to\n                              allow any origin\n                              Default: []\n      --validator-api-docs-enabled[=<BOOLEAN>]\n                            Enable swagger-docs and swagger-ui endpoints\n                              Default: false\n      --validator-api-enabled[=<BOOLEAN>]\n                            Enables Validator Rest API\n                              Default: false\n      --validator-api-host-allowlist[=<hostname>[,<hostname>...]...]\n                            Comma-separated list of hostnames to allow, or * to\n                              allow any host\n                              Default: [127.0.0.1, localhost]\n      --validator-api-interface=<NETWORK>\n                            Interface of Validator Rest API\n                              Default: 127.0.0.1\n      --validator-api-keystore-file=<keystoreFile>\n                            Keystore used for ssl for the validator api.\n      --validator-api-keystore-password-file=<keystorePasswordFile>\n                            Password used to decrypt the keystore for the\n                              validator api.\n      --validator-api-port=<INTEGER>\n                            Port number of Rest API\n                              Default: 5052\n      --validator-is-local-slashing-protection-synchronized-enabled[=<BOOLEAN>]\n                            Restrict local signing to a single operation at a\n                              time.\n                              Default: true\n      --validator-keys=<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:\n        <PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...\n                            <KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json,\n                              and expect to find <PASS_DIR>/**.txt.\n                            <KEY_FILE>:<PASS_FILE> will expect that the file\n                              <KEY_FILE> exists, and the file containing the\n                              password for it is <PASS_FILE>.\n                            The path separator is operating system dependent,\n                              and should be ';' in windows rather than ':'.\n                              Default: []\n      --validators-builder-registration-default-enabled[=<BOOLEAN>]\n                            Enable validators registration to builder\n                              infrastructure.\n                              Default: false\n      --validators-builder-registration-default-gas-limit=<uint64>\n                            Change the default gas limit used for the\n                              validators registration.\n                              Default: 60000000\n      --validators-early-attestations-enabled[=<BOOLEAN>]\n                            Generate attestations as soon as a block is known,\n                              rather than delaying until the attestation is due\n                              Default: true\n      --validators-external-signer-keystore=<FILE>\n                            Keystore (PKCS12/JKS) to use for TLS mutual\n                              authentication with external signer\n      --validators-external-signer-keystore-password-file=<FILE>\n                            Password file to decrypt keystore (PKCS12/JKS) that\n                              will be used for TLS mutual authentication with\n                              external signer\n      --validators-external-signer-public-keys[=<STRINGS>[,<STRINGS>...]...]\n                            The list of external signer public keys, or a URL\n                              to load the keys from\n                              Default: []\n      --validators-external-signer-slashing-protection-enabled[=<BOOLEAN>]\n                            Enable internal slashing protection for external\n                              signers\n                              Default: true\n      --validators-external-signer-timeout=<INTEGER>\n                            Timeout (in milliseconds) for the external signing\n                              service\n                              Default: 5000\n      --validators-external-signer-truststore=<FILE>\n                            Keystore (PKCS12/JKS) to trust external signer's\n                              self-signed certificate\n      --validators-external-signer-truststore-password-file=<FILE>\n                            Password file to decrypt keystore (PKCS12/JKS) that\n                              will be used to trust external signer's\n                              self-signed certificate\n      --validators-external-signer-url=<NETWORK>\n                            URL for the external signing service\n      --validators-graffiti=<GRAFFITI STRING>\n                            Graffiti value to include during block creation.\n                              Value gets converted to bytes and padded to\n                              Bytes32.\n      --validators-graffiti-client-append-format=<STRING>\n                            Appends CL and EL clients information with a space\n                              to user's graffiti when producing a block on the\n                              Beacon Node. (Valid values: AUTO, CLIENT_CODES,\n                              DISABLED)\n                              Default: AUTO\n      --validators-graffiti-file=<GRAFFITI FILE>\n                            File to load graffiti value to include during block\n                              creation. Value gets converted to bytes and\n                              padded to Bytes32. Takes precedence over\n                              --validators-graffiti. If the file can not be\n                              read, the --validators-graffiti value is used as\n                              a fallback.\n      --validators-keystore-locking-enabled[=<BOOLEAN>]\n                            Enable locking validator keystore files\n                              Default: true\n      --validators-performance-tracking-mode=<TRACKING_MODE>\n                            Set strategy for handling performance tracking.\n                              Valid values: LOGGING, METRICS, ALL, NONE\n                              Default: ALL\n      --validators-proposer-config=<STRING>\n                            remote URL or local file path to load proposer\n                              configuration from\n      --validators-proposer-config-refresh-enabled[=<BOOLEAN>]\n                            Enable the proposer configuration reload on every\n                              proposer preparation (once per epoch)\n                              Default: false\n      --validators-proposer-default-fee-recipient=<ADDRESS>\n                            Default fee recipient sent to the execution engine,\n                              which could use it as fee recipient when\n                              producing a new execution block.\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Run a Validator Client that connects to a remote Beacon Node"
+    },
+    {
+      "subcommands": [],
+      "options": [
+        {
+          "option": "--config-file=<FILENAME>",
+          "shortcut": "-c",
+          "description": "Path/filename of the yaml config file",
+          "value": null,
+          "default": "none"
+        },
+        {
+          "option": "--checkpoint-sync-url=<STRING>",
+          "shortcut": null,
+          "description": "The Checkpointz server that will be used to bootstrap this node.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--data-beacon-path=<FILENAME>",
+          "shortcut": null,
+          "description": "Path to beacon node data",
+          "value": null,
+          "default": "<data-base-path>/beacon"
+        },
+        {
+          "option": "--data-path, --data-base-path=<FILENAME>",
+          "shortcut": null,
+          "description": "Path to the base directory for storage",
+          "value": null,
+          "default": "/opt/teku/.local/share/teku"
+        },
+        {
+          "option": "--data-storage-archive-frequency=<FREQUENCY>",
+          "shortcut": null,
+          "description": "Sets the frequency, in slots, at which to store finalized states to disk. This option is ignored if --data-storage-mode is set to PRUNE",
+          "value": null,
+          "default": "2048"
+        },
+        {
+          "option": "--data-storage-mode=<STORAGE_MODE>",
+          "shortcut": null,
+          "description": "Sets the strategy for handling historical chain data.  (Valid values: ARCHIVE, PRUNE, MINIMAL, NOT_SET)",
+          "value": null,
+          "default": "NOT_SET"
+        },
+        {
+          "option": "--data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Store non-canonical blocks and associated blobs if they exist",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--data-validator-path=<FILENAME>",
+          "shortcut": null,
+          "description": "Path to validator client data",
+          "value": null,
+          "default": "<data-base-path>/validator"
+        },
+        {
+          "option": "--eth1-deposit-contract-address=<ADDRESS>",
+          "shortcut": null,
+          "description": "Contract address for the deposit contract. Only required when creating a custom network.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--force-clear-db[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Force deletion of the beacon chain database on startup. This will delete all chain data but preserve validator slashing protection. Use with caution - all historical chain data will be lost.",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--genesis-state=<STRING>",
+          "shortcut": null,
+          "description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--help",
+          "shortcut": "-h",
+          "description": "Show this help message and exit.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Allows syncing outside of the weak subjectivity period.",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--initial-state=<STRING>",
+          "shortcut": null,
+          "description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--logging=<LOG VERBOSITY LEVEL>",
+          "shortcut": "-l",
+          "description": "Logging verbosity levels: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL",
+          "value": null,
+          "default": "INFO"
+        },
+        {
+          "option": "--log-color-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether Status and Event log messages include a console color display code",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--log-destination=<LOG_DESTINATION>",
+          "shortcut": null,
+          "description": "Whether a logger is added for the console, the log file, or both (Valid values: BOTH, CONSOLE, DEFAULT_BOTH, FILE, CUSTOM)",
+          "value": null,
+          "default": "DEFAULT_BOTH"
+        },
+        {
+          "option": "--log-file=<FILENAME>",
+          "shortcut": null,
+          "description": "Path containing the location (relative or absolute) and the log filename. If not set will default to <data-path>/logs/teku.log",
+          "value": null,
+          "default": "<data-path>/logs/teku.log"
+        },
+        {
+          "option": "--log-file-name-pattern=<REGEX>",
+          "shortcut": null,
+          "description": "Pattern for the filename to apply to rolled over log files. If not set will default to <data-path>/logs/teku_%d{yyyy-MM-dd}.log",
+          "value": null,
+          "default": "<data-path>/logs/teku_%d{yyyy-MM-dd}.log"
+        },
+        {
+          "option": "--log-include-events-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether frequent update events are logged (e.g. every slot and epoch event)",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--log-include-validator-duties-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether events are logged when validators perform duties",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--metrics-block-production-performance-tracking-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether block production timing metrics are tracked and reported",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--metrics-block-timing-tracking-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether block timing metrics are tracked and reported",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]",
+          "shortcut": null,
+          "description": "Metric categories to enable",
+          "value": null,
+          "default": "[JVM, PROCESS, VALIDATOR_DUTY, EVENTBUS, EXECUTOR, LIBP2P, VALIDATOR_PERFORMANCE, STORAGE, VALIDATOR, STORAGE_HOT_DB, STORAGE_FINALIZED_DB, BEACON, NETWORK, DISCOVERY]"
+        },
+        {
+          "option": "--metrics-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Enables metrics collection via Prometheus",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--metrics-host-allowlist[=<hostname>[,<hostname>...]...]",
+          "shortcut": null,
+          "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+          "value": null,
+          "default": "[127.0.0.1, localhost]"
+        },
+        {
+          "option": "--metrics-interface=<NETWORK>",
+          "shortcut": null,
+          "description": "Metrics network interface to expose metrics for Prometheus",
+          "value": null,
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--metrics-port=<INTEGER>",
+          "shortcut": null,
+          "description": "Metrics port to expose metrics for Prometheus",
+          "value": null,
+          "default": "8008"
+        },
+        {
+          "option": "--metrics-publish-endpoint=<URL>",
+          "shortcut": null,
+          "description": "Publish metrics for node monitoring to an external service",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--metrics-publish-interval=<INTEGER>",
+          "shortcut": null,
+          "description": "Interval between metric publications to the external service (measured in seconds)",
+          "value": null,
+          "default": "60"
+        },
+        {
+          "option": "--network=<NETWORK>",
+          "shortcut": "-n",
+          "description": "Represents which network to use.",
+          "value": null,
+          "default": "mainnet"
+        },
+        {
+          "option": "--p2p-advertised-ip, --p2p-advertised-ips=<NETWORK>[,<NETWORK>...] [<NETWORK>]",
+          "shortcut": null,
+          "description": "P2P advertised IP address(es). You can define up to 2 addresses, with one being IPv4 and the other IPv6.",
+          "value": null,
+          "default": "127.0.0.1"
+        },
+        {
+          "option": "--p2p-advertised-port=<INTEGER>",
+          "shortcut": null,
+          "description": "P2P advertised port. The default is the port specified in --p2p-port",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-advertised-port-ipv6=<INTEGER>",
+          "shortcut": null,
+          "description": "P2P advertised IPv6 port. This port is only used when advertising both IPv4 and IPv6 addresses.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-advertised-udp-port=<INTEGER>",
+          "shortcut": null,
+          "description": "Advertised UDP port to external peers. The default is the port specified in --p2p-advertised-port",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-advertised-udp-port-ipv6=<INTEGER>",
+          "shortcut": null,
+          "description": "Advertised IPv6 UDP port to external peers. This port is only used when advertising both IPv4 and IPv6 addresses.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-direct-peers[=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]",
+          "shortcut": null,
+          "description": "Specifies a list of 'direct' peers with which to establish and maintain connections.",
+          "value": null,
+          "default": "[]"
+        },
+        {
+          "option": "--p2p-discovery-bootnodes[=<enr:-...>[,<enr:-...>...]...]",
+          "shortcut": null,
+          "description": "List of ENRs of the bootnodes",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-discovery-bootnodes-url=<STRING>",
+          "shortcut": null,
+          "description": "ENRs of bootnodes. This should be a file or URL pointing to a txt file with one ENR per line.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-discovery-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Enables discv5 discovery",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--p2p-discovery-site-local-addresses-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Whether discovery accepts messages and peer records with site local (RFC1918) addresses",
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--p2p-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": "Enables P2P",
+          "value": null,
+          "default": "true"
+        },
+        {
+          "option": "--p2p-interface, --p2p-interfaces=<NETWORK>[,<NETWORK>...] [<NETWORK>]",
+          "shortcut": null,
+          "description": "The network interface(s) on which the node listens for P2P communication.",
+          "value": null,
+          "default": "[0.0.0.0]"
+        },
+        {
+          "option": "--p2p-nat-method=<natMethod>",
+          "shortcut": null,
+          "description": "Specify the NAT circumvention method to be used, possible values are UPNP, NONE. NONE will require manual router configuration.",
+          "value": null,
+          "default": "NONE"
+        },
+        {
+          "option": "--p2p-peer-lower-bound=<INTEGER>",
+          "shortcut": null,
+          "description": "Lower bound on the target number of peers",
+          "value": null,
+          "default": "OptionalInt.empty"
+        },
+        {
+          "option": "--p2p-peer-upper-bound=<INTEGER>",
+          "shortcut": null,
+          "description": "Upper bound on the target number of peers",
+          "value": null,
+          "default": "OptionalInt.empty"
+        },
+        {
+          "option": "--p2p-port=<INTEGER>",
+          "shortcut": null,
+          "description": "P2P port",
+          "value": null,
+          "default": "9000"
+        },
+        {
+          "option": "--p2p-port-ipv6=<INTEGER>",
+          "shortcut": null,
+          "description": "P2P IPv6 port. This port is only used when listening over both IPv4 and IPv6.",
+          "value": null,
+          "default": "9090"
+        },
+        {
+          "option": "--p2p-private-key-file=<FILENAME>",
+          "shortcut": null,
+          "description": "This node's private key file in LibP2P format. If not specified, uses or generates a key which is stored within the <beacon-data-dir>.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-static-peers=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]",
+          "shortcut": null,
+          "description": "Specifies a comma-separated list of 'static' peers with which to establish and maintain connections. Accepts multiaddr format.",
+          "value": null,
+          "default": "[]"
+        },
+        {
+          "option": "--p2p-static-peers-url=<URL>",
+          "shortcut": null,
+          "description": "Specifies a URL or file containing a list of 'static' peers (one per line) with which to establish and maintain connections. Accepts multiaddr format.",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-subscribe-all-custody-subnets-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": null,
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--p2p-subscribe-all-subnets-enabled[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": null,
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--p2p-udp-port=<INTEGER>",
+          "shortcut": null,
+          "description": "UDP port used for discovery. The default is the port specified in --p2p-port",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--p2p-udp-port-ipv6=<INTEGER>",
+          "shortcut": null,
+          "description": "IPv6 UDP port used for discovery. This port is only used when listening over both IPv4 and IPv6. The default is the port specified in --p2p-port-ipv6",
+          "value": null,
+          "default": null
+        },
+        {
+          "option": "--reconstruct-historic-states[=<BOOLEAN>]",
+          "shortcut": null,
+          "description": null,
+          "value": null,
+          "default": "false"
+        },
+        {
+          "option": "--version",
+          "shortcut": "-V",
+          "description": "Print version information and exit.",
+          "value": null,
+          "default": null
+        }
+      ],
+      "aliases": [],
+      "name": "teku bootnode",
+      "raw_help_text": "teku bootnode [OPTIONS]\n\nDescription:\n\nRun Teku in Bootnode mode\n\nOptions:\n  -c, --config-file=<FILENAME>\n                             Path/filename of the yaml config file (default:\n                               none)\n      --checkpoint-sync-url=<STRING>\n                             The Checkpointz server that will be used to\n                               bootstrap this node.\n      --data-beacon-path=<FILENAME>\n                             Path to beacon node data\n                               Default: <data-base-path>/beacon\n      --data-path, --data-base-path=<FILENAME>\n                             Path to the base directory for storage\n                               Default: /opt/teku/.local/share/teku\n      --data-storage-archive-frequency=<FREQUENCY>\n                             Sets the frequency, in slots, at which to store\n                               finalized states to disk. This option is ignored\n                               if --data-storage-mode is set to PRUNE\n                               Default: 2048\n      --data-storage-mode=<STORAGE_MODE>\n                             Sets the strategy for handling historical chain\n                               data.  (Valid values: ARCHIVE, PRUNE, MINIMAL,\n                               NOT_SET)\n                               Default: NOT_SET\n      --data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]\n                             Store non-canonical blocks and associated blobs if\n                               they exist\n                               Default: false\n      --data-validator-path=<FILENAME>\n                             Path to validator client data\n                               Default: <data-base-path>/validator\n      --eth1-deposit-contract-address=<ADDRESS>\n                             Contract address for the deposit contract. Only\n                               required when creating a custom network.\n      --force-clear-db[=<BOOLEAN>]\n                             Force deletion of the beacon chain database on\n                               startup. This will delete all chain data but\n                               preserve validator slashing protection. Use with\n                               caution - all historical chain data will be lost.\n                               Default: false\n      --genesis-state=<STRING>\n                             The genesis state. This value should be a file or\n                               URL pointing to an SSZ-encoded finalized\n                               checkpoint state.\n  -h, --help                 Show this help message and exit.\n      --ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]\n                             Allows syncing outside of the weak subjectivity\n                               period.\n                               Default: false\n      --initial-state=<STRING>\n                             The initial state. This value should be a file or\n                               URL pointing to an SSZ-encoded finalized\n                               checkpoint state.\n  -l, --logging=<LOG VERBOSITY LEVEL>\n                             Logging verbosity levels: OFF, FATAL, ERROR, WARN,\n                               INFO, DEBUG, TRACE, ALL (default: INFO).\n      --log-color-enabled[=<BOOLEAN>]\n                             Whether Status and Event log messages include a\n                               console color display code\n                               Default: true\n      --log-destination=<LOG_DESTINATION>\n                             Whether a logger is added for the console, the log\n                               file, or both (Valid values: BOTH, CONSOLE,\n                               DEFAULT_BOTH, FILE, CUSTOM)\n                               Default: DEFAULT_BOTH\n      --log-file=<FILENAME>  Path containing the location (relative or\n                               absolute) and the log filename. If not set will\n                               default to <data-path>/logs/teku.log\n      --log-file-name-pattern=<REGEX>\n                             Pattern for the filename to apply to rolled over\n                               log files. If not set will default to\n                               <data-path>/logs/teku_%d{yyyy-MM-dd}.log\n      --log-include-events-enabled[=<BOOLEAN>]\n                             Whether frequent update events are logged (e.g.\n                               every slot and epoch event)\n                               Default: true\n      --log-include-validator-duties-enabled[=<BOOLEAN>]\n                             Whether events are logged when validators perform\n                               duties\n                               Default: true\n      --metrics-block-production-performance-tracking-enabled[=<BOOLEAN>]\n                             Whether block production timing metrics are\n                               tracked and reported\n                               Default: false\n      --metrics-block-timing-tracking-enabled[=<BOOLEAN>]\n                             Whether block timing metrics are tracked and\n                               reported\n                               Default: true\n      --metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]\n                             Metric categories to enable\n                               Default: [JVM, PROCESS, VALIDATOR_DUTY,\n                               EVENTBUS, EXECUTOR, LIBP2P,\n                               VALIDATOR_PERFORMANCE, STORAGE, VALIDATOR,\n                               STORAGE_HOT_DB, STORAGE_FINALIZED_DB, BEACON,\n                               NETWORK, DISCOVERY]\n      --metrics-enabled[=<BOOLEAN>]\n                             Enables metrics collection via Prometheus\n                               Default: false\n      --metrics-host-allowlist[=<hostname>[,<hostname>...]...]\n                             Comma-separated list of hostnames to allow, or *\n                               to allow any host\n                               Default: [127.0.0.1, localhost]\n      --metrics-interface=<NETWORK>\n                             Metrics network interface to expose metrics for\n                               Prometheus\n                               Default: 127.0.0.1\n      --metrics-port=<INTEGER>\n                             Metrics port to expose metrics for Prometheus\n                               Default: 8008\n      --metrics-publish-endpoint=<URL>\n                             Publish metrics for node monitoring to an external\n                               service\n      --metrics-publish-interval=<INTEGER>\n                             Interval between metric publications to the\n                               external service (measured in seconds)\n                               Default: 60\n  -n, --network=<NETWORK>    Represents which network to use.\n                               Default: mainnet\n      --p2p-advertised-ip, --p2p-advertised-ips=<NETWORK>[,<NETWORK>...]\n        [<NETWORK>]\n                             P2P advertised IP address(es). You can define up\n                               to 2 addresses, with one being IPv4 and the\n                               other IPv6. (Default: 127.0.0.1)\n      --p2p-advertised-port=<INTEGER>\n                             P2P advertised port. The default is the port\n                               specified in --p2p-port\n      --p2p-advertised-port-ipv6=<INTEGER>\n                             P2P advertised IPv6 port. This port is only used\n                               when advertising both IPv4 and IPv6 addresses.\n                             The default is the port specified in\n                               --p2p-port-ipv6.\n      --p2p-advertised-udp-port=<INTEGER>\n                             Advertised UDP port to external peers. The default\n                               is the port specified in --p2p-advertised-port\n      --p2p-advertised-udp-port-ipv6=<INTEGER>\n                             Advertised IPv6 UDP port to external peers. This\n                               port is only used when advertising both IPv4 and\n                               IPv6 addresses.\n                             The default is the port specified in\n                               --p2p-advertised-port-ipv6.\n      --p2p-direct-peers[=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]\n                             Specifies a list of 'direct' peers with which to\n                               establish and maintain connections.\n                             Direct peers are static peers with which this node\n                               will always exchange full messages, regardless\n                               of peer scoring mechanisms.\n                             Such peers will also need to enable you as direct\n                               in order to work.\n                               Default: []\n      --p2p-discovery-bootnodes[=<enr:-...>[,<enr:-...>...]...]\n                             List of ENRs of the bootnodes\n      --p2p-discovery-bootnodes-url=<STRING>\n                             ENRs of bootnodes. This should be a file or URL\n                               pointing to a txt file with one ENR per line.\n      --p2p-discovery-enabled[=<BOOLEAN>]\n                             Enables discv5 discovery\n                               Default: true\n      --p2p-discovery-site-local-addresses-enabled[=<BOOLEAN>]\n                             Whether discovery accepts messages and peer\n                               records with site local (RFC1918) addresses\n                               Default: false\n      --p2p-enabled[=<BOOLEAN>]\n                             Enables P2P\n                               Default: true\n      --p2p-interface, --p2p-interfaces=<NETWORK>[,<NETWORK>...] [<NETWORK>]\n                             The network interface(s) on which the node listens\n                               for P2P communication.\n                             You can define up to 2 interfaces, with one being\n                               IPv4 and the other IPv6. (Default: 0.0.0.0)\n                               Default: [0.0.0.0]\n      --p2p-nat-method=<natMethod>\n                             Specify the NAT circumvention method to be used,\n                               possible values are UPNP, NONE. NONE will\n                               require manual router configuration.\n                               Default: NONE\n      --p2p-peer-lower-bound=<INTEGER>\n                             Lower bound on the target number of peers\n                               Default: OptionalInt.empty\n      --p2p-peer-upper-bound=<INTEGER>\n                             Upper bound on the target number of peers\n                               Default: OptionalInt.empty\n      --p2p-port=<INTEGER>   P2P port\n                               Default: 9000\n      --p2p-port-ipv6=<INTEGER>\n                             P2P IPv6 port. This port is only used when\n                               listening over both IPv4 and IPv6.\n                               Default: 9090\n      --p2p-private-key-file=<FILENAME>\n                             This node's private key file in LibP2P format. If\n                               not specified, uses or generates a key which is\n                               stored within the <beacon-data-dir>.\n      --p2p-static-peers=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]\n                             Specifies a comma-separated list of 'static' peers\n                               with which to establish and maintain\n                               connections. Accepts multiaddr format.\n                               Default: []\n      --p2p-static-peers-url=<URL>\n                             Specifies a URL or file containing a list of\n                               'static' peers (one per line) with which to\n                               establish and maintain connections. Accepts\n                               multiaddr format.\n      --p2p-subscribe-all-custody-subnets-enabled[=<BOOLEAN>]\n                               Default: false\n      --p2p-subscribe-all-subnets-enabled[=<BOOLEAN>]\n                               Default: false\n      --p2p-udp-port=<INTEGER>\n                             UDP port used for discovery. The default is the\n                               port specified in --p2p-port\n      --p2p-udp-port-ipv6=<INTEGER>\n                             IPv6 UDP port used for discovery. This port is\n                               only used when listening over both IPv4 and\n                               IPv6. The default is the port specified in\n                               --p2p-port-ipv6\n      --reconstruct-historic-states[=<BOOLEAN>]\n                               Default: false\n  -V, --version              Print version information and exit.\n\nTeku is licensed under the Apache License 2.0",
+      "description": "Run Teku in Bootnode mode"
+    }
+  ],
+  "options": [
+    {
+      "option": "--config-file=<FILENAME>",
+      "shortcut": "-c",
+      "description": "Path/filename of the yaml config file",
+      "value": "none",
+      "default": null
+    },
+    {
+      "option": "--help",
+      "shortcut": "-h",
+      "description": "Show this help message and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--version",
+      "shortcut": "-V",
+      "description": "Print version information and exit.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--checkpoint-sync-url=<STRING>",
+      "description": "The Checkpointz server that will be used to bootstrap this node.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--eth1-deposit-contract-address=<ADDRESS>",
+      "description": "Contract address for the deposit contract. Only required when creating a custom network.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--genesis-state=<STRING>",
+      "description": "The genesis state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]",
+      "description": "Allows syncing outside of the weak subjectivity period.",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--initial-state=<STRING>",
+      "description": "The initial state. This value should be a file or URL pointing to an SSZ-encoded finalized checkpoint state.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--network=<NETWORK>",
+      "shortcut": "-n",
+      "description": "Represents which network to use.",
+      "value": "mainnet",
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-ip",
+      "description": "P2P advertised IP address(es). You can define up to 2 addresses, with one being IPv4 and the other IPv6.",
+      "value": "127.0.0.1",
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-ips=<NETWORK>[,<NETWORK>...]",
+      "description": "P2P advertised IP address(es). You can define up to 2 addresses, with one being IPv4 and the other IPv6.",
+      "value": "127.0.0.1",
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-port=<INTEGER>",
+      "description": "P2P advertised port. The default is the port specified in --p2p-port",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-port-ipv6=<INTEGER>",
+      "description": "P2P advertised IPv6 port. This port is only used when advertising both IPv4 and IPv6 addresses.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-udp-port=<INTEGER>",
+      "description": "Advertised UDP port to external peers. The default is the port specified in --p2p-advertised-port",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-advertised-udp-port-ipv6=<INTEGER>",
+      "description": "Advertised IPv6 UDP port to external peers. This port is only used when advertising both IPv4 and IPv6 addresses.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-direct-peers[=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]",
+      "description": "Specifies a list of 'direct' peers with which to establish and maintain connections.",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--p2p-discovery-bootnodes[=<enr:-...>[,<enr:-...>...]...]",
+      "description": "List of ENRs of the bootnodes",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-discovery-bootnodes-url=<STRING>",
+      "description": "ENRs of bootnodes. This should be a file or URL pointing to a txt file with one ENR per line.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-discovery-enabled[=<BOOLEAN>]",
+      "description": "Enables discv5 discovery",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--p2p-discovery-site-local-addresses-enabled[=<BOOLEAN>]",
+      "description": "Whether discovery accepts messages and peer records with site local (RFC1918) addresses",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--p2p-enabled[=<BOOLEAN>]",
+      "description": "Enables P2P",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--p2p-interface",
+      "description": "The network interface(s) on which the node listens for P2P communication.",
+      "value": "0.0.0.0",
+      "default": null
+    },
+    {
+      "option": "--p2p-interfaces=<NETWORK>[,<NETWORK>...]",
+      "description": "The network interface(s) on which the node listens for P2P communication.",
+      "value": "0.0.0.0",
+      "default": null
+    },
+    {
+      "option": "--p2p-nat-method=<natMethod>",
+      "description": "Specify the NAT circumvention method to be used, possible values are UPNP, NONE.",
+      "value": "NONE",
+      "default": null
+    },
+    {
+      "option": "--p2p-peer-lower-bound=<INTEGER>",
+      "description": "Lower bound on the target number of peers",
+      "value": "OptionalInt.empty",
+      "default": null
+    },
+    {
+      "option": "--p2p-peer-upper-bound=<INTEGER>",
+      "description": "Upper bound on the target number of peers",
+      "value": "OptionalInt.empty",
+      "default": null
+    },
+    {
+      "option": "--p2p-port=<INTEGER>",
+      "description": "P2P port",
+      "value": "9000",
+      "default": null
+    },
+    {
+      "option": "--p2p-port-ipv6=<INTEGER>",
+      "description": "P2P IPv6 port. This port is only used when listening over both IPv4 and IPv6.",
+      "value": "9090",
+      "default": null
+    },
+    {
+      "option": "--p2p-private-key-file=<FILENAME>",
+      "description": "This node's private key file in LibP2P format. If not specified, uses or generates a key which is stored within the <beacon-data-dir>.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-static-peers=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]",
+      "description": "Specifies a comma-separated list of 'static' peers with which to establish and maintain connections.",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--p2p-static-peers-url=<URL>",
+      "description": "Specifies a URL or file containing a list of 'static' peers (one per line) with which to establish and maintain connections.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--p2p-subscribe-all-custody-subnets-enabled[=<BOOLEAN>]",
+      "description": "",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--p2p-subscribe-all-subnets-enabled[=<BOOLEAN>]",
+      "description": "",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--p2p-udp-port=<INTEGER>",
+      "description": "UDP port used for discovery.",
+      "value": "9000",
+      "default": null
+    },
+    {
+      "option": "--p2p-udp-port-ipv6=<INTEGER>",
+      "description": "IPv6 UDP port used for discovery.",
+      "value": "9090",
+      "default": null
+    },
+    {
+      "option": "--doppelganger-detection-enabled[=<BOOLEAN>]",
+      "description": "Enable validators doppelganger detection",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--exit-when-no-validator-keys-enabled[=<BOOLEAN>]",
+      "description": "Enable terminating the process if no validator keys are found during startup",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--shut-down-when-validator-slashed-enabled[=<BOOLEAN>]",
+      "description": "If enabled and an owned validator key is detected as slashed, the node will terminate.",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--validator-is-local-slashing-protection-synchronized-enabled[=<BOOLEAN>]",
+      "description": "Restrict local signing to a single operation at a time.",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--validator-keys=<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...",
+      "description": "<KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json, and expect to find <PASS_DIR>/**.txt.",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--validators-builder-registration-default-enabled[=<BOOLEAN>]",
+      "description": "Enable validators registration to builder infrastructure.",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--validators-builder-registration-default-gas-limit=<uint64>",
+      "description": "Change the default gas limit used for the validators registration.",
+      "value": "60000000",
+      "default": null
+    },
+    {
+      "option": "--validators-early-attestations-enabled[=<BOOLEAN>]",
+      "description": "Generate attestations as soon as a block is known.",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-keystore=<FILE>",
+      "description": "Keystore (PKCS12/JKS) to use for TLS mutual authentication with external signer",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-keystore-password-file=<FILE>",
+      "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used for TLS mutual authentication with external signer",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-public-keys[=<STRINGS>[,<STRINGS>...]...]",
+      "description": "The list of external signer public keys, or a URL to load the keys from",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-slashing-protection-enabled[=<BOOLEAN>]",
+      "description": "Enable internal slashing protection for external signers",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-timeout=<INTEGER>",
+      "description": "Timeout (in milliseconds) for the external signing service",
+      "value": "5000",
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-truststore=<FILE>",
+      "description": "Keystore (PKCS12/JKS) to trust external signer's self-signed certificate",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-truststore-password-file=<FILE>",
+      "description": "Password file to decrypt keystore (PKCS12/JKS) that will be used to trust external signer's self-signed certificate",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-external-signer-url=<NETWORK>",
+      "description": "URL for the external signing service",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-graffiti=<GRAFFITI STRING>",
+      "description": "Graffiti value to include during block creation.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-graffiti-client-append-format=<STRING>",
+      "description": "Appends CL and EL clients information with a space to user's graffiti when producing a block on the Beacon Node.",
+      "value": "AUTO",
+      "default": null
+    },
+    {
+      "option": "--validators-graffiti-file=<GRAFFITI FILE>",
+      "description": "File to load graffiti value to include during block creation.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-keystore-locking-enabled[=<BOOLEAN>]",
+      "description": "Enable locking validator keystore files",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--validators-performance-tracking-mode=<TRACKING_MODE>",
+      "description": "Set strategy for handling performance tracking.",
+      "value": "ALL",
+      "default": null
+    },
+    {
+      "option": "--validators-proposer-config=<STRING>",
+      "description": "remote URL or local file path to load proposer configuration from",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validators-proposer-config-refresh-enabled[=<BOOLEAN>]",
+      "description": "Enable the proposer configuration reload on every proposer preparation",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--validators-proposer-default-fee-recipient=<ADDRESS>",
+      "description": "Default fee recipient sent to the execution engine",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--builder-bid-compare-factor=<STRING>",
+      "description": "Set the compare factor applied to the builder bid value",
+      "value": "90",
+      "default": null
+    },
+    {
+      "option": "--builder-endpoint=<NETWORK>",
+      "description": "URL for an external Builder node (optional).",
+      "value": "null",
+      "default": null
+    },
+    {
+      "option": "--builder-set-user-agent-header[=<BOOLEAN>]",
+      "description": "Set User-Agent header to teku/v<version> when making a builder bid request",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--deposit-snapshot-enabled[=<BOOLEAN>]",
+      "description": "Use bundled snapshot for most networks and persist deposit tree snapshot",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--ee-endpoint=<NETWORK>",
+      "description": "URL for Execution Engine node.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--ee-jwt-claim-id=<STRING>",
+      "description": "A unique identifier for the consensus layer client.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--ee-jwt-secret-file=<FILENAME>",
+      "description": "Location of the file specifying the hex-encoded 256 bit secret key",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--eth1-deposit-contract-max-request-size=<INTEGER>",
+      "description": "Maximum number of blocks to request deposit contract event logs for in a single request.",
+      "value": "10000",
+      "default": null
+    },
+    {
+      "option": "--eth1-endpoint",
+      "description": "URLs for Eth1 nodes.",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--exchange-capabilities-monitoring-enabled[=<BOOLEAN>]",
+      "description": "Enables querying EL periodically for the Engine API methods it supports.",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--data-beacon-path=<FILENAME>",
+      "description": "Path to beacon node data",
+      "value": "<data-base-path>/beacon",
+      "default": null
+    },
+    {
+      "option": "--data-path",
+      "description": "Path to the base directory for storage",
+      "value": "/opt/teku/.local/share/teku",
+      "default": null
+    },
+    {
+      "option": "--data-storage-archive-frequency=<FREQUENCY>",
+      "description": "Sets the frequency, in slots, at which to store finalized states to disk.",
+      "value": "2048",
+      "default": null
+    },
+    {
+      "option": "--data-storage-mode=<STORAGE_MODE>",
+      "description": "Sets the strategy for handling historical chain data.",
+      "value": "NOT_SET",
+      "default": null
+    },
+    {
+      "option": "--data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]",
+      "description": "Store non-canonical blocks and associated blobs if they exist",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--data-validator-path=<FILENAME>",
+      "description": "Path to validator client data",
+      "value": "<data-base-path>/validator",
+      "default": null
+    },
+    {
+      "option": "--force-clear-db[=<BOOLEAN>]",
+      "description": "Force deletion of the beacon chain database on startup.",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--reconstruct-historic-states[=<BOOLEAN>]",
+      "description": "",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--beacon-liveness-tracking-enabled[=<BOOLEAN>]",
+      "description": "Track validator liveness and enable requests to the liveness rest api.",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--rest-api-cors-origins[=<origin>[,<origin>...]...]",
+      "description": "Comma separated list of origins to allow, or * to allow any origin",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--rest-api-docs-enabled[=<BOOLEAN>]",
+      "description": "Enable swagger-docs and swagger-ui endpoints",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--rest-api-enabled[=<BOOLEAN>]",
+      "description": "Enables Beacon Rest API",
+      "value": "null",
+      "default": null
+    },
+    {
+      "option": "--rest-api-getblobs-sidecars-download-enabled[=<BOOLEAN>]",
+      "description": "Enables Get Blobs API ability to reconstruct blobs",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--rest-api-getblobs-sidecars-download-timeout=<INTEGER>",
+      "description": "Sidecars download timeout in seconds",
+      "value": "5",
+      "default": null
+    },
+    {
+      "option": "--rest-api-host-allowlist[=<hostname>[,<hostname>...]...]",
+      "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+      "value": "[127.0.0.1, localhost]",
+      "default": null
+    },
+    {
+      "option": "--rest-api-interface=<NETWORK>",
+      "description": "Interface of Beacon Rest API",
+      "value": "127.0.0.1",
+      "default": null
+    },
+    {
+      "option": "--rest-api-port=<INTEGER>",
+      "description": "Port number of Beacon Rest API",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validator-api-bearer-file=<FILENAME>",
+      "description": "Use the specified file as the bearer token for the validator Rest API",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validator-api-cors-origins[=<origin>[,<origin>...]...]",
+      "description": "Comma separated list of origins to allow, or * to allow any origin",
+      "value": "[]",
+      "default": null
+    },
+    {
+      "option": "--validator-api-docs-enabled[=<BOOLEAN>]",
+      "description": "Enable swagger-docs and swagger-ui endpoints",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--validator-api-enabled[=<BOOLEAN>]",
+      "description": "Enables Validator Rest API",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--validator-api-host-allowlist[=<hostname>[,<hostname>...]...]",
+      "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+      "value": "[127.0.0.1, localhost]",
+      "default": null
+    },
+    {
+      "option": "--validator-api-interface=<NETWORK>",
+      "description": "Interface of Validator Rest API",
+      "value": "127.0.0.1",
+      "default": null
+    },
+    {
+      "option": "--validator-api-keystore-file=<keystoreFile>",
+      "description": "Keystore used for ssl for the validator api.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validator-api-keystore-password-file=<keystorePasswordFile>",
+      "description": "Password used to decrypt the keystore for the validator api.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--validator-api-port=<INTEGER>",
+      "description": "Port number of Rest API",
+      "value": "5052",
+      "default": null
+    },
+    {
+      "option": "--ws-checkpoint=<STRING>",
+      "description": "A recent checkpoint within the weak subjectivity period.",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--logging=<LOG VERBOSITY LEVEL>",
+      "shortcut": "-l",
+      "description": "Logging verbosity levels: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL",
+      "value": "INFO",
+      "default": null
+    },
+    {
+      "option": "--log-color-enabled[=<BOOLEAN>]",
+      "description": "Whether Status and Event log messages include a console color display code",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--log-destination=<LOG_DESTINATION>",
+      "description": "Whether a logger is added for the console, the log file, or both",
+      "value": "DEFAULT_BOTH",
+      "default": null
+    },
+    {
+      "option": "--log-file=<FILENAME>",
+      "description": "Path containing the location and the log filename.",
+      "value": "<data-path>/logs/teku.log",
+      "default": null
+    },
+    {
+      "option": "--log-file-name-pattern=<REGEX>",
+      "description": "Pattern for the filename to apply to rolled over log files.",
+      "value": "<data-path>/logs/teku_%d{yyyy-MM-dd}.log",
+      "default": null
+    },
+    {
+      "option": "--log-include-events-enabled[=<BOOLEAN>]",
+      "description": "Whether frequent update events are logged.",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--log-include-validator-duties-enabled[=<BOOLEAN>]",
+      "description": "Whether events are logged when validators perform duties",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--metrics-block-production-performance-tracking-enabled[=<BOOLEAN>]",
+      "description": "Whether block production timing metrics are tracked and reported",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--metrics-block-timing-tracking-enabled[=<BOOLEAN>]",
+      "description": "Whether block timing metrics are tracked and reported",
+      "value": "true",
+      "default": null
+    },
+    {
+      "option": "--metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]",
+      "description": "Metric categories to enable",
+      "value": "[JVM, PROCESS, NETWORK, BEACON, STORAGE_FINALIZED_DB, STORAGE_HOT_DB, VALIDATOR, STORAGE, VALIDATOR_PERFORMANCE, LIBP2P, EXECUTOR, EVENTBUS, VALIDATOR_DUTY, DISCOVERY]",
+      "default": null
+    },
+    {
+      "option": "--metrics-enabled[=<BOOLEAN>]",
+      "description": "Enables metrics collection via Prometheus",
+      "value": "false",
+      "default": null
+    },
+    {
+      "option": "--metrics-host-allowlist[=<hostname>[,<hostname>...]...]",
+      "description": "Comma-separated list of hostnames to allow, or * to allow any host",
+      "value": "[127.0.0.1, localhost]",
+      "default": null
+    },
+    {
+      "option": "--metrics-interface=<NETWORK>",
+      "description": "Metrics network interface to expose metrics for Prometheus",
+      "value": "127.0.0.1",
+      "default": null
+    },
+    {
+      "option": "--metrics-port=<INTEGER>",
+      "description": "Metrics port to expose metrics for Prometheus",
+      "value": "8008",
+      "default": null
+    },
+    {
+      "option": "--metrics-publish-endpoint=<URL>",
+      "description": "Publish metrics for node monitoring to an external service",
+      "value": null,
+      "default": null
+    },
+    {
+      "option": "--metrics-publish-interval=<INTEGER>",
+      "description": "Interval between metric publications to the external service",
+      "value": "60",
+      "default": null
+    }
+  ],
+  "aliases": [
+    "vc"
+  ],
+  "name": "teku",
+  "raw_help_text": "teku [OPTIONS] [COMMAND]\n\nDescription:\n\nRun the Teku beacon chain client and validator\n\nOptions:\n  -c, --config-file=<FILENAME>\n                             Path/filename of the yaml config file (default:\n                               none)\n  -h, --help                 Show this help message and exit.\n  -V, --version              Print version information and exit.\n\nNetwork\n      --checkpoint-sync-url=<STRING>\n                             The Checkpointz server that will be used to\n                               bootstrap this node.\n      --eth1-deposit-contract-address=<ADDRESS>\n                             Contract address for the deposit contract. Only\n                               required when creating a custom network.\n      --genesis-state=<STRING>\n                             The genesis state. This value should be a file or\n                               URL pointing to an SSZ-encoded finalized\n                               checkpoint state.\n      --ignore-weak-subjectivity-period-enabled[=<BOOLEAN>]\n                             Allows syncing outside of the weak subjectivity\n                               period.\n                               Default: false\n      --initial-state=<STRING>\n                             The initial state. This value should be a file or\n                               URL pointing to an SSZ-encoded finalized\n                               checkpoint state.\n  -n, --network=<NETWORK>    Represents which network to use.\n                               Default: mainnet\n\nP2P\n      --p2p-advertised-ip, --p2p-advertised-ips=<NETWORK>[,<NETWORK>...]\n        [<NETWORK>]\n                             P2P advertised IP address(es). You can define up\n                               to 2 addresses, with one being IPv4 and the\n                               other IPv6. (Default: 127.0.0.1)\n      --p2p-advertised-port=<INTEGER>\n                             P2P advertised port. The default is the port\n                               specified in --p2p-port\n      --p2p-advertised-port-ipv6=<INTEGER>\n                             P2P advertised IPv6 port. This port is only used\n                               when advertising both IPv4 and IPv6 addresses.\n                             The default is the port specified in\n                               --p2p-port-ipv6.\n      --p2p-advertised-udp-port=<INTEGER>\n                             Advertised UDP port to external peers. The default\n                               is the port specified in --p2p-advertised-port\n      --p2p-advertised-udp-port-ipv6=<INTEGER>\n                             Advertised IPv6 UDP port to external peers. This\n                               port is only used when advertising both IPv4 and\n                               IPv6 addresses.\n                             The default is the port specified in\n                               --p2p-advertised-port-ipv6.\n      --p2p-direct-peers[=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]...]\n                             Specifies a list of 'direct' peers with which to\n                               establish and maintain connections.\n                             Direct peers are static peers with which this node\n                               will always exchange full messages, regardless\n                               of peer scoring mechanisms.\n                             Such peers will also need to enable you as direct\n                               in order to work.\n                               Default: []\n      --p2p-discovery-bootnodes[=<enr:-...>[,<enr:-...>...]...]\n                             List of ENRs of the bootnodes\n      --p2p-discovery-bootnodes-url=<STRING>\n                             ENRs of bootnodes. This should be a file or URL\n                               pointing to a txt file with one ENR per line.\n      --p2p-discovery-enabled[=<BOOLEAN>]\n                             Enables discv5 discovery\n                               Default: true\n      --p2p-discovery-site-local-addresses-enabled[=<BOOLEAN>]\n                             Whether discovery accepts messages and peer\n                               records with site local (RFC1918) addresses\n                               Default: false\n      --p2p-enabled[=<BOOLEAN>]\n                             Enables P2P\n                               Default: true\n      --p2p-interface, --p2p-interfaces=<NETWORK>[,<NETWORK>...] [<NETWORK>]\n                             The network interface(s) on which the node listens\n                               for P2P communication.\n                             You can define up to 2 interfaces, with one being\n                               IPv4 and the other IPv6. (Default: 0.0.0.0)\n                               Default: [0.0.0.0]\n      --p2p-nat-method=<natMethod>\n                             Specify the NAT circumvention method to be used,\n                               possible values are UPNP, NONE. NONE will\n                               require manual router configuration.\n                               Default: NONE\n      --p2p-peer-lower-bound=<INTEGER>\n                             Lower bound on the target number of peers\n                               Default: OptionalInt.empty\n      --p2p-peer-upper-bound=<INTEGER>\n                             Upper bound on the target number of peers\n                               Default: OptionalInt.empty\n      --p2p-port=<INTEGER>   P2P port\n                               Default: 9000\n      --p2p-port-ipv6=<INTEGER>\n                             P2P IPv6 port. This port is only used when\n                               listening over both IPv4 and IPv6.\n                               Default: 9090\n      --p2p-private-key-file=<FILENAME>\n                             This node's private key file in LibP2P format. If\n                               not specified, uses or generates a key which is\n                               stored within the <beacon-data-dir>.\n      --p2p-static-peers=<PEER_ADDRESSES>[,<PEER_ADDRESSES>...]\n                             Specifies a comma-separated list of 'static' peers\n                               with which to establish and maintain\n                               connections. Accepts multiaddr format.\n                               Default: []\n      --p2p-static-peers-url=<URL>\n                             Specifies a URL or file containing a list of\n                               'static' peers (one per line) with which to\n                               establish and maintain connections. Accepts\n                               multiaddr format.\n      --p2p-subscribe-all-custody-subnets-enabled[=<BOOLEAN>]\n                               Default: false\n      --p2p-subscribe-all-subnets-enabled[=<BOOLEAN>]\n                               Default: false\n      --p2p-udp-port=<INTEGER>\n                             UDP port used for discovery. The default is the\n                               port specified in --p2p-port\n      --p2p-udp-port-ipv6=<INTEGER>\n                             IPv6 UDP port used for discovery. This port is\n                               only used when listening over both IPv4 and\n                               IPv6. The default is the port specified in\n                               --p2p-port-ipv6\n\nValidator\n      --doppelganger-detection-enabled[=<BOOLEAN>]\n                             Enable validators doppelganger detection\n                               Default: false\n      --exit-when-no-validator-keys-enabled[=<BOOLEAN>]\n                             Enable terminating the process if no validator\n                               keys are found during startup\n                               Default: false\n      --shut-down-when-validator-slashed-enabled[=<BOOLEAN>]\n                             If enabled and an owned validator key is detected\n                               as slashed, the node will terminate. In this\n                               case, the service should not be restarted.\n                               Default: false\n      --validator-is-local-slashing-protection-synchronized-enabled[=<BOOLEAN>]\n                             Restrict local signing to a single operation at a\n                               time.\n                               Default: true\n      --validator-keys=<KEY_DIR>:<PASS_DIR> | <KEY_FILE>:<PASS_FILE>[,<KEY_DIR>:\n        <PASS_DIR> | <KEY_FILE>:<PASS_FILE>...]...\n                             <KEY_DIR>:<PASS_DIR> will find <KEY_DIR>/**.json,\n                               and expect to find <PASS_DIR>/**.txt.\n                             <KEY_FILE>:<PASS_FILE> will expect that the file\n                               <KEY_FILE> exists, and the file containing the\n                               password for it is <PASS_FILE>.\n                             The path separator is operating system dependent,\n                               and should be ';' in windows rather than ':'.\n                               Default: []\n      --validators-builder-registration-default-enabled[=<BOOLEAN>]\n                             Enable validators registration to builder\n                               infrastructure.\n                               Default: false\n      --validators-builder-registration-default-gas-limit=<uint64>\n                             Change the default gas limit used for the\n                               validators registration.\n                               Default: 60000000\n      --validators-early-attestations-enabled[=<BOOLEAN>]\n                             Generate attestations as soon as a block is known,\n                               rather than delaying until the attestation is due\n                               Default: true\n      --validators-external-signer-keystore=<FILE>\n                             Keystore (PKCS12/JKS) to use for TLS mutual\n                               authentication with external signer\n      --validators-external-signer-keystore-password-file=<FILE>\n                             Password file to decrypt keystore (PKCS12/JKS)\n                               that will be used for TLS mutual authentication\n                               with external signer\n      --validators-external-signer-public-keys[=<STRINGS>[,<STRINGS>...]...]\n                             The list of external signer public keys, or a URL\n                               to load the keys from\n                               Default: []\n      --validators-external-signer-slashing-protection-enabled[=<BOOLEAN>]\n                             Enable internal slashing protection for external\n                               signers\n                               Default: true\n      --validators-external-signer-timeout=<INTEGER>\n                             Timeout (in milliseconds) for the external signing\n                               service\n                               Default: 5000\n      --validators-external-signer-truststore=<FILE>\n                             Keystore (PKCS12/JKS) to trust external signer's\n                               self-signed certificate\n      --validators-external-signer-truststore-password-file=<FILE>\n                             Password file to decrypt keystore (PKCS12/JKS)\n                               that will be used to trust external signer's\n                               self-signed certificate\n      --validators-external-signer-url=<NETWORK>\n                             URL for the external signing service\n      --validators-graffiti=<GRAFFITI STRING>\n                             Graffiti value to include during block creation.\n                               Value gets converted to bytes and padded to\n                               Bytes32.\n      --validators-graffiti-client-append-format=<STRING>\n                             Appends CL and EL clients information with a space\n                               to user's graffiti when producing a block on the\n                               Beacon Node. (Valid values: AUTO, CLIENT_CODES,\n                               DISABLED)\n                               Default: AUTO\n      --validators-graffiti-file=<GRAFFITI FILE>\n                             File to load graffiti value to include during\n                               block creation. Value gets converted to bytes\n                               and padded to Bytes32. Takes precedence over\n                               --validators-graffiti. If the file can not be\n                               read, the --validators-graffiti value is used as\n                               a fallback.\n      --validators-keystore-locking-enabled[=<BOOLEAN>]\n                             Enable locking validator keystore files\n                               Default: true\n      --validators-performance-tracking-mode=<TRACKING_MODE>\n                             Set strategy for handling performance tracking.\n                               Valid values: LOGGING, METRICS, ALL, NONE\n                               Default: ALL\n      --validators-proposer-config=<STRING>\n                             remote URL or local file path to load proposer\n                               configuration from\n      --validators-proposer-config-refresh-enabled[=<BOOLEAN>]\n                             Enable the proposer configuration reload on every\n                               proposer preparation (once per epoch)\n                               Default: false\n      --validators-proposer-default-fee-recipient=<ADDRESS>\n                             Default fee recipient sent to the execution\n                               engine, which could use it as fee recipient when\n                               producing a new execution block.\n\nExecution Layer\n      --builder-bid-compare-factor=<STRING>\n                             Set the compare factor applied to the builder bid\n                               value when comparing it with locally produced\n                               payload. Factor is expressed in percentage (e.g.\n                               '100' means locally produced payload will be\n                               chosen when its value is equal or greater than\n                               the entire builder bid value, '80' means local\n                               payload will be chosen when its value is at\n                               least 80% of builder bid value).\n                             Set it to 'BUILDER_ALWAYS' to always use builder\n                               bid. In this configuration locally produced\n                               payload will be used only when the bid is\n                               invalid.\n                               Default: 90\n      --builder-endpoint=<NETWORK>\n                             URL for an external Builder node (optional).\n                               Default: null\n      --builder-set-user-agent-header[=<BOOLEAN>]\n                             Set User-Agent header to teku/v<version> (e.g.\n                               teku/v23.4.0) when making a builder bid request\n                               to help builders identify clients and versions\n                               Default: true\n      --deposit-snapshot-enabled[=<BOOLEAN>]\n                             Use bundled snapshot for most networks and persist\n                               deposit tree snapshot\n                               Default: true\n      --ee-endpoint=<NETWORK>\n                             URL for Execution Engine node.\n      --ee-jwt-claim-id=<STRING>\n                             A unique identifier for the consensus layer\n                               client. This identifier will be added to the JWT\n                               claims as an 'id' claim.\n      --ee-jwt-secret-file=<FILENAME>\n                             Location of the file specifying the hex-encoded\n                               256 bit secret key to be used for\n                               verifying/generating jwt tokens\n      --eth1-deposit-contract-max-request-size=<INTEGER>\n                             Maximum number of blocks to request deposit\n                               contract event logs for in a single request.\n                               Default: 10000\n      --eth1-endpoint, --eth1-endpoints=<NETWORK>[,<NETWORK>...]...\n                             URLs for Eth1 nodes.\n                               Default: []\n      --exchange-capabilities-monitoring-enabled[=<BOOLEAN>]\n                             Enables querying EL periodically for the Engine\n                               API methods it supports. If incompatibility is\n                               detected, there will be a warning raised in the\n                               logs.\n                               Default: true\n\nData Storage\n      --data-beacon-path=<FILENAME>\n                             Path to beacon node data\n                               Default: <data-base-path>/beacon\n      --data-path, --data-base-path=<FILENAME>\n                             Path to the base directory for storage\n                               Default: /opt/teku/.local/share/teku\n      --data-storage-archive-frequency=<FREQUENCY>\n                             Sets the frequency, in slots, at which to store\n                               finalized states to disk. This option is ignored\n                               if --data-storage-mode is set to PRUNE\n                               Default: 2048\n      --data-storage-mode=<STORAGE_MODE>\n                             Sets the strategy for handling historical chain\n                               data.  (Valid values: ARCHIVE, PRUNE, MINIMAL,\n                               NOT_SET)\n                               Default: NOT_SET\n      --data-storage-non-canonical-blocks-enabled[=<BOOLEAN>]\n                             Store non-canonical blocks and associated blobs if\n                               they exist\n                               Default: false\n      --data-validator-path=<FILENAME>\n                             Path to validator client data\n                               Default: <data-base-path>/validator\n      --force-clear-db[=<BOOLEAN>]\n                             Force deletion of the beacon chain database on\n                               startup. This will delete all chain data but\n                               preserve validator slashing protection. Use with\n                               caution - all historical chain data will be lost.\n                               Default: false\n      --reconstruct-historic-states[=<BOOLEAN>]\n                               Default: false\n\nBeacon REST API\n      --beacon-liveness-tracking-enabled[=<BOOLEAN>]\n                             Track validator liveness and enable requests to\n                               the liveness rest api.\n                               Default: false\n      --rest-api-cors-origins[=<origin>[,<origin>...]...]\n                             Comma separated list of origins to allow, or * to\n                               allow any origin\n                               Default: []\n      --rest-api-docs-enabled[=<BOOLEAN>]\n                             Enable swagger-docs and swagger-ui endpoints\n                               Default: false\n      --rest-api-enabled[=<BOOLEAN>]\n                             Enables Beacon Rest API\n                               Default: null\n      --rest-api-getblobs-sidecars-download-enabled[=<BOOLEAN>]\n                             Enables Get Blobs API ability to reconstruct blobs\n                               via on-demand p2p columns downloading\n                               Default: false\n      --rest-api-getblobs-sidecars-download-timeout=<INTEGER>\n                             Sidecars download timeout in seconds\n                               Default: 5\n      --rest-api-host-allowlist[=<hostname>[,<hostname>...]...]\n                             Comma-separated list of hostnames to allow, or *\n                               to allow any host\n                               Default: [127.0.0.1, localhost]\n      --rest-api-interface=<NETWORK>\n                             Interface of Beacon Rest API\n                               Default: 127.0.0.1\n      --rest-api-port=<INTEGER>\n                             Port number of Beacon Rest API\n\nValidator REST API\n      --validator-api-bearer-file=<FILENAME>\n                             Use the specified file as the bearer token for the\n                               validator Rest API\n      --validator-api-cors-origins[=<origin>[,<origin>...]...]\n                             Comma separated list of origins to allow, or * to\n                               allow any origin\n                               Default: []\n      --validator-api-docs-enabled[=<BOOLEAN>]\n                             Enable swagger-docs and swagger-ui endpoints\n                               Default: false\n      --validator-api-enabled[=<BOOLEAN>]\n                             Enables Validator Rest API\n                               Default: false\n      --validator-api-host-allowlist[=<hostname>[,<hostname>...]...]\n                             Comma-separated list of hostnames to allow, or *\n                               to allow any host\n                               Default: [127.0.0.1, localhost]\n      --validator-api-interface=<NETWORK>\n                             Interface of Validator Rest API\n                               Default: 127.0.0.1\n      --validator-api-keystore-file=<keystoreFile>\n                             Keystore used for ssl for the validator api.\n      --validator-api-keystore-password-file=<keystorePasswordFile>\n                             Password used to decrypt the keystore for the\n                               validator api.\n      --validator-api-port=<INTEGER>\n                             Port number of Rest API\n                               Default: 5052\n\nWeak Subjectivity\n      --ws-checkpoint=<STRING>\n                             A recent checkpoint within the weak subjectivity\n                               period. Should be a string containing\n                               <BLOCK_ROOT>:<EPOCH_NUMBER> or a URL containing\n                               the field ws_checkpoint with the same\n                               information.\n\nLogging\n  -l, --logging=<LOG VERBOSITY LEVEL>\n                             Logging verbosity levels: OFF, FATAL, ERROR, WARN,\n                               INFO, DEBUG, TRACE, ALL (default: INFO).\n      --log-color-enabled[=<BOOLEAN>]\n                             Whether Status and Event log messages include a\n                               console color display code\n                               Default: true\n      --log-destination=<LOG_DESTINATION>\n                             Whether a logger is added for the console, the log\n                               file, or both (Valid values: BOTH, CONSOLE,\n                               DEFAULT_BOTH, FILE, CUSTOM)\n                               Default: DEFAULT_BOTH\n      --log-file=<FILENAME>  Path containing the location (relative or\n                               absolute) and the log filename. If not set will\n                               default to <data-path>/logs/teku.log\n      --log-file-name-pattern=<REGEX>\n                             Pattern for the filename to apply to rolled over\n                               log files. If not set will default to\n                               <data-path>/logs/teku_%d{yyyy-MM-dd}.log\n      --log-include-events-enabled[=<BOOLEAN>]\n                             Whether frequent update events are logged (e.g.\n                               every slot and epoch event)\n                               Default: true\n      --log-include-validator-duties-enabled[=<BOOLEAN>]\n                             Whether events are logged when validators perform\n                               duties\n                               Default: true\n\nMetrics\n      --metrics-block-production-performance-tracking-enabled[=<BOOLEAN>]\n                             Whether block production timing metrics are\n                               tracked and reported\n                               Default: false\n      --metrics-block-timing-tracking-enabled[=<BOOLEAN>]\n                             Whether block timing metrics are tracked and\n                               reported\n                               Default: true\n      --metrics-categories[=<METRICS_CATEGORY>[,<METRICS_CATEGORY>...]...]\n                             Metric categories to enable\n                               Default: [JVM, PROCESS, NETWORK, BEACON,\n                               STORAGE_FINALIZED_DB, STORAGE_HOT_DB, VALIDATOR,\n                               STORAGE, VALIDATOR_PERFORMANCE, LIBP2P,\n                               EXECUTOR, EVENTBUS, VALIDATOR_DUTY, DISCOVERY]\n      --metrics-enabled[=<BOOLEAN>]\n                             Enables metrics collection via Prometheus\n                               Default: false\n      --metrics-host-allowlist[=<hostname>[,<hostname>...]...]\n                             Comma-separated list of hostnames to allow, or *\n                               to allow any host\n                               Default: [127.0.0.1, localhost]\n      --metrics-interface=<NETWORK>\n                             Metrics network interface to expose metrics for\n                               Prometheus\n                               Default: 127.0.0.1\n      --metrics-port=<INTEGER>\n                             Metrics port to expose metrics for Prometheus\n                               Default: 8008\n      --metrics-publish-endpoint=<URL>\n                             Publish metrics for node monitoring to an external\n                               service\n      --metrics-publish-interval=<INTEGER>\n                             Interval between metric publications to the\n                               external service (measured in seconds)\n                               Default: 60\nCommands:\n  help                  Display help information about the specified command.\n  admin                 Holds advanced tools for node admins\n  transition            Manually run state transitions\n  peer                  Commands for LibP2P PeerID\n  genesis               Commands for generating genesis state\n  slashing-protection   Manage local slashing protection data used by the\n                          validator client.\n  migrate-database      Migrate the database to a specified version.\n  debug-tools           Utilities for debugging issues\n  voluntary-exit        Create and sign a voluntary exit for a specified\n                          validator.\n  validator-client, vc  Run a Validator Client that connects to a remote Beacon\n                          Node\n  bootnode              Run Teku in Bootnode mode\n\nTeku is licensed under the Apache License 2.0",
+  "version": "26.2.0"
+}
